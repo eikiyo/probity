@@ -66,6 +66,10 @@ LEAVES = [
      "title": "Test 5.2 — Protective provisions: investor class-veto right present vs absent",
      "corpus_desc": "real SEC-filed charters and governance documents",
      "labels": {"yes": "veto-right", "no": "absent"}},
+    {"slug": "information_rights",
+     "title": "Test 5.3 — Information rights: live financial-reporting obligation vs absent",
+     "corpus_desc": "real SEC-filed investors' rights agreements and equity-award docs",
+     "labels": {"yes": "info-rights", "no": "absent/waived"}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",

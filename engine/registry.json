@@ -508,7 +508,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 2,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/information_rights"
     },
     {
       "ref": "5.4",
