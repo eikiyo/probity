@@ -607,6 +607,50 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
+## Test 5.7 — Vesting acceleration: granted on trigger vs absent
+
+**Corpus:** 9 real SEC-filed equity-award agreements and proxy disclosures, human-validated answers (6 accelerates / 3 no-acceleration). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **44%** | 93% | 67% | 9/9 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **accelerates · no-acceleration** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | accelerates | no-acceleration |
+|---|---|---|
+| `gemma3:1b` | 4/6 | 2/3 |
+| `deepseek-v4-flash` | 6/6 | 3/3 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| GIBRALTAR INDUSTRIES,  | yes | easy | 1B |
+| Silverback Therapeutic | yes | easy | 1B |
+| CASTLIGHT HEALTH, INC. | yes | medium | 1B |
+| YELP INC | no | easy | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–44% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+
+---
+
 ## Test 1.3.1 — Liquidation preference multiple: 1x vs 2x vs 3x vs other
 
 **Corpus:** 13 real SEC-filed preferred-stock liquidation preference clauses, human-validated answers (0 non-part / 4 1x / 5 2x / 4 3x / 0 other). Each model run **20×/item at temp 0.7**.
