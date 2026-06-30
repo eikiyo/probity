@@ -14,27 +14,39 @@ convertible notes, cap tables. It reports two numbers that are usually conflated
   human extracted from the source document (not authored by an AI)?
 
 These are scored separately and never averaged into one headline — a model can be perfectly
-consistent and consistently wrong. Models are run across a **size ladder** (1B → 27B local, plus a
-hosted model) to test whether wobble falls as capability rises.
+consistent and consistently wrong. Models are run across a **size ladder** (1B → 12B local, plus a
+hosted model) to test whether wobble falls as capability rises. Heavier models (a 27B local model
+and hosted frontier models) are reserved for a single comprehensive sweep once every test is built.
 
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*18 real SEC-filed charter clauses, human-validated answers. Each model run 20x/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs.*
+*2 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy | non-part | part | capped |
+**Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | part | non-part | capped |
 |---|---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **61%** | 90% | 39% | 7/8 | 0/5 | 0/5 |
-| `llama3.2:latest` | 3B | **72%** | 84% | 44% | 7/8 | 0/5 | 1/5 |
-| `gemma4:12b` | 12B | **0%** | 100% | 72% | 6/8 | 2/5 | 5/5 |
-| `deepseek-v4-flash` | hosted | **6%** | 98% | 67% | 6/8 | 1/5 | 5/5 |
+| `gemma3:1b` | 1B | **61%** | 90% | 39% | 0/5 | 7/8 | 0/5 |
+| `llama3.2:latest` | 3B | **72%** | 84% | 44% | 0/5 | 7/8 | 1/5 |
+| `gemma4:12b` | 12B | **0%** | 100% | 72% | 2/5 | 6/8 | 5/5 |
+| `deepseek-v4-flash` | hosted | **6%** | 98% | 67% | 1/5 | 6/8 | 5/5 |
+
+**Test 2.1.4 — SAFE valuation cap: pre-money vs post-money** — 16 clauses (10 post / 6 pre), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | post | pre |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **6%** | 98% | 62% | 10/10 | 0/6 |
+| `llama3.2:latest` | 3B | **56%** | 88% | 81% | 10/10 | 3/6 |
+| `gemma4:12b` | 12B | **0%** | 100% | 100% | 10/10 | 6/6 |
+| `deepseek-v4-flash` | hosted | **19%** | 99% | 100% | 10/10 | 6/6 |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
-- **Consistency** — the *average* agreement **within** each item's 20 runs (how often they matched that item's most common answer). It differs from Wobble: an item that flips even once is counted as wobble, yet can still be (say) 90% consistent. Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
-- **non-part / part / capped** — accuracy **within** each true class (correct / total: non-participating · participating · capped), so a model can't score well by always guessing the most common class.
+- **the right-hand class columns** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 <!-- BENCHMARK:END -->
 
 Full per-item breakdown — including which clauses make each model wobble — in

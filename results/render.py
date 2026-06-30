@@ -1,50 +1,63 @@
 """
 Location: results/render.py
-Purpose: Render RESULTS.md from a leaf's scored.json + oracle.jsonl. WOBBLE (run-to-run
-         inconsistency) is the headline — the core thesis — with accuracy reported beside it,
-         never averaged in. Adds a model size-ladder view (does wobble fall as scale rises?).
-Functions: per_class(), wobble_rows(), render_leaf(), main()
-Imports: json, pathlib
+Purpose: Render RESULTS.md + the README landing-page table from EVERY leaf that has a scored.json.
+         WOBBLE (run-to-run inconsistency) is the headline — the core thesis — with accuracy beside
+         it, never averaged in. Multi-leaf: FIELD + CLASSES come from each leaf's own task.TASK
+         (single source of truth); per-leaf display config lives in LEAVES.
+Functions: load_leaf(), wobble_pct(), per_class(), definitions(), render_leaf(), readme_block_for(),
+           auto_findings(), main()
+Imports: json, re, importlib.util, pathlib
 """
 
 import json
+import re
+import importlib.util
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
-LEAF = ROOT / "leaves" / "participation_type"
-CLASSES = ["non-participating", "participating", "capped"]
 
-DEFINITIONS = (
-    "**What the columns mean:**\n\n"
-    "- **Wobble** (headline, lower is better) — the share of items where the model gave **more than "
-    "one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money "
-    "workflow even when it's often right.\n"
-    "- **Consistency** — the *average* agreement **within** each item's 20 runs (how often they "
-    "matched that item's most common answer). It differs from Wobble: an item that flips even once "
-    "is counted as wobble, yet can still be (say) 90% consistent. Wobble counts *whether* an item "
-    "flipped; Consistency measures *how much*.\n"
-    "- **Accuracy** — the share of items whose majority answer matched the human-validated truth.\n"
-    "- **non-part / part / capped** — accuracy **within** each true class (correct / total: "
-    "non-participating · participating · capped), so a model can't score well by always guessing the "
-    "most common class."
-)
+# Per-leaf DISPLAY config only — field + class enum are read from the leaf's task.TASK.
+LEAVES = [
+    {"slug": "participation_type",
+     "title": "Test 1.3.2 — Preferred-stock liquidation participation",
+     "corpus_desc": "real SEC-filed charter clauses",
+     "labels": {"non-participating": "non-part", "participating": "part", "capped": "capped"}},
+    {"slug": "safe_pre_post",
+     "title": "Test 2.1.4 — SAFE valuation cap: pre-money vs post-money",
+     "corpus_desc": "real SEC-filed YC SAFE provisions",
+     "labels": {"post-money": "post", "pre-money": "pre"}},
+]
+
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
         "qwen3.5-27b": "27B", "deepseek-v4f": "hosted", "gemma": "12B", "deepseek": "hosted"}
 ORDER = ["gemma3-1b", "llama3.2-3b", "gemma4-12b", "qwen3.5-27b", "deepseek-v4f", "gemma", "deepseek"]
 
 
-def wobble_pct(res):
+def load_leaf(slug):
+    """Return (field, classes, scored, oracle) for a leaf, deriving field+classes from its task.TASK."""
+    leaf = ROOT / "leaves" / slug
+    spec = importlib.util.spec_from_file_location(f"task_{slug}", leaf / "task.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    field = list(mod.TASK["fields"])[0]
+    classes = mod.TASK["fields"][field]["values"]
+    scored = json.loads((leaf / "scored.json").read_text())
+    oracle = [json.loads(l) for l in open(leaf / "oracle.jsonl") if l.strip()]
+    return field, classes, scored, oracle
+
+
+def wobble_pct(res, field):
     """% of items whose answer flipped at least once across the runs (the core metric)."""
-    return res["reliability"]["field_flips"].get("participation_type", 0.0) * 100
+    return res["reliability"]["field_flips"].get(field, 0.0) * 100
 
 
-def per_class(per_instance, oracle):
-    out = {c: [0, 0] for c in CLASSES}
+def per_class(per_instance, oracle, field, classes):
+    out = {c: [0, 0] for c in classes}
     for row, o in zip(per_instance, oracle):
         if row["n_valid"] == 0:
             continue
-        out[o["participation_type"]][1] += 1
-        out[o["participation_type"]][0] += int(row["majority_correct"])
+        out[o[field]][1] += 1
+        out[o[field]][0] += int(row["majority_correct"])
     return out
 
 
@@ -52,93 +65,64 @@ def _models(scored):
     return [k for k in ORDER if k in scored] + [k for k in scored if k not in ORDER]
 
 
-def render_leaf(scored, oracle):
-    L, total = [], len(oracle)
-    counts = {c: sum(o["participation_type"] == c for o in oracle) for c in CLASSES}
-    n_runs = max((r["reliability"]["valid_run_count"] for r in scored.values()), default=0)
-    L.append("## Test 1.3.2 — Preferred-stock liquidation participation\n")
-    L.append(f"**Corpus:** {total} real SEC-filed charter clauses, human-validated answers "
-             f"({counts['non-participating']} non-participating / {counts['participating']} "
-             f"participating / {counts['capped']} capped). Each model run **20×/item at temp 0.7**.\n")
-    L.append("### Headline — WOBBLE (the core metric)\n")
-    L.append("*Wobble = % of items where the model gave more than one answer across its 20 runs. "
-             "A model that wobbles cannot be trusted in a money workflow even when it is often right.*\n")
-    L.append("| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |")
-    L.append("|---|---|---|---|---|---|")
+def _runs_each(scored):
+    n = max((r["reliability"]["valid_run_count"] for r in scored.values()), default=0)
+    per = max((len(r["accuracy"]["per_instance"]) for r in scored.values()), default=1)
+    return n // per if per else 0
+
+
+def definitions(labels, generic=False):
+    cols = "the right-hand class columns" if generic else " · ".join(labels.values())
+    return (
+        "**What the columns mean:**\n\n"
+        "- **Wobble** (headline, lower is better) — the share of items where the model gave **more "
+        "than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a "
+        "money workflow even when it's often right.\n"
+        "- **Consistency** — the *average* agreement **within** each item's runs (how often they "
+        "matched that item's most common answer). Wobble counts *whether* an item flipped; "
+        "Consistency measures *how much*.\n"
+        "- **Accuracy** — the share of items whose majority answer matched the human-validated truth.\n"
+        f"- **{cols}** — accuracy **within** each true class (correct / total), so a model can't "
+        "score well by always guessing the most common class.")
+
+
+def _wobble_table(scored, field):
+    L = ["| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |",
+         "|---|---|---|---|---|---|"]
     for k in _models(scored):
         res = scored[k]; a = res["accuracy"]; r = res["reliability"]
-        L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res):.0f}%** | "
+        L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res,field):.0f}%** | "
                  f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}% | "
                  f"{a['n_measurable']}/{a['n_instances']} |")
-    L.append("\n" + DEFINITIONS + "\n")
-    L.append("\n### Accuracy by class (majority vote)\n")
-    L.append("| Model | non-participating | participating | capped |")
-    L.append("|---|---|---|---|")
+    return L
+
+
+def _class_table(scored, oracle, field, classes, labels):
+    L = ["| Model | " + " | ".join(labels[c] for c in classes) + " |",
+         "|---|" + "---|" * len(classes)]
     for k in _models(scored):
-        pc = per_class(scored[k]["accuracy"]["per_instance"], oracle)
+        pc = per_class(scored[k]["accuracy"]["per_instance"], oracle, field, classes)
         L.append(f"| `{scored[k]['model']}` | " +
-                 " | ".join(f"{pc[c][0]}/{pc[c][1]}" if pc[c][1] else "—" for c in CLASSES) + " |")
-    L.append("\n### Which items make models wobble\n")
-    L.append("| Item | True | Difficulty | Models that wobbled |")
-    L.append("|---|---|---|---|")
-    for i, o in enumerate(oracle):
-        wob = []
-        for k in _models(scored):
-            cons = scored[k]["accuracy"]["per_instance"][i]["fields"].get("participation_type", {}).get("consistency", 1.0)
-            if cons < 1.0:
-                wob.append(SIZE.get(k, k))
-        if wob:
-            L.append(f"| {o['company'][:22]} | {o['participation_type']} | {o['difficulty']} | {', '.join(wob)} |")
-    if not any("|" in x and "wobbled" not in x for x in L[-1:]):
-        pass
+                 " | ".join(f"{pc[c][0]}/{pc[c][1]}" if pc[c][1] else "—" for c in classes) + " |")
+    return L
+
+
+def auto_findings(scored, oracle, field, classes):
+    """Data-driven summary when a leaf has no hand-written findings: cliff + best model."""
+    rows = [(SIZE.get(k, k), wobble_pct(scored[k], field),
+             scored[k]["accuracy"]["accuracy_majority"] * 100) for k in _models(scored)]
+    best = min(rows, key=lambda x: (x[1], -x[2]))
+    hi = max(r[1] for r in rows); lo = min(r[1] for r in rows)
+    L = ["## What this shows\n"]
+    L.append(f"- **Wobble spread: {lo:.0f}%–{hi:.0f}% across the ladder.** "
+             f"Lowest-wobble model: **{best[0]}** ({best[1]:.0f}% wobble, {best[2]:.0f}% accuracy).")
+    if hi - lo >= 30:
+        L.append("- **Wobble is a cliff, not a slope** — small models flip on a large share of items "
+                 "while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.")
     return "\n".join(L)
 
 
-def readme_block(scored, oracle):
-    """Compact headline tables for the landing-page README (wobble + accuracy-by-class)."""
-    total = len(oracle)
-    n = max((r["reliability"]["valid_run_count"] for r in scored.values()), default=0)
-    per_item = max((len(r["accuracy"]["per_instance"]) for r in scored.values()), default=1)
-    runs_each = n // per_item if per_item else 0
-    L = [f"*{total} real SEC-filed charter clauses, human-validated answers. Each model run "
-         f"{runs_each}x/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs.*", ""]
-    L.append("| Model | Size | **Wobble** ↓ | Consistency | Accuracy | non-part | part | capped |")
-    L.append("|---|---|---|---|---|---|---|---|")
-    for k in _models(scored):
-        res = scored[k]; a = res["accuracy"]; r = res["reliability"]
-        pc = per_class(a["per_instance"], oracle)
-        cells = " | ".join(f"{pc[c][0]}/{pc[c][1]}" if pc[c][1] else "-" for c in CLASSES)
-        L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res):.0f}%** | "
-                 f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}% | {cells} |")
-    return "\n".join(L) + "\n\n" + DEFINITIONS
-
-
-def main():
-    scored = json.loads((LEAF / "scored.json").read_text())
-    oracle = [json.loads(l) for l in open(LEAF / "oracle.jsonl") if l.strip()]
-    header = ("# Probity — Benchmark Results\n\n"
-              "**Wobble** = run-to-run inconsistency (the core metric): ask the same question 20× at "
-              "temperature 0.7 and count how often the answer changes. **Accuracy** = % correct vs a "
-              "human-validated answer extracted from the source document. They are reported separately "
-              "and never averaged — a model can be perfectly consistent and consistently wrong.\n\n"
-              "Models span a size ladder (1B → 27B local + a hosted model) to test whether wobble "
-              "falls as capability rises. Local via Ollama (zero egress); hosted = deepseek-v4-flash.\n\n---\n\n")
-    (ROOT / "results" / "RESULTS.md").write_text(header + render_leaf(scored, oracle) + FOOTER + "\n", encoding="utf-8")
-    print("wrote results/RESULTS.md")
-    import re
-    readme = ROOT / "README.md"
-    block = ("<!-- BENCHMARK:START -->\n" + readme_block(scored, oracle) + "\n<!-- BENCHMARK:END -->")
-    txt = re.sub(r"<!-- BENCHMARK:START.*?-->.*?<!-- BENCHMARK:END -->", block,
-                 readme.read_text(), flags=re.S)
-    readme.write_text(txt, encoding="utf-8")
-    print("injected benchmark table into README.md")
-
-
-FOOTER = """
-
----
-
-## What this shows
+PART_FINDINGS = """## What this shows
 
 - **Wobble has a cliff, not a slope.** The 1B and 3B models flip their answer on 61-72% of items
   across 20 runs at temp 0.7 - unusable in a workflow that touches money. At 12B wobble collapses
@@ -148,10 +132,105 @@ FOOTER = """
   accuracy. deepseek-v4-flash: 6% wobble, 67%. Bigger-and-hosted is not automatically better.
 - **Participating preferred is the universal blind spot.** Even the best models get only 1-2 of 5
   participating clauses right; the small models get 0. The "preference AND THEN also share with the
-  common" structure is systematically misread as capped or non-participating. The genuinely-hard,
-  validated structure - not random noise - is where every model fails.
+  common" structure is systematically misread as capped or non-participating.
 - **Small models can't classify the hard classes at all** (1B: 0/5 participating, 0/5 capped) -
-  they collapse everything to non-participating.
+  they collapse everything to non-participating."""
+
+SAFE_FINDINGS = """## What this shows
+
+- **Accuracy does not imply trustworthiness — the cleanest case yet.** deepseek-v4-flash answers
+  every one of the 16 SAFEs correctly (100% accuracy) yet still **wobbles on 19% of them** across 20
+  identical runs. A model you would call "100% accurate" from a single pass changes its answer on
+  ~1 in 5 items when you actually repeat the question. Wobble catches what an accuracy score hides.
+- **A local 12B fully solves the binary task** (gemma4:12b: 0% wobble, 100% accuracy) - and again
+  beats the hosted model on the trust axis, matching it on accuracy at zero egress.
+- **Low wobble can mask low accuracy.** gemma3:1b looks stable (6% wobble) but is only 62% accurate -
+  it confidently and *repeatably* gives the wrong pre/post classification. Consistency without
+  accuracy is its own trap; this is why the two numbers are never averaged.
+- **The 3B is the worst wobbler** (llama3.2: 56% wobble) despite 81% accuracy - the mid-size model
+  is both more right and far less stable than the 1B, so wobble is not a smooth function of size."""
+
+FINDINGS = {"participation_type": PART_FINDINGS, "safe_pre_post": SAFE_FINDINGS}
+
+
+def render_leaf(cfg):
+    field, classes, scored, oracle = load_leaf(cfg["slug"])
+    labels = cfg["labels"]; total = len(oracle)
+    counts = {c: sum(o[field] == c for o in oracle) for c in classes}
+    bal = " / ".join(f"{counts[c]} {labels[c]}" for c in classes)
+    L = [f"## {cfg['title']}\n"]
+    L.append(f"**Corpus:** {total} {cfg['corpus_desc']}, human-validated answers ({bal}). "
+             f"Each model run **{_runs_each(scored)}×/item at temp 0.7**.\n")
+    L.append("### Headline — WOBBLE (the core metric)\n")
+    L.append("*Wobble = % of items where the model gave more than one answer across its runs. "
+             "A model that wobbles cannot be trusted in a money workflow even when it is often right.*\n")
+    L += _wobble_table(scored, field)
+    L.append("\n" + definitions(labels) + "\n")
+    L.append("\n### Accuracy by class (majority vote)\n")
+    L += _class_table(scored, oracle, field, classes, labels)
+    L.append("\n### Which items make models wobble\n")
+    L.append("| Item | True | Difficulty | Models that wobbled |")
+    L.append("|---|---|---|---|")
+    for i, o in enumerate(oracle):
+        wob = [SIZE.get(k, k) for k in _models(scored)
+               if scored[k]["accuracy"]["per_instance"][i]["fields"].get(field, {}).get("consistency", 1.0) < 1.0]
+        if wob:
+            L.append(f"| {o['company'][:22]} | {o[field]} | {o.get('difficulty','?')} | {', '.join(wob)} |")
+    L.append("\n" + FINDINGS.get(cfg["slug"]) if cfg["slug"] in FINDINGS
+             else "\n" + auto_findings(scored, oracle, field, classes))
+    return "\n".join(L)
+
+
+def readme_block_for(cfg):
+    field, classes, scored, oracle = load_leaf(cfg["slug"])
+    labels = cfg["labels"]; total = len(oracle)
+    counts = {c: sum(o[field] == c for o in oracle) for c in classes}
+    bal = " / ".join(f"{counts[c]} {labels[c]}" for c in classes)
+    L = [f"**{cfg['title']}** — {total} clauses ({bal}), each model run {_runs_each(scored)}×/item:", ""]
+    L.append("| Model | Size | **Wobble** ↓ | Consistency | Accuracy | " +
+             " | ".join(labels[c] for c in classes) + " |")
+    L.append("|---|---|---|---|---|" + "---|" * len(classes))
+    for k in _models(scored):
+        res = scored[k]; a = res["accuracy"]; r = res["reliability"]
+        pc = per_class(a["per_instance"], oracle, field, classes)
+        cells = " | ".join(f"{pc[c][0]}/{pc[c][1]}" if pc[c][1] else "-" for c in classes)
+        L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res,field):.0f}%** | "
+                 f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}% | {cells} |")
+    return "\n".join(L)
+
+
+def _present_leaves():
+    return [c for c in LEAVES if (ROOT / "leaves" / c["slug"] / "scored.json").exists()]
+
+
+def main():
+    present = _present_leaves()
+    header = ("# Probity — Benchmark Results\n\n"
+              "**Wobble** = run-to-run inconsistency (the core metric): ask the same question 20× at "
+              "temperature 0.7 and count how often the answer changes. **Accuracy** = % correct vs a "
+              "human-validated answer extracted from the source document. They are reported separately "
+              "and never averaged — a model can be perfectly consistent and consistently wrong.\n\n"
+              "Models span a size ladder (1B → 12B local + a hosted model) to test whether wobble "
+              "falls as capability rises. Local via Ollama (zero egress); hosted = deepseek-v4-flash.\n\n---\n\n")
+    body = "\n\n---\n\n".join(render_leaf(c) for c in present)
+    (ROOT / "results" / "RESULTS.md").write_text(header + body + REPRO + "\n", encoding="utf-8")
+    print(f"wrote results/RESULTS.md ({len(present)} leaves)")
+
+    cap = (f"*{len(present)} test{'s' if len(present)!=1 else ''} so far. Each model run 20×/item at "
+           "temp 0.7. **Wobble** = % of items answered inconsistently across runs.*\n")
+    tables = "\n\n".join(readme_block_for(c) for c in present)
+    block = ("<!-- BENCHMARK:START -->\n" + cap + "\n" + tables + "\n\n" +
+             definitions(present[0]["labels"], generic=True) + "\n<!-- BENCHMARK:END -->")
+    readme = ROOT / "README.md"
+    txt = re.sub(r"<!-- BENCHMARK:START.*?-->.*?<!-- BENCHMARK:END -->", lambda m: block,
+                 readme.read_text(), flags=re.S)
+    readme.write_text(txt, encoding="utf-8")
+    print(f"injected {len(present)} benchmark tables into README.md")
+
+
+REPRO = """
+
+---
 
 ## Models and scope
 
@@ -163,15 +242,14 @@ sweep across all leaves once the full benchmark exists.
 ## Reproduce
 
 ```bash
-cd leaves/participation_type
-python3 source.py && python3 source_more.py   # fetch real SEC charter clauses
-python3 run.py                                # run the model ladder, N=20
+cd leaves/<test_name>
+python3 source.py          # fetch the real SEC documents
+python3 run.py             # run the model ladder, N=20
 python3 ../../results/render.py
 ```
 
-Corpus: real SEC EDGAR charter exhibits; answers human-validated from each clause's own legal text
-(`leaves/participation_type/oracle.jsonl`, with the validating quote + difficulty per item).
-Genuinely mixed-series or ambiguous clauses are excluded, not guessed.
+Answers are human-validated from each document's own legal text (`leaves/<test>/oracle.jsonl`, with
+the validating quote + difficulty per item). Genuinely ambiguous clauses are excluded, not guessed.
 """
 
 if __name__ == "__main__":
