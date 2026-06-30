@@ -574,7 +574,8 @@
       ],
       "op": "CL",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/acceleration_trigger"
     },
     {
       "ref": "6.4",

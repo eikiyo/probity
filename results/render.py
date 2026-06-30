@@ -30,6 +30,10 @@ LEAVES = [
      "title": "Test 1.4.2 — Preferred dividends: cumulative vs non-cumulative",
      "corpus_desc": "real SEC-filed preferred-stock charter dividend clauses",
      "labels": {"cumulative": "cumulative", "non-cumulative": "non-cum"}},
+    {"slug": "acceleration_trigger",
+     "title": "Test 6.3 — Equity vesting acceleration: single-trigger vs double-trigger",
+     "corpus_desc": "real SEC-filed equity-award / employment agreements",
+     "labels": {"single-trigger": "single", "double-trigger": "double"}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
