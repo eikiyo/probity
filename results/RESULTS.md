@@ -443,6 +443,47 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
+## Test 5.4 — Pro-rata right on future financings: granted vs not
+
+**Corpus:** 12 real SEC-filed SAFEs, side letters and investors' rights agreements, human-validated answers (6 pro-rata / 6 absent/waived). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **17%** | 94% | 100% | 12/12 |
+| `deepseek-v4-flash` | hosted | **8%** | 100% | 100% | 12/12 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **pro-rata · absent/waived** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | pro-rata | absent/waived |
+|---|---|---|
+| `gemma3:1b` | 6/6 | 6/6 |
+| `deepseek-v4-flash` | 6/6 | 6/6 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| SOS Hydration Inc. | yes | medium | 1B, hosted |
+| Infinity Pharmaceutica | no | easy | 1B |
+
+## What this shows
+
+- **Wobble spread: 8%–17% across the ladder.** Lowest-wobble model: **hosted** (8% wobble, 100% accuracy).
+
+---
+
 ## Models and scope
 
 Per leaf during the build-out, Probity runs the **fast set** (1B/3B/12B local via Ollama, zero
