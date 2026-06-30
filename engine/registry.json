@@ -260,7 +260,8 @@
       ],
       "op": "CL",
       "stakes": 5,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/safe_pre_post"
     },
     {
       "ref": "2.1.5",
