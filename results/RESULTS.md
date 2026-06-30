@@ -137,6 +137,53 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
+## Test 1.4.2 — Preferred dividends: cumulative vs non-cumulative
+
+**Corpus:** 16 real SEC-filed preferred-stock charter dividend clauses, human-validated answers (8 cumulative / 8 non-cum). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **44%** | 93% | 88% | 16/16 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 16/16 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **cumulative · non-cum** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | cumulative | non-cum |
+|---|---|---|
+| `gemma3:1b` | 7/8 | 7/8 |
+| `deepseek-v4-flash` | 8/8 | 8/8 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| ENTERCOM COMMUNICATION | cumulative | easy | 1B |
+| BIOACCELERATE HOLDINGS | cumulative | easy | 1B |
+| FS Credit Opportunitie | cumulative | hard | 1B |
+| IMPEL NEUROPHARMA INC | non-cumulative | easy | 1B |
+| Teladoc, Inc. | non-cumulative | easy | 1B |
+| Eiger BioPharmaceutica | non-cumulative | medium | 1B |
+| scPharmaceuticals Inc. | non-cumulative | easy | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–44% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+
+---
+
 ## Models and scope
 
 Per leaf during the build-out, Probity runs the **fast set** (1B/3B/12B local via Ollama, zero

@@ -26,6 +26,10 @@ LEAVES = [
      "title": "Test 2.1.4 — SAFE valuation cap: pre-money vs post-money",
      "corpus_desc": "real SEC-filed YC SAFE provisions",
      "labels": {"post-money": "post", "pre-money": "pre"}},
+    {"slug": "dividend_cumulative",
+     "title": "Test 1.4.2 — Preferred dividends: cumulative vs non-cumulative",
+     "corpus_desc": "real SEC-filed preferred-stock charter dividend clauses",
+     "labels": {"cumulative": "cumulative", "non-cumulative": "non-cum"}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
@@ -217,7 +221,10 @@ def main():
     print(f"wrote results/RESULTS.md ({len(present)} leaves)")
 
     cap = (f"*{len(present)} test{'s' if len(present)!=1 else ''} so far. Each model run 20×/item at "
-           "temp 0.7. **Wobble** = % of items answered inconsistently across runs.*\n")
+           "temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a "
+           "leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, "
+           "gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once "
+           "every leaf exists, which is why newer leaves show fewer rows for now.*\n")
     tables = "\n\n".join(readme_block_for(c) for c in present)
     block = ("<!-- BENCHMARK:START -->\n" + cap + "\n" + tables + "\n\n" +
              definitions(present[0]["labels"], generic=True) + "\n<!-- BENCHMARK:END -->")

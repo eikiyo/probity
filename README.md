@@ -21,7 +21,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*2 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs.*
+*3 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
 
 **Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
 
@@ -40,6 +40,13 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 | `llama3.2:latest` | 3B | **56%** | 88% | 81% | 10/10 | 3/6 |
 | `gemma4:12b` | 12B | **0%** | 100% | 100% | 10/10 | 6/6 |
 | `deepseek-v4-flash` | hosted | **19%** | 99% | 100% | 10/10 | 6/6 |
+
+**Test 1.4.2 — Preferred dividends: cumulative vs non-cumulative** — 16 clauses (8 cumulative / 8 non-cum), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | cumulative | non-cum |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **44%** | 93% | 88% | 7/8 | 7/8 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 | 8/8 |
 
 **What the columns mean:**
 

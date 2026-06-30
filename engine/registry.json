@@ -147,7 +147,8 @@
       ],
       "op": "CL",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/dividend_cumulative"
     },
     {
       "ref": "1.5.1",
