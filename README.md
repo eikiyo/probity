@@ -21,7 +21,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*8 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
+*9 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
 
 **Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
 
@@ -82,6 +82,13 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **17%** | 99% | 42% | 4/6 | 1/6 |
 | `deepseek-v4-flash` | hosted | **8%** | 97% | 100% | 6/6 | 6/6 |
+
+**Test 5.5 — Right of First Refusal & Co-Sale: investor transfer right present vs absent** — 12 clauses (6 rofr/cosale / 6 absent/other-right), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | rofr/cosale | absent/other-right |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **17%** | 98% | 67% | 6/6 | 2/6 |
+| `deepseek-v4-flash` | hosted | **17%** | 94% | 92% | 6/6 | 5/6 |
 
 **What the columns mean:**
 

@@ -125,7 +125,8 @@
       ],
       "op": "CL",
       "stakes": 4,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/preference_seniority"
     },
     {
       "ref": "1.4.1",
@@ -134,8 +135,7 @@
       "type": "number",
       "op": "EX",
       "stakes": 3,
-      "tier": "built",
-      "leaf": "leaves/preference_seniority"
+      "tier": "v1"
     },
     {
       "ref": "1.4.2",
@@ -516,7 +516,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/pro_rata_rights"
     },
     {
       "ref": "5.5",
@@ -525,7 +526,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/rofr_cosale"
     },
     {
       "ref": "5.6",

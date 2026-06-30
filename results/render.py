@@ -50,6 +50,14 @@ LEAVES = [
      "title": "Test 5.6 — Transfer agreements: drag-along (obligation) vs co-sale (right)",
      "corpus_desc": "real SEC-filed stockholder/transfer agreements",
      "labels": {"yes": "drag(obligated)", "no": "co-sale(right)"}},
+    {"slug": "rofr_cosale",
+     "title": "Test 5.5 — Right of First Refusal & Co-Sale: investor transfer right present vs absent",
+     "corpus_desc": "real SEC-filed stockholder/transfer documents",
+     "labels": {"yes": "rofr/cosale", "no": "absent/other-right"}},
+    {"slug": "pro_rata_rights",
+     "title": "Test 5.4 — Pro-rata right on future financings: granted vs not",
+     "corpus_desc": "real SEC-filed SAFEs, side letters and investors' rights agreements",
+     "labels": {"yes": "pro-rata", "no": "absent/waived"}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
