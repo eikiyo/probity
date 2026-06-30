@@ -62,6 +62,10 @@ LEAVES = [
      "title": "Test 6.2 — Vesting schedule: cliff present vs absent",
      "corpus_desc": "real SEC-filed equity-award agreements and disclosures",
      "labels": {"yes": "cliff", "no": "no-cliff"}},
+    {"slug": "protective_provisions",
+     "title": "Test 5.2 — Protective provisions: investor class-veto right present vs absent",
+     "corpus_desc": "real SEC-filed charters and governance documents",
+     "labels": {"yes": "veto-right", "no": "absent"}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",

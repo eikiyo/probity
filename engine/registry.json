@@ -498,7 +498,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 4,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/protective_provisions"
     },
     {
       "ref": "5.3",
