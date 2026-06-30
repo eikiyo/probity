@@ -21,6 +21,14 @@ Models span a size ladder (1B → 27B local + a hosted model) to test whether wo
 | `gemma4:12b` | 12B | **0%** | 100% | 72% | 18/18 |
 | `deepseek-v4-flash` | hosted | **6%** | 98% | 67% | 18/18 |
 
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's 20 runs (how often they matched that item's most common answer). It differs from Wobble: an item that flips even once is counted as wobble, yet can still be (say) 90% consistent. Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **non-part / part / capped** — accuracy **within** each true class (correct / total: non-participating · participating · capped), so a model can't score well by always guessing the most common class.
+
+
 ### Accuracy by class (majority vote)
 
 | Model | non-participating | participating | capped |

@@ -28,6 +28,13 @@ hosted model) to test whether wobble falls as capability rises.
 | `llama3.2:latest` | 3B | **72%** | 84% | 44% | 7/8 | 0/5 | 1/5 |
 | `gemma4:12b` | 12B | **0%** | 100% | 72% | 6/8 | 2/5 | 5/5 |
 | `deepseek-v4-flash` | hosted | **6%** | 98% | 67% | 6/8 | 1/5 | 5/5 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's 20 runs (how often they matched that item's most common answer). It differs from Wobble: an item that flips even once is counted as wobble, yet can still be (say) 90% consistent. Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **non-part / part / capped** — accuracy **within** each true class (correct / total: non-participating · participating · capped), so a model can't score well by always guessing the most common class.
 <!-- BENCHMARK:END -->
 
 Full per-item breakdown — including which clauses make each model wobble — in

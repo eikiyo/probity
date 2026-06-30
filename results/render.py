@@ -13,6 +13,21 @@ from pathlib import Path
 ROOT = Path(__file__).parent.parent
 LEAF = ROOT / "leaves" / "participation_type"
 CLASSES = ["non-participating", "participating", "capped"]
+
+DEFINITIONS = (
+    "**What the columns mean:**\n\n"
+    "- **Wobble** (headline, lower is better) — the share of items where the model gave **more than "
+    "one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money "
+    "workflow even when it's often right.\n"
+    "- **Consistency** — the *average* agreement **within** each item's 20 runs (how often they "
+    "matched that item's most common answer). It differs from Wobble: an item that flips even once "
+    "is counted as wobble, yet can still be (say) 90% consistent. Wobble counts *whether* an item "
+    "flipped; Consistency measures *how much*.\n"
+    "- **Accuracy** — the share of items whose majority answer matched the human-validated truth.\n"
+    "- **non-part / part / capped** — accuracy **within** each true class (correct / total: "
+    "non-participating · participating · capped), so a model can't score well by always guessing the "
+    "most common class."
+)
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
         "qwen3.5-27b": "27B", "deepseek-v4f": "hosted", "gemma": "12B", "deepseek": "hosted"}
 ORDER = ["gemma3-1b", "llama3.2-3b", "gemma4-12b", "qwen3.5-27b", "deepseek-v4f", "gemma", "deepseek"]
@@ -55,6 +70,7 @@ def render_leaf(scored, oracle):
         L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res):.0f}%** | "
                  f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}% | "
                  f"{a['n_measurable']}/{a['n_instances']} |")
+    L.append("\n" + DEFINITIONS + "\n")
     L.append("\n### Accuracy by class (majority vote)\n")
     L.append("| Model | non-participating | participating | capped |")
     L.append("|---|---|---|---|")
@@ -94,7 +110,7 @@ def readme_block(scored, oracle):
         cells = " | ".join(f"{pc[c][0]}/{pc[c][1]}" if pc[c][1] else "-" for c in CLASSES)
         L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res):.0f}%** | "
                  f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}% | {cells} |")
-    return "\n".join(L)
+    return "\n".join(L) + "\n\n" + DEFINITIONS
 
 
 def main():
