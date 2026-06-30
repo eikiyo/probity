@@ -1,0 +1,390 @@
+{
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "accuracy": {
+   "task": "flag_uncapped_participation",
+   "n_instances": 13,
+   "n_measurable": 13,
+   "accuracy_majority": 0.3076923076923077,
+   "accuracy_strict": 0.3076923076923077,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 10,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 13,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 13,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 8,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 12,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 11,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 6,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 7,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 0.8571428571428571
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 11,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 7,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 9,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 13,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 6,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_uncapped_participation",
+   "consistency_rate": 0.989010989010989,
+   "consistency_pct": 98.9010989010989,
+   "field_flips": {
+    "flag_uncapped_participation": 0.07692307692307693
+   },
+   "parse_failure_count": 65,
+   "parse_failure_rate": 0.25,
+   "valid_run_count": 195,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "accuracy": {
+   "task": "flag_uncapped_participation",
+   "n_instances": 13,
+   "n_measurable": 13,
+   "accuracy_majority": 0.8461538461538461,
+   "accuracy_strict": 0.7692307692307693,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_uncapped_participation": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_uncapped_participation",
+   "consistency_rate": 0.9961538461538461,
+   "consistency_pct": 99.6153846153846,
+   "field_flips": {
+    "flag_uncapped_participation": 0.07692307692307693
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 260,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ }
+}

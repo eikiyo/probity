@@ -735,6 +735,536 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
+## Test 2.1.6 — SAFE pro-rata side letter: granted vs absent
+
+**Corpus:** 15 real SEC-filed SAFEs and pro-rata side letters, human-validated answers (9 pro-rata / 6 absent). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **20%** | 96% | 93% | 15/15 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 15/15 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **pro-rata · absent** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | pro-rata | absent |
+|---|---|---|
+| `gemma3:1b` | 9/9 | 5/6 |
+| `deepseek-v4-flash` | 9/9 | 6/6 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| SNM Global Holdings, I | yes | easy | 1B |
+| SOS Hydration Inc. | yes | hard | 1B |
+| TaoWeave, Inc. | no | hard | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–20% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+
+---
+
+## Test 1.1.2 — Priced round basis: pre-money vs post-money
+
+**Corpus:** 21 real SEC-filed priced-round financing documents, human-validated answers (15 pre / 6 post). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **86%** | 84% | 71% | 21/21 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 21/21 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **pre · post** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | pre | post |
+|---|---|---|
+| `gemma3:1b` | 9/15 | 6/6 |
+| `deepseek-v4-flash` | 15/15 | 5/6 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| Viking Therapeutics, I | pre-money | easy | 1B |
+| Rules-Based Medicine I | pre-money | easy | 1B |
+| SUNESIS PHARMACEUTICAL | pre-money | easy | 1B |
+| RMG Acquisition Corp.  | pre-money | easy | 1B |
+| Ucommune Group Holding | pre-money | easy | 1B |
+| VIEWRAY INC | pre-money | easy | 1B |
+| Cytosorbents Corp | pre-money | medium | 1B |
+| Cytosorbents Corp | pre-money | medium | 1B |
+| Cytosorbents Corp | pre-money | medium | 1B |
+| GreenCell, Inc | pre-money | medium | 1B |
+| BIOLARGO, INC. | pre-money | medium | 1B |
+| HAGUE CORP. | pre-money | easy | 1B |
+| SOCIETY PASS INCORPORA | pre-money | easy | 1B |
+| PROVECTUS BIOPHARMACEU | post-money | easy | 1B |
+| Fold Holdings, Inc. | post-money | easy | 1B |
+| Cerebras Systems Inc. | post-money | medium | 1B |
+| Oculus Innovative Scie | post-money | medium | 1B |
+| Oculus Innovative Scie | post-money | medium | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–86% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 95% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+
+---
+
+## Test 8.2 — Risk flag: full-ratchet anti-dilution present vs absent
+
+**Corpus:** 7 real SEC-filed preferred-stock anti-dilution clauses, human-validated answers (4 full-ratchet / 3 absent). Each model run **28×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 57% | 7/7 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 86% | 7/7 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **full-ratchet · absent** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | full-ratchet | absent |
+|---|---|---|
+| `gemma3:1b` | 4/4 | 0/3 |
+| `deepseek-v4-flash` | 4/4 | 2/3 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+
+## What this shows
+
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 86% accuracy).
+
+---
+
+## Test 1.1.1 — Post-money valuation extraction
+
+**Corpus:** 4 real SEC-filed priced-round financing documents, human-validated answers (values range 5000000-275000000). Each model run **30×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **25%** | 96% | 25% | 4/4 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 50% | 4/4 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| Remark Holdings, Inc.  | 5000000 | easy | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 50% accuracy).
+
+---
+
+## Test 1.5.1 — Anti-dilution mechanism: full-ratchet vs weighted-average vs none
+
+**Corpus:** 5 real SEC-filed preferred-stock anti-dilution clauses, human-validated answers (2 full-ratchet / 2 weighted-avg / 0 broad-based / 0 narrow-based / 1 none). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 40% | 5/5 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **full-ratchet · weighted-avg · broad-based · narrow-based · none** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | full-ratchet | weighted-avg | broad-based | narrow-based | none |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 2/2 | 0/2 | — | — | 0/1 |
+| `deepseek-v4-flash` | 2/2 | 2/2 | — | — | 1/1 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+
+## What this shows
+
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+
+---
+
+## Test 8.3 — Risk flag: uncapped participating-preferred present vs absent
+
+**Corpus:** 13 real SEC-filed preferred-stock liquidation/participation clauses, human-validated answers (4 uncapped / 9 capped/none). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **8%** | 99% | 31% | 13/13 |
+| `deepseek-v4-flash` | hosted | **8%** | 100% | 85% | 13/13 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **uncapped · capped/none** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | uncapped | capped/none |
+|---|---|---|
+| `gemma3:1b` | 4/4 | 0/9 |
+| `deepseek-v4-flash` | 2/4 | 9/9 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| Jazz Semiconductor Inc | no | medium | hosted |
+| Workday, Inc. | no | medium | 1B |
+
+## What this shows
+
+- **Wobble spread: 8%–8% across the ladder.** Lowest-wobble model: **hosted** (8% wobble, 85% accuracy).
+
+---
+
+## Test 2.1.5 — SAFE Most-Favored-Nation clause: present vs absent
+
+**Corpus:** 7 real SEC-filed SAFE agreements, human-validated answers (4 MFN / 3 absent). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **29%** | 95% | 100% | 7/7 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **MFN · absent** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | MFN | absent |
+|---|---|---|
+| `gemma3:1b` | 4/4 | 3/3 |
+| `deepseek-v4-flash` | 4/4 | 3/3 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| THC Therapeutics, Inc. | yes | easy | 1B |
+| CEMTREX INC | yes | easy | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–29% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+
+---
+
+## Test 1.3.3 — Participation cap multiple extraction
+
+**Corpus:** 3 real SEC-filed capped-participating-preferred liquidation clauses, human-validated answers (values range 3-3.5). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 3/3 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+
+## What this shows
+
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 100% accuracy).
+
+---
+
+## Test 6.4 — Stock option exercise (strike) price extraction
+
+**Corpus:** 7 real SEC-filed stock option grant agreements, human-validated answers (values range 0.03-11.0). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **71%** | 87% | 57% | 7/7 |
+| `deepseek-v4-flash` | hosted | **29%** | 90% | 43% | 7/7 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| Medecision, Inc. | 0.03 | easy | 1B |
+| Medecision, Inc. | 0.25 | easy | 1B |
+| WhiteGlove Health, Inc | 0.61 | easy | 1B |
+| Medecision, Inc. | 1.25 | medium | 1B, hosted |
+| Medecision, Inc. | 2.0 | medium | 1B, hosted |
+
+## What this shows
+
+- **Wobble spread: 29%–71% across the ladder.** Lowest-wobble model: **hosted** (29% wobble, 43% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+
+---
+
+## Test 2.1.1 — SAFE valuation cap extraction
+
+**Corpus:** 8 real SEC-filed SAFE agreements, human-validated answers (values range 15000000-150000000). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **38%** | 96% | 88% | 8/8 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| Lomond Therapeutics Ho | 100000000 | medium | 1B |
+| Invizyne Technologies  | 100000000 | hard | 1B |
+| PaxMedica, Inc. | 150000000 | hard | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–38% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+
+---
+
+## Test 2.2.1 — Convertible note principal amount extraction
+
+**Corpus:** 7 real SEC-filed convertible promissory notes, human-validated answers (values range 12500-17364375). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 7/7 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+
+## What this shows
+
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 100% accuracy).
+
+---
+
+## Test 2.1.2 — SAFE discount rate extraction
+
+**Corpus:** 9 real SEC-filed SAFE agreements, human-validated answers (values range 10-50). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **44%** | 89% | 56% | 9/9 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| Complete Solaria, Inc. | 20 | easy | 1B |
+| Maison Luxe, Inc. | 20 | easy | 1B |
+| Parker Clay Global, PB | 15 | medium | 1B |
+| SOS Hydration Inc. | 50 | hard | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–44% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+
+---
+
+## Test 2.2.4 — Convertible note valuation cap extraction
+
+**Corpus:** 4 real SEC-filed convertible promissory notes, human-validated answers (values range 25000000-125000000). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **50%** | 88% | 50% | 4/4 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/4 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| Damon Motors Inc. | 125000000 | easy | 1B |
+| Exyn Technologies, Inc | 90000000 | medium | hosted |
+| Greenfield Robotics Co | 30000000 | easy | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+
+---
+
+## Test 1.6.1 — Preferred-stock conversion ratio extraction
+
+**Corpus:** 5 real SEC-filed preferred-stock charters, human-validated answers (values range 1-8000). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **20%** | 92% | 80% | 5/5 |
+| `deepseek-v4-flash` | hosted | **20%** | 98% | 100% | 5/5 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| Air Defense Services,  | 100 | medium | hosted |
+| Boston Life Sciences,  | 8000 | hard | 1B |
+
+## What this shows
+
+- **Wobble spread: 20%–20% across the ladder.** Lowest-wobble model: **hosted** (20% wobble, 100% accuracy).
+
+---
+
 ## Models and scope
 
 Per leaf during the build-out, Probity runs the **fast set** (1B/3B/12B local via Ollama, zero

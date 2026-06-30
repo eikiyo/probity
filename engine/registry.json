@@ -29,7 +29,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 5,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/post_money_valuation"
     },
     {
       "ref": "1.1.2",
@@ -42,8 +43,9 @@
       ],
       "op": "CL",
       "stakes": 4,
-      "tier": "v1",
-      "disambig": "default post-money unless doc explicitly says pre-money basis"
+      "tier": "built",
+      "disambig": "default post-money unless doc explicitly says pre-money basis",
+      "leaf": "leaves/pre_vs_post_money"
     },
     {
       "ref": "1.1.3",
@@ -112,7 +114,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 4,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/participation_cap"
     },
     {
       "ref": "1.3.4",
@@ -166,7 +169,8 @@
       ],
       "op": "CL",
       "stakes": 5,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/antidilution_type"
     },
     {
       "ref": "1.5.2",
@@ -198,7 +202,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/conversion_ratio"
     },
     {
       "ref": "1.6.2",
@@ -227,7 +232,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 5,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/safe_valuation_cap"
     },
     {
       "ref": "2.1.2",
@@ -236,7 +242,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 4,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/safe_discount_rate"
     },
     {
       "ref": "2.1.3",
@@ -274,7 +281,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 3,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/safe_mfn_present"
     },
     {
       "ref": "2.1.6",
@@ -283,7 +291,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/safe_pro_rata_side_letter"
     },
     {
       "ref": "2.1.7",
@@ -301,7 +310,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 4,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/note_principal"
     },
     {
       "ref": "2.2.2",
@@ -328,7 +338,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 4,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/note_valuation_cap"
     },
     {
       "ref": "2.2.5",
@@ -595,7 +606,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 3,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/option_strike_409a"
     },
     {
       "ref": "6.5",
@@ -677,7 +689,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 4,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/flag_full_ratchet"
     },
     {
       "ref": "8.3",
@@ -686,7 +699,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 4,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/flag_uncapped_participation"
     },
     {
       "ref": "8.4",

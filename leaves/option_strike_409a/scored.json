@@ -1,0 +1,234 @@
+{
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 0.5714285714285714,
+   "accuracy_strict": 0.2857142857142857,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.31,
+       "truth": 0.03,
+       "consistency": 0.9473684210526315
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 0.631578947368421
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 1.25,
+       "consistency": 0.8421052631578947
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.31,
+       "truth": 2.0,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 0.8672932330827068,
+   "consistency_pct": 86.72932330827068,
+   "field_flips": {
+    "option_strike_409a": 0.7142857142857143
+   },
+   "parse_failure_count": 21,
+   "parse_failure_rate": 0.15,
+   "valid_run_count": 119,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 0.42857142857142855,
+   "accuracy_strict": 0.42857142857142855,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 1.25,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 22.0,
+       "truth": 2.0,
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 0.9,
+   "consistency_pct": 90.0,
+   "field_flips": {
+    "option_strike_409a": 0.2857142857142857
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ }
+}

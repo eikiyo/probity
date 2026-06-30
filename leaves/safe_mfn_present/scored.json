@@ -1,0 +1,234 @@
+{
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "accuracy": {
+   "task": "safe_mfn_present",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.7142857142857143,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 9,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 0.7777777777777778
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 9,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 0.8888888888888888
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 14,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_mfn_present",
+   "consistency_rate": 0.9523809523809523,
+   "consistency_pct": 95.23809523809523,
+   "field_flips": {
+    "safe_mfn_present": 0.2857142857142857
+   },
+   "parse_failure_count": 47,
+   "parse_failure_rate": 0.3357142857142857,
+   "valid_run_count": 93,
+   "measurable": false,
+   "excluded_fields": []
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "accuracy": {
+   "task": "safe_mfn_present",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_mfn_present",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "safe_mfn_present": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ }
+}
