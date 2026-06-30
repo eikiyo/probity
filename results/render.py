@@ -58,6 +58,10 @@ LEAVES = [
      "title": "Test 5.4 — Pro-rata right on future financings: granted vs not",
      "corpus_desc": "real SEC-filed SAFEs, side letters and investors' rights agreements",
      "labels": {"yes": "pro-rata", "no": "absent/waived"}},
+    {"slug": "cliff_present",
+     "title": "Test 6.2 — Vesting schedule: cliff present vs absent",
+     "corpus_desc": "real SEC-filed equity-award agreements and disclosures",
+     "labels": {"yes": "cliff", "no": "no-cliff"}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
