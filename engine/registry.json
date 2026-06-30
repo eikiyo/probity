@@ -656,7 +656,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 5,
-      "tier": "v1",
+      "tier": "built",
+      "leaf": "leaves/flag_offmarket_liqpref",
       "disambig": "true if liq-pref multiple > 1x"
     },
     {

@@ -275,6 +275,50 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
+## Test 8.1 — Risk flag: off-market liquidation preference (>1x)
+
+**Corpus:** 10 real SEC-filed preferred-stock liquidation clauses, human-validated answers (5 off-market(>1x) / 5 standard(1x)). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **40%** | 95% | 40% | 10/10 |
+| `deepseek-v4-flash` | hosted | **10%** | 99% | 90% | 10/10 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **off-market(>1x) · standard(1x)** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | off-market(>1x) | standard(1x) |
+|---|---|---|
+| `gemma3:1b` | 3/5 | 1/5 |
+| `deepseek-v4-flash` | 5/5 | 4/5 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| MELINTA THERAPEUTICS,  | yes | easy | 1B |
+| Lulu's Fashion Lounge  | yes | hard | 1B |
+| Workday, Inc. | no | hard | 1B, hosted |
+| ENDOSTIM, INC. | no | easy | 1B |
+
+## What this shows
+
+- **Wobble spread: 10%–40% across the ladder.** Lowest-wobble model: **hosted** (10% wobble, 90% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+
+---
+
 ## Models and scope
 
 Per leaf during the build-out, Probity runs the **fast set** (1B/3B/12B local via Ollama, zero

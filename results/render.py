@@ -38,6 +38,10 @@ LEAVES = [
      "title": "Test 1.3.4 — Multi-series preference seniority: pari-passu vs stacked",
      "corpus_desc": "real SEC-filed multi-series preferred charters",
      "labels": {"pari-passu": "pari-passu", "stacked": "stacked"}},
+    {"slug": "flag_offmarket_liqpref",
+     "title": "Test 8.1 — Risk flag: off-market liquidation preference (>1x)",
+     "corpus_desc": "real SEC-filed preferred-stock liquidation clauses",
+     "labels": {"yes": "off-market(>1x)", "no": "standard(1x)"}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
