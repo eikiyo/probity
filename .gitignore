@@ -6,3 +6,7 @@ venv/
 *.env
 .DS_Store
 .pytest_cache/
+
+# run logs
+*.log
+nohup.out

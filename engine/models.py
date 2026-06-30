@@ -124,9 +124,9 @@ class GeminiClient(LLMClient):
 class OllamaClient(LLMClient):
     """Local Ollama client (gemma4:12b)."""
 
-    def __init__(self, base_url: str = "http://localhost:11434"):
+    def __init__(self, model: str = "gemma4:12b", base_url: str = "http://localhost:11434"):
         self.base_url = base_url
-        self.model = "gemma4:12b"
+        self.model = model
 
     def generate(self, prompt: str, temperature: float) -> str:
         """Generate via Ollama. Assert temp > 0 (SP1)."""

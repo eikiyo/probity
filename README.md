@@ -6,13 +6,32 @@ Probity measures how trustworthy a language model is when it reads the legal and
 documents that decide who owns what in a startup financing — term sheets, charters, SAFEs,
 convertible notes, cap tables. It reports two numbers that are usually conflated and shouldn't be:
 
+- **Wobble** (the core metric) — does the model give the *same* answer when you ask it the same
+  question 20 times at temperature 0.7? A model whose answer flips run to run cannot be trusted in
+  a workflow that touches money, even when it is often right. This is label-free: it needs no
+  ground truth, only repetition.
 - **Accuracy** — does the model get the answer *right*, graded against a validated answer that a
   human extracted from the source document (not authored by an AI)?
-- **Reliability** — does the model give the *same* answer when you ask it the same question five
-  times at temperature 0.7? A model that is right once and wrong four times is not usable in a
-  workflow that touches money.
 
-These are scored separately and never averaged into one headline.
+These are scored separately and never averaged into one headline — a model can be perfectly
+consistent and consistently wrong. Models are run across a **size ladder** (1B → 27B local, plus a
+hosted model) to test whether wobble falls as capability rises.
+
+## Benchmark results
+
+<!-- BENCHMARK:START -->
+*18 real SEC-filed charter clauses, human-validated answers. Each model run 20x/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | non-part | part | capped |
+|---|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **61%** | 90% | 39% | 7/8 | 0/5 | 0/5 |
+| `llama3.2:latest` | 3B | **72%** | 84% | 44% | 7/8 | 0/5 | 1/5 |
+| `gemma4:12b` | 12B | **0%** | 100% | 72% | 6/8 | 2/5 | 5/5 |
+| `deepseek-v4-flash` | hosted | **6%** | 98% | 67% | 6/8 | 1/5 | 5/5 |
+<!-- BENCHMARK:END -->
+
+Full per-item breakdown — including which clauses make each model wobble — in
+[`results/RESULTS.md`](results/RESULTS.md).
 
 ## Why the answers are trustworthy
 
@@ -38,10 +57,6 @@ Probity's full test backlog is a structured map of fundraising-reasoning capabil
 (`engine/registry.json`) — 67 atomic checks across priced equity, convertibles, cap-table math,
 exit waterfalls, investor rights, founder equity, regulatory filings, and off-market risk flags.
 Each check is built one at a time, to depth, against real sourced documents.
-
-## Results
-
-See [`results/RESULTS.md`](results/RESULTS.md) for the live benchmark table.
 
 ## Structure
 
