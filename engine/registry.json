@@ -534,7 +534,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/drag_along"
     },
     {
       "ref": "5.7",

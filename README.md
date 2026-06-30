@@ -21,7 +21,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*7 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
+*8 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
 
 **Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
 
@@ -75,6 +75,13 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **20%** | 97% | 50% | 0/5 | 5/5 |
 | `deepseek-v4-flash` | hosted | **10%** | 96% | 100% | 5/5 | 5/5 |
+
+**Test 5.6 — Transfer agreements: drag-along (obligation) vs co-sale (right)** — 12 clauses (6 drag(obligated) / 6 co-sale(right)), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | drag(obligated) | co-sale(right) |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **17%** | 99% | 42% | 4/6 | 1/6 |
+| `deepseek-v4-flash` | hosted | **8%** | 97% | 100% | 6/6 | 6/6 |
 
 **What the columns mean:**
 
