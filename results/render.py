@@ -70,6 +70,18 @@ LEAVES = [
      "title": "Test 5.3 — Information rights: live financial-reporting obligation vs absent",
      "corpus_desc": "real SEC-filed investors' rights agreements and equity-award docs",
      "labels": {"yes": "info-rights", "no": "absent/waived"}},
+    {"slug": "vesting_acceleration",
+     "title": "Test 5.7 — Vesting acceleration: granted on trigger vs absent",
+     "corpus_desc": "real SEC-filed equity-award agreements and proxy disclosures",
+     "labels": {"yes": "accelerates", "no": "no-acceleration"}},
+    {"slug": "liquidation_preference_multiple",
+     "title": "Test 1.3.1 — Liquidation preference multiple: 1x vs 2x vs 3x vs other",
+     "corpus_desc": "real SEC-filed preferred-stock liquidation preference clauses",
+     "labels": {"non-participating": "non-part", "1x": "1x", "2x": "2x", "3x": "3x", "other": "other"}},
+    {"slug": "board_seats_investor",
+     "title": "Test 5.1 — Board seats: number an investor has the right to designate",
+     "corpus_desc": "real SEC-filed voting/shareholders'/designation agreements",
+     "labels": {}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
@@ -78,13 +90,14 @@ ORDER = ["gemma3-1b", "llama3.2-3b", "gemma4-12b", "qwen3.5-27b", "deepseek-v4f"
 
 
 def load_leaf(slug):
-    """Return (field, classes, scored, oracle) for a leaf, deriving field+classes from its task.TASK."""
+    """Return (field, classes, scored, oracle) for a leaf, deriving field+classes from its task.TASK.
+    classes is None for NUMBER-type fields (no enum buckets to break out by class)."""
     leaf = ROOT / "leaves" / slug
     spec = importlib.util.spec_from_file_location(f"task_{slug}", leaf / "task.py")
     mod = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(mod)
     field = list(mod.TASK["fields"])[0]
-    classes = mod.TASK["fields"][field]["values"]
+    classes = mod.TASK["fields"][field].get("values")
     scored = json.loads((leaf / "scored.json").read_text())
     oracle = [json.loads(l) for l in open(leaf / "oracle.jsonl") if l.strip()]
     return field, classes, scored, oracle
@@ -115,19 +128,22 @@ def _runs_each(scored):
     return n // per if per else 0
 
 
-def definitions(labels, generic=False):
-    cols = "the right-hand class columns" if generic else " · ".join(labels.values())
-    return (
-        "**What the columns mean:**\n\n"
+def definitions(labels, generic=False, has_classes=True):
+    lines = [
+        "**What the columns mean:**\n",
         "- **Wobble** (headline, lower is better) — the share of items where the model gave **more "
         "than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a "
-        "money workflow even when it's often right.\n"
+        "money workflow even when it's often right.",
         "- **Consistency** — the *average* agreement **within** each item's runs (how often they "
         "matched that item's most common answer). Wobble counts *whether* an item flipped; "
-        "Consistency measures *how much*.\n"
-        "- **Accuracy** — the share of items whose majority answer matched the human-validated truth.\n"
-        f"- **{cols}** — accuracy **within** each true class (correct / total), so a model can't "
-        "score well by always guessing the most common class.")
+        "Consistency measures *how much*.",
+        "- **Accuracy** — the share of items whose majority answer matched the human-validated truth.",
+    ]
+    if has_classes:
+        cols = "the right-hand class columns" if generic else " · ".join(labels.values())
+        lines.append(f"- **{cols}** — accuracy **within** each true class (correct / total), so a model can't "
+                     "score well by always guessing the most common class.")
+    return "\n".join(lines)
 
 
 def _wobble_table(scored, field):
@@ -200,8 +216,12 @@ FINDINGS = {"participation_type": PART_FINDINGS, "safe_pre_post": SAFE_FINDINGS}
 def render_leaf(cfg):
     field, classes, scored, oracle = load_leaf(cfg["slug"])
     labels = cfg["labels"]; total = len(oracle)
-    counts = {c: sum(o[field] == c for o in oracle) for c in classes}
-    bal = " / ".join(f"{counts[c]} {labels[c]}" for c in classes)
+    if classes:
+        counts = {c: sum(o[field] == c for o in oracle) for c in classes}
+        bal = " / ".join(f"{counts[c]} {labels[c]}" for c in classes)
+    else:
+        vals = [o[field] for o in oracle]
+        bal = f"values range {min(vals)}-{max(vals)}" if vals else "n/a"
     L = [f"## {cfg['title']}\n"]
     L.append(f"**Corpus:** {total} {cfg['corpus_desc']}, human-validated answers ({bal}). "
              f"Each model run **{_runs_each(scored)}×/item at temp 0.7**.\n")
@@ -209,9 +229,10 @@ def render_leaf(cfg):
     L.append("*Wobble = % of items where the model gave more than one answer across its runs. "
              "A model that wobbles cannot be trusted in a money workflow even when it is often right.*\n")
     L += _wobble_table(scored, field)
-    L.append("\n" + definitions(labels) + "\n")
-    L.append("\n### Accuracy by class (majority vote)\n")
-    L += _class_table(scored, oracle, field, classes, labels)
+    L.append("\n" + definitions(labels, has_classes=bool(classes)) + "\n")
+    if classes:
+        L.append("\n### Accuracy by class (majority vote)\n")
+        L += _class_table(scored, oracle, field, classes, labels)
     L.append("\n### Which items make models wobble\n")
     L.append("| Item | True | Difficulty | Models that wobbled |")
     L.append("|---|---|---|---|")
@@ -228,18 +249,25 @@ def render_leaf(cfg):
 def readme_block_for(cfg):
     field, classes, scored, oracle = load_leaf(cfg["slug"])
     labels = cfg["labels"]; total = len(oracle)
-    counts = {c: sum(o[field] == c for o in oracle) for c in classes}
-    bal = " / ".join(f"{counts[c]} {labels[c]}" for c in classes)
+    if classes:
+        counts = {c: sum(o[field] == c for o in oracle) for c in classes}
+        bal = " / ".join(f"{counts[c]} {labels[c]}" for c in classes)
+    else:
+        vals = [o[field] for o in oracle]
+        bal = f"values range {min(vals)}-{max(vals)}" if vals else "n/a"
     L = [f"**{cfg['title']}** — {total} clauses ({bal}), each model run {_runs_each(scored)}×/item:", ""]
-    L.append("| Model | Size | **Wobble** ↓ | Consistency | Accuracy | " +
-             " | ".join(labels[c] for c in classes) + " |")
-    L.append("|---|---|---|---|---|" + "---|" * len(classes))
+    class_header = " | " + " | ".join(labels[c] for c in classes) if classes else ""
+    L.append("| Model | Size | **Wobble** ↓ | Consistency | Accuracy" + class_header + " |")
+    L.append("|---|---|---|---|---|" + ("---|" * len(classes) if classes else ""))
     for k in _models(scored):
         res = scored[k]; a = res["accuracy"]; r = res["reliability"]
-        pc = per_class(a["per_instance"], oracle, field, classes)
-        cells = " | ".join(f"{pc[c][0]}/{pc[c][1]}" if pc[c][1] else "-" for c in classes)
+        if classes:
+            pc = per_class(a["per_instance"], oracle, field, classes)
+            cells = " | " + " | ".join(f"{pc[c][0]}/{pc[c][1]}" if pc[c][1] else "-" for c in classes)
+        else:
+            cells = ""
         L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res,field):.0f}%** | "
-                 f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}% | {cells} |")
+                 f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}%{cells} |")
     return "\n".join(L)
 
 

@@ -86,8 +86,9 @@
       ],
       "op": "CL",
       "stakes": 5,
-      "tier": "v1",
-      "disambig": "the proven wobble field; multiple only, participation is 1.3.2"
+      "tier": "built",
+      "disambig": "the proven wobble field; multiple only, participation is 1.3.2",
+      "leaf": "leaves/liquidation_preference_multiple"
     },
     {
       "ref": "1.3.2",
@@ -489,7 +490,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 4,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/board_seats_investor"
     },
     {
       "ref": "5.2",
@@ -548,7 +550,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/vesting_acceleration"
     },
     {
       "ref": "6.1",

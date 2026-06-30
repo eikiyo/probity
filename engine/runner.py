@@ -73,10 +73,15 @@ def run_leaf(leaf_dir, model_set=FAST_SET, only=None):
     leaf_dir = Path(leaf_dir)
     task = _load_task(leaf_dir)
     field = list(task["fields"])[0]
-    classes = task["fields"][field]["values"]
+    field_type = task["fields"][field].get("type", "enum")
     instances, oracle = load_instances(leaf_dir, field)
-    counts = {c: sum(o[field] == c for o in oracle) for c in classes}
-    print(f"{len(instances)} items  {counts}  N={N_RUNS} runs/item  field={field}\n", flush=True)
+    if field_type == "number":
+        vals = [o[field] for o in oracle]
+        summary = f"values {sorted(set(vals))}" if vals else "no items"
+    else:
+        classes = task["fields"][field]["values"]
+        summary = {c: sum(o[field] == c for o in oracle) for c in classes}
+    print(f"{len(instances)} items  {summary}  N={N_RUNS} runs/item  field={field}\n", flush=True)
     scored = {}
     for label, omodel, factory in model_set:
         if only and label != only:

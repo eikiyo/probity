@@ -607,6 +607,90 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
+## Test 1.3.1 — Liquidation preference multiple: 1x vs 2x vs 3x vs other
+
+**Corpus:** 13 real SEC-filed preferred-stock liquidation preference clauses, human-validated answers (0 non-part / 4 1x / 5 2x / 4 3x / 0 other). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **46%** | 91% | 0% | 12/13 |
+| `deepseek-v4-flash` | hosted | **46%** | 87% | 62% | 13/13 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **non-part · 1x · 2x · 3x · other** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | non-part | 1x | 2x | 3x | other |
+|---|---|---|---|---|---|
+| `gemma3:1b` | — | 0/4 | 0/5 | 0/3 | — |
+| `deepseek-v4-flash` | — | 3/4 | 1/5 | 4/4 | — |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| BIOVENTRIX, INC.  (CIK | 1x | easy | 1B |
+| Oportun Financial Corp | 2x | easy | 1B, hosted |
+| Pagaya Technologies Lt | 2x | easy | 1B, hosted |
+| Pagaya Technologies Lt | 2x | easy | 1B, hosted |
+| Pagaya Technologies Lt | 2x | easy | 1B, hosted |
+| 24/7 REAL MEDIA INC  ( | 3x | easy | 1B |
+| CASTLE BIOSCIENCES INC | 3x | easy | hosted |
+| CASTLE BIOSCIENCES INC | 3x | easy | 1B, hosted |
+
+## What this shows
+
+- **Wobble spread: 46%–46% across the ladder.** Lowest-wobble model: **hosted** (46% wobble, 62% accuracy).
+
+---
+
+## Test 5.1 — Board seats: number an investor has the right to designate
+
+**Corpus:** 9 real SEC-filed voting/shareholders'/designation agreements, human-validated answers (values range 1-9). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **44%** | 92% | 78% | 9/9 |
+| `deepseek-v4-flash` | hosted | **11%** | 97% | 78% | 9/9 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| SICOR Inc. | 3 | easy | 1B |
+| Dollar General Corpora | 1 | medium | 1B |
+| Ute Energy Corporation | 1 | medium | 1B |
+| Ute Energy Corporation | 2 | medium | 1B |
+| Cinemark Holdings, Inc | 9 | hard | hosted |
+
+## What this shows
+
+- **Wobble spread: 11%–44% across the ladder.** Lowest-wobble model: **hosted** (11% wobble, 78% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+
+---
+
 ## Models and scope
 
 Per leaf during the build-out, Probity runs the **fast set** (1B/3B/12B local via Ollama, zero

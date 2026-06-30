@@ -21,7 +21,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*13 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
+*15 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
 
 **Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
 
@@ -117,6 +117,20 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **17%** | 95% | 50% | 6/6 | 0/6 |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 5/6 | 6/6 |
+
+**Test 1.3.1 — Liquidation preference multiple: 1x vs 2x vs 3x vs other** — 13 clauses (0 non-part / 4 1x / 5 2x / 4 3x / 0 other), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | non-part | 1x | 2x | 3x | other |
+|---|---|---|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **46%** | 91% | 0% | - | 0/4 | 0/5 | 0/3 | - |
+| `deepseek-v4-flash` | hosted | **46%** | 87% | 62% | - | 3/4 | 1/5 | 4/4 | - |
+
+**Test 5.1 — Board seats: number an investor has the right to designate** — 9 clauses (values range 1-9), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **44%** | 92% | 78% |
+| `deepseek-v4-flash` | hosted | **11%** | 97% | 78% |
 
 **What the columns mean:**
 
