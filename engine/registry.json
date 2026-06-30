@@ -216,7 +216,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 3,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/redemption_rights"
     },
     {
       "ref": "2.1.1",

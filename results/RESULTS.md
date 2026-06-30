@@ -319,6 +319,48 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
+## Test 1.7 — Redemption rights: redeemable vs non-redeemable
+
+**Corpus:** 10 real SEC-filed preferred-stock charter redemption clauses, human-validated answers (5 redeemable / 5 non-redeem). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **20%** | 97% | 50% | 10/10 |
+| `deepseek-v4-flash` | hosted | **10%** | 96% | 100% | 10/10 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **redeemable · non-redeem** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | redeemable | non-redeem |
+|---|---|---|
+| `gemma3:1b` | 0/5 | 5/5 |
+| `deepseek-v4-flash` | 5/5 | 5/5 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| Lulu's Fashion Lounge  | yes | medium | 1B |
+| Tenable Holdings, Inc. | yes | medium | 1B |
+| Pfenex Inc. | yes | hard | hosted |
+
+## What this shows
+
+- **Wobble spread: 10%–20% across the ladder.** Lowest-wobble model: **hosted** (10% wobble, 100% accuracy).
+
+---
+
 ## Models and scope
 
 Per leaf during the build-out, Probity runs the **fast set** (1B/3B/12B local via Ollama, zero

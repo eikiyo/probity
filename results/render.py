@@ -42,6 +42,10 @@ LEAVES = [
      "title": "Test 8.1 — Risk flag: off-market liquidation preference (>1x)",
      "corpus_desc": "real SEC-filed preferred-stock liquidation clauses",
      "labels": {"yes": "off-market(>1x)", "no": "standard(1x)"}},
+    {"slug": "redemption_rights",
+     "title": "Test 1.7 — Redemption rights: redeemable vs non-redeemable",
+     "corpus_desc": "real SEC-filed preferred-stock charter redemption clauses",
+     "labels": {"yes": "redeemable", "no": "non-redeem"}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
