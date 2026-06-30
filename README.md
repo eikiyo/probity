@@ -21,7 +21,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*4 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
+*5 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
 
 **Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
 
@@ -54,6 +54,13 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **46%** | 97% | 85% | 4/6 | 7/7 |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 6/6 | 7/7 |
+
+**Test 1.3.4 — Multi-series preference seniority: pari-passu vs stacked** — 11 clauses (6 pari-passu / 5 stacked), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | pari-passu | stacked |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **45%** | 97% | 45% | 0/6 | 5/5 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 82% | 4/6 | 5/5 |
 
 **What the columns mean:**
 

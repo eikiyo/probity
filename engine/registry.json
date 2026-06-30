@@ -134,7 +134,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/preference_seniority"
     },
     {
       "ref": "1.4.2",

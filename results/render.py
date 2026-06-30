@@ -34,6 +34,10 @@ LEAVES = [
      "title": "Test 6.3 — Equity vesting acceleration: single-trigger vs double-trigger",
      "corpus_desc": "real SEC-filed equity-award / employment agreements",
      "labels": {"single-trigger": "single", "double-trigger": "double"}},
+    {"slug": "preference_seniority",
+     "title": "Test 1.3.4 — Multi-series preference seniority: pari-passu vs stacked",
+     "corpus_desc": "real SEC-filed multi-series preferred charters",
+     "labels": {"pari-passu": "pari-passu", "stacked": "stacked"}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",

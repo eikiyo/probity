@@ -230,6 +230,51 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
+## Test 1.3.4 — Multi-series preference seniority: pari-passu vs stacked
+
+**Corpus:** 11 real SEC-filed multi-series preferred charters, human-validated answers (6 pari-passu / 5 stacked). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **45%** | 97% | 45% | 11/11 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 82% | 11/11 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **pari-passu · stacked** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | pari-passu | stacked |
+|---|---|---|
+| `gemma3:1b` | 0/6 | 5/5 |
+| `deepseek-v4-flash` | 4/6 | 5/5 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| Banks.com, Inc. | stacked | medium | 1B |
+| Teladoc, Inc. | stacked | easy | 1B |
+| VioQuest Pharmaceutica | pari-passu | easy | 1B |
+| RIGHT START INC /CA | pari-passu | medium | 1B |
+| PRECOM TECHNOLOGY INC | pari-passu | hard | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–45% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 82% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+
+---
+
 ## Models and scope
 
 Per leaf during the build-out, Probity runs the **fast set** (1B/3B/12B local via Ollama, zero
