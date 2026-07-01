@@ -87,11 +87,14 @@ def _parse_json_response(raw_output: str) -> Optional[Dict[str, Any]]:
 
 
 def _try_load(candidate: str) -> Optional[Dict[str, Any]]:
-    """Parse one JSON candidate; return None (never raise) so the caller tries the next."""
+    """Parse one JSON candidate; return None (never raise) so the caller tries the next.
+    Fail closed on a non-dict parse (e.g. a model emitting a bare number/string/list instead
+    of the requested JSON object) -- that is a parse failure, not a usable result."""
     try:
-        return json.loads(candidate)
+        obj = json.loads(candidate)
     except json.JSONDecodeError:
         return None
+    return obj if isinstance(obj, dict) else None
 
 
 def _checkpoint_run(checkpoint_file: Path, run_record: Dict[str, Any]) -> None:
