@@ -403,7 +403,8 @@
       "type": "number",
       "op": "CO",
       "stakes": 4,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/investor_ownership_pct"
     },
     {
       "ref": "3.2.3",
