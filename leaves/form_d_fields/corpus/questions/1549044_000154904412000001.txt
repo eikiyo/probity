@@ -1,0 +1,6 @@
+ning>0</totalRemaining>
+            <clarificationOfResponse>Total Offering Amount: $70,227,931.85; Total Amount Sold: $70,227,931.85; Total Remaining to be Sold: $0.
+Total Amount Sold included $10,227,942.44 cancellation of indebtedness.</clarificationOfResponse>
+        </offeringSalesAmounts>
+        <investors>
+            <has

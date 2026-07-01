@@ -1,0 +1,86 @@
+<entityName>ACCELERATED I/O INC</entityName>
+        <issuerAddress>
+            <street1>7633 E 63RD PLACE</street1>
+            <street2>SUITE 300</street2>
+            <city>TULSA</city>
+            <stateOrCountry>OK</stateOrCountry>
+            <stateOrCountryDescription>OKLAHOMA</stateOrCountryDescription>
+            <zipCode>74133</zipCode>
+        </issuerAddress>
+        <issuerPhoneNumber>800-691-8580</issuerPhoneNumber>
+        <jurisdictionOfInc>DELAWARE</jurisdictionOfInc>
+        <edgarPreviousNameList>
+            <previousName>ACCELERATED I O INC</previousName>
+        </edgarPreviousNameList>
+        <entityType>Corporation</entityType>
+        <yearOfInc>
+            <overFiveYears>true</overFiveYears>
+        </yearOfInc>
+    </primaryIssuer>
+    <relatedPersonsList>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Joseph</firstName>
+                <middleName>D</middleName>
+                <lastName>Doll</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>4221 W 136th Ave</street1>
+                <city>Broomfield</city>
+                <stateOrCountry>CO</stateOrCountry>
+                <stateOrCountryDescription>COLORADO</stateOrCountryDescription>
+                <zipCode>80023</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Gerald</firstName>
+                <middleName>R</middleName>
+                <lastName>Ferguson</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>7633 E 63rd Place</street1>
+                <street2>Suite 300</street2>
+                <city>Tulsa</city>
+                <stateOrCountry>OK</stateOrCountry>
+                <stateOrCountryDescription>OKLAHOMA</stateOrCountryDescription>
+                <zipCode>74133</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Francisco</firstName>
+                <lastName>Schipperheijn</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>613 Cricket Court</street1>
+                <city>Edmondton</city>
+                <stateOrCountry>A0</stateOrCountry>
+                <stateOrCountryDescription>ALBERTA, CANADA</stateOrCountryDescription>
+                <zipCode>T5T 2B2</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+    </relatedPersonsList>
+    <offeringData>
+        <industryGroup>
+            <industryGroupType>Other Technology</industryGroupType>
+        </industryGroup>
+        <issuerSize>
+            <revenueRange>$1 - $1,000,000</revenueRange>
+        </issuerSize>
+        <federalExemptionsExclusions>
+            <item>06b</item>
+        </federalExemptionsExclusions>

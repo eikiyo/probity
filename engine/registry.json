@@ -645,7 +645,8 @@
       ],
       "op": "CL",
       "stakes": 3,
-      "tier": "v3"
+      "tier": "built",
+      "leaf": "leaves/securities_exemption"
     },
     {
       "ref": "7.2",
@@ -654,7 +655,8 @@
       "type": "string",
       "op": "EX",
       "stakes": 2,
-      "tier": "v3"
+      "tier": "built",
+      "leaf": "leaves/form_d_fields"
     },
     {
       "ref": "7.3",

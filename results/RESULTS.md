@@ -1721,6 +1721,82 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
+## Test 7.1 — Securities Act exemption classification
+
+**Corpus:** 10 real SEC Form D filings (structured federalExemptionsExclusions field), human-validated answers (6 506(b) / 4 506(c) / 0 504 / 0 Reg A / 0 other). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **40%** | 87% | 90% | 10/10 |
+| `deepseek-v4-flash` | hosted | **30%** | 96% | 100% | 10/10 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **506(b) · 506(c) · 504 · Reg A · other** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | 506(b) | 506(c) | 504 | Reg A | other |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 6/6 | 3/4 | — | — | — |
+| `deepseek-v4-flash` | 6/6 | 4/4 | — | — | — |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| VoCare, Inc. | 506c | medium | 1B, hosted |
+| Brewer Lane Ventures F | 506c | medium | 1B, hosted |
+| Material Impact Fund I | 506c | medium | 1B |
+| NextView Ventures V, L | 506c | medium | 1B, hosted |
+
+## What this shows
+
+- **Wobble spread: 30%–40% across the ladder.** Lowest-wobble model: **hosted** (30% wobble, 100% accuracy).
+
+---
+
+## Test 7.2 — Form D field extraction (Total Amount Sold)
+
+**Corpus:** 2 real SEC Form D filings, human-validated answers (values range 2,366,532-70,227,931.85). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
+|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **50%** | 90% | 0% | 2/2 |
+| `deepseek-v4-flash` | hosted | **50%** | 95% | 100% | 2/2 |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| NETBASE SOLUTIONS INC  | 2,366,532 | medium | hosted |
+| Skybox Imaging, Inc.   | 70,227,931.85 | medium | 1B |
+
+## What this shows
+
+- **Wobble spread: 50%–50% across the ladder.** Lowest-wobble model: **hosted** (50% wobble, 100% accuracy).
+
+---
+
 ## Models and scope
 
 Per leaf during the build-out, Probity runs the **fast set** (1B/3B/12B local via Ollama, zero

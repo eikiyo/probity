@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<edgarSubmission>
+
+    <schemaVersion>X0603</schemaVersion>
+
+    <submissionType>D</submissionType>
+
+    <testOrLive>LIVE</testOrLive>
+
+    <primaryIssuer>
+        <cik>0001456554</cik>
+        <entityName>NETBASE SOLUTIONS INC</entityName>
+        <issuerAddress>
+            <street1>2087 LANDINGS DRIVE</street1>
+            <city>MOUNTAIN VIEW</city>
+            <stateOrCountry>CA</stateOrCountry>
+            <zipCode>94043</zipCode>
+        </issuerAddress>
+        <issuerPhoneNumber>650-968-4741</issuerPhoneNumber>
+        <jurisdictionOfInc>DELAWARE</jurisdictionOfInc>
+        <issuerPreviousNameList>
+            <value>None</value>
+        </issuerPreviousNameList>
+        <edgarPreviousNameList>
+            <value>None</value>
+        </edgarPreviousNameList>
+        <entityType>Corporation</entityType>
+        <yearOfInc>
+            <overFiveYears>true</overFiveYears>
+        </yearOfInc>
+    </primaryIssuer>
+
+    <relatedPersonsList>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Michael</firstName>
+                <middleName>J.</middleName>
+                <lastName>Osofsky</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>2087 Landing Drive</street1>
+                <city>Mountain View</city>
+                <stateOrCountry>CA</stateOrCountry>
+                <zipCode>94343</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Jonathan</firstName>
+                <lastName>Spier</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>2087 Landing Drive</street1>
+                <city>Mountain View</city>
+                <stateOrCountry>CA</stateOrCountry>
+                <zipCode>94343</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Ly</firstName>
+                <lastName>Tran</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>27 Sargent Street</street1>
+                <city>Newton</city>
+                <stateOrCountry>MA</stateOrCountry>
+                <zipCode>02458</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Anthony</firstName>
+                <lastName>Lee</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>2882 Sand Hill Road</street1>
+                <street2>Suite 100</street2>
+                <city>Menlo Park</city>
+                <stateOrCountry>CA</stateOrCountry>
+                <zipCode>94025</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Donald</firstName>
+                <lastName>Butler</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>222 Pine Street</street1>
+                <city>Philadelphia</city>
+                <stateOrCountry>PA</stateOrCountry>
+                <zipCode>19106</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Michael</firstName>
+                <lastName>Seashols</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>2805 St. James Road</street1>
+                <city>Mountain View</city>
+                <stateOrCountry>CA</stateOrCountry>
+                <zipCode>94043</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+    </relatedPersonsList>
+
+    <offeringData>
+        <industryGroup>
+            <industryGroupType>Computers</industryGroupType>
+        </industryGroup>
+        <issuerSize>
+            <revenueRange>Decline to Disclose</revenueRange>
+        </issuerSize>
+        <federalExemptionsExclusions>
+            <item>06</item>
+        </federalExemptionsExclusions>
+        <typeOfFiling>
+            <newOrAmendment>
+                <isAmendment>false</isAmendment>
+            </newOrAmendment>
+            <dateOfFirstSale>
+                <value>2010-02-26</value>
+            </dateOfFirstSale>
+        </typeOfFiling>
+        <durationOfOffering>
+            <moreThanOneYear>false</moreThanOneYear>
+        </durationOfOffering>
+        <typesOfSecuritiesOffered>
+            <isEquityType>true</isEquityType>
+        </typesOfSecuritiesOffered>
+        <businessCombinationTransaction>
+            <isBusinessCombinationTransaction>false</isBusinessCombinationTransaction>
+            <clarificationOfResponse></clarificationOfResponse>
+        </businessCombinationTransaction>
+        <minimumInvestmentAccepted>0</minimumInvestmentAccepted>
+        <salesCompensationList></salesCompensationList>
+        <offeringSalesAmounts>
+            <totalOfferingAmount>10500000</totalOfferingAmount>
+            <totalAmountSold>9398531</totalAmountSold>
+            <totalRemaining>1101469</totalRemaining>
+            <clarificationOfResponse>Series B-1 Preferred Stock Total Offering of $2,380,000,Total Amount Sold $2,366,532 and Total Remaining to be Sold is $13,468. Series C Preferred Stock Total Offering of $8,120,000,Total Amount Sold $7,031,999 and Total Remaining to be Sold is $1,088,001</clarificationOfResponse>
+        </offeringSalesAmounts>
+        <investors>
+            <hasNonAccreditedInvestors>false</hasNonAccreditedInvestors>
+            <totalNumberAlreadyInvested>9</totalNumberAlreadyInvested>
+        </investors>
+        <salesCommissionsFindersFees>
+            <salesCommissions>
+                <dollarAmount>0</dollarAmount>
+            </salesCommissions>
+            <findersFees>
+                <dollarAmount>0</dollarAmount>
+            </findersFees>
+            <clarificationOfResponse></clarificationOfResponse>
+        </salesCommissionsFindersFees>
+        <useOfProceeds>
+            <grossProceedsUsed>
+                <dollarAmount>0</dollarAmount>
+            </grossProceedsUsed>
+            <clarificationOfResponse></clarificationOfResponse>
+        </useOfProceeds>
+        <signatureBlock>
+            <authorizedRepresentative>false</authorizedRepresentative>
+            <signature>
+                <issuerName>NETBASE SOLUTIONS INC</issuerName>
+                <signatureName>/s/ Jonathan Spier</signatureName>
+                <nameOfSigner>Jonathan Spier</nameOfSigner>
+                <signatureTitle>Chief Executive Officer</signatureTitle>
+                <signatureDate>2010-03-09</signatureDate>
+            </signature>
+        </signatureBlock>
+    </offeringData>
+</edgarSubmission>

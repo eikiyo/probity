@@ -191,6 +191,14 @@ LEAVES = [
      "title": "Test 3.2.3 — Employee option pool size as % of total shares (compute)",
      "corpus_desc": "real SEC-filed S-1 capitalization narrative",
      "labels": {}},
+    {"slug": "securities_exemption",
+     "title": "Test 7.1 — Securities Act exemption classification",
+     "corpus_desc": "real SEC Form D filings (structured federalExemptionsExclusions field)",
+     "labels": {"506b": "506(b)", "506c": "506(c)", "504": "504", "reg-a": "Reg A", "other": "other"}},
+    {"slug": "form_d_fields",
+     "title": "Test 7.2 — Form D field extraction (Total Amount Sold)",
+     "corpus_desc": "real SEC Form D filings",
+     "labels": {}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
