@@ -413,7 +413,8 @@
       "type": "number",
       "op": "CO",
       "stakes": 4,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/employee_pool_pct"
     },
     {
       "ref": "3.3",
