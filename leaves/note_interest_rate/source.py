@@ -28,12 +28,12 @@ ITEMS = {
         "This Convertible Promissory Note shall bear interest at the rate of twenty-eight hundredths of one percent (0.28%) per annum",
         "ACOLOGY, INC."
     ),
-    "helix_10p00": (
+    "smartserv_10p00": (
         "000091068003000216_exhb10_2",
         10.0,
         "easy",
         "The interest rate shall be ten percent (10%) per annum (the \"Interest Rate\")",
-        "Helix Technology Corporation"
+        "SmartServ Online, Inc."
     ),
     "veritasfarms_10p00": (
         "000121390023048665_ea180241-8k_veritasfarms",
@@ -107,6 +107,12 @@ if __name__ == "__main__":
 #   pppsba_1p00: WRONG INSTRUMENT -- a Paycheck Protection Program (SBA CARES Act) government relief loan
 #                   buried in GRI Bio's audited financial-statement notes, not a convertible promissory
 #                   note; excluded. Company field was also a placeholder ("SBA PPP Loan Program").
+#   helix_10p00 (renamed smartserv_10p00): company was fabricated as "Helix Technology
+#     Corporation" -- the word "Helix" does not appear anywhere in the actual source document
+#     (000091068003000216_exhb10_2.txt), which is a 10% convertible note of SmartServ Online,
+#     Inc. to Global Capital Funding Group, L.P. Corrected id + company; the extracted 10% rate
+#     itself was already correctly grounded, only the company label was wrong. Caught during the
+#     next batch's note_maturity_date audit (same source file), M3.1.
 #   greenfieldrobotics_8p00 / exhibit_8p00: company fields were placeholders ("Greenfield Robotics / GMGI",
 #                   "Convertible Note Form") -- corrected to the real filer/counterparty read from the
 #                   document's own cover text (Golden Matrix Group, Inc.; LanzaTech Global, Inc.).
