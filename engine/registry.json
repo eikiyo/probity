@@ -54,7 +54,8 @@
    "type": "number",
    "op": "CO",
    "stakes": 4,
-   "tier": "v1"
+   "tier": "built",
+   "leaf": "leaves/price_per_share"
   },
   {
    "ref": "1.2.1",
@@ -333,7 +334,8 @@
    "type": "date",
    "op": "EX",
    "stakes": 3,
-   "tier": "v1"
+   "tier": "built",
+   "leaf": "leaves/note_maturity_date"
   },
   {
    "ref": "2.2.4",
@@ -352,7 +354,8 @@
    "type": "number",
    "op": "EX",
    "stakes": 3,
-   "tier": "v1"
+   "tier": "built",
+   "leaf": "leaves/note_discount"
   },
   {
    "ref": "2.2.6",
@@ -361,7 +364,8 @@
    "type": "number",
    "op": "EX",
    "stakes": 3,
-   "tier": "v1"
+   "tier": "built",
+   "leaf": "leaves/note_qualified_financing_threshold"
   },
   {
    "ref": "2.2.7",
@@ -575,8 +579,9 @@
    "type": "string",
    "op": "EX",
    "stakes": 3,
-   "tier": "v1",
-   "disambig": "normalize to e.g. 4yr/1yr-cliff"
+   "tier": "built",
+   "disambig": "normalize to e.g. 4yr/1yr-cliff",
+   "leaf": "leaves/vesting_schedule"
   },
   {
    "ref": "6.2",

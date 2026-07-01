@@ -21,7 +21,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*34 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
+*39 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
 
 **Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
 
@@ -264,6 +264,41 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 |---|---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **18%** | 98% | 73% | - | 0/1 | 8/10 |
 | `deepseek-v4-flash` | hosted | **9%** | 100% | 100% | - | 1/1 | 10/10 |
+
+**Test 1.1.3 — Priced-round price-per-share extraction** — 9 clauses (values range 0.0031-1.5), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **22%** | 95% | 56% |
+| `deepseek-v4-flash` | hosted | **22%** | 94% | 67% |
+
+**Test 2.2.3 — Convertible note maturity date extraction** — 4 clauses (values range 2005-03-31-2026-12-31), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **50%** | 94% | 50% |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% |
+
+**Test 2.2.5 — Convertible note conversion-discount rate extraction** — 4 clauses (values range 5.0-50.0), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 25% |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% |
+
+**Test 2.2.6 — Convertible note Qualified Financing proceeds threshold extraction** — 2 clauses (values range 10000000-40000000), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 100% |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% |
+
+**Test 6.1 — Equity vesting schedule extraction + normalization** — 9 clauses (values range 1.5yr/no-cliff-4yr/no-cliff), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 25% |
+| `deepseek-v4-flash` | hosted | **22%** | 95% | 89% |
 
 **What the columns mean:**
 
