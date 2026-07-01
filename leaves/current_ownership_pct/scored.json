@@ -1,0 +1,286 @@
+{
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 14,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 81.54,
+       "truth": 6.0,
+       "consistency": 0.14285714285714285
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 18,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 18.0,
+       "truth": 11.0,
+       "consistency": 0.16666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 13,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 1.0,
+       "truth": 2.4,
+       "consistency": 0.23076923076923078
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 16,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 12.0,
+       "truth": 8.6,
+       "consistency": 0.1875
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 13,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 54.3,
+       "truth": 5.4,
+       "consistency": 0.07692307692307693
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 13,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 22.2,
+       "truth": 16.3,
+       "consistency": 0.38461538461538464
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 14,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 28.56,
+       "truth": 5.2,
+       "consistency": 0.07142857142857142
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 15,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 1.26,
+       "truth": 5.3,
+       "consistency": 0.13333333333333333
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 16,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 78.28,
+       "truth": 33.9,
+       "consistency": 0.0625
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 0.16184371184371182,
+   "consistency_pct": 16.184371184371184,
+   "field_flips": {
+    "current_ownership_pct": 1.0
+   },
+   "parse_failure_count": 34,
+   "parse_failure_rate": 0.18888888888888888,
+   "valid_run_count": 146,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 6.0,
+       "truth": 6.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 2.4,
+       "truth": 2.4,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 8.6,
+       "truth": 8.6,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 5.4,
+       "truth": 5.4,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 16.3,
+       "truth": 16.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 5.2,
+       "truth": 5.2,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 5.3,
+       "truth": 5.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 33.9,
+       "truth": 33.9,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "current_ownership_pct": 0.0
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.005555555555555556,
+   "valid_run_count": 179,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ }
+}
