@@ -11,7 +11,7 @@ from collections import Counter
 from typing import List, Dict, Any, Tuple
 import normalize
 
-_SCORABLE = ("number", "enum", "bool")
+_SCORABLE = ("number", "enum", "bool", "date", "string")
 
 
 def _runs_by_instance(runs: List[Dict[str, Any]]) -> Dict[int, List[Dict[str, Any]]]:

@@ -75,11 +75,14 @@ def run_leaf(leaf_dir, model_set=FAST_SET, only=None):
     field = list(task["fields"])[0]
     field_type = task["fields"][field].get("type", "enum")
     instances, oracle = load_instances(leaf_dir, field)
-    if field_type == "number":
+    field_values = task["fields"][field].get("values")
+    if field_type == "number" or not field_values:
+        # number, date, string, bool, or any type with no enumerable class list -- report the
+        # distinct value set (or a plain count) instead of a per-class breakdown.
         vals = [o[field] for o in oracle]
-        summary = f"values {sorted(set(vals))}" if vals else "no items"
+        summary = f"values {sorted(set(map(str, vals)))}" if vals else "no items"
     else:
-        classes = task["fields"][field]["values"]
+        classes = field_values
         summary = {c: sum(o[field] == c for o in oracle) for c in classes}
     print(f"{len(instances)} items  {summary}  N={N_RUNS} runs/item  field={field}\n", flush=True)
     scored = {}
