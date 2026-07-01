@@ -1,0 +1,130 @@
+{
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "accuracy": {
+   "task": "founder_ownership_pct",
+   "n_instances": 3,
+   "n_measurable": 3,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 15,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "founder_ownership_pct": {
+       "majority": 81.574,
+       "truth": 6.0,
+       "consistency": 0.13333333333333333
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "founder_ownership_pct": {
+       "majority": 1.0,
+       "truth": 8.6,
+       "consistency": 0.21052631578947367
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 16,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "founder_ownership_pct": {
+       "majority": 33.185,
+       "truth": 2.4,
+       "consistency": 0.1875
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "founder_ownership_pct",
+   "consistency_rate": 0.17711988304093565,
+   "consistency_pct": 17.711988304093566,
+   "field_flips": {
+    "founder_ownership_pct": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 60,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "accuracy": {
+   "task": "founder_ownership_pct",
+   "n_instances": 3,
+   "n_measurable": 3,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "founder_ownership_pct": {
+       "majority": 6.0,
+       "truth": 6.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "founder_ownership_pct": {
+       "majority": 8.6,
+       "truth": 8.6,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "founder_ownership_pct": {
+       "majority": 2.4,
+       "truth": 2.4,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "founder_ownership_pct",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "founder_ownership_pct": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 60,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ }
+}

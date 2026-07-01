@@ -179,6 +179,10 @@ LEAVES = [
      "title": "Test 3.1 — Cap-table current ownership percentage (compute)",
      "corpus_desc": "real SEC-filed S-1 Security Ownership tables (single-class stock only)",
      "labels": {}},
+    {"slug": "founder_ownership_pct",
+     "title": "Test 3.2.1 — Named founder's ownership percentage (compute)",
+     "corpus_desc": "real SEC-filed S-1 Security Ownership tables (single-class stock only)",
+     "labels": {}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
