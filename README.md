@@ -21,7 +21,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*30 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
+*34 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
 
 **Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
 
@@ -236,6 +236,34 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 |---|---|---|---|---|
 | `gemma3:1b` | 1B | **20%** | 92% | 80% |
 | `deepseek-v4-flash` | hosted | **20%** | 98% | 100% |
+
+**Test 1.5.2 — Anti-dilution weighted-average base: broad-based vs narrow-based vs n/a** — 10 clauses (3 broad / 4 narrow / 3 n/a), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | broad | narrow | n/a |
+|---|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **40%** | 96% | 70% | 3/3 | 4/4 | 0/3 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 | 4/4 | 3/3 |
+
+**Test 1.6.2 — Automatic conversion (QPO) proceeds threshold extraction** — 5 clauses (values range 30000000-100000000), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 100% |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% |
+
+**Test 2.2.2 — Convertible note interest rate extraction** — 6 clauses (values range 0.28-10.0), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 83% |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% |
+
+**Test 2.1.3 — SAFE conversion mechanic: cap-only vs discount-only vs both (MFN)** — 11 clauses (0 cap / 1 discount / 10 both-mfn), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | cap | discount | both-mfn |
+|---|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **18%** | 98% | 73% | - | 0/1 | 8/10 |
+| `deepseek-v4-flash` | hosted | **9%** | 100% | 100% | - | 1/1 | 10/10 |
 
 **What the columns mean:**
 
