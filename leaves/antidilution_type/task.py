@@ -36,10 +36,15 @@ _INSTRUCTION = (
 )
 
 
+def build_prompt_from_parts(system: str, taxonomy: str, instruction: str, document: str) -> str:
+    """Generic prompt builder: combine system + taxonomy + instruction + document."""
+    return f"{system}\n\n{taxonomy}\n{instruction}\nCLAUSE:\n{document}\n\nJSON:"
+
+
 def build_prompt(instance: dict) -> str:
-    """Stable prefix (system + taxonomy + instruction) then the clause tail."""
+    """Build prompt using shared utility."""
     clause = instance.get("document", "")
-    return f"{_SYSTEM}\n\n{_TAXONOMY}\n{_INSTRUCTION}\nCLAUSE:\n{clause}\n\nJSON:"
+    return build_prompt_from_parts(_SYSTEM, _TAXONOMY, _INSTRUCTION, clause)
 
 
 TASK = {
