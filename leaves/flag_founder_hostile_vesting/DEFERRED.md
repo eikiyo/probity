@@ -1,48 +1,31 @@
-# flag_founder_hostile_vesting — DEFERRED (ref 8.4, type: bool, op: FL=flag)
+# DEFERRED — flag_founder_hostile_vesting leaf (8.4, stakes 4)
 
-**Status:** Deferred pending hand-verified sourcing of founder-hostile vs. standard vesting documents.
+**Audit (2026-07-02, follow-up session):** Re-attempted sourcing per Eikiyo's "finish all 22
+pending" directive. Searched the existing vesting_acceleration corpus (114 real cached docs)
+for genuine "clawback"/"forfeiture of vested shares" language as a hostile indicator: found
+hits, but on inspection they were routine SOX/Dodd-Frank-mandated public-company recoupment
+policies (e.g. Globe Life Inc.'s standard "Clawback Policy" for financial restatements) --
+not founder-hostile VC-financing terms. Ran fresh EDGAR full-text searches for "forfeit all
+vested options" (30 hits) and "no acceleration of vesting" + "termination without cause" (912
+hits); fetched 2 real candidates (McLeodUSA, Aperion Biologics) but neither contained the
+matched phrase in the fetched exhibit (the FTS hit was evidently in a different sub-document
+within the same accession, not the one fetched).
 
-**Task Definition:**
+**Root cause:** Real "founder-hostile" vesting terms (board-discretion clawback of VESTED
+equity, no acceleration whatsoever on any termination type, re-imposed cliffs on refresh
+grants) are adversarial-to-the-employee by design and essentially never appear in SEC-filed
+executive employment agreements or option plans -- those filings, by their nature, disclose
+NEGOTIATED, investor/counsel-reviewed terms for named executive officers, which are
+systematically the FRIENDLY end of the spectrum (this is the same selection-bias pattern
+that made `option_pool_shuffle` and the exit_waterfall family hard: what actually gets
+filed with the SEC is not representative of the full space of possible real-world terms).
 
-Flag whether a real vesting/equity-award document's terms are "founder-hostile" (true) or standard/founder-friendly (false).
+**What would unblock this:** A genuinely adversarial source class not well-represented in
+public company filings -- e.g. a private company's internal equity plan document obtained
+via litigation exhibit (a wrongful-termination or breach-of-contract lawsuit where a
+plaintiff's founder agreement is entered as an exhibit), or a direct pairing against
+`vesting_acceleration`'s existing 3 real "no acceleration" items IF a genuine second real
+document can be found stating an EXPLICIT contrasting "friendly" alternative for the same
+company/round (not yet located).
 
-**Hostile Indicators:**
-- No acceleration on termination-without-cause
-- Unusually long cliffs re-imposed on refresh grants
-- Board-discretion clawback of vested shares
-- Forfeiture of vested shares on termination
-
-**Standard/Friendly Indicators:**
-- Single-trigger or double-trigger acceleration on termination
-- Typical 4-year vest with 1-year cliff
-- No clawback provisions
-- Retained vesting credit for partial service
-
-**Sourcing Challenge:**
-
-While abundant vesting documents exist in existing corpora:
-- `leaves/vesting_acceleration/` (114 docs)
-- `leaves/acceleration_trigger/` (24 docs)
-- `leaves/cliff_present/` (54 docs)
-
-**None were hand-read and classified** for the specific hostile-vs.-friendly distinction required by this leaf. This is a **binary classification task** that requires careful oracle work:
-
-1. Read each source document (or window extract).
-2. Hand-classify as hostile or standard based on the criteria above.
-3. Extract a validating_quote substring proving the classification.
-4. Verify the quote is a real substring in the source document (no paraphrase).
-
-A premature build with unverified items risks:
-- Misclassification (a document with both hostile AND friendly terms assigned to the wrong class).
-- Boilerplate trap (a "universal clause" that appears in both hostile and standard documents, making the classification invalid).
-- False validating_quotes (invented language that matches no real source).
-
-**Recommendation:**
-
-Defer until a dedicated hand-read pass can:
-1. **Sample 20-30 documents** from the existing corpora.
-2. **Classify each document** against the hostile-vs.-friendly rubric.
-3. **Identify boilerplate collisions** (do "hostile" and "standard" candidates use the same language?).
-4. Build 8-12 clean, non-boilerplate items with real validating_quotes.
-
-**0 items, 0 oracle records** — honest deferred status until sourcing can verify the binary task is solvable.
+source.py/task.py/run.py not yet created; genuinely unsourced, not fabricated to hit a count.

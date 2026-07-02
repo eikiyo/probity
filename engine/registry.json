@@ -679,7 +679,8 @@
       "type": "string",
       "op": "EX",
       "stakes": 2,
-      "tier": "v3"
+      "tier": "built",
+      "leaf": "leaves/s1_risk_factors"
     },
     {
       "ref": "7.5",
