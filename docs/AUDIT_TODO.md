@@ -235,4 +235,27 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   finding, covered by that entry's pending decision. All other 9 items' base classifications
   spot-checked against their `validating_quote`, all textually correct.
 
-## Next leaf: 1.6.1 conversion_ratio
+### [x] 1.6.1 conversion_ratio
+- **Verified clean.** N=5. gemma3-1b 80% acc/20% wobble, deepseek-v4f 100% acc/20% wobble.
+  Double-checked the one outlier-looking value (Boston Life Sciences, 8000:1 — unusually high
+  vs. the other items' 1x/2x/100x/4.57x) against full corpus text: confirmed a genuine
+  PER-SHARE ratio ("Each share of Series E preferred stock is convertible into 8,000 shares"),
+  and the math is internally consistent ($10,000 purchase price / $1.25 conversion price =
+  8,000 exactly) — not a lot-size/per-share confusion. ids encode the expected ratio in the
+  filename (e.g. `boston_life_sciences_8000to1`) but confirmed `build_prompt()` only passes
+  `instance["document"]` to the model, never the id — no leakage path.
+
+### [x] 1.6.2 auto_conversion_trigger
+- **Bug found + FIXED (low-severity, no rerun needed):** task.py's prompt told the model to
+  extract "only the AGGREGATE GROSS PROCEEDS dollar amount," but 3 of 5 real charter clauses
+  actually state the QPO threshold as NET proceeds ("net of underwriting discounts and
+  commissions") — only 2/5 (Silicon Energy, TerraScend) genuinely say "gross." This did NOT
+  cause any measured harm (both models scored 100% on every item including the net-proceeds
+  ones, because each document states only ONE candidate dollar figure — no second gross-vs-net
+  number to confuse it with, unlike round_size's real two-field trap). Fixed the prompt to say
+  "gross or net, whichever the charter itself uses" for correctness/future-proofing. Did NOT
+  rerun — existing runs are still valid (the old prompt was never actually exercised wrong),
+  and spending API calls to "reprove" an already-100%/100% leaf isn't warranted.
+  Commit pending.
+
+## Next leaf: 1.7 redemption_rights
