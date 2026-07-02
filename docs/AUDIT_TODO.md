@@ -5,7 +5,7 @@ breaking-points/stubs/hardcodes/half-done features, log findings here, fix what'
 immediately, flag judgment calls for explicit confirmation. Order = engine/registry.json ref
 order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
-**Counter: 20/60 done · 0 in-progress · 36 pending · 4 partial** — dated 2026-07-02. Families 1 (1.1.1-1.7) + 2.1 SAFEs (2.1.1-2.1.6) complete.
+**Counter: 24/60 done · 0 in-progress · 31 pending · 5 partial** — dated 2026-07-02. Families 1 (1.1.1-1.7) + 2.1 SAFEs (2.1.1-2.1.6) + 2.2 Notes (2.2.1-2.2.6) + 3.1 complete.
 
 ## Legend
 - `[x]` audited + resolved (bugs fixed, or verified clean)
@@ -413,4 +413,46 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   `greenfield_robotics`) all cleanly anchor on the actual literal dollar-figure sentence, no
   similar windowing gap.
 
-## Next leaf: 2.2.5 note_discount
+### [x] 2.2.5 note_discount
+- **Bug found + FIXED, confirmed real via rerun:** `_SYSTEM` prompt used "20%"/"25%" as
+  illustrative discount examples, and `_INSTRUCTION` separately CONTRADICTED `_SYSTEM` on the
+  no-discount case (`_SYSTEM` said answer the literal string `"NONE"`, `_INSTRUCTION` said use
+  JSON `null`) — fixed both. The example-number issue was real, not just theoretical: pre-fix,
+  gemma3-1b answered exactly `"20.0"` on ALL 4 items with 100% run-to-run consistency each time
+  (a clean anchor-bias signature — it copied the prompt's own first example number regardless
+  of document content), scoring a misleading 25% (1/4, matching by luck on the one item whose
+  true value happened to be 20%). Swapped the worked examples to 33.0/62.5 (neither matches any
+  real item) and reran: **gemma3-1b's honest score is 0% accuracy** — it cannot do this
+  extraction+transformation task at all, previously masked by the anchor coincidence. deepseek-
+  v4f stayed 100%/0% throughout (never affected). No item exercises the no-discount/null path
+  (0/4), so that half of the fix is documented-but-unexercised, same as 2.2.3's status.
+
+### [x] 2.2.6 note_qualified_financing_threshold — N=2, SMALL-SAMPLE FINDING (not fixed)
+- **Bug found + FIXED (preventive, not measured-harmful):** identical example-number issue —
+  `_SYSTEM`'s worked examples were literally `'10000000' or '40000000'`, and this leaf's ONLY 2
+  real items are exactly $10,000,000 and $40,000,000. Unlike note_discount, this did NOT
+  measurably affect scores either before or after the fix (gemma3-1b and deepseek-v4f both
+  100%/0% wobble pre- AND post-fix) — but with only 2 items and both examples being the literal
+  true answers, the leaf carried near-zero true discriminative signal regardless of the
+  observed clean scores. Fixed the examples to 15000000/75000000 anyway (cheap, safe,
+  confirmed harmless via rerun) for future-proofing.
+- **Minor, NOT fixed — needs re-sourcing, flagging for Eikiyo:** N=2 is the smallest sample
+  size found in the entire audit so far. Two items cannot support any real statistical claim
+  about model capability on this field; both current scores (100%/100%) should be read as "no
+  evidence of failure on 2 examples," not "the model has mastered this task." Worth a
+  re-sourcing pass to grow N, no code changes needed to act on this.
+
+### [x] 3.1 current_ownership_pct
+- **Verified clean.** N=9, all from Uber's S-1 (single-source concentration, like 2.2.1's
+  Minerco pattern — noted, not fixed, since all 9 are genuinely different real shareholders'
+  independently-computed percentages, not repeats). Checked for the most concerning possible
+  bug on a COMPUTE-type task — leakage of the pre-computed answer into the model-facing window
+  — by direct inspection of `corpus/questions/uber_ryan_graves.txt`: confirmed the window shows
+  ONLY the raw share count and total (33,184 / 1,362,500 thousand), never the "2.4%" result;
+  that percentage only exists in the oracle's own `validating_quote` metadata field, which
+  `build_prompt()` never reads. Verified the math independently on 2 items (Ryan Graves:
+  33,184/1,362,500×100 = 2.44% → 2.4% ✓; all-directors group: 462,351/1,362,500×100 = 33.93% →
+  33.9% ✓). gemma3-1b scores a genuine 0% acc / 100% wobble — total failure at 2-operand
+  division+rounding, an honest, expected result for a 1B model on an arithmetic task, not a bug.
+
+## Next leaf: 3.2.1 founder_ownership_pct

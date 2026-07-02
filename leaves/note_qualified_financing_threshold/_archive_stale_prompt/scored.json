@@ -6,7 +6,7 @@
    "n_instances": 2,
    "n_measurable": 2,
    "accuracy_majority": 1.0,
-   "accuracy_strict": 0.5,
+   "accuracy_strict": 1.0,
    "per_instance": [
     {
      "instance_idx": 0,
@@ -23,14 +23,14 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 17,
+     "n_valid": 18,
      "majority_correct": true,
-     "strict_correct": false,
+     "strict_correct": true,
      "fields": {
       "note_qualified_financing_threshold": {
        "majority": 10000000.0,
        "truth": 10000000.0,
-       "consistency": 0.9411764705882353
+       "consistency": 1.0
       }
      }
     }
@@ -38,14 +38,14 @@
   },
   "reliability": {
    "task": "note_qualified_financing_threshold",
-   "consistency_rate": 0.9705882352941176,
-   "consistency_pct": 97.05882352941177,
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
    "field_flips": {
-    "note_qualified_financing_threshold": 0.5
+    "note_qualified_financing_threshold": 0.0
    },
-   "parse_failure_count": 3,
-   "parse_failure_rate": 0.075,
-   "valid_run_count": 37,
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.05,
+   "valid_run_count": 38,
    "measurable": true,
    "excluded_fields": []
   }
