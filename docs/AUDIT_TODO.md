@@ -545,4 +545,30 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
 **Family 4 (waterfall, 4.1/4.3/4.4) now fully audited.**
 
-## Next leaf: 5.1 board_seats_investor
+### [x] 5.1 board_seats_investor
+- **Verified clean.** N=9, genuinely diverse sourcing. Both models tied at 77.8% acc. Checked
+  the multi-item-per-company pairs for duplicate-vs-legitimate: Cinemark/MDP has 2 items
+  (`mdp`=5, `mdp_old`=9) from explicitly DIFFERENT agreements (a prior vs current designation
+  right, before/after a renegotiation) — legitimate, not duplicated; Emergent Capital and Ute
+  Energy each have 2 items with DIFFERENT named designators (PJC/Opal Sheppard,
+  Quantum/Tribal) sharing one accession number — same "multiple distinct facts in one filing"
+  pattern already established as fine in 2.2.1. Both models share the SAME one miss
+  (Ute Energy "Tribal" item, both confidently answer 1 vs truth 2) — investigated as a possible
+  shared oracle bug, but the real clause is a genuine trap: "Two (2) nominees... provided,
+  however, that the right... shall be reduced from two (2) to one (1) at such time that the
+  Tribal Stockholders cease to hold at least 25%..." — a BASE right of 2 with a CONDITIONAL
+  reduction to 1. Oracle correctly uses the base/unconditional right (2), consistent with the
+  established base-rate convention (2.1.2). Both models being fooled by the same conditional
+  clause is a genuine, interesting shared difficulty signal, not a data bug.
+
+### [x] 5.2 protective_provisions
+- **Verified clean.** N=12, perfect 6/6 class balance, diverse sourcing. deepseek-v4f 100%/0%.
+  gemma3-1b 58.3% — investigated because it's below the 50% chance floor plus one; confirmed a
+  clean class-bias pattern (5/6 "no" items wrong, all mispredicted as "yes"; all 6 "yes" items
+  correct) — a real model bias toward assuming a veto right exists, not a data bug. Trident
+  Bancshares (a bank holding company labeled "no") looked like it might repeat the antidilution
+  Popular Inc off-thesis pattern, but this leaf's own taxonomy explicitly scopes "no" to include
+  non-VC document types ("a Letter of Intent... generic Articles of Incorporation with only
+  default majority-of-all-stock voting") — in-scope by the task's own design, not contamination.
+
+## Next leaf: 5.3 information_rights
