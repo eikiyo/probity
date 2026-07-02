@@ -20,8 +20,6 @@ from typing import Optional
 # max_tokens=1024 response) -- deliberately generous so the cap trips EARLY, never late.
 ESTIMATED_COST_PER_CALL_USD = {
     "gemma3-1b": 0.0,
-    "llama3.2-3b": 0.0,
-    "gemma4-12b": 0.0,
     "qwen3.5-27b": 0.0,
     "deepseek-v4f": 0.002,
     "gemini": 0.01,
@@ -31,6 +29,15 @@ ESTIMATED_COST_PER_CALL_USD = {
     # calls, see artifacts/pricing_probity.html) -- ~2x that, not the ~50x margin used for
     # deepseek-v4f above, so a per-leaf guard cap doesn't trip long before a real run completes.
     "gemma4-31b-or": 0.0001,
+    # Remaining "10 recommended models" lineup, added 2026-07-03 for the auto-ramp sweep
+    # (fastest-to-slowest by measured latency, excludes Anthropic agent-mode + DeepSeek per
+    # Eikiyo). Same ~2x-real-PTC conservatism as gemma4-31b-or above.
+    "mistral-large-or": 0.0005,
+    "minimax-m2.5-or": 0.00012,
+    "llama3.3-70b-or": 0.0001,
+    "gemini3-flash-or": 0.0006,
+    "gpt-oss-120b-or": 0.00003,
+    "gpt5-mini-or": 0.0003,
 }
 # A model label the guard has no cost estimate for is treated as the most expensive known
 # label, not $0 -- an unrecognized model must never get a free pass on the spend cap.

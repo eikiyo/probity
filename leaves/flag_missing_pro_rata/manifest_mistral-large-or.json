@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "mistral-large-or",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "46addc5b5c562921e7603380be061d22bffb63e4428f4c987e280041c4589f61",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:09:01.409489+00:00"
+}

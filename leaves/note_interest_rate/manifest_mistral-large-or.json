@@ -1,0 +1,9 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "mistral-large-or",
+ "task_name": "note_interest_rate",
+ "data_version": "8d36e2ba55b4be9f9730a77a6e77b89ad619883d2a35827c295fdd2f742f8459",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:11:04.986819+00:00"
+}

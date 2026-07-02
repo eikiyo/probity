@@ -272,5 +272,99 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
+  "accuracy": {
+   "task": "exercise_window",
+   "n_instances": 5,
+   "n_measurable": 3,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.3333333333333333,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "exercise_window": {
+       "majority": null,
+       "truth": "30 days",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "exercise_window": {
+       "majority": "85 days",
+       "truth": "85 days",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "exercise_window": {
+       "majority": "90 days",
+       "truth": "90 days",
+       "consistency": 0.8333333333333334
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "exercise_window": {
+       "majority": null,
+       "truth": "90 days",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 14,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "exercise_window": {
+       "majority": "180 days",
+       "truth": "180 days",
+       "consistency": 0.7857142857142857
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "exercise_window",
+   "consistency_rate": 0.873015873015873,
+   "consistency_pct": 87.3015873015873,
+   "field_flips": {
+    "exercise_window": 0.4
+   },
+   "parse_failure_count": 48,
+   "parse_failure_rate": 0.48,
+   "valid_run_count": 52,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

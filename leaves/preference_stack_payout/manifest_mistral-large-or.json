@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "mistral-large-or",
+ "task_name": "preference_stack_payout",
+ "data_version": "80afe507fbc880384b20e1ae61314079edd7483eceda41ba0eed40b2d2788dae",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:12:07.894984+00:00"
+}

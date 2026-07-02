@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "mistral-large-or",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "facd45d8f3fcfa66618d82b1eb6d7cafb5e71705af9ba443f91af2f3d055481b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:10:57.997372+00:00"
+}

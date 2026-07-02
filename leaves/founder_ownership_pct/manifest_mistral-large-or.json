@@ -1,0 +1,9 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "mistral-large-or",
+ "task_name": "founder_ownership_pct",
+ "data_version": "c323a685e89bed1a36f2bfe2aa4ea60211ae77f4da3c7dca238f93ba8cf1c324",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:09:05.310138+00:00"
+}

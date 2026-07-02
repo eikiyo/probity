@@ -233,5 +233,86 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": null,
+       "truth": 125000000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 12,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 16,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": null,
+       "truth": 30000000.0,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_valuation_cap": 0.0
+   },
+   "parse_failure_count": 52,
+   "parse_failure_rate": 0.65,
+   "valid_run_count": 28,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

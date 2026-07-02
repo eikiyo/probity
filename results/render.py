@@ -270,9 +270,9 @@ LEAVES = [
      "labels": {}},
 ]
 
-SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
-        "qwen3.5-27b": "27B", "deepseek-v4f": "hosted", "gemma": "12B", "deepseek": "hosted"}
-ORDER = ["gemma3-1b", "llama3.2-3b", "gemma4-12b", "qwen3.5-27b", "deepseek-v4f", "gemma", "deepseek"]
+SIZE = {"gemma3-1b": "1B", "qwen3.5-27b": "27B", "deepseek-v4f": "hosted",
+        "gemma": "12B", "deepseek": "hosted"}
+ORDER = ["gemma3-1b", "qwen3.5-27b", "deepseek-v4f", "gemma", "deepseek"]
 
 
 def load_leaf(slug):
@@ -400,12 +400,6 @@ def auto_findings(scored, oracle, field, classes):
 
 PART_FINDINGS = """## What this shows
 
-- **Wobble has a cliff, not a slope.** The 1B and 3B models flip their answer on 61-72% of items
-  across 20 runs at temp 0.7 - unusable in a workflow that touches money. At 12B wobble collapses
-  to 0%; the hosted model sits at 6%. The usable/unusable boundary is between 3B and 12B, not a
-  smooth gradient. (N=5 hid this entirely - both mid/hosted models looked perfectly stable.)
-- **A local 12B model beats a hosted frontier-cheap model here.** gemma4:12b: 0% wobble, 72%
-  accuracy. deepseek-v4-flash: 6% wobble, 67%. Bigger-and-hosted is not automatically better.
 - **Participating preferred is the universal blind spot.** Even the best models get only 1-2 of 5
   participating clauses right; the small models get 0. The "preference AND THEN also share with the
   common" structure is systematically misread as capped or non-participating.
@@ -418,13 +412,9 @@ SAFE_FINDINGS = """## What this shows
   every one of the 16 SAFEs correctly (100% accuracy) yet still **wobbles on 19% of them** across 20
   identical runs. A model you would call "100% accurate" from a single pass changes its answer on
   ~1 in 5 items when you actually repeat the question. Wobble catches what an accuracy score hides.
-- **A local 12B fully solves the binary task** (gemma4:12b: 0% wobble, 100% accuracy) - and again
-  beats the hosted model on the trust axis, matching it on accuracy at zero egress.
 - **Low wobble can mask low accuracy.** gemma3:1b looks stable (6% wobble) but is only 62% accurate -
   it confidently and *repeatably* gives the wrong pre/post classification. Consistency without
-  accuracy is its own trap; this is why the two numbers are never averaged.
-- **The 3B is the worst wobbler** (llama3.2: 56% wobble) despite 81% accuracy - the mid-size model
-  is both more right and far less stable than the 1B, so wobble is not a smooth function of size."""
+  accuracy is its own trap; this is why the two numbers are never averaged."""
 
 FINDINGS = {"participation_type": PART_FINDINGS, "safe_pre_post": SAFE_FINDINGS}
 
@@ -505,14 +495,18 @@ FAMILY_DISPLAY = {
 
 MODEL_DISPLAY = {
     "gemma3-1b": ("gemma3:1b", "1B, local"),
-    "llama3.2-3b": ("llama3.2:latest", "3B, local"),
-    "gemma4-12b": ("gemma4:12b", "12B, local"),
     "qwen3.5-27b": ("qwen3.5:27b", "27B, local"),
     "deepseek-v4f": ("deepseek-v4-flash", "hosted"),
     # OpenRouter lineup added 2026-07-02 -- hosted, no local heat/time limit (Eikiyo: "not
     # limited by laptop anymore"). Label is the guard/checkpoint label from
     # engine/runner.openrouter_model_set(), not the raw OpenRouter model id.
     "gemma4-31b-or": ("gemma-4-31b-it", "31B, hosted (OR)"),
+    "mistral-large-or": ("mistral-large-2512", "hosted (OR)"),
+    "minimax-m2.5-or": ("minimax-m2.5", "hosted (OR)"),
+    "llama3.3-70b-or": ("llama-3.3-70b", "70B, hosted (OR)"),
+    "gemini3-flash-or": ("gemini-3-flash", "hosted (OR)"),
+    "gpt-oss-120b-or": ("gpt-oss-120b", "120B, hosted (OR)"),
+    "gpt5-mini-or": ("gpt-5-mini", "hosted (OR)"),
 }
 
 
@@ -554,8 +548,13 @@ def aggregate_by_model():
                 acc_num[model] = acc_num.get(model, 0) + acc.get("accuracy_majority", 0) * n_meas
                 acc_den[model] = acc_den.get(model, 0) + n_meas
             leaf_count[model] = leaf_count.get(model, 0) + 1
+    # A model with a handful of leaves is a one-off smoke test, not a suite measurement --
+    # excluded so a stray spot-check never pollutes the headline table.
+    MIN_LEAVES_FOR_SUITE_TABLE = 10
     out = []
     for model in sorted(wobble_den, key=lambda m: -leaf_count[m]):
+        if leaf_count[model] < MIN_LEAVES_FOR_SUITE_TABLE:
+            continue
         w = 100 * wobble_num[model] / wobble_den[model] if wobble_den[model] else None
         a = 100 * acc_num[model] / acc_den[model] if acc_den.get(model) else None
         out.append({"model": model, "leaves": leaf_count[model], "wobble": w, "accuracy": a,

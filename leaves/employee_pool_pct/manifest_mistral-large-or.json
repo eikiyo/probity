@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "mistral-large-or",
+ "task_name": "employee_pool_pct",
+ "data_version": "25cea96a0558f619165c08a857e11e41750c57aa96e70e57ed0244e2da2fc282",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:06:48.463724+00:00"
+}

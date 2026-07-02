@@ -2,8 +2,8 @@
 Location: engine/runner.py
 Purpose: ONE shared leaf runner (reuse-first; supersedes per-leaf run.py copies). Field-agnostic —
          FIELD + CLASSES come from the leaf's task.TASK. The model SET is defined here in ONE place:
-         FAST_SET (gemma3:1b + deepseek) is the per-leaf build-out set; BIG_BATCH (llama3.2, gemma4:12b,
-         qwen3.5:27b, + hosted frontier later) is the deferred comprehensive sweep. WOBBLE is the
+         FAST_SET (gemma3:1b + deepseek) is the per-leaf build-out set; BIG_BATCH (qwen3.5:27b,
+         + hosted frontier later) is the deferred comprehensive sweep. WOBBLE is the
          headline metric; accuracy is reported beside it, never averaged.
 Functions: load_instances(), run_model(), run_leaf(), main()
 Calls: harness, scorer, models; <leaf>/task.TASK
@@ -33,8 +33,6 @@ FAST_SET = [
 ]
 # Deferred to ONE comprehensive sweep once every leaf exists (postponed per Eikiyo 2026-06-30).
 BIG_BATCH = [
-    ("llama3.2-3b", "llama3.2:latest", lambda: OllamaClient("llama3.2:latest")),
-    ("gemma4-12b",  "gemma4:12b",      lambda: OllamaClient("gemma4:12b")),
     ("qwen3.5-27b", "qwen3.5:27b",     lambda: OllamaClient("qwen3.5:27b")),
 ]
 

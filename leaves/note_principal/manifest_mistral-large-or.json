@@ -1,0 +1,9 @@
+{
+ "leaf": "note_principal",
+ "model": "mistral-large-or",
+ "task_name": "note_principal",
+ "data_version": "1b49a7d26c2ad04dee1f340e359914b0bd4ecaeb48784e7cd81184b812f9dd37",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:12:05.563959+00:00"
+}

@@ -1,7 +1,7 @@
 """
 Location: leaves/safe_pre_post/run.py
-Purpose: Run the corpus through the FAST SET (gemma3:1b -> llama3.2 -> gemma4:12b ->
-         deepseek-v4-flash), N=20 runs each at temp 0.7. WOBBLE (run-to-run inconsistency)
+Purpose: Run the corpus through the FAST SET (gemma3:1b -> deepseek-v4-flash), N=20 runs each
+         at temp 0.7. WOBBLE (run-to-run inconsistency)
          is the headline metric; accuracy (vs validated oracle) is reported beside it.
          Field-agnostic: FIELD + CLASSES are derived from TASK, not hardcoded.
 Functions: load_instances(), run_model(), main()
@@ -33,8 +33,6 @@ CLASSES = TASK["fields"][FIELD]["values"]
 # FAST SET only (Eikiyo standing rule): heavy models (qwen/Gemini/Haiku) deferred to one sweep.
 LADDER = [
     ("gemma3-1b",   "gemma3:1b",       lambda: OllamaClient("gemma3:1b")),
-    ("llama3.2-3b", "llama3.2:latest", lambda: OllamaClient("llama3.2:latest")),
-    ("gemma4-12b",  "gemma4:12b",      lambda: OllamaClient("gemma4:12b")),
     ("deepseek-v4f", None,             lambda: DeepSeekClient()),
 ]
 

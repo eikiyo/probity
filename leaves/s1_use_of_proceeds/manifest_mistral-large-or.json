@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_use_of_proceeds",
+ "model": "mistral-large-or",
+ "task_name": "s1_use_of_proceeds",
+ "data_version": "ac04908f425175209affb064ad9385eb49960f4e55853175d20ae29b5acfc942",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:14:17.408541+00:00"
+}

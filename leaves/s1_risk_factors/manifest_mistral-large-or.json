@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "mistral-large-or",
+ "task_name": "s1_risk_factors",
+ "data_version": "70744da848ebc18ed990708678ce4ec0e62968369f705a3e80508540b20c02dc",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:14:10.674697+00:00"
+}

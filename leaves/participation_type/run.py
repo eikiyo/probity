@@ -1,7 +1,7 @@
 """
 Location: leaves/participation_type/run.py
-Purpose: Run the corpus through a MODEL SIZE LADDER (gemma3:1b -> llama3.2 -> gemma4:12b ->
-         qwen3.5:27b -> deepseek-v4-flash), N=20 runs each at temp 0.7. WOBBLE (run-to-run
+Purpose: Run the corpus through a MODEL SIZE LADDER (gemma3:1b -> qwen3.5:27b ->
+         deepseek-v4-flash), N=20 runs each at temp 0.7. WOBBLE (run-to-run
          inconsistency) is the headline metric; accuracy (vs validated oracle) is reported beside it.
 Functions: load_instances(), run_model(), main()
 Calls: engine.harness, engine.scorer, engine.models; task.TASK
@@ -44,8 +44,6 @@ TEMPERATURE = 0.7
 # (label, ollama_model_or_None, factory) — None model => hosted (no local unload).
 LADDER = [
     ("gemma3-1b",   "gemma3:1b",    lambda: OllamaClient("gemma3:1b")),
-    ("llama3.2-3b", "llama3.2:latest", lambda: OllamaClient("llama3.2:latest")),
-    ("gemma4-12b",  "gemma4:12b",   lambda: OllamaClient("gemma4:12b")),
     ("qwen3.5-27b", "qwen3.5:27b",  lambda: OllamaClient("qwen3.5:27b")),
     ("deepseek-v4f", None,          lambda: DeepSeekClient()),
 ]

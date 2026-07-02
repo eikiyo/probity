@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "mistral-large-or",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "62261909c31c9eb9067de718a516e61c6ad8f2163948d74830e9ca151c69de81",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:06:29.075502+00:00"
+}

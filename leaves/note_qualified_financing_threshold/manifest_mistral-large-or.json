@@ -1,0 +1,9 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "mistral-large-or",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "4a66dc912e2f24793e8829bc8309aaa160a34af23048ee1d889ebfc50bc80644",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:10:49.188765+00:00"
+}

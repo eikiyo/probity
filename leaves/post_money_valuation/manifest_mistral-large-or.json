@@ -1,0 +1,9 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "mistral-large-or",
+ "task_name": "post_money_valuation",
+ "data_version": "ec5d1c0d0ab47a059f8912e210e916a27e2a531e97a74dc0ff588ce2b456f4f3",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:12:09.846836+00:00"
+}

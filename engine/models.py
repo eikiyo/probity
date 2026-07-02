@@ -176,9 +176,10 @@ class GeminiClient(LLMClient):
 
 
 class OllamaClient(LLMClient):
-    """Local Ollama client (gemma4:12b)."""
+    """Local Ollama client -- model is caller-supplied, no default (every real call site already
+    passes one explicitly; see engine/runner.py's FAST_SET/BIG_BATCH)."""
 
-    def __init__(self, model: str = "gemma4:12b", base_url: str = "http://localhost:11434"):
+    def __init__(self, model: str, base_url: str = "http://localhost:11434"):
         self.base_url = base_url
         self.model = model
 

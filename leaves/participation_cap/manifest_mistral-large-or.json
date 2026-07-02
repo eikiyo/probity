@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "mistral-large-or",
+ "task_name": "participation_cap",
+ "data_version": "513ceb55bada7ae8ced1e25b058c88132256c3189f65c01700744d5311976f00",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:11:30.218870+00:00"
+}
