@@ -8,7 +8,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## Test 1.3.2 — Preferred-stock liquidation participation
 
-**Corpus:** 18 real SEC-filed charter clauses, human-validated answers (5 part / 8 non-part / 5 capped). Each model run **20×/item at temp 0.7**.
+**Corpus:** 18 real SEC-filed charter clauses, human-validated answers (6 part / 7 non-part / 5 capped). Each model run **19×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -16,10 +16,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **61%** | 90% | 39% | 18/18 | 308/360 (86%) |
-| `llama3.2:latest` | 3B | **72%** | 84% | 44% | 18/18 | 360/360 (100%) |
-| `gemma4:12b` | 12B | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
-| `deepseek-v4-flash` | hosted | **6%** | 98% | 67% | 18/18 | 360/360 (100%) |
+| `gemma3:1b` | 1B | **72%** | 89% | 33% | 18/18 | 312/360 (87%) |
+| `deepseek-v4-flash` | hosted | **11%** | 98% | 67% | 18/18 | 342/360 (95%) |
 
 **What the columns mean:**
 
@@ -34,31 +32,27 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | part | non-part | capped |
 |---|---|---|---|
-| `gemma3:1b` | 0/5 | 7/8 | 0/5 |
-| `llama3.2:latest` | 0/5 | 7/8 | 1/5 |
-| `gemma4:12b` | 2/5 | 6/8 | 5/5 |
-| `deepseek-v4-flash` | 1/5 | 6/8 | 5/5 |
+| `gemma3:1b` | 0/6 | 6/7 | 0/5 |
+| `deepseek-v4-flash` | 1/6 | 6/7 | 5/5 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| EndoStim, Inc. | non-participating | medium | 1B, 3B |
-| Pfenex Inc. | non-participating | hard | 3B |
-| Zoom Video Communicati | non-participating | easy | 3B |
-| Sonos Inc | non-participating | easy | 3B |
+| EndoStim, Inc. | non-participating | medium | 1B |
+| Pfenex Inc. | participating | hard | 1B |
+| Sonos Inc | non-participating | easy | 1B |
 | Enservco Corp | non-participating | easy | 1B |
 | BioAccelerate Holdings | non-participating | hard | 1B |
 | Entercom Communication | non-participating | hard | 1B |
-| scPharmaceuticals Inc. | participating | medium | 1B, 3B |
-| Akouos, Inc. | participating | medium | 1B, 3B |
-| IESI Corp | participating | hard | 1B, 3B |
-| The Medicines Co (Remp | capped | medium | 1B, 3B |
-| Fitbit Inc | capped | hard | 1B, 3B |
-| Workday, Inc. | capped | medium | 1B, 3B |
-| Alexza Pharmaceuticals | capped | medium | 3B |
-| Entellus Medical Inc | participating | easy | 3B, hosted |
-| Internet Security Syst | participating | easy | 1B, 3B |
+| scPharmaceuticals Inc. | participating | medium | 1B |
+| Akouos, Inc. | participating | medium | 1B |
+| Jazz Semiconductor Inc | capped | medium | hosted |
+| The Medicines Co (Remp | capped | medium | 1B |
+| Fitbit Inc | capped | hard | 1B |
+| Workday, Inc. | capped | medium | 1B |
+| Entellus Medical Inc | participating | easy | 1B, hosted |
+| Internet Security Syst | participating | easy | 1B |
 
 ## What this shows
 
@@ -667,7 +661,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## Test 1.3.1 — Liquidation preference multiple: 1x vs 2x vs 3x vs other
 
-**Corpus:** 13 real SEC-filed preferred-stock liquidation preference clauses, human-validated answers (0 non-part / 4 1x / 5 2x / 4 3x / 0 other). Each model run **20×/item at temp 0.7**.
+**Corpus:** 9 real SEC-filed preferred-stock liquidation preference clauses, human-validated answers (0 non-part / 3 1x / 3 2x / 3 3x / 0 other). Each model run **20×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -675,8 +669,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **46%** | 91% | 0% | 12/13 | 220/260 (85%) |
-| `deepseek-v4-flash` | hosted | **46%** | 87% | 62% | 13/13 | 260/260 (100%) |
+| `gemma3:1b` | 1B | **56%** | 94% | 0% | 9/9 | 144/180 (80%) |
+| `deepseek-v4-flash` | hosted | **33%** | 92% | 67% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -691,25 +685,23 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | non-part | 1x | 2x | 3x | other |
 |---|---|---|---|---|---|
-| `gemma3:1b` | — | 0/4 | 0/5 | 0/3 | — |
-| `deepseek-v4-flash` | — | 3/4 | 1/5 | 4/4 | — |
+| `gemma3:1b` | — | 0/3 | 0/3 | 0/3 | — |
+| `deepseek-v4-flash` | — | 2/3 | 1/3 | 3/3 | — |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| BIOVENTRIX, INC.  (CIK | 1x | easy | 1B |
+| COUNTERPATH CORP  (CIK | 1x | easy | 1B |
+| Revance Therapeutics,  | 1x | easy | 1B |
 | Oportun Financial Corp | 2x | easy | 1B, hosted |
 | Pagaya Technologies Lt | 2x | easy | 1B, hosted |
-| Pagaya Technologies Lt | 2x | easy | 1B, hosted |
-| Pagaya Technologies Lt | 2x | easy | 1B, hosted |
-| 24/7 REAL MEDIA INC  ( | 3x | easy | 1B |
+| BECEEM COMMUNICATIONS  | 3x | easy | 1B |
 | CASTLE BIOSCIENCES INC | 3x | easy | hosted |
-| CASTLE BIOSCIENCES INC | 3x | easy | 1B, hosted |
 
 ## What this shows
 
-- **Wobble spread: 46%–46% across the ladder.** Lowest-wobble model: **hosted** (46% wobble, 62% accuracy).
+- **Wobble spread: 33%–56% across the ladder.** Lowest-wobble model: **hosted** (33% wobble, 67% accuracy).
 
 ---
 
@@ -796,7 +788,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## Test 1.1.2 — Priced round basis: pre-money vs post-money
 
-**Corpus:** 21 real SEC-filed priced-round financing documents, human-validated answers (15 pre / 6 post). Each model run **20×/item at temp 0.7**.
+**Corpus:** 19 real SEC-filed priced-round financing documents, human-validated answers (13 pre / 6 post). Each model run **20×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -804,8 +796,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **86%** | 84% | 71% | 21/21 | 397/420 (95%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 21/21 | 420/420 (100%) |
+| `gemma3:1b` | 1B | **100%** | 83% | 68% | 19/19 | 363/380 (96%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
 
 **What the columns mean:**
 
@@ -820,8 +812,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | pre | post |
 |---|---|---|
-| `gemma3:1b` | 9/15 | 6/6 |
-| `deepseek-v4-flash` | 15/15 | 5/6 |
+| `gemma3:1b` | 7/13 | 6/6 |
+| `deepseek-v4-flash` | 13/13 | 5/6 |
 
 ### Which items make models wobble
 
@@ -834,21 +826,22 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Ucommune Group Holding | pre-money | easy | 1B |
 | VIEWRAY INC | pre-money | easy | 1B |
 | Cytosorbents Corp | pre-money | medium | 1B |
-| Cytosorbents Corp | pre-money | medium | 1B |
-| Cytosorbents Corp | pre-money | medium | 1B |
 | GreenCell, Inc | pre-money | medium | 1B |
 | BIOLARGO, INC. | pre-money | medium | 1B |
+| Cytosorbents Corp | pre-money | medium | 1B |
 | HAGUE CORP. | pre-money | easy | 1B |
 | SOCIETY PASS INCORPORA | pre-money | easy | 1B |
+| HAGUE CORP. | pre-money | easy | 1B |
 | PROVECTUS BIOPHARMACEU | post-money | easy | 1B |
 | Fold Holdings, Inc. | post-money | easy | 1B |
+| New Global Energy, Inc | post-money | easy | 1B |
 | Cerebras Systems Inc. | post-money | medium | 1B |
 | Oculus Innovative Scie | post-money | medium | 1B |
 | Oculus Innovative Scie | post-money | medium | 1B |
 
 ## What this shows
 
-- **Wobble spread: 0%–86% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 95% accuracy).
+- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 95% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -937,7 +930,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 40% | 5/5 | 96/100 (96%) |
+| `gemma3:1b` | 1B | **20%** | 99% | 40% | 5/5 | 98/100 (98%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
@@ -960,10 +953,11 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
+| CROSSROADS SYSTEMS INC | full-ratchet | medium | 1B |
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–20% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1093,8 +1087,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **71%** | 87% | 57% | 7/7 | 119/140 (85%) |
-| `deepseek-v4-flash` | hosted | **29%** | 90% | 43% | 7/7 | 140/140 (100%) |
+| `gemma3:1b` | 1B | **29%** | 86% | 71% | 7/7 | 133/140 (95%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1108,16 +1102,12 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Medecision, Inc. | 0.03 | easy | 1B |
-| Medecision, Inc. | 0.25 | easy | 1B |
-| WhiteGlove Health, Inc | 0.61 | easy | 1B |
-| Medecision, Inc. | 1.25 | medium | 1B, hosted |
-| Medecision, Inc. | 2.0 | medium | 1B, hosted |
+| Medecision, Inc. | 1.25 | medium | 1B |
+| Medecision, Inc. | 2.0 | medium | 1B |
 
 ## What this shows
 
-- **Wobble spread: 29%–71% across the ladder.** Lowest-wobble model: **hosted** (29% wobble, 43% accuracy).
-- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
+- **Wobble spread: 0%–29% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1236,8 +1226,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 88% | 50% | 4/4 | 75/80 (94%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
+| `gemma3:1b` | 1B | **50%** | 91% | 75% | 4/4 | 72/80 (90%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1252,7 +1242,6 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | Damon Motors Inc. | 125000000 | easy | 1B |
-| Exyn Technologies, Inc | 90000000 | medium | hosted |
 | Greenfield Robotics Co | 30000000 | easy | 1B |
 
 ## What this shows
@@ -1407,7 +1396,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## Test 2.1.3 — SAFE conversion mechanic: cap-only vs discount-only vs both (MFN)
 
-**Corpus:** 11 real SEC-filed SAFE (Simple Agreement for Future Equity) instruments, human-validated answers (0 cap / 1 discount / 10 both-mfn). Each model run **20×/item at temp 0.7**.
+**Corpus:** 13 real SEC-filed SAFE (Simple Agreement for Future Equity) instruments, human-validated answers (2 cap / 1 discount / 10 both-mfn). Each model run **17×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -1415,8 +1404,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **18%** | 98% | 73% | 11/11 | 132/220 (60%) |
-| `deepseek-v4-flash` | hosted | **9%** | 100% | 100% | 11/11 | 220/220 (100%) |
+| `gemma3:1b` | 1B | **46%** | 90% | 77% | 13/13 | 158/260 (61%) |
+| `deepseek-v4-flash` | hosted | **8%** | 100% | 100% | 13/13 | 221/260 (85%) |
 
 **What the columns mean:**
 
@@ -1431,26 +1420,31 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | cap | discount | both-mfn |
 |---|---|---|---|
-| `gemma3:1b` | — | 0/1 | 8/10 |
-| `deepseek-v4-flash` | — | 1/1 | 10/10 |
+| `gemma3:1b` | 2/2 | 0/1 | 8/10 |
+| `deepseek-v4-flash` | 2/2 | 1/1 | 10/10 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | SNM Global Holdings, I | discount | easy | 1B |
-| Rentberry Inc. | both-mfn | medium | hosted |
+| Parker Clay Global, PB | both-mfn | medium | 1B |
+| Maison Luxe, Inc. | both-mfn | medium | 1B |
+| Rentberry Inc. | both-mfn | medium | 1B |
 | Creci Inc. | both-mfn | medium | 1B |
+| Manako Labs Ltd | both-mfn | medium | hosted |
+| Gardedam Therapeutics  | cap | medium | 1B |
 
 ## What this shows
 
-- **Wobble spread: 9%–18% across the ladder.** Lowest-wobble model: **hosted** (9% wobble, 100% accuracy).
+- **Wobble spread: 8%–46% across the ladder.** Lowest-wobble model: **hosted** (8% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
 ## Test 1.1.3 — Priced-round price-per-share extraction
 
-**Corpus:** 9 real SEC-filed stock purchase agreements / charters / offerings, human-validated answers (values range 0.0031-1.5). Each model run **20×/item at temp 0.7**.
+**Corpus:** 8 real SEC-filed stock purchase agreements / charters / offerings, human-validated answers (values range 0.2-1000.0). Each model run **19×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -1458,8 +1452,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **22%** | 95% | 56% | 9/9 | 172/180 (96%) |
-| `deepseek-v4-flash` | hosted | **22%** | 94% | 67% | 9/9 | 180/180 (100%) |
+| `gemma3:1b` | 1B | **38%** | 92% | 62% | 8/8 | 156/160 (98%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 62% | 8/8 | 147/160 (92%) |
 
 **What the columns mean:**
 
@@ -1473,13 +1467,14 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Airborne Wireless Netw | 1.5 | easy | 1B, hosted |
-| General Metals Corpora | 0.025 | easy | hosted |
+| Astea International In | 3.63 | easy | 1B |
+| Kiwa Bio-Tech Products | 1.3 | medium | 1B |
 | WhiteGlove Health, Inc | 0.2 | easy | 1B |
 
 ## What this shows
 
-- **Wobble spread: 22%–22% across the ladder.** Lowest-wobble model: **hosted** (22% wobble, 67% accuracy).
+- **Wobble spread: 0%–38% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 62% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
@@ -1528,7 +1523,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 25% | 4/4 | 77/80 (96%) |
+| `gemma3:1b` | 1B | **25%** | 94% | 0% | 3/4 | 46/80 (57%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
@@ -1543,10 +1538,12 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
+| ACOLOGY, INC. | 50.0 | easy | 1B |
+| HepaLife Technologies, | 5.0 | medium | 1B |
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1560,7 +1557,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/2 | 38/40 (95%) |
+| `gemma3:1b` | 1B | **50%** | 97% | 100% | 2/2 | 37/40 (92%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
@@ -1575,10 +1572,12 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
+| Valkyrie Sciences Hold | 10000000 | medium | 1B |
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
@@ -1592,8 +1591,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 25% | 8/9 | 64/180 (36%) |
-| `deepseek-v4-flash` | hosted | **22%** | 95% | 89% | 9/9 | 180/180 (100%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 38% | 8/9 | 65/180 (36%) |
+| `deepseek-v4-flash` | hosted | **11%** | 97% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1607,12 +1606,12 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| CONOR MEDSYSTEMS, INC. | 1.5yr/no-cliff | medium | 1B, hosted |
+| CONOR MEDSYSTEMS, INC. | 1.5yr/no-cliff | medium | 1B |
 | CLARCOR INC. | 4yr/no-cliff | hard | hosted |
 
 ## What this shows
 
-- **Wobble spread: 0%–22% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 25% accuracy).
+- **Wobble spread: 0%–11% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 38% accuracy).
 
 ---
 
@@ -1819,8 +1818,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 90% | 0% | 2/2 | 16/40 (40%) |
-| `deepseek-v4-flash` | hosted | **50%** | 95% | 100% | 2/2 | 40/40 (100%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/2 | 16/40 (40%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -1834,12 +1833,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| NETBASE SOLUTIONS INC  | 2,366,532 | medium | hosted |
-| Skybox Imaging, Inc.   | 70,227,931.85 | medium | 1B |
 
 ## What this shows
 
-- **Wobble spread: 50%–50% across the ladder.** Lowest-wobble model: **hosted** (50% wobble, 100% accuracy).
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1853,8 +1850,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 30% | 10/10 | 200/200 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 30% | 10/10 | 200/200 (100%) |
+| `gemma3:1b` | 1B | **50%** | 87% | 30% | 10/10 | 199/200 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -1868,10 +1865,16 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
+| VoCare, Inc. | 5000000 | ? | 1B |
+| McBride Sisters Collec | 14040000 | ? | 1B |
+| POSEIDON MEDICAL INC. | 6085780 | ? | 1B |
+| BEYONDCORE, INC. | 8881213 | ? | 1B |
+| Link Labs, Inc. | 5787732 | ? | 1B |
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 30% accuracy).
+- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
@@ -2184,8 +2187,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **80%** | 73% | 20% | 5/5 | 82/100 (82%) |
-| `deepseek-v4-flash` | hosted | **60%** | 92% | 80% | 5/5 | 100/100 (100%) |
+| `gemma3:1b` | 1B | **100%** | 68% | 20% | 5/5 | 83/100 (83%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2200,13 +2203,15 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | HyreCar Inc. | general corporate purposes | ? | 1B |
-| Castle Biosciences, In | research and development activities | ? | 1B, hosted |
-| Axcella Health Inc. | advance our current liver programs | ? | 1B, hosted |
-| Civitas Solutions, Inc | redeem all of the senior notes | ? | 1B, hosted |
+| Castle Biosciences, In | research and development activities | ? | 1B |
+| Axcella Health Inc. | advance our current liver programs | ? | 1B |
+| Veritone, Inc. | working capital and general corporate purposes | ? | 1B |
+| Civitas Solutions, Inc | redeem all of the senior notes | ? | 1B |
 
 ## What this shows
 
-- **Wobble spread: 60%–80% across the ladder.** Lowest-wobble model: **hosted** (60% wobble, 80% accuracy).
+- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 

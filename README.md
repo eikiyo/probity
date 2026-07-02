@@ -23,14 +23,12 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 <!-- BENCHMARK:START -->
 *60 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
 
-**Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
+**Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (6 part / 7 non-part / 5 capped), each model run 19×/item:
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate | part | non-part | capped |
 |---|---|---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **61%** | 90% | 39% | 308/360 (86%) | 0/5 | 7/8 | 0/5 |
-| `llama3.2:latest` | 3B | **72%** | 84% | 44% | 360/360 (100%) | 0/5 | 7/8 | 1/5 |
-| `gemma4:12b` | 12B | **0%** | 100% | 72% | 360/360 (100%) | 2/5 | 6/8 | 5/5 |
-| `deepseek-v4-flash` | hosted | **6%** | 98% | 67% | 360/360 (100%) | 1/5 | 6/8 | 5/5 |
+| `gemma3:1b` | 1B | **72%** | 89% | 33% | 312/360 (87%) | 0/6 | 6/7 | 0/5 |
+| `deepseek-v4-flash` | hosted | **11%** | 98% | 67% | 342/360 (95%) | 1/6 | 6/7 | 5/5 |
 
 **Test 2.1.4 — SAFE valuation cap: pre-money vs post-money** — 16 clauses (10 post / 6 pre), each model run 20×/item:
 
@@ -125,12 +123,12 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 | `gemma3:1b` | 1B | **44%** | 93% | 67% | 174/180 (97%) | 4/6 | 2/3 |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 180/180 (100%) | 6/6 | 3/3 |
 
-**Test 1.3.1 — Liquidation preference multiple: 1x vs 2x vs 3x vs other** — 13 clauses (0 non-part / 4 1x / 5 2x / 4 3x / 0 other), each model run 20×/item:
+**Test 1.3.1 — Liquidation preference multiple: 1x vs 2x vs 3x vs other** — 9 clauses (0 non-part / 3 1x / 3 2x / 3 3x / 0 other), each model run 20×/item:
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate | non-part | 1x | 2x | 3x | other |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **46%** | 91% | 0% | 220/260 (85%) | - | 0/4 | 0/5 | 0/3 | - |
-| `deepseek-v4-flash` | hosted | **46%** | 87% | 62% | 260/260 (100%) | - | 3/4 | 1/5 | 4/4 | - |
+| `gemma3:1b` | 1B | **56%** | 94% | 0% | 144/180 (80%) | - | 0/3 | 0/3 | 0/3 | - |
+| `deepseek-v4-flash` | hosted | **33%** | 92% | 67% | 180/180 (100%) | - | 2/3 | 1/3 | 3/3 | - |
 
 **Test 5.1 — Board seats: number an investor has the right to designate** — 9 clauses (values range 1-9), each model run 20×/item:
 
@@ -146,12 +144,12 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 | `gemma3:1b` | 1B | **20%** | 96% | 93% | 134/300 (45%) | 9/9 | 5/6 |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 300/300 (100%) | 9/9 | 6/6 |
 
-**Test 1.1.2 — Priced round basis: pre-money vs post-money** — 21 clauses (15 pre / 6 post), each model run 20×/item:
+**Test 1.1.2 — Priced round basis: pre-money vs post-money** — 19 clauses (13 pre / 6 post), each model run 20×/item:
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate | pre | post |
 |---|---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **86%** | 84% | 71% | 397/420 (95%) | 9/15 | 6/6 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 420/420 (100%) | 15/15 | 5/6 |
+| `gemma3:1b` | 1B | **100%** | 83% | 68% | 363/380 (96%) | 7/13 | 6/6 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 380/380 (100%) | 13/13 | 5/6 |
 
 **Test 8.2 — Risk flag: full-ratchet anti-dilution present vs absent** — 7 clauses (4 full-ratchet / 3 absent), each model run 20×/item:
 
@@ -171,7 +169,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate | full-ratchet | weighted-avg | broad-based | narrow-based | none |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 40% | 96/100 (96%) | 2/2 | 0/2 | - | - | 0/1 |
+| `gemma3:1b` | 1B | **20%** | 99% | 40% | 98/100 (98%) | 2/2 | 0/2 | - | - | 0/1 |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 100/100 (100%) | 2/2 | 2/2 | - | - | 1/1 |
 
 **Test 8.3 — Risk flag: uncapped participating-preferred present vs absent** — 13 clauses (4 uncapped / 9 capped/none), each model run 20×/item:
@@ -199,8 +197,8 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate |
 |---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **71%** | 87% | 57% | 119/140 (85%) |
-| `deepseek-v4-flash` | hosted | **29%** | 90% | 43% | 140/140 (100%) |
+| `gemma3:1b` | 1B | **29%** | 86% | 71% | 133/140 (95%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 140/140 (100%) |
 
 **Test 2.1.1 — SAFE valuation cap extraction** — 8 clauses (values range 15000000-150000000), each model run 20×/item:
 
@@ -227,7 +225,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate |
 |---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 88% | 50% | 75/80 (94%) |
+| `gemma3:1b` | 1B | **50%** | 91% | 75% | 72/80 (90%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 80/80 (100%) |
 
 **Test 1.6.1 — Preferred-stock conversion ratio extraction** — 5 clauses (values range 1-8000), each model run 20×/item:
@@ -258,19 +256,19 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 | `gemma3:1b` | 1B | **0%** | 100% | 83% | 113/120 (94%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 120/120 (100%) |
 
-**Test 2.1.3 — SAFE conversion mechanic: cap-only vs discount-only vs both (MFN)** — 11 clauses (0 cap / 1 discount / 10 both-mfn), each model run 20×/item:
+**Test 2.1.3 — SAFE conversion mechanic: cap-only vs discount-only vs both (MFN)** — 13 clauses (2 cap / 1 discount / 10 both-mfn), each model run 17×/item:
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate | cap | discount | both-mfn |
 |---|---|---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **18%** | 98% | 73% | 132/220 (60%) | - | 0/1 | 8/10 |
-| `deepseek-v4-flash` | hosted | **9%** | 100% | 100% | 220/220 (100%) | - | 1/1 | 10/10 |
+| `gemma3:1b` | 1B | **46%** | 90% | 77% | 158/260 (61%) | 2/2 | 0/1 | 8/10 |
+| `deepseek-v4-flash` | hosted | **8%** | 100% | 100% | 221/260 (85%) | 2/2 | 1/1 | 10/10 |
 
-**Test 1.1.3 — Priced-round price-per-share extraction** — 9 clauses (values range 0.0031-1.5), each model run 20×/item:
+**Test 1.1.3 — Priced-round price-per-share extraction** — 8 clauses (values range 0.2-1000.0), each model run 19×/item:
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate |
 |---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **22%** | 95% | 56% | 172/180 (96%) |
-| `deepseek-v4-flash` | hosted | **22%** | 94% | 67% | 180/180 (100%) |
+| `gemma3:1b` | 1B | **38%** | 92% | 62% | 156/160 (98%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 62% | 147/160 (92%) |
 
 **Test 2.2.3 — Convertible note maturity date extraction** — 4 clauses (values range 2005-03-31-2026-12-31), each model run 20×/item:
 
@@ -283,22 +281,22 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate |
 |---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 25% | 77/80 (96%) |
+| `gemma3:1b` | 1B | **25%** | 94% | 0% | 46/80 (57%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 80/80 (100%) |
 
 **Test 2.2.6 — Convertible note Qualified Financing proceeds threshold extraction** — 2 clauses (values range 10000000-40000000), each model run 20×/item:
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate |
 |---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 38/40 (95%) |
+| `gemma3:1b` | 1B | **50%** | 97% | 100% | 37/40 (92%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 40/40 (100%) |
 
 **Test 6.1 — Equity vesting schedule extraction + normalization** — 9 clauses (values range 1.5yr/no-cliff-4yr/no-cliff), each model run 20×/item:
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate |
 |---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 25% | 64/180 (36%) |
-| `deepseek-v4-flash` | hosted | **22%** | 95% | 89% | 180/180 (100%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 38% | 65/180 (36%) |
+| `deepseek-v4-flash` | hosted | **11%** | 97% | 100% | 180/180 (100%) |
 
 **Test 3.1 — Cap-table current ownership percentage (compute)** — 9 clauses (values range 2.4-33.9), each model run 19×/item:
 
@@ -339,15 +337,15 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate |
 |---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 90% | 0% | 16/40 (40%) |
-| `deepseek-v4-flash` | hosted | **50%** | 95% | 100% | 40/40 (100%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 16/40 (40%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 40/40 (100%) |
 
 **Test 1.2.1 — Total financing round size extraction** — 10 clauses (values range 3728926-21272455), each model run 20×/item:
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate |
 |---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 30% | 200/200 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 30% | 200/200 (100%) |
+| `gemma3:1b` | 1B | **50%** | 87% | 30% | 199/200 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 200/200 (100%) |
 
 **Test 1.4.1 — Annual dividend rate percentage extraction** — 6 clauses (values range 6-10), each model run 20×/item:
 
@@ -409,8 +407,8 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate |
 |---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **80%** | 73% | 20% | 82/100 (82%) |
-| `deepseek-v4-flash` | hosted | **60%** | 92% | 80% | 100/100 (100%) |
+| `gemma3:1b` | 1B | **100%** | 68% | 20% | 83/100 (83%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 100/100 (100%) |
 
 **Test 1.2.2 — Named investor's individual dollar allocation extraction** — 5 clauses (values range 46715.64-9418200), each model run 19×/item:
 
