@@ -470,7 +470,8 @@
       "type": "number",
       "op": "CO",
       "stakes": 5,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/liquidation_waterfall_payout"
     },
     {
       "ref": "4.2",

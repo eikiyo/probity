@@ -1,0 +1,156 @@
+{
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 17,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.48,
+       "truth": 0.51,
+       "consistency": 0.23529411764705882
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.3,
+       "truth": 0.42,
+       "consistency": 0.10526315789473684
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 17,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.3,
+       "truth": 0.39,
+       "consistency": 0.23529411764705882
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 17,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.3,
+       "truth": 0.44,
+       "consistency": 0.11764705882352941
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 0.17337461300309598,
+   "consistency_pct": 17.3374613003096,
+   "field_flips": {
+    "liquidation_waterfall_payout": 1.0
+   },
+   "parse_failure_count": 3,
+   "parse_failure_rate": 0.0375,
+   "valid_run_count": 77,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.75,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 8,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.51,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.42,
+       "truth": 0.42,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.39,
+       "truth": 0.39,
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.44,
+       "truth": 0.44,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 0.9875,
+   "consistency_pct": 98.75,
+   "field_flips": {
+    "liquidation_waterfall_payout": 0.25
+   },
+   "parse_failure_count": 18,
+   "parse_failure_rate": 0.225,
+   "valid_run_count": 62,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ }
+}

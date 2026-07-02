@@ -1,0 +1,80 @@
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "parsed": {"liquidation_waterfall_payout": "0.24"}, "normalized": {"liquidation_waterfall_payout": 0.24}}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "parsed": {"liquidation_waterfall_payout": "0.3"}, "normalized": {"liquidation_waterfall_payout": 0.3}}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "parsed": {"liquidation_waterfall_payout": null}, "normalized": {"liquidation_waterfall_payout": null}}
+{"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "parsed": {"liquidation_waterfall_payout": "0.2688"}, "normalized": {"liquidation_waterfall_payout": 0.2688}}
+{"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "parsed": {"liquidation_waterfall_payout": 0.48}, "normalized": {"liquidation_waterfall_payout": 0.48}}
+{"_key": [0, 5], "instance_idx": 0, "run_idx": 5, "parsed": {"liquidation_waterfall_payout": "0.26"}, "normalized": {"liquidation_waterfall_payout": 0.26}}
+{"_key": [0, 6], "instance_idx": 0, "run_idx": 6, "parsed": {"liquidation_waterfall_payout": 0.49}, "normalized": {"liquidation_waterfall_payout": 0.49}}
+{"_key": [0, 7], "instance_idx": 0, "run_idx": 7, "parsed": {"liquidation_waterfall_payout": "0.2684"}, "normalized": {"liquidation_waterfall_payout": 0.2684}}
+{"_key": [0, 8], "instance_idx": 0, "run_idx": 8, "parsed": {"liquidation_waterfall_payout": "0.3"}, "normalized": {"liquidation_waterfall_payout": 0.3}}
+{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "parsed": {"liquidation_waterfall_payout": "0.29"}, "normalized": {"liquidation_waterfall_payout": 0.29}}
+{"_key": [0, 10], "instance_idx": 0, "run_idx": 10, "raw_output": "error\n", "parsed": null}
+{"_key": [0, 11], "instance_idx": 0, "run_idx": 11, "parsed": {"liquidation_waterfall_payout": "0.28"}, "normalized": {"liquidation_waterfall_payout": 0.28}}
+{"_key": [0, 12], "instance_idx": 0, "run_idx": 12, "parsed": {"liquidation_waterfall_payout": 0.48}, "normalized": {"liquidation_waterfall_payout": 0.48}}
+{"_key": [0, 13], "instance_idx": 0, "run_idx": 13, "parsed": {"liquigation_waterfall_payout": "0.3"}, "normalized": {}}
+{"_key": [0, 14], "instance_idx": 0, "run_idx": 14, "parsed": {"liquidation_waterfall_payout": 0.48}, "normalized": {"liquidation_waterfall_payout": 0.48}}
+{"_key": [0, 15], "instance_idx": 0, "run_idx": 15, "parsed": {"liquidation_waterfall_payout": "0.26"}, "normalized": {"liquidation_waterfall_payout": 0.26}}
+{"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "parsed": {"liquidation_waterfall_payout": "0.1946"}, "normalized": {"liquidation_waterfall_payout": 0.1946}}
+{"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "parsed": {"liquidation_waterfall_payout": 0.48}, "normalized": {"liquidation_waterfall_payout": 0.48}}
+{"_key": [0, 18], "instance_idx": 0, "run_idx": 18, "parsed": {"liquidation_waterfall_payout": "0.23467"}, "normalized": {"liquidation_waterfall_payout": 0.23467}}
+{"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "parsed": {"liquidation_waterfall_payout": 0.46}, "normalized": {"liquidation_waterfall_payout": 0.46}}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "raw_output": "\u201cliquidation_waterfall_payout\": 0.38\n", "parsed": null}
+{"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "parsed": {"liquidation_waterfall_payout": "0.164"}, "normalized": {"liquidation_waterfall_payout": 0.164}}
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "parsed": {"liquidation_waterfall_payout": "0.3"}, "normalized": {"liquidation_waterfall_payout": 0.3}}
+{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "parsed": {"liquidation_waterfall_payout": "0.28"}, "normalized": {"liquidation_waterfall_payout": 0.28}}
+{"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "parsed": {"liquidation_waterfall_payout": "0.1469"}, "normalized": {"liquidation_waterfall_payout": 0.1469}}
+{"_key": [1, 5], "instance_idx": 1, "run_idx": 5, "parsed": {"liquidation_waterfall_payout": "0.26"}, "normalized": {"liquidation_waterfall_payout": 0.26}}
+{"_key": [1, 6], "instance_idx": 1, "run_idx": 6, "parsed": {"liquidation_waterfall_payout": "0.42"}, "normalized": {"liquidation_waterfall_payout": 0.42}}
+{"_key": [1, 7], "instance_idx": 1, "run_idx": 7, "parsed": {"liquidation_waterfall_payout": "0.43"}, "normalized": {"liquidation_waterfall_payout": 0.43}}
+{"_key": [1, 8], "instance_idx": 1, "run_idx": 8, "parsed": {"liquidation_waterfall_payout": 0.49}, "normalized": {"liquidation_waterfall_payout": 0.49}}
+{"_key": [1, 9], "instance_idx": 1, "run_idx": 9, "parsed": {"liquidation_waterfall_payout": 0.48}, "normalized": {"liquidation_waterfall_payout": 0.48}}
+{"_key": [1, 10], "instance_idx": 1, "run_idx": 10, "parsed": {"liquidation_waterfall_payout": "0.13"}, "normalized": {"liquidation_waterfall_payout": 0.13}}
+{"_key": [1, 11], "instance_idx": 1, "run_idx": 11, "parsed": {"liquidation_waterfall_payout": "0.28"}, "normalized": {"liquidation_waterfall_payout": 0.28}}
+{"_key": [1, 12], "instance_idx": 1, "run_idx": 12, "parsed": {"liquidation_waterfall_payout": "0.18"}, "normalized": {"liquidation_waterfall_payout": 0.18}}
+{"_key": [1, 13], "instance_idx": 1, "run_idx": 13, "parsed": {"liquidation_waterfall_payout": "0.22"}, "normalized": {"liquidation_waterfall_payout": 0.22}}
+{"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "parsed": {"liquidation_waterfall_payout": "0.195"}, "normalized": {"liquidation_waterfall_payout": 0.195}}
+{"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "parsed": {"liquidation_waterfall_payout": 0.46368}, "normalized": {"liquidation_waterfall_payout": 0.46368}}
+{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "parsed": {"liquidation_waterfall_payout": "0.3"}, "normalized": {"liquidation_waterfall_payout": 0.3}}
+{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "parsed": {"liquidation_waterfall_payout": 0.38}, "normalized": {"liquidation_waterfall_payout": 0.38}}
+{"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "parsed": {"liquidation_waterfall_payout": 0.48}, "normalized": {"liquidation_waterfall_payout": 0.48}}
+{"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "parsed": {"liquidation_waterfall_payout": "0.14"}, "normalized": {"liquidation_waterfall_payout": 0.14}}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "parsed": {"liquidation_waterfall_payout": 0.49}, "normalized": {"liquidation_waterfall_payout": 0.49}}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "parsed": {"liquidation_waterfall_payout": 0.4689}, "normalized": {"liquidation_waterfall_payout": 0.4689}}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "parsed": {"liquidation_waterfall_payout": "0.3"}, "normalized": {"liquidation_waterfall_payout": 0.3}}
+{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "raw_output": "{\"liquidation_waterfall_payout\": '0.3'}\n", "parsed": null}
+{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "parsed": {"liquidation_waterfall_payout": "0.3"}, "normalized": {"liquidation_waterfall_payout": 0.3}}
+{"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "parsed": {"liquidation_waterfall_payout": "0.486"}, "normalized": {"liquidation_waterfall_payout": 0.486}}
+{"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "parsed": {"liquigation_waterfall_payout": "0.38"}, "normalized": {}}
+{"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "parsed": {"liquidation_waterfall_payout": "0.18"}, "normalized": {"liquidation_waterfall_payout": 0.18}}
+{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "parsed": {"liquidation_waterfall_payout": 0.38}, "normalized": {"liquidation_waterfall_payout": 0.38}}
+{"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "parsed": {"liquidation_waterfall_payout": 0.46}, "normalized": {"liquidation_waterfall_payout": 0.46}}
+{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "parsed": {"liquidation_waterfall_payout": "0.48"}, "normalized": {"liquidation_waterfall_payout": 0.48}}
+{"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "parsed": {"liquidation_waterfall_payout": "0.3"}, "normalized": {"liquidation_waterfall_payout": 0.3}}
+{"_key": [2, 12], "instance_idx": 2, "run_idx": 12, "parsed": {"liquidation_waterfall_payout": "0.16"}, "normalized": {"liquidation_waterfall_payout": 0.16}}
+{"_key": [2, 13], "instance_idx": 2, "run_idx": 13, "parsed": {"liquidation_waterfall_payout": 0.3}, "normalized": {"liquidation_waterfall_payout": 0.3}}
+{"_key": [2, 14], "instance_idx": 2, "run_idx": 14, "parsed": {"liquigation_waterfall_payout": "0.26"}, "normalized": {}}
+{"_key": [2, 15], "instance_idx": 2, "run_idx": 15, "parsed": {"liquidation_waterfall_payout": "0.265"}, "normalized": {"liquidation_waterfall_payout": 0.265}}
+{"_key": [2, 16], "instance_idx": 2, "run_idx": 16, "parsed": {"liquidation_waterfall_payout": 0.48}, "normalized": {"liquidation_waterfall_payout": 0.48}}
+{"_key": [2, 17], "instance_idx": 2, "run_idx": 17, "parsed": {"liquidation_waterfall_payout": 0.465}, "normalized": {"liquidation_waterfall_payout": 0.465}}
+{"_key": [2, 18], "instance_idx": 2, "run_idx": 18, "parsed": {"liquidation_waterfall_payout": 0.4436}, "normalized": {"liquidation_waterfall_payout": 0.4436}}
+{"_key": [2, 19], "instance_idx": 2, "run_idx": 19, "parsed": {"liquidation_waterfall_payout": "0.00"}, "normalized": {"liquidation_waterfall_payout": 0.0}}
+{"_key": [3, 0], "instance_idx": 3, "run_idx": 0, "parsed": {"liquidation_waterfall_payout": "0.28"}, "normalized": {"liquidation_waterfall_payout": 0.28}}
+{"_key": [3, 1], "instance_idx": 3, "run_idx": 1, "parsed": {"liquidation_waterfall_payout": "0.1899"}, "normalized": {"liquidation_waterfall_payout": 0.1899}}
+{"_key": [3, 2], "instance_idx": 3, "run_idx": 2, "parsed": {"liquidation_waterfall_payout": "0.34"}, "normalized": {"liquidation_waterfall_payout": 0.34}}
+{"_key": [3, 3], "instance_idx": 3, "run_idx": 3, "parsed": {"liquidation_waterfall_payout": "0.26"}, "normalized": {"liquidation_waterfall_payout": 0.26}}
+{"_key": [3, 4], "instance_idx": 3, "run_idx": 4, "parsed": {"liquidation_waterfall_payout": -0.3}, "normalized": {"liquidation_waterfall_payout": -0.3}}
+{"_key": [3, 5], "instance_idx": 3, "run_idx": 5, "parsed": {"liquidation_waterfall_payout": 0.38}, "normalized": {"liquidation_waterfall_payout": 0.38}}
+{"_key": [3, 6], "instance_idx": 3, "run_idx": 6, "parsed": {"liquidation_waterfall_payout": 0.46}, "normalized": {"liquidation_waterfall_payout": 0.46}}
+{"_key": [3, 7], "instance_idx": 3, "run_idx": 7, "parsed": {"liquigation_waterfall_payout": 0.45}, "normalized": {}}
+{"_key": [3, 8], "instance_idx": 3, "run_idx": 8, "parsed": {"liquidation_waterfall_payout": "0.00"}, "normalized": {"liquidation_waterfall_payout": 0.0}}
+{"_key": [3, 9], "instance_idx": 3, "run_idx": 9, "parsed": {"liquidation_waterfall_payout": "0.003"}, "normalized": {"liquidation_waterfall_payout": 0.003}}
+{"_key": [3, 10], "instance_idx": 3, "run_idx": 10, "parsed": {"liquidation_waterfall_payout": "0.164"}, "normalized": {"liquidation_waterfall_payout": 0.164}}
+{"_key": [3, 11], "instance_idx": 3, "run_idx": 11, "parsed": {"liquidation_waterfall_payout": "0.3"}, "normalized": {"liquidation_waterfall_payout": 0.3}}
+{"_key": [3, 12], "instance_idx": 3, "run_idx": 12, "parsed": {"liquidation_waterfall_payout": 0.48}, "normalized": {"liquidation_waterfall_payout": 0.48}}
+{"_key": [3, 13], "instance_idx": 3, "run_idx": 13, "parsed": {"liquidation_waterfall_payout": 0.49}, "normalized": {"liquidation_waterfall_payout": 0.49}}
+{"_key": [3, 14], "instance_idx": 3, "run_idx": 14, "parsed": {"liquidation_waterfall_payout": 0.43}, "normalized": {"liquidation_waterfall_payout": 0.43}}
+{"_key": [3, 15], "instance_idx": 3, "run_idx": 15, "parsed": {"liquigation_waterfall_payout": 0.48}, "normalized": {}}
+{"_key": [3, 16], "instance_idx": 3, "run_idx": 16, "parsed": {"liquidation_waterfall_payout": "0.3"}, "normalized": {"liquidation_waterfall_payout": 0.3}}
+{"_key": [3, 17], "instance_idx": 3, "run_idx": 17, "parsed": {"liquidation_waterfall_payout": "0.49"}, "normalized": {"liquidation_waterfall_payout": 0.49}}
+{"_key": [3, 18], "instance_idx": 3, "run_idx": 18, "parsed": {"liquidation_waterfall_payout": 0.48}, "normalized": {"liquidation_waterfall_payout": 0.48}}
+{"_key": [3, 19], "instance_idx": 3, "run_idx": 19, "parsed": {"liquida\u00e7\u00e3o_waterfall_payout": "0.29"}, "normalized": {}}

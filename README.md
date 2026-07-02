@@ -21,7 +21,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*55 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
+*60 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
 
 **Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
 
@@ -411,6 +411,41 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 |---|---|---|---|---|
 | `gemma3:1b` | 1B | **80%** | 73% | 20% |
 | `deepseek-v4-flash` | hosted | **60%** | 92% | 80% |
+
+**Test 1.2.2 — Named investor's individual dollar allocation extraction** — 5 clauses (values range 46715.64-9418200), each model run 19×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **20%** | 91% | 80% |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% |
+
+**Test 3.3 — Pre-money option pool price-per-share compute** — 3 clauses (values range 0.24-0.909), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 62% | 0% |
+| `deepseek-v4-flash` | hosted | **67%** | 91% | 33% |
+
+**Test 4.4 — Convert-vs-take-preference decision (compute)** — 2 clauses (1 Convert / 1 Take preference), each model run 18×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy | Convert | Take preference |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 50% | 1/1 | 0/1 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 1/1 | 1/1 |
+
+**Test 4.1 — Per-share value to common after preferred waterfall (compute)** — 4 clauses (values range 0.39-0.51), each model run 19×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 17% | 0% |
+| `deepseek-v4-flash` | hosted | **25%** | 99% | 100% |
+
+**Test 4.3 — Named preferred series' total waterfall payout (compute)** — 2 clauses (values range 19.7-58.9), each model run 20×/item:
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy |
+|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 52% | 50% |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% |
 
 **What the columns mean:**
 
