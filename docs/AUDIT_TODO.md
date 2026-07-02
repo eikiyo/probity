@@ -698,4 +698,21 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   the right majority answer). Class balance 6×506b / 4×506c; `504` is a defined taxonomy value
   with zero real items — same class-coverage-gap pattern as 1.3.1/1.5.1, noted not fixed.
 
-## Next leaf: 7.2 form_d_fields
+### [x] 7.2 form_d_fields
+- **CRITICAL bug found + FIXED, confirmed via rerun:** task.py declared
+  `"type": "string"` for `form_d_field_value`, but the value is a dollar amount.
+  `engine/normalize.py`'s `canonical()` routes `"string"` fields through `_canonical_enum()`
+  (NFKD + casefold + trim only — no `$`/comma stripping), while `"number"` fields route
+  through `_canonical_number()` (which strips `$`, commas, whitespace before parsing). Both
+  models were extracting the semantically CORRECT figure every time — gemma3-1b answered
+  `"$2,366,532"` (with a `$`) vs oracle's stored `"2,366,532"`, and `"70227931.85"` (no commas)
+  vs oracle's `"70,227,931.85"` — genuinely right values, scored 0/2 (0%) purely because the
+  `"string"` comparison path never normalized away the punctuation difference. Changed the
+  field type to `"number"` (verified `engine/scorer.py` only branches on `fspec["type"]`, "op"
+  is documentation-only, and `_canonical_number` correctly parses comma-formatted string values
+  like the oracle's own stored `"2,366,532"`). Reran: **gemma3-1b jumped from 0%/50% wobble to
+  a genuine 100%/0%** — deepseek-v4f, which happened to answer in oracle-matching format by
+  luck, stayed 100%/0% throughout, so this bug was silently deflating ONLY gemma3-1b's score.
+  Same registry field-name-mismatch leaf already flagged in 2.1.4's repo-wide sweep entry.
+
+## Next leaf: 7.3 s1_use_of_proceeds

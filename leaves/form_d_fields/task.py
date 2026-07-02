@@ -28,7 +28,15 @@ TASK = {
     "description": "Extract the Total Amount Sold field value from a real Form D filing (7.2).",
     "fields": {
         "form_d_field_value": {
-            "type": "string",
+            # WHY "number" not "string" (fixed 2026-07-02, adversarial audit): the value is a
+            # dollar amount, and engine/normalize.py's canonical() routes "string" fields
+            # through _canonical_enum() (case+whitespace only, no $/comma stripping). Both
+            # models extracted the semantically CORRECT figure ("$2,366,532" and
+            # "70227931.85" respectively) but were scored 0% because the oracle's own stored
+            # value ("2,366,532" / "70,227,931.85") differed by punctuation the "string" path
+            # never normalizes away. "number" routes through _canonical_number(), which strips
+            # $/commas/whitespace before comparing -- the correct behavior for a dollar figure.
+            "type": "number",
             "description": "The extracted Total Amount Sold dollar value from the Form D.",
         }
     },
