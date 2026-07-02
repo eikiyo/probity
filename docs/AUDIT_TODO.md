@@ -775,4 +775,21 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   class balance 4 yes / 3 no, deepseek-v4f 100%/0%, gemma3-1b 57.1%/28.6% wobble — plausible,
   no shared-confusion signal remaining post-fix.
 
-## Next leaf: 8.3 flag_uncapped_participation
+### [x] 8.3 flag_uncapped_participation
+- **Verified clean.** N=13, class balance 9 no / 4 yes (mild imbalance, noted). gemma3-1b
+  30.8% is BELOW the 69.2% trivial "always no" baseline — confirms genuine struggle, not
+  baseline-gaming. deepseek-v4f 84.6%, both misses are real "yes" items (scPharmaceuticals,
+  Akouos) called "no" — the harder minority class, consistent with the nuanced
+  uncapped-vs-capped-vs-non-participating distinction this leaf tests; both companies already
+  independently verified elsewhere in this audit (1.3.2, 1.4.2), no new concern.
+
+### [x] 8.5 flag_missing_pro_rata
+- **Verified clean.** N=4 (small, noted), correct `"type": "bool"` (no repeat of 7.2's bug),
+  perfect 2/2 class balance. deepseek-v4f 100%. This leaf's own docstring documents an
+  exceptional prior self-audit (found the original "no" class was noise/unrelated exhibits,
+  fixed by re-sourcing 2 genuine real explicit-waiver documents) — a good historical example of
+  this exact audit process working. All 4 companies (Xcyte Therapies, Rapid7, Greenfield
+  Robotics, SOS Hydration) already independently verified as real, distinct entities elsewhere
+  in this audit — no new concern.
+
+## Next leaf: 8.6 flag_internal_inconsistency
