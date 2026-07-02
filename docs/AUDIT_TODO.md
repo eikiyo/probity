@@ -715,4 +715,38 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   luck, stayed 100%/0% throughout, so this bug was silently deflating ONLY gemma3-1b's score.
   Same registry field-name-mismatch leaf already flagged in 2.1.4's repo-wide sweep entry.
 
-## Next leaf: 7.3 s1_use_of_proceeds
+### [~] 7.3 s1_use_of_proceeds — SEVERE SCORING-METHODOLOGY FINDING, PENDING EIKIYO
+- **Verified sourcing clean, and this leaf's own docstring already documents a serious past
+  fix** (a prior version shipped 59 items sourced from the WRONG document type — SEC comment
+  letters ABOUT a Use of Proceeds section, not the section itself — since fully rebuilt from
+  real S-1/424B4 prospectus bodies).
+- **SEVERE, NOT fixed (needs a design decision, not a mechanical patch):** nearly every scored
+  "miss" on this leaf is a model giving a SEMANTICALLY CORRECT paraphrase marked wrong by pure
+  exact-string-match scoring. Examples, all with the SAME meaning as truth: gemma3-1b
+  "research & development" vs truth "research and development activities" (WRONG);
+  "working capital & general corporate purposes" vs truth "working capital and general
+  corporate purposes" (WRONG, differs only by "&" vs "and"); "redemption of senior notes" vs
+  truth "redeem all of the senior notes" (WRONG); deepseek-v4f "advance liver programs" vs
+  truth "advance our current liver programs" (WRONG, missing 2 filler words). Root cause: the
+  `"string"` field type routes through `_canonical_enum()` (NFKD + casefold + trim only, no
+  fuzzy/semantic comparison), but the prompt EXPLICITLY invites paraphrase ("extract... as a
+  short phrase (the main category or purpose named)") rather than asking for a verbatim quote.
+  gemma3-1b's reported 20% and deepseek-v4f's reported 80% both understate real semantic
+  accuracy, likely close to 100% for both. **This is a task-methodology question, not a bug I
+  can fix unilaterally:** (a) switch scoring to semantic-similarity/fuzzy match for free-text
+  string fields, or (b) tighten the prompt to request a literal verbatim substring instead of a
+  paraphrased "short phrase" so exact-match becomes the right tool, or (c) accept current
+  strictness as intentional. **ACTION NEEDED FROM EIKIYO** — likely affects 7.4
+  `s1_risk_factors` too (same field-type + free-text-paraphrase pattern), will check there next.
+
+### [x] 7.4 s1_risk_factors
+- **Verified clean — a useful contrast to 7.3's finding.** Unlike 7.3, this leaf's prompt
+  correctly requests VERBATIM extraction ("extract ONLY the heading sentence... the exact
+  heading sentence"), so exact-match scoring is the right tool here and the leaf does NOT share
+  7.3's scoring-methodology issue. gemma3-1b's real 0% is a genuine model failure: checked its
+  actual answers and it consistently either truncates the true sentence mid-way (drops the
+  second clause) or collapses it into a short bolded title-style paraphrase instead of copying
+  the full literal sentence — real small-model long-span-copying weakness, not a bug.
+  deepseek-v4f 100% (genuinely verbatim-copies correctly).
+
+## Next leaf: 7.5 financial_statement_qa
