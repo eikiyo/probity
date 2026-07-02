@@ -853,6 +853,80 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
+## Test 8.2 — Risk flag: full-ratchet anti-dilution present vs absent
+
+**Corpus:** 7 real SEC-filed preferred-stock anti-dilution clauses, human-validated answers (4 full-ratchet / 3 absent). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **29%** | 98% | 57% | 7/7 | 130/140 (93%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
+- **full-ratchet · absent** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
+
+
+### Accuracy by class (majority vote)
+
+| Model | full-ratchet | absent |
+|---|---|---|
+| `gemma3:1b` | 4/4 | 0/3 |
+| `deepseek-v4-flash` | 4/4 | 3/3 |
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+| ZIX CORP | no | easy | 1B |
+| VISIUM TECHNOLOGIES, I | no | medium | 1B |
+
+## What this shows
+
+- **Wobble spread: 0%–29% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+
+---
+
+## Test 1.1.1 — Post-money valuation extraction
+
+**Corpus:** 4 real SEC-filed priced-round financing documents, human-validated answers (values range 5000000-275000000). Each model run **20×/item at temp 0.7**.
+
+### Headline — WOBBLE (the core metric)
+
+*Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
+
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 25% | 4/4 | 60/80 (75%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+
+**What the columns mean:**
+
+- **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
+- **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
+- **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
+
+
+### Which items make models wobble
+
+| Item | True | Difficulty | Models that wobbled |
+|---|---|---|---|
+
+## What this shows
+
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+
+---
+
 ## Test 1.5.1 — Anti-dilution mechanism: full-ratchet vs weighted-average vs none
 
 **Corpus:** 5 real SEC-filed preferred-stock anti-dilution clauses, human-validated answers (2 full-ratchet / 2 weighted-avg / 0 broad-based / 0 narrow-based / 1 none). Each model run **20×/item at temp 0.7**.
@@ -1701,6 +1775,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **40%** | 86% | 100% | 10/10 | 170/200 (85%) |
 | `deepseek-v4-flash` | hosted | **30%** | 96% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
@@ -1716,19 +1791,21 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | 506(b) | 506(c) | 504 | Reg A | other |
 |---|---|---|---|---|---|
+| `gemma3:1b` | 6/6 | 4/4 | — | — | — |
 | `deepseek-v4-flash` | 6/6 | 4/4 | — | — | — |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| VoCare, Inc. | 506c | medium | hosted |
-| Brewer Lane Ventures F | 506c | medium | hosted |
-| NextView Ventures V, L | 506c | medium | hosted |
+| VoCare, Inc. | 506c | medium | 1B, hosted |
+| Brewer Lane Ventures F | 506c | medium | 1B, hosted |
+| Material Impact Fund I | 506c | medium | 1B |
+| NextView Ventures V, L | 506c | medium | 1B, hosted |
 
 ## What this shows
 
-- **Wobble spread: 30%–30% across the ladder.** Lowest-wobble model: **hosted** (30% wobble, 100% accuracy).
+- **Wobble spread: 30%–40% across the ladder.** Lowest-wobble model: **hosted** (30% wobble, 100% accuracy).
 
 ---
 

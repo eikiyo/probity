@@ -10,7 +10,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 11,
+     "n_valid": 10,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -23,7 +23,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 10,
+     "n_valid": 9,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -36,25 +36,25 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 13,
+     "n_valid": 8,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "post_money_valuation": {
-       "majority": 27500000.0,
+       "majority": 50000000.0,
        "truth": 5000000.0,
-       "consistency": 0.8461538461538461
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 3,
-     "n_valid": 1,
+     "n_valid": 7,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "post_money_valuation": {
-       "majority": 5000000.0,
+       "majority": 10600000.0,
        "truth": 106000000.0,
        "consistency": 1.0
       }
@@ -64,14 +64,14 @@
   },
   "reliability": {
    "task": "post_money_valuation",
-   "consistency_rate": 0.9615384615384616,
-   "consistency_pct": 96.15384615384616,
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
    "field_flips": {
-    "post_money_valuation": 0.25
+    "post_money_valuation": 0.0
    },
-   "parse_failure_count": 28,
-   "parse_failure_rate": 0.23333333333333334,
-   "valid_run_count": 92,
+   "parse_failure_count": 20,
+   "parse_failure_rate": 0.25,
+   "valid_run_count": 60,
    "measurable": true,
    "excluded_fields": []
   }
@@ -82,8 +82,8 @@
    "task": "post_money_valuation",
    "n_instances": 4,
    "n_measurable": 4,
-   "accuracy_majority": 0.5,
-   "accuracy_strict": 0.5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
    "per_instance": [
     {
      "instance_idx": 0,
@@ -114,11 +114,11 @@
     {
      "instance_idx": 2,
      "n_valid": 20,
-     "majority_correct": false,
-     "strict_correct": false,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "post_money_valuation": {
-       "majority": 275000000.0,
+       "majority": 5000000.0,
        "truth": 5000000.0,
        "consistency": 1.0
       }
@@ -127,11 +127,11 @@
     {
      "instance_idx": 3,
      "n_valid": 20,
-     "majority_correct": false,
-     "strict_correct": false,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "post_money_valuation": {
-       "majority": 5000000.0,
+       "majority": 106000000.0,
        "truth": 106000000.0,
        "consistency": 1.0
       }
@@ -148,7 +148,7 @@
    },
    "parse_failure_count": 0,
    "parse_failure_rate": 0.0,
-   "valid_run_count": 120,
+   "valid_run_count": 80,
    "measurable": true,
    "excluded_fields": []
   }
