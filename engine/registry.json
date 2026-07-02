@@ -64,7 +64,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 5,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/round_size"
     },
     {
       "ref": "1.2.2",
@@ -140,7 +141,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/dividend_rate_pct"
     },
     {
       "ref": "1.4.2",

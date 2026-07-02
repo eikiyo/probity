@@ -1,0 +1,312 @@
+{
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "accuracy": {
+   "task": "round_size",
+   "n_instances": 10,
+   "n_measurable": 10,
+   "accuracy_majority": 0.3,
+   "accuracy_strict": 0.3,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "round_size": {
+       "majority": 21272455.0,
+       "truth": 21272455.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 25000000.0,
+       "truth": 5000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "round_size": {
+       "majority": 3728926.0,
+       "truth": 3728926.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 25500000.0,
+       "truth": 14040000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "round_size": {
+       "majority": 7661116.0,
+       "truth": 7661116.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 12085780.0,
+       "truth": 6085780.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 10155142.0,
+       "truth": 8881213.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 6000000.0,
+       "truth": 5500000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 7263112.0,
+       "truth": 5787732.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 7236095.0,
+       "truth": 5300600.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "round_size",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "round_size": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 200,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "accuracy": {
+   "task": "round_size",
+   "n_instances": 10,
+   "n_measurable": 10,
+   "accuracy_majority": 0.3,
+   "accuracy_strict": 0.3,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "round_size": {
+       "majority": 21272455.0,
+       "truth": 21272455.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 25000000.0,
+       "truth": 5000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "round_size": {
+       "majority": 3728926.0,
+       "truth": 3728926.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 25500000.0,
+       "truth": 14040000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "round_size": {
+       "majority": 7661116.0,
+       "truth": 7661116.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 12085780.0,
+       "truth": 6085780.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 10155142.0,
+       "truth": 8881213.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 6000000.0,
+       "truth": 5500000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 7263112.0,
+       "truth": 5787732.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "round_size": {
+       "majority": 7236095.0,
+       "truth": 5300600.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "round_size",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "round_size": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 200,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ }
+}

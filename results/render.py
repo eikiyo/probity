@@ -199,6 +199,18 @@ LEAVES = [
      "title": "Test 7.2 — Form D field extraction (Total Amount Sold)",
      "corpus_desc": "real SEC Form D filings",
      "labels": {}},
+    {"slug": "round_size",
+     "title": "Test 1.2.1 — Total financing round size extraction",
+     "corpus_desc": "real SEC Form D filings (structured totalAmountSold field, operating companies only)",
+     "labels": {}},
+    {"slug": "dividend_rate_pct",
+     "title": "Test 1.4.1 — Annual dividend rate percentage extraction",
+     "corpus_desc": "real venture-financing preferred-stock charters",
+     "labels": {}},
+    {"slug": "multi_round_stacked_dilution",
+     "title": "Test 3.6 — Per-share dilution to new investors (compute)",
+     "corpus_desc": "real IPO prospectus Dilution-section tables",
+     "labels": {}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",

@@ -1,132 +1,91 @@
 """
 Location: leaves/dividend_rate_pct/source.py
-Purpose: Build the dividend_rate_pct leaf corpus + SEPARATED oracle (1.4.1) from real SEC EDGAR
-         documents (raw candidates fetched into corpus/full/). NUMBER extraction: each item's ground
-         truth is the annual dividend rate percentage stated in the preferred stock charter's
-         dividend clause, hand-verified against the real clause text. Oracle values are bare numbers
-         (not strings), e.g. 5.1 or 8, with NO percent sign.
-Functions: window_on(), main()
-Imports: json, re, pathlib, collections
+Purpose: Build the dividend_rate_pct leaf corpus + oracle (ref 1.4.1, op EX=extract) from real
+         venture-financing preferred-stock charters (reusing the same real, already-fetched
+         documents as the sibling dividend_cumulative leaf: Jazz/Fitbit/Zoom/Teladoc/biotech VC
+         charters, NOT bank-regulatory perpetual preferred, which was this leaf's original
+         off-thesis contamination -- see the retired DEFERRED.md history in git log). Each item's
+         percentage is manually located and independently re-verified against the raw fetched
+         document text below (anchor phrase must be a literal substring of the source).
+Functions: main()
+Imports: json, re, pathlib
 """
+
 import json
 import re
-from collections import Counter
 from pathlib import Path
 
 HERE = Path(__file__).parent
 FULL = HERE / "corpus" / "full"
+QUESTIONS = HERE / "corpus" / "questions"
 
-# oracle_id -> (read_from_file_id, value, difficulty, anchor, company)
-# Values are BARE NUMBERS (int/float), NOT strings with "%"
+# id -> (company, dividend_rate_pct, anchor substring literally present in the fetched raw doc, source url)
+# Every anchor below was found by direct regex scan of the real fetched plain-text document,
+# manually reviewed to exclude unrelated %-figures near the word "dividend" (e.g. Jazz
+# Semiconductor's 7.25% officer-loan rate, Melinta's 8.25% debt interest, Impel/Entercom's
+# 30% withholding-tax rate, scPharma's 20% cumulative CAP -- none are the stated per-annum
+# dividend rate itself and were rejected during manual audit).
 ITEMS = {
-    "f02955exv4w8_5p1": (
-        "f02955exv4w8.htm", 5.1, "easy",
-        "non-cumulative, cash dividends at the annual rate of 5.1%",
-        "Freddie Mac 5.1% Non-Cumulative Preferred Stock"),
-
-    "f02955exv4w7_5p3": (
-        "f02955exv4w7.htm", 5.3, "easy",
-        "non-cumulative, cash dividends at the annual rate of 5.3%",
-        "Freddie Mac 5.3% Non-Cumulative Preferred Stock"),
-
-    "f02955exv4w4_5p0": (
-        "f02955exv4w4.htm", 5.0, "easy",
-        "non-cumulative, cash dividends at the annual rate of 5%",
-        "Freddie Mac 5% Non-Cumulative Preferred Stock"),
-
-    "f02955exv4w17_5p81": (
-        "f02955exv4w17.htm", 5.81, "easy",
-        "non-cumulative, cash dividends at the annual rate of 5.81%",
-        "Freddie Mac 5.81% Non-Cumulative Preferred Stock"),
-
-    "f02955exv4w25_7p875": (
-        "f02955exv4w25.htm", 7.875, "medium",
-        "7.875% per annum, with the resulting dividend per share",
-        "Freddie Mac 7.875% Fixed-to-Floating Rate Non-Cumulative Preferred Stock"),
-
-    "bacmarch8k1_6p75": (
-        "bacmarch8k1.htm", 6.75, "medium",
-        "rate of 6.75% per annum , payable quarterly",
-        "Bank of America 6.75% Perpetual Preferred Stock"),
-
-    "bacmarch8k1_6p6": (
-        "bacmarch8k1.htm", 6.6, "medium",
-        "rate of 6.60% per annum computed on the basis of the issue price",
-        "Bank of America 6.60% Fixed/Adjustable Rate Cumulative Preferred Stock"),
-
-    "fixed1_6p6": (
-        "fixed1.htm", 6.6, "medium",
-        "6.60% per annum computed on the basis of an issue price thereof of $250 per share",
-        "Bank of America Fixed/Adjustable Rate Cumulative Preferred Stock"),
-
-    "dex31_5p0": (
-        "dex31.htm", 5.0, "hard",
-        "not greater than 5.00% per annum or greater than 11.50% per annum",
-        "Adjustable Rate Preferred Stock (5.00% floor)"),
-
-    "dex31_11p5": (
-        "dex31.htm", 11.5, "hard",
-        "than 11.50% per annum. Except as provided below",
-        "Adjustable Rate Preferred Stock (11.50% ceiling)"),
-
-    "exhibit46_6p35": (
-        "exhibit46-q42023.htm", 6.35, "medium",
-        "6.350% Fixed-to-Floating Rate Non-Cumulative Perpetual Preferred Stock",
-        "Company Fixed-to-Floating Rate Non-Cumulative Perpetual Preferred Stock"),
+    "1119700_000114420405033377": ("BIOACCELERATE HOLDINGS INC", 6,
+        "cumulative dividend at a rate of Six Per Cent (6%) per annum",
+        "https://www.sec.gov/Archives/edgar/data/1119700/000114420405033377/ex_10-13.txt"),
+    "1725255_000110465920135025": ("AdaptHealth Corp.", 8.0,
+        "dividends at the per share rate of 8.0% of the Original Issue Price per annum shall accrue",
+        "https://www.sec.gov/Archives/edgar/data/1725255/000110465920135025/tm2037721d4_ex3-1.htm"),
+    "1620179_000104746918002690": ("Exela Technologies, Inc.", 10,
+        "cumulative dividends at a rate per annum of 10% of the Liquidation Preference",
+        "https://www.sec.gov/Archives/edgar/data/1620179/000104746918002690/a2235262z10-k.htm"),
+    "1604950_000119312517316695": ("scPharmaceuticals Inc.", 6,
+        "dividends at the rate per annum of six percent (6%) of the Series B Base Amount",
+        "https://www.sec.gov/Archives/edgar/data/1604950/000119312517316695/d435316dex31.htm"),
+    "1445499_000095012321001942": ("IMPEL NEUROPHARMA INC", 8,
+        "are entitled to receive 8% dividends, when, if, and as declared",
+        "https://www.sec.gov/Archives/edgar/data/1445499/000095012321001942/filename1.htm"),
+    "1585521_000119312519083351": ("Zoom Video Communications, Inc.", 6,
+        "shall mean for each series of the Preferred Stock, an annual rate of six percent (6%) of the Original Issue Price",
+        "https://www.sec.gov/Archives/edgar/data/1585521/000119312519083351/d642624dex31.htm"),
 }
 
 
-def window_on(text, anchor, before=420, after=900):
-    i = text.lower().find(anchor.lower())
-    if i < 0:
-        return None, None
-    s = max(0, i - before)
-    e = min(len(text), i + len(anchor) + after)
-    win = re.sub(r"[ \t]+", " ", text[s:e]).strip()
-    qs = max(0, i - 20)
-    qe = min(len(text), i + len(anchor) + 90)
-    return win, re.sub(r"\s+", " ", text[qs:qe]).strip()
+def build_window(raw_text, anchor):
+    """Real excerpt: anchor phrase +/- surrounding context, as it actually appears in the fetched doc."""
+    idx = raw_text.find(anchor)
+    if idx == -1:
+        # anchor may have curly-quote variants; try normalizing
+        norm_raw = raw_text.replace("’", "'").replace("&#146;", "'").replace("&#147;", '"').replace("&#148;", '"')
+        norm_anchor = anchor.replace("’", "'")
+        idx = norm_raw.find(norm_anchor)
+        if idx == -1:
+            return None
+        raw_text = norm_raw
+        anchor = norm_anchor
+    start = max(0, idx - 400)
+    end = min(len(raw_text), idx + len(anchor) + 400)
+    return raw_text[start:end].strip()
 
 
 def main():
-    (HERE / "corpus" / "questions").mkdir(parents=True, exist_ok=True)
-    oracle = []
-    skipped = []
-
-    for oid, (read_from, value, diff, anchor, company) in ITEMS.items():
-        p = FULL / f"{read_from}.txt"
-        if not p.exists():
-            skipped.append((oid, f"file {read_from} not found"))
+    oracle_lines = []
+    for id_, (company, pct, anchor, url) in ITEMS.items():
+        raw = (FULL / f"{id_}.txt").read_text()
+        window = build_window(raw, anchor)
+        if window is None:
+            print(f"SKIP {id_}: anchor not found verbatim in raw doc -- {anchor!r}")
             continue
-
-        full = p.read_text(errors="ignore")
-        win, quote = window_on(full, anchor)
-
-        if not win:
-            skipped.append((oid, f"anchor not found in {read_from}"))
-            continue
-
-        (HERE / "corpus" / "questions" / f"{oid}.txt").write_text(win, encoding="utf-8")
-
-        oracle.append({
-            "id": oid,
+        (QUESTIONS / f"{id_}.txt").write_text(window)
+        oracle_lines.append({
+            "id": id_,
+            "dividend_rate_pct": pct,
+            "validating_quote": anchor,
+            "source_url": url,
             "company": company,
-            "dividend_rate_pct": value,
-            "anchor": anchor,
-            "validating_quote": quote,
-            "difficulty": diff
         })
+        print(f"OK {id_} {company}: dividend_rate_pct={pct}")
 
-    with open(HERE / "oracle.jsonl", "w", encoding="utf-8") as f:
-        for o in oracle:
-            f.write(json.dumps(o) + "\n")
-
-    values_count = dict(Counter(o['dividend_rate_pct'] for o in oracle))
-    print(f"wrote {len(oracle)} items; values={values_count}")
-    if skipped:
-        print(f"skipped {len(skipped)} items:")
-        for oid, reason in skipped:
-            print(f"  {oid}: {reason}")
+    with open(HERE / "oracle.jsonl", "w") as f:
+        for item in oracle_lines:
+            f.write(json.dumps(item) + "\n")
+    print(f"\nWrote {len(oracle_lines)} items to oracle.jsonl")
 
 
 if __name__ == "__main__":

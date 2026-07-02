@@ -1,0 +1,233 @@
+<entityName>GTX INC /DE/</entityName>
+        <issuerAddress>
+            <street1>175 TOYOTA PLAZA</street1>
+            <street2>7TH FLOOR</street2>
+            <city>MEMPHIS</city>
+            <stateOrCountry>TN</stateOrCountry>
+            <stateOrCountryDescription>TENNESSEE</stateOrCountryDescription>
+            <zipCode>38103</zipCode>
+        </issuerAddress>
+        <issuerPhoneNumber>901-523-9700</issuerPhoneNumber>
+        <jurisdictionOfInc>DELAWARE</jurisdictionOfInc>
+        <issuerPreviousNameList>
+            <value>None</value>
+        </issuerPreviousNameList>
+        <edgarPreviousNameList>
+            <value>None</value>
+        </edgarPreviousNameList>
+        <entityType>Corporation</entityType>
+        <yearOfInc>
+            <overFiveYears>true</overFiveYears>
+        </yearOfInc>
+    </primaryIssuer>
+    <relatedPersonsList>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Mitchell</firstName>
+                <middleName>S.</middleName>
+                <lastName>Steiner</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>c/o GTx, Inc.,</street1>
+                <street2>175 Toyota Plaza, 7th Floor</street2>
+                <city>Memphis</city>
+                <stateOrCountry>TN</stateOrCountry>
+                <stateOrCountryDescription>TENNESSEE</stateOrCountryDescription>
+                <zipCode>38103</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Marc</firstName>
+                <middleName>S.</middleName>
+                <lastName>Hanover</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>c/o GTx, Inc.,</street1>
+                <street2>175 Toyota Plaza, 7th Floor</street2>
+                <city>Memphis</city>
+                <stateOrCountry>TN</stateOrCountry>
+                <stateOrCountryDescription>TENNESSEE</stateOrCountryDescription>
+                <zipCode>38103</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>James</firstName>
+                <middleName>T.</middleName>
+                <lastName>Dalton</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>c/o GTx, Inc.,</street1>
+                <street2>175 Toyota Plaza, 7th Floor</street2>
+                <city>Memphis</city>
+                <stateOrCountry>TN</stateOrCountry>
+                <stateOrCountryDescription>TENNESSEE</stateOrCountryDescription>
+                <zipCode>38103</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Henry</firstName>
+                <middleName>P.</middleName>
+                <lastName>Doggrell</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>c/o GTx, Inc.,</street1>
+                <street2>175 Toyota Plaza, 7th Floor</street2>
+                <city>Memphis</city>
+                <stateOrCountry>TN</stateOrCountry>
+                <stateOrCountryDescription>TENNESSEE</stateOrCountryDescription>
+                <zipCode>38103</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>J.</firstName>
+                <middleName>R.</middleName>
+                <lastName>Hyde, III</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>c/o GTx, Inc.,</street1>
+                <street2>175 Toyota Plaza, 7th Floor</street2>
+                <city>Memphis</city>
+                <stateOrCountry>TN</stateOrCountry>
+                <stateOrCountryDescription>TENNESSEE</stateOrCountryDescription>
+                <zipCode>38103</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Kenneth</firstName>
+                <middleName>S.</middleName>
+                <lastName>Robinson</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>c/o GTx, Inc.,</street1>
+                <street2>175 Toyota Plaza, 7th Floor</street2>
+                <city>Memphis</city>
+                <stateOrCountry>TN</stateOrCountry>
+                <stateOrCountryDescription>TENNESSEE</stateOrCountryDescription>
+                <zipCode>38103</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>J.</firstName>
+                <middleName>Kenneth</middleName>
+                <lastName>Glass</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>c/o GTx, Inc.,</street1>
+                <street2>175 Toyota Plaza, 7th Floor</street2>
+                <city>Memphis</city>
+                <stateOrCountry>TN</stateOrCountry>
+                <stateOrCountryDescription>TENNESSEE</stateOrCountryDescription>
+                <zipCode>38103</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Michael</firstName>
+                <middleName>G.</middleName>
+                <lastName>Carter</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>c/o GTx, Inc.,</street1>
+                <street2>175 Toyota Plaza, 7th Floor</street2>
+                <city>Memphis</city>
+                <stateOrCountry>TN</stateOrCountry>
+                <stateOrCountryDescription>TENNESSEE</stateOrCountryDescription>
+                <zipCode>38103</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Barrington</firstName>
+                <middleName>J.A.</middleName>
+                <lastName>Furr</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>c/o GTx, Inc.,</street1>
+                <street2>175 Toyota Plaza, 7th Floor</street2>
+                <city>Memphis</city>
+                <stateOrCountry>TN</stateOrCountry>
+                <stateOrCountryDescription>TENNESSEE</stateOrCountryDescription>
+                <zipCode>38103</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+    </relatedPersonsList>
+    <offeringData>
+        <industryGroup>
+            <industryGroupType>Biotechnology</industryGroupType>
+        </industryGroup>
+        <issuerSize>
+            <revenueRange>Decline to Disclose</revenueRange>
+        </issuerSize>
+        <federalExemptionsExclusions>
+            <item>06b</item>
+        </federalExemptionsExclusions>
+        <typeOfFiling>
+            <newOrAmendment>
+                <isAmendment>true</isAmendment>
+                <previousAccessionNumber>0001570934-14-000002</previousAccessionNumber>
+            </newOrAmendment>
+            <dateOfFirstSale>
+                <value>2014-03-06</value>
+            </dateOfFirstSale>
+        </typeOfFiling>
+        <durationOfOffering>
+            <moreThanOneYear>false</moreThanOneYear>
+        </durationOfOffering>
+        <typesOfSecuritiesOffered>
+            <isEquityType>true</isEquityType>
+            <isOptionToAcquireType>true</isOptionToAcquireType>
+            <isSecurityToBeAcquiredType>true</isSecurityToBeAcquiredType>
+        </typesOfSecuritiesOffered>
+        <businessCombinationTransaction>
+            <isBusinessCombinationTransaction>false</isBusinessCombinationTransaction>
+            <clarificationOfResponse></clarificationOfResponse>
+        </businessCombinationTransaction>
+        <minimumInvestmentAccepted>0</minimumInvestmentAccepted>
+        <salesCompensationList></salesCompensationList>
+        <offeringSalesAmounts>
+            <totalOfferingAmount>21272455</totalOfferingAmount>
+            <totalAmountSold>21272455</totalAmountSold>
+            <totalRemaining>0</totalRemaining>

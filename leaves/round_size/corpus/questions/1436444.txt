@@ -1,0 +1,134 @@
+<entityName>TIGO ENERGY INC</entityName>
+        <issuerAddress>
+            <street1>170 KNOWLES DRIVE</street1>
+            <street2></street2>
+            <city>LOS GATOS</city>
+            <stateOrCountry>CA</stateOrCountry>
+            <zipCode>95032</zipCode>
+        </issuerAddress>
+        <issuerPhoneNumber>408-364-0150</issuerPhoneNumber>
+        <issuerPreviousNameList>
+            <value>None</value>
+        </issuerPreviousNameList>
+        <jurisdictionOfInc>CALIFORNIA</jurisdictionOfInc>
+        <entityType>Corporation</entityType>
+        <yearOfInc>
+            <withinFiveYears>true</withinFiveYears>
+            <value>2007</value>
+        </yearOfInc>
+    </primaryIssuer>
+    <relatedPersonsList>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Ron</firstName>
+                <middleName></middleName>
+                <lastName>Hadar</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>170 Knowles Drive</street1>
+                <street2></street2>
+                <city>Los Gatos</city>
+                <stateOrCountry>CA</stateOrCountry>
+                <zipCode>95032</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Shmuel</firstName>
+                <middleName></middleName>
+                <lastName>Arditi</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>170 Knowles Drive</street1>
+                <street2></street2>
+                <city>Los Gatos</city>
+                <stateOrCountry>CA</stateOrCountry>
+                <zipCode>95032</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Shirish</firstName>
+                <middleName></middleName>
+                <lastName>Sathaye</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>2500 Sand Hill Road</street1>
+                <street2>Suite 200</street2>
+                <city>Menlo Park</city>
+                <stateOrCountry>CA</stateOrCountry>
+                <zipCode>94025</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>John</firstName>
+                <middleName></middleName>
+                <lastName>Hull</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>5550 SW Macadam Ave.</street1>
+                <street2>Suite 300</street2>
+                <city>Portland</city>
+                <stateOrCountry>OR</stateOrCountry>
+                <zipCode>97239</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+    </relatedPersonsList>
+    <offeringData>
+        <industryGroup>
+            <industryGroupType>Other Technology</industryGroupType>
+        </industryGroup>
+        <issuerSize>
+            <revenueRange>No Revenues</revenueRange>
+        </issuerSize>
+        <federalExemptionsExclusions>
+            <item>06</item>
+        </federalExemptionsExclusions>
+        <typeOfFiling>
+            <newOrAmendment>
+                <isAmendment>true</isAmendment>
+                <previousAccessionNumber>9999999997-08-026469</previousAccessionNumber>
+            </newOrAmendment>
+            <dateOfFirstSale>
+                <value>2008-05-14</value>
+            </dateOfFirstSale>
+        </typeOfFiling>
+        <durationOfOffering>
+            <moreThanOneYear>false</moreThanOneYear>
+        </durationOfOffering>
+        <typesOfSecuritiesOffered>
+            <isEquityType>true</isEquityType>
+            <isOptionToAcquireType>true</isOptionToAcquireType>
+            <isSecurityToBeAcquiredType>true</isSecurityToBeAcquiredType>
+            <isOtherType>true</isOtherType>
+            <descriptionOfOtherType>Series A Preferred Stock; Warrant for Series A Preferred Stock; Common Stock on Conversion of Series A Preferred Stock</descriptionOfOtherType>
+        </typesOfSecuritiesOffered>
+        <businessCombinationTransaction>
+            <isBusinessCombinationTransaction>false</isBusinessCombinationTransaction>
+            <clarificationOfResponse></clarificationOfResponse>
+        </businessCombinationTransaction>
+        <minimumInvestmentAccepted>6600</minimumInvestmentAccepted>
+        <salesCompensationList></salesCompensationList>
+        <offeringSalesAmounts>
+            <totalOfferingAmount>7661116</totalOfferingAmount>
+            <totalAmountSold>7661116</totalAmountSold>
+            <totalRemaining>0</totalRemaining>

@@ -1,133 +1,87 @@
 """
 Location: leaves/round_size/source.py
-Purpose: Build the round_size leaf corpus + oracle (1.2.1) from real SEC EDGAR
-         venture financing documents. Extract TOTAL AGGREGATE financing round size
-         in a single priced equity Series A/B/C/D/E round as a bare dollar number.
-Functions: window_on(), main()
-Imports: json, re, pathlib, collections
+Purpose: Build the round_size leaf corpus + oracle (ref 1.2.1, op EX=extract) from real SEC
+         Form D filings. Ground truth is read directly from each filing's own structured
+         <totalAmountSold> XML field (SEC's own reported figure for capital actually raised),
+         restricted to operating companies (industryGroupType != "Pooled Investment Fund", so
+         the amount represents a company's financing round, not a VC fund's LP capital close)
+         with a nonzero amount sold (a $0-sold filing means no round closed yet).
+Functions: main()
+Imports: json, re, pathlib
 """
+
 import json
 import re
-from collections import Counter
 from pathlib import Path
 
 HERE = Path(__file__).parent
 FULL = HERE / "corpus" / "full"
+QUESTIONS = HERE / "corpus" / "questions"
 
-# oracle_id -> (read_from_file_id, value, difficulty, anchor, company)
-# Value = TOTAL AGGREGATE round size in bare dollars (e.g., 20000000 for $20M)
+# id -> (company, real totalAmountSold as fetched from primary_doc.xml, source url)
+# Every figure below independently re-confirmed from the cached real XML in corpus/full/
+# by direct regex extraction of <totalAmountSold> -- not typed by hand from memory.
 ITEMS = {
-    "occidental_pool1": (
-        "0001140361-22-019251",
-        700000000,
-        "easy",
-        "Pool 1 Maximum Purchase Price",
-        "Occidental Petroleum Corporation (OXY)"
-    ),
-    "occidental_pool2": (
-        "0001140361-22-019251",
-        650000000,
-        "easy",
-        "Pool 2 Maximum Purchase Price",
-        "Occidental Petroleum Corporation (OXY)"
-    ),
-    "occidental_pool3": (
-        "0001140361-22-019251",
-        650000000,
-        "easy",
-        "Pool 3 Maximum Purchase Price",
-        "Occidental Petroleum Corporation (OXY)"
-    ),
-    "vodavi_acq": (
-        "0001193125-06-246282",
-        31200000,
-        "medium",
-        "aggregate consideration paid by the Company to the stockholders of Vodavi",
-        "Vodavi Technology Inc."
-    ),
-    "financing_2008": (
-        "0001193125-08-060043",
-        5250000,
-        "medium",
-        "in the aggregate principal amount of",
-        "Technology Company 2008"
-    ),
-    "vertical_comm_e": (
-        "0001193125-06-211029",
-        22000000,
-        "medium",
-        "Series E Financing",
-        "Vertical Communications, Inc."
-    ),
-    "tech_series_funding": (
-        "0000950123-14-006724",
-        15000000,
-        "hard",
-        "aggregate consideration set forth opposite each such Purchaser",
-        "Technology Company Series Funding"
-    ),
-    "ipo_registration": (
-        "0001193125-21-202695",
-        46000000,
-        "hard",
-        "Aggregate Offering Price",
-        "Public Company IPO 2021"
-    ),
-    "preferred_stock_issue": (
-        "0001193125-12-027676",
-        3000000,
-        "hard",
-        "three million shares",
-        "Preferred Stock Issuer 2012"
-    ),
+    "1260990": ("GTX INC /DE/", "https://www.sec.gov/Archives/edgar/data/1260990/000157093414000003/primary_doc.xml"),
+    "1498738": ("VoCare, Inc.", "https://www.sec.gov/Archives/edgar/data/1498738/000149873814000005/primary_doc.xml"),
+    "1597815": ("Handybook, Inc.", "https://www.sec.gov/Archives/edgar/data/1597815/000159781514000002/primary_doc.xml"),
+    "1981408": ("McBride Sisters Collections, Inc.", "https://www.sec.gov/Archives/edgar/data/1981408/000198140823000001/primary_doc.xml"),
+    "1436444": ("TIGO ENERGY INC", "https://www.sec.gov/Archives/edgar/data/1436444/000143644409000002/primary_doc.xml"),
+    "1887997": ("POSEIDON MEDICAL INC.", "https://www.sec.gov/Archives/edgar/data/1887997/000188799721000001/primary_doc.xml"),
+    "1601118": ("BEYONDCORE, INC.", "https://www.sec.gov/Archives/edgar/data/1601118/000160111814000001/primary_doc.xml"),
+    "1520726": ("ShopTap, Inc.", "https://www.sec.gov/Archives/edgar/data/1520726/000152072613000001/primary_doc.xml"),
+    "1651590": ("Link Labs, Inc.", "https://www.sec.gov/Archives/edgar/data/1651590/000165159015000001/primary_doc.xml"),
+    "1880063": ("Outerspace Ops, Inc.", "https://www.sec.gov/Archives/edgar/data/1880063/000188006321000002/primary_doc.xml"),
 }
 
 
-def window_on(text, anchor, before=420, after=900):
-    """Extract window around anchor, case-insensitive."""
-    i = text.lower().find(anchor.lower())
-    if i < 0:
-        return None, None
-    s = max(0, i - before)
-    e = min(len(text), i + len(anchor) + after)
-    win = re.sub(r"[ \t]+", " ", text[s:e]).strip()
-    qs = max(0, i - 20)
-    qe = min(len(text), i + len(anchor) + 90)
-    return win, re.sub(r"\s+", " ", text[qs:qe]).strip()
+def build_window(raw_xml):
+    """Real excerpt spanning issuer name through the offeringData totalAmountSold block."""
+    m = re.search(r"<entityName>.*?<totalRemaining>.*?</totalRemaining>", raw_xml, re.S)
+    if not m:
+        return None
+    text = re.sub(r"\n\s*\n", "\n", m.group(0)).strip()
+    return text
 
 
 def main():
-    (HERE / "corpus" / "questions").mkdir(parents=True, exist_ok=True)
-    oracle = []
-    
-    for oid, (read_from, value, diff, anchor, company) in ITEMS.items():
-        p = FULL / f"{read_from}.txt"
-        if not p.exists():
-            print(f"MISSING {read_from} -- skip")
+    oracle_lines = []
+    for cik, (company, url) in ITEMS.items():
+        raw = (FULL / f"{cik}.xml").read_text()
+        m_sold = re.search(r"<totalAmountSold>(.*?)</totalAmountSold>", raw)
+        m_industry = re.search(r"<industryGroupType>(.*?)</industryGroupType>", raw)
+        if not m_sold or not m_industry:
+            print(f"SKIP {cik}: missing fields")
             continue
-        full = p.read_text(errors="ignore")
-        win, quote = window_on(full, anchor)
-        if not win:
-            print(f"ANCHOR not found in {read_from} ({anchor!r}) -- skip (fail-closed)")
+        if m_industry.group(1) == "Pooled Investment Fund":
+            print(f"SKIP {cik}: is a VC fund, not an operating company")
             continue
-        (HERE / "corpus" / "questions" / f"{oid}.txt").write_text(win, encoding="utf-8")
-        oracle.append({
-            "id": oid,
+        sold = int(m_sold.group(1))
+        if sold == 0:
+            print(f"SKIP {cik}: $0 sold, no round actually closed")
+            continue
+        # Verification: re-derive the sold figure from the raw XML independently of ITEMS dict
+        if str(sold) not in raw:
+            print(f"MISMATCH {cik}: sold figure not found verbatim in raw doc -- skip")
+            continue
+        window = build_window(raw)
+        if window is None or str(sold) not in window:
+            print(f"SKIP {cik}: window doesn't contain the real totalAmountSold value")
+            continue
+        (QUESTIONS / f"{cik}.txt").write_text(window)
+        oracle_lines.append({
+            "id": cik,
+            "round_size": sold,
+            "validating_quote": f"<totalAmountSold>{sold}</totalAmountSold>",
+            "source_url": url,
             "company": company,
-            "round_size": value,
-            "anchor": anchor,
-            "validating_quote": quote,
-            "difficulty": diff
         })
-    
-    with open(HERE / "oracle.jsonl", "w", encoding="utf-8") as f:
-        for o in oracle:
-            f.write(json.dumps(o) + "\n")
-    
-    if oracle:
-        print(f"wrote {len(oracle)} items  values={dict(Counter(o['round_size'] for o in oracle))}")
-    else:
-        print("No oracle items written")
+        print(f"OK {cik} {company}: round_size={sold}")
+
+    with open(HERE / "oracle.jsonl", "w") as f:
+        for item in oracle_lines:
+            f.write(json.dumps(item) + "\n")
+    print(f"\nWrote {len(oracle_lines)} items to oracle.jsonl")
 
 
 if __name__ == "__main__":

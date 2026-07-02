@@ -1,0 +1,120 @@
+<entityName>Link Labs, Inc.</entityName>
+        <issuerAddress>
+            <street1>130 HOLIDAY COURT</street1>
+            <street2>SUITE 100</street2>
+            <city>ANNAPOLIS</city>
+            <stateOrCountry>MD</stateOrCountry>
+            <stateOrCountryDescription>MARYLAND</stateOrCountryDescription>
+            <zipCode>21401</zipCode>
+        </issuerAddress>
+        <issuerPhoneNumber>202-524-1390</issuerPhoneNumber>
+        <jurisdictionOfInc>DELAWARE</jurisdictionOfInc>
+        <issuerPreviousNameList>
+            <value>None</value>
+        </issuerPreviousNameList>
+        <edgarPreviousNameList>
+            <value>None</value>
+        </edgarPreviousNameList>
+        <entityType>Corporation</entityType>
+        <yearOfInc>
+            <withinFiveYears>true</withinFiveYears>
+            <value>2015</value>
+        </yearOfInc>
+    </primaryIssuer>
+    <relatedPersonsList>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Brian</firstName>
+                <middleName>E.</middleName>
+                <lastName>Ray</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>130 Holiday Court</street1>
+                <street2>Suite 100</street2>
+                <city>Annapolis</city>
+                <stateOrCountry>MD</stateOrCountry>
+                <stateOrCountryDescription>MARYLAND</stateOrCountryDescription>
+                <zipCode>21401</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Executive Officer</relationship>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Robert</firstName>
+                <middleName>B.</middleName>
+                <lastName>Proctor</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>130 Holiday Court</street1>
+                <street2>Suite 100</street2>
+                <city>Annapolis</city>
+                <stateOrCountry>MD</stateOrCountry>
+                <stateOrCountryDescription>MARYLAND</stateOrCountryDescription>
+                <zipCode>21401</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+        <relatedPersonInfo>
+            <relatedPersonName>
+                <firstName>Christopher</firstName>
+                <middleName>G.</middleName>
+                <lastName>College</lastName>
+            </relatedPersonName>
+            <relatedPersonAddress>
+                <street1>130 Holiday Court</street1>
+                <street2>Suite 100</street2>
+                <city>Annapolis</city>
+                <stateOrCountry>MD</stateOrCountry>
+                <stateOrCountryDescription>MARYLAND</stateOrCountryDescription>
+                <zipCode>21401</zipCode>
+            </relatedPersonAddress>
+            <relatedPersonRelationshipList>
+                <relationship>Director</relationship>
+            </relatedPersonRelationshipList>
+            <relationshipClarification></relationshipClarification>
+        </relatedPersonInfo>
+    </relatedPersonsList>
+    <offeringData>
+        <industryGroup>
+            <industryGroupType>Other Technology</industryGroupType>
+        </industryGroup>
+        <issuerSize>
+            <revenueRange>Decline to Disclose</revenueRange>
+        </issuerSize>
+        <federalExemptionsExclusions>
+            <item>06b</item>
+        </federalExemptionsExclusions>
+        <typeOfFiling>
+            <newOrAmendment>
+                <isAmendment>false</isAmendment>
+            </newOrAmendment>
+            <dateOfFirstSale>
+                <value>2015-08-20</value>
+            </dateOfFirstSale>
+        </typeOfFiling>
+        <durationOfOffering>
+            <moreThanOneYear>false</moreThanOneYear>
+        </durationOfOffering>
+        <typesOfSecuritiesOffered>
+            <isEquityType>true</isEquityType>
+            <isSecurityToBeAcquiredType>true</isSecurityToBeAcquiredType>
+            <isOtherType>true</isOtherType>
+            <descriptionOfOtherType>The equity being offered is in the form of Series A Preferred Stock.  A portion of this equity has been issued upon the conversion of convertible notes.</descriptionOfOtherType>
+        </typesOfSecuritiesOffered>
+        <businessCombinationTransaction>
+            <isBusinessCombinationTransaction>false</isBusinessCombinationTransaction>
+            <clarificationOfResponse></clarificationOfResponse>
+        </businessCombinationTransaction>
+        <minimumInvestmentAccepted>0</minimumInvestmentAccepted>
+        <salesCompensationList></salesCompensationList>
+        <offeringSalesAmounts>
+            <totalOfferingAmount>7263112</totalOfferingAmount>
+            <totalAmountSold>5787732</totalAmountSold>
+            <totalRemaining>1475380</totalRemaining>
