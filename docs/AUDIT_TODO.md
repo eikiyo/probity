@@ -749,4 +749,13 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   the full literal sentence — real small-model long-span-copying weakness, not a bug.
   deepseek-v4f 100% (genuinely verbatim-copies correctly).
 
-## Next leaf: 7.5 financial_statement_qa
+### [x] 7.5 financial_statement_qa
+- **Verified clean.** N=5, correct `"type": "number"` (no repeat of 7.2's bug). Uses the
+  already-validated "TARGET PERIOD specified at the top" disambiguation pattern (same family as
+  4.3/6.5). deepseek-v4f 100%. gemma3-1b 20% — its wrong answers are all plausible OTHER real
+  numbers from the same dense multi-period Selected Financial Data table (a genuinely hard
+  table-reading task for a 1B model), not obviously wrong/hallucinated figures.
+
+**Family 7 (regulatory/disclosure, 7.1-7.5) now fully audited.**
+
+## Next leaf: 8.1 flag_offmarket_liqpref
