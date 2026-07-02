@@ -358,4 +358,26 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
 **Family 2.1 (SAFEs, 2.1.1-2.1.6) now fully audited.**
 
-## Next leaf: 2.2.1 note_principal
+### [x] 2.2.1 note_principal
+- **Verified clean, both models 100%/0% wobble.** N=7. Noted a source-concentration pattern:
+  5 of 7 items (`minerco_ciarello/schmidt/msf/rios/pacific_isle`) all come from the SAME
+  accession number (`0001213900170072`) — one Minerco Inc. filing disclosing 5 DIFFERENT
+  promissory notes to 5 different noteholders/dates. Confirmed these are genuinely independent
+  facts (different principal amounts $12,500/$12,500/$350,000/$100,000/$250,000, different
+  dates Feb–Aug 2016), not a duplicate-filing bug — the two $12,500 notes (Ciarello, Schmidt)
+  are a real coincidence, 2 weeks apart. Not fixed since it's not wrong data, just flagging
+  that 71% of this leaf's N=7 traces to one company/filing — low source diversity, worth
+  broadening in a future re-sourcing pass even though it isn't causing measurable score harm
+  today (both models already 100%).
+
+### [x] 2.2.2 note_interest_rate
+- **Verified clean.** N=6, deepseek-v4f 100%/0%, gemma3-1b 83.3%/0%. Checked the one
+  outlier-looking value (Acology, 0.28% — unusually low for a note) against full corpus text:
+  confirmed genuine, explicitly explained in the document itself ("twenty-eight hundredths of
+  one percent (0.28%) per annum [to be the Applicable Federal Rate for 1-year loans]") — some
+  notes are deliberately pegged to the minimal IRS Applicable Federal Rate, not an error.
+  `greenfieldrobotics_8p00`'s id/filename doesn't match its `company` field ("Golden Matrix
+  Group, Inc.") — same recurring cosmetic filename-vs-company-field pattern as 1.1.3/2.1.3, the
+  tested 8% figure itself is textually solid regardless.
+
+## Next leaf: 2.2.3 note_maturity_date
