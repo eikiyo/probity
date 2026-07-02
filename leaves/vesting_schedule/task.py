@@ -26,8 +26,10 @@ _TAXONOMY = (
     "use 'Nyr/Xyr-cliff'. When it states 'N-year vesting with no cliff', use 'Nyr/no-cliff'.\n"
 )
 _INSTRUCTION = (
-    'Respond with ONLY this JSON object, nothing else:\n'
-    '{"vesting_schedule": "4yr/1yr-cliff" | "3yr/no-cliff" | ...}\n'
+    'Respond with ONLY a JSON object of the exact form {"vesting_schedule": "<your answer>"}, '
+    'substituting <your answer> with ONE normalized value from the formats above (e.g. '
+    '{"vesting_schedule": "4yr/1yr-cliff"}). Do not include multiple alternatives, punctuation '
+    'marks, or any text besides the JSON object.\n'
 )
 
 

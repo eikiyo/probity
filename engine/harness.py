@@ -7,6 +7,7 @@ Imports: json, pathlib, normalize
 """
 
 import json
+import re
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -236,8 +237,19 @@ def _execute_run(client, task, instance, inst_idx, run_idx, temperature) -> Dict
     try:
         raw = client.generate(task["build_prompt"](instance), temperature)
     except Exception as e:
+        # Observable, not silent (Sec 0.7) -- this used to be caught here and written ONLY to
+        # the checkpoint file's "error" field, never printed. A 2026-07-03 incident: mistral-large
+        # hit 40% 429 rate-limit failures across all 9400 calls of a full sweep, and the run
+        # reported "0 errored" per-leaf / no 429 ever appeared in the console log -- the ONLY
+        # trace was inside 60 separate checkpoint files nobody was grepping live. Print here so a
+        # sustained failure (rate-limit, outage, bad concurrency setting) is visible AS IT
+        # HAPPENS, not discovered later by someone manually auditing checkpoints after the fact.
+        print(f"    [{task.get('name','?')}] call failed (inst={inst_idx} run={run_idx}): {e}",
+              flush=True)
         return {**base, "error": str(e), "parsed": None}
     parsed = _parse_json_response(raw)
+    if parsed is None:
+        parsed = _lenient_extract(raw, task["fields"])
     if parsed is None:
         return {**base, "raw_output": (raw or "")[:200], "parsed": None}
     normalized = {
@@ -280,6 +292,75 @@ def _try_load(candidate: str) -> Optional[Dict[str, Any]]:
     except json.JSONDecodeError:
         return None
     return obj if isinstance(obj, dict) else None
+
+
+def _lenient_extract(raw: Optional[str], fields: Dict[str, Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+    """
+    What: fallback answer extraction, tried only after _parse_json_response() fails outright.
+          Added 2026-07-03 per Eikiyo: "goal is not to judge JSON, to judge reasoning of the
+          financial docs" -- a model's format slip (an invalid \_ escape, a wrong-but-unique JSON
+          key, a bare value with no JSON wrapper at all) is not the same failure as getting the
+          financial reasoning wrong, and scoring both as one "parse failure" number conflates a
+          format confound with the actual thing this benchmark exists to measure. Every leaf has
+          exactly ONE scored field (verified across all 60, see task.py TASK["fields"]) -- that is
+          what makes "wrong key name" and "no JSON at all" safely recoverable: there is only one
+          field the model could have meant.
+    Two recovery paths, in order:
+      1. Repair the one invalid-escape pattern actually observed (an unnecessary backslash before
+         an underscore in a JSON key) and retry via _parse_json_response()'s own candidate
+         extraction (code fences, brace-scan) -- reused, not duplicated. If the resulting dict has
+         the expected field name, use it; if it has exactly one key of ANY name, use that (a
+         model naming the field "safe_cap_type" instead of "safe_pre_post" is a naming slip, not
+         an ambiguity -- there's nothing else that key could be). A dict with 2+ keys and no name
+         match is genuinely ambiguous (which key is the answer?) and is NOT guessed at.
+      2. A bare-value fallback for when the model emits no JSON structure at all (e.g. "6\n" for
+         a number question). Gated tight to avoid ever guessing which part of a longer answer is
+         the real one: no braces anywhere in the text (a broken JSON attempt must fail closed, not
+         fall through here), no internal newline, <=60 chars. Within that gate, the value must
+         still parse as the field's own type (a bare number must actually BE a number; a bare enum
+         word must exactly match one of the task's own allowed values) or it fails closed too.
+    Output: {field_name: raw_value_string} on success (fed through the SAME normalize.canonical()
+            step as a normal parse, so type coercion/fail-closed still applies downstream), or
+            None if nothing can be recovered without guessing.
+    """
+    if not raw:
+        return None
+    text = raw.strip()
+    if not text:
+        return None
+    field_name = next(iter(fields))
+
+    repaired = text.replace("\\_", "_")
+    obj = _parse_json_response(repaired)
+    if obj is not None:
+        if field_name in obj:
+            return {field_name: obj[field_name]}
+        if len(obj) == 1:
+            return {field_name: next(iter(obj.values()))}
+        return None
+
+    if "{" in text or "}" in text or "\n" in text or len(text) > 60:
+        return None
+
+    field_type = fields[field_name].get("type")
+    if field_type == "number":
+        try:
+            float(re.sub(r"[\$,\s]", "", text))
+        except ValueError:
+            return None
+        return {field_name: text}
+    if field_type == "bool":
+        if text.lower() in ("yes", "no", "true", "false", "y", "n", "1", "0"):
+            return {field_name: text}
+        return None
+    if field_type == "enum":
+        allowed = fields[field_name].get("values") or []
+        if text.lower() in {v.lower() for v in allowed}:
+            return {field_name: text}
+        return None
+    if field_type in ("string", "date"):
+        return {field_name: text}
+    return None
 
 
 def _checkpoint_run(checkpoint_file: Path, run_record: Dict[str, Any]) -> None:
