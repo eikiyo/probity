@@ -26,3 +26,15 @@ per-investor dollar amount cross-referenced to a public round announcement for t
 company/date.
 
 source.py/task.py/run.py never built for this leaf; oracle.jsonl never generated.
+
+---
+
+**Follow-up audit (2026-07-02):** Re-attempted sourcing per Eikiyo's "finish all 22 pending"
+directive. Tried real 8-K financing-announcement searches (Pressure Biosciences, OriginClear)
+for a NAMED investor's specific dollar allocation within a larger multi-investor round; both
+real candidates only disclosed the ROUND TOTAL across "certain accredited investors," never
+broken out per-name (Pressure Biosciences' tiered dividend rate is keyed to purchase-price
+BANDS, not a specific investor's actual amount). Confirms the original finding: individual
+investor allocations within a round are not routinely disclosed in company-side filings.
+Schedule 13D/13G (investor-side filings) were considered as an alternate real source but not
+yet fetched/verified this session -- a real, not-yet-exhausted lead for a future attempt.

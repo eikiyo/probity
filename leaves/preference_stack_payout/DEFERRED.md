@@ -16,3 +16,17 @@
 **Alternative:** Source from documents that include both charter terms and cap-table/exit data (S-4s are most likely to have this).
 
 source.py/task.py/run.py kept as scaffolding; oracle.jsonl NOT generated.
+
+---
+
+**Follow-up audit (2026-07-02):** Re-attempted sourcing per Eikiyo's "finish all 22 pending"
+directive. Tried a fresh document type not searched before: DEFM14A/merger-agreement exhibits
+(EDGAR FTS for "Series A Per Share Merger Consideration"). Found a real, on-point candidate --
+Ulthera, Inc.'s acquisition of Cabochon Aesthetics, Inc. (2014 Agreement and Plan of Merger,
+CIK 1345889) -- with real defined terms for Series A/B/C Per Share Merger Consideration.
+However, the agreement's actual formula routes all real dollar amounts through a referenced
+"Consideration Spreadsheet" exhibit, which is NOT itself part of the publicly filed document
+(private M&A allocation spreadsheets are customarily prepared and distributed to
+stockholders directly, not filed with the SEC). This confirms the original finding structurally:
+real M&A agreements disclose the waterfall MECHANISM but not concrete numbers inline; the
+worked numbers live in an unfilled/unfiled exhibit. Remains a genuine sourcing wall.
