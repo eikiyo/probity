@@ -5,7 +5,7 @@ breaking-points/stubs/hardcodes/half-done features, log findings here, fix what'
 immediately, flag judgment calls for explicit confirmation. Order = engine/registry.json ref
 order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
-**Counter: 24/60 done · 0 in-progress · 31 pending · 5 partial** — dated 2026-07-02. Families 1 (1.1.1-1.7) + 2.1 SAFEs (2.1.1-2.1.6) + 2.2 Notes (2.2.1-2.2.6) + 3.1 complete.
+**Counter: 36/60 done · 0 in-progress · 24 pending · 6 partial** — dated 2026-07-02. Families 1, 2.1, 2.2, 3 (all of 1.1.1-1.7, 2.1.1-2.1.6, 2.2.1-2.2.6, 3.1-3.6) complete.
 
 ## Legend
 - `[x]` audited + resolved (bugs fixed, or verified clean)
@@ -112,6 +112,21 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   in an equity financing round" (dropping the preferred-stock specificity) if testing common-
   stock private placements is intentionally in scope, OR (c) leave as-is. Oracle.jsonl NOT
   touched pending this decision.
+
+### [x] 1.2.2 per_investor_allocation
+- **Verified clean.** N=5 (small, noted not fixed). deepseek-v4f 100%/0%. gemma3-1b 80%/56%
+  wobble — its one miss (CAS Medical) extracted a SHARE COUNT (94,182) instead of the dollar
+  amount, a genuine shares-vs-dollars confusion, not an oracle bug. Verified all 4 non-QuantRx
+  items are primary purchases "from the Issuer" (Roka BioScience, CAS Medical, Navidea) or
+  equivalent. **Minor, documented not fixed:** the QuantRx item (Mark Capital, $46,715.64) is a
+  SECONDARY purchase of already-issued shares from Goldman Sachs, not a primary financing-round
+  investment from the company — a different economic transaction type than the other 4 items,
+  though task.py's own framing ("distinct from the round total") is loose enough that this
+  still technically fits; both models extracted it correctly regardless (secondary-vs-primary
+  didn't cause any measured harm). Also: the oracle's `validating_quote` field truncates before
+  reaching the actual dollar figure for this item, but confirmed the full corpus window
+  (`corpus/questions/quantrx.txt`) does contain "$46,715.64" — a cosmetic quote-field gap, not
+  a missing-window bug like 2.2.4's.
 
 ### [x] 1.2.1 round_size
 - **CRITICAL bug found + FIXED:** identical failure family to 1.2.1's sibling leaves — both
@@ -484,4 +499,32 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   coherent (price-per-share figures match the stated share-count/dollar-amount pairs in each
   worked example).
 
-## Next leaf: 3.4 fully_diluted_basis
+### [x] 3.4 fully_diluted_basis
+- **Verified clean.** N=8, perfect 4/4 class balance, genuinely diverse sourcing (Actelis,
+  Sybari, Emageon, IGN Entertainment, HyreCar, Castle Biosciences). Good adversarial design:
+  Actelis and IGN Entertainment each contribute TWO items (`_ex` vs `_body`) with DIFFERENT
+  labels — one clause from an exhibit defining fully-diluted basis, one from the same company's
+  main filing body just stating a plain issued/outstanding share count — testing whether the
+  model can distinguish capitalization convention even within one company's own paperwork,
+  correctly NOT a duplicate. deepseek-v4f 100%/0%. gemma3-1b 50% acc/100% wobble — verified
+  this is a clean class-collapse (got all 4 "fully-diluted" items right, all 4
+  "issued-outstanding" items wrong), a real model bias, not chance or a data bug.
+
+### [x] 3.6 multi_round_stacked_dilution
+- **Verified clean.** N=5, deepseek-v4f 100%/0%, gemma3-1b 0%/80% wobble (genuinely hard
+  2-input arithmetic with a distractor number in every window). Leaf already carries its own
+  honest "REDEFINITION NOTE" in task.py documenting a prior, deliberate re-scoping (the
+  original Series A/B/C stacked-ownership-cascade spec was unsourceable from real filings, so
+  it was redefined to the equivalent real construct — IPO Dilution-section math) — a
+  transparent design decision, not a bug. Checked the most likely failure mode for a COMPUTE-
+  type leaf — the final answer being leaked as literal text in the window — by direct
+  inspection of `corpus/questions/civitas.txt`: the window shows only the 4 raw input rows
+  (offering price $21.50, historical NTBV -$24.99, increase/share $13.60, pro forma NTBV
+  -$11.39), never the "Dilution per share = $32.89" summary line itself. Verified the math
+  independently: 21.50 − (−11.39) = 32.89 ✓, matches the oracle exactly. gemma3-1b's civitas
+  miss (answered 13.6) is exactly the "increase per share" distractor row, not a data bug — a
+  genuine wrong-row-grabbed reasoning failure.
+
+**Family 3 (cap tables, 3.1-3.6) now fully audited.**
+
+## Next leaf: 4.3 preference_stack_payout
