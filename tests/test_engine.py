@@ -151,5 +151,50 @@ class TestDeepSeekRetry(unittest.TestCase):
         m.assert_not_called()
 
 
+class TestCheckpointFreshness(unittest.TestCase):
+    """
+    Purpose: cover harness._validate_checkpoint_freshness(), added after the 2026-07-02
+    adversarial audit found 3 leaves silently scoring fresh answers against the WRONG items
+    because a stale checkpoint (from before oracle.jsonl was edited) was trusted purely by
+    positional instance_idx. These are pure unit tests -- no network, no real files -- covering
+    the two fail-closed conditions and the one legitimate resume case.
+    """
+
+    def setUp(self):
+        # 2 "current" instances, ids A and B, at positions 0 and 1 respectively.
+        self.instances = [({"id": "A", "document": "doc a"}, {}),
+                           ({"id": "B", "document": "doc b"}, {})]
+
+    def test_position_out_of_range_raises(self):
+        # A checkpoint record for instance_idx=2 makes no sense when there are only 2 instances
+        # (positions 0 and 1) -- this is the exact signature found in the real incident (oracle
+        # shrank after the checkpoint was written).
+        stale_runs = [{"instance_idx": 2, "run_idx": 0, "item_id": "C"}]
+        with self.assertRaises(harness.StaleCheckpointError):
+            harness._validate_checkpoint_freshness(stale_runs, self.instances, Path("fake.jsonl"))
+
+    def test_item_id_mismatch_at_same_position_raises(self):
+        # instance_idx=0 is in range, but the checkpoint says it was item "Z" -- the CURRENT
+        # instance at position 0 is "A". This is a reorder that keeps the same item COUNT (so
+        # the range check alone would miss it), caught only by the id check.
+        stale_runs = [{"instance_idx": 0, "run_idx": 0, "item_id": "Z"}]
+        with self.assertRaises(harness.StaleCheckpointError):
+            harness._validate_checkpoint_freshness(stale_runs, self.instances, Path("fake.jsonl"))
+
+    def test_matching_ids_and_in_range_positions_do_not_raise(self):
+        # The legitimate case: a real resume where nothing changed. Must NOT raise, or every
+        # leaf's normal checkpoint-resume flow would break.
+        fresh_runs = [{"instance_idx": 0, "run_idx": 0, "item_id": "A"},
+                      {"instance_idx": 1, "run_idx": 0, "item_id": "B"}]
+        harness._validate_checkpoint_freshness(fresh_runs, self.instances, Path("fake.jsonl"))  # no raise
+
+    def test_legacy_records_without_item_id_only_get_the_range_check(self):
+        # Old checkpoint records (written before this fix) have no "item_id" key at all -- they
+        # can still be range-checked (positional overflow), just not identity-checked. This must
+        # not crash on a missing key, and must not raise when the position is in range.
+        legacy_runs = [{"instance_idx": 0, "run_idx": 0}, {"instance_idx": 1, "run_idx": 0}]
+        harness._validate_checkpoint_freshness(legacy_runs, self.instances, Path("fake.jsonl"))  # no raise
+
+
 if __name__ == "__main__":
     unittest.main()

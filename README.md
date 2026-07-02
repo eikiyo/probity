@@ -21,7 +21,7 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*60 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
+*58 tests so far. Each model run 20×/item at temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once every leaf exists, which is why newer leaves show fewer rows for now.*
 
 **Test 1.3.2 — Preferred-stock liquidation participation** — 18 clauses (5 part / 8 non-part / 5 capped), each model run 20×/item:
 
@@ -152,20 +152,6 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 |---|---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **86%** | 84% | 71% | 397/420 (95%) | 9/15 | 6/6 |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 420/420 (100%) | 15/15 | 5/6 |
-
-**Test 8.2 — Risk flag: full-ratchet anti-dilution present vs absent** — 7 clauses (4 full-ratchet / 3 absent), each model run 28×/item:
-
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate | full-ratchet | absent |
-|---|---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 57% | 178/200 (89%) | 4/4 | 0/3 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 86% | 200/200 (100%) | 4/4 | 2/3 |
-
-**Test 1.1.1 — Post-money valuation extraction** — 4 clauses (values range 5000000-275000000), each model run 30×/item:
-
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **25%** | 96% | 25% | 92/120 (77%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 50% | 120/120 (100%) |
 
 **Test 1.5.1 — Anti-dilution mechanism: full-ratchet vs weighted-average vs none** — 5 clauses (2 full-ratchet / 2 weighted-avg / 0 broad-based / 0 narrow-based / 1 none), each model run 20×/item:
 
@@ -332,7 +318,6 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate | 506(b) | 506(c) | 504 | Reg A | other |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **40%** | 87% | 90% | 166/200 (83%) | 6/6 | 3/4 | - | - | - |
 | `deepseek-v4-flash` | hosted | **30%** | 96% | 100% | 200/200 (100%) | 6/6 | 4/4 | - | - | - |
 
 **Test 7.2 — Form D field extraction (Total Amount Sold)** — 2 clauses (values range 2,366,532-70,227,931.85), each model run 20×/item:
