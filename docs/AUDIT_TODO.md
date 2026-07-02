@@ -84,4 +84,33 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   entries (keeping the more complete `_ex10-1` full-text versions) and rerun this leaf at 19
   items, or leave as-is?
 
-## Next leaf: 1.1.3 price_per_share
+### [~] 1.1.3 price_per_share — SEVERE FINDING, PENDING EIKIYO'S CONFIRMATION
+- This leaf has documented history (STATE.md batch 3: "9 of 11 items had a company name entirely
+  disconnected from the real filer... labeled as famous companies" — independently audited and
+  supposedly fixed before commit, dropped to 9 clean items). Current state DOES have correct
+  `company` field values, but the item IDs/filenames still carry the OLD misleading famous-name
+  artifacts as a residue (`energy_recovery`, `equifax_series_b`, `interdigital_offering`,
+  `washington_group` are filenames, not the real company) — cosmetic confusion, not a functional
+  bug (the `company` FIELD used at runtime is correct), but worth a rename for clarity.
+- **NEW, MORE SEVERE FINDING (not previously caught): 5 of 9 items (56%) are WRONG INSTRUMENT
+  TYPE.** task.py explicitly requires "the PRICE PER SHARE of the preferred stock in the
+  financing round." Verified via direct grep: `abwn_offering`, `auraind_warrant`,
+  `energy_recovery`, `equifax_series_b`, `interdigital_offering` contain **zero** mentions of
+  "preferred" anywhere in their model-facing windows — they are penny-stock COMMON STOCK private
+  placements and warrant exercises (Reg D Rule 506 offerings), not preferred-stock financing
+  rounds. `equifax_series_b`'s window alone contains 4+ DIFFERENT prices for different security
+  types ($0.10/unit, $0.05/share, $0.20/unit, $0.085/share) with no "preferred" stock in sight,
+  despite the id implying a "Series B" preferred round. Only 4/9 items (`gelesis_certificate`,
+  `landing_page_series`, `mobile_systems_s1`, `washington_group`) verified genuinely clean —
+  real Series A/B/F preferred stock rounds with an unambiguous stated price.
+  **This likely explains the leaf's mediocre accuracy (56-67%, both models)** — the model is
+  being asked a preferred-stock question about documents with no preferred stock in them, an
+  ill-posed task for those 5 items, not a genuine model reasoning failure.
+  **ACTION NEEDED FROM EIKIYO:** (a) drop the 5 wrong-instrument items and re-source real
+  preferred-stock rounds to replace them (leaf shrinks to 4 items immediately, needs new
+  sourcing to reach a reasonable N again), OR (b) reframe the task/taxonomy to "price per share
+  in an equity financing round" (dropping the preferred-stock specificity) if testing common-
+  stock private placements is intentionally in scope, OR (c) leave as-is. Oracle.jsonl NOT
+  touched pending this decision.
+
+## Next leaf: 1.2.1 round_size
