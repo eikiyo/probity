@@ -670,7 +670,8 @@
       "type": "string",
       "op": "EX",
       "stakes": 2,
-      "tier": "v3"
+      "tier": "built",
+      "leaf": "leaves/s1_use_of_proceeds"
     },
     {
       "ref": "7.4",
