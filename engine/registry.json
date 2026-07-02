@@ -499,7 +499,8 @@
       ],
       "op": "CO",
       "stakes": 4,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/convert_vs_preference_decision"
     },
     {
       "ref": "4.5",
