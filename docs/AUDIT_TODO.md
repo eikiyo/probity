@@ -268,4 +268,37 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   genuine, clear-cut mandatory-redemption clause. This is a real model behavior pattern (1B
   local model systematically biased toward "no"/non-redeemable), not an oracle bug.
 
-## Next leaf: 2.1.1 safe_valuation_cap
+### [x] 2.1.1 safe_valuation_cap
+- **Verified clean, no rerun needed.** N=8, deepseek-v4f 100%/0%, gemma3-1b 87.5%/37.5% wobble
+  (plausible, no shared-confusion signature). Initially looked suspicious like the round_size
+  bug: the corpus genuinely MIXES pre-money-cap SAFEs (4/8) and post-money-cap SAFEs (4/8) —
+  but confirmed this is NOT a within-document ambiguity (each SAFE states exactly one "___-Money
+  Valuation Cap is $X" figure, so there's never a second candidate number in the same document
+  to confuse the model with), and task.py's docstring never falsely claims uniformity. Reads as
+  a deliberate design choice (real-world extraction robustness across both YC SAFE template
+  variants) rather than a bug. Worth flagging for any DOWNSTREAM consumer though: the 8 raw cap
+  values are NOT directly comparable to each other (a $100M post-money cap and a $100M pre-money
+  cap represent different actual valuations) — that distinction is leaf 2.1.4's job
+  (`safe_pre_vs_post_money`), not this leaf's, so no action needed here.
+- Also verified the unusually-high "80% Discount Rate" figures (Maison Luxe, TaoWeave) are real,
+  correct YC SAFE template language — some templates define "Discount Rate" as the price-you-pay
+  percentage (80% = 20% discount), confirmed via the document's own parenthetical ("representing
+  a 20% discount"). Not the field under test in this leaf, but worth noting so a future reader
+  doesn't mistake it for a data error.
+
+### [x] 2.1.2 safe_discount_rate
+- **Verified clean.** N=9, deepseek-v4f 100%/0%. gemma3-1b 56% acc — a genuine computation task
+  (must derive `100 - stated%` when the template phrases "Discount Rate" as the price-paid %,
+  vs. take the number as-is when phrased as "100 minus X%" or a plain "fifty percent"), harder
+  for a 1B model by design, not a bug.
+- **Minor, documented not fixed:** the `sos_50` item (SOS Hydration) contains a genuine
+  MULTI-VALUE clause: "Discount Rate is 100 minus 50%, provided that, if prior to July 1, 2021
+  the Company raises at least $1,000,000... Discount Rate shall be 100 minus 25%" — i.e. TWO
+  different discount rates (50% base / 75% early-financing-incentive) depending on an unresolved
+  timing condition the excerpt itself doesn't confirm was met. Oracle uses the base rate (50),
+  which matches task.py's OWN worked example verbatim ("If it states 'Discount Rate is 100
+  minus 50%', respond with 50") — this is a deliberate, documented convention (default-to-base-
+  rate), not an overlooked ambiguity, and empirically doesn't correlate with the one model miss
+  on this item (gemma3-1b guessed 20, which isn't even the alternate 75% reading).
+
+## Next leaf: 2.1.3 safe_cap_vs_discount_applies
