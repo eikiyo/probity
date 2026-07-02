@@ -649,4 +649,34 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   genuine, hard, correctly-designed adversarial item, and its correct labeling here directly
   helped confirm the 6.1 `vesting_schedule` mislabel above.
 
-## Next leaf: 6.3 acceleration_trigger
+### [x] 6.3 acceleration_trigger
+- **Verified clean.** N=13, balanced 7 double / 6 single, diverse sourcing. deepseek-v4f 100%.
+  gemma3-1b 84.6%, both misses are single-trigger items mispredicted double-trigger — a mild,
+  plausible bias (double-trigger is the more common real-world convention), not a data issue.
+
+### [~] 6.4 option_strike_409a — SEVERE MULTI-VALUE AMBIGUITY, PENDING EIKIYO'S CONFIRMATION
+- **SEVERE, oracle NOT touched, real measured harm confirmed:** at least 4 of 7 items
+  (all the Medecision, Inc. ones, same source filing) have windows built by `source.py`'s
+  `window_on(anchor, before, after)` that capture a WHOLE BULLETED LIST of many different real
+  option grants at many different strike prices, with ZERO disambiguating marker for which
+  bullet is "the" target grant. E.g. `0001125282-06-006236_0p03`'s window shows SEVEN different
+  exercise prices in sequence ($0.25, $0.25, $0.03, $0.25, $0.60/$0.25/$1.00, $0.25, ...) with
+  no "TARGET GRANT" header (unlike leaf 4.3's `preference_stack_payout`, which explicitly
+  labels which series is being asked about). This is NOT hypothetical — it's the confirmed
+  cause of deepseek-v4f's unusually poor 42.9% (worse than gemma3-1b's 57.1%, an inversion from
+  every other leaf in this audit): on every Medecision miss, deepseek's 100%-consistent wrong
+  answer is a DIFFERENT REAL price from the SAME window (0.03→guessed 0.25; 1.25→guessed 11.0;
+  11.0→guessed 0.25; the 2.0 item's wrong 22.0 answer looks like a share-count/price digit
+  merge from the same crowded bullet list) — i.e. deepseek is reading correctly and picking a
+  plausible-but-wrong candidate from a genuinely ambiguous window, not hallucinating. Unlike
+  2.2.4's `exyn_technologies` fix (a wrong anchor missing the value entirely, a mechanical fix),
+  this needs a DESIGN decision — narrow `window_on()`'s `before`/`after` to isolate just the one
+  target bullet, or add an explicit target-date/price marker to the window — not something to
+  guess unilaterally. **ACTION NEEDED FROM EIKIYO:** which remediation approach, and should the
+  fix apply project-wide to any leaf using a similarly wide window on a bulleted/list-style
+  source document?
+- WhiteGlove Health's 2 items (`0p61`, `7p5`) come from a DIFFERENT, cleaner-windowed source and
+  both models get them right — confirming the bug is specific to the Medecision bulleted-list
+  documents, not the leaf's whole design.
+
+## Next leaf: 6.5 exercise_window
