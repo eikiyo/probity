@@ -5,7 +5,7 @@ breaking-points/stubs/hardcodes/half-done features, log findings here, fix what'
 immediately, flag judgment calls for explicit confirmation. Order = engine/registry.json ref
 order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
-**Counter: 3/60 done · 1 in-progress · 56 pending · 0 partial** — dated 2026-07-02.
+**Counter: 5/60 done · 0 in-progress · 53 pending · 2 partial** — dated 2026-07-02.
 
 ## Legend
 - `[x]` audited + resolved (bugs fixed, or verified clean)
@@ -113,4 +113,55 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   stock private placements is intentionally in scope, OR (c) leave as-is. Oracle.jsonl NOT
   touched pending this decision.
 
-## Next leaf: 1.2.1 round_size
+### [x] 1.2.1 round_size
+- **CRITICAL bug found + FIXED:** identical failure family to 1.2.1's sibling leaves — both
+  models scored an identical 30% accuracy / 0% wobble. Root cause: every one of the 10 Form D
+  corpus windows carries BOTH `<totalOfferingAmount>` (issuer's target/ceiling) and
+  `<totalAmountSold>` (what actually closed) as adjacent XML fields; oracle consistently uses
+  `totalAmountSold`, but the original prompt ("the total dollar amount raised") never
+  disambiguated between them, and both models' wrong answers matched `totalOfferingAmount`
+  exactly on every miss. Fixed `task.py`'s system prompt to explicitly name the correct field
+  and instruct the model to use the amount SOLD when the two differ — commit pending.
+  Archived stale pre-fix runs to `_archive_stale_prompt/`, reran clean: **deepseek-v4f now
+  100% accuracy / 0% wobble** (was 30%/0%, task-design artifact fully resolved). gemma3-1b
+  stayed at 30% accuracy / 50% wobble even with the explicit fix — verified this is now a
+  genuine model-capability limitation, not task ambiguity: gemma3-1b's wrong majority answers
+  on every failing item still exactly equal `totalOfferingAmount` even after being told not to
+  use it, proving the 1B local model simply cannot reliably follow the disambiguation
+  instruction. This is the correct, honest outcome — the task is now well-specified and the
+  score gap reflects real model capability, not a shared trap.
+- **Minor, not fixed:** leaf is absent from `results/RESULTS.md`/README (the `LEAVES` list in
+  `results/render.py` is a hand-curated subset, not auto-populated from every leaf with a
+  `scored.json`) — a pre-existing publishing gap, not caused by this leaf's fix. Flagging once
+  here rather than repeating per-leaf; worth a dedicated pass to decide which of the 60 built
+  leaves should be in the public tables.
+
+### [~] 1.3.1 liquidation_preference_multiple — PENDING EIKIYO'S CONFIRMATION
+- **DUPLICATE-FILING FINDING (data NOT touched):** 3 of 13 items are exact duplicates counted
+  as independent data points. Verified via byte-for-byte diff of `corpus/full/*.txt`:
+  `1283259_000149315225016953` / `_027406` (BioVentrix) are the IDENTICAL "First Amendment to
+  the Third Amended and Restated Certificate of Incorporation" exhibit text, filed under two
+  different accession numbers (same amendment attached to two different periodic filings).
+  Same pattern confirmed for `1883085_...24000060` / `_25000050` / `_26000018` (Pagaya, 3x) and
+  `1447362_...19009024` / `_19012901` (Castle Biosciences, 2x) via identical `validating_quote`
+  strings. True unique-clause count is 10, not 13 — inflates N and double/triple-weights
+  whatever each model gets right/wrong on 3 real clauses. **ACTION NEEDED FROM EIKIYO:** drop
+  the 3 later-accession duplicates (keep one representative filing per unique clause) and
+  rerun at N=10, or leave as-is?
+- **Minor, documented not fixed:** none of the 13 oracle items has a `source_url` field
+  (unlike every other audited leaf) — verification required reconstructing EDGAR paths from
+  the `CIK_ACCESSION`-format `id` and reading `corpus/full/*.txt` directly. Worth adding
+  `source_url` for consistency/reproducibility in a later pass; not blocking since the raw
+  fetched text is present and verifiable.
+- **Minor, cross-leaf naming collision (not a bug, just a trap for future readers):** this
+  leaf's enum includes a value literally spelled `"non-participating"` meaning "the clause
+  states there is NO liquidation preference at all" — a totally different concept from leaf
+  1.3.2 (`participation_type`)'s `"non-participating"`, which means "gets preference OR
+  conversion, whichever is greater, but never both." Zero items in this leaf's 13-item corpus
+  actually use this value (real class distribution is 4×1x / 5×2x / 4×3x, `"other"` and
+  `"non-participating"` both empty), so it hasn't caused a real scoring issue, but a future
+  reader cross-referencing both leaves by value name alone would be misled.
+- Verified clean otherwise: all 10 unique clauses' multiples spot-checked against real
+  `corpus/full/*.txt` filing text, correctly classified.
+
+## Next leaf: 1.3.3 participation_cap
