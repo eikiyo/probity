@@ -1,0 +1,9 @@
+{
+ "leaf": "round_size",
+ "model": "minimax-m2.5-or",
+ "task_name": "round_size",
+ "data_version": "38613161c19246e4da9d73c5e3d5d91cac1f8d9ee62fb8130d2fa8178ebeb3cc",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:08:10.162849+00:00"
+}

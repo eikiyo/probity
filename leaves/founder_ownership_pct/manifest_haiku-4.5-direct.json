@@ -1,0 +1,9 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "haiku-4.5-direct",
+ "task_name": "founder_ownership_pct",
+ "data_version": "9bba5b62b888c0c69013334608aa34ce3ffa87a9395ceeeec7937927b8a0111e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.802683+00:00"
+}

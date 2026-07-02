@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "gpt-oss-120b-or",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "fdf49b87cc3873583b409b4db2759c68921f351e4fcef8b11483f81cdb21a3a2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:35:57.562854+00:00"
+}

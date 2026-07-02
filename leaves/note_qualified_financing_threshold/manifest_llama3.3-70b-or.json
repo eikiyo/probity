@@ -1,0 +1,9 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "llama3.3-70b-or",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "74019058c1c3cb401f5cf36b725c8948b69ea8fa45f928186764948f2917d96d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:10:03.181622+00:00"
+}

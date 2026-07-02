@@ -27,17 +27,21 @@ class LLMClient(ABC):
         pass
 
 
-def _post_chat_completion(url, headers, payload, timeout, error_label,
-                           retryable_codes, max_attempts, backoff_base_seconds):
+def _post_with_retry(url, headers, payload, timeout, error_label,
+                      retryable_codes, max_attempts, backoff_base_seconds, extract_content):
     """
-    What: shared retry-on-transient-error POST for any OpenAI-compat /chat/completions endpoint.
-          Used by DeepSeekClient and OpenRouterClient -- extracted 2026-07-03 (rule of two: a
-          second near-identical retry loop was about to be pasted for OpenRouterClient).
+    What: shared retry-on-transient-error POST for any JSON HTTP LLM endpoint. Used by
+          DeepSeekClient, OpenRouterClient, and AnthropicClient -- extracted 2026-07-03 (rule of
+          two: a second near-identical retry loop was about to be pasted for OpenRouterClient,
+          then a THIRD near-identical one for AnthropicClient, whose response shape differs from
+          the OpenAI-compat providers -- content[0].text, not choices[0].message.content -- hence
+          the extract_content callback instead of a hardcoded response path).
     Why: see DeepSeekClient.generate()'s original docstring (94% of one leaf's "parse failures"
           were raw 503s with zero retry, mismeasured as model unreliability) -- the exact same
           transient-vs-genuine-failure distinction applies to every hosted provider here.
-    Output: the response's message content string. Raises RuntimeError (never a raw urllib
-            exception) on a non-retryable error or after max_attempts genuinely transient ones.
+    Output: extract_content(parsed_json_response) -- a callable, since each provider shapes its
+            response differently. Raises RuntimeError (never a raw urllib exception) on a
+            non-retryable error or after max_attempts genuinely transient ones.
     """
     req = urllib.request.Request(
         url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST",
@@ -47,7 +51,7 @@ def _post_chat_completion(url, headers, payload, timeout, error_label,
         try:
             with urllib.request.urlopen(req, timeout=timeout) as resp:
                 result = json.loads(resp.read().decode("utf-8"))
-                return result["choices"][0]["message"]["content"]
+                return extract_content(result)
         except urllib.error.HTTPError as e:
             last_error = e
             if e.code not in retryable_codes or attempt == max_attempts:
@@ -60,6 +64,16 @@ def _post_chat_completion(url, headers, payload, timeout, error_label,
             raise RuntimeError(f"{error_label} generation failed: {e}")
         time.sleep(backoff_base_seconds * attempt)
     raise RuntimeError(f"{error_label} generation failed after {max_attempts} attempts: {last_error}")
+
+
+def _post_chat_completion(url, headers, payload, timeout, error_label,
+                           retryable_codes, max_attempts, backoff_base_seconds):
+    """Thin wrapper over _post_with_retry() for OpenAI-compat /chat/completions providers
+    (DeepSeek, OpenRouter) -- kept as its own name so existing call sites are untouched."""
+    return _post_with_retry(
+        url, headers, payload, timeout, error_label, retryable_codes, max_attempts,
+        backoff_base_seconds, extract_content=lambda r: r["choices"][0]["message"]["content"],
+    )
 
 
 class DeepSeekClient(LLMClient):
@@ -175,6 +189,73 @@ class GeminiClient(LLMClient):
             raise RuntimeError(f"Gemini generation failed: {e}")
 
 
+class AnthropicClient(LLMClient):
+    """
+    Direct Anthropic Messages API client (api.anthropic.com) -- explicitly authorized by Eikiyo
+    2026-07-03 ("run directly, you have the claude direct API") for the "10 recommended models"
+    Claude-agent-mode seats, AFTER checking OpenRouter's anthropic/claude-haiku-4.5 listing was
+    priced identically ($1/$5 per MTok, no OR discount) -- direct is simpler with no cost
+    disadvantage. Per Kage root CLAUDE.md Sec 0.10, a bare "Haiku/Sonnet agent" normally means
+    the in-chat Agent tool, NEVER api.anthropic.com without explicit approval -- this class is
+    that explicit, scoped exception, used ONLY by this benchmark's own harness, never by a
+    `claude` CLI subprocess (the landmine that silently bills this same key).
+    Response shape differs from the OpenAI-compat providers: content[0].text, not
+    choices[0].message.content -- see _post_with_retry()'s extract_content callback.
+    No `thinking` parameter is ever set -- extended thinking is opt-in on this API, so omitting
+    it entirely means zero thinking-token cost by default, not something to "turn down to zero."
+    Prompt caching (2026-07-03, Eikiyo: "don't we get benefit of caching?"): the harness calls
+    generate() with the SAME prompt string N=20 times per item (temperature is what varies the
+    output, not the input -- see run_harness()'s N_RUNS loop) -- exactly the repeated-identical-
+    prefix shape prompt caching is for. The user content block below is marked
+    cache_control: ephemeral, so within a cache's 5-minute window the first call for an item
+    pays a 1.25x write, and repeats pay 0.1x read instead of full price -- roughly an 80%+ cut
+    on input cost, which dominates this workload's spend (a few hundred input tokens per call
+    vs. a short JSON/bare-value answer). Concurrent calls for the SAME item can still race the
+    first cache write (this client doesn't serialize per-item), so the realized saving is lower
+    than the theoretical ceiling under high per-item concurrency -- still a real, one-line win.
+    """
+
+    _RETRYABLE_HTTP_CODES = {429, 500, 502, 503, 504}
+    _MAX_ATTEMPTS = 3
+    _BACKOFF_BASE_SECONDS = 2
+
+    def __init__(self, model: str = "claude-haiku-4-5-20251001"):
+        self.api_key = os.getenv("ANTHROPIC_API_KEY")
+        if not self.api_key:
+            raise RuntimeError("ANTHROPIC_API_KEY not set. Source secrets/.env first.")
+        self.base_url = "https://api.anthropic.com/v1/messages"
+        self.model = model
+
+    def generate(self, prompt: str, temperature: float) -> str:
+        """Generate via the Anthropic Messages API. Assert temp > 0 (SP1)."""
+        if temperature <= 0:
+            raise ValueError(f"Temperature must be >0 (got {temperature}). SP1: no determinism.")
+
+        payload = {
+            "model": self.model,
+            "max_tokens": 1024,
+            "temperature": temperature,
+            "messages": [{"role": "user", "content": [
+                {"type": "text", "text": prompt, "cache_control": {"type": "ephemeral"}},
+            ]}],
+        }
+        headers = {
+            "x-api-key": self.api_key,
+            "anthropic-version": "2023-06-01",
+            "Content-Type": "application/json",
+        }
+
+        def _extract(result):
+            blocks = result.get("content", [])
+            return "".join(b.get("text", "") for b in blocks if b.get("type") == "text")
+
+        return _post_with_retry(
+            self.base_url, headers, payload, timeout=120, error_label=f"Anthropic({self.model})",
+            retryable_codes=self._RETRYABLE_HTTP_CODES, max_attempts=self._MAX_ATTEMPTS,
+            backoff_base_seconds=self._BACKOFF_BASE_SECONDS, extract_content=_extract,
+        )
+
+
 class OllamaClient(LLMClient):
     """Local Ollama client -- model is caller-supplied, no default (every real call site already
     passes one explicitly; see engine/runner.py's FAST_SET/BIG_BATCH)."""
@@ -243,8 +324,18 @@ class OpenRouterClient(LLMClient):
             "model": self.model,
             "messages": [{"role": "user", "content": prompt}],
             "temperature": temperature,
-            # Output is a small JSON object — 1024 is generous headroom, not a constraint.
-            "max_tokens": 1024,
+            # 16384, not 1024: a reasoning-tier model (e.g. minimax-m2.5, gpt-5-mini) spends
+            # most of its budget on a hidden "reasoning" content block before ever emitting the
+            # visible JSON answer -- at 1024 that reasoning alone exhausted the cap and the model
+            # returned an EMPTY completion 60-70% of the time on the harder leaves (root-caused
+            # 2026-07-03: confirmed via a raw API call showing populated `reasoning` +
+            # `finish_reason: "stop"` on a call that worked). 8192 still wasn't enough for
+            # gpt-5-mini on the ownership-math leaves (41-43% still empty) -- 16384 per Eikiyo
+            # ("do the pass, with high limits"). The JSON answer itself is tiny; all of this
+            # headroom is for reasoning tokens, not the answer. Cost is bounded by actual usage,
+            # not this ceiling -- a model that finishes at 400 reasoning tokens still only bills
+            # ~400, this only raises the cap before truncation.
+            "max_tokens": 16384,
         }
         headers = {
             "Authorization": f"Bearer {self.api_key}",

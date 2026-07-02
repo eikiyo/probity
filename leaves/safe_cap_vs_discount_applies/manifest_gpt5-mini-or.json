@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "gpt5-mini-or",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "55fe8e85ed779b5aff74d4872cc4a84372bca016e189d73ddee04b29f0812267",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:16:56.866877+00:00"
+}

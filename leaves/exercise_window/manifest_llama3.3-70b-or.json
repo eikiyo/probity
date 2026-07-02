@@ -1,0 +1,9 @@
+{
+ "leaf": "exercise_window",
+ "model": "llama3.3-70b-or",
+ "task_name": "exercise_window",
+ "data_version": "87ba026173700dd96296b972fd83cc555043672dd9131b3fe7bd83beb986b884",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:05:20.817965+00:00"
+}

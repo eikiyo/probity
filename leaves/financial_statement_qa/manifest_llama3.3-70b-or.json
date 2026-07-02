@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "llama3.3-70b-or",
+ "task_name": "financial_statement_qa",
+ "data_version": "690a4552f5086e7c26fbb73bc7acd5cd2da3c69088cd108df48fd97f9a352f1d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:05:27.652964+00:00"
+}

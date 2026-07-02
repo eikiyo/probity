@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "gpt5-mini-or",
+ "task_name": "participation_cap",
+ "data_version": "68b83f00b73a744586d63041665b7d0e4cb90c95ba7d043d2ae5f9052f861b2f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:02:16.855966+00:00"
+}

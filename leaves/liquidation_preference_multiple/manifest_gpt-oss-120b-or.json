@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "gpt-oss-120b-or",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "803acbe0b8b648445cdec404c9a7ad57c404049dfbe1baa580222de55b068965",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:49:48.170872+00:00"
+}

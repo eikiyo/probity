@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_schedule",
+ "model": "minimax-m2.5-or",
+ "task_name": "vesting_schedule",
+ "data_version": "8d4a83aec30941a1f939ee37de5674137c01c58c413b719dbd9284fdfeec57b9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:22:17.770557+00:00"
+}

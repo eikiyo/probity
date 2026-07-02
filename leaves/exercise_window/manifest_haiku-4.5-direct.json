@@ -1,0 +1,9 @@
+{
+ "leaf": "exercise_window",
+ "model": "haiku-4.5-direct",
+ "task_name": "exercise_window",
+ "data_version": "cb59b91d04e222ce92925caf55c8f6a08cc0ab050c072ad9fb7e87821dababe2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.783153+00:00"
+}

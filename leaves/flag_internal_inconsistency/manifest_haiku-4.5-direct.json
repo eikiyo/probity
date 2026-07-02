@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "haiku-4.5-direct",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "c4da1d7dad3c306e427242dee7645828abf81613dcd9854ec61b22f356786b7e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.792271+00:00"
+}

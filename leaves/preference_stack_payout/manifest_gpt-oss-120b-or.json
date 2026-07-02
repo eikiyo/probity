@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "gpt-oss-120b-or",
+ "task_name": "preference_stack_payout",
+ "data_version": "f43e390530edd4c17a5c6d1f7facbe70986a726d74a6cfc9cee46bc74371f280",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:54:15.091287+00:00"
+}

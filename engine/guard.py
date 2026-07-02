@@ -28,6 +28,7 @@ ESTIMATED_COST_PER_CALL_USD = {
     # this harness's fixed shape (~470-item x 20-run sweep) is ~$0.0000543 (PTC $0.51 / 9400
     # calls, see artifacts/pricing_probity.html) -- ~2x that, not the ~50x margin used for
     # deepseek-v4f above, so a per-leaf guard cap doesn't trip long before a real run completes.
+    "gemma3-1b-qat": 0.0,
     "gemma4-31b-or": 0.0001,
     # Remaining "10 recommended models" lineup, added 2026-07-03 for the auto-ramp sweep
     # (fastest-to-slowest by measured latency, excludes Anthropic agent-mode + DeepSeek per
@@ -38,6 +39,9 @@ ESTIMATED_COST_PER_CALL_USD = {
     "gemini3-flash-or": 0.0006,
     "gpt-oss-120b-or": 0.00003,
     "gpt5-mini-or": 0.0003,
+    # Direct Anthropic API (api.anthropic.com), explicitly authorized 2026-07-03 -- real
+    # Haiku 4.5 pricing $1/$5 per MTok, ~600 input / ~15 output tokens/call observed.
+    "haiku-4.5-direct": 0.001,
 }
 # A model label the guard has no cost estimate for is treated as the most expensive known
 # label, not $0 -- an unrecognized model must never get a free pass on the spend cap.

@@ -294,6 +294,26 @@ def _try_load(candidate: str) -> Optional[Dict[str, Any]]:
     return obj if isinstance(obj, dict) else None
 
 
+def _repair_bare_division(text: str) -> str:
+    """Repair one observed gemma3-1b-qat failure mode: a number field answered as an
+    unevaluated bare division, e.g. {"option_pool_shuffle": 1000000 / 11000000} instead of
+    a number literal -- invalid JSON (division isn't a JSON token). Scoped tight to a JSON
+    VALUE position only (":" immediately before, "," or "}" immediately after, both operands
+    bare unquoted digits) so a legitimate quoted string containing "/" (e.g. a vesting-format
+    answer like "4yr/1yr-cliff") is never touched -- that text is inside quotes, so the
+    lookbehind ":" / lookahead "[,}]" never matches around it.
+    """
+    def _eval(m):
+        num, den = float(m.group(1)), float(m.group(2))
+        if den == 0:
+            return m.group(0)
+        val = num / den
+        return f": {val:g}"
+    return re.sub(
+        r':\s*(-?\d+(?:\.\d+)?)\s*/\s*(-?\d+(?:\.\d+)?)\s*(?=[,}])', _eval, text,
+    )
+
+
 def _lenient_extract(raw: Optional[str], fields: Dict[str, Dict[str, Any]]) -> Optional[Dict[str, Any]]:
     """
     What: fallback answer extraction, tried only after _parse_json_response() fails outright.
@@ -330,7 +350,7 @@ def _lenient_extract(raw: Optional[str], fields: Dict[str, Dict[str, Any]]) -> O
         return None
     field_name = next(iter(fields))
 
-    repaired = text.replace("\\_", "_")
+    repaired = _repair_bare_division(text.replace("\\_", "_"))
     obj = _parse_json_response(repaired)
     if obj is not None:
         if field_name in obj:

@@ -1,0 +1,9 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "minimax-m2.5-or",
+ "task_name": "founder_ownership_pct",
+ "data_version": "32319cca867d54b1cc27389c1b193527080e92847ab0ffe9ed5c7f7948e66fee",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:12:28.569678+00:00"
+}

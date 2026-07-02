@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "haiku-4.5-direct",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "c36881dd43f41bd1b6d6785692b2ad7533dac518bc320021911afbae2cde7ea6",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.811450+00:00"
+}

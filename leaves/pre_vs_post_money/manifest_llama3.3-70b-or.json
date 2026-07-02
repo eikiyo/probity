@@ -1,0 +1,9 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "llama3.3-70b-or",
+ "task_name": "pre_vs_post_money",
+ "data_version": "6898223944f6788f70e720fdf33b3299d28e7d73c95f11de78857ce9b8704e04",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:14:29.114027+00:00"
+}

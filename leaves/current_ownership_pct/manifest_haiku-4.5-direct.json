@@ -1,0 +1,9 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "haiku-4.5-direct",
+ "task_name": "current_ownership_pct",
+ "data_version": "2a5bd5f9d231df6b93a3458d306b95f15fa2161ee2ba134a7b95889538a1f705",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.777421+00:00"
+}

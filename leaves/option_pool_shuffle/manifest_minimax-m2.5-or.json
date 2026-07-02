@@ -1,0 +1,9 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "minimax-m2.5-or",
+ "task_name": "option_pool_shuffle",
+ "data_version": "5a3bc1243d1706f09928f8cc6bdf401c6409455c068618cf326c45b56085a3de",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:02:22.328980+00:00"
+}

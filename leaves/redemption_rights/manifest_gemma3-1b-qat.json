@@ -1,0 +1,9 @@
+{
+ "leaf": "redemption_rights",
+ "model": "gemma3-1b-qat",
+ "task_name": "redemption_rights",
+ "data_version": "82e88a03fc0f2e7f23f57ac6b2787e394d7f7171e84a73ff899f44e4bb2e6519",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:25:32.192563+00:00"
+}

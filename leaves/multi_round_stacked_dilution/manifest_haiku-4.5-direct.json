@@ -1,0 +1,9 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "haiku-4.5-direct",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "30c6563390d17280ebc839151cece083db2b4927c1af1d272ae618634dc4bb8f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.813784+00:00"
+}

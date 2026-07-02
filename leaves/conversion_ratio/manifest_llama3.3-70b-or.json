@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "llama3.3-70b-or",
+ "task_name": "conversion_ratio",
+ "data_version": "ec44099f0abe47cab367a72bfe758ed1ec1a13c1a1017b9037f9ccee1011c6de",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:03:49.585666+00:00"
+}

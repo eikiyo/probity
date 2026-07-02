@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "gemini3-flash-or",
+ "task_name": "dividend_rate_pct",
+ "data_version": "da9ef7ae8385ed886b30f24e4676236758514dc101e3bf9b4457275c320b3c83",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:24:45.187420+00:00"
+}

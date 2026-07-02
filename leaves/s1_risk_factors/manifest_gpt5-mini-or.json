@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "gpt5-mini-or",
+ "task_name": "s1_risk_factors",
+ "data_version": "7ec1ea7d8f78120e512e02a69aacf48020ccabdbe22dcf928d36c558925f7a9b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:09:06.328883+00:00"
+}

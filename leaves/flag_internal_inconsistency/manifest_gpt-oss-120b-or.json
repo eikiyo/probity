@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "gpt-oss-120b-or",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "0e9feaf2e40c200eb5ff4bfab6244f70028a3c9cedb71b61aa87e0fb346e8c6b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:42:04.530716+00:00"
+}

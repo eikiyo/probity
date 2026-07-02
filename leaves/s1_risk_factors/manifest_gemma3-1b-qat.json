@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "gemma3-1b-qat",
+ "task_name": "s1_risk_factors",
+ "data_version": "9998281998abf4d587825431feae09b4c59fd52171d2eee2292f7258eaeb6804",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:27:50.244188+00:00"
+}

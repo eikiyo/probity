@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "gpt5-mini-or",
+ "task_name": "conversion_ratio",
+ "data_version": "1da1ff1ecdc3f1c1abd5ae0caaf8c24ee797f1aa2c89b52f4baaf2949df81454",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.929109+00:00"
+}

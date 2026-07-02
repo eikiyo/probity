@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "haiku-4.5-direct",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "407b6a479cb19c40e4c732610426dfa9071b917ce5f8f840e34a6855d4b50582",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.755088+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "minimax-m2.5-or",
+ "task_name": "per_investor_allocation",
+ "data_version": "2b0eeb2daf5118e61066a1d249f5a6fe98f54768f4402f612ff5927c7f5be2bc",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:04:26.148672+00:00"
+}

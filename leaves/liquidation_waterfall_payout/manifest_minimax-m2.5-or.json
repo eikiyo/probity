@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "minimax-m2.5-or",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "e464a5a17ac6f40c7d227dfe37983dd56ddba5cf50396a099aa142203286c517",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:59:37.385350+00:00"
+}

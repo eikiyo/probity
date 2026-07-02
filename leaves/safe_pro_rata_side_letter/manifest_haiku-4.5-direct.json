@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "haiku-4.5-direct",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "38f831a22c17350c20f71645c0234807c830d88e07edd17b5db7972f02dea980",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:49:04.784911+00:00"
+}

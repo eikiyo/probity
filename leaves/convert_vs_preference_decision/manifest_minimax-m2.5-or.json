@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "minimax-m2.5-or",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "fb8770f24f5c3a15103afe914fb6776d696c8a01f09821481114643c675c75dd",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:48:20.133626+00:00"
+}

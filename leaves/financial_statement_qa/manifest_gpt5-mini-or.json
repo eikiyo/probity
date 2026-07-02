@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "gpt5-mini-or",
+ "task_name": "financial_statement_qa",
+ "data_version": "35488cb4d1150ec54cbf4db82cd278712e87d2666f7f8b379b15469f613e0074",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.956810+00:00"
+}

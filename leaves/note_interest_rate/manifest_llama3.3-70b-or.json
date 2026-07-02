@@ -1,0 +1,9 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "llama3.3-70b-or",
+ "task_name": "note_interest_rate",
+ "data_version": "24c4353fa63fbea3288a9a84c10c56b196b16f960ec3522046f12d835acad699",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:10:23.623424+00:00"
+}

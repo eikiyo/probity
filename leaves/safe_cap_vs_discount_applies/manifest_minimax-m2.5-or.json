@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "minimax-m2.5-or",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "d1e11fa3d61eda8efa70506ccd021214b1ede836526acd2f1d43cf04e8e37c7d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:19:43.152256+00:00"
+}

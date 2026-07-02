@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "gpt5-mini-or",
+ "task_name": "safe_discount_rate",
+ "data_version": "a0ac5b7f5b643b1870efa7371bd496214647e90c1fe277563d6424af3ec4b726",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:15:05.341936+00:00"
+}

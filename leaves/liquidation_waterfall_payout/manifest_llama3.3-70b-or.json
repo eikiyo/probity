@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "llama3.3-70b-or",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "dc8b9b764d10233ae7ce9e26e4458867a0a7cc62a92eca03245b83cded073320",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:08:52.044546+00:00"
+}

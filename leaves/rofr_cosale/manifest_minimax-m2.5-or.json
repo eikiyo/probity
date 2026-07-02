@@ -1,0 +1,9 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "minimax-m2.5-or",
+ "task_name": "rofr_cosale",
+ "data_version": "20e20a3ff9cff4351298183cc3aec1fe98f4e23a3c226704fb48043abd9992b2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:16:38.315452+00:00"
+}

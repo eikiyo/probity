@@ -1,0 +1,9 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "haiku-4.5-direct",
+ "task_name": "investor_ownership_pct",
+ "data_version": "554aa13d25da9f2832007845fcc35e80941ffc576ef59a7b4562b9a202d2002a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.806374+00:00"
+}

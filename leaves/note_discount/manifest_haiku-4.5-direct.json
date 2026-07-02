@@ -1,0 +1,9 @@
+{
+ "leaf": "note_discount",
+ "model": "haiku-4.5-direct",
+ "task_name": "note_discount",
+ "data_version": "31c44f18c6327960ef1921e2cefa206255130a349ff71b3ed6ec37e7b3a84daa",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.815868+00:00"
+}

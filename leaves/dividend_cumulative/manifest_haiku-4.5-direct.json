@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "haiku-4.5-direct",
+ "task_name": "dividend_cumulative",
+ "data_version": "71860efa9f8cc929ec037b10a985bff48ee15349b521d7cef3dbfa964b2330e5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.781973+00:00"
+}

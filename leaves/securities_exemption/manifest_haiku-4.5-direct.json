@@ -1,0 +1,9 @@
+{
+ "leaf": "securities_exemption",
+ "model": "haiku-4.5-direct",
+ "task_name": "securities_exemption",
+ "data_version": "5553abbe94d55155d90259f2cd3f48092a4bb694da52992aca4cb1acc5c35228",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:58:21.089462+00:00"
+}

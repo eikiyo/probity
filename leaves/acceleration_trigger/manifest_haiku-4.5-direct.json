@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "haiku-4.5-direct",
+ "task_name": "acceleration_trigger",
+ "data_version": "fb4410dfc4d8507c842f14d9cc8bcbacab31391b9c358f550a31830c13996ae5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.763009+00:00"
+}

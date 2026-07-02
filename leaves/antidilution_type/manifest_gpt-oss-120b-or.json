@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_type",
+ "model": "gpt-oss-120b-or",
+ "task_name": "antidilution_type",
+ "data_version": "2d2c6e1092d0ca9fdf3f4424c1482fe590884554bd421d882baf941d464b76af",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:35:30.189042+00:00"
+}

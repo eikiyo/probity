@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_pre_post",
+ "model": "gpt-oss-120b-or",
+ "task_name": "safe_pre_post",
+ "data_version": "16446a67d43bda824ea05c023ca2fd8a386ab4d14d9e698d404789c34943fbcd",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:08:11.480210+00:00"
+}

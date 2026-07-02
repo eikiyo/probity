@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "minimax-m2.5-or",
+ "task_name": "preference_seniority",
+ "data_version": "3e9733b328c25d5bf9832ebfbc86419abed0ec8d2490f55054e8ac7682c3cb53",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:15:17.749380+00:00"
+}

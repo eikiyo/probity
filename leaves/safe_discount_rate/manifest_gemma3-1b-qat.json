@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "gemma3-1b-qat",
+ "task_name": "safe_discount_rate",
+ "data_version": "4e7d9e953f69d26f1b6c21c5c9bd61cb66746b2abc5d56c7d80dd8b0f19e3c8c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:29:53.611344+00:00"
+}

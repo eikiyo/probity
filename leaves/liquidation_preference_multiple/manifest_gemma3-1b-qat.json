@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "gemma3-1b-qat",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "aed3fe1b2e126038f3c39edb311dce659e40ec066f186e0d7b0851dca4a1067c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:14:16.650183+00:00"
+}

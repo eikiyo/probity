@@ -1,0 +1,9 @@
+{
+ "leaf": "cliff_present",
+ "model": "gpt-oss-120b-or",
+ "task_name": "cliff_present",
+ "data_version": "eba1e7598bdb7d3b4d87cf15b7c7674ff9d62c6319e130daa7736755a0a37bd6",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:37:45.575289+00:00"
+}

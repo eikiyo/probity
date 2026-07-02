@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "haiku-4.5-direct",
+ "task_name": "safe_mfn_present",
+ "data_version": "6ec15af0eb162b910bc9f453610a9f365a083f40aca94c162e5b7a03e4778853",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:48:35.022961+00:00"
+}

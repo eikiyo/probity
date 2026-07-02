@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "haiku-4.5-direct",
+ "task_name": "s1_risk_factors",
+ "data_version": "1f488b23cb2b5961ec20d5c265995a291b34c59f9d7e21379d73093c876e6429",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:47:36.137039+00:00"
+}

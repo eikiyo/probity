@@ -1,0 +1,9 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "gemini3-flash-or",
+ "task_name": "founder_ownership_pct",
+ "data_version": "a8e7623d25201b83255ce28b1c3abddc0ccdc154f441a73e451ac87533dcb51b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:26:33.856423+00:00"
+}

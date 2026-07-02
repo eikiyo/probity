@@ -1,0 +1,9 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "gpt5-mini-or",
+ "task_name": "founder_ownership_pct",
+ "data_version": "4c5118fe98c5d7b532ac7efb678552525d166818bccbb0ffcaa2fe0748889cff",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:25:33.039122+00:00"
+}

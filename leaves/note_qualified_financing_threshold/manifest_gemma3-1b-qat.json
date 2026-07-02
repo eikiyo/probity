@@ -1,0 +1,9 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "gemma3-1b-qat",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "0f56bbefc3a108ac6057284d23d27610f3a41d24668940095f7f42f9a6ffcdee",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:07:36.839396+00:00"
+}

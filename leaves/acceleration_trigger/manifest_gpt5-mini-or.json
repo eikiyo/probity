@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "gpt5-mini-or",
+ "task_name": "acceleration_trigger",
+ "data_version": "9ec0f1611dc93860da75bd752f251643e974140b3beb3c51f16ff25b9fb246f2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.933660+00:00"
+}

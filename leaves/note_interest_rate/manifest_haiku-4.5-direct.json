@@ -1,0 +1,9 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "haiku-4.5-direct",
+ "task_name": "note_interest_rate",
+ "data_version": "0e8c88e55c7b9bd90eb4c7bc36740eec28e42cccaee4b5c517b0d86f1a92b691",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.820009+00:00"
+}

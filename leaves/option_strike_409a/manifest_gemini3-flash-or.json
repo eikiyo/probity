@@ -1,0 +1,9 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "gemini3-flash-or",
+ "task_name": "option_strike_409a",
+ "data_version": "b5decae41344ed74eab71de88f98aecfe2802f45456aa9f5b17d1c0c28427335",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:30:12.731735+00:00"
+}

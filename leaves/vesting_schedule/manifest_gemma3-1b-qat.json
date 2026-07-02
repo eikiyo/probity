@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_schedule",
+ "model": "gemma3-1b-qat",
+ "task_name": "vesting_schedule",
+ "data_version": "860d5c0b746ac237057014514b659fb9bc02829f7f62174496f620386299ea50",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:35:31.155498+00:00"
+}

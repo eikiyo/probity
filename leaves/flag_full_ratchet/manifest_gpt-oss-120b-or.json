@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "gpt-oss-120b-or",
+ "task_name": "flag_full_ratchet",
+ "data_version": "ca74bcebc59e58cd9d7f3dd5221e514da3ab000133853063183287bf466abdbe",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:41:37.074415+00:00"
+}

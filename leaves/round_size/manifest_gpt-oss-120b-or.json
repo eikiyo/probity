@@ -1,0 +1,9 @@
+{
+ "leaf": "round_size",
+ "model": "gpt-oss-120b-or",
+ "task_name": "round_size",
+ "data_version": "a77fa8bd8e9fba6502cc9db8d737547f7186084ea590beb43ffe0a5f6124d6ce",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:03:08.534870+00:00"
+}

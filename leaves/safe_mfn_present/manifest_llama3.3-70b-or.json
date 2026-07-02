@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "llama3.3-70b-or",
+ "task_name": "safe_mfn_present",
+ "data_version": "4dab692d72ebbc4617e7cf6b33607ad5cf7a9745eabafbdd2dab74dd00e59580",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:16:54.224377+00:00"
+}

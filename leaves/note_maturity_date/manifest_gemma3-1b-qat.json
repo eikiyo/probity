@@ -1,0 +1,9 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "gemma3-1b-qat",
+ "task_name": "note_maturity_date",
+ "data_version": "58ac7fab7d47b70a962b0cf596a4489a676e3d92bac047b02dd872728b6fed8e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:15:58.732488+00:00"
+}

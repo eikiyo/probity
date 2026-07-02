@@ -89,6 +89,13 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 | `deepseek-v4-flash` | hosted | 60 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
 | `gemma-4-31b-it` | 31B, hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
 | `mistral-large-2512` | hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
+| `minimax-m2.5` | hosted (OR) | 60 | ![7%](https://img.shields.io/badge/-7%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
+| `llama-3.3-70b` | 70B, hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
+| `gemma3:1b-it-qat` | 1B QAT, local | 60 | ![34%](https://img.shields.io/badge/-34%25-red) | ![61%](https://img.shields.io/badge/-61%25-yellow) |
+| `gemini-3-flash` | hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
+| `claude-haiku-4.5` | direct API | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
+| `gpt-oss-120b` | 120B, hosted (OR) | 60 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
+| `gpt-5-mini` | hosted (OR) | 60 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
 
 ### By fundraising-document category
 

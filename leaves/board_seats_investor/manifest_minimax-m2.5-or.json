@@ -1,0 +1,9 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "minimax-m2.5-or",
+ "task_name": "board_seats_investor",
+ "data_version": "7c2d5a2b6fba9ec0394bdccbe433969abd8baf6b34be3dd9830cf67273921cc2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:25:10.270477+00:00"
+}

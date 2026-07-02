@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "gpt-oss-120b-or",
+ "task_name": "preference_seniority",
+ "data_version": "bc2d2b90d6c765eb8d588d092ae8f672665f9395564daa7ed3854e48080ac1a7",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:00:06.316636+00:00"
+}

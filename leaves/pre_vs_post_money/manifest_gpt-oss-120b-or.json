@@ -1,0 +1,9 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "gpt-oss-120b-or",
+ "task_name": "pre_vs_post_money",
+ "data_version": "cb3d0cbc1ca52e1913ecea4176387cefe54dd5837f8384afbd75c39badf2d42a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:00:07.454380+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "haiku-4.5-direct",
+ "task_name": "safe_discount_rate",
+ "data_version": "141e13c07500d3268fb46c727ae48326cfe6fda76e958dd0d77c081de6101370",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:48:16.423647+00:00"
+}

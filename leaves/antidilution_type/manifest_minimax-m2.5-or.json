@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_type",
+ "model": "minimax-m2.5-or",
+ "task_name": "antidilution_type",
+ "data_version": "e220b5e0ee122c1029b2e22895e5f652f2c515f2f704a2e77453f89713f4da1c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:48:20.135863+00:00"
+}

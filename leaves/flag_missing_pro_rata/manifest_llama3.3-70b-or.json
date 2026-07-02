@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "llama3.3-70b-or",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "743b346f74b280f635542b7b6ded8b7d2c7671a44a267b898d0b41830399f7ff",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:06:11.847574+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "gpt-oss-120b-or",
+ "task_name": "rofr_cosale",
+ "data_version": "92ed79a920bf560cb71e0b5bf38618108affb04574d2569e6306d453153834a7",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:04:26.688483+00:00"
+}

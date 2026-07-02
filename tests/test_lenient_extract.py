@@ -36,6 +36,23 @@ class TestJsonEscapeRepair(unittest.TestCase):
         out = harness._lenient_extract(raw, {"form_d_field_value": {"type": "number"}})
         self.assertEqual(out, {"form_d_field_value": "2366532"})
 
+    def test_repairs_bare_unevaluated_division_for_number_field(self):
+        # observed gemma3-1b-qat failure on option_pool_shuffle: model answers with an
+        # unevaluated division instead of computing the number.
+        raw = '{"option_pool_shuffle": 1000000 / 11000000}\n'
+        out = harness._lenient_extract(raw, {"option_pool_shuffle": {"type": "number"}})
+        self.assertAlmostEqual(float(out["option_pool_shuffle"]), 1000000 / 11000000, places=5)
+
+    def test_division_repair_never_touches_quoted_slash_in_string_value(self):
+        raw = '{"vesting_schedule": "4yr/1yr-cliff"}'
+        out = harness._lenient_extract(raw, STRING_FIELDS)
+        self.assertEqual(out, {"vesting_schedule": "4yr/1yr-cliff"})
+
+    def test_division_repair_fails_closed_on_division_by_zero(self):
+        raw = '{"dividend_rate_pct": 5 / 0}'
+        out = harness._lenient_extract(raw, NUMBER_FIELDS)
+        self.assertIsNone(out)
+
 
 class TestSingleKeyFallback(unittest.TestCase):
     def test_single_key_dict_with_wrong_name_is_used(self):

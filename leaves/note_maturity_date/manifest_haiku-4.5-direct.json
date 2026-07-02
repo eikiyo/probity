@@ -1,0 +1,9 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "haiku-4.5-direct",
+ "task_name": "note_maturity_date",
+ "data_version": "8836dc31317e54ac45328a9551a3d61b9ebe862855220d711d430628e7c3579e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.822266+00:00"
+}

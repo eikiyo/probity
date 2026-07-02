@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "haiku-4.5-direct",
+ "task_name": "form_d_fields",
+ "data_version": "5deed3b55c5bbaa16ce58d55bd4129a18a1f3cf765ecf404fb8655f8d8410da4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.798453+00:00"
+}

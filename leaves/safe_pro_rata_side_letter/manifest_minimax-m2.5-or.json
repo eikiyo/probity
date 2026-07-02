@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "minimax-m2.5-or",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "68ba6643493a7e396d02d31d61fd190c8206383892e8329baa0b30954de1946b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:20:01.020217+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "gemini3-flash-or",
+ "task_name": "preference_seniority",
+ "data_version": "e096dcb5aff6c6ed205041799fc0b7d1996bc17f37b9e2d150779235ed457fbc",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:32:03.013166+00:00"
+}

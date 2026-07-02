@@ -1,0 +1,9 @@
+{
+ "leaf": "cliff_present",
+ "model": "llama3.3-70b-or",
+ "task_name": "cliff_present",
+ "data_version": "c317ef3963aade2e4d7aefea91ec9e49d4d2c6b6eb79c7605b170177a0375f89",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:04:15.353360+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "haiku-4.5-direct",
+ "task_name": "employee_pool_pct",
+ "data_version": "6050a60db17f2c716c70475e94fb6038d13effdf2fe787171d11dab474786fe3",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.780008+00:00"
+}

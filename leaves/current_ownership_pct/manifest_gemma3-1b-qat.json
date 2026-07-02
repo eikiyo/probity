@@ -1,0 +1,9 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "gemma3-1b-qat",
+ "task_name": "current_ownership_pct",
+ "data_version": "9011b86839c7dd9b6935e09620baf1716a2ab478e6c98e2972ee11809833ad8d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:05:31.596431+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "information_rights",
+ "model": "haiku-4.5-direct",
+ "task_name": "information_rights",
+ "data_version": "71c560115ba3861f5ef64d87c2acf5a53abc2f0aef89eb0e009ae9be975d2615",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:46:01.331325+00:00"
+}

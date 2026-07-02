@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "gpt-oss-120b-or",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "e242c2a6699111dc8c9b5f9d30e3d4336e78c87a849fb4585d5b607318aac0da",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:51:30.490309+00:00"
+}

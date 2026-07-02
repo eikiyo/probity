@@ -1,0 +1,9 @@
+{
+ "leaf": "redemption_rights",
+ "model": "haiku-4.5-direct",
+ "task_name": "redemption_rights",
+ "data_version": "c68306ac9971694c46ddfe30ee46d1a8e301b3fdf32055f30cf827a32a500301",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:46:47.703677+00:00"
+}

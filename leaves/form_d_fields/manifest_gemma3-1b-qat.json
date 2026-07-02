@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "gemma3-1b-qat",
+ "task_name": "form_d_fields",
+ "data_version": "8fbc7aa5c9929a23ff4fe1085ce2feac3d34b79981f7e88a413b76ef8a1c4406",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:11:36.559795+00:00"
+}

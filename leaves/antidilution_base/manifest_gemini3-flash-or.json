@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_base",
+ "model": "gemini3-flash-or",
+ "task_name": "antidilution_base",
+ "data_version": "7a9b2fc2a12c712d0af0e9a8bb22787d27522e7933e9f01adb04c0d467c970d9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:23:39.210854+00:00"
+}

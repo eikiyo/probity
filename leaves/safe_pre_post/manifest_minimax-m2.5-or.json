@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_pre_post",
+ "model": "minimax-m2.5-or",
+ "task_name": "safe_pre_post",
+ "data_version": "8e234b09f22a6b20a04cd446f9852429b9e2062f8c7ad0f58a96f0244971b440",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:21:17.080100+00:00"
+}

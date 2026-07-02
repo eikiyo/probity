@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "minimax-m2.5-or",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "3e7ce4e8eea2f2488200f20c7749c7373e5665df23803c8f2a93ae2354746694",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:48:20.133273+00:00"
+}

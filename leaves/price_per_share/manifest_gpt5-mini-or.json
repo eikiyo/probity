@@ -1,0 +1,9 @@
+{
+ "leaf": "price_per_share",
+ "model": "gpt5-mini-or",
+ "task_name": "price_per_share",
+ "data_version": "9c04252587fbe80fc9dfd98faf166ffcc86e451b9c296bd8f2827322bb79d206",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:07:24.161780+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "note_valuation_cap",
+ "model": "gemini3-flash-or",
+ "task_name": "note_valuation_cap",
+ "data_version": "a3933d040efe5cdcf7daf75231d8b8edd03af49030952806a7630c5f0dff6b54",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:29:14.329848+00:00"
+}

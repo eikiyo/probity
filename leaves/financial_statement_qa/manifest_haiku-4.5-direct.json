@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "haiku-4.5-direct",
+ "task_name": "financial_statement_qa",
+ "data_version": "291bf11ab9fb7e958987d99bfb09587a20437dd7c43f87b10fe5e011f3ab1968",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.790713+00:00"
+}

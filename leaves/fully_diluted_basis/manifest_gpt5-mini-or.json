@@ -1,0 +1,9 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "gpt5-mini-or",
+ "task_name": "fully_diluted_basis",
+ "data_version": "7b86952d7ef9ee047117394c8f3389ff07c0c2f3b2e23a789c0e731627d777e1",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.986323+00:00"
+}

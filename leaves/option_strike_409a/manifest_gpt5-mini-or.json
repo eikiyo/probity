@@ -1,0 +1,9 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "gpt5-mini-or",
+ "task_name": "option_strike_409a",
+ "data_version": "e2ad18ccc9aa144965d68062f292fef6713d203bf2b8fd5ad5b1b45ef4eeeab3",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:03:44.429795+00:00"
+}

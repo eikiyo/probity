@@ -1,0 +1,9 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "gemma3-1b-qat",
+ "task_name": "founder_ownership_pct",
+ "data_version": "04413ffd9ce5144b3b254d8786dd78f471338519596c99f1ab8e36b5f3477b9e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:11:51.182831+00:00"
+}

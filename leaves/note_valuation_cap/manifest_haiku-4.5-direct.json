@@ -1,0 +1,9 @@
+{
+ "leaf": "note_valuation_cap",
+ "model": "haiku-4.5-direct",
+ "task_name": "note_valuation_cap",
+ "data_version": "c80196e9d47eeaaad62a7d3091faa82cc0b3433612386965afdb6bf163f09aee",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.826445+00:00"
+}

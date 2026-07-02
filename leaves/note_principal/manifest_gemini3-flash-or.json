@@ -1,0 +1,9 @@
+{
+ "leaf": "note_principal",
+ "model": "gemini3-flash-or",
+ "task_name": "note_principal",
+ "data_version": "0f5bf530cf33dd6f6f2878308bd19e938123063e7f3784291eac8805356c2c57",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:29:42.848307+00:00"
+}

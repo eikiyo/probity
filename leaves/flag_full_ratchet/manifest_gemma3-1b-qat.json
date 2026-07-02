@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "gemma3-1b-qat",
+ "task_name": "flag_full_ratchet",
+ "data_version": "90e6946a22c3faa9fbbac4be5a915334c906f3dbfe4b97f5c07d2019d8a62f7d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:09:05.708711+00:00"
+}

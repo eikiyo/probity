@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "gemini3-flash-or",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "11fbb70e017ae0bfa60d0102e663f4afc0836666d54acdb03dffbcfdd4c502b5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:25:44.691399+00:00"
+}

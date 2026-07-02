@@ -1,0 +1,9 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "gemini3-flash-or",
+ "task_name": "note_interest_rate",
+ "data_version": "e9c8d46f5b657e46801694cd5e1058432b1bb68ef1fce7effc0e82861ac86bc2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:28:55.359382+00:00"
+}

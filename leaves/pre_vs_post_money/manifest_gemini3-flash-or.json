@@ -1,0 +1,9 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "gemini3-flash-or",
+ "task_name": "pre_vs_post_money",
+ "data_version": "0d795be5f2eb87409a986afb03de73ed8ef7c7b9ec42dd14e682c1addbcba51b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:32:55.769419+00:00"
+}

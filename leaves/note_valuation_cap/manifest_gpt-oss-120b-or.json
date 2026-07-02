@@ -1,0 +1,9 @@
+{
+ "leaf": "note_valuation_cap",
+ "model": "gpt-oss-120b-or",
+ "task_name": "note_valuation_cap",
+ "data_version": "e9b468f82d80d013a4decbdb4c840244f9bd8deee4476165ef0ad6f202e56552",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:52:25.529574+00:00"
+}

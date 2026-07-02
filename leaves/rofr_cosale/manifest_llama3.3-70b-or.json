@@ -1,0 +1,9 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "llama3.3-70b-or",
+ "task_name": "rofr_cosale",
+ "data_version": "a00be5a5172e6019cb68e7aa51d9c24971087b45ff2230716f450fce50642ea1",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:15:49.596217+00:00"
+}

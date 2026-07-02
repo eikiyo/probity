@@ -1,0 +1,9 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "gpt-oss-120b-or",
+ "task_name": "investor_ownership_pct",
+ "data_version": "5740cbf39d2740a8dab4e48361ec3464934eb662cc3fcefaabcbf67a2e67acf6",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:52:19.387167+00:00"
+}

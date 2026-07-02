@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_type",
+ "model": "gemma3-1b-qat",
+ "task_name": "participation_type",
+ "data_version": "d8b42cb2174b9829e885563bebb438d182a6d47f9360c069644b0d38fecbefa0",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:19:26.795041+00:00"
+}

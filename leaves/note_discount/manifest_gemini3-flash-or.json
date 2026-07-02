@@ -1,0 +1,9 @@
+{
+ "leaf": "note_discount",
+ "model": "gemini3-flash-or",
+ "task_name": "note_discount",
+ "data_version": "7f2b9e81b85a5c0cf58a3975a34700efe06ee2a989ad1e571e7badf6e5d367c9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:28:26.571788+00:00"
+}

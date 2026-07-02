@@ -1,0 +1,9 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "gemini3-flash-or",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "912e74b432a8462ef4816c94e18f8896fbd440a443ad387bee2d04c578c8233f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:28:48.541532+00:00"
+}

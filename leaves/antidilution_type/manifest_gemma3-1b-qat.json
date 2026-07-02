@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_type",
+ "model": "gemma3-1b-qat",
+ "task_name": "antidilution_type",
+ "data_version": "bea18cf74dd3c5138202eaa75ec44981958ddfe704d8ccbc3f9f5f6dfde253f4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:02:32.054355+00:00"
+}

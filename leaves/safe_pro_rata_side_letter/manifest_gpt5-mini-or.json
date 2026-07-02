@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "gpt5-mini-or",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "81872a0676a3bc47f0c6fa9f195a7889aa574750fa83cc463bd3e48fb7b8a8e5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:14:00.548485+00:00"
+}

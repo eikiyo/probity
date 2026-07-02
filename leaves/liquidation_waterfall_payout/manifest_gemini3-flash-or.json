@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "gemini3-flash-or",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "2e7e702f32e08b4a6dcfafed8e75fe099c7ac818d6be9d9a608d710654586dfa",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:27:45.498431+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "gemini3-flash-or",
+ "task_name": "financial_statement_qa",
+ "data_version": "bbef682ca7e0467282e10ba47b917a8b2e94f295ce15783ad0f6039d9bce82e5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:25:02.018442+00:00"
+}

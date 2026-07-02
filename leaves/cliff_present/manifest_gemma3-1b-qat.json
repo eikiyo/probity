@@ -1,0 +1,9 @@
+{
+ "leaf": "cliff_present",
+ "model": "gemma3-1b-qat",
+ "task_name": "cliff_present",
+ "data_version": "2ded6eb18a26e29620e4980c896f5b8f3fdc8e4e2972bb110f774427aa09af1c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:04:21.381895+00:00"
+}

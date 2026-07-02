@@ -1,0 +1,9 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "llama3.3-70b-or",
+ "task_name": "note_maturity_date",
+ "data_version": "8a2ba8f999ae25311ed8f87e1fd2b6cd579f6ca6570fe614a676768ec7ff0ddf",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:10:30.327350+00:00"
+}

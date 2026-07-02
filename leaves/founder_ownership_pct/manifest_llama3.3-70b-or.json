@@ -1,0 +1,9 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "llama3.3-70b-or",
+ "task_name": "founder_ownership_pct",
+ "data_version": "625f0b920589f85e3a1fa36d538de7cbb3b5b831236607258dda31a56e9b92dc",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:06:50.084539+00:00"
+}

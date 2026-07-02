@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "haiku-4.5-direct",
+ "task_name": "flag_full_ratchet",
+ "data_version": "63eca771c518b144181a1e4e710315626c73645ccc8eae2c12c4b801079fa02a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.791653+00:00"
+}

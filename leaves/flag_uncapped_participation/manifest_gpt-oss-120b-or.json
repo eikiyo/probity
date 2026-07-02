@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "gpt-oss-120b-or",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "8098338f1663a686f36d3ace9d1a3be224e4bc4726739514dbcca1d13056c282",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:50:15.432834+00:00"
+}

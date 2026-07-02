@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "minimax-m2.5-or",
+ "task_name": "preference_stack_payout",
+ "data_version": "f50691dfdd28c44057ee07f0d9635293668edd4f5996e569982f6437d3c21a2a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:03:05.619682+00:00"
+}

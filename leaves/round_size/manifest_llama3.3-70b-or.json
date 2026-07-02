@@ -1,0 +1,9 @@
+{
+ "leaf": "round_size",
+ "model": "llama3.3-70b-or",
+ "task_name": "round_size",
+ "data_version": "6f2b4aeb6d3920383358dd98269a0521161402e25e4132a5cf50bbb978fd0a9c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:15:57.639370+00:00"
+}

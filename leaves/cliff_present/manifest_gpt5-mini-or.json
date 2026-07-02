@@ -1,0 +1,9 @@
+{
+ "leaf": "cliff_present",
+ "model": "gpt5-mini-or",
+ "task_name": "cliff_present",
+ "data_version": "8f2759cc6808c1cd1626a9686811df6faebb45e2f87f9ab0948bae2fc091a7d4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.940291+00:00"
+}

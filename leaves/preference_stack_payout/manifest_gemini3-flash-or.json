@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "gemini3-flash-or",
+ "task_name": "preference_stack_payout",
+ "data_version": "9319f98f5c7067e1d420e3fe6b8e4cba8e6fec86fe437f1fea894b248a26965e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:30:28.591844+00:00"
+}

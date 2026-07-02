@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_schedule",
+ "model": "gpt-oss-120b-or",
+ "task_name": "vesting_schedule",
+ "data_version": "4604172299391ed44a37dc72ba3eeca4437c7dbf229bfd7b782a8e9ce56cd122",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:15:06.822483+00:00"
+}

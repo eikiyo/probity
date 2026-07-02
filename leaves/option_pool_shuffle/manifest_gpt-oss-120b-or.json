@@ -1,0 +1,9 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "gpt-oss-120b-or",
+ "task_name": "option_pool_shuffle",
+ "data_version": "909fef85746dffa1f49aa6d8d4a271e7211bafc4a8560fe5f53321ca9a5ed61d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:52:53.818725+00:00"
+}

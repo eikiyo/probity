@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "haiku-4.5-direct",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "b6504ea23ea5b100e8efcdf2dcf305fc6b42f7649a2c60c1499b26687444668d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.814996+00:00"
+}

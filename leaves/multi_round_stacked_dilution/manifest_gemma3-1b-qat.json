@@ -1,0 +1,9 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "gemma3-1b-qat",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "80beffab9af95f343a9b4fea202c396bdf3623886061685d7b0480a87add5e33",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:15:01.397542+00:00"
+}

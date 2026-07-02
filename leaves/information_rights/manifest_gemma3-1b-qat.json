@@ -1,0 +1,9 @@
+{
+ "leaf": "information_rights",
+ "model": "gemma3-1b-qat",
+ "task_name": "information_rights",
+ "data_version": "3a86ef389c0088da5ac9f3de202915a4328b7004f5e1f8917684bda07119136f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:13:18.326114+00:00"
+}

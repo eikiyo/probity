@@ -1,0 +1,9 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "llama3.3-70b-or",
+ "task_name": "board_seats_investor",
+ "data_version": "bcb8283f915c0e3295ef1fc16f26d4d470066181f38d0691770ba0b9c32a3f9c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:03:52.261864+00:00"
+}

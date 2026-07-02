@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "haiku-4.5-direct",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "e2e3bde5b24c875a331ad8d97dc1d3b8fe2d4aaa5f7430d1d9f066a01467ad62",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:46:08.134794+00:00"
+}

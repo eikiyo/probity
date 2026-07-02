@@ -1,0 +1,9 @@
+{
+ "leaf": "round_size",
+ "model": "gemma3-1b-qat",
+ "task_name": "round_size",
+ "data_version": "cfb77a562513248384a60db8e1c6baf9815abf6698caa616f7d9bd77961a8128",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:27:13.488876+00:00"
+}

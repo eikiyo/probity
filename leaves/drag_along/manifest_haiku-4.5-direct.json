@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "haiku-4.5-direct",
+ "task_name": "drag_along",
+ "data_version": "dd63add58c6a94892b771e4fa633d4502ea913c2171ad36fe26116c8bb26dfc6",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.783922+00:00"
+}

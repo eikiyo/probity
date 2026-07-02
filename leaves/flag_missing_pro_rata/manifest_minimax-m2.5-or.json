@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "minimax-m2.5-or",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "e042c3317155aa846b0ebb9f24da6164963b77ce22eb103888440e8ecfb8678b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:50:00.847961+00:00"
+}

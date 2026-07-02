@@ -1,0 +1,9 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "llama3.3-70b-or",
+ "task_name": "per_investor_allocation",
+ "data_version": "ee658f43a7f3368977577fe4a751502cd30663e994db884c6d67f2bec81e241e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:11:43.095994+00:00"
+}

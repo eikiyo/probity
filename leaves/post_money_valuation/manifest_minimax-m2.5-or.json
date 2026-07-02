@@ -1,0 +1,9 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "minimax-m2.5-or",
+ "task_name": "post_money_valuation",
+ "data_version": "7db46f3759b4f4520c7c87ba3a9556c3cadae14f2d5fc7ed2bb893e791a57a47",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:01:16.047620+00:00"
+}

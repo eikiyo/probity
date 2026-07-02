@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_type",
+ "model": "haiku-4.5-direct",
+ "task_name": "participation_type",
+ "data_version": "8c431628d220ff7cc87399cc3f49bd268c9ffa70e8706e693254c4e829ec6458",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:46:49.912329+00:00"
+}

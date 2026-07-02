@@ -1,0 +1,9 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "haiku-4.5-direct",
+ "task_name": "fully_diluted_basis",
+ "data_version": "c35d07e45ee98acbb7103fd4a2a9f536281f32f3acf30482859debb09ff3e0f5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.804829+00:00"
+}

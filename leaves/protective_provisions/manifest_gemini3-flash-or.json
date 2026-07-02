@@ -1,0 +1,9 @@
+{
+ "leaf": "protective_provisions",
+ "model": "gemini3-flash-or",
+ "task_name": "protective_provisions",
+ "data_version": "64ebb17eb8a3e6608d2d5be8d65c9b536d6447a3e635d93c469028c40f01cc81",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:32:49.129371+00:00"
+}

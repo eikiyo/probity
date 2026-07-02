@@ -1,0 +1,9 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "gemini3-flash-or",
+ "task_name": "board_seats_investor",
+ "data_version": "9a7357cf5fa3687d12e012ec91dd031a80abcbe854b73a49b0f9f93440c3c893",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:23:22.198287+00:00"
+}

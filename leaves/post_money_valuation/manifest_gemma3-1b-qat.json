@@ -1,0 +1,9 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "gemma3-1b-qat",
+ "task_name": "post_money_valuation",
+ "data_version": "dc5103785ab5c3315e6130e22fb7e7f3028d3aee1f87e9c51ae28a8e9f1aa996",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:20:08.418431+00:00"
+}

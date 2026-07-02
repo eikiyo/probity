@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "gpt-oss-120b-or",
+ "task_name": "conversion_ratio",
+ "data_version": "d9805fe19b1ac7fa62c6270c4a0e7520e3f93cd731a371e06541174ad993a43f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:37:40.199692+00:00"
+}

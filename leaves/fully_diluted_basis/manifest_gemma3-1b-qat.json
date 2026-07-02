@@ -1,0 +1,9 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "gemma3-1b-qat",
+ "task_name": "fully_diluted_basis",
+ "data_version": "1922ffdfe724d5656b700f7e4aeac8698ca8e808adc4446624413a81d0f08e7c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:12:29.096454+00:00"
+}

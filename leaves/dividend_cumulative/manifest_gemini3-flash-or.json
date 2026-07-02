@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "gemini3-flash-or",
+ "task_name": "dividend_cumulative",
+ "data_version": "e789fda0da2c6d2a3f984bfd23ad666c1f7c3e7c81a1243240b8baa2ea203189",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:26:26.224528+00:00"
+}

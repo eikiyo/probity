@@ -1,0 +1,9 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "llama3.3-70b-or",
+ "task_name": "pro_rata_rights",
+ "data_version": "93f591c2bfeb83ef32b4fdfd20f0e95bcfd93c8371acbf0dcaaa37a9ff0d5a19",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:13:45.128072+00:00"
+}

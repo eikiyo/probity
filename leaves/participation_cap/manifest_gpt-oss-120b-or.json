@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "gpt-oss-120b-or",
+ "task_name": "participation_cap",
+ "data_version": "98efc0bf6f940bef737534f9d68a0049f9a1bf4b5236dce2cccb6b974c35623b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:53:02.443983+00:00"
+}

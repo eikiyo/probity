@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "minimax-m2.5-or",
+ "task_name": "vesting_acceleration",
+ "data_version": "6d816933255d629e60b512701af5b10f315b2acb37ac061b223f3863fe142667",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:20:16.808821+00:00"
+}

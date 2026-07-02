@@ -1,0 +1,9 @@
+{
+ "leaf": "cliff_present",
+ "model": "gemini3-flash-or",
+ "task_name": "cliff_present",
+ "data_version": "ed8309584b2f46794f6421ac24c4d6ef34fefb15a98586f1f5d4935a402d6c40",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:23:49.122339+00:00"
+}

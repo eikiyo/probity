@@ -1,0 +1,9 @@
+{
+ "leaf": "securities_exemption",
+ "model": "gemini3-flash-or",
+ "task_name": "securities_exemption",
+ "data_version": "c29111a041d2da8d6109abcd06818b663a2b152278dfe9bee35c4face71ff4b4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:37:22.160404+00:00"
+}

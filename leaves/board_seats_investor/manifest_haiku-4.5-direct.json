@@ -1,0 +1,9 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "haiku-4.5-direct",
+ "task_name": "board_seats_investor",
+ "data_version": "b541e259515e4abfa5a0cba7deff83f4a49295850562c5c9281bf41a11cf9518",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.759003+00:00"
+}

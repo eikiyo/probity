@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "llama3.3-70b-or",
+ "task_name": "acceleration_trigger",
+ "data_version": "0f67419591fd9149f84cca89f3c037b4756e61b587ba3682159fac9302f2ae2f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:04:36.101869+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "gemma3-1b-qat",
+ "task_name": "acceleration_trigger",
+ "data_version": "eac0555d9c141bcdd347ad2ce095a080ede6bb7819572f17ccf6dd384b02b3d2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:01:23.276771+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "haiku-4.5-direct",
+ "task_name": "per_investor_allocation",
+ "data_version": "472da75772f5b11d8e44005054943ab2c13f8c92edb876d9135ca874a3ee4935",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.834439+00:00"
+}

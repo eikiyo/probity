@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "gpt-oss-120b-or",
+ "task_name": "acceleration_trigger",
+ "data_version": "5abedacf6247a59e16c69a8a949d0ce9b577d928fce504e66b3a2b36850e8290",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:38:59.657227+00:00"
+}

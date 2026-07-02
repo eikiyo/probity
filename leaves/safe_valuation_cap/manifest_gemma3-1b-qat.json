@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "gemma3-1b-qat",
+ "task_name": "safe_valuation_cap",
+ "data_version": "2492c198840354a74381da2896cefa99df6e9ad62c39b98cd6061adb813922dc",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:33:17.749994+00:00"
+}

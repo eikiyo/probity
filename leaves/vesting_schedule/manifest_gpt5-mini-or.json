@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_schedule",
+ "model": "gpt5-mini-or",
+ "task_name": "vesting_schedule",
+ "data_version": "e5292de0e0eeabbbd4d3ba44912149df7202933c956adbad82e30299b20890d1",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:17:57.635804+00:00"
+}

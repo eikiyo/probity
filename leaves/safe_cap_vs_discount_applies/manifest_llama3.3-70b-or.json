@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "llama3.3-70b-or",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "d04e9b6f8f10b0a331d9f8b71124a38af9f1fa8826fcb5dcc802bb545460b0bb",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:17:40.170220+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "gpt-oss-120b-or",
+ "task_name": "financial_statement_qa",
+ "data_version": "3a206207480ac5bfe0a34f62966b43456ede457c3c89824be6cb9be59c6afa83",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:44:11.942294+00:00"
+}

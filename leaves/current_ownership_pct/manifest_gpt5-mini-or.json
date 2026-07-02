@@ -1,0 +1,9 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "gpt5-mini-or",
+ "task_name": "current_ownership_pct",
+ "data_version": "357e2e2ba6cddfc2fd36dd350ba1a5ba381c2eb8b32933e3820202ca7d8c4330",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:23:56.383935+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "minimax-m2.5-or",
+ "task_name": "fully_diluted_basis",
+ "data_version": "87ee9469b46cfeabe2e3bcf0479aff3f3c90b1506e626338be4eb28af8db1635",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:56:05.494593+00:00"
+}

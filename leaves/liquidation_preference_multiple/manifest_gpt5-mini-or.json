@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "gpt5-mini-or",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "5927403ae0698d638e349cfd40d2b28096f213dc0657bf37611a1a12e08ffc4c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:00:50.656803+00:00"
+}

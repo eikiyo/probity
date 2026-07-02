@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "minimax-m2.5-or",
+ "task_name": "drag_along",
+ "data_version": "6659fb37f63fc573040e8455a2be95c872acbb7a9bc3613c33a69bee807bea91",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:53:51.669204+00:00"
+}

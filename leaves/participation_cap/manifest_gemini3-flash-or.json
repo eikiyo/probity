@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "gemini3-flash-or",
+ "task_name": "participation_cap",
+ "data_version": "a8f8f7281e6217c61b1595148db7abd0dc4cc6e4582618d3fb29f57b0ca04a4e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:29:32.549751+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "haiku-4.5-direct",
+ "task_name": "option_strike_409a",
+ "data_version": "bd3c4128534c5b6c2daaed32213e8bee0d5c934321801146c3002335ac364563",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.830872+00:00"
+}

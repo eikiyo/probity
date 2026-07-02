@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "minimax-m2.5-or",
+ "task_name": "participation_cap",
+ "data_version": "4dd45d24942fed2f0a37591052ec4624194dff1f11ef51144a9943e69e73262e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:01:06.163710+00:00"
+}

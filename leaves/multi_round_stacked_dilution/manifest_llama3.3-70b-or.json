@@ -1,0 +1,9 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "llama3.3-70b-or",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "fb5143cd4a41a0a4dc206962983ab09128869c82b0d4908834b1feac16784cc4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:09:39.887105+00:00"
+}

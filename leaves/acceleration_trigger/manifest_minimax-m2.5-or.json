@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "minimax-m2.5-or",
+ "task_name": "acceleration_trigger",
+ "data_version": "1872af173ae612013ba85800ede14025dfae9aaecd51422d458f8ef9464c65df",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:48:20.146428+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "gpt5-mini-or",
+ "task_name": "per_investor_allocation",
+ "data_version": "6ac7a34bc4735854d21d984f4dbf394e574095e2a77c255167bce7bd6b2541e2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:04:01.188825+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "minimax-m2.5-or",
+ "task_name": "note_maturity_date",
+ "data_version": "eb30add6766d24eb13a86e2bff67d83f5733f4e9db8d54ea7e648f5d0aa8512a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:58:04.795180+00:00"
+}

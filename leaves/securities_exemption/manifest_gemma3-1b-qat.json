@@ -1,0 +1,9 @@
+{
+ "leaf": "securities_exemption",
+ "model": "gemma3-1b-qat",
+ "task_name": "securities_exemption",
+ "data_version": "6b94762f6f749454ad603acfa62a975210de74e5896994db014ee0a9e7af86c8",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:34:06.291072+00:00"
+}

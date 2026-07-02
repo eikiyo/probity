@@ -1,0 +1,9 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "minimax-m2.5-or",
+ "task_name": "pre_vs_post_money",
+ "data_version": "edd92b42b4a680d8baf25147ac021c5bf9b8f64189879496525bdcc051327eae",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:15:24.306949+00:00"
+}

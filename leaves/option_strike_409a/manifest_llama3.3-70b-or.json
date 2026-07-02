@@ -1,0 +1,9 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "llama3.3-70b-or",
+ "task_name": "option_strike_409a",
+ "data_version": "117a64e9a2e57c77d88436d301d630cb302fa6a486d763793f5f178d184e761b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:11:42.080904+00:00"
+}

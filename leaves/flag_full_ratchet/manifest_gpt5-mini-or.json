@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "gpt5-mini-or",
+ "task_name": "flag_full_ratchet",
+ "data_version": "d25f0e4644c0f44378756755b15919e89244a4979db41ab57c781c0a5be00d80",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.957943+00:00"
+}

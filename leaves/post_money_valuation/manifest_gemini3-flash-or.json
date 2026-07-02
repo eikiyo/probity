@@ -1,0 +1,9 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "gemini3-flash-or",
+ "task_name": "post_money_valuation",
+ "data_version": "8e42bb2e2c2db6a782f8c6b7b82887da9c4dace9a7189982af0bd333a621e073",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:30:03.275696+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "note_valuation_cap",
+ "model": "gpt5-mini-or",
+ "task_name": "note_valuation_cap",
+ "data_version": "52d0c5ba3e7dc33288c4f7bd54f210e7fdf89fca4d1736e335d395bad8dfa0cd",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:02:00.708993+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "gpt5-mini-or",
+ "task_name": "vesting_acceleration",
+ "data_version": "898ea6e58751d254b2b0c076726ce316e381458f54cdf67fb1dd836b1e2ecdad",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:14:53.505719+00:00"
+}

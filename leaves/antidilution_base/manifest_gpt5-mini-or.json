@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_base",
+ "model": "gpt5-mini-or",
+ "task_name": "antidilution_base",
+ "data_version": "edbe7bdd0fb5b2e77f2877107dcab653f20da9b4fdb1defddf6be9422954bed4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.936044+00:00"
+}

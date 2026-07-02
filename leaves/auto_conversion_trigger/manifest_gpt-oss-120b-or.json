@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "gpt-oss-120b-or",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "5a61d4188c9e0bc58568ec1d9b5a8318b3d3164fe165d85c056af2e9a1c189e3",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:35:30.956797+00:00"
+}

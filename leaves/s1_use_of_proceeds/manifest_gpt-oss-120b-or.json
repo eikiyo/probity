@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_use_of_proceeds",
+ "model": "gpt-oss-120b-or",
+ "task_name": "s1_use_of_proceeds",
+ "data_version": "be92cd1943d5825bafef6cf24ac87bbb9e0400dd3bb322d9acbf5b8cf384bb55",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:02:53.170034+00:00"
+}

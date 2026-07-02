@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "gpt5-mini-or",
+ "task_name": "form_d_fields",
+ "data_version": "04b0743404391a0b917cfe621acb37e23ef8620b3ad5882fbaf4bb9d1c5a9e22",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.975987+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "gpt-oss-120b-or",
+ "task_name": "note_maturity_date",
+ "data_version": "7a4b530b5f2ddb736b3e9453ba4354ca9cefa28b12fbd12318976332536edb0a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:51:23.067136+00:00"
+}

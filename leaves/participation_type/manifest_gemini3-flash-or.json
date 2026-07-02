@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_type",
+ "model": "gemini3-flash-or",
+ "task_name": "participation_type",
+ "data_version": "e68dfa063cb8dea7299a2ccfc555cbfcdb53f72245c0e9b1aefea889b5ce70c5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:32:35.905507+00:00"
+}

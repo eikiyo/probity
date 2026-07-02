@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "llama3.3-70b-or",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "8f4647354e0e3e8525e9b4eeafa056c27e8e86e1da719f2026754452ee69dc54",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:06:11.027892+00:00"
+}

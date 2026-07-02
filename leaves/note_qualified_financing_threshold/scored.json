@@ -214,5 +214,390 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "minimax-m2.5-or": {
+  "model": "minimax/minimax-m2.5",
+  "accuracy": {
+   "task": "note_qualified_financing_threshold",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 16,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 40000000.0,
+       "truth": 40000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 10000000.0,
+       "truth": 10000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_qualified_financing_threshold",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_qualified_financing_threshold": 0.0
+   },
+   "parse_failure_count": 4,
+   "parse_failure_rate": 0.1,
+   "valid_run_count": 36,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "llama3.3-70b-or": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "accuracy": {
+   "task": "note_qualified_financing_threshold",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 40000000.0,
+       "truth": 40000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 10000000.0,
+       "truth": 10000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_qualified_financing_threshold",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_qualified_financing_threshold": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "accuracy": {
+   "task": "note_qualified_financing_threshold",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 13,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 40000000.0,
+       "truth": 40000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 10000000.0,
+       "truth": 10000000.0,
+       "consistency": 0.85
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_qualified_financing_threshold",
+   "consistency_rate": 0.925,
+   "consistency_pct": 92.5,
+   "field_flips": {
+    "note_qualified_financing_threshold": 0.5
+   },
+   "parse_failure_count": 7,
+   "parse_failure_rate": 0.175,
+   "valid_run_count": 33,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemini3-flash-or": {
+  "model": "google/gemini-3-flash-preview",
+  "accuracy": {
+   "task": "note_qualified_financing_threshold",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 40000000.0,
+       "truth": 40000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 10000000.0,
+       "truth": 10000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_qualified_financing_threshold",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_qualified_financing_threshold": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "haiku-4.5-direct": {
+  "model": "claude-haiku-4-5-20251001",
+  "accuracy": {
+   "task": "note_qualified_financing_threshold",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 40000000.0,
+       "truth": 40000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 10000000.0,
+       "truth": 10000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_qualified_financing_threshold",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_qualified_financing_threshold": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt-oss-120b-or": {
+  "model": "openai/gpt-oss-120b",
+  "accuracy": {
+   "task": "note_qualified_financing_threshold",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 40000000.0,
+       "truth": 40000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 10000000.0,
+       "truth": 10000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_qualified_financing_threshold",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_qualified_financing_threshold": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt5-mini-or": {
+  "model": "openai/gpt-5-mini",
+  "accuracy": {
+   "task": "note_qualified_financing_threshold",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 40000000.0,
+       "truth": 40000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_qualified_financing_threshold": {
+       "majority": 10000000.0,
+       "truth": 10000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_qualified_financing_threshold",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_qualified_financing_threshold": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

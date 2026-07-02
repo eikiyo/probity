@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "llama3.3-70b-or",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "399f0091c0ae10a5c20f725b85d677c8f125fbad0e9f98d036294e5c95673df6",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:03:33.154234+00:00"
+}

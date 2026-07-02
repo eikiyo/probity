@@ -1,0 +1,9 @@
+{
+ "leaf": "information_rights",
+ "model": "llama3.3-70b-or",
+ "task_name": "information_rights",
+ "data_version": "ae71dd759fff5b0add1f92706546e199830d702b86a555edb69a665e4308317d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:09:33.909139+00:00"
+}

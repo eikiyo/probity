@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "gpt5-mini-or",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "8362420dde80f9a51cb2f0b9e005539995e4f52fd4ebb04f077677551591a6ea",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.985499+00:00"
+}

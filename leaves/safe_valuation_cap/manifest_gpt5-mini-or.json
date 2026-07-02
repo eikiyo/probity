@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "gpt5-mini-or",
+ "task_name": "safe_valuation_cap",
+ "data_version": "e81d3085f0113553e64b1121b08acf7cf41006dca7b594ca9b100331aa5b179e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:12:54.392489+00:00"
+}

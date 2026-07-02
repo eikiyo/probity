@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "llama3.3-70b-or",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "0d6cec7bab6389b20296ebbfc7009b8f107fe1794a7c0b60675f74a15f3f8b6c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:07:39.744561+00:00"
+}

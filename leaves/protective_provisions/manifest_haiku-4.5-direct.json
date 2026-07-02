@@ -1,0 +1,9 @@
+{
+ "leaf": "protective_provisions",
+ "model": "haiku-4.5-direct",
+ "task_name": "protective_provisions",
+ "data_version": "1ba04925b9e53738d49c536672875ee61839bc65aa7e154dca3debcfdaf4e9b5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:46:41.522477+00:00"
+}

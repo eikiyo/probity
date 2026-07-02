@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "llama3.3-70b-or",
+ "task_name": "drag_along",
+ "data_version": "d5aa5c5da95108c07db6cd682850dc2beba1acd3ecce8b933ca2daed1d36c151",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:06:09.188783+00:00"
+}

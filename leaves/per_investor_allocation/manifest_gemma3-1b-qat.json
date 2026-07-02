@@ -1,0 +1,9 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "gemma3-1b-qat",
+ "task_name": "per_investor_allocation",
+ "data_version": "e00d3658ce2fb197ae4c433a67e450d87239534f190305fd06beb5c1d0e759c8",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:19:48.097403+00:00"
+}

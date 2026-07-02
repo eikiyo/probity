@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_use_of_proceeds",
+ "model": "haiku-4.5-direct",
+ "task_name": "s1_use_of_proceeds",
+ "data_version": "065b6f834357dbce95e8d58b3b4a5f8f46937c66388b576143727acf19b8520d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:47:33.816625+00:00"
+}

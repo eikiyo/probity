@@ -1,0 +1,9 @@
+{
+ "leaf": "note_principal",
+ "model": "gpt-oss-120b-or",
+ "task_name": "note_principal",
+ "data_version": "ab33690f6f9b1f2a0808f8daa72463069ab789041a85faf52e5ae1d256da05fe",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:52:03.550286+00:00"
+}

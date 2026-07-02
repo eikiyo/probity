@@ -1,0 +1,9 @@
+{
+ "leaf": "protective_provisions",
+ "model": "llama3.3-70b-or",
+ "task_name": "protective_provisions",
+ "data_version": "29f581a6782d2c6cda731d6c6325f3447b0d0875715c6d46d4616bb9c4061819",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:14:09.357315+00:00"
+}

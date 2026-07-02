@@ -1,0 +1,9 @@
+{
+ "leaf": "price_per_share",
+ "model": "gpt-oss-120b-or",
+ "task_name": "price_per_share",
+ "data_version": "e68d21c4c275351e65dc2c22e55ff854c82be8274a42a105e67f77cf8d124ce3",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:57:53.667094+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "gpt-oss-120b-or",
+ "task_name": "drag_along",
+ "data_version": "127bb79fb3754e57e9a5c9b3a1d7d2c587067e5decb8c7dbde1766101aacbc43",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:42:27.562538+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "gemma3-1b-qat",
+ "task_name": "investor_ownership_pct",
+ "data_version": "84868d45802ec30548e7a7034359b9689ae894276022bcdc80c96d2e407c17e0",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:13:37.035772+00:00"
+}

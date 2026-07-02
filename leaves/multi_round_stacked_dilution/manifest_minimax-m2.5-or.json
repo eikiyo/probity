@@ -1,0 +1,9 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "minimax-m2.5-or",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "c464fb7209da3ff1f103e18acdcb34f69a7d8c020eb47a7636a6480465de29f8",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:56:53.921234+00:00"
+}

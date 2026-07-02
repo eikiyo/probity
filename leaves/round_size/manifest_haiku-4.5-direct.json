@@ -1,0 +1,9 @@
+{
+ "leaf": "round_size",
+ "model": "haiku-4.5-direct",
+ "task_name": "round_size",
+ "data_version": "804c9cbf06eeb816e3454c4a919117488c85c81f9664101b64bcf87bcd214541",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:47:59.179907+00:00"
+}

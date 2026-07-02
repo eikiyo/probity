@@ -1,0 +1,9 @@
+{
+ "leaf": "price_per_share",
+ "model": "gemini3-flash-or",
+ "task_name": "price_per_share",
+ "data_version": "c9ee688fc74f8d87de36dbdc578a19881b25aa74db9c9531cb82b6e952e6e815",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:31:49.920041+00:00"
+}

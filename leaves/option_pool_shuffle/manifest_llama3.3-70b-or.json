@@ -1,0 +1,9 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "llama3.3-70b-or",
+ "task_name": "option_pool_shuffle",
+ "data_version": "590fc9cab388dc5a7c25710f97404285d342ec8e5fb410affe3b10919b55ad28",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:10:20.727321+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "gemini3-flash-or",
+ "task_name": "s1_risk_factors",
+ "data_version": "978b938def1f746b56dde05d3c83b4e150d77e96104448652422f1c638a52013",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:33:40.210290+00:00"
+}

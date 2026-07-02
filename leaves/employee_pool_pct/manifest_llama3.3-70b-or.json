@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "llama3.3-70b-or",
+ "task_name": "employee_pool_pct",
+ "data_version": "73ea921041e607c77e408a5e9b782bc3fffa61bb5573838b9921b38053d0a8f4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:04:34.068534+00:00"
+}

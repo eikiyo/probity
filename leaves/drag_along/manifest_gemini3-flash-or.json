@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "gemini3-flash-or",
+ "task_name": "drag_along",
+ "data_version": "1b6072bbfc0d5bebb859366b9ddf6c169ffc4c20b699c2dad7b18993bfa94231",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:25:57.704209+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "gpt-oss-120b-or",
+ "task_name": "pro_rata_rights",
+ "data_version": "f467b6b9376943da27534ff7b6d48a5778d44b6a1e18556107ea9bf39ecbc9ea",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:09.263459+00:00"
+}

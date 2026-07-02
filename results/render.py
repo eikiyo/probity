@@ -495,6 +495,7 @@ FAMILY_DISPLAY = {
 
 MODEL_DISPLAY = {
     "gemma3-1b": ("gemma3:1b", "1B, local"),
+    "gemma3-1b-qat": ("gemma3:1b-it-qat", "1B QAT, local"),
     "qwen3.5-27b": ("qwen3.5:27b", "27B, local"),
     "deepseek-v4f": ("deepseek-v4-flash", "hosted"),
     # OpenRouter lineup added 2026-07-02 -- hosted, no local heat/time limit (Eikiyo: "not
@@ -507,6 +508,7 @@ MODEL_DISPLAY = {
     "gemini3-flash-or": ("gemini-3-flash", "hosted (OR)"),
     "gpt-oss-120b-or": ("gpt-oss-120b", "120B, hosted (OR)"),
     "gpt5-mini-or": ("gpt-5-mini", "hosted (OR)"),
+    "haiku-4.5-direct": ("claude-haiku-4.5", "direct API"),
 }
 
 

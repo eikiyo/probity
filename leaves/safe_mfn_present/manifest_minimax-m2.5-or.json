@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "minimax-m2.5-or",
+ "task_name": "safe_mfn_present",
+ "data_version": "c7f8cc90ab7424edce606a6a52251d920ae1c84de8d2e50fac20c5265c70eb33",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:15:53.508180+00:00"
+}

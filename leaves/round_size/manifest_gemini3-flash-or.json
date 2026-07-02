@@ -1,0 +1,9 @@
+{
+ "leaf": "round_size",
+ "model": "gemini3-flash-or",
+ "task_name": "round_size",
+ "data_version": "3f68b767b9c2bbb4b584e815e9f6145dac1e783c0a6e2681d3bc27754737b1d6",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:34:43.247409+00:00"
+}

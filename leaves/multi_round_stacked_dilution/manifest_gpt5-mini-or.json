@@ -1,0 +1,9 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "gpt5-mini-or",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "b91aba303f48efb5f5bda826ce7a9a14e1f2908225bc74938d4af5813e2e95f4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:00:14.754848+00:00"
+}

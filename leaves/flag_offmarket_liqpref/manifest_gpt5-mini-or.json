@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "gpt5-mini-or",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "124d8d179ad4860660636298f77538df8d71e85a69a53a5a6b317fd5816c5203",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.980353+00:00"
+}

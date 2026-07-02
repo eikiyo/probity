@@ -1,0 +1,9 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "gemini3-flash-or",
+ "task_name": "note_maturity_date",
+ "data_version": "a686b42a4f99289b54be6bb52a5ea8524c34c7e7ef77c497c271d541434545cf",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:28:59.708213+00:00"
+}

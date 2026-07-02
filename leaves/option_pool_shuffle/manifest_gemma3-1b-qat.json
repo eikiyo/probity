@@ -1,0 +1,9 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "gemma3-1b-qat",
+ "task_name": "option_pool_shuffle",
+ "data_version": "e4e9f257b0e01d0abfc42bb4cbd3d63f9d3d72e6daa12e79730a7bdc00240f60",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:06:30.821315+00:00"
+}

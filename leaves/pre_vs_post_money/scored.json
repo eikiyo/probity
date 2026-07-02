@@ -1098,5 +1098,1937 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "llama3.3-70b-or": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "accuracy": {
+   "task": "pre_vs_post_money",
+   "n_instances": 19,
+   "n_measurable": 19,
+   "accuracy_majority": 0.9473684210526315,
+   "accuracy_strict": 0.9473684210526315,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 16,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 17,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 18,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "pre_vs_post_money",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "pre_vs_post_money": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 380,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "minimax-m2.5-or": {
+  "model": "minimax/minimax-m2.5",
+  "accuracy": {
+   "task": "pre_vs_post_money",
+   "n_instances": 19,
+   "n_measurable": 19,
+   "accuracy_majority": 0.9473684210526315,
+   "accuracy_strict": 0.9473684210526315,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 7,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 16,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 17,
+     "n_valid": 17,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 18,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "pre_vs_post_money",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "pre_vs_post_money": 0.0
+   },
+   "parse_failure_count": 31,
+   "parse_failure_rate": 0.08157894736842106,
+   "valid_run_count": 349,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "accuracy": {
+   "task": "pre_vs_post_money",
+   "n_instances": 19,
+   "n_measurable": 19,
+   "accuracy_majority": 0.631578947368421,
+   "accuracy_strict": 0.47368421052631576,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "pre-money",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "pre-money",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "pre-money",
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 16,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 17,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 18,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "pre_vs_post_money",
+   "consistency_rate": 0.9263157894736843,
+   "consistency_pct": 92.63157894736842,
+   "field_flips": {
+    "pre_vs_post_money": 0.3157894736842105
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 380,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemini3-flash-or": {
+  "model": "google/gemini-3-flash-preview",
+  "accuracy": {
+   "task": "pre_vs_post_money",
+   "n_instances": 19,
+   "n_measurable": 17,
+   "accuracy_majority": 0.9411764705882353,
+   "accuracy_strict": 0.9411764705882353,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "post-money",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 16,
+     "n_valid": 13,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 17,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 18,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "pre_vs_post_money",
+   "consistency_rate": 0.9764705882352942,
+   "consistency_pct": 97.64705882352942,
+   "field_flips": {
+    "pre_vs_post_money": 0.05263157894736842
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 333,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1998, next call ~$0.0006)"
+  }
+ },
+ "haiku-4.5-direct": {
+  "model": "claude-haiku-4-5-20251001",
+  "accuracy": {
+   "task": "pre_vs_post_money",
+   "n_instances": 19,
+   "n_measurable": 19,
+   "accuracy_majority": 0.9473684210526315,
+   "accuracy_strict": 0.9473684210526315,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 16,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 17,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 18,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "pre_vs_post_money",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "pre_vs_post_money": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 380,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt-oss-120b-or": {
+  "model": "openai/gpt-oss-120b",
+  "accuracy": {
+   "task": "pre_vs_post_money",
+   "n_instances": 19,
+   "n_measurable": 19,
+   "accuracy_majority": 0.9473684210526315,
+   "accuracy_strict": 0.9473684210526315,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "post-money",
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 16,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 17,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 18,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "pre_vs_post_money",
+   "consistency_rate": 0.9763157894736842,
+   "consistency_pct": 97.63157894736842,
+   "field_flips": {
+    "pre_vs_post_money": 0.05263157894736842
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 380,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt5-mini-or": {
+  "model": "openai/gpt-5-mini",
+  "accuracy": {
+   "task": "pre_vs_post_money",
+   "n_instances": 19,
+   "n_measurable": 19,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.8947368421052632,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.85
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 16,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 17,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 18,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "pre_vs_post_money",
+   "consistency_rate": 0.9789473684210527,
+   "consistency_pct": 97.89473684210527,
+   "field_flips": {
+    "pre_vs_post_money": 0.10526315789473684
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 380,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

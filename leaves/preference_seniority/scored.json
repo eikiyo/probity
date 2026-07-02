@@ -678,5 +678,1209 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "llama3.3-70b-or": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "accuracy": {
+   "task": "preference_seniority",
+   "n_instances": 11,
+   "n_measurable": 11,
+   "accuracy_majority": 0.8181818181818182,
+   "accuracy_strict": 0.8181818181818182,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "preference_seniority",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "preference_seniority": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 220,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "minimax-m2.5-or": {
+  "model": "minimax/minimax-m2.5",
+  "accuracy": {
+   "task": "preference_seniority",
+   "n_instances": 11,
+   "n_measurable": 11,
+   "accuracy_majority": 0.8181818181818182,
+   "accuracy_strict": 0.8181818181818182,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 7,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 0.7142857142857143
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 12,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 17,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 8,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "preference_seniority",
+   "consistency_rate": 0.9740259740259741,
+   "consistency_pct": 97.40259740259741,
+   "field_flips": {
+    "preference_seniority": 0.09090909090909091
+   },
+   "parse_failure_count": 40,
+   "parse_failure_rate": 0.18181818181818182,
+   "valid_run_count": 180,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "accuracy": {
+   "task": "preference_seniority",
+   "n_instances": 11,
+   "n_measurable": 11,
+   "accuracy_majority": 0.45454545454545453,
+   "accuracy_strict": 0.45454545454545453,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 0.85
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "preference_seniority",
+   "consistency_rate": 0.9863636363636363,
+   "consistency_pct": 98.63636363636363,
+   "field_flips": {
+    "preference_seniority": 0.09090909090909091
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 220,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemini3-flash-or": {
+  "model": "google/gemini-3-flash-preview",
+  "accuracy": {
+   "task": "preference_seniority",
+   "n_instances": 11,
+   "n_measurable": 11,
+   "accuracy_majority": 0.8181818181818182,
+   "accuracy_strict": 0.8181818181818182,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "preference_seniority",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "preference_seniority": 0.0
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.004545454545454545,
+   "valid_run_count": 219,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "haiku-4.5-direct": {
+  "model": "claude-haiku-4-5-20251001",
+  "accuracy": {
+   "task": "preference_seniority",
+   "n_instances": 11,
+   "n_measurable": 11,
+   "accuracy_majority": 0.8181818181818182,
+   "accuracy_strict": 0.8181818181818182,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 10,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 17,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "preference_seniority",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "preference_seniority": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 220,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt-oss-120b-or": {
+  "model": "openai/gpt-oss-120b",
+  "accuracy": {
+   "task": "preference_seniority",
+   "n_instances": 11,
+   "n_measurable": 11,
+   "accuracy_majority": 0.8181818181818182,
+   "accuracy_strict": 0.7272727272727273,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 0.95
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "preference_seniority",
+   "consistency_rate": 0.9954545454545454,
+   "consistency_pct": 99.54545454545453,
+   "field_flips": {
+    "preference_seniority": 0.09090909090909091
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 220,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt5-mini-or": {
+  "model": "openai/gpt-5-mini",
+  "accuracy": {
+   "task": "preference_seniority",
+   "n_instances": 11,
+   "n_measurable": 11,
+   "accuracy_majority": 0.8181818181818182,
+   "accuracy_strict": 0.8181818181818182,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "preference_seniority",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "preference_seniority": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 220,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

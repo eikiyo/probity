@@ -24,7 +24,7 @@ import harness                                       # noqa: E402
 import scorer                                        # noqa: E402
 import guard as guard_mod                            # noqa: E402
 import manifest as manifest_mod                       # noqa: E402
-from models import OllamaClient, DeepSeekClient, OpenRouterClient  # noqa: E402
+from models import OllamaClient, DeepSeekClient, OpenRouterClient, AnthropicClient  # noqa: E402
 
 # (label, ollama_model_or_None, factory). None ollama_model => hosted (no local unload).
 FAST_SET = [
@@ -47,6 +47,14 @@ def openrouter_model_set(label, model_id):
     guard.ESTIMATED_COST_PER_CALL_USD or it falls back to the most-expensive-known-cost default
     (fail closed on an unrecognized label, see guard.py's module docstring)."""
     return [(label, None, lambda: OpenRouterClient(model_id))]
+
+
+def anthropic_model_set(label, model_id):
+    """One-model hosted set for the direct Anthropic API -- explicitly authorized 2026-07-03
+    (Sec 0.10 override, see models.AnthropicClient's docstring). Same shape as
+    openrouter_model_set() so run_hosted_sweep.py's leaf/worker-parallel machinery works
+    unchanged regardless of which provider backs the label."""
+    return [(label, None, lambda: AnthropicClient(model_id))]
 
 
 def _load_task(leaf_dir):

@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "gemini3-flash-or",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "57cb9b63b8b2a1745eb1fbc128c4c1aa261074f68a348111b1a1d57ebb790fb4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:28:28.163021+00:00"
+}

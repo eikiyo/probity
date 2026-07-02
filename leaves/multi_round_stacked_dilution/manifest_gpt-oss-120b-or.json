@@ -1,0 +1,9 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "gpt-oss-120b-or",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "f589f9367a0339bc75d1ba540ece2cda04f4d156b2aacb4f15cec076e7150cf9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:49:50.639706+00:00"
+}

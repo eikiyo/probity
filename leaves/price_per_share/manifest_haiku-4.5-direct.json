@@ -1,0 +1,9 @@
+{
+ "leaf": "price_per_share",
+ "model": "haiku-4.5-direct",
+ "task_name": "price_per_share",
+ "data_version": "af987d7a1db9da8d2a43bfabb4f2c4a708e3c7f20add3e5285b608cbcac4517d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:44.601698+00:00"
+}

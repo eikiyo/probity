@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_use_of_proceeds",
+ "model": "gemma3-1b-qat",
+ "task_name": "s1_use_of_proceeds",
+ "data_version": "94be876827526dc1846c7b184b6e0b289d652c5a7560c5aa106243d980cedf63",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:28:09.714506+00:00"
+}

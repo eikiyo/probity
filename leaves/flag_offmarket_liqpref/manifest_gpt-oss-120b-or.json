@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "gpt-oss-120b-or",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "7c15e4c3ff1271e5a9647f201a8f706f3f9fa587ca8eb153c290d6c4a7d16bf0",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:46:13.606443+00:00"
+}

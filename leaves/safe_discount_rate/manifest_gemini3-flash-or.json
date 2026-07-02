@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "gemini3-flash-or",
+ "task_name": "safe_discount_rate",
+ "data_version": "ffc775c368591cf8ae315e0dea99b78a555bb3e77eecf46e2ebb78cf3def0c34",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:35:27.810390+00:00"
+}

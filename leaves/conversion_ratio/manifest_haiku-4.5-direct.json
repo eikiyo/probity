@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "haiku-4.5-direct",
+ "task_name": "conversion_ratio",
+ "data_version": "9d7979a84a63b63bed7e602dbf7792227184a93822c682c49fc6ffc3307d7288",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.772797+00:00"
+}

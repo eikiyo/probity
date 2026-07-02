@@ -1,0 +1,9 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "gemini3-flash-or",
+ "task_name": "fully_diluted_basis",
+ "data_version": "fad30bca683776711896b350b7ba3cb3d3980968c223e1b70c9e70860b4ca465",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:27:39.413123+00:00"
+}

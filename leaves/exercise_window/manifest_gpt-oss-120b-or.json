@@ -1,0 +1,9 @@
+{
+ "leaf": "exercise_window",
+ "model": "gpt-oss-120b-or",
+ "task_name": "exercise_window",
+ "data_version": "0577cc0821d262147fa4ea97c534248097dcfc7d897182042ee677efde245974",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:40:45.330047+00:00"
+}

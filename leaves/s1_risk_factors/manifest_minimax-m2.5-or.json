@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "minimax-m2.5-or",
+ "task_name": "s1_risk_factors",
+ "data_version": "f8d7972fce193988ee3782e7739a8a61a9b1239fc55659eb2b2d2a0ae19e663f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:06:03.193070+00:00"
+}

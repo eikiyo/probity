@@ -1,0 +1,9 @@
+{
+ "leaf": "exercise_window",
+ "model": "minimax-m2.5-or",
+ "task_name": "exercise_window",
+ "data_version": "9d7b2c8ba6846d78730530c0821401346c7e0d5266e9f563a77dc85da5cf9630",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:48:53.031457+00:00"
+}

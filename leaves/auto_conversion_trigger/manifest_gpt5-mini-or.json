@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "gpt5-mini-or",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "ec04a27f46a1e2b3e7d001dd0bfbce810e8000ce5dfe9fa74c5906a1696ef4a6",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:59:59.926514+00:00"
+}

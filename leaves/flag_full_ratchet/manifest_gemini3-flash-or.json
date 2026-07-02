@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "gemini3-flash-or",
+ "task_name": "flag_full_ratchet",
+ "data_version": "5207c99ccb24d7f5ab661179ddd885825ad541af37de67178d57c8383c06c89b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:26:03.427275+00:00"
+}

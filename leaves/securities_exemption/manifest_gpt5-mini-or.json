@@ -1,0 +1,9 @@
+{
+ "leaf": "securities_exemption",
+ "model": "gpt5-mini-or",
+ "task_name": "securities_exemption",
+ "data_version": "53dc69513ccaff13374e3877b99896cd2d881c46ee0de9c92f4cf1a51102cafc",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:16:43.602510+00:00"
+}

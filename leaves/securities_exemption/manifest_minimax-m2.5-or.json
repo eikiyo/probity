@@ -1,0 +1,9 @@
+{
+ "leaf": "securities_exemption",
+ "model": "minimax-m2.5-or",
+ "task_name": "securities_exemption",
+ "data_version": "181392e893a1ee93805cddfb51a46c64659192a9c74ad332f73a2ec9fc108ad7",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:23:07.783261+00:00"
+}

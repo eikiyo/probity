@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_base",
+ "model": "haiku-4.5-direct",
+ "task_name": "antidilution_base",
+ "data_version": "77b15b6f327141c0c0cb9c7f803fc5434b19828129a153571b3e07af2b3172bc",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:45:41.756914+00:00"
+}

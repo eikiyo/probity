@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "haiku-4.5-direct",
+ "task_name": "safe_valuation_cap",
+ "data_version": "47d4d1cf26436daac6cf8205c22e31ff887961aed4ce5b73e3de6002e7a30122",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:49:08.443619+00:00"
+}

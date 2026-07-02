@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "gemini3-flash-or",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "55d05bbd5b6db853306c3162388f6f04f289dc397d0c0906f351714ea47bca76",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:25:46.901460+00:00"
+}

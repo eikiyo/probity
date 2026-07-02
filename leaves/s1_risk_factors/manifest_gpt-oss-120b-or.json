@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "gpt-oss-120b-or",
+ "task_name": "s1_risk_factors",
+ "data_version": "ff27d5044eb55a84b66352489f803013d36d094b9a0197495b99f2ed8581a118",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:02:31.153572+00:00"
+}

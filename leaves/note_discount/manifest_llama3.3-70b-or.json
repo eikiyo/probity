@@ -1,0 +1,9 @@
+{
+ "leaf": "note_discount",
+ "model": "llama3.3-70b-or",
+ "task_name": "note_discount",
+ "data_version": "9d52ea47759fa4993b2bc186222c272f463ad84cac088e38e5eb65b985de1dcd",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:09:40.109761+00:00"
+}

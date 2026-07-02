@@ -366,5 +366,663 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "minimax-m2.5-or": {
+  "model": "minimax/minimax-m2.5",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 13,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 0.9230769230769231
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 14,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 1650000.0,
+       "truth": 1650000.0,
+       "consistency": 0.9285714285714286
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 0.9703296703296704,
+   "consistency_pct": 97.03296703296704,
+   "field_flips": {
+    "per_investor_allocation": 0.4
+   },
+   "parse_failure_count": 13,
+   "parse_failure_rate": 0.13,
+   "valid_run_count": 87,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "llama3.3-70b-or": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 1650000.0,
+       "truth": 1650000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "per_investor_allocation": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.4,
+   "accuracy_strict": 0.4,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 94182.0,
+       "truth": 9418200.0,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 1650000.0,
+       "consistency": 0.9473684210526315
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 3000000.0,
+       "consistency": 0.9473684210526315
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 0.8989473684210527,
+   "consistency_pct": 89.89473684210527,
+   "field_flips": {
+    "per_investor_allocation": 0.6
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.02,
+   "valid_run_count": 98,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemini3-flash-or": {
+  "model": "google/gemini-3-flash-preview",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.8,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 0.65
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 1650000.0,
+       "truth": 1650000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 0.93,
+   "consistency_pct": 93.0,
+   "field_flips": {
+    "per_investor_allocation": 0.2
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "haiku-4.5-direct": {
+  "model": "claude-haiku-4-5-20251001",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 1650000.0,
+       "truth": 1650000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "per_investor_allocation": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt-oss-120b-or": {
+  "model": "openai/gpt-oss-120b",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 1650000.0,
+       "truth": 1650000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "per_investor_allocation": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt5-mini-or": {
+  "model": "openai/gpt-5-mini",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 1650000.0,
+       "truth": 1650000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "per_investor_allocation": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

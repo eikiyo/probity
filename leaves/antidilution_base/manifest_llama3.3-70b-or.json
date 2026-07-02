@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_base",
+ "model": "llama3.3-70b-or",
+ "task_name": "antidilution_base",
+ "data_version": "24db88ecd991a127d384f7d769c26d17abe68e62628e1c964905e214ce040765",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:04:20.589604+00:00"
+}

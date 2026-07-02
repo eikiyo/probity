@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "minimax-m2.5-or",
+ "task_name": "financial_statement_qa",
+ "data_version": "f2fba3fec3ea8b5ee0dffbe0bab0b68be9fd3508c8f9e8305403a70e3b0e5514",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:54:01.801671+00:00"
+}

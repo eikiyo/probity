@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "llama3.3-70b-or",
+ "task_name": "vesting_acceleration",
+ "data_version": "84bffea87a1759fe8426e19209331d64a9a66579a90ebd8d9d62b16244b549e5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:19:47.060782+00:00"
+}

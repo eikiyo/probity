@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "llama3.3-70b-or",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "861186e94f646f08fab477da9f7b23cc3e35e50b4a457cf63005d277bc989922",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:09:36.775809+00:00"
+}

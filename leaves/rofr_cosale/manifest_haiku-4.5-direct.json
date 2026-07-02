@@ -1,0 +1,9 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "haiku-4.5-direct",
+ "task_name": "rofr_cosale",
+ "data_version": "5db23b4c285163b3b16a5f226f3e6dd003a3a2f1726c350ae8acc8328c826984",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:47:34.783729+00:00"
+}

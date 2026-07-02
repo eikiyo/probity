@@ -1,0 +1,9 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "gpt-oss-120b-or",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "fc5c136611da7e3a1df303e905f32df63f95d191a72e0e3db12039f52c3afae9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:51:31.454994+00:00"
+}

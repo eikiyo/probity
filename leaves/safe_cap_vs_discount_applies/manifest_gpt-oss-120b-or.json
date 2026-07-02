@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "gpt-oss-120b-or",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "26f611c618fa680ba30652951800c35cdc6472438cf1033810eeaf46811490e3",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:16:55.327241+00:00"
+}

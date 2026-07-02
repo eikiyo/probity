@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "gemini3-flash-or",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "7d3b62804834b923be9dfe009f8f5ddecbaa8427af6ede835646591d598e9fa9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:37:47.944990+00:00"
+}

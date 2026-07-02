@@ -1,0 +1,9 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "gemini3-flash-or",
+ "task_name": "rofr_cosale",
+ "data_version": "48fa2ddd9c0a46fe23a983856c462f5c0ffbbd0955ddd62944e4c68f4a390974",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:34:33.807135+00:00"
+}

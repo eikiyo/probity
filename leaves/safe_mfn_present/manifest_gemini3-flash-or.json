@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "gemini3-flash-or",
+ "task_name": "safe_mfn_present",
+ "data_version": "ee0218b664b34c8b23c3f118c5c69cdf85fbfe48392ff9ea89e3caf94bfaae9e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:35:13.818633+00:00"
+}

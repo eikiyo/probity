@@ -1,0 +1,9 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "llama3.3-70b-or",
+ "task_name": "current_ownership_pct",
+ "data_version": "574c3ed49710fe21c667ce8e1d08c8af3020f2f7e7e110f39a2aa96f4d1e0eb1",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:05:25.615010+00:00"
+}

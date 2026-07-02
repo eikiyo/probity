@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "gpt-oss-120b-or",
+ "task_name": "safe_valuation_cap",
+ "data_version": "8eeeb5c666661e4e125652602279772e6d386af264b8f43ad6071660269e73d1",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:07:09.630137+00:00"
+}

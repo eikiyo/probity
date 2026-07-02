@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_type",
+ "model": "llama3.3-70b-or",
+ "task_name": "participation_type",
+ "data_version": "f64deceace1d0fbebf1dd885cd485fff304a2b32101c0e9f72bae5a8bfa9b0ac",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:13:53.065883+00:00"
+}

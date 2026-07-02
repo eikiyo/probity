@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "llama3.3-70b-or",
+ "task_name": "dividend_cumulative",
+ "data_version": "166f42465e36d8a75f3c12d02124b61a0a41f8829d20b0a901ca511db2a3288e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T22:07:09.952293+00:00"
+}

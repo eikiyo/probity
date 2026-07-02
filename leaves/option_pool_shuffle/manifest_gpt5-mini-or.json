@@ -1,0 +1,9 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "gpt5-mini-or",
+ "task_name": "option_pool_shuffle",
+ "data_version": "699a1afa59e1a46727bfadafda9b5e249e53b454a4ca3ccf4e270ca0c9c8c77d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:02:24.437431+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "minimax-m2.5-or",
+ "task_name": "investor_ownership_pct",
+ "data_version": "a4e6a3276457609e4e69b006775a4b146fb7191efe338bd4d84727d10d98cbe3",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T23:15:22.294150+00:00"
+}
