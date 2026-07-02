@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "gemma3-1b",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "c9ca2f3575be553e1593433820ae849c3774e658b625e4ae46286df2f768da14",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:27:32.234204+00:00"
+}

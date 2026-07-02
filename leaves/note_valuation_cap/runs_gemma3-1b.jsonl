@@ -1,6 +1,6 @@
 {"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "damon_tranche_19to22", "parsed": {"note_valuation_cap": 1250000}, "normalized": {"note_valuation_cap": 1250000.0}}
 {"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "damon_tranche_19to22", "parsed": {"note_valuation_cap": 1250000}, "normalized": {"note_valuation_cap": 1250000.0}}
-{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "damon_tranche_19to22", "raw_output": "{\"note\\_valuation_cap\": 12500000}\n", "parsed": null}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "damon_tranche_19to22", "raw_output": "{\"note\\_valuation_cap\": 12500000}\n", "parsed": {"note_valuation_cap": 12500000}, "normalized": {"note_valuation_cap": 12500000.0}}
 {"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "damon_tranche_19to22", "parsed": {"note_valuation_cap": 1250000}, "normalized": {"note_valuation_cap": 1250000.0}}
 {"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "item_id": "damon_tranche_19to22", "parsed": {"note_valuation_cap": 1250000}, "normalized": {"note_valuation_cap": 1250000.0}}
 {"_key": [0, 5], "instance_idx": 0, "run_idx": 5, "item_id": "damon_tranche_19to22", "raw_output": "{\"note_valuation_cap\": 12500000\"}", "parsed": null}
@@ -21,13 +21,13 @@
 {"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
 {"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
 {"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
-{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "item_id": "realpha_cap_definition", "raw_output": "{\"note\\_valuation_cap\": \"25000000\"}", "parsed": null}
+{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "item_id": "realpha_cap_definition", "raw_output": "{\"note\\_valuation_cap\": \"25000000\"}", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
 {"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
 {"_key": [1, 5], "instance_idx": 1, "run_idx": 5, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
 {"_key": [1, 6], "instance_idx": 1, "run_idx": 6, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
 {"_key": [1, 7], "instance_idx": 1, "run_idx": 7, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
 {"_key": [1, 8], "instance_idx": 1, "run_idx": 8, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
-{"_key": [1, 9], "instance_idx": 1, "run_idx": 9, "item_id": "realpha_cap_definition", "raw_output": "{\"note\\_valuation\\_cap\": \"25000000\"}", "parsed": null}
+{"_key": [1, 9], "instance_idx": 1, "run_idx": 9, "item_id": "realpha_cap_definition", "raw_output": "{\"note\\_valuation\\_cap\": \"25000000\"}", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
 {"_key": [1, 10], "instance_idx": 1, "run_idx": 10, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
 {"_key": [1, 11], "instance_idx": 1, "run_idx": 11, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}
 {"_key": [1, 12], "instance_idx": 1, "run_idx": 12, "item_id": "realpha_cap_definition", "parsed": {"note_valuation_cap": "25000000"}, "normalized": {"note_valuation_cap": 25000000.0}}

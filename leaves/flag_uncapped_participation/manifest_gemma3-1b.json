@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "gemma3-1b",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "b0d7bc3401886019aa11f546cd2e941a5eec4288beb0d6128e8f3223f2fa2f39",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:27:32.340848+00:00"
+}

@@ -23,7 +23,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 1,
+     "n_valid": 2,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -36,46 +36,46 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 14,
+     "n_valid": 18,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "liquidation_preference_multiple": {
        "majority": "other",
        "truth": "1x",
-       "consistency": 0.9285714285714286
+       "consistency": 0.9444444444444444
       }
      }
     },
     {
      "instance_idx": 3,
-     "n_valid": 9,
+     "n_valid": 14,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "liquidation_preference_multiple": {
        "majority": "other",
        "truth": "2x",
-       "consistency": 0.8888888888888888
+       "consistency": 0.9285714285714286
       }
      }
     },
     {
      "instance_idx": 4,
-     "n_valid": 16,
+     "n_valid": 17,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "liquidation_preference_multiple": {
        "majority": "other",
        "truth": "2x",
-       "consistency": 0.75
+       "consistency": 0.7647058823529411
       }
      }
     },
     {
      "instance_idx": 5,
-     "n_valid": 13,
+     "n_valid": 15,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -88,27 +88,27 @@
     },
     {
      "instance_idx": 6,
-     "n_valid": 4,
+     "n_valid": 16,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "liquidation_preference_multiple": {
        "majority": "other",
        "truth": "3x",
-       "consistency": 1.0
+       "consistency": 0.9375
       }
      }
     },
     {
      "instance_idx": 7,
-     "n_valid": 11,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "liquidation_preference_multiple": {
        "majority": "other",
        "truth": "3x",
-       "consistency": 0.9090909090909091
+       "consistency": 0.95
       }
      }
     },
@@ -129,16 +129,20 @@
   },
   "reliability": {
    "task": "liquidation_preference_multiple",
-   "consistency_rate": 0.9359910719559841,
-   "consistency_pct": 93.5991071955984,
+   "consistency_rate": 0.9413989084912716,
+   "consistency_pct": 94.13989084912716,
    "field_flips": {
-    "liquidation_preference_multiple": 0.5555555555555556
+    "liquidation_preference_multiple": 0.6666666666666666
    },
-   "parse_failure_count": 36,
-   "parse_failure_rate": 0.2,
-   "valid_run_count": 144,
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.011111111111111112,
+   "valid_run_count": 178,
    "measurable": true,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "deepseek-v4f": {
@@ -440,7 +444,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 15,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -466,7 +470,7 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 8,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -479,14 +483,14 @@
     },
     {
      "instance_idx": 3,
-     "n_valid": 2,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "liquidation_preference_multiple": {
-       "majority": "other",
+       "majority": "1x",
        "truth": "2x",
-       "consistency": 0.5
+       "consistency": 0.9
       }
      }
     },
@@ -518,7 +522,7 @@
     },
     {
      "instance_idx": 6,
-     "n_valid": 1,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -531,7 +535,7 @@
     },
     {
      "instance_idx": 7,
-     "n_valid": 11,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -559,15 +563,15 @@
   },
   "reliability": {
    "task": "liquidation_preference_multiple",
-   "consistency_rate": 0.9444444444444444,
-   "consistency_pct": 94.44444444444444,
+   "consistency_rate": 0.9888888888888889,
+   "consistency_pct": 98.88888888888889,
    "field_flips": {
     "liquidation_preference_multiple": 0.1111111111111111
    },
-   "parse_failure_count": 63,
-   "parse_failure_rate": 0.35,
-   "valid_run_count": 117,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

@@ -10,14 +10,14 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 17,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "employee_pool_pct": {
        "majority": 10.0,
        "truth": 9.5,
-       "consistency": 0.47058823529411764
+       "consistency": 0.45
       }
      }
     }
@@ -25,16 +25,20 @@
   },
   "reliability": {
    "task": "employee_pool_pct",
-   "consistency_rate": 0.47058823529411764,
-   "consistency_pct": 47.05882352941176,
+   "consistency_rate": 0.45,
+   "consistency_pct": 45.0,
    "field_flips": {
     "employee_pool_pct": 1.0
    },
-   "parse_failure_count": 3,
-   "parse_failure_rate": 0.15,
-   "valid_run_count": 17,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 20,
    "measurable": true,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "deepseek-v4f": {
@@ -122,20 +126,20 @@
   "accuracy": {
    "task": "employee_pool_pct",
    "n_instances": 1,
-   "n_measurable": 0,
-   "accuracy_majority": 0.0,
-   "accuracy_strict": 0.0,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "employee_pool_pct": {
-       "majority": null,
+       "majority": 9.5,
        "truth": 9.5,
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     }
@@ -143,15 +147,15 @@
   },
   "reliability": {
    "task": "employee_pool_pct",
-   "consistency_rate": 0.0,
-   "consistency_pct": 0.0,
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
    "field_flips": {
     "employee_pool_pct": 0.0
    },
-   "parse_failure_count": 20,
-   "parse_failure_rate": 1.0,
-   "valid_run_count": 0,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 20,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

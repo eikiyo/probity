@@ -10,7 +10,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 14,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -23,7 +23,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 18,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -62,14 +62,14 @@
     },
     {
      "instance_idx": 4,
-     "n_valid": 18,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "flag_full_ratchet": {
        "majority": "yes",
        "truth": "no",
-       "consistency": 0.9444444444444444
+       "consistency": 0.95
       }
      }
     },
@@ -103,16 +103,20 @@
   },
   "reliability": {
    "task": "flag_full_ratchet",
-   "consistency_rate": 0.9777777777777779,
-   "consistency_pct": 97.77777777777779,
+   "consistency_rate": 0.9785714285714286,
+   "consistency_pct": 97.85714285714286,
    "field_flips": {
     "flag_full_ratchet": 0.2857142857142857
    },
-   "parse_failure_count": 10,
-   "parse_failure_rate": 0.07142857142857142,
-   "valid_run_count": 130,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
    "measurable": true,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "deepseek-v4f": {
@@ -356,13 +360,13 @@
   "accuracy": {
    "task": "flag_full_ratchet",
    "n_instances": 7,
-   "n_measurable": 6,
+   "n_measurable": 7,
    "accuracy_majority": 1.0,
    "accuracy_strict": 1.0,
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 16,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -375,7 +379,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 17,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -388,20 +392,20 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "flag_full_ratchet": {
-       "majority": null,
+       "majority": "yes",
        "truth": "yes",
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 3,
-     "n_valid": 15,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -427,7 +431,7 @@
     },
     {
      "instance_idx": 5,
-     "n_valid": 3,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -440,7 +444,7 @@
     },
     {
      "instance_idx": 6,
-     "n_valid": 7,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -460,10 +464,10 @@
    "field_flips": {
     "flag_full_ratchet": 0.0
    },
-   "parse_failure_count": 62,
-   "parse_failure_rate": 0.44285714285714284,
-   "valid_run_count": 78,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

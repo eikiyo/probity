@@ -16,7 +16,7 @@
 {"_key": [0, 15], "instance_idx": 0, "run_idx": 15, "item_id": "0001125282-06-006236_0p03", "raw_output": "<number>", "parsed": null}
 {"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "item_id": "0001125282-06-006236_0p03", "raw_output": "\u201c0.25\u201d", "parsed": null}
 {"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "item_id": "0001125282-06-006236_0p03", "raw_output": "<number>\n", "parsed": null}
-{"_key": [0, 18], "instance_idx": 0, "run_idx": 18, "item_id": "0001125282-06-006236_0p03", "raw_output": "0.03", "parsed": null}
+{"_key": [0, 18], "instance_idx": 0, "run_idx": 18, "item_id": "0001125282-06-006236_0p03", "raw_output": "0.03", "parsed": {"option_strike_409a": "0.03"}, "normalized": {"option_strike_409a": 0.03}}
 {"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "item_id": "0001125282-06-006236_0p03", "parsed": {"option_strike_409a": 0.25}, "normalized": {"option_strike_409a": 0.25}}
 {"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "0001125282-06-006236_0p25", "parsed": {"option_strike_409a": "0.25"}, "normalized": {"option_strike_409a": 0.25}}
 {"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "0001125282-06-006236_0p25", "parsed": {"option_strike_409a": 0.25}, "normalized": {"option_strike_409a": 0.25}}

@@ -2,8 +2,8 @@
  "leaf": "financial_statement_qa",
  "model": "mistral-large-or",
  "task_name": "financial_statement_qa",
- "data_version": "79d0809509d3d548a353b512092795dfa56ae8494738b0c452ce2f0ef8efb9bd",
+ "data_version": "75c7bd3f94fbb49441af23f05330900f6556911a5e2ba81b02a125e3b33271f8",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:08:06.829081+00:00"
+ "timestamp": "2026-07-02T21:32:40.872726+00:00"
 }

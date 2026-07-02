@@ -2,8 +2,8 @@
  "leaf": "price_per_share",
  "model": "mistral-large-or",
  "task_name": "price_per_share",
- "data_version": "5a8265ce1dfb4d735cafde6b7240fcab01b87cdce1af317138c7be35e446ff47",
+ "data_version": "64879af3f4648ed3453810c46d5e803ac82a3a7e001523dc1a7a831de05e2146",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:14:06.901513+00:00"
+ "timestamp": "2026-07-02T21:33:00.262353+00:00"
 }

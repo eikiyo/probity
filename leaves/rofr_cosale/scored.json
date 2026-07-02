@@ -551,13 +551,13 @@
   "accuracy": {
    "task": "rofr_cosale",
    "n_instances": 12,
-   "n_measurable": 11,
-   "accuracy_majority": 0.8181818181818182,
-   "accuracy_strict": 0.8181818181818182,
+   "n_measurable": 12,
+   "accuracy_majority": 0.8333333333333334,
+   "accuracy_strict": 0.8333333333333334,
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 12,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -570,14 +570,14 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "rofr_cosale": {
-       "majority": null,
+       "majority": "yes",
        "truth": "yes",
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
@@ -609,7 +609,7 @@
     },
     {
      "instance_idx": 4,
-     "n_valid": 4,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -622,7 +622,7 @@
     },
     {
      "instance_idx": 5,
-     "n_valid": 8,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -648,7 +648,7 @@
     },
     {
      "instance_idx": 7,
-     "n_valid": 11,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -661,7 +661,7 @@
     },
     {
      "instance_idx": 8,
-     "n_valid": 1,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -687,7 +687,7 @@
     },
     {
      "instance_idx": 10,
-     "n_valid": 11,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -700,7 +700,7 @@
     },
     {
      "instance_idx": 11,
-     "n_valid": 1,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -720,10 +720,10 @@
    "field_flips": {
     "rofr_cosale": 0.0
    },
-   "parse_failure_count": 112,
-   "parse_failure_rate": 0.4666666666666667,
-   "valid_run_count": 128,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

@@ -16,9 +16,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **72%** | 89% | 33% | 18/18 | 312/360 (87%) |
+| `gemma3:1b` | 1B | **83%** | 89% | 33% | 18/18 | 340/360 (94%) |
 | `deepseek-v4-flash` | hosted | **11%** | 98% | 67% | 18/18 | 342/360 (95%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
+| `mistralai/mistral-large-2512` | ? | **6%** | 98% | 72% | 18/18 | 360/360 (100%) |
 
 **What the columns mean:**
 
@@ -36,12 +37,14 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 0/6 | 6/7 | 0/5 |
 | `deepseek-v4-flash` | 1/6 | 6/7 | 5/5 |
 | `google/gemma-4-31b-it` | 2/6 | 6/7 | 5/5 |
+| `mistralai/mistral-large-2512` | 1/6 | 7/7 | 5/5 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | EndoStim, Inc. | non-participating | medium | 1B |
+| Interlink Electronics  | non-participating | easy | 1B |
 | Pfenex Inc. | participating | hard | 1B |
 | Sonos Inc | non-participating | easy | 1B |
 | Enservco Corp | non-participating | easy | 1B |
@@ -49,7 +52,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Entercom Communication | non-participating | hard | 1B |
 | scPharmaceuticals Inc. | participating | medium | 1B |
 | Akouos, Inc. | participating | medium | 1B |
-| Jazz Semiconductor Inc | capped | medium | hosted |
+| IESI Corp | participating | hard | mistral-large-or |
+| Jazz Semiconductor Inc | capped | medium | 1B, hosted |
 | The Medicines Co (Remp | capped | medium | 1B |
 | Fitbit Inc | capped | hard | 1B |
 | Workday, Inc. | capped | medium | 1B |
@@ -76,9 +80,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **6%** | 99% | 62% | 16/16 | 189/320 (59%) |
+| `gemma3:1b` | 1B | **6%** | 99% | 62% | 16/16 | 320/320 (100%) |
 | `deepseek-v4-flash` | hosted | **19%** | 99% | 100% | 16/16 | 320/320 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 
 **What the columns mean:**
 
@@ -96,6 +101,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 10/10 | 0/6 |
 | `deepseek-v4-flash` | 10/10 | 6/6 |
 | `google/gemma-4-31b-it` | 10/10 | 6/6 |
+| `mistralai/mistral-large-2512` | 10/10 | 6/6 |
 
 ### Which items make models wobble
 
@@ -131,7 +137,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **44%** | 93% | 88% | 16/16 | 320/320 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 14/16 | 186/320 (58%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 
 **What the columns mean:**
 
@@ -149,7 +155,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 7/8 | 7/8 |
 | `deepseek-v4-flash` | 8/8 | 8/8 |
 | `google/gemma-4-31b-it` | 8/8 | 8/8 |
-| `mistralai/mistral-large-2512` | 8/8 | 6/6 |
+| `mistralai/mistral-large-2512` | 8/8 | 8/8 |
 
 ### Which items make models wobble
 
@@ -160,8 +166,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | FS Credit Opportunitie | cumulative | hard | 1B |
 | IMPEL NEUROPHARMA INC | non-cumulative | easy | 1B |
 | Teladoc, Inc. | non-cumulative | easy | 1B |
-| Akouos, Inc. | non-cumulative | medium | mistral-large-or |
-| Eiger BioPharmaceutica | non-cumulative | medium | 1B, mistral-large-or |
+| Eiger BioPharmaceutica | non-cumulative | medium | 1B |
 | scPharmaceuticals Inc. | non-cumulative | easy | 1B |
 
 ## What this shows
@@ -184,7 +189,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **46%** | 97% | 85% | 13/13 | 259/260 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 10/13 | 163/260 (63%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -202,18 +207,18 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 4/6 | 7/7 |
 | `deepseek-v4-flash` | 6/6 | 7/7 |
 | `google/gemma-4-31b-it` | 6/6 | 7/7 |
-| `mistralai/mistral-large-2512` | 4/4 | 6/6 |
+| `mistralai/mistral-large-2512` | 6/6 | 7/7 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | GIBRALTAR INDUSTRIES,  | double-trigger | hard | 1B |
-| Vulcan Materials CO | double-trigger | hard | 1B, mistral-large-or |
+| Vulcan Materials CO | double-trigger | hard | 1B |
 | Nimble Storage Inc | single-trigger | medium | 1B |
-| LogicMark, Inc. | single-trigger | easy | 1B, mistral-large-or |
+| LogicMark, Inc. | single-trigger | easy | 1B |
 | COMSCORE, INC. | single-trigger | hard | 1B |
-| REVVITY, INC. | single-trigger | easy | 1B, mistral-large-or |
+| REVVITY, INC. | single-trigger | easy | 1B |
 
 ## What this shows
 
@@ -235,7 +240,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **45%** | 97% | 45% | 11/11 | 215/220 (98%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 75% | 8/11 | 116/220 (53%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
 
 **What the columns mean:**
 
@@ -253,19 +258,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 0/6 | 5/5 |
 | `deepseek-v4-flash` | 4/6 | 5/5 |
 | `google/gemma-4-31b-it` | 4/6 | 5/5 |
-| `mistralai/mistral-large-2512` | 3/5 | 3/3 |
+| `mistralai/mistral-large-2512` | 4/6 | 5/5 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| IESI CORP | stacked | medium | mistral-large-or |
 | Banks.com, Inc. | stacked | medium | 1B |
 | Teladoc, Inc. | stacked | easy | 1B |
-| AMERICAN POWER GROUP C | stacked | easy | mistral-large-or |
 | VioQuest Pharmaceutica | pari-passu | easy | 1B |
 | RIGHT START INC /CA | pari-passu | medium | 1B |
-| PRECOM TECHNOLOGY INC | pari-passu | hard | 1B, mistral-large-or |
+| PRECOM TECHNOLOGY INC | pari-passu | hard | 1B |
 
 ## What this shows
 
@@ -287,7 +290,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **40%** | 95% | 40% | 10/10 | 197/200 (98%) |
 | `deepseek-v4-flash` | hosted | **10%** | 99% | 90% | 10/10 | 200/200 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 88% | 8/10 | 110/200 (55%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -305,7 +308,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 3/5 | 1/5 |
 | `deepseek-v4-flash` | 5/5 | 4/5 |
 | `google/gemma-4-31b-it` | 5/5 | 5/5 |
-| `mistralai/mistral-large-2512` | 5/5 | 2/3 |
+| `mistralai/mistral-large-2512` | 5/5 | 4/5 |
 
 ### Which items make models wobble
 
@@ -313,9 +316,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | MELINTA THERAPEUTICS,  | yes | easy | 1B |
 | Lulu's Fashion Lounge  | yes | hard | 1B |
-| Akouos, Inc. | no | easy | mistral-large-or |
 | Workday, Inc. | no | hard | 1B, hosted |
-| ENDOSTIM, INC. | no | easy | 1B, mistral-large-or |
+| ENDOSTIM, INC. | no | easy | 1B |
 
 ## What this shows
 
@@ -337,7 +339,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **20%** | 97% | 50% | 10/10 | 200/200 (100%) |
 | `deepseek-v4-flash` | hosted | **10%** | 96% | 100% | 10/10 | 200/200 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 10/10 | 116/200 (58%) |
+| `mistralai/mistral-large-2512` | ? | **10%** | 98% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -363,7 +365,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | Lulu's Fashion Lounge  | yes | medium | 1B |
 | Tenable Holdings, Inc. | yes | medium | 1B |
-| Pfenex Inc. | yes | hard | hosted |
+| Pfenex Inc. | yes | hard | hosted, mistral-large-or |
 
 ## What this shows
 
@@ -384,7 +386,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **17%** | 99% | 42% | 12/12 | 238/240 (99%) |
 | `deepseek-v4-flash` | hosted | **8%** | 97% | 100% | 12/12 | 240/240 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 91% | 11/12 | 144/240 (60%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -402,7 +404,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 4/6 | 1/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
 | `google/gemma-4-31b-it` | 6/6 | 6/6 |
-| `mistralai/mistral-large-2512` | 5/6 | 5/5 |
+| `mistralai/mistral-large-2512` | 5/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -410,7 +412,6 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | TRUMP ENTERTAINMENT RE | yes | easy | 1B, hosted |
 | LOEWS CINEPLEX ENTERTA | yes | medium | 1B |
-| ACCELERON PHARMA INC | no | easy | mistral-large-or |
 
 ## What this shows
 
@@ -431,6 +432,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **17%** | 98% | 67% | 12/12 | 238/240 (99%) |
 | `deepseek-v4-flash` | hosted | **17%** | 94% | 92% | 12/12 | 240/240 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -448,6 +450,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 6/6 | 2/6 |
 | `deepseek-v4-flash` | 6/6 | 5/6 |
 | `google/gemma-4-31b-it` | 6/6 | 4/6 |
+| `mistralai/mistral-large-2512` | 6/6 | 4/6 |
 
 ### Which items make models wobble
 
@@ -472,10 +475,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **17%** | 96% | 100% | 12/12 | 165/240 (69%) |
+| `gemma3:1b` | 1B | **33%** | 92% | 100% | 12/12 | 239/240 (100%) |
 | `deepseek-v4-flash` | hosted | **8%** | 100% | 100% | 12/12 | 240/240 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **8%** | 96% | 100% | 11/12 | 152/240 (63%) |
+| `mistralai/mistral-large-2512` | ? | **8%** | 97% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -493,7 +496,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 6/6 | 6/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
 | `google/gemma-4-31b-it` | 6/6 | 6/6 |
-| `mistralai/mistral-large-2512` | 6/6 | 5/5 |
+| `mistralai/mistral-large-2512` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -501,12 +504,14 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | SOS Hydration Inc. | yes | medium | 1B, hosted |
 | Cantabio Pharmaceutica | yes | medium | mistral-large-or |
-| Hoku Scientific, Inc. | no | easy | mistral-large-or |
+| Supernus Pharmaceutica | no | easy | 1B |
 | Infinity Pharmaceutica | no | easy | 1B |
+| Xcyte Therapies, Inc. | no | hard | 1B |
 
 ## What this shows
 
-- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–33% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
@@ -523,7 +528,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **17%** | 96% | 67% | 12/12 | 239/240 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 11/12 | 157/240 (65%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -541,13 +546,13 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 6/6 | 2/6 |
 | `deepseek-v4-flash` | 6/6 | 5/6 |
 | `google/gemma-4-31b-it` | 6/6 | 6/6 |
-| `mistralai/mistral-large-2512` | 5/5 | 6/6 |
+| `mistralai/mistral-large-2512` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Interval Leisure Group | yes | medium | 1B, mistral-large-or |
+| Interval Leisure Group | yes | medium | 1B |
 | World Heart Corp | no | hard | 1B |
 
 ## What this shows
@@ -566,10 +571,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **17%** | 97% | 58% | 12/12 | 239/240 (100%) |
+| `gemma3:1b` | 1B | **17%** | 97% | 58% | 12/12 | 240/240 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 11/12 | 155/240 (65%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -587,7 +592,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 6/6 | 1/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
 | `google/gemma-4-31b-it` | 5/6 | 6/6 |
-| `mistralai/mistral-large-2512` | 6/6 | 5/5 |
+| `mistralai/mistral-large-2512` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -595,7 +600,6 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | SCYNEXIS, Inc. | yes | medium | 1B |
 | Non-binding LOI (Omni  | no | easy | 1B |
-| Trident Bancshares, In | no | easy | mistral-large-or |
 
 ## What this shows
 
@@ -613,10 +617,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **17%** | 95% | 50% | 12/12 | 233/240 (97%) |
+| `gemma3:1b` | 1B | **17%** | 96% | 50% | 12/12 | 240/240 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
 | `google/gemma-4-31b-it` | ? | **8%** | 98% | 92% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 90% | 10/12 | 132/240 (55%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -634,17 +638,15 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 6/6 | 0/6 |
 | `deepseek-v4-flash` | 5/6 | 6/6 |
 | `google/gemma-4-31b-it` | 5/6 | 6/6 |
-| `mistralai/mistral-large-2512` | 4/5 | 5/5 |
+| `mistralai/mistral-large-2512` | 5/6 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Vocera Communications, | yes | easy | mistral-large-or |
 | Bell Microproducts Inc | yes | hard | gemma4-31b-or |
 | Speedway Motorsports,  | no | easy | 1B |
 | Pool Corp | no | easy | 1B |
-| Restore Medical Inc. | no | hard | mistral-large-or |
 
 ## What this shows
 
@@ -662,9 +664,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **44%** | 93% | 67% | 9/9 | 174/180 (97%) |
+| `gemma3:1b` | 1B | **44%** | 93% | 67% | 9/9 | 180/180 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -682,6 +685,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 4/6 | 2/3 |
 | `deepseek-v4-flash` | 6/6 | 3/3 |
 | `google/gemma-4-31b-it` | 6/6 | 3/3 |
+| `mistralai/mistral-large-2512` | 6/6 | 3/3 |
 
 ### Which items make models wobble
 
@@ -709,10 +713,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **56%** | 94% | 0% | 9/9 | 144/180 (80%) |
+| `gemma3:1b` | 1B | **67%** | 94% | 0% | 9/9 | 178/180 (99%) |
 | `deepseek-v4-flash` | hosted | **33%** | 92% | 67% | 9/9 | 180/180 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 67% | 9/9 | 180/180 (100%) |
-| `mistralai/mistral-large-2512` | ? | **11%** | 94% | 67% | 9/9 | 117/180 (65%) |
+| `mistralai/mistral-large-2512` | ? | **11%** | 99% | 67% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -740,12 +744,13 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Revance Therapeutics,  | 1x | easy | 1B |
 | Oportun Financial Corp | 2x | easy | 1B, hosted, mistral-large-or |
 | Pagaya Technologies Lt | 2x | easy | 1B, hosted |
+| 24/7 REAL MEDIA INC  ( | 3x | easy | 1B |
 | BECEEM COMMUNICATIONS  | 3x | easy | 1B |
 | CASTLE BIOSCIENCES INC | 3x | easy | hosted |
 
 ## What this shows
 
-- **Wobble spread: 0%–56% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 67% accuracy).
+- **Wobble spread: 0%–67% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 67% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -760,10 +765,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **44%** | 92% | 78% | 9/9 | 176/180 (98%) |
+| `gemma3:1b` | 1B | **44%** | 92% | 78% | 9/9 | 179/180 (99%) |
 | `deepseek-v4-flash` | hosted | **11%** | 97% | 78% | 9/9 | 180/180 (100%) |
 | `google/gemma-4-31b-it` | ? | **33%** | 94% | 67% | 9/9 | 180/180 (100%) |
-| `mistralai/mistral-large-2512` | ? | **11%** | 99% | 43% | 7/9 | 108/180 (60%) |
+| `mistralai/mistral-large-2512` | ? | **22%** | 99% | 44% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -779,11 +784,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | SICOR Inc. | 3 | easy | 1B |
 | Dollar General Corpora | 1 | medium | 1B |
-| Ute Energy Corporation | 1 | medium | 1B, gemma4-31b-or |
-| Ute Energy Corporation | 2 | medium | 1B, gemma4-31b-or, mistral-large-or |
+| Ute Energy Corporation | 1 | medium | 1B, gemma4-31b-or, mistral-large-or |
+| Ute Energy Corporation | 2 | medium | 1B, gemma4-31b-or |
 | Cinemark Holdings, Inc | 5 | easy | gemma4-31b-or, mistral-large-or |
 | Cinemark Holdings, Inc | 9 | hard | hosted |
-| Eleison Pharmaceutical | 1 | easy | mistral-large-or |
 
 ## What this shows
 
@@ -802,9 +806,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 97% | 93% | 15/15 | 217/300 (72%) |
+| `gemma3:1b` | 1B | **33%** | 97% | 93% | 15/15 | 300/300 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 
 **What the columns mean:**
 
@@ -822,18 +827,22 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 9/9 | 5/6 |
 | `deepseek-v4-flash` | 9/9 | 6/6 |
 | `google/gemma-4-31b-it` | 9/9 | 6/6 |
+| `mistralai/mistral-large-2512` | 9/9 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | SNM Global Holdings, I | yes | easy | 1B |
+| SNM Global Holdings, I | yes | easy | 1B |
 | SOS Hydration Inc. | yes | hard | 1B |
+| Rare Earths Americas,  | no | easy | 1B |
 | TaoWeave, Inc. | no | hard | 1B |
 
 ## What this shows
 
-- **Wobble spread: 0%–20% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–33% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
@@ -847,9 +856,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 83% | 68% | 19/19 | 363/380 (96%) |
+| `gemma3:1b` | 1B | **100%** | 82% | 68% | 19/19 | 376/380 (99%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
 
 **What the columns mean:**
 
@@ -867,6 +877,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 7/13 | 6/6 |
 | `deepseek-v4-flash` | 13/13 | 5/6 |
 | `google/gemma-4-31b-it` | 13/13 | 5/6 |
+| `mistralai/mistral-large-2512` | 13/13 | 5/6 |
 
 ### Which items make models wobble
 
@@ -909,10 +920,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **29%** | 98% | 57% | 7/7 | 130/140 (93%) |
+| `gemma3:1b` | 1B | **29%** | 98% | 57% | 7/7 | 140/140 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 6/7 | 78/140 (56%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -930,13 +941,12 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 4/4 | 0/3 |
 | `deepseek-v4-flash` | 4/4 | 3/3 |
 | `google/gemma-4-31b-it` | 4/4 | 3/3 |
-| `mistralai/mistral-large-2512` | 3/3 | 3/3 |
+| `mistralai/mistral-large-2512` | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| CROSSROADS SYSTEMS INC | yes | medium | mistral-large-or |
 | ZIX CORP | no | easy | 1B |
 | VISIUM TECHNOLOGIES, I | no | medium | 1B |
 
@@ -956,10 +966,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 25% | 4/4 | 60/80 (75%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 25% | 4/4 | 80/80 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 3/4 | 52/80 (65%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -973,7 +983,6 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| XTI Aerospace, Inc. | 275000000 | medium | mistral-large-or |
 
 ## What this shows
 
@@ -991,10 +1000,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 99% | 40% | 5/5 | 98/100 (98%) |
+| `gemma3:1b` | 1B | **20%** | 99% | 40% | 5/5 | 100/100 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 76/100 (76%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1036,10 +1045,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **8%** | 99% | 31% | 13/13 | 195/260 (75%) |
+| `gemma3:1b` | 1B | **8%** | 99% | 31% | 13/13 | 255/260 (98%) |
 | `deepseek-v4-flash` | hosted | **8%** | 100% | 85% | 13/13 | 260/260 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 77% | 13/13 | 260/260 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 82% | 11/13 | 147/260 (57%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -1057,20 +1066,18 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 4/4 | 0/9 |
 | `deepseek-v4-flash` | 2/4 | 9/9 |
 | `google/gemma-4-31b-it` | 2/4 | 8/9 |
-| `mistralai/mistral-large-2512` | 2/4 | 7/7 |
+| `mistralai/mistral-large-2512` | 2/4 | 9/9 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| The Medicines Co (Remp | no | medium | mistral-large-or |
 | Jazz Semiconductor Inc | no | medium | hosted |
 | Workday, Inc. | no | medium | 1B |
-| BioAccelerate Holdings | no | hard | mistral-large-or |
 
 ## What this shows
 
-- **Wobble spread: 0%–8% across the ladder.** Lowest-wobble model: **mistral-large-or** (0% wobble, 82% accuracy).
+- **Wobble spread: 0%–8% across the ladder.** Lowest-wobble model: **mistral-large-or** (0% wobble, 85% accuracy).
 
 ---
 
@@ -1084,9 +1091,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **29%** | 97% | 100% | 7/7 | 124/140 (89%) |
+| `gemma3:1b` | 1B | **29%** | 98% | 100% | 7/7 | 140/140 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1104,6 +1112,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 4/4 | 3/3 |
 | `deepseek-v4-flash` | 4/4 | 3/3 |
 | `google/gemma-4-31b-it` | 4/4 | 3/3 |
+| `mistralai/mistral-large-2512` | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
@@ -1128,10 +1137,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 3/3 | 58/60 (97%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 3/3 | 44/60 (73%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -1162,10 +1171,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **29%** | 86% | 71% | 7/7 | 133/140 (95%) |
+| `gemma3:1b` | 1B | **43%** | 85% | 71% | 7/7 | 134/140 (96%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 7/7 | 80/140 (57%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1179,12 +1188,14 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
+| Medecision, Inc. | 0.03 | easy | 1B |
 | Medecision, Inc. | 1.25 | medium | 1B |
 | Medecision, Inc. | 2.0 | medium | 1B |
 
 ## What this shows
 
-- **Wobble spread: 0%–29% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–43% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
@@ -1198,9 +1209,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **38%** | 96% | 88% | 8/8 | 144/160 (90%) |
+| `gemma3:1b` | 1B | **38%** | 96% | 88% | 8/8 | 150/160 (94%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -1238,7 +1250,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **0%** | 100% | 100% | 7/7 | 138/140 (99%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 6/7 | 84/140 (60%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1252,7 +1264,6 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| MINERCO, INC. (Rios) | 100000 | medium | mistral-large-or |
 
 ## What this shows
 
@@ -1270,9 +1281,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **44%** | 89% | 56% | 9/9 | 160/180 (89%) |
+| `gemma3:1b` | 1B | **44%** | 90% | 56% | 9/9 | 180/180 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1308,10 +1320,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 91% | 75% | 4/4 | 72/80 (90%) |
+| `gemma3:1b` | 1B | **50%** | 90% | 75% | 4/4 | 75/80 (94%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/4 | 28/80 (35%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1325,8 +1337,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Damon Motors Inc. | 125000000 | easy | 1B, mistral-large-or |
-| Greenfield Robotics Co | 30000000 | easy | 1B, mistral-large-or |
+| Damon Motors Inc. | 125000000 | easy | 1B |
+| Greenfield Robotics Co | 30000000 | easy | 1B |
 
 ## What this shows
 
@@ -1348,7 +1360,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **20%** | 92% | 80% | 5/5 | 99/100 (99%) |
 | `deepseek-v4-flash` | hosted | **20%** | 98% | 100% | 5/5 | 100/100 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 74/100 (74%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1384,7 +1396,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **40%** | 96% | 70% | 10/10 | 199/200 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 9/10 | 124/200 (62%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -1402,13 +1414,12 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 3/3 | 4/4 | 0/3 |
 | `deepseek-v4-flash` | 3/3 | 4/4 | 3/3 |
 | `google/gemma-4-31b-it` | 3/3 | 4/4 | 3/3 |
-| `mistralai/mistral-large-2512` | 3/3 | 3/3 | 3/3 |
+| `mistralai/mistral-large-2512` | 3/3 | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| YX Asset Recovery Ltd  | narrow-based | medium | mistral-large-or |
 | Galecto Inc.  (GLTO)   | narrow-based | hard | 1B |
 | CROSSROADS SYSTEMS INC | n/a | medium | 1B |
 | YODLEE INC  (CIK 00011 | n/a | medium | 1B |
@@ -1434,7 +1445,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 68/100 (68%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1465,10 +1476,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 83% | 6/6 | 113/120 (94%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 83% | 6/6 | 118/120 (98%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 6/6 | 62/120 (52%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 
 **What the columns mean:**
 
@@ -1499,9 +1510,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **46%** | 88% | 77% | 13/13 | 216/260 (83%) |
+| `gemma3:1b` | 1B | **54%** | 88% | 77% | 13/13 | 252/260 (97%) |
 | `deepseek-v4-flash` | hosted | **8%** | 100% | 100% | 13/13 | 221/260 (85%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -1519,6 +1531,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 2/2 | 0/1 | 8/10 |
 | `deepseek-v4-flash` | 2/2 | 1/1 | 10/10 |
 | `google/gemma-4-31b-it` | 2/2 | 1/1 | 10/10 |
+| `mistralai/mistral-large-2512` | 2/2 | 1/1 | 10/10 |
 
 ### Which items make models wobble
 
@@ -1529,12 +1542,13 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Maison Luxe, Inc. | both-mfn | medium | 1B |
 | Rentberry Inc. | both-mfn | medium | 1B |
 | Creci Inc. | both-mfn | medium | 1B |
+| Lomond Therapeutics Ho | both-mfn | medium | 1B |
 | Manako Labs Ltd | both-mfn | medium | hosted |
 | Gardedam Therapeutics  | cap | medium | 1B |
 
 ## What this shows
 
-- **Wobble spread: 0%–46% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–54% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -1549,10 +1563,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **38%** | 92% | 62% | 8/8 | 156/160 (98%) |
+| `gemma3:1b` | 1B | **38%** | 91% | 62% | 8/8 | 160/160 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 62% | 8/8 | 147/160 (92%) |
 | `google/gemma-4-31b-it` | ? | **12%** | 96% | 75% | 8/8 | 160/160 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 57% | 7/8 | 100/160 (62%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -1567,7 +1581,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | Astea International In | 3.63 | easy | 1B |
-| Kiwa Bio-Tech Products | 1.3 | medium | 1B, mistral-large-or |
+| Kiwa Bio-Tech Products | 1.3 | medium | 1B |
 | Gelesis, Inc. | 1.26 | medium | gemma4-31b-or |
 | WhiteGlove Health, Inc | 0.2 | easy | 1B |
 
@@ -1588,10 +1602,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 94% | 50% | 4/4 | 75/80 (94%) |
+| `gemma3:1b` | 1B | **50%** | 95% | 50% | 4/4 | 79/80 (99%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 3/4 | 52/80 (65%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1607,7 +1621,6 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | GARDENBURGER, INC. | 2005-03-31 | easy | 1B |
 | ACOLOGY, INC. | 2015-03-04 | medium | 1B, gemma4-31b-or |
-| XTI Aerospace Inc. | 2026-12-31 | easy | mistral-large-or |
 
 ## What this shows
 
@@ -1629,7 +1642,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **25%** | 92% | 0% | 3/4 | 58/80 (72%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 3/4 | 50/80 (62%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1643,7 +1656,6 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Exyn Technologies, Inc | 25.0 | easy | mistral-large-or |
 | ACOLOGY, INC. | 50.0 | easy | 1B |
 | HepaLife Technologies, | 5.0 | medium | 1B |
 
@@ -1663,10 +1675,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 97% | 100% | 2/2 | 37/40 (92%) |
+| `gemma3:1b` | 1B | **50%** | 97% | 100% | 2/2 | 38/40 (95%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 1/2 | 18/40 (45%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -1680,7 +1692,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Valkyrie Sciences Hold | 10000000 | medium | 1B, mistral-large-or |
+| Valkyrie Sciences Hold | 10000000 | medium | 1B |
 
 ## What this shows
 
@@ -1699,9 +1711,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 38% | 8/9 | 92/180 (51%) |
+| `gemma3:1b` | 1B | **22%** | 89% | 33% | 9/9 | 180/180 (100%) |
 | `deepseek-v4-flash` | hosted | **11%** | 97% | 100% | 9/9 | 180/180 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
+| `mistralai/mistral-large-2512` | ? | **11%** | 94% | 78% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1716,11 +1729,12 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | CONOR MEDSYSTEMS, INC. | 1.5yr/no-cliff | medium | 1B |
-| CLARCOR INC. | 4yr/no-cliff | hard | hosted |
+| CLARCOR INC. | 4yr/no-cliff | hard | 1B, hosted |
+| WORLD HEART CORP | 4yr/1yr-cliff | hard | mistral-large-or |
 
 ## What this shows
 
-- **Wobble spread: 0%–11% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 89% accuracy).
+- **Wobble spread: 0%–22% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 89% accuracy).
 
 ---
 
@@ -1734,10 +1748,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 16% | 0% | 9/9 | 146/180 (81%) |
+| `gemma3:1b` | 1B | **100%** | 18% | 0% | 9/9 | 177/180 (98%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 179/180 (99%) |
 | `google/gemma-4-31b-it` | ? | **22%** | 97% | 100% | 9/9 | 180/180 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 7/9 | 110/180 (61%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1756,10 +1770,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Uber Technologies, Inc | 2.4 | medium | 1B |
 | Uber Technologies, Inc | 8.6 | easy | 1B |
 | Uber Technologies, Inc | 5.4 | medium | 1B, gemma4-31b-or |
-| Uber Technologies, Inc | 16.3 | medium | 1B, mistral-large-or |
+| Uber Technologies, Inc | 16.3 | medium | 1B |
 | Uber Technologies, Inc | 5.2 | medium | 1B |
 | Uber Technologies, Inc | 5.3 | medium | 1B |
-| Uber Technologies, Inc | 33.9 | hard | 1B, gemma4-31b-or, mistral-large-or |
+| Uber Technologies, Inc | 33.9 | hard | 1B, gemma4-31b-or |
 
 ## What this shows
 
@@ -1781,7 +1795,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **100%** | 18% | 0% | 3/3 | 60/60 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 3/3 | 32/60 (53%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -1819,7 +1833,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **100%** | 38% | 0% | 4/4 | 80/80 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 39/80 (49%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1855,10 +1869,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 47% | 0% | 1/1 | 17/20 (85%) |
+| `gemma3:1b` | 1B | **100%** | 45% | 0% | 1/1 | 20/20 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 0% | 0% | 0/1 | 0/20 (0%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
 
 **What the columns mean:**
 
@@ -1872,7 +1886,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Uber Technologies, Inc | 9.5 | easy | 1B, mistral-large-or |
+| Uber Technologies, Inc | 9.5 | easy | 1B |
 
 ## What this shows
 
@@ -1891,9 +1905,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **40%** | 86% | 100% | 10/10 | 170/200 (85%) |
+| `gemma3:1b` | 1B | **40%** | 86% | 100% | 10/10 | 171/200 (86%) |
 | `deepseek-v4-flash` | hosted | **30%** | 96% | 100% | 10/10 | 200/200 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 70% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -1911,6 +1926,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 6/6 | 4/4 | — | — | — |
 | `deepseek-v4-flash` | 6/6 | 4/4 | — | — | — |
 | `google/gemma-4-31b-it` | 6/6 | 4/4 | — | — | — |
+| `mistralai/mistral-large-2512` | 6/6 | 1/4 | — | — | — |
 
 ### Which items make models wobble
 
@@ -1938,10 +1954,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/2 | 23/40 (57%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 22/40 (55%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -1975,7 +1991,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **50%** | 87% | 30% | 10/10 | 199/200 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 8/10 | 115/200 (57%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -1989,12 +2005,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| GTX INC /DE/ | 21272455 | ? | mistral-large-or |
 | VoCare, Inc. | 5000000 | ? | 1B |
 | McBride Sisters Collec | 14040000 | ? | 1B |
 | POSEIDON MEDICAL INC. | 6085780 | ? | 1B |
 | BEYONDCORE, INC. | 8881213 | ? | 1B |
-| ShopTap, Inc. | 5500000 | ? | mistral-large-or |
 | Link Labs, Inc. | 5787732 | ? | 1B |
 
 ## What this shows
@@ -2014,10 +2028,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/6 | 27/120 (22%) |
+| `gemma3:1b` | 1B | **33%** | 88% | 100% | 6/6 | 115/120 (96%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/6 | 76/120 (63%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 
 **What the columns mean:**
 
@@ -2031,15 +2045,13 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| BIOACCELERATE HOLDINGS | 6 | ? | 1B |
-| AdaptHealth Corp. | 8.0 | ? | 1B |
+| Exela Technologies, In | 10 | ? | 1B |
 | scPharmaceuticals Inc. | 6 | ? | 1B |
-| IMPEL NEUROPHARMA INC | 8 | ? | 1B |
-| Zoom Video Communicati | 6 | ? | mistral-large-or |
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–33% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
@@ -2056,7 +2068,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **80%** | 49% | 0% | 5/5 | 96/100 (96%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 59/100 (59%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2095,7 +2107,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **100%** | 64% | 50% | 8/8 | 152/160 (95%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 6/8 | 80/160 (50%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -2113,7 +2125,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 4/4 | 0/4 |
 | `deepseek-v4-flash` | 4/4 | 4/4 |
 | `google/gemma-4-31b-it` | 4/4 | 4/4 |
-| `mistralai/mistral-large-2512` | 4/4 | 2/2 |
+| `mistralai/mistral-large-2512` | 4/4 | 4/4 |
 
 ### Which items make models wobble
 
@@ -2123,10 +2135,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Sybari Software, Inc. | fully-diluted | ? | 1B |
 | Emageon Inc. | fully-diluted | ? | 1B |
 | IGN Entertainment, Inc | fully-diluted | ? | 1B |
-| Actelis Networks, Inc. | issued-outstanding | ? | 1B, mistral-large-or |
+| Actelis Networks, Inc. | issued-outstanding | ? | 1B |
 | IGN Entertainment, Inc | issued-outstanding | ? | 1B |
 | HyreCar Inc. | issued-outstanding | ? | 1B |
-| Castle Biosciences, In | issued-outstanding | ? | 1B, mistral-large-or |
+| Castle Biosciences, In | issued-outstanding | ? | 1B |
 
 ## What this shows
 
@@ -2145,10 +2157,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **60%** | 86% | 20% | 5/5 | 97/100 (97%) |
+| `gemma3:1b` | 1B | **60%** | 84% | 20% | 5/5 | 99/100 (99%) |
 | `deepseek-v4-flash` | hosted | **20%** | 97% | 100% | 5/5 | 100/100 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **20%** | 90% | 75% | 4/5 | 56/100 (56%) |
+| `mistralai/mistral-large-2512` | ? | **20%** | 92% | 80% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2165,7 +2177,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Civitas Solutions, Inc | 1123118 | ? | 1B |
 | IGN Entertainment, Inc | 17541 | ? | mistral-large-or |
 | Castle Biosciences, In | 22786 | ? | hosted |
-| Emageon Inc. | 12619 | ? | 1B, mistral-large-or |
+| Emageon Inc. | 12619 | ? | 1B |
 | HyreCar Inc. | 9777079 | ? | 1B |
 
 ## What this shows
@@ -2185,10 +2197,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 60% | 5/5 | 99/100 (99%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 60% | 5/5 | 100/100 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **20%** | 89% | 75% | 4/5 | 68/100 (68%) |
+| `mistralai/mistral-large-2512` | ? | **20%** | 93% | 80% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2203,7 +2215,6 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | Actelis Networks, Inc. | False | ? | mistral-large-or |
-| Castle Biosciences, In | True | ? | mistral-large-or |
 
 ## What this shows
 
@@ -2221,10 +2232,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **60%** | 87% | 80% | 5/5 | 96/100 (96%) |
+| `gemma3:1b` | 1B | **60%** | 88% | 80% | 5/5 | 100/100 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **40%** | 87% | 100% | 3/5 | 52/100 (52%) |
+| `mistralai/mistral-large-2512` | ? | **40%** | 90% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2238,9 +2249,9 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| SIRVA, Inc. | 30 days | ? | 1B, mistral-large-or |
+| SIRVA, Inc. | 30 days | ? | 1B |
 | Annas Linens, Inc. | 90 days | ? | mistral-large-or |
-| Williams Scotsman Inte | 90 days | ? | 1B, mistral-large-or |
+| Williams Scotsman Inte | 90 days | ? | 1B |
 | Douglas Dynamics, Inc. | 180 days | ? | 1B, mistral-large-or |
 
 ## What this shows
@@ -2263,7 +2274,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **100%** | 24% | 0% | 5/5 | 97/100 (97%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 56/100 (56%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2300,10 +2311,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 93% | 50% | 4/4 | 79/80 (99%) |
+| `gemma3:1b` | 1B | **50%** | 92% | 50% | 4/4 | 80/80 (100%) |
 | `deepseek-v4-flash` | hosted | **25%** | 96% | 100% | 4/4 | 80/80 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 48/80 (60%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2337,10 +2348,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 68% | 20% | 5/5 | 83/100 (83%) |
+| `gemma3:1b` | 1B | **100%** | 68% | 20% | 5/5 | 100/100 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `google/gemma-4-31b-it` | ? | **20%** | 96% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **20%** | 96% | 100% | 4/5 | 69/100 (69%) |
+| `mistralai/mistral-large-2512` | ? | **20%** | 97% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2356,7 +2367,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | HyreCar Inc. | general corporate purposes | ? | 1B |
 | Castle Biosciences, In | research and development activities | ? | 1B, gemma4-31b-or |
-| Axcella Health Inc. | advance our current liver programs | ? | 1B, mistral-large-or |
+| Axcella Health Inc. | advance our current liver programs | ? | 1B |
 | Veritone, Inc. | working capital and general corporate purposes | ? | 1B |
 | Civitas Solutions, Inc | redeem all of the senior notes | ? | 1B, mistral-large-or |
 
@@ -2380,7 +2391,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **20%** | 91% | 80% | 5/5 | 97/100 (97%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 80/100 (80%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 62/100 (62%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2415,7 +2426,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **100%** | 62% | 0% | 3/3 | 60/60 (100%) |
 | `deepseek-v4-flash` | hosted | **67%** | 91% | 33% | 3/3 | 44/60 (73%) |
 | `google/gemma-4-31b-it` | ? | **67%** | 80% | 33% | 3/3 | 60/60 (100%) |
-| `mistralai/mistral-large-2512` | ? | **33%** | 97% | 67% | 3/3 | 37/60 (62%) |
+| `mistralai/mistral-large-2512` | ? | **33%** | 98% | 67% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -2450,10 +2461,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 50% | 2/2 | 37/40 (92%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 50% | 2/2 | 40/40 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 34/40 (85%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -2497,7 +2508,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **100%** | 17% | 0% | 4/4 | 77/80 (96%) |
 | `deepseek-v4-flash` | hosted | **25%** | 99% | 100% | 4/4 | 62/80 (78%) |
 | `google/gemma-4-31b-it` | ? | **100%** | 71% | 50% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **25%** | 97% | 67% | 3/4 | 51/80 (64%) |
+| `mistralai/mistral-large-2512` | ? | **50%** | 90% | 75% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2536,7 +2547,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **100%** | 52% | 50% | 2/2 | 40/40 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 24/40 (60%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 

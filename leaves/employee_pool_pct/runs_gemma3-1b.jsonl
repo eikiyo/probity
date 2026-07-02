@@ -5,10 +5,10 @@
 {"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "parsed": {"employee_pool_pct": "10.0"}, "normalized": {"employee_pool_pct": 10.0}}
 {"_key": [0, 5], "instance_idx": 0, "run_idx": 5, "parsed": {"employee_pool_pct": "10.0"}, "normalized": {"employee_pool_pct": 10.0}}
 {"_key": [0, 6], "instance_idx": 0, "run_idx": 6, "parsed": {"employee_pool_pct": "14.3"}, "normalized": {"employee_pool_pct": 14.3}}
-{"_key": [0, 7], "instance_idx": 0, "run_idx": 7, "raw_output": "{\"employee\\_pool_pct\": \"12.0\"}\n", "parsed": null}
+{"_key": [0, 7], "instance_idx": 0, "run_idx": 7, "raw_output": "{\"employee\\_pool_pct\": \"12.0\"}\n", "parsed": {"employee_pool_pct": "12.0"}, "normalized": {"employee_pool_pct": 12.0}}
 {"_key": [0, 8], "instance_idx": 0, "run_idx": 8, "parsed": {"employee_pool_pct": "10.0"}, "normalized": {"employee_pool_pct": 10.0}}
-{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "raw_output": "{\"employee_pool\\_pct\": \"12.0\"}\n", "parsed": null}
-{"_key": [0, 10], "instance_idx": 0, "run_idx": 10, "raw_output": "{\"employee_pool\\_pct\": \"10.0\"}", "parsed": null}
+{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "raw_output": "{\"employee_pool\\_pct\": \"12.0\"}\n", "parsed": {"employee_pool_pct": "12.0"}, "normalized": {"employee_pool_pct": 12.0}}
+{"_key": [0, 10], "instance_idx": 0, "run_idx": 10, "raw_output": "{\"employee_pool\\_pct\": \"10.0\"}", "parsed": {"employee_pool_pct": "10.0"}, "normalized": {"employee_pool_pct": 10.0}}
 {"_key": [0, 11], "instance_idx": 0, "run_idx": 11, "parsed": {"employee_pool_pct": "10.0"}, "normalized": {"employee_pool_pct": 10.0}}
 {"_key": [0, 12], "instance_idx": 0, "run_idx": 12, "parsed": {"employee_pool_pct": "14.0"}, "normalized": {"employee_pool_pct": 14.0}}
 {"_key": [0, 13], "instance_idx": 0, "run_idx": 13, "parsed": {"employee_pool_pct": "10.0"}, "normalized": {"employee_pool_pct": 10.0}}

@@ -1,0 +1,9 @@
+{
+ "leaf": "securities_exemption",
+ "model": "mistral-large-or",
+ "task_name": "securities_exemption",
+ "data_version": "07b3ef5da9fd0b816fbe866c39f1c6adc34c8d693d9b89fe4e36217282e1d5b5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:33:22.205794+00:00"
+}

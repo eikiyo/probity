@@ -2,8 +2,8 @@
  "leaf": "note_discount",
  "model": "mistral-large-or",
  "task_name": "note_discount",
- "data_version": "8f485727827c22614dcd38c9250bb685cb390adf7c141f6e1dda848c1cf3ddd7",
+ "data_version": "498ba3574d69c0812e2755563c4f4890dd9878f208e2f7776b928133e53f3e58",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:10:10.754040+00:00"
+ "timestamp": "2026-07-02T21:32:50.978381+00:00"
 }

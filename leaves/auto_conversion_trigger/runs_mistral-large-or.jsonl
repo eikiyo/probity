@@ -30,26 +30,6 @@
 {"_key": [1, 10], "instance_idx": 1, "run_idx": 10, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
 {"_key": [1, 8], "instance_idx": 1, "run_idx": 8, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
 {"_key": [1, 11], "instance_idx": 1, "run_idx": 11, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
-{"_key": [1, 13], "instance_idx": 1, "run_idx": 13, "item_id": "elastic_bv_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "item_id": "elastic_bv_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 12], "instance_idx": 1, "run_idx": 12, "item_id": "elastic_bv_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "item_id": "elastic_bv_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "item_id": "elastic_bv_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "item_id": "elastic_bv_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "item_id": "elastic_bv_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "item_id": "elastic_bv_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "item_id": "asana_100m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
 {"_key": [2, 12], "instance_idx": 2, "run_idx": 12, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
 {"_key": [2, 13], "instance_idx": 2, "run_idx": 13, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
 {"_key": [2, 16], "instance_idx": 2, "run_idx": 16, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
@@ -86,15 +66,35 @@
 {"_key": [4, 5], "instance_idx": 4, "run_idx": 5, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": null}, "normalized": {"auto_conversion_trigger": null}}
 {"_key": [4, 6], "instance_idx": 4, "run_idx": 6, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": null}, "normalized": {"auto_conversion_trigger": null}}
 {"_key": [4, 7], "instance_idx": 4, "run_idx": 7, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
-{"_key": [4, 8], "instance_idx": 4, "run_idx": 8, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 10], "instance_idx": 4, "run_idx": 10, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 9], "instance_idx": 4, "run_idx": 9, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 11], "instance_idx": 4, "run_idx": 11, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 12], "instance_idx": 4, "run_idx": 12, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 14], "instance_idx": 4, "run_idx": 14, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 13], "instance_idx": 4, "run_idx": 13, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 15], "instance_idx": 4, "run_idx": 15, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 16], "instance_idx": 4, "run_idx": 16, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 17], "instance_idx": 4, "run_idx": 17, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 18], "instance_idx": 4, "run_idx": 18, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 19], "instance_idx": 4, "run_idx": 19, "item_id": "terrascend_30m", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [1, 12], "instance_idx": 1, "run_idx": 12, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [1, 13], "instance_idx": 1, "run_idx": 13, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "item_id": "elastic_bv_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "item_id": "asana_100m", "parsed": {"auto_conversion_trigger": 100000000}, "normalized": {"auto_conversion_trigger": 100000000.0}}
+{"_key": [4, 8], "instance_idx": 4, "run_idx": 8, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [4, 9], "instance_idx": 4, "run_idx": 9, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [4, 10], "instance_idx": 4, "run_idx": 10, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [4, 11], "instance_idx": 4, "run_idx": 11, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": null}, "normalized": {"auto_conversion_trigger": null}}
+{"_key": [4, 13], "instance_idx": 4, "run_idx": 13, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": null}, "normalized": {"auto_conversion_trigger": null}}
+{"_key": [4, 12], "instance_idx": 4, "run_idx": 12, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [4, 14], "instance_idx": 4, "run_idx": 14, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": null}, "normalized": {"auto_conversion_trigger": null}}
+{"_key": [4, 16], "instance_idx": 4, "run_idx": 16, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": null}, "normalized": {"auto_conversion_trigger": null}}
+{"_key": [4, 17], "instance_idx": 4, "run_idx": 17, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [4, 15], "instance_idx": 4, "run_idx": 15, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [4, 18], "instance_idx": 4, "run_idx": 18, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}
+{"_key": [4, 19], "instance_idx": 4, "run_idx": 19, "item_id": "terrascend_30m", "parsed": {"auto_conversion_trigger": 30000000}, "normalized": {"auto_conversion_trigger": 30000000.0}}

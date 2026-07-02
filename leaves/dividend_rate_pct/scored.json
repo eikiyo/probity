@@ -4,72 +4,72 @@
   "accuracy": {
    "task": "dividend_rate_pct",
    "n_instances": 6,
-   "n_measurable": 2,
+   "n_measurable": 6,
    "accuracy_majority": 1.0,
-   "accuracy_strict": 1.0,
+   "accuracy_strict": 0.6666666666666666,
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
-     "fields": {
-      "dividend_rate_pct": {
-       "majority": null,
-       "truth": 6.0,
-       "consistency": 0.0
-      }
-     }
-    },
-    {
-     "instance_idx": 1,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
-     "fields": {
-      "dividend_rate_pct": {
-       "majority": null,
-       "truth": 8.0,
-       "consistency": 0.0
-      }
-     }
-    },
-    {
-     "instance_idx": 2,
-     "n_valid": 7,
+     "n_valid": 18,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
       "dividend_rate_pct": {
-       "majority": 10.0,
-       "truth": 10.0,
+       "majority": 6.0,
+       "truth": 6.0,
        "consistency": 1.0
       }
      }
     },
     {
-     "instance_idx": 3,
-     "n_valid": 0,
-     "majority_correct": false,
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_rate_pct": {
+       "majority": 8.0,
+       "truth": 8.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 18,
+     "majority_correct": true,
      "strict_correct": false,
      "fields": {
       "dividend_rate_pct": {
-       "majority": null,
+       "majority": 10.0,
+       "truth": 10.0,
+       "consistency": 0.3888888888888889
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "dividend_rate_pct": {
+       "majority": 6.0,
        "truth": 6.0,
-       "consistency": 0.0
+       "consistency": 0.8947368421052632
       }
      }
     },
     {
      "instance_idx": 4,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "dividend_rate_pct": {
-       "majority": null,
+       "majority": 8.0,
        "truth": 8.0,
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
@@ -90,15 +90,15 @@
   },
   "reliability": {
    "task": "dividend_rate_pct",
-   "consistency_rate": 1.0,
-   "consistency_pct": 100.0,
+   "consistency_rate": 0.8806042884990254,
+   "consistency_pct": 88.06042884990254,
    "field_flips": {
-    "dividend_rate_pct": 0.0
+    "dividend_rate_pct": 0.3333333333333333
    },
-   "parse_failure_count": 93,
-   "parse_failure_rate": 0.775,
-   "valid_run_count": 27,
-   "measurable": false,
+   "parse_failure_count": 5,
+   "parse_failure_rate": 0.041666666666666664,
+   "valid_run_count": 115,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {
@@ -321,7 +321,7 @@
   "accuracy": {
    "task": "dividend_rate_pct",
    "n_instances": 6,
-   "n_measurable": 5,
+   "n_measurable": 6,
    "accuracy_majority": 1.0,
    "accuracy_strict": 1.0,
    "per_instance": [
@@ -340,7 +340,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 14,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -353,7 +353,7 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 6,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -379,7 +379,7 @@
     },
     {
      "instance_idx": 4,
-     "n_valid": 16,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -392,14 +392,14 @@
     },
     {
      "instance_idx": 5,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "dividend_rate_pct": {
-       "majority": null,
+       "majority": 6.0,
        "truth": 6.0,
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     }
@@ -412,10 +412,10 @@
    "field_flips": {
     "dividend_rate_pct": 0.0
    },
-   "parse_failure_count": 44,
-   "parse_failure_rate": 0.36666666666666664,
-   "valid_run_count": 76,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 120,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

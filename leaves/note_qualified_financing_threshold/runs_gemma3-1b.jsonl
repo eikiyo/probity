@@ -35,6 +35,6 @@
 {"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "item_id": "xtiaero_10m", "parsed": {"note_qualified_ financing_threshold": 10000000}, "normalized": {}}
 {"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "item_id": "xtiaero_10m", "parsed": {"note_qualified_financing_threshold": 10000000}, "normalized": {"note_qualified_financing_threshold": 10000000.0}}
 {"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "item_id": "xtiaero_10m", "parsed": {"note_qualified_financing_threshold": 10000000}, "normalized": {"note_qualified_financing_threshold": 10000000.0}}
-{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "item_id": "xtiaero_10m", "raw_output": "10000000\n", "parsed": null}
+{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "item_id": "xtiaero_10m", "raw_output": "10000000\n", "parsed": {"note_qualified_financing_threshold": "10000000"}, "normalized": {"note_qualified_financing_threshold": 10000000.0}}
 {"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "item_id": "xtiaero_10m", "parsed": {"note_qualified_financing_threshold": "10000000"}, "normalized": {"note_qualified_financing_threshold": 10000000.0}}
 {"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "item_id": "xtiaero_10m", "parsed": {"note_qualified_financing_threshold": "10000000"}, "normalized": {"note_qualified_financing_threshold": 10000000.0}}

@@ -473,26 +473,26 @@
   "accuracy": {
    "task": "round_size",
    "n_instances": 10,
-   "n_measurable": 8,
+   "n_measurable": 10,
    "accuracy_majority": 1.0,
    "accuracy_strict": 1.0,
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "round_size": {
-       "majority": null,
+       "majority": 21272455.0,
        "truth": 21272455.0,
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 1,
-     "n_valid": 12,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -518,7 +518,7 @@
     },
     {
      "instance_idx": 3,
-     "n_valid": 6,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -531,7 +531,7 @@
     },
     {
      "instance_idx": 4,
-     "n_valid": 6,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -557,7 +557,7 @@
     },
     {
      "instance_idx": 6,
-     "n_valid": 13,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -570,20 +570,20 @@
     },
     {
      "instance_idx": 7,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "round_size": {
-       "majority": null,
+       "majority": 5500000.0,
        "truth": 5500000.0,
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 8,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -596,7 +596,7 @@
     },
     {
      "instance_idx": 9,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -616,10 +616,10 @@
    "field_flips": {
     "round_size": 0.0
    },
-   "parse_failure_count": 85,
-   "parse_failure_rate": 0.425,
-   "valid_run_count": 115,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 200,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

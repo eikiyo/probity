@@ -10,14 +10,14 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": false,
      "fields": {
       "board_seats_investor": {
        "majority": 3.0,
        "truth": 3.0,
-       "consistency": 0.9473684210526315
+       "consistency": 0.95
       }
      }
     },
@@ -101,7 +101,7 @@
     },
     {
      "instance_idx": 7,
-     "n_valid": 16,
+     "n_valid": 17,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -129,16 +129,20 @@
   },
   "reliability": {
    "task": "board_seats_investor",
-   "consistency_rate": 0.9213450292397659,
-   "consistency_pct": 92.1345029239766,
+   "consistency_rate": 0.9216374269005847,
+   "consistency_pct": 92.16374269005847,
    "field_flips": {
     "board_seats_investor": 0.4444444444444444
    },
-   "parse_failure_count": 4,
-   "parse_failure_rate": 0.022222222222222223,
-   "valid_run_count": 176,
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.005555555555555556,
+   "valid_run_count": 179,
    "measurable": true,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "deepseek-v4f": {
@@ -434,9 +438,9 @@
   "accuracy": {
    "task": "board_seats_investor",
    "n_instances": 9,
-   "n_measurable": 7,
-   "accuracy_majority": 0.42857142857142855,
-   "accuracy_strict": 0.42857142857142855,
+   "n_measurable": 9,
+   "accuracy_majority": 0.4444444444444444,
+   "accuracy_strict": 0.4444444444444444,
    "per_instance": [
     {
      "instance_idx": 0,
@@ -453,7 +457,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 17,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -466,7 +470,7 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 3,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -492,46 +496,46 @@
     },
     {
      "instance_idx": 4,
-     "n_valid": 16,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "board_seats_investor": {
        "majority": 2.0,
        "truth": 1.0,
-       "consistency": 1.0
+       "consistency": 0.95
       }
      }
     },
     {
      "instance_idx": 5,
-     "n_valid": 0,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "board_seats_investor": {
-       "majority": null,
+       "majority": 3.0,
        "truth": 2.0,
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 6,
-     "n_valid": 16,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "board_seats_investor": {
        "majority": 9.0,
        "truth": 5.0,
-       "consistency": 0.9375
+       "consistency": 0.95
       }
      }
     },
     {
      "instance_idx": 7,
-     "n_valid": 16,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -544,14 +548,14 @@
     },
     {
      "instance_idx": 8,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "board_seats_investor": {
-       "majority": null,
+       "majority": 1.0,
        "truth": 1.0,
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     }
@@ -559,15 +563,15 @@
   },
   "reliability": {
    "task": "board_seats_investor",
-   "consistency_rate": 0.9910714285714286,
-   "consistency_pct": 99.10714285714286,
+   "consistency_rate": 0.9888888888888889,
+   "consistency_pct": 98.88888888888889,
    "field_flips": {
-    "board_seats_investor": 0.1111111111111111
+    "board_seats_investor": 0.2222222222222222
    },
-   "parse_failure_count": 72,
-   "parse_failure_rate": 0.4,
-   "valid_run_count": 108,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

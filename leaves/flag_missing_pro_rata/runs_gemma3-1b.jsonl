@@ -21,7 +21,7 @@
 {"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "parsed": {"flag_missing_pro_rata": true}, "normalized": {"flag_missing_pro_rata": true}}
 {"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "parsed": {"flag_missing_pro_rata": true}, "normalized": {"flag_missing_pro_rata": true}}
 {"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "parsed": {"flag_missing_pro_rata": true}, "normalized": {"flag_missing_pro_rata": true}}
-{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "raw_output": "{\"flag_missing\\_pro\\_rata\": false}\n", "parsed": null}
+{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "raw_output": "{\"flag_missing\\_pro\\_rata\": false}\n", "parsed": {"flag_missing_pro_rata": false}, "normalized": {"flag_missing_pro_rata": false}}
 {"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "parsed": {"flag_missing_pro_rata": true}, "normalized": {"flag_missing_pro_rata": true}}
 {"_key": [1, 5], "instance_idx": 1, "run_idx": 5, "parsed": {"flag_missing_pro_rata": false}, "normalized": {"flag_missing_pro_rata": false}}
 {"_key": [1, 6], "instance_idx": 1, "run_idx": 6, "parsed": {"flag_missing_pro_rata": true}, "normalized": {"flag_missing_pro_rata": true}}

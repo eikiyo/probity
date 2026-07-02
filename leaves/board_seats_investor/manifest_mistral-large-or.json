@@ -2,8 +2,8 @@
  "leaf": "board_seats_investor",
  "model": "mistral-large-or",
  "task_name": "board_seats_investor",
- "data_version": "2eaeacbf4922223da901e585bb5b4adac2e10059dabd48b3336710b3cd78c224",
+ "data_version": "2bff057349bc93132de57c335023174728a72337ffce44fdeaf631e59c3b0cd2",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:07:48.222521+00:00"
+ "timestamp": "2026-07-02T21:32:35.275611+00:00"
 }

@@ -10,7 +10,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 17,
+     "n_valid": 18,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -23,7 +23,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 18,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -43,11 +43,15 @@
    "field_flips": {
     "convert_vs_preference_decision": 0.0
    },
-   "parse_failure_count": 3,
-   "parse_failure_rate": 0.075,
-   "valid_run_count": 37,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
    "measurable": true,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "deepseek-v4f": {
@@ -184,7 +188,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 14,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -204,9 +208,9 @@
    "field_flips": {
     "convert_vs_preference_decision": 0.0
    },
-   "parse_failure_count": 6,
-   "parse_failure_rate": 0.15,
-   "valid_run_count": 34,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
    "measurable": true,
    "excluded_fields": []
   },

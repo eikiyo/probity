@@ -14,7 +14,7 @@
 {"_key": [0, 13], "instance_idx": 0, "run_idx": 13, "parsed": {"flag_internal_inconsistency": true}, "normalized": {"flag_internal_inconsistency": true}}
 {"_key": [0, 14], "instance_idx": 0, "run_idx": 14, "parsed": {"flag_internal_inconsistency": true}, "normalized": {"flag_internal_inconsistency": true}}
 {"_key": [0, 15], "instance_idx": 0, "run_idx": 15, "parsed": {"flag_internal_inconsistency": true}, "normalized": {"flag_internal_inconsistency": true}}
-{"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "raw_output": "true\n", "parsed": null}
+{"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "raw_output": "true\n", "parsed": {"flag_internal_inconsistency": "true"}, "normalized": {"flag_internal_inconsistency": true}}
 {"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "parsed": {"flag_internal_inconsistency": true}, "normalized": {"flag_internal_inconsistency": true}}
 {"_key": [0, 18], "instance_idx": 0, "run_idx": 18, "parsed": {"flag_internal_inconsistency": true}, "normalized": {"flag_internal_inconsistency": true}}
 {"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "parsed": {"flag_internal_inconsistency": true}, "normalized": {"flag_internal_inconsistency": true}}

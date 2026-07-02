@@ -1,4 +1,4 @@
-{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "astea_series_a", "raw_output": "```json\n{\"price_per\\_share\": \"3.63\"}\n```\n", "parsed": null}
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "astea_series_a", "raw_output": "```json\n{\"price_per\\_share\": \"3.63\"}\n```\n", "parsed": {"price_per_share": "3.63"}, "normalized": {"price_per_share": 3.63}}
 {"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "astea_series_a", "parsed": {"price_per_share": 3.63}, "normalized": {"price_per_share": 3.63}}
 {"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "astea_series_a", "parsed": {"price_per_share": 3.63}, "normalized": {"price_per_share": 3.63}}
 {"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "astea_series_a", "parsed": {"price_per_share": 3.63}, "normalized": {"price_per_share": 3.63}}
@@ -15,7 +15,7 @@
 {"_key": [0, 14], "instance_idx": 0, "run_idx": 14, "item_id": "astea_series_a", "parsed": {"price_per_share": 3.63}, "normalized": {"price_per_share": 3.63}}
 {"_key": [0, 15], "instance_idx": 0, "run_idx": 15, "item_id": "astea_series_a", "parsed": {"price_per_share": "3.63"}, "normalized": {"price_per_share": 3.63}}
 {"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "item_id": "astea_series_a", "parsed": {"price_per_share": 3.63}, "normalized": {"price_per_share": 3.63}}
-{"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "item_id": "astea_series_a", "raw_output": "{\"price_per\\_share\": 3.63}", "parsed": null}
+{"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "item_id": "astea_series_a", "raw_output": "{\"price_per\\_share\": 3.63}", "parsed": {"price_per_share": 3.63}, "normalized": {"price_per_share": 3.63}}
 {"_key": [0, 18], "instance_idx": 0, "run_idx": 18, "item_id": "astea_series_a", "parsed": {"price_per_share": 3.63}, "normalized": {"price_per_share": 3.63}}
 {"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "item_id": "astea_series_a", "parsed": {"price_per_share": "3.62"}, "normalized": {"price_per_share": 3.62}}
 {"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "wolverine_series_a", "parsed": {"price_per_share": "1000"}, "normalized": {"price_per_share": 1000.0}}
@@ -48,7 +48,7 @@
 {"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "item_id": "kiwa_series_b", "parsed": {"price_per_share": "2.4384"}, "normalized": {"price_per_share": 2.4384}}
 {"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "item_id": "kiwa_series_b", "parsed": {"price_per_share": "2.4384"}, "normalized": {"price_per_share": 2.4384}}
 {"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "item_id": "kiwa_series_b", "parsed": {"price_per_share": "2.4384"}, "normalized": {"price_per_share": 2.4384}}
-{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "item_id": "kiwa_series_b", "raw_output": "{\"price_per\\_share\": \"811.148\"}", "parsed": null}
+{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "item_id": "kiwa_series_b", "raw_output": "{\"price_per\\_share\": \"811.148\"}", "parsed": {"price_per_share": "811.148"}, "normalized": {"price_per_share": 811.148}}
 {"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "item_id": "kiwa_series_b", "parsed": {"price_per_share": "2.4384"}, "normalized": {"price_per_share": 2.4384}}
 {"_key": [2, 12], "instance_idx": 2, "run_idx": 12, "item_id": "kiwa_series_b", "parsed": {"price_per_share": "2.4384"}, "normalized": {"price_per_share": 2.4384}}
 {"_key": [2, 13], "instance_idx": 2, "run_idx": 13, "item_id": "kiwa_series_b", "parsed": {"price_per_share": "2.4384"}, "normalized": {"price_per_share": 2.4384}}
@@ -119,7 +119,7 @@
 {"_key": [5, 18], "instance_idx": 5, "run_idx": 18, "item_id": "landing_page_series", "parsed": {"price_per_share": 1.0}, "normalized": {"price_per_share": 1.0}}
 {"_key": [5, 19], "instance_idx": 5, "run_idx": 19, "item_id": "landing_page_series", "parsed": {"price_per_share": 1.0}, "normalized": {"price_per_share": 1.0}}
 {"_key": [6, 0], "instance_idx": 6, "run_idx": 0, "item_id": "mobile_systems_s1", "parsed": {"price_per_share": 2.0}, "normalized": {"price_per_share": 2.0}}
-{"_key": [6, 1], "instance_idx": 6, "run_idx": 1, "item_id": "mobile_systems_s1", "raw_output": "{\"price_per\\_share\": 2.00}\n", "parsed": null}
+{"_key": [6, 1], "instance_idx": 6, "run_idx": 1, "item_id": "mobile_systems_s1", "raw_output": "{\"price_per\\_share\": 2.00}\n", "parsed": {"price_per_share": 2.0}, "normalized": {"price_per_share": 2.0}}
 {"_key": [6, 2], "instance_idx": 6, "run_idx": 2, "item_id": "mobile_systems_s1", "parsed": {"price_per_share": 0.2}, "normalized": {"price_per_share": 0.2}}
 {"_key": [6, 3], "instance_idx": 6, "run_idx": 3, "item_id": "mobile_systems_s1", "parsed": {"price_per_share": "0.20"}, "normalized": {"price_per_share": 0.2}}
 {"_key": [6, 4], "instance_idx": 6, "run_idx": 4, "item_id": "mobile_systems_s1", "parsed": {"price_per_share": 2.0}, "normalized": {"price_per_share": 2.0}}

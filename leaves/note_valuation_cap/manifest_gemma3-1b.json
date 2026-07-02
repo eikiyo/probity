@@ -1,0 +1,9 @@
+{
+ "leaf": "note_valuation_cap",
+ "model": "gemma3-1b",
+ "task_name": "note_valuation_cap",
+ "data_version": "5ad8e5e5a86759abb6919e63d2b59392961d6f0148569d309d87b22721cbf25a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:27:32.709632+00:00"
+}

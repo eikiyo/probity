@@ -63,8 +63,8 @@
 {"_key": [3, 2], "instance_idx": 3, "run_idx": 2, "parsed": {"financial_statement_qa": 1999}, "normalized": {"financial_statement_qa": 1999.0}}
 {"_key": [3, 3], "instance_idx": 3, "run_idx": 3, "parsed": {"financial_statement_qa": 1999}, "normalized": {"financial_statement_qa": 1999.0}}
 {"_key": [3, 4], "instance_idx": 3, "run_idx": 4, "parsed": {"financial_statement_qa": 187}, "normalized": {"financial_statement_qa": 187.0}}
-{"_key": [3, 5], "instance_idx": 3, "run_idx": 5, "raw_output": "{\"financial_statement\\_qa\": 187}\n", "parsed": null}
-{"_key": [3, 6], "instance_idx": 3, "run_idx": 6, "raw_output": "{\"financial_statement\\_qa\": 187}", "parsed": null}
+{"_key": [3, 5], "instance_idx": 3, "run_idx": 5, "raw_output": "{\"financial_statement\\_qa\": 187}\n", "parsed": {"financial_statement_qa": 187}, "normalized": {"financial_statement_qa": 187.0}}
+{"_key": [3, 6], "instance_idx": 3, "run_idx": 6, "raw_output": "{\"financial_statement\\_qa\": 187}", "parsed": {"financial_statement_qa": 187}, "normalized": {"financial_statement_qa": 187.0}}
 {"_key": [3, 7], "instance_idx": 3, "run_idx": 7, "parsed": {"financial_statement_qa": 1999}, "normalized": {"financial_statement_qa": 1999.0}}
 {"_key": [3, 8], "instance_idx": 3, "run_idx": 8, "parsed": {"financial_statement_qa": 187}, "normalized": {"financial_statement_qa": 187.0}}
 {"_key": [3, 9], "instance_idx": 3, "run_idx": 9, "parsed": {"financial_statement_qa": 1999}, "normalized": {"financial_statement_qa": 1999.0}}

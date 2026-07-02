@@ -2,8 +2,8 @@
  "leaf": "current_ownership_pct",
  "model": "mistral-large-or",
  "task_name": "current_ownership_pct",
- "data_version": "689c69261f3e32ca6a4f77a01e944d99b073eb59464b16c0340dbeca827968c5",
+ "data_version": "0e070c70ac184f193ac88645fcdd783a9a2044d8d1c8cb7980dd4cffdf666da5",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:07:47.768779+00:00"
+ "timestamp": "2026-07-02T21:32:35.910644+00:00"
 }

@@ -10,7 +10,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 3,
+     "n_valid": 19,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -23,7 +23,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -43,10 +43,10 @@
    "field_flips": {
     "form_d_field_value": 0.0
    },
-   "parse_failure_count": 17,
-   "parse_failure_rate": 0.425,
-   "valid_run_count": 23,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {
@@ -184,7 +184,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 2,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -204,10 +204,10 @@
    "field_flips": {
     "form_d_field_value": 0.0
    },
-   "parse_failure_count": 18,
-   "parse_failure_rate": 0.45,
-   "valid_run_count": 22,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

@@ -2,8 +2,8 @@
  "leaf": "pro_rata_rights",
  "model": "mistral-large-or",
  "task_name": "pro_rata_rights",
- "data_version": "c3e31c7beefd50b63bf8d7d496c0f2e33d9713f23588a637aaee074386f601e2",
+ "data_version": "d8b6999d428bf3454f5f496bc40e57d7ad36bfba345a06df6bb0eb23b04ffb38",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:15:11.688416+00:00"
+ "timestamp": "2026-07-02T21:33:03.505722+00:00"
 }

@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "mistral-large-or",
+ "task_name": "safe_mfn_present",
+ "data_version": "50da6256763cfd161ee91b40bb41951aa4abc2c4483560a1d98854051d14569d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:33:13.572121+00:00"
+}

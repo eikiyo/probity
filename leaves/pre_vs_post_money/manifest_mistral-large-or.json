@@ -1,0 +1,9 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "mistral-large-or",
+ "task_name": "pre_vs_post_money",
+ "data_version": "b8bd4485236ddb9a948cfd88eee1232fd6b0d69536d59bc3c4c0c1ddba53b3a9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:33:02.183246+00:00"
+}

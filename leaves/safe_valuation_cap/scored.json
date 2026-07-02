@@ -10,7 +10,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -36,7 +36,7 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 17,
+     "n_valid": 18,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -49,7 +49,7 @@
     },
     {
      "instance_idx": 3,
-     "n_valid": 18,
+     "n_valid": 19,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -101,14 +101,14 @@
     },
     {
      "instance_idx": 7,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "safe_valuation_cap": {
        "majority": 15000000.0,
        "truth": 150000000.0,
-       "consistency": 0.9473684210526315
+       "consistency": 0.95
       }
      }
     }
@@ -116,16 +116,20 @@
   },
   "reliability": {
    "task": "safe_valuation_cap",
-   "consistency_rate": 0.9610681114551084,
-   "consistency_pct": 96.10681114551085,
+   "consistency_rate": 0.9613970588235294,
+   "consistency_pct": 96.13970588235294,
    "field_flips": {
     "safe_valuation_cap": 0.375
    },
-   "parse_failure_count": 16,
-   "parse_failure_rate": 0.1,
-   "valid_run_count": 144,
+   "parse_failure_count": 10,
+   "parse_failure_rate": 0.0625,
+   "valid_run_count": 150,
    "measurable": true,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "deepseek-v4f": {
@@ -259,6 +263,139 @@
  },
  "gemma4-31b-or": {
   "model": "google/gemma-4-31b-it",
+  "accuracy": {
+   "task": "safe_valuation_cap",
+   "n_instances": 8,
+   "n_measurable": 8,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 15000000.0,
+       "truth": 15000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 20000000.0,
+       "truth": 20000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 40000000.0,
+       "truth": 40000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 53540000.0,
+       "truth": 53540000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 100000000.0,
+       "truth": 100000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 100000000.0,
+       "truth": 100000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 150000000.0,
+       "truth": 150000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "safe_valuation_cap": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 160,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
   "accuracy": {
    "task": "safe_valuation_cap",
    "n_instances": 8,

@@ -4,13 +4,13 @@
   "accuracy": {
    "task": "vesting_schedule",
    "n_instances": 9,
-   "n_measurable": 8,
-   "accuracy_majority": 0.375,
-   "accuracy_strict": 0.375,
+   "n_measurable": 9,
+   "accuracy_majority": 0.3333333333333333,
+   "accuracy_strict": 0.3333333333333333,
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 16,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -23,7 +23,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 5,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -36,20 +36,20 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 0,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "vesting_schedule": {
-       "majority": null,
+       "majority": "4yr/1yr-cliff",
        "truth": "1.5yr/no-cliff",
-       "consistency": 0.0
+       "consistency": 0.5
       }
      }
     },
     {
      "instance_idx": 3,
-     "n_valid": 17,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -62,7 +62,7 @@
     },
     {
      "instance_idx": 4,
-     "n_valid": 13,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -75,7 +75,7 @@
     },
     {
      "instance_idx": 5,
-     "n_valid": 15,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -88,7 +88,7 @@
     },
     {
      "instance_idx": 6,
-     "n_valid": 10,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -101,20 +101,20 @@
     },
     {
      "instance_idx": 7,
-     "n_valid": 9,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "vesting_schedule": {
-       "majority": "4yr/1yr-cliff",
+       "majority": "25yr/1yr-cliff",
        "truth": "4yr/no-cliff",
-       "consistency": 1.0
+       "consistency": 0.55
       }
      }
     },
     {
      "instance_idx": 8,
-     "n_valid": 7,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -129,15 +129,15 @@
   },
   "reliability": {
    "task": "vesting_schedule",
-   "consistency_rate": 1.0,
-   "consistency_pct": 100.0,
+   "consistency_rate": 0.8944444444444445,
+   "consistency_pct": 89.44444444444444,
    "field_flips": {
-    "vesting_schedule": 0.0
+    "vesting_schedule": 0.2222222222222222
    },
-   "parse_failure_count": 88,
-   "parse_failure_rate": 0.4888888888888889,
-   "valid_run_count": 92,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {
@@ -421,6 +421,152 @@
    "consistency_pct": 100.0,
    "field_flips": {
     "vesting_schedule": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
+  "accuracy": {
+   "task": "vesting_schedule",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.7777777777777778,
+   "accuracy_strict": 0.7777777777777778,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/1yr-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/1yr-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "1.5yr/no-cliff",
+       "truth": "1.5yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "3yr/cliff",
+       "truth": "3yr/cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/no-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/no-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/no-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "1yr/cliff",
+       "truth": "4yr/1yr-cliff",
+       "consistency": 0.5
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "vesting_schedule",
+   "consistency_rate": 0.9444444444444444,
+   "consistency_pct": 94.44444444444444,
+   "field_flips": {
+    "vesting_schedule": 0.1111111111111111
    },
    "parse_failure_count": 0,
    "parse_failure_rate": 0.0,

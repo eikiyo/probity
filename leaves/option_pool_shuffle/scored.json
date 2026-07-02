@@ -206,7 +206,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 4,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -232,14 +232,14 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 13,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "option_pool_shuffle": {
        "majority": 0.6956521739130435,
        "truth": 0.6956,
-       "consistency": 0.9230769230769231
+       "consistency": 0.95
       }
      }
     }
@@ -247,15 +247,15 @@
   },
   "reliability": {
    "task": "option_pool_shuffle",
-   "consistency_rate": 0.9743589743589745,
-   "consistency_pct": 97.43589743589745,
+   "consistency_rate": 0.9833333333333334,
+   "consistency_pct": 98.33333333333334,
    "field_flips": {
     "option_pool_shuffle": 0.3333333333333333
    },
-   "parse_failure_count": 23,
-   "parse_failure_rate": 0.38333333333333336,
-   "valid_run_count": 37,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 60,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

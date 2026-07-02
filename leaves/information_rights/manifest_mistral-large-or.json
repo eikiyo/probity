@@ -2,8 +2,8 @@
  "leaf": "information_rights",
  "model": "mistral-large-or",
  "task_name": "information_rights",
- "data_version": "931609932bfe098857f966c9baa9c78b1ae0205eb77d9d81fd94e5226f82a132",
+ "data_version": "0f5d1d846998dd5141b21cbbf3e52b416172562f9cb782ca742fd578ea7a454c",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:11:56.125467+00:00"
+ "timestamp": "2026-07-02T21:32:48.674231+00:00"
 }

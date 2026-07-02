@@ -1,0 +1,9 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "gemma3-1b",
+ "task_name": "note_interest_rate",
+ "data_version": "45d5b7b22dad39897b6df001abcb70bde3b186ad2bb3cfe2362029fd6e062cae",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:27:32.553898+00:00"
+}

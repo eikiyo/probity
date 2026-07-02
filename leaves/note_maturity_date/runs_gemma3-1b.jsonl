@@ -1,5 +1,5 @@
 {"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "parsed": {"note_maturity_date": "2005-09-30"}, "normalized": {"note_maturity_date": "2005-09-30"}}
-{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "raw_output": "{\"note_maturity\\_date\": \"2005-09-30\"}", "parsed": null}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "raw_output": "{\"note_maturity\\_date\": \"2005-09-30\"}", "parsed": {"note_maturity_date": "2005-09-30"}, "normalized": {"note_maturity_date": "2005-09-30"}}
 {"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "parsed": {"note_maturity_date": "2005-09-31"}, "normalized": {"note_maturity_date": "2005-09-31"}}
 {"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "parsed": {"note_maturity_date": "2005-09-30"}, "normalized": {"note_maturity_date": "2005-09-30"}}
 {"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "parsed": {"note_maturity_date": "2005-09-30"}, "normalized": {"note_maturity_date": "2005-09-30"}}
@@ -20,7 +20,7 @@
 {"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "parsed": {"note_maturity_date": "2005-09-30"}, "normalized": {"note_maturity_date": "2005-09-30"}}
 {"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "parsed": {"note_maturity_date": "2014-03-04"}, "normalized": {"note_maturity_date": "2014-03-04"}}
 {"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "parsed": {"note_maturity_date": "2014-03-04"}, "normalized": {"note_maturity_date": "2014-03-04"}}
-{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "raw_output": "{\"note_maturity\\_date\": \"2014-03-04\"}\n", "parsed": null}
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "raw_output": "{\"note_maturity\\_date\": \"2014-03-04\"}\n", "parsed": {"note_maturity_date": "2014-03-04"}, "normalized": {"note_maturity_date": "2014-03-04"}}
 {"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "parsed": {"note_maturity_date": "2014-03-04"}, "normalized": {"note_maturity_date": "2014-03-04"}}
 {"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "parsed": {"note_maturity_date": "2014-03-04"}, "normalized": {"note_maturity_date": "2014-03-04"}}
 {"_key": [1, 5], "instance_idx": 1, "run_idx": 5, "parsed": {"note_maturity_date": "2014-03-04"}, "normalized": {"note_maturity_date": "2014-03-04"}}
@@ -40,13 +40,13 @@
 {"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "parsed": {"note_maturity_date": "2014-03-04"}, "normalized": {"note_maturity_date": "2014-03-04"}}
 {"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "parsed": {"note_maturity_date": "2026-12-31"}, "normalized": {"note_maturity_date": "2026-12-31"}}
 {"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "parsed": {"note_maturity_date": "2026"}, "normalized": {"note_maturity_date": null}}
-{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "raw_output": "{\"note_maturity\\_date\": \"2026-12-31\"}\n", "parsed": null}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "raw_output": "{\"note_maturity\\_date\": \"2026-12-31\"}\n", "parsed": {"note_maturity_date": "2026-12-31"}, "normalized": {"note_maturity_date": "2026-12-31"}}
 {"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "parsed": {"note_maturity_date": "2026-12-31"}, "normalized": {"note_maturity_date": "2026-12-31"}}
 {"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "parsed": {"note_maturity_date": "2026-12-31"}, "normalized": {"note_maturity_date": "2026-12-31"}}
 {"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "parsed": {"note_maturity_date": "2026-12-31"}, "normalized": {"note_maturity_date": "2026-12-31"}}
 {"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "parsed": {"note_maturity_date": "2026-12-31"}, "normalized": {"note_maturity_date": "2026-12-31"}}
 {"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "parsed": {"note_maturity_date": "2026-12-31"}, "normalized": {"note_maturity_date": "2026-12-31"}}
-{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "raw_output": "{\"note_maturity\\_date\": \"2026\"}\n", "parsed": null}
+{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "raw_output": "{\"note_maturity\\_date\": \"2026\"}\n", "parsed": {"note_maturity_date": "2026"}, "normalized": {"note_maturity_date": null}}
 {"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "parsed": {"note_maturity_date": "2026-12-31"}, "normalized": {"note_maturity_date": "2026-12-31"}}
 {"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "parsed": {"note_maturity_date": "2026-12-31"}, "normalized": {"note_maturity_date": "2026-12-31"}}
 {"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "parsed": {"note_maturity_date": "2026-12-31"}, "normalized": {"note_maturity_date": "2026-12-31"}}

@@ -206,7 +206,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 9,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -219,7 +219,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 3,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -252,10 +252,10 @@
    "field_flips": {
     "founder_ownership_pct": 0.0
    },
-   "parse_failure_count": 28,
-   "parse_failure_rate": 0.4666666666666667,
-   "valid_run_count": 32,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 60,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

@@ -2,8 +2,8 @@
  "leaf": "conversion_ratio",
  "model": "mistral-large-or",
  "task_name": "conversion_ratio",
- "data_version": "8a624e3ed9f2fca0a6255bb54040da4ca5ea0bd371105fc4f7a74fbd7741ffa7",
+ "data_version": "d7d6eec4b5806f607d7d5a00a85d8a51d3aecf671fa1a56cd5f98453335b9ac4",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:06:22.256665+00:00"
+ "timestamp": "2026-07-02T21:32:35.823787+00:00"
 }

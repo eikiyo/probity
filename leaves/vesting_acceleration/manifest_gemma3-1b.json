@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "gemma3-1b",
+ "task_name": "vesting_acceleration",
+ "data_version": "e3964f33e3b3bbaaf1f2eb8fae3efc6244ee583ac2ddc0d11b94b37b200de232",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:27:33.635044+00:00"
+}

@@ -2,8 +2,8 @@
  "leaf": "investor_ownership_pct",
  "model": "mistral-large-or",
  "task_name": "investor_ownership_pct",
- "data_version": "32940558352de19ddaf474f4c84d60f1ff61194973ee6b472a8ba59ae71a2a16",
+ "data_version": "764b6ca2d288f23a3d3da16db050210086a71b5f89e347247fdaee83f31af921",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:10:02.886929+00:00"
+ "timestamp": "2026-07-02T21:32:46.672972+00:00"
 }

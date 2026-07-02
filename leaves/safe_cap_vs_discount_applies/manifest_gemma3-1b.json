@@ -2,8 +2,8 @@
  "leaf": "safe_cap_vs_discount_applies",
  "model": "gemma3-1b",
  "task_name": "safe_cap_vs_discount_applies",
- "data_version": "6d4505d37aa6df938d2169543bc8d4b9e99973220b0b42d94f66af4c6efe1fe4",
+ "data_version": "45578decf9f4e7d1573a17b200939138068ce12b26753797e9684450e53ba4a5",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:10:25.356761+00:00"
+ "timestamp": "2026-07-02T21:27:33.256111+00:00"
 }

@@ -10,14 +10,14 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "vesting_acceleration": {
        "majority": "no",
        "truth": "yes",
-       "consistency": 0.9473684210526315
+       "consistency": 0.95
       }
      }
     },
@@ -49,14 +49,14 @@
     },
     {
      "instance_idx": 3,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "vesting_acceleration": {
        "majority": "no",
        "truth": "yes",
-       "consistency": 0.8947368421052632
+       "consistency": 0.9
       }
      }
     },
@@ -75,7 +75,7 @@
     },
     {
      "instance_idx": 5,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -101,7 +101,7 @@
     },
     {
      "instance_idx": 7,
-     "n_valid": 18,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -114,7 +114,7 @@
     },
     {
      "instance_idx": 8,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -129,16 +129,20 @@
   },
   "reliability": {
    "task": "vesting_acceleration",
-   "consistency_rate": 0.9301169590643276,
-   "consistency_pct": 93.01169590643276,
+   "consistency_rate": 0.9309941520467836,
+   "consistency_pct": 93.09941520467837,
    "field_flips": {
     "vesting_acceleration": 0.4444444444444444
    },
-   "parse_failure_count": 6,
-   "parse_failure_rate": 0.03333333333333333,
-   "valid_run_count": 174,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
    "measurable": true,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "deepseek-v4f": {
@@ -285,6 +289,152 @@
  },
  "gemma4-31b-or": {
   "model": "google/gemma-4-31b-it",
+  "accuracy": {
+   "task": "vesting_acceleration",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_acceleration": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_acceleration": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_acceleration": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_acceleration": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_acceleration": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_acceleration": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_acceleration": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_acceleration": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_acceleration": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "vesting_acceleration",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "vesting_acceleration": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
   "accuracy": {
    "task": "vesting_acceleration",
    "n_instances": 9,

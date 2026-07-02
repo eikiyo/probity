@@ -85,9 +85,10 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 
 | Model | Size | Tests covered | **Wobble** ↓ | Accuracy |
 |---|---|---|---|---|
+| `gemma3:1b` | 1B, local | 60 | ![42%](https://img.shields.io/badge/-42%25-red) | ![58%](https://img.shields.io/badge/-58%25-red) |
 | `deepseek-v4-flash` | hosted | 60 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
 | `gemma-4-31b-it` | 31B, hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
-| `gemma3:1b` | 1B, local | 55 | ![43%](https://img.shields.io/badge/-43%25-red) | ![57%](https://img.shields.io/badge/-57%25-red) |
+| `mistral-large-2512` | hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
 
 ### By fundraising-document category
 

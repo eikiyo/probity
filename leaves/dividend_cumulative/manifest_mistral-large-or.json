@@ -2,8 +2,8 @@
  "leaf": "dividend_cumulative",
  "model": "mistral-large-or",
  "task_name": "dividend_cumulative",
- "data_version": "3f75ffa84ca15ccc708fb83168602b6aec176b012ab8fce0f19de60320151157",
+ "data_version": "02158687eb1e2b8334a4f2d1965e19f6e28b0a6c5f1ff198426435a7f9969c0a",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:10:04.044378+00:00"
+ "timestamp": "2026-07-02T21:32:38.691785+00:00"
 }

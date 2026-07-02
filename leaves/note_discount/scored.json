@@ -243,13 +243,13 @@
   "accuracy": {
    "task": "note_discount",
    "n_instances": 4,
-   "n_measurable": 3,
+   "n_measurable": 4,
    "accuracy_majority": 1.0,
    "accuracy_strict": 1.0,
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 18,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -262,20 +262,20 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "note_discount": {
-       "majority": null,
+       "majority": 25.0,
        "truth": 25.0,
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 2,
-     "n_valid": 12,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -308,10 +308,10 @@
    "field_flips": {
     "note_discount": 0.0
    },
-   "parse_failure_count": 30,
-   "parse_failure_rate": 0.375,
-   "valid_run_count": 50,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

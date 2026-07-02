@@ -32,26 +32,6 @@
 {"_key": [1, 13], "instance_idx": 1, "run_idx": 13, "item_id": "1725255_000110465920135025", "parsed": {"dividend_rate_pct": 8.0}, "normalized": {"dividend_rate_pct": 8.0}}
 {"_key": [1, 6], "instance_idx": 1, "run_idx": 6, "item_id": "1725255_000110465920135025", "parsed": {"dividend_rate_pct": 8.0}, "normalized": {"dividend_rate_pct": 8.0}}
 {"_key": [1, 12], "instance_idx": 1, "run_idx": 12, "item_id": "1725255_000110465920135025", "parsed": {"dividend_rate_pct": 8.0}, "normalized": {"dividend_rate_pct": 8.0}}
-{"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "item_id": "1725255_000110465920135025", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "item_id": "1725255_000110465920135025", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "item_id": "1725255_000110465920135025", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "item_id": "1725255_000110465920135025", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "item_id": "1725255_000110465920135025", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "item_id": "1725255_000110465920135025", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 12], "instance_idx": 2, "run_idx": 12, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [2, 13], "instance_idx": 2, "run_idx": 13, "item_id": "1620179_000104746918002690", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
 {"_key": [2, 14], "instance_idx": 2, "run_idx": 14, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
 {"_key": [2, 15], "instance_idx": 2, "run_idx": 15, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
 {"_key": [2, 18], "instance_idx": 2, "run_idx": 18, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
@@ -94,27 +74,47 @@
 {"_key": [4, 14], "instance_idx": 4, "run_idx": 14, "item_id": "1445499_000095012321001942", "parsed": {"dividend_rate_pct": 8}, "normalized": {"dividend_rate_pct": 8.0}}
 {"_key": [4, 8], "instance_idx": 4, "run_idx": 8, "item_id": "1445499_000095012321001942", "parsed": {"dividend_rate_pct": 8}, "normalized": {"dividend_rate_pct": 8.0}}
 {"_key": [4, 15], "instance_idx": 4, "run_idx": 15, "item_id": "1445499_000095012321001942", "parsed": {"dividend_rate_pct": 8}, "normalized": {"dividend_rate_pct": 8.0}}
-{"_key": [4, 16], "instance_idx": 4, "run_idx": 16, "item_id": "1445499_000095012321001942", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 17], "instance_idx": 4, "run_idx": 17, "item_id": "1445499_000095012321001942", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 18], "instance_idx": 4, "run_idx": 18, "item_id": "1445499_000095012321001942", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [4, 19], "instance_idx": 4, "run_idx": 19, "item_id": "1445499_000095012321001942", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 0], "instance_idx": 5, "run_idx": 0, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 2], "instance_idx": 5, "run_idx": 2, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 1], "instance_idx": 5, "run_idx": 1, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 3], "instance_idx": 5, "run_idx": 3, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 4], "instance_idx": 5, "run_idx": 4, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 6], "instance_idx": 5, "run_idx": 6, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 5], "instance_idx": 5, "run_idx": 5, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 7], "instance_idx": 5, "run_idx": 7, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 8], "instance_idx": 5, "run_idx": 8, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 11], "instance_idx": 5, "run_idx": 11, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 9], "instance_idx": 5, "run_idx": 9, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 10], "instance_idx": 5, "run_idx": 10, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 12], "instance_idx": 5, "run_idx": 12, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 13], "instance_idx": 5, "run_idx": 13, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 14], "instance_idx": 5, "run_idx": 14, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 15], "instance_idx": 5, "run_idx": 15, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 16], "instance_idx": 5, "run_idx": 16, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 17], "instance_idx": 5, "run_idx": 17, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 18], "instance_idx": 5, "run_idx": 18, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
-{"_key": [5, 19], "instance_idx": 5, "run_idx": 19, "item_id": "1585521_000119312519083351", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "item_id": "1725255_000110465920135025", "parsed": {"dividend_rate_pct": 8.0}, "normalized": {"dividend_rate_pct": 8.0}}
+{"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "item_id": "1725255_000110465920135025", "parsed": {"dividend_rate_pct": 8.0}, "normalized": {"dividend_rate_pct": 8.0}}
+{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "item_id": "1725255_000110465920135025", "parsed": {"dividend_rate_pct": 8.0}, "normalized": {"dividend_rate_pct": 8.0}}
+{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "item_id": "1725255_000110465920135025", "parsed": {"dividend_rate_pct": 8.0}, "normalized": {"dividend_rate_pct": 8.0}}
+{"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "item_id": "1725255_000110465920135025", "parsed": {"dividend_rate_pct": 8.0}, "normalized": {"dividend_rate_pct": 8.0}}
+{"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "item_id": "1725255_000110465920135025", "parsed": {"dividend_rate_pct": 8.0}, "normalized": {"dividend_rate_pct": 8.0}}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [2, 12], "instance_idx": 2, "run_idx": 12, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [4, 16], "instance_idx": 4, "run_idx": 16, "item_id": "1445499_000095012321001942", "parsed": {"dividend_rate_pct": 8}, "normalized": {"dividend_rate_pct": 8.0}}
+{"_key": [2, 13], "instance_idx": 2, "run_idx": 13, "item_id": "1620179_000104746918002690", "parsed": {"dividend_rate_pct": 10}, "normalized": {"dividend_rate_pct": 10.0}}
+{"_key": [4, 17], "instance_idx": 4, "run_idx": 17, "item_id": "1445499_000095012321001942", "parsed": {"dividend_rate_pct": 8}, "normalized": {"dividend_rate_pct": 8.0}}
+{"_key": [4, 18], "instance_idx": 4, "run_idx": 18, "item_id": "1445499_000095012321001942", "parsed": {"dividend_rate_pct": 8}, "normalized": {"dividend_rate_pct": 8.0}}
+{"_key": [4, 19], "instance_idx": 4, "run_idx": 19, "item_id": "1445499_000095012321001942", "parsed": {"dividend_rate_pct": 8}, "normalized": {"dividend_rate_pct": 8.0}}
+{"_key": [5, 0], "instance_idx": 5, "run_idx": 0, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 1], "instance_idx": 5, "run_idx": 1, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 2], "instance_idx": 5, "run_idx": 2, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 3], "instance_idx": 5, "run_idx": 3, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 4], "instance_idx": 5, "run_idx": 4, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 5], "instance_idx": 5, "run_idx": 5, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 6], "instance_idx": 5, "run_idx": 6, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 7], "instance_idx": 5, "run_idx": 7, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 9], "instance_idx": 5, "run_idx": 9, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 8], "instance_idx": 5, "run_idx": 8, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 10], "instance_idx": 5, "run_idx": 10, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 11], "instance_idx": 5, "run_idx": 11, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 12], "instance_idx": 5, "run_idx": 12, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 13], "instance_idx": 5, "run_idx": 13, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 15], "instance_idx": 5, "run_idx": 15, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 16], "instance_idx": 5, "run_idx": 16, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 14], "instance_idx": 5, "run_idx": 14, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 17], "instance_idx": 5, "run_idx": 17, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 18], "instance_idx": 5, "run_idx": 18, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}
+{"_key": [5, 19], "instance_idx": 5, "run_idx": 19, "item_id": "1585521_000119312519083351", "parsed": {"dividend_rate_pct": 6}, "normalized": {"dividend_rate_pct": 6.0}}

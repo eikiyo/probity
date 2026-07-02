@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "gemma3-1b",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "c8cbc74692a4c851494c6c115abc4fc1f70629b4180099ce83fa8f52b3562df2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:27:31.860529+00:00"
+}

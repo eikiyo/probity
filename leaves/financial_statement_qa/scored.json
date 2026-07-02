@@ -49,14 +49,14 @@
     },
     {
      "instance_idx": 3,
-     "n_valid": 18,
+     "n_valid": 20,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "financial_statement_qa": {
        "majority": 1999.0,
        "truth": 12619.0,
-       "consistency": 0.7777777777777778
+       "consistency": 0.7
       }
      }
     },
@@ -77,16 +77,20 @@
   },
   "reliability": {
    "task": "financial_statement_qa",
-   "consistency_rate": 0.8555555555555555,
-   "consistency_pct": 85.55555555555556,
+   "consistency_rate": 0.8400000000000001,
+   "consistency_pct": 84.00000000000001,
    "field_flips": {
     "financial_statement_qa": 0.6
    },
-   "parse_failure_count": 3,
-   "parse_failure_rate": 0.03,
-   "valid_run_count": 97,
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.01,
+   "valid_run_count": 99,
    "measurable": true,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "deepseek-v4f": {
@@ -278,13 +282,13 @@
   "accuracy": {
    "task": "financial_statement_qa",
    "n_instances": 5,
-   "n_measurable": 4,
-   "accuracy_majority": 0.75,
-   "accuracy_strict": 0.75,
+   "n_measurable": 5,
+   "accuracy_majority": 0.8,
+   "accuracy_strict": 0.8,
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 4,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -310,7 +314,7 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 12,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -323,14 +327,14 @@
     },
     {
      "instance_idx": 3,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "financial_statement_qa": {
-       "majority": null,
+       "majority": 12619.0,
        "truth": 12619.0,
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
@@ -351,15 +355,15 @@
   },
   "reliability": {
    "task": "financial_statement_qa",
-   "consistency_rate": 0.9,
-   "consistency_pct": 90.0,
+   "consistency_rate": 0.9199999999999999,
+   "consistency_pct": 92.0,
    "field_flips": {
     "financial_statement_qa": 0.2
    },
-   "parse_failure_count": 44,
-   "parse_failure_rate": 0.44,
-   "valid_run_count": 56,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

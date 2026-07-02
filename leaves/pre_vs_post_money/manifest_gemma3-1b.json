@@ -1,0 +1,9 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "gemma3-1b",
+ "task_name": "pre_vs_post_money",
+ "data_version": "16f973c31fe146d6741648462b504635c48af691162940f79b64981b16ec15a8",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:27:32.974835+00:00"
+}

@@ -297,7 +297,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 15,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -310,7 +310,7 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 5,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -336,7 +336,7 @@
     },
     {
      "instance_idx": 4,
-     "n_valid": 14,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -356,9 +356,9 @@
    "field_flips": {
     "conversion_ratio": 0.0
    },
-   "parse_failure_count": 26,
-   "parse_failure_rate": 0.26,
-   "valid_run_count": 74,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
    "measurable": true,
    "excluded_fields": []
   },

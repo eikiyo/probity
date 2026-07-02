@@ -2,8 +2,8 @@
  "leaf": "safe_pro_rata_side_letter",
  "model": "gemma3-1b",
  "task_name": "safe_pro_rata_side_letter",
- "data_version": "05e5f7cb58d2a2efadc1f772e91e4b01f24da3694918ec42c2e1023517fe8b97",
+ "data_version": "914869ffdf8dd34ecf358a45939190dc241fef23274df9e3ba8d99511475d788",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:12:49.677342+00:00"
+ "timestamp": "2026-07-02T21:27:33.470988+00:00"
 }

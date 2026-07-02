@@ -1,0 +1,9 @@
+{
+ "leaf": "price_per_share",
+ "model": "gemma3-1b",
+ "task_name": "price_per_share",
+ "data_version": "0ca0bf09ed2e030f68c723928d8c8e0e8ffb170220f770726a94c04ea712aa45",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:27:33.030668+00:00"
+}

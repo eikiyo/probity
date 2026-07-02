@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "mistral-large-or",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "441f1e6c87e51438954c890465acd3c466e045a33430e6c6384d68a96d844cfe",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:33:17.487702+00:00"
+}

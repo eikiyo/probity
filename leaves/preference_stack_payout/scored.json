@@ -171,7 +171,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 4,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -204,10 +204,10 @@
    "field_flips": {
     "preference_stack_payout": 0.0
    },
-   "parse_failure_count": 16,
-   "parse_failure_rate": 0.4,
-   "valid_run_count": 24,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
    "excluded_fields": []
   },
   "guard": {

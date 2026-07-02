@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "mistral-large-or",
+ "task_name": "safe_discount_rate",
+ "data_version": "164ff2ca7b001ce081d256cb5bd0460d17ff1a7db44c78e3d4624a51e2f810fb",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:33:17.487316+00:00"
+}

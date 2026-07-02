@@ -21,7 +21,7 @@
 {"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "1260990", "parsed": {"securities_exemption": "506b"}, "normalized": {"securities_exemption": "506b"}}
 {"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "1260990", "parsed": {"seurities_exemption": "506b"}, "normalized": {}}
 {"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "1260990", "parsed": {"securities_exemption": "506b"}, "normalized": {"securities_exemption": "506b"}}
-{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "item_id": "1260990", "raw_output": "{\"securities\\_exemption\": \"506b\"}\n", "parsed": null}
+{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "item_id": "1260990", "raw_output": "{\"securities\\_exemption\": \"506b\"}\n", "parsed": {"securities_exemption": "506b"}, "normalized": {"securities_exemption": "506b"}}
 {"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "item_id": "1260990", "parsed": {"securities_exemption": "506b"}, "normalized": {"securities_exemption": "506b"}}
 {"_key": [1, 5], "instance_idx": 1, "run_idx": 5, "item_id": "1260990", "parsed": {"securities_exemption": "506b"}, "normalized": {"securities_exemption": "506b"}}
 {"_key": [1, 6], "instance_idx": 1, "run_idx": 6, "item_id": "1260990", "parsed": {"seurities_exemption": "506b"}, "normalized": {}}

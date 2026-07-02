@@ -2,8 +2,8 @@
  "leaf": "protective_provisions",
  "model": "mistral-large-or",
  "task_name": "protective_provisions",
- "data_version": "9e75cb3b17d423a9ce4b513540e1fe309ffaebfad5185b43971ddda69a5f5f3b",
+ "data_version": "d558582f8fa91b5dd0ae87833cfb9e4e45a1a88a620218c828590a8801e1c6be",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:15:17.017875+00:00"
+ "timestamp": "2026-07-02T21:33:03.976862+00:00"
 }

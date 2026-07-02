@@ -10,7 +10,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 18,
+     "n_valid": 19,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -23,7 +23,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 18,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -36,33 +36,33 @@
     },
     {
      "instance_idx": 2,
-     "n_valid": 16,
+     "n_valid": 19,
      "majority_correct": true,
      "strict_correct": false,
      "fields": {
       "safe_mfn_present": {
        "majority": "yes",
        "truth": "yes",
-       "consistency": 0.875
+       "consistency": 0.8947368421052632
       }
      }
     },
     {
      "instance_idx": 3,
-     "n_valid": 14,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": false,
      "fields": {
       "safe_mfn_present": {
        "majority": "yes",
        "truth": "yes",
-       "consistency": 0.9285714285714286
+       "consistency": 0.95
       }
      }
     },
     {
      "instance_idx": 4,
-     "n_valid": 17,
+     "n_valid": 19,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -88,7 +88,7 @@
     },
     {
      "instance_idx": 6,
-     "n_valid": 18,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -103,14 +103,14 @@
   },
   "reliability": {
    "task": "safe_mfn_present",
-   "consistency_rate": 0.9719387755102041,
-   "consistency_pct": 97.1938775510204,
+   "consistency_rate": 0.9778195488721805,
+   "consistency_pct": 97.78195488721805,
    "field_flips": {
     "safe_mfn_present": 0.2857142857142857
    },
-   "parse_failure_count": 16,
-   "parse_failure_rate": 0.11428571428571428,
-   "valid_run_count": 124,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
    "measurable": true,
    "excluded_fields": []
   },
@@ -237,6 +237,126 @@
  },
  "gemma4-31b-or": {
   "model": "google/gemma-4-31b-it",
+  "accuracy": {
+   "task": "safe_mfn_present",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_mfn_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_mfn_present",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "safe_mfn_present": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
   "accuracy": {
    "task": "safe_mfn_present",
    "n_instances": 7,

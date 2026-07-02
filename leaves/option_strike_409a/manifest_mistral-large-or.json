@@ -2,8 +2,8 @@
  "leaf": "option_strike_409a",
  "model": "mistral-large-or",
  "task_name": "option_strike_409a",
- "data_version": "6fd0b94f3b33ded159c87dc344ec09c4a7db5e5101dc5c5fee28d1b7445cf847",
+ "data_version": "1fe44376d1298a560c446158cacde6250f069856e5069909cfac11361647e91c",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:13:02.364598+00:00"
+ "timestamp": "2026-07-02T21:32:53.927020+00:00"
 }

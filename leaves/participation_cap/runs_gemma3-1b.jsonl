@@ -17,7 +17,7 @@
 {"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "parsed": {"participation_cap": 3.5}, "normalized": {"participation_cap": 3.5}}
 {"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "parsed": {"participation_cap": 3.5}, "normalized": {"participation_cap": 3.5}}
 {"_key": [0, 18], "instance_idx": 0, "run_idx": 18, "parsed": {"participation_cap": 3.5}, "normalized": {"participation_cap": 3.5}}
-{"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "raw_output": "{\"participation\\_cap\": 3.5}\n", "parsed": null}
+{"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "raw_output": "{\"participation\\_cap\": 3.5}\n", "parsed": {"participation_cap": 3.5}, "normalized": {"participation_cap": 3.5}}
 {"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
 {"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
 {"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
@@ -34,7 +34,7 @@
 {"_key": [1, 13], "instance_idx": 1, "run_idx": 13, "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
 {"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
 {"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
-{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "raw_output": "{\"participation\\_cap\": 3}\n", "parsed": null}
+{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "raw_output": "{\"participation\\_cap\": 3}\n", "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
 {"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
 {"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
 {"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}

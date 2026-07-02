@@ -7,7 +7,7 @@
 {"_key": [0, 6], "instance_idx": 0, "run_idx": 6, "parsed": {"protective_provisions": "yes"}, "normalized": {"protective_provisions": "yes"}}
 {"_key": [0, 7], "instance_idx": 0, "run_idx": 7, "parsed": {"protective_provisions": "yes"}, "normalized": {"protective_provisions": "yes"}}
 {"_key": [0, 8], "instance_idx": 0, "run_idx": 8, "parsed": {"protective_provisions": "yes"}, "normalized": {"protective_provisions": "yes"}}
-{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "raw_output": "{\"protective\\_provisions\": \"yes\"}", "parsed": null}
+{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "raw_output": "{\"protective\\_provisions\": \"yes\"}", "parsed": {"protective_provisions": "yes"}, "normalized": {"protective_provisions": "yes"}}
 {"_key": [0, 10], "instance_idx": 0, "run_idx": 10, "parsed": {"protective_provisions": "yes"}, "normalized": {"protective_provisions": "yes"}}
 {"_key": [0, 11], "instance_idx": 0, "run_idx": 11, "parsed": {"protective_provisions": "yes"}, "normalized": {"protective_provisions": "yes"}}
 {"_key": [0, 12], "instance_idx": 0, "run_idx": 12, "parsed": {"protective_provisions": "yes"}, "normalized": {"protective_provisions": "yes"}}

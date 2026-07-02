@@ -2,8 +2,8 @@
  "leaf": "drag_along",
  "model": "mistral-large-or",
  "task_name": "drag_along",
- "data_version": "28d2d55976851e94f102cd2ee3ef8e97e3df7249078433c68089c672b9ad0d6a",
+ "data_version": "598926d918d0026534ee8b46fba4cf4624edcb28214d6be468783d1dabb97f7a",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T21:09:06.787097+00:00"
+ "timestamp": "2026-07-02T21:32:39.023650+00:00"
 }
