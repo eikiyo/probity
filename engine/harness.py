@@ -7,6 +7,8 @@ Imports: json, pathlib, normalize
 """
 
 import json
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
 from models import LLMClient
@@ -33,6 +35,7 @@ def run_harness(
     checkpoint_file: Optional[str] = None,
     guard: Optional["guard_mod.BrakePedalGuard"] = None,
     model_label: Optional[str] = None,
+    max_workers: int = 1,
 ) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
     """
     What: runs every instance N times, checkpointing each individual model call to a JSONL file
@@ -76,6 +79,11 @@ def run_harness(
     _validate_checkpoint_freshness(runs, instances, checkpoint_path)
     done_keys = {tuple(r["_key"]) for r in runs if "_key" in r}
 
+    if max_workers > 1:
+        return _run_harness_parallel(client, task, instances, n_runs, temperature,
+                                      checkpoint_path, guard, model_label, max_workers,
+                                      runs, done_keys)
+
     parse_failures, total_runs = 0, 0
     total_target = len(instances) * n_runs
     guard_tripped, guard_reason = False, None
@@ -104,6 +112,72 @@ def run_harness(
             runs.append(record)
     return runs, {"parse_failures": parse_failures, "total_runs": total_runs,
                    "guard_tripped": guard_tripped, "guard_reason": guard_reason}
+
+
+def _run_harness_parallel(client, task, instances, n_runs, temperature, checkpoint_path,
+                           guard, model_label, max_workers, runs, done_keys) -> Tuple[
+        List[Dict[str, Any]], Dict[str, Any]]:
+    """
+    What: same contract as run_harness()'s sequential loop, but dispatches the remaining
+          (instance, run) calls across a thread pool instead of one at a time. Only reached
+          when max_workers > 1 -- run_harness() routes here before its serial loop starts.
+    Concurrency model: ONE lock serializes the guard check (guard.before_call()) so it always
+          runs BEFORE the network call, exactly like the sequential path -- a thread only ever
+          calls client.generate() after it has won the lock and passed the guard, so the guard's
+          cap can never be overshot even under heavy contention (see
+          tests/test_harness_parallel.py's TestParallelGuardNeverOvershoots). A second
+          lock-protected section after the call appends the run record and its checkpoint line
+          together, so the checkpoint file never sees an interleaved/partial write. The actual
+          client.generate() call happens OUTSIDE the lock so workers overlap on the slow part.
+    Output: same (runs, stats) shape as the sequential path.
+    """
+    todo = [
+        (inst_idx, run_idx, instance)
+        for inst_idx, (instance, _truth) in enumerate(instances)
+        for run_idx in range(n_runs)
+        if (inst_idx, run_idx) not in done_keys
+    ]
+    total_target = len(instances) * n_runs
+    lock = threading.Lock()
+    label_for_guard = model_label or getattr(client, "model", "unknown")
+    state = {"parse_failures": 0, "total_runs": len(done_keys),
+             "guard_tripped": False, "guard_reason": None}
+
+    def _try_start() -> bool:
+        with lock:
+            if state["guard_tripped"]:
+                return False
+            if guard is not None:
+                try:
+                    guard.before_call(label_for_guard)
+                except guard_mod.GuardTripped as e:
+                    state["guard_tripped"], state["guard_reason"] = True, e.reason
+                    print(f"    GUARD TRIPPED: {e.reason} -- stopping new dispatch, "
+                          f"{len(runs)}/{total_target} calls completed so far.", flush=True)
+                    return False
+            return True
+
+    def _worker(inst_idx, run_idx, instance) -> None:
+        if not _try_start():
+            return
+        record = _execute_run(client, task, instance, inst_idx, run_idx, temperature)
+        with lock:
+            state["total_runs"] += 1
+            _print_progress(task["name"], getattr(client, "model", "?"),
+                             state["total_runs"], total_target)
+            if record.get("parsed") is None:
+                state["parse_failures"] += 1
+            _checkpoint_run(checkpoint_path, record)
+            runs.append(record)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [executor.submit(_worker, inst_idx, run_idx, instance)
+                   for inst_idx, run_idx, instance in todo]
+        for f in as_completed(futures):
+            f.result()  # re-raise any worker exception instead of swallowing it
+
+    return runs, {"parse_failures": state["parse_failures"], "total_runs": state["total_runs"],
+                   "guard_tripped": state["guard_tripped"], "guard_reason": state["guard_reason"]}
 
 
 def _validate_checkpoint_freshness(runs, instances, checkpoint_path) -> None:

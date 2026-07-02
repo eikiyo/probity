@@ -542,5 +542,281 @@
    "measurable": true,
    "excluded_fields": []
   }
+ },
+ "gemma4-31b-or": {
+  "model": "google/gemma-4-31b-it",
+  "accuracy": {
+   "task": "pre_vs_post_money",
+   "n_instances": 19,
+   "n_measurable": 19,
+   "accuracy_majority": 0.9473684210526315,
+   "accuracy_strict": 0.9473684210526315,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "pre-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 16,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 17,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 18,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "pre_vs_post_money": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "pre_vs_post_money",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "pre_vs_post_money": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 380,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

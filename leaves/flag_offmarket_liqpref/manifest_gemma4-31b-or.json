@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "gemma4-31b-or",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "7a907b776a0ad76646caa73a47e87b3faf9da68d3e019423c42d0d1c3f538f37",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:56:18.031096+00:00"
+}

@@ -100,5 +100,60 @@
    "measurable": false,
    "excluded_fields": []
   }
+ },
+ "gemma4-31b-or": {
+  "model": "google/gemma-4-31b-it",
+  "accuracy": {
+   "task": "convert_vs_preference_decision",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "convert_vs_preference_decision": {
+       "majority": "convert",
+       "truth": "convert",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "convert_vs_preference_decision": {
+       "majority": "take-preference",
+       "truth": "take-preference",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "convert_vs_preference_decision",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "convert_vs_preference_decision": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

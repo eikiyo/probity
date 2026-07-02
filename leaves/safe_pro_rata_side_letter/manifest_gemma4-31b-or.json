@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "gemma4-31b-or",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "72921acf993fa168dd97b78722a082cc59c2f77d40dbc05f869c0f0c1b0b9d66",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:00:04.148128+00:00"
+}

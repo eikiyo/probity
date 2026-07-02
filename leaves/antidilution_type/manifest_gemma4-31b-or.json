@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_type",
+ "model": "gemma4-31b-or",
+ "task_name": "antidilution_type",
+ "data_version": "6093c139808a0e1e406453490cf7b3b32828d31ed38c3e7c310b05db772595ef",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:56:17.994170+00:00"
+}

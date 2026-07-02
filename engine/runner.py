@@ -24,7 +24,7 @@ import harness                                       # noqa: E402
 import scorer                                        # noqa: E402
 import guard as guard_mod                            # noqa: E402
 import manifest as manifest_mod                       # noqa: E402
-from models import OllamaClient, DeepSeekClient      # noqa: E402
+from models import OllamaClient, DeepSeekClient, OpenRouterClient  # noqa: E402
 
 # (label, ollama_model_or_None, factory). None ollama_model => hosted (no local unload).
 FAST_SET = [
@@ -40,6 +40,15 @@ BIG_BATCH = [
 
 N_RUNS = 20
 TEMPERATURE = 0.7
+
+
+def openrouter_model_set(label, model_id):
+    """One-model hosted set for a single OpenRouter model -- reused across the "10 recommended
+    models" lineup (gemma-4-31b-it first, per Eikiyo 2026-07-02) instead of hardcoding a new
+    named SET constant per hosted model. `label` must have a matching entry in
+    guard.ESTIMATED_COST_PER_CALL_USD or it falls back to the most-expensive-known-cost default
+    (fail closed on an unrecognized label, see guard.py's module docstring)."""
+    return [(label, None, lambda: OpenRouterClient(model_id))]
 
 
 def _load_task(leaf_dir):
@@ -69,7 +78,8 @@ def load_instances(leaf_dir, field):
     return instances, oracle
 
 
-def run_model(leaf_dir, task, label, factory, ollama_model, instances, guard_config=None):
+def run_model(leaf_dir, task, label, factory, ollama_model, instances, guard_config=None,
+              max_workers=1):
     """Run one model at N=20; unload local model after. Returns accuracy + reliability(wobble).
     guard_config (optional dict: max_steps/max_cost_usd/allowed_models) wraps this run with a
     BrakePedalGuard at the ACTUAL harness call-site (engine/guard.py) -- a guard that only lived
@@ -81,7 +91,7 @@ def run_model(leaf_dir, task, label, factory, ollama_model, instances, guard_con
     g = guard_mod.BrakePedalGuard(**guard_config) if guard_config else None
     runs, stats = harness.run_harness(client, task, instances, n_runs=N_RUNS,
                                        temperature=TEMPERATURE, checkpoint_file=ckpt,
-                                       guard=g, model_label=label)
+                                       guard=g, model_label=label, max_workers=max_workers)
     if ollama_model:
         subprocess.run(["ollama", "stop", ollama_model], capture_output=True)
     m = manifest_mod.build_manifest(leaf_name=leaf_dir.name, model_label=label, run_records=runs,
@@ -109,7 +119,7 @@ def _guard_config_from_env():
     return cfg or None
 
 
-def run_leaf(leaf_dir, model_set=FAST_SET, only=None, guard_config=None):
+def run_leaf(leaf_dir, model_set=FAST_SET, only=None, guard_config=None, max_workers=1):
     leaf_dir = Path(leaf_dir)
     if guard_config is None:
         guard_config = _guard_config_from_env()
@@ -132,7 +142,8 @@ def run_leaf(leaf_dir, model_set=FAST_SET, only=None, guard_config=None):
         if only and label != only:
             continue
         print(f"=== {label} (N={N_RUNS}) ===", flush=True)
-        res = run_model(leaf_dir, task, label, factory, omodel, instances, guard_config=guard_config)
+        res = run_model(leaf_dir, task, label, factory, omodel, instances,
+                        guard_config=guard_config, max_workers=max_workers)
         a, r = res["accuracy"], res["reliability"]
         wob = r["field_flips"].get(field, 0.0) * 100
         print(f"  WOBBLE: {wob:.0f}% flipped across {N_RUNS} runs  |  consistency "

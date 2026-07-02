@@ -8,7 +8,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## Test 1.3.2 — Preferred-stock liquidation participation
 
-**Corpus:** 18 real SEC-filed charter clauses, human-validated answers (6 part / 7 non-part / 5 capped). Each model run **19×/item at temp 0.7**.
+**Corpus:** 18 real SEC-filed charter clauses, human-validated answers (6 part / 7 non-part / 5 capped). Each model run **20×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -18,6 +18,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **72%** | 89% | 33% | 18/18 | 312/360 (87%) |
 | `deepseek-v4-flash` | hosted | **11%** | 98% | 67% | 18/18 | 342/360 (95%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
 
 **What the columns mean:**
 
@@ -34,6 +35,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | `gemma3:1b` | 0/6 | 6/7 | 0/5 |
 | `deepseek-v4-flash` | 1/6 | 6/7 | 5/5 |
+| `google/gemma-4-31b-it` | 2/6 | 6/7 | 5/5 |
 
 ### Which items make models wobble
 
@@ -84,6 +86,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `llama3.2:latest` | 3B | **56%** | 88% | 81% | 16/16 | 320/320 (100%) |
 | `gemma4:12b` | 12B | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 | `deepseek-v4-flash` | hosted | **19%** | 99% | 100% | 16/16 | 320/320 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 
 **What the columns mean:**
 
@@ -102,6 +105,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `llama3.2:latest` | 10/10 | 3/6 |
 | `gemma4:12b` | 10/10 | 6/6 |
 | `deepseek-v4-flash` | 10/10 | 6/6 |
+| `google/gemma-4-31b-it` | 10/10 | 6/6 |
 
 ### Which items make models wobble
 
@@ -145,6 +149,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **44%** | 93% | 88% | 16/16 | 320/320 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 
 **What the columns mean:**
 
@@ -161,6 +166,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 7/8 | 7/8 |
 | `deepseek-v4-flash` | 8/8 | 8/8 |
+| `google/gemma-4-31b-it` | 8/8 | 8/8 |
 
 ### Which items make models wobble
 
@@ -193,6 +199,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **46%** | 97% | 85% | 13/13 | 259/260 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -209,6 +216,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 4/6 | 7/7 |
 | `deepseek-v4-flash` | 6/6 | 7/7 |
+| `google/gemma-4-31b-it` | 6/6 | 7/7 |
 
 ### Which items make models wobble
 
@@ -240,6 +248,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **45%** | 97% | 45% | 11/11 | 215/220 (98%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
 
 **What the columns mean:**
 
@@ -256,6 +265,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 0/6 | 5/5 |
 | `deepseek-v4-flash` | 4/6 | 5/5 |
+| `google/gemma-4-31b-it` | 4/6 | 5/5 |
 
 ### Which items make models wobble
 
@@ -286,6 +296,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **40%** | 95% | 40% | 10/10 | 197/200 (98%) |
 | `deepseek-v4-flash` | hosted | **10%** | 99% | 90% | 10/10 | 200/200 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -302,6 +313,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 3/5 | 1/5 |
 | `deepseek-v4-flash` | 5/5 | 4/5 |
+| `google/gemma-4-31b-it` | 5/5 | 5/5 |
 
 ### Which items make models wobble
 
@@ -314,7 +326,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 10%–40% across the ladder.** Lowest-wobble model: **hosted** (10% wobble, 90% accuracy).
+- **Wobble spread: 0%–40% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -331,6 +343,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **20%** | 97% | 50% | 10/10 | 200/200 (100%) |
 | `deepseek-v4-flash` | hosted | **10%** | 96% | 100% | 10/10 | 200/200 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -347,6 +360,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 0/5 | 5/5 |
 | `deepseek-v4-flash` | 5/5 | 5/5 |
+| `google/gemma-4-31b-it` | 5/5 | 5/5 |
 
 ### Which items make models wobble
 
@@ -358,7 +372,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 10%–20% across the ladder.** Lowest-wobble model: **hosted** (10% wobble, 100% accuracy).
+- **Wobble spread: 0%–20% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
 
 ---
 
@@ -374,6 +388,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **17%** | 99% | 42% | 12/12 | 238/240 (99%) |
 | `deepseek-v4-flash` | hosted | **8%** | 97% | 100% | 12/12 | 240/240 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -390,6 +405,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 4/6 | 1/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
+| `google/gemma-4-31b-it` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -400,7 +416,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 8%–17% across the ladder.** Lowest-wobble model: **hosted** (8% wobble, 100% accuracy).
+- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
 
 ---
 
@@ -416,6 +432,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **17%** | 98% | 67% | 12/12 | 238/240 (99%) |
 | `deepseek-v4-flash` | hosted | **17%** | 94% | 92% | 12/12 | 240/240 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -432,6 +449,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 6/6 | 2/6 |
 | `deepseek-v4-flash` | 6/6 | 5/6 |
+| `google/gemma-4-31b-it` | 6/6 | 4/6 |
 
 ### Which items make models wobble
 
@@ -442,7 +460,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 17%–17% across the ladder.** Lowest-wobble model: **hosted** (17% wobble, 92% accuracy).
+- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 83% accuracy).
 
 ---
 
@@ -458,6 +476,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **17%** | 94% | 100% | 12/12 | 101/240 (42%) |
 | `deepseek-v4-flash` | hosted | **8%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -474,6 +493,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 6/6 | 6/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
+| `google/gemma-4-31b-it` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -484,7 +504,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 8%–17% across the ladder.** Lowest-wobble model: **hosted** (8% wobble, 100% accuracy).
+- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
 
 ---
 
@@ -500,6 +520,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **17%** | 96% | 67% | 12/12 | 239/240 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -516,6 +537,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 6/6 | 2/6 |
 | `deepseek-v4-flash` | 6/6 | 5/6 |
+| `google/gemma-4-31b-it` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -526,7 +548,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 92% accuracy).
+- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
 
 ---
 
@@ -542,6 +564,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **17%** | 97% | 58% | 12/12 | 239/240 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -558,6 +581,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 6/6 | 1/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
+| `google/gemma-4-31b-it` | 5/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -584,6 +608,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **17%** | 95% | 50% | 12/12 | 233/240 (97%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `google/gemma-4-31b-it` | ? | **8%** | 98% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -600,11 +625,13 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 6/6 | 0/6 |
 | `deepseek-v4-flash` | 5/6 | 6/6 |
+| `google/gemma-4-31b-it` | 5/6 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
+| Bell Microproducts Inc | yes | hard | gemma4-31b-or |
 | Speedway Motorsports,  | no | easy | 1B |
 | Pool Corp | no | easy | 1B |
 
@@ -626,6 +653,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **44%** | 93% | 67% | 9/9 | 174/180 (97%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -642,6 +670,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 4/6 | 2/3 |
 | `deepseek-v4-flash` | 6/6 | 3/3 |
+| `google/gemma-4-31b-it` | 6/6 | 3/3 |
 
 ### Which items make models wobble
 
@@ -671,6 +700,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **56%** | 94% | 0% | 9/9 | 144/180 (80%) |
 | `deepseek-v4-flash` | hosted | **33%** | 92% | 67% | 9/9 | 180/180 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 67% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -687,6 +717,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|
 | `gemma3:1b` | — | 0/3 | 0/3 | 0/3 | — |
 | `deepseek-v4-flash` | — | 2/3 | 1/3 | 3/3 | — |
+| `google/gemma-4-31b-it` | — | 2/3 | 1/3 | 3/3 | — |
 
 ### Which items make models wobble
 
@@ -701,7 +732,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 33%–56% across the ladder.** Lowest-wobble model: **hosted** (33% wobble, 67% accuracy).
+- **Wobble spread: 0%–56% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 67% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
@@ -717,6 +749,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **44%** | 92% | 78% | 9/9 | 176/180 (98%) |
 | `deepseek-v4-flash` | hosted | **11%** | 97% | 78% | 9/9 | 180/180 (100%) |
+| `google/gemma-4-31b-it` | ? | **33%** | 94% | 67% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -732,8 +765,9 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | SICOR Inc. | 3 | easy | 1B |
 | Dollar General Corpora | 1 | medium | 1B |
-| Ute Energy Corporation | 1 | medium | 1B |
-| Ute Energy Corporation | 2 | medium | 1B |
+| Ute Energy Corporation | 1 | medium | 1B, gemma4-31b-or |
+| Ute Energy Corporation | 2 | medium | 1B, gemma4-31b-or |
+| Cinemark Holdings, Inc | 5 | easy | gemma4-31b-or |
 | Cinemark Holdings, Inc | 9 | hard | hosted |
 
 ## What this shows
@@ -755,6 +789,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **20%** | 96% | 93% | 15/15 | 134/300 (45%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 
 **What the columns mean:**
 
@@ -771,6 +806,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 9/9 | 5/6 |
 | `deepseek-v4-flash` | 9/9 | 6/6 |
+| `google/gemma-4-31b-it` | 9/9 | 6/6 |
 
 ### Which items make models wobble
 
@@ -798,6 +834,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 83% | 68% | 19/19 | 363/380 (96%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
 
 **What the columns mean:**
 
@@ -814,6 +851,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 7/13 | 6/6 |
 | `deepseek-v4-flash` | 13/13 | 5/6 |
+| `google/gemma-4-31b-it` | 13/13 | 5/6 |
 
 ### Which items make models wobble
 
@@ -858,6 +896,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **29%** | 98% | 57% | 7/7 | 130/140 (93%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -874,6 +913,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 4/4 | 0/3 |
 | `deepseek-v4-flash` | 4/4 | 3/3 |
+| `google/gemma-4-31b-it` | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
@@ -900,6 +940,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 25% | 4/4 | 60/80 (75%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -932,6 +973,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **20%** | 99% | 40% | 5/5 | 98/100 (98%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -948,6 +990,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|
 | `gemma3:1b` | 2/2 | 0/2 | — | — | 0/1 |
 | `deepseek-v4-flash` | 2/2 | 2/2 | — | — | 1/1 |
+| `google/gemma-4-31b-it` | 2/2 | 2/2 | — | — | 1/1 |
 
 ### Which items make models wobble
 
@@ -973,6 +1016,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **8%** | 99% | 31% | 13/13 | 195/260 (75%) |
 | `deepseek-v4-flash` | hosted | **8%** | 100% | 85% | 13/13 | 260/260 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 77% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -989,6 +1033,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 4/4 | 0/9 |
 | `deepseek-v4-flash` | 2/4 | 9/9 |
+| `google/gemma-4-31b-it` | 2/4 | 8/9 |
 
 ### Which items make models wobble
 
@@ -999,7 +1044,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 8%–8% across the ladder.** Lowest-wobble model: **hosted** (8% wobble, 85% accuracy).
+- **Wobble spread: 0%–8% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 77% accuracy).
 
 ---
 
@@ -1015,6 +1060,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **29%** | 95% | 100% | 7/7 | 93/140 (66%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1031,6 +1077,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 4/4 | 3/3 |
 | `deepseek-v4-flash` | 4/4 | 3/3 |
+| `google/gemma-4-31b-it` | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
@@ -1057,6 +1104,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 100% | 3/3 | 58/60 (97%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -1089,6 +1137,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **29%** | 86% | 71% | 7/7 | 133/140 (95%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1123,6 +1172,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **38%** | 96% | 88% | 8/8 | 144/160 (90%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -1159,6 +1209,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 100% | 7/7 | 138/140 (99%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1191,6 +1242,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **44%** | 89% | 56% | 9/9 | 160/180 (89%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1228,6 +1280,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **50%** | 91% | 75% | 4/4 | 72/80 (90%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1263,6 +1316,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **20%** | 92% | 80% | 5/5 | 99/100 (99%) |
 | `deepseek-v4-flash` | hosted | **20%** | 98% | 100% | 5/5 | 100/100 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1281,7 +1335,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 20%–20% across the ladder.** Lowest-wobble model: **hosted** (20% wobble, 100% accuracy).
+- **Wobble spread: 0%–20% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1297,6 +1351,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **40%** | 96% | 70% | 10/10 | 199/200 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -1313,6 +1368,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | `gemma3:1b` | 3/3 | 4/4 | 0/3 |
 | `deepseek-v4-flash` | 3/3 | 4/4 | 3/3 |
+| `google/gemma-4-31b-it` | 3/3 | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
@@ -1342,6 +1398,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1374,6 +1431,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 83% | 6/6 | 113/120 (94%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 
 **What the columns mean:**
 
@@ -1396,7 +1454,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## Test 2.1.3 — SAFE conversion mechanic: cap-only vs discount-only vs both (MFN)
 
-**Corpus:** 13 real SEC-filed SAFE (Simple Agreement for Future Equity) instruments, human-validated answers (2 cap / 1 discount / 10 both-mfn). Each model run **17×/item at temp 0.7**.
+**Corpus:** 13 real SEC-filed SAFE (Simple Agreement for Future Equity) instruments, human-validated answers (2 cap / 1 discount / 10 both-mfn). Each model run **20×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -1406,6 +1464,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **46%** | 90% | 77% | 13/13 | 158/260 (61%) |
 | `deepseek-v4-flash` | hosted | **8%** | 100% | 100% | 13/13 | 221/260 (85%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -1422,6 +1481,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | `gemma3:1b` | 2/2 | 0/1 | 8/10 |
 | `deepseek-v4-flash` | 2/2 | 1/1 | 10/10 |
+| `google/gemma-4-31b-it` | 2/2 | 1/1 | 10/10 |
 
 ### Which items make models wobble
 
@@ -1437,14 +1497,14 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 8%–46% across the ladder.** Lowest-wobble model: **hosted** (8% wobble, 100% accuracy).
+- **Wobble spread: 0%–46% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
 ## Test 1.1.3 — Priced-round price-per-share extraction
 
-**Corpus:** 8 real SEC-filed stock purchase agreements / charters / offerings, human-validated answers (values range 0.2-1000.0). Each model run **19×/item at temp 0.7**.
+**Corpus:** 8 real SEC-filed stock purchase agreements / charters / offerings, human-validated answers (values range 0.2-1000.0). Each model run **20×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -1454,6 +1514,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **38%** | 92% | 62% | 8/8 | 156/160 (98%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 62% | 8/8 | 147/160 (92%) |
+| `google/gemma-4-31b-it` | ? | **12%** | 96% | 75% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -1469,6 +1530,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | Astea International In | 3.63 | easy | 1B |
 | Kiwa Bio-Tech Products | 1.3 | medium | 1B |
+| Gelesis, Inc. | 1.26 | medium | gemma4-31b-or |
 | WhiteGlove Health, Inc | 0.2 | easy | 1B |
 
 ## What this shows
@@ -1490,6 +1552,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **50%** | 94% | 50% | 4/4 | 75/80 (94%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1504,7 +1567,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | GARDENBURGER, INC. | 2005-03-31 | easy | 1B |
-| ACOLOGY, INC. | 2015-03-04 | medium | 1B |
+| ACOLOGY, INC. | 2015-03-04 | medium | 1B, gemma4-31b-or |
 
 ## What this shows
 
@@ -1525,6 +1588,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **25%** | 94% | 0% | 3/4 | 46/80 (57%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1559,6 +1623,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **50%** | 97% | 100% | 2/2 | 37/40 (92%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -1593,6 +1658,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 38% | 8/9 | 65/180 (36%) |
 | `deepseek-v4-flash` | hosted | **11%** | 97% | 100% | 9/9 | 180/180 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1611,13 +1677,13 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 0%–11% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 38% accuracy).
+- **Wobble spread: 0%–11% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 89% accuracy).
 
 ---
 
 ## Test 3.1 — Cap-table current ownership percentage (compute)
 
-**Corpus:** 9 real SEC-filed S-1 Security Ownership tables (single-class stock only), human-validated answers (values range 2.4-33.9). Each model run **19×/item at temp 0.7**.
+**Corpus:** 9 real SEC-filed S-1 Security Ownership tables (single-class stock only), human-validated answers (values range 2.4-33.9). Each model run **20×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -1627,6 +1693,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 16% | 0% | 9/9 | 146/180 (81%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 179/180 (99%) |
+| `google/gemma-4-31b-it` | ? | **22%** | 97% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1644,11 +1711,11 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Uber Technologies, Inc | 11.0 | easy | 1B |
 | Uber Technologies, Inc | 2.4 | medium | 1B |
 | Uber Technologies, Inc | 8.6 | easy | 1B |
-| Uber Technologies, Inc | 5.4 | medium | 1B |
+| Uber Technologies, Inc | 5.4 | medium | 1B, gemma4-31b-or |
 | Uber Technologies, Inc | 16.3 | medium | 1B |
 | Uber Technologies, Inc | 5.2 | medium | 1B |
 | Uber Technologies, Inc | 5.3 | medium | 1B |
-| Uber Technologies, Inc | 33.9 | hard | 1B |
+| Uber Technologies, Inc | 33.9 | hard | 1B, gemma4-31b-or |
 
 ## What this shows
 
@@ -1669,6 +1736,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 18% | 0% | 3/3 | 60/60 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -1705,6 +1773,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 38% | 0% | 4/4 | 80/80 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1742,6 +1811,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 47% | 0% | 1/1 | 17/20 (85%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
 
 **What the columns mean:**
 
@@ -1776,6 +1846,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **40%** | 86% | 100% | 10/10 | 170/200 (85%) |
 | `deepseek-v4-flash` | hosted | **30%** | 96% | 100% | 10/10 | 200/200 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -1792,6 +1863,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|
 | `gemma3:1b` | 6/6 | 4/4 | — | — | — |
 | `deepseek-v4-flash` | 6/6 | 4/4 | — | — | — |
+| `google/gemma-4-31b-it` | 6/6 | 4/4 | — | — | — |
 
 ### Which items make models wobble
 
@@ -1804,7 +1876,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 30%–40% across the ladder.** Lowest-wobble model: **hosted** (30% wobble, 100% accuracy).
+- **Wobble spread: 0%–40% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
@@ -1820,6 +1893,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/2 | 16/40 (40%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -1852,6 +1926,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **50%** | 87% | 30% | 10/10 | 199/200 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -1890,6 +1965,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/6 | 23/120 (19%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 
 **What the columns mean:**
 
@@ -1926,6 +2002,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **80%** | 49% | 0% | 5/5 | 96/100 (96%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1963,6 +2040,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 64% | 50% | 8/8 | 152/160 (95%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -1979,6 +2057,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 4/4 | 0/4 |
 | `deepseek-v4-flash` | 4/4 | 4/4 |
+| `google/gemma-4-31b-it` | 4/4 | 4/4 |
 
 ### Which items make models wobble
 
@@ -2012,6 +2091,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **60%** | 86% | 20% | 5/5 | 97/100 (97%) |
 | `deepseek-v4-flash` | hosted | **20%** | 97% | 100% | 5/5 | 100/100 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2032,7 +2112,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 20%–60% across the ladder.** Lowest-wobble model: **hosted** (20% wobble, 100% accuracy).
+- **Wobble spread: 0%–60% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2049,6 +2129,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 60% | 5/5 | 99/100 (99%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2081,6 +2162,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **60%** | 87% | 80% | 5/5 | 96/100 (96%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2117,6 +2199,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 24% | 0% | 5/5 | 97/100 (97%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2155,6 +2238,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **50%** | 93% | 50% | 4/4 | 79/80 (99%) |
 | `deepseek-v4-flash` | hosted | **25%** | 96% | 100% | 4/4 | 80/80 (100%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2173,7 +2257,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 25%–50% across the ladder.** Lowest-wobble model: **hosted** (25% wobble, 100% accuracy).
+- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 
@@ -2189,6 +2274,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 68% | 20% | 5/5 | 83/100 (83%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `google/gemma-4-31b-it` | ? | **20%** | 96% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2203,7 +2289,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | HyreCar Inc. | general corporate purposes | ? | 1B |
-| Castle Biosciences, In | research and development activities | ? | 1B |
+| Castle Biosciences, In | research and development activities | ? | 1B, gemma4-31b-or |
 | Axcella Health Inc. | advance our current liver programs | ? | 1B |
 | Veritone, Inc. | working capital and general corporate purposes | ? | 1B |
 | Civitas Solutions, Inc | redeem all of the senior notes | ? | 1B |
@@ -2217,7 +2303,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## Test 1.2.2 — Named investor's individual dollar allocation extraction
 
-**Corpus:** 5 real SEC Schedule 13D/13D-A filings (investor-side), human-validated answers (values range 46715.64-9418200). Each model run **19×/item at temp 0.7**.
+**Corpus:** 5 real SEC Schedule 13D/13D-A filings (investor-side), human-validated answers (values range 46715.64-9418200). Each model run **20×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -2227,6 +2313,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **20%** | 91% | 80% | 5/5 | 97/100 (97%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 80/100 (80%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2260,6 +2347,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 62% | 0% | 3/3 | 60/60 (100%) |
 | `deepseek-v4-flash` | hosted | **67%** | 91% | 33% | 3/3 | 44/60 (73%) |
+| `google/gemma-4-31b-it` | ? | **67%** | 80% | 33% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -2273,9 +2361,9 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Snapwire Media, Inc. ( | 0.909 | ? | 1B, hosted |
+| Snapwire Media, Inc. ( | 0.909 | ? | 1B, hosted, gemma4-31b-or |
 | Snapwire Media, Inc. ( | 0.24 | ? | 1B |
-| Snapwire Media, Inc. ( | 0.6956 | ? | 1B, hosted |
+| Snapwire Media, Inc. ( | 0.6956 | ? | 1B, hosted, gemma4-31b-or |
 
 ## What this shows
 
@@ -2286,7 +2374,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## Test 4.4 — Convert-vs-take-preference decision (compute)
 
-**Corpus:** 2 real SEC-filed Agreement for Future Equity worked examples (Form C exhibit), human-validated answers (1 Convert / 1 Take preference). Each model run **18×/item at temp 0.7**.
+**Corpus:** 2 real SEC-filed Agreement for Future Equity worked examples (Form C exhibit), human-validated answers (1 Convert / 1 Take preference). Each model run **20×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -2296,6 +2384,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 50% | 2/2 | 37/40 (92%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 27/40 (68%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -2312,6 +2401,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|
 | `gemma3:1b` | 1/1 | 0/1 |
 | `deepseek-v4-flash` | 1/1 | 1/1 |
+| `google/gemma-4-31b-it` | 1/1 | 1/1 |
 
 ### Which items make models wobble
 
@@ -2326,7 +2416,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## Test 4.1 — Per-share value to common after preferred waterfall (compute)
 
-**Corpus:** 4 real SC 13E-3 going-private fairness opinion, human-validated answers (values range 0.39-0.51). Each model run **19×/item at temp 0.7**.
+**Corpus:** 4 real SC 13E-3 going-private fairness opinion, human-validated answers (values range 0.39-0.51). Each model run **20×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -2336,6 +2426,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 17% | 0% | 4/4 | 77/80 (96%) |
 | `deepseek-v4-flash` | hosted | **25%** | 99% | 100% | 4/4 | 62/80 (78%) |
+| `google/gemma-4-31b-it` | ? | **100%** | 71% | 50% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2349,10 +2440,10 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Connecture, Inc. | 0.51 | ? | 1B |
-| Connecture, Inc. | 0.42 | ? | 1B |
-| Connecture, Inc. | 0.39 | ? | 1B, hosted |
-| Connecture, Inc. | 0.44 | ? | 1B |
+| Connecture, Inc. | 0.51 | ? | 1B, gemma4-31b-or |
+| Connecture, Inc. | 0.42 | ? | 1B, gemma4-31b-or |
+| Connecture, Inc. | 0.39 | ? | 1B, hosted, gemma4-31b-or |
+| Connecture, Inc. | 0.44 | ? | 1B, gemma4-31b-or |
 
 ## What this shows
 
@@ -2373,6 +2464,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 52% | 50% | 2/2 | 40/40 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 24/40 (60%) |
+| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 

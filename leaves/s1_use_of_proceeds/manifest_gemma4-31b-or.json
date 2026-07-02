@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_use_of_proceeds",
+ "model": "gemma4-31b-or",
+ "task_name": "s1_use_of_proceeds",
+ "data_version": "2d4ae340f6714f7ef32065b5eb725becd58391d612c8e016ba0ce447d513965f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:58:43.299302+00:00"
+}

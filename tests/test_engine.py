@@ -103,6 +103,75 @@ def _http_error(code, reason="error"):
                                    code=code, msg=reason, hdrs=None, fp=None)
 
 
+class TestOpenRouterClient(unittest.TestCase):
+    """
+    Purpose: OpenRouterClient shares its retry contract with DeepSeekClient via the extracted
+    _post_chat_completion() helper (rule of two, 2026-07-03) -- these tests confirm the SAME
+    retry-decision behavior holds for the shared code path, plus OpenRouter-specific request
+    shape (model id is caller-supplied, not hardcoded; attribution headers present).
+    """
+
+    def setUp(self):
+        with patch.dict("os.environ", {"OPENROUTER_API_KEY": "test-key-not-real"}):
+            self.client = models.OpenRouterClient(model="google/gemma-4-31b-it")
+        self.sleep_patcher = patch("models.time.sleep")
+        self.sleep_patcher.start()
+
+    def tearDown(self):
+        self.sleep_patcher.stop()
+
+    def test_missing_api_key_fails_closed(self):
+        with patch.dict("os.environ", {}, clear=True):
+            with self.assertRaises(RuntimeError):
+                models.OpenRouterClient(model="google/gemma-4-31b-it")
+
+    def test_model_id_is_caller_supplied_not_hardcoded(self):
+        self.assertEqual(self.client.model, "google/gemma-4-31b-it")
+        other = models.OpenRouterClient.__new__(models.OpenRouterClient)
+        other.api_key = "k"
+        other.base_url = "https://openrouter.ai/api/v1/chat/completions"
+        other.model = "mistralai/mistral-large-2512"
+        self.assertNotEqual(other.model, self.client.model)
+
+    def test_retries_on_503_then_succeeds(self):
+        good = _FakeDeepSeekResponse({"choices": [{"message": {"content": '{"x": 1}'}}]})
+        with patch("models.urllib.request.urlopen",
+                    side_effect=[_http_error(503), _http_error(503), good]) as m:
+            out = self.client.generate("prompt", temperature=0.7)
+        self.assertEqual(out, '{"x": 1}')
+        self.assertEqual(m.call_count, 3)
+
+    def test_does_not_retry_on_400(self):
+        with patch("models.urllib.request.urlopen", side_effect=_http_error(400, "Bad Request")) as m:
+            with self.assertRaises(RuntimeError):
+                self.client.generate("prompt", temperature=0.7)
+        self.assertEqual(m.call_count, 1)
+
+    def test_gives_up_after_max_attempts_on_repeated_503(self):
+        with patch("models.urllib.request.urlopen",
+                    side_effect=[_http_error(503), _http_error(503), _http_error(503)]) as m:
+            with self.assertRaises(RuntimeError):
+                self.client.generate("prompt", temperature=0.7)
+        self.assertEqual(m.call_count, models.OpenRouterClient._MAX_ATTEMPTS)
+
+    def test_rejects_zero_temperature_before_any_network_call(self):
+        with patch("models.urllib.request.urlopen") as m:
+            with self.assertRaises(ValueError):
+                self.client.generate("prompt", temperature=0.0)
+        m.assert_not_called()
+
+    def test_request_carries_the_configured_model_id(self):
+        captured = {}
+
+        def fake_urlopen(req, timeout=None):
+            captured["body"] = __import__("json").loads(req.data.decode("utf-8"))
+            return _FakeDeepSeekResponse({"choices": [{"message": {"content": "{}"}}]})
+
+        with patch("models.urllib.request.urlopen", side_effect=fake_urlopen):
+            self.client.generate("prompt", temperature=0.7)
+        self.assertEqual(captured["body"]["model"], "google/gemma-4-31b-it")
+
+
 class TestDeepSeekRetry(unittest.TestCase):
     """
     Purpose: cover the retry-on-transient-error behavior added to DeepSeekClient.generate() after

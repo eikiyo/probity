@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_schedule",
+ "model": "gemma4-31b-or",
+ "task_name": "vesting_schedule",
+ "data_version": "638c9d79c9d7efb3052b45c36c2d5787929de6352d505ea41c878188bfe1294e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:59:48.423342+00:00"
+}

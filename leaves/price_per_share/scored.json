@@ -256,5 +256,138 @@
    "measurable": true,
    "excluded_fields": []
   }
+ },
+ "gemma4-31b-or": {
+  "model": "google/gemma-4-31b-it",
+  "accuracy": {
+   "task": "price_per_share",
+   "n_instances": 8,
+   "n_measurable": 8,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.625,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "price_per_share": {
+       "majority": 3.63,
+       "truth": 3.63,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "price_per_share": {
+       "majority": 1000.0,
+       "truth": 1000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "price_per_share": {
+       "majority": 1.3,
+       "truth": 1.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "price_per_share": {
+       "majority": 1000.0,
+       "truth": 1000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "price_per_share": {
+       "majority": 1.26,
+       "truth": 1.26,
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "price_per_share": {
+       "majority": 1.0,
+       "truth": 1.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "price_per_share": {
+       "majority": 2.0,
+       "truth": 0.2,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "price_per_share": {
+       "majority": 1000.0,
+       "truth": 0.625,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "price_per_share",
+   "consistency_rate": 0.9625,
+   "consistency_pct": 96.25,
+   "field_flips": {
+    "price_per_share": 0.125
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 160,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

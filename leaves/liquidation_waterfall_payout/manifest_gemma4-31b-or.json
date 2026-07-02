@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "gemma4-31b-or",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "0034981fde09d09845590dc07d0711cd66ab08a3b4e63fd3f2928ebf864739fb",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:56:54.646439+00:00"
+}

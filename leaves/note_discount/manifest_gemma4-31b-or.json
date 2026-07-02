@@ -1,0 +1,9 @@
+{
+ "leaf": "note_discount",
+ "model": "gemma4-31b-or",
+ "task_name": "note_discount",
+ "data_version": "bfe4128676c4a2876790fd83d4e5a6060f3f2b9f36990a6f83b9f8f5dfc3e479",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:56:48.641904+00:00"
+}

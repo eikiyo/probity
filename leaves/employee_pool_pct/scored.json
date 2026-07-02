@@ -74,5 +74,47 @@
    "measurable": true,
    "excluded_fields": []
   }
+ },
+ "gemma4-31b-or": {
+  "model": "google/gemma-4-31b-it",
+  "accuracy": {
+   "task": "employee_pool_pct",
+   "n_instances": 1,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "employee_pool_pct": {
+       "majority": 9.5,
+       "truth": 9.5,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "employee_pool_pct",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "employee_pool_pct": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 20,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "gemma4-31b-or",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "f4bf25ffb26429447f88b0dc76962864beb6dcc3ecee684f138db9b1cfe33add",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:59:34.388269+00:00"
+}

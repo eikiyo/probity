@@ -178,5 +178,99 @@
    "measurable": true,
    "excluded_fields": []
   }
+ },
+ "gemma4-31b-or": {
+  "model": "google/gemma-4-31b-it",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 1650000.0,
+       "truth": 1650000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "per_investor_allocation": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

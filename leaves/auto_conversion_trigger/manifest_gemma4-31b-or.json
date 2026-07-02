@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "gemma4-31b-or",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "41dc238a2559a4687cffd81b41150636ff4ea8ac098914716da5b9268c372e98",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:56:17.993046+00:00"
+}

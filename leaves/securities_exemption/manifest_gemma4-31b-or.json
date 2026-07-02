@@ -1,0 +1,9 @@
+{
+ "leaf": "securities_exemption",
+ "model": "gemma4-31b-or",
+ "task_name": "securities_exemption",
+ "data_version": "65de69583766354c62f672e53a15af0b2e03b23abb9e5cdee49aa1cb3cc78a8d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:59:48.003224+00:00"
+}

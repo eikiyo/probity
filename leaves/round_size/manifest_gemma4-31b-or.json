@@ -1,0 +1,9 @@
+{
+ "leaf": "round_size",
+ "model": "gemma4-31b-or",
+ "task_name": "round_size",
+ "data_version": "11f94aa32e9fdc57b443c3ce5c8c43c5e5e8530d082320dcb4a6acfd39ca2abd",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:58:32.400088+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "gemma4-31b-or",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "9cc42fbd431fef2208ae75baf295fe148cb78d550b18bd472f67ed07669eb95e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:57:30.155422+00:00"
+}

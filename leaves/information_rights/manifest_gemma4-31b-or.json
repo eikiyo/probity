@@ -1,0 +1,9 @@
+{
+ "leaf": "information_rights",
+ "model": "gemma4-31b-or",
+ "task_name": "information_rights",
+ "data_version": "948022f4849806b4c5686c7c9ff088fbb7d1df9d47db0c6573428519d12c8253",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:56:18.041807+00:00"
+}

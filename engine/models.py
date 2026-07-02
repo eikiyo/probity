@@ -1,9 +1,12 @@
 """
 Location: projects/AI-PM/Knowledge/probe/models.py
-Purpose: LLM client abstraction (DeepSeek hosted + Gemini hosted + Ollama local) with one interface
-Functions: DeepSeekClient.generate(), GeminiClient.generate(), OllamaClient.generate()
+Purpose: LLM client abstraction (DeepSeek hosted + Gemini hosted + Ollama local + OpenRouter
+         gateway) with one interface. DeepSeek and OpenRouter share one retry-on-transient-error
+         helper (_post_chat_completion) -- both are OpenAI-compat /chat/completions endpoints.
+Functions: DeepSeekClient.generate(), GeminiClient.generate(), OllamaClient.generate(),
+           OpenRouterClient.generate(), _post_chat_completion()
 Calls: (urllib.request, json)
-Imports: urllib.request, json, os, abc
+Imports: urllib.request, json, os, time, abc
 """
 
 import urllib.request
@@ -22,6 +25,41 @@ class LLMClient(ABC):
     def generate(self, prompt: str, temperature: float) -> str:
         """Generate text. Fail closed + observable on error."""
         pass
+
+
+def _post_chat_completion(url, headers, payload, timeout, error_label,
+                           retryable_codes, max_attempts, backoff_base_seconds):
+    """
+    What: shared retry-on-transient-error POST for any OpenAI-compat /chat/completions endpoint.
+          Used by DeepSeekClient and OpenRouterClient -- extracted 2026-07-03 (rule of two: a
+          second near-identical retry loop was about to be pasted for OpenRouterClient).
+    Why: see DeepSeekClient.generate()'s original docstring (94% of one leaf's "parse failures"
+          were raw 503s with zero retry, mismeasured as model unreliability) -- the exact same
+          transient-vs-genuine-failure distinction applies to every hosted provider here.
+    Output: the response's message content string. Raises RuntimeError (never a raw urllib
+            exception) on a non-retryable error or after max_attempts genuinely transient ones.
+    """
+    req = urllib.request.Request(
+        url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST",
+    )
+    last_error = None
+    for attempt in range(1, max_attempts + 1):
+        try:
+            with urllib.request.urlopen(req, timeout=timeout) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+                return result["choices"][0]["message"]["content"]
+        except urllib.error.HTTPError as e:
+            last_error = e
+            if e.code not in retryable_codes or attempt == max_attempts:
+                raise RuntimeError(f"{error_label} generation failed: HTTP Error {e.code}: {e.reason}")
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            last_error = e
+            if attempt == max_attempts:
+                raise RuntimeError(f"{error_label} generation failed: {e}")
+        except Exception as e:
+            raise RuntimeError(f"{error_label} generation failed: {e}")
+        time.sleep(backoff_base_seconds * attempt)
+    raise RuntimeError(f"{error_label} generation failed after {max_attempts} attempts: {last_error}")
 
 
 class DeepSeekClient(LLMClient):
@@ -81,38 +119,13 @@ class DeepSeekClient(LLMClient):
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
         }
-        req = urllib.request.Request(
-            self.base_url,
-            data=json.dumps(payload).encode("utf-8"),
-            headers=headers,
-            method="POST",
+        # Reasoning models (v4-flash) think longer on compute tasks — 30s was too tight
+        # (cap_table timed out); 120s gives headroom without hanging the bulk run.
+        return _post_chat_completion(
+            self.base_url, headers, payload, timeout=120, error_label="DeepSeek",
+            retryable_codes=self._RETRYABLE_HTTP_CODES, max_attempts=self._MAX_ATTEMPTS,
+            backoff_base_seconds=self._BACKOFF_BASE_SECONDS,
         )
-
-        last_error = None
-        for attempt in range(1, self._MAX_ATTEMPTS + 1):
-            try:
-                # Reasoning models (v4-flash) think longer on compute tasks — 30s was too tight
-                # (cap_table timed out); 120s gives headroom without hanging the bulk run.
-                with urllib.request.urlopen(req, timeout=120) as resp:
-                    result = json.loads(resp.read().decode("utf-8"))
-                    return result["choices"][0]["message"]["content"]
-            except urllib.error.HTTPError as e:
-                last_error = e
-                if e.code not in self._RETRYABLE_HTTP_CODES or attempt == self._MAX_ATTEMPTS:
-                    raise RuntimeError(f"DeepSeek generation failed: HTTP Error {e.code}: {e.reason}")
-            except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
-                # Network-level failure (DNS, connection reset, socket timeout) -- also transient.
-                last_error = e
-                if attempt == self._MAX_ATTEMPTS:
-                    raise RuntimeError(f"DeepSeek generation failed: {e}")
-            except Exception as e:
-                # Anything else (bad JSON in the response body, unexpected shape, etc.) is NOT a
-                # transient condition -- fail immediately rather than retrying blindly.
-                raise RuntimeError(f"DeepSeek generation failed: {e}")
-            time.sleep(self._BACKOFF_BASE_SECONDS * attempt)
-        # Unreachable in practice (the loop always returns or raises), but keeps the fail-closed
-        # contract explicit if _MAX_ATTEMPTS were ever set to 0.
-        raise RuntimeError(f"DeepSeek generation failed after {self._MAX_ATTEMPTS} attempts: {last_error}")
 
 
 class GeminiClient(LLMClient):
@@ -200,6 +213,51 @@ class OllamaClient(LLMClient):
 
         except Exception as e:
             raise RuntimeError(f"Ollama generation failed: {e}")
+
+
+class OpenRouterClient(LLMClient):
+    """
+    Hosted multi-model gateway (OpenAI-compat /chat/completions) -- lets Probity run any model
+    OpenRouter serves (e.g. "google/gemma-4-31b-it") without a dedicated per-lab client class.
+    Reuses DeepSeekClient's retry contract via the shared _post_chat_completion() helper.
+    """
+
+    _RETRYABLE_HTTP_CODES = {429, 500, 502, 503, 504}
+    _MAX_ATTEMPTS = 3
+    _BACKOFF_BASE_SECONDS = 2
+
+    def __init__(self, model: str):
+        self.api_key = os.getenv("OPENROUTER_API_KEY")
+        if not self.api_key:
+            raise RuntimeError("OPENROUTER_API_KEY not set. Source secrets/.env first.")
+        self.base_url = "https://openrouter.ai/api/v1/chat/completions"
+        self.model = model
+
+    def generate(self, prompt: str, temperature: float) -> str:
+        """Generate via OpenRouter. Assert temp > 0 (SP1)."""
+        if temperature <= 0:
+            raise ValueError(f"Temperature must be >0 (got {temperature}). SP1: no determinism.")
+
+        payload = {
+            "model": self.model,
+            "messages": [{"role": "user", "content": prompt}],
+            "temperature": temperature,
+            # Output is a small JSON object — 1024 is generous headroom, not a constraint.
+            "max_tokens": 1024,
+        }
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+            # OpenRouter's own attribution headers (optional, harmless) -- lets a model provider
+            # see traffic came from this project on OpenRouter's public leaderboards.
+            "HTTP-Referer": "https://github.com/eikiyo/probity",
+            "X-Title": "Probity",
+        }
+        return _post_chat_completion(
+            self.base_url, headers, payload, timeout=120, error_label=f"OpenRouter({self.model})",
+            retryable_codes=self._RETRYABLE_HTTP_CODES, max_attempts=self._MAX_ATTEMPTS,
+            backoff_base_seconds=self._BACKOFF_BASE_SECONDS,
+        )
 
 
 class MockClient(LLMClient):

@@ -509,6 +509,10 @@ MODEL_DISPLAY = {
     "gemma4-12b": ("gemma4:12b", "12B, local"),
     "qwen3.5-27b": ("qwen3.5:27b", "27B, local"),
     "deepseek-v4f": ("deepseek-v4-flash", "hosted"),
+    # OpenRouter lineup added 2026-07-02 -- hosted, no local heat/time limit (Eikiyo: "not
+    # limited by laptop anymore"). Label is the guard/checkpoint label from
+    # engine/runner.openrouter_model_set(), not the raw OpenRouter model id.
+    "gemma4-31b-or": ("gemma-4-31b-it", "31B, hosted (OR)"),
 }
 
 

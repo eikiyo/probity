@@ -1,0 +1,9 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "gemma4-31b-or",
+ "task_name": "post_money_valuation",
+ "data_version": "4e15fd4800732d20a1f5d44fd7e281b2bb27a9f94e87acc2b0f6c538e60c6b3c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:57:20.388275+00:00"
+}

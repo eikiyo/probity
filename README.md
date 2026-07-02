@@ -85,6 +85,7 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 
 | Model | Size | Tests covered | **Wobble** ↓ | Accuracy |
 |---|---|---|---|---|
+| `gemma-4-31b-it` | 31B, hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
 | `deepseek-v4-flash` | hosted | 58 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
 | `gemma3:1b` | 1B, local | 51 | ![44%](https://img.shields.io/badge/-44%25-red) | ![54%](https://img.shields.io/badge/-54%25-red) |
 | `llama3.2:latest` | 3B, local | 1 | ![56%](https://img.shields.io/badge/-56%25-red) | ![81%](https://img.shields.io/badge/-81%25-yellow) |

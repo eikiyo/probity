@@ -1,0 +1,9 @@
+{
+ "leaf": "exercise_window",
+ "model": "gemma4-31b-or",
+ "task_name": "exercise_window",
+ "data_version": "3b8d67794f45e6be1e500b388b7b2dc8ac1a0b4e646cc13b8384c91fa4d879e7",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:56:18.017744+00:00"
+}

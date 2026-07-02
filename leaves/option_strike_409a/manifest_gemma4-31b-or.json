@@ -1,0 +1,9 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "gemma4-31b-or",
+ "task_name": "option_strike_409a",
+ "data_version": "64c0860ab19504cd6304e9a81fa6583151c8a07190dde590f128d0c716c1482e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:57:26.037159+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "gemma4-31b-or",
+ "task_name": "preference_seniority",
+ "data_version": "2baa828aa01de41fb069c9045920a804cdf33c5ec0af89988a0621d6d36c631c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T20:58:06.303774+00:00"
+}

@@ -25,6 +25,12 @@ ESTIMATED_COST_PER_CALL_USD = {
     "qwen3.5-27b": 0.0,
     "deepseek-v4f": 0.002,
     "gemini": 0.01,
+    # Hosted OpenRouter models added for the 2026-07-02 parallel-execution sweep (Eikiyo: "start
+    # with gemma from your list... we are not limited by laptop anymore"). Real per-call cost at
+    # this harness's fixed shape (~470-item x 20-run sweep) is ~$0.0000543 (PTC $0.51 / 9400
+    # calls, see artifacts/pricing_probity.html) -- ~2x that, not the ~50x margin used for
+    # deepseek-v4f above, so a per-leaf guard cap doesn't trip long before a real run completes.
+    "gemma4-31b-or": 0.0001,
 }
 # A model label the guard has no cost estimate for is treated as the most expensive known
 # label, not $0 -- an unrecognized model must never get a free pass on the spend cap.
