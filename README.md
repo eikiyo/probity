@@ -1,5 +1,9 @@
 # Probity
 
+[![CI](https://github.com/eikiyo/probity/actions/workflows/ci.yml/badge.svg)](https://github.com/eikiyo/probity/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
+
 **A reliability + accuracy benchmark for LLMs on real fundraising documents.**
 
 Probity measures how trustworthy a language model is when it reads the legal and financial
@@ -17,6 +21,30 @@ These are scored separately and never averaged into one headline — a model can
 consistent and consistently wrong. Models are run across a **size ladder** (1B → 12B local, plus a
 hosted model) to test whether wobble falls as capability rises. Heavier models (a 27B local model
 and hosted frontier models) are reserved for a single comprehensive sweep once every test is built.
+
+## Quickstart
+
+No install needed to read the results — every leaf's scored output is already committed:
+
+```bash
+git clone https://github.com/eikiyo/probity.git
+cd probity
+make setup     # runs the test suite + regenerates results/RESULTS.md + this README's tables from disk
+```
+
+That's it — zero third-party dependencies, pure Python 3 stdlib, no network call, no API key.
+(No `make`? `python3 -m unittest discover -s tests && python3 results/render.py` does the same thing.)
+
+To **re-run a test yourself** against live models (needs [Ollama](https://ollama.com) running
+`gemma3:1b` locally + a DeepSeek API key — see [`.env.example`](.env.example)):
+
+```bash
+cp .env.example .env && set -a && source .env && set +a
+cd leaves/vesting_schedule       # or any other leaf under leaves/
+python3 source.py                # fetch the real SEC documents into corpus/
+python3 run.py                   # run the model ladder, N=20 each, writes scored.json
+python3 ../../results/render.py  # regenerate the tables with your fresh numbers
+```
 
 ## Benchmark results
 
@@ -490,15 +518,13 @@ leaves/    one folder per test, each with its real-document corpus, its separate
 results/   the living benchmark table
 ```
 
-## Running a test
+See the [Quickstart](#quickstart) above for the full clone → run → reproduce path.
 
-```bash
-cd leaves/<test_name>
-python3 run.py          # runs the corpus through gemma + DeepSeek, scores accuracy + reliability
-```
+## Contributing
 
-Models default to a local Ollama model (`gemma4:12b`, zero egress) and DeepSeek (`deepseek-v4-flash`).
-API keys are read from the environment, never committed.
+Bug reports, new leaves, and sourcing improvements are welcome — see
+[CONTRIBUTING.md](CONTRIBUTING.md). Security issues: see [SECURITY.md](SECURITY.md), never a
+public issue.
 
 ## License
 
