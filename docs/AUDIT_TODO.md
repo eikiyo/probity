@@ -455,4 +455,33 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   33.9% ✓). gemma3-1b scores a genuine 0% acc / 100% wobble — total failure at 2-operand
   division+rounding, an honest, expected result for a 1B model on an arithmetic task, not a bug.
 
-## Next leaf: 3.2.1 founder_ownership_pct
+### [x] 3.2.1 founder_ownership_pct, 3.2.2 investor_ownership_pct, 3.2.3 employee_pool_pct
+- **SOURCE-CONCENTRATION FINDING across all of family 3.2 (data NOT touched, math verified
+  correct):** all three leaves' entire corpora are drawn from the SAME single Uber Technologies
+  S-1 filing already used by leaf 3.1. 3.2.1's 3 items (Garrett Camp, Travis Kalanick, Ryan
+  Graves) and 3.2.2's 4 items (SB Cayman, Benchmark, PIF, Alphabet) are the SAME people/numbers
+  already present in 3.1's 9-item set, just re-labeled "founder"/"investor" — i.e. these two
+  leaves currently test ZERO new computations beyond what 3.1 already covers, just a taxonomic
+  relabeling of the same 7 of 9 facts. 3.2.3 (`employee_pool_pct`) has only **N=1** — the single
+  smallest leaf in the entire audit, unable to support any claim at all. Scores are internally
+  consistent with 3.1 (gemma3-1b 0%/100% wobble on all three — same total division-arithmetic
+  failure; deepseek-v4f 100%/0% on all three), confirming these aren't independently-scored new
+  signal. Verified the math is correct on 3.2.1/3.2.2 (same S-1 table, already checked in 3.1).
+  **ACTION NEEDED FROM EIKIYO:** re-source family 3.2 from additional, independent S-1 filings
+  (not just Uber) to make these three leaves test something 3.1 doesn't already cover, or fold
+  them into 3.1 explicitly and retire the sub-split?
+
+### [x] 3.3 option_pool_shuffle
+- **Verified clean, both models genuinely struggle (gemma3-1b 0%, deepseek-v4f 33%) — a hard,
+  legitimate multi-step cap-table computation.** N=3, all 3 items sourced from ONE real SEC
+  filing (Snapwire Media's Form C Regulation Crowdfunding exhibit, CIK 1680084) — but this
+  exhibit is specifically a WeFunder standard-template "Appendix II" containing 3 WORKED
+  ILLUSTRATIVE EXAMPLES of the option-pool-shuffle math, not 3 independent real financing
+  events. This is a real but already self-documented limitation (task.py's own docstring calls
+  out the provenance as "a WeFunder AFE template's Appendix II" and notes this leaf was already
+  rebuilt once from a broken field-name state) — flagging for awareness, not re-litigating a
+  decision that was already made deliberately. Spot-verified the math setup is internally
+  coherent (price-per-share figures match the stated share-count/dollar-amount pairs in each
+  worked example).
+
+## Next leaf: 3.4 fully_diluted_basis
