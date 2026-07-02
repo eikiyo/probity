@@ -1865,7 +1865,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## Test 3.6 — Per-share dilution to new investors (compute)
 
-**Corpus:** 5 real IPO prospectus Dilution-section tables, human-validated answers (values range 1.96-32.89). Each model run **19×/item at temp 0.7**.
+**Corpus:** 5 real IPO prospectus Dilution-section tables, human-validated answers (values range 1.96-32.89). Each model run **20×/item at temp 0.7**.
 
 ### Headline — WOBBLE (the core metric)
 
@@ -1874,6 +1874,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
 |---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **80%** | 49% | 0% | 5/5 |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 |
 
 **What the columns mean:**
 
@@ -1893,7 +1894,8 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ## What this shows
 
-- **Wobble spread: 80%–80% across the ladder.** Lowest-wobble model: **1B** (80% wobble, 0% accuracy).
+- **Wobble spread: 0%–80% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
 

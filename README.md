@@ -356,11 +356,12 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 | `gemma3:1b` | 1B | **0%** | 100% | 100% |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% |
 
-**Test 3.6 — Per-share dilution to new investors (compute)** — 5 clauses (values range 1.96-32.89), each model run 19×/item:
+**Test 3.6 — Per-share dilution to new investors (compute)** — 5 clauses (values range 1.96-32.89), each model run 20×/item:
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy |
 |---|---|---|---|---|
 | `gemma3:1b` | 1B | **80%** | 49% | 0% |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% |
 
 **What the columns mean:**
 

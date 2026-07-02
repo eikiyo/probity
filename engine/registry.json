@@ -457,7 +457,8 @@
       "type": "number",
       "op": "CO",
       "stakes": 4,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/multi_round_stacked_dilution"
     },
     {
       "ref": "4.1",
