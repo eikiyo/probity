@@ -630,8 +630,23 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   correct label being `4yr/1yr-cliff` (matching the text and matching deepseek's actual answer)
   — confirm the relabel, or explain what source outside this window justifies `3yr/no-cliff`
   before I touch oracle.jsonl?
+- **Cross-leaf confirmation (see 6.2 below):** the SIBLING leaf `cliff_present` sources this
+  EXACT SAME document and correctly labels it `"no"` (cliff not currently in effect) precisely
+  BECAUSE its own taxonomy defines a deliberate trap for "an excerpt whose operative text is a
+  WAIVER of a cliff requirement" — i.e. cliff_present's own design confirms the underlying
+  schedule genuinely HAS a cliff (that's what's being waived), which is the opposite of what
+  6.1's "3yr/no-cliff" label claims. Two independently-built leaves reading the same real text
+  disagree about its most basic structural fact — strong evidence 6.1's label, not the model
+  answers, is the error.
 - Otherwise verified clean: 8/9 other items' normalized formats spot-checked against real clause
   text, all correct. gemma3-1b's 25% (well below the 44% majority-class baseline) confirms it's
   not gaming class imbalance — a genuinely hard free-form-normalization task for a 1B model.
 
-## Next leaf: 6.2 cliff_present
+### [x] 6.2 cliff_present
+- **Verified clean, well-designed leaf.** N=12, perfect 6/6 class balance. deepseek-v4f 91.7%,
+  gemma3-1b 66.7%. Both models' one shared miss is the World Heart Corp "waiver of a cliff"
+  trap item (both answer "yes", correct answer is "no" per the deliberate trap design) — a
+  genuine, hard, correctly-designed adversarial item, and its correct labeling here directly
+  helped confirm the 6.1 `vesting_schedule` mislabel above.
+
+## Next leaf: 6.3 acceleration_trigger
