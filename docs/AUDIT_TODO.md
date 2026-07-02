@@ -758,4 +758,21 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
 **Family 7 (regulatory/disclosure, 7.1-7.5) now fully audited.**
 
-## Next leaf: 8.1 flag_offmarket_liqpref
+### [x] 8.1 flag_offmarket_liqpref
+- **Verified clean.** N=10, perfect 5/5 balance. deepseek-v4f 90% (1 miss), gemma3-1b 40%
+  (mixed both directions — 2 real "yes" missed, 4 real "no" missed, not simple collapse).
+  Taxonomy explicitly documents a trap ("accrued dividends added on TOP of a 1x preference do
+  NOT make it >1x"); spot-checked deepseek's one miss (Workday) — its real clause reads "an
+  amount equal to their original issue price per share, plus any declared but unpaid
+  dividends," exactly the documented 1x-plus-dividends "no" case — a genuine reasoning error on
+  the intended trap, not a data bug. Most of gemma3-1b's false-"yes" misses are the same
+  cumulative-dividend companies already verified in leaf 1.4.2 (Fitbit, Akouos, BioAccelerate),
+  consistent with the same trap firing repeatedly.
+
+### [x] 8.2 flag_full_ratchet
+- **Confirms the earlier checkpoint-staleness fix (commit `ba322a7`/`cd270fa`) landed clean —
+  this was the other sibling leaf found affected alongside 1.1.1 and 7.1.** Current state: N=7,
+  class balance 4 yes / 3 no, deepseek-v4f 100%/0%, gemma3-1b 57.1%/28.6% wobble — plausible,
+  no shared-confusion signal remaining post-fix.
+
+## Next leaf: 8.3 flag_uncapped_participation
