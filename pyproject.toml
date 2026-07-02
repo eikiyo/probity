@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "probity-bench"
+dynamic = ["version"]
+description = "An LLM reliability + accuracy benchmark for real fundraising documents -- because LLMs are probabilistic and finance needs determinism."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "eikiyo" }]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/eikiyo/probity"
+Repository = "https://github.com/eikiyo/probity"
+Changelog = "https://github.com/eikiyo/probity/blob/main/CHANGELOG.md"
+
+[project.scripts]
+probity-bench = "probity_cli.cli:main"
+
+[tool.setuptools]
+packages = ["probity_cli"]
+include-package-data = true
+
+[tool.setuptools.dynamic]
+version = { attr = "probity_cli.__version__" }
+
+[tool.setuptools.package-data]
+probity_cli = ["data/**/*"]

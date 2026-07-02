@@ -28,7 +28,33 @@ and hosted frontier models) are reserved for a single comprehensive sweep once e
 
 ## Quickstart
 
-No install needed to read the results — every leaf's scored output is already committed:
+### Option A — install the package (fastest way to run a real benchmark yourself)
+
+```bash
+pip install probity-bench
+probity-bench onboard   # pick documents to fetch, models to run, and store your API key(s)
+```
+
+`onboard` is a guided wizard — same idea as `openclaw onboard` or `claude setup`: it walks you
+through which leaves to pull real SEC documents for, which models to benchmark (auto-detects local
+Ollama models; DeepSeek/Gemini for hosted), and collects + **verifies** any API key by making one
+real call before it lets you proceed. Everything is stored locally at `~/.probity/` — nothing
+leaves your machine except the model calls you explicitly configure.
+
+![Probity onboarding — documents, models, and API key setup, all local](demo/onboard.gif)
+
+The package ships the **full pipeline** — `engine/`, all 60 leaves' code, oracles, and prior
+results — everything except the raw SEC documents themselves (fetch those via `onboard` or
+`source.py`, per leaf) and, obviously, no model weights (those come from Ollama/DeepSeek/Gemini).
+
+```bash
+probity-bench demo       # zero-config: replay a real wobble example, no install/network needed
+probity-bench results    # print the 2 summary tables from bundled scored.json
+probity-bench list       # every leaf + whether you've fetched its corpus
+probity-bench run <leaf> # fetch (if needed) + benchmark one leaf with your configured models
+```
+
+### Option B — clone the repo (full reproducibility, no package boundary)
 
 ```bash
 git clone https://github.com/eikiyo/probity.git

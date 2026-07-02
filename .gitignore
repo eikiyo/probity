@@ -10,3 +10,10 @@ venv/
 # run logs
 *.log
 nohup.out
+
+# pip package build artifacts -- probity_cli/data/ is GENERATED (make package-data) from
+# engine/ + leaves/* + results/ + demo/ right before `python3 -m build`, never hand-edited.
+probity_cli/data/
+dist/
+build/
+*.egg-info/
