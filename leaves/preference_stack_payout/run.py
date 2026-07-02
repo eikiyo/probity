@@ -1,5 +1,5 @@
 """
-Location: leaves/option_pool_shuffle/run.py
+Location: leaves/preference_stack_payout/run.py
 Purpose: Thin shim -- run THIS leaf via shared engine/runner.py at the FAST_SET (gemma3:1b + deepseek).
 Calls: engine.runner.run_leaf
 """

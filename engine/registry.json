@@ -425,8 +425,9 @@
       "type": "number",
       "op": "CO",
       "stakes": 5,
-      "tier": "v1",
-      "disambig": "pre-money pool top-up dilutes founders only, not the new investor"
+      "tier": "built",
+      "disambig": "pre-money pool top-up dilutes founders only, not the new investor",
+      "leaf": "leaves/option_pool_shuffle"
     },
     {
       "ref": "3.4",
@@ -486,7 +487,8 @@
       "type": "number",
       "op": "CO",
       "stakes": 4,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/preference_stack_payout"
     },
     {
       "ref": "4.4",
