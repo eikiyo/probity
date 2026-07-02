@@ -527,4 +527,22 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
 **Family 3 (cap tables, 3.1-3.6) now fully audited.**
 
-## Next leaf: 4.3 preference_stack_payout
+### [x] 4.3 preference_stack_payout
+- **Verified clean.** N=2 (small, noted). deepseek-v4f 100%/0%, gemma3-1b 50%/100% wobble.
+  Good design: both items' windows show the SAME full Series A + Series B figures (from the
+  Connecture SC 13E-3 fairness opinion already used by 4.1), differing only in a "TARGET
+  SERIES:" header — genuinely tests whether the model selects the right series' numbers, not
+  just extracts a lone figure. Verified the math independently: Series A $52.0M pref +
+  $6.9M accrued dividends = $58.9M ✓; Series B $17.5M + $2.2M = $19.7M ✓. No leakage — neither
+  final total (58.9/19.7) appears as literal text in either window.
+
+### [x] 4.4 convert_vs_preference_decision
+- **Verified clean.** N=2 (small, noted), perfect 1/1 class balance (the best achievable at
+  N=2). deepseek-v4f 100%/0%. gemma3-1b 50%/0% wobble — verified this is a clean 2-item binary
+  chance pattern (answers the same class consistently every run, correct on exactly one of the
+  two by construction), not a bug. Same Snapwire Media WeFunder AFE-template source as leaf
+  3.3, already flagged there — not re-logging as a fresh finding.
+
+**Family 4 (waterfall, 4.1/4.3/4.4) now fully audited.**
+
+## Next leaf: 5.1 board_seats_investor
