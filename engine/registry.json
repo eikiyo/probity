@@ -746,8 +746,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 4,
-      "tier": "v3",
-      "uncertain": "needs a cross-field consistency spec"
+      "tier": "built",
+      "leaf": "leaves/flag_internal_inconsistency"
     }
   ]
 }

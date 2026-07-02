@@ -211,6 +211,18 @@ LEAVES = [
      "title": "Test 3.6 — Per-share dilution to new investors (compute)",
      "corpus_desc": "real IPO prospectus Dilution-section tables",
      "labels": {}},
+    {"slug": "fully_diluted_basis",
+     "title": "Test 3.4 — Fully-diluted vs issued-outstanding basis classification",
+     "corpus_desc": "real venture financing exhibits + S-1 capitalization tables",
+     "labels": {"fully-diluted": "Fully-diluted", "issued-outstanding": "Issued-outstanding"}},
+    {"slug": "financial_statement_qa",
+     "title": "Test 7.5 — Named-period revenue figure extraction",
+     "corpus_desc": "real S-1 Selected/Summary Financial Data tables",
+     "labels": {}},
+    {"slug": "flag_internal_inconsistency",
+     "title": "Test 8.6 — Cross-citation share-count consistency flag",
+     "corpus_desc": "real S-1/424B4 filings, paired share-count citations",
+     "labels": {}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",
