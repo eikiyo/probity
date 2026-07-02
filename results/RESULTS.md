@@ -14,18 +14,19 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **61%** | 90% | 39% | 18/18 |
-| `llama3.2:latest` | 3B | **72%** | 84% | 44% | 18/18 |
-| `gemma4:12b` | 12B | **0%** | 100% | 72% | 18/18 |
-| `deepseek-v4-flash` | hosted | **6%** | 98% | 67% | 18/18 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **61%** | 90% | 39% | 18/18 | 308/360 (86%) |
+| `llama3.2:latest` | 3B | **72%** | 84% | 44% | 18/18 | 360/360 (100%) |
+| `gemma4:12b` | 12B | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
+| `deepseek-v4-flash` | hosted | **6%** | 98% | 67% | 18/18 | 360/360 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **non-part · part · capped** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -83,18 +84,19 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **6%** | 98% | 62% | 16/16 |
-| `llama3.2:latest` | 3B | **56%** | 88% | 81% | 16/16 |
-| `gemma4:12b` | 12B | **0%** | 100% | 100% | 16/16 |
-| `deepseek-v4-flash` | hosted | **19%** | 99% | 100% | 16/16 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **6%** | 98% | 62% | 16/16 | 128/320 (40%) |
+| `llama3.2:latest` | 3B | **56%** | 88% | 81% | 16/16 | 320/320 (100%) |
+| `gemma4:12b` | 12B | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `deepseek-v4-flash` | hosted | **19%** | 99% | 100% | 16/16 | 320/320 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **post · pre** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -145,16 +147,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **44%** | 93% | 88% | 16/16 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 16/16 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **44%** | 93% | 88% | 16/16 | 320/320 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **cumulative · non-cum** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -192,16 +195,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **46%** | 97% | 85% | 13/13 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 13/13 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **46%** | 97% | 85% | 13/13 | 259/260 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **single · double** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -238,16 +242,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **45%** | 97% | 45% | 11/11 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 82% | 11/11 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **45%** | 97% | 45% | 11/11 | 215/220 (98%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **pari-passu · stacked** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -283,16 +288,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **40%** | 95% | 40% | 10/10 |
-| `deepseek-v4-flash` | hosted | **10%** | 99% | 90% | 10/10 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **40%** | 95% | 40% | 10/10 | 197/200 (98%) |
+| `deepseek-v4-flash` | hosted | **10%** | 99% | 90% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **off-market(>1x) · standard(1x)** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -327,16 +333,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 97% | 50% | 10/10 |
-| `deepseek-v4-flash` | hosted | **10%** | 96% | 100% | 10/10 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **20%** | 97% | 50% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-flash` | hosted | **10%** | 96% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **redeemable · non-redeem** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -369,16 +376,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **17%** | 99% | 42% | 12/12 |
-| `deepseek-v4-flash` | hosted | **8%** | 97% | 100% | 12/12 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **17%** | 99% | 42% | 12/12 | 238/240 (99%) |
+| `deepseek-v4-flash` | hosted | **8%** | 97% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **drag(obligated) · co-sale(right)** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -410,16 +418,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **17%** | 98% | 67% | 12/12 |
-| `deepseek-v4-flash` | hosted | **17%** | 94% | 92% | 12/12 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **17%** | 98% | 67% | 12/12 | 238/240 (99%) |
+| `deepseek-v4-flash` | hosted | **17%** | 94% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **rofr/cosale · absent/other-right** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -451,16 +460,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **17%** | 94% | 100% | 12/12 |
-| `deepseek-v4-flash` | hosted | **8%** | 100% | 100% | 12/12 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **17%** | 94% | 100% | 12/12 | 101/240 (42%) |
+| `deepseek-v4-flash` | hosted | **8%** | 100% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **pro-rata · absent/waived** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -492,16 +502,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **17%** | 96% | 67% | 12/12 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 12/12 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **17%** | 96% | 67% | 12/12 | 239/240 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **cliff · no-cliff** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -533,16 +544,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **17%** | 97% | 58% | 12/12 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 12/12 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **17%** | 97% | 58% | 12/12 | 239/240 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **veto-right · absent** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -574,16 +586,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **17%** | 95% | 50% | 12/12 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 12/12 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **17%** | 95% | 50% | 12/12 | 233/240 (97%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **info-rights · absent/waived** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -615,16 +628,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **44%** | 93% | 67% | 9/9 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **44%** | 93% | 67% | 9/9 | 174/180 (97%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **accelerates · no-acceleration** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -659,16 +673,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **46%** | 91% | 0% | 12/13 |
-| `deepseek-v4-flash` | hosted | **46%** | 87% | 62% | 13/13 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **46%** | 91% | 0% | 12/13 | 220/260 (85%) |
+| `deepseek-v4-flash` | hosted | **46%** | 87% | 62% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **non-part · 1x · 2x · 3x · other** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -706,16 +721,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **44%** | 92% | 78% | 9/9 |
-| `deepseek-v4-flash` | hosted | **11%** | 97% | 78% | 9/9 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **44%** | 92% | 78% | 9/9 | 176/180 (98%) |
+| `deepseek-v4-flash` | hosted | **11%** | 97% | 78% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -743,16 +759,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 96% | 93% | 15/15 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 15/15 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **20%** | 96% | 93% | 15/15 | 134/300 (45%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **pro-rata · absent** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -785,16 +802,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **86%** | 84% | 71% | 21/21 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 21/21 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **86%** | 84% | 71% | 21/21 | 397/420 (95%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 21/21 | 420/420 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **pre · post** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -843,16 +861,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 57% | 7/7 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 86% | 7/7 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 57% | 7/7 | 178/200 (89%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 86% | 7/7 | 200/200 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **full-ratchet · absent** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -882,16 +901,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **25%** | 96% | 25% | 4/4 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 50% | 4/4 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **25%** | 96% | 25% | 4/4 | 92/120 (77%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 50% | 4/4 | 120/120 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -914,16 +934,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 40% | 5/5 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 40% | 5/5 | 96/100 (96%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **full-ratchet · weighted-avg · broad-based · narrow-based · none** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -953,16 +974,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **8%** | 99% | 31% | 13/13 |
-| `deepseek-v4-flash` | hosted | **8%** | 100% | 85% | 13/13 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **8%** | 99% | 31% | 13/13 | 195/260 (75%) |
+| `deepseek-v4-flash` | hosted | **8%** | 100% | 85% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **uncapped · capped/none** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -994,16 +1016,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **29%** | 95% | 100% | 7/7 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **29%** | 95% | 100% | 7/7 | 93/140 (66%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **MFN · absent** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -1035,16 +1058,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 3/3 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 3/3 | 58/60 (97%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1066,16 +1090,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **71%** | 87% | 57% | 7/7 |
-| `deepseek-v4-flash` | hosted | **29%** | 90% | 43% | 7/7 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **71%** | 87% | 57% | 7/7 | 119/140 (85%) |
+| `deepseek-v4-flash` | hosted | **29%** | 90% | 43% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1103,16 +1128,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **38%** | 96% | 88% | 8/8 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **38%** | 96% | 88% | 8/8 | 144/160 (90%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1138,16 +1164,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 7/7 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 7/7 | 138/140 (99%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1169,16 +1196,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **44%** | 89% | 56% | 9/9 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **44%** | 89% | 56% | 9/9 | 160/180 (89%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1205,16 +1233,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 88% | 50% | 4/4 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/4 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **50%** | 88% | 50% | 4/4 | 75/80 (94%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1240,16 +1269,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 92% | 80% | 5/5 |
-| `deepseek-v4-flash` | hosted | **20%** | 98% | 100% | 5/5 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **20%** | 92% | 80% | 5/5 | 99/100 (99%) |
+| `deepseek-v4-flash` | hosted | **20%** | 98% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1273,16 +1303,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **40%** | 96% | 70% | 10/10 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 10/10 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **40%** | 96% | 70% | 10/10 | 199/200 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **broad · narrow · n/a** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -1317,16 +1348,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 5/5 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1348,16 +1380,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 83% | 6/6 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 6/6 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 83% | 6/6 | 113/120 (94%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1379,16 +1412,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **18%** | 98% | 73% | 11/11 |
-| `deepseek-v4-flash` | hosted | **9%** | 100% | 100% | 11/11 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **18%** | 98% | 73% | 11/11 | 132/220 (60%) |
+| `deepseek-v4-flash` | hosted | **9%** | 100% | 100% | 11/11 | 220/220 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **cap · discount · both-mfn** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -1421,16 +1455,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **22%** | 95% | 56% | 9/9 |
-| `deepseek-v4-flash` | hosted | **22%** | 94% | 67% | 9/9 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **22%** | 95% | 56% | 9/9 | 172/180 (96%) |
+| `deepseek-v4-flash` | hosted | **22%** | 94% | 67% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1455,16 +1490,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 94% | 50% | 4/4 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **50%** | 94% | 50% | 4/4 | 75/80 (94%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1489,16 +1525,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 25% | 4/4 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 25% | 4/4 | 77/80 (96%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1520,16 +1557,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/2 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/2 | 38/40 (95%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1551,16 +1589,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 25% | 8/9 |
-| `deepseek-v4-flash` | hosted | **22%** | 95% | 89% | 9/9 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 25% | 8/9 | 64/180 (36%) |
+| `deepseek-v4-flash` | hosted | **22%** | 95% | 89% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1584,16 +1623,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 16% | 0% | 9/9 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 16% | 0% | 9/9 | 146/180 (81%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 179/180 (99%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1625,16 +1665,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 18% | 0% | 3/3 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 18% | 0% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1660,16 +1701,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 38% | 0% | 4/4 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 38% | 0% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1696,16 +1738,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 47% | 0% | 1/1 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 1/1 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 47% | 0% | 1/1 | 17/20 (85%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1729,16 +1772,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **40%** | 87% | 90% | 10/10 |
-| `deepseek-v4-flash` | hosted | **30%** | 96% | 100% | 10/10 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **40%** | 87% | 90% | 10/10 | 166/200 (83%) |
+| `deepseek-v4-flash` | hosted | **30%** | 96% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **506(b) · 506(c) · 504 · Reg A · other** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -1772,16 +1816,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 90% | 0% | 2/2 |
-| `deepseek-v4-flash` | hosted | **50%** | 95% | 100% | 2/2 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **50%** | 90% | 0% | 2/2 | 16/40 (40%) |
+| `deepseek-v4-flash` | hosted | **50%** | 95% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1805,16 +1850,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 30% | 10/10 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 30% | 10/10 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 30% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 30% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1836,16 +1882,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/6 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 6/6 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/6 | 23/120 (19%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1871,16 +1918,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **80%** | 49% | 0% | 5/5 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **80%** | 49% | 0% | 5/5 | 96/100 (96%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1907,16 +1955,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 64% | 50% | 8/8 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 64% | 50% | 8/8 | 152/160 (95%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **Fully-diluted · Issued-outstanding** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -1955,16 +2004,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **60%** | 86% | 20% | 5/5 |
-| `deepseek-v4-flash` | hosted | **20%** | 97% | 100% | 5/5 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **60%** | 86% | 20% | 5/5 | 97/100 (97%) |
+| `deepseek-v4-flash` | hosted | **20%** | 97% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -1991,16 +2041,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 60% | 5/5 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 60% | 5/5 | 99/100 (99%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -2022,16 +2073,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **60%** | 87% | 80% | 5/5 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **60%** | 87% | 80% | 5/5 | 96/100 (96%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -2057,16 +2109,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 24% | 0% | 5/5 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 24% | 0% | 5/5 | 97/100 (97%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -2094,16 +2147,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 93% | 50% | 4/4 |
-| `deepseek-v4-flash` | hosted | **25%** | 96% | 100% | 4/4 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **50%** | 93% | 50% | 4/4 | 79/80 (99%) |
+| `deepseek-v4-flash` | hosted | **25%** | 96% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -2127,16 +2181,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **80%** | 73% | 20% | 5/5 |
-| `deepseek-v4-flash` | hosted | **60%** | 92% | 80% | 5/5 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **80%** | 73% | 20% | 5/5 | 82/100 (82%) |
+| `deepseek-v4-flash` | hosted | **60%** | 92% | 80% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -2162,16 +2217,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 91% | 80% | 5/5 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **20%** | 91% | 80% | 5/5 | 97/100 (97%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 80/100 (80%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -2194,16 +2250,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 62% | 0% | 3/3 |
-| `deepseek-v4-flash` | hosted | **67%** | 91% | 33% | 3/3 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 62% | 0% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-flash` | hosted | **67%** | 91% | 33% | 3/3 | 44/60 (73%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -2229,16 +2286,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 50% | 2/2 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **0%** | 100% | 50% | 2/2 | 37/40 (92%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 27/40 (68%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 - **Convert · Take preference** — accuracy **within** each true class (correct / total), so a model can't score well by always guessing the most common class.
 
 
@@ -2268,16 +2326,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 17% | 0% | 4/4 |
-| `deepseek-v4-flash` | hosted | **25%** | 99% | 100% | 4/4 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 17% | 0% | 4/4 | 77/80 (96%) |
+| `deepseek-v4-flash` | hosted | **25%** | 99% | 100% | 4/4 | 62/80 (78%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble
@@ -2304,16 +2363,17 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 *Wobble = % of items where the model gave more than one answer across its runs. A model that wobbles cannot be trusted in a money workflow even when it is often right.*
 
-| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |
-|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 52% | 50% | 2/2 |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 |
+| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
+|---|---|---|---|---|---|---|
+| `gemma3:1b` | 1B | **100%** | 52% | 50% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 24/40 (60%) |
 
 **What the columns mean:**
 
 - **Wobble** (headline, lower is better) — the share of items where the model gave **more than one answer** across its 20 identical runs. A model that wobbles can't be trusted in a money workflow even when it's often right.
 - **Consistency** — the *average* agreement **within** each item's runs (how often they matched that item's most common answer). Wobble counts *whether* an item flipped; Consistency measures *how much*.
 - **Accuracy** — the share of items whose majority answer matched the human-validated truth.
+- **Response rate** — the share of the model's attempted runs that returned a parseable answer at all (parsed / attempted). A run can fail to parse for two different reasons: the model emitted malformed/non-JSON output, or the API call itself errored (rate limit, timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a low response rate is a distinct reliability signal, not folded into either headline number — a model can look perfectly consistent and accurate while silently failing to answer a meaningful share of the time.
 
 
 ### Which items make models wobble

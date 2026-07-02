@@ -5,15 +5,19 @@ Purpose: Unit tests for the engine — normalizer, JSON parsing, and the accurac
 Run: cd tests && python3 -m unittest -v
 """
 
+import io
 import sys
 import unittest
+import urllib.error
 from pathlib import Path
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "engine"))
 
 import normalize          # noqa: E402
 import harness            # noqa: E402
 import scorer             # noqa: E402
+import models             # noqa: E402
 
 TASK = {
     "name": "t",
@@ -77,6 +81,74 @@ class TestAccuracy(unittest.TestCase):
         a = scorer.score_accuracy(TASK, instances, runs)
         self.assertEqual(r["consistency_pct"], 100.0)  # reliable
         self.assertEqual(a["accuracy_majority"], 0.0)  # but inaccurate
+
+
+class _FakeDeepSeekResponse:
+    """Minimal stand-in for the `with urllib.request.urlopen(...) as resp:` context manager."""
+    def __init__(self, body: dict):
+        self._body = io.BytesIO(__import__("json").dumps(body).encode("utf-8"))
+
+    def read(self):
+        return self._body.read()
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *a):
+        return False
+
+
+def _http_error(code, reason="error"):
+    return urllib.error.HTTPError(url="https://api.deepseek.com/v1/chat/completions",
+                                   code=code, msg=reason, hdrs=None, fp=None)
+
+
+class TestDeepSeekRetry(unittest.TestCase):
+    """
+    Purpose: cover the retry-on-transient-error behavior added to DeepSeekClient.generate() after
+    the 2026-07-02 adversarial audit found 94% of that leaf's "parse failures" were actually raw
+    HTTP 503s with zero retry, silently mismeasured as model unreliability. These tests mock
+    urllib.request.urlopen so no real network call happens — they assert the RETRY DECISION logic
+    itself (retry 5xx/429, don't retry 4xx, give up after _MAX_ATTEMPTS), per root CLAUDE.md
+    §0.11 (new code ships with real tests in the same change, no toBeDefined-style padding).
+    """
+
+    def setUp(self):
+        # Bypass the real env-var requirement in __init__ so tests don't need secrets/.env.
+        with patch.dict("os.environ", {"DEEPSEEK_API_KEY": "test-key-not-real"}):
+            self.client = models.DeepSeekClient()
+        self.sleep_patcher = patch("models.time.sleep")  # don't actually wait during tests
+        self.sleep_patcher.start()
+
+    def tearDown(self):
+        self.sleep_patcher.stop()
+
+    def test_retries_on_503_then_succeeds(self):
+        good = _FakeDeepSeekResponse({"choices": [{"message": {"content": '{"x": 1}'}}]})
+        with patch("models.urllib.request.urlopen",
+                    side_effect=[_http_error(503), _http_error(503), good]) as m:
+            out = self.client.generate("prompt", temperature=0.7)
+        self.assertEqual(out, '{"x": 1}')
+        self.assertEqual(m.call_count, 3)  # 2 failed attempts + 1 success, within _MAX_ATTEMPTS
+
+    def test_does_not_retry_on_400(self):
+        with patch("models.urllib.request.urlopen", side_effect=_http_error(400, "Bad Request")) as m:
+            with self.assertRaises(RuntimeError):
+                self.client.generate("prompt", temperature=0.7)
+        self.assertEqual(m.call_count, 1)  # no retry attempted for a non-retryable code
+
+    def test_gives_up_after_max_attempts_on_repeated_503(self):
+        with patch("models.urllib.request.urlopen",
+                    side_effect=[_http_error(503), _http_error(503), _http_error(503)]) as m:
+            with self.assertRaises(RuntimeError):
+                self.client.generate("prompt", temperature=0.7)
+        self.assertEqual(m.call_count, models.DeepSeekClient._MAX_ATTEMPTS)
+
+    def test_rejects_zero_temperature_before_any_network_call(self):
+        with patch("models.urllib.request.urlopen") as m:
+            with self.assertRaises(ValueError):
+                self.client.generate("prompt", temperature=0.0)
+        m.assert_not_called()
 
 
 if __name__ == "__main__":

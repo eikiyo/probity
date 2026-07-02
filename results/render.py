@@ -285,6 +285,29 @@ def wobble_pct(res, field):
     return res["reliability"]["field_flips"].get(field, 0.0) * 100
 
 
+def response_rate_str(res):
+    """
+    What: formats the model's raw response rate as "<parsed>/<attempted> (<pct>%)".
+    Why: engine/scorer.py computes valid_run_count and parse_failure_count for every leaf, but
+         until this fix that data never reached the public README/RESULTS.md tables -- a model
+         that silently failed to return ANY parseable answer on a meaningful share of its runs
+         (e.g. a transient API 503, or a genuine malformed-JSON output) was invisible: wobble and
+         accuracy are computed ONLY over the runs that DID parse, so a low response rate could
+         hide behind an apparently-clean "100% accuracy" figure. Found on adversarial audit,
+         2026-07-02: liquidation_waterfall_payout's deepseek-v4f run had a 22.5% parse-failure
+         rate (94% of those were raw API 503s, not model failures) with zero visibility in the
+         previously-shipped README. See root CLAUDE.md §0.7 "every failure is observable."
+    Output: a string like "62/80 (78%)" -- attempted = valid_run_count + parse_failure_count.
+    Success criteria: attempted should equal len(instances) * N_RUNS for a fully-run leaf; a
+         response rate under 100% is a genuine signal worth a reader's attention, not noise.
+    """
+    r = res["reliability"]
+    valid = r.get("valid_run_count", 0)
+    attempted = valid + r.get("parse_failure_count", 0)
+    pct = (valid / attempted * 100) if attempted else 0.0
+    return f"{valid}/{attempted} ({pct:.0f}%)"
+
+
 def per_class(per_instance, oracle, field, classes):
     out = {c: [0, 0] for c in classes}
     for row, o in zip(per_instance, oracle):
@@ -315,6 +338,13 @@ def definitions(labels, generic=False, has_classes=True):
         "matched that item's most common answer). Wobble counts *whether* an item flipped; "
         "Consistency measures *how much*.",
         "- **Accuracy** — the share of items whose majority answer matched the human-validated truth.",
+        "- **Response rate** — the share of the model's attempted runs that returned a parseable "
+        "answer at all (parsed / attempted). A run can fail to parse for two different reasons: the "
+        "model emitted malformed/non-JSON output, or the API call itself errored (rate limit, "
+        "timeout, 5xx). Wobble and Accuracy are computed *only* over the runs that DID parse, so a "
+        "low response rate is a distinct reliability signal, not folded into either headline number — "
+        "a model can look perfectly consistent and accurate while silently failing to answer a "
+        "meaningful share of the time.",
     ]
     if has_classes:
         cols = "the right-hand class columns" if generic else " · ".join(labels.values())
@@ -324,13 +354,13 @@ def definitions(labels, generic=False, has_classes=True):
 
 
 def _wobble_table(scored, field):
-    L = ["| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable |",
-         "|---|---|---|---|---|---|"]
+    L = ["| Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |",
+         "|---|---|---|---|---|---|---|"]
     for k in _models(scored):
         res = scored[k]; a = res["accuracy"]; r = res["reliability"]
         L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res,field):.0f}%** | "
                  f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}% | "
-                 f"{a['n_measurable']}/{a['n_instances']} |")
+                 f"{a['n_measurable']}/{a['n_instances']} | {response_rate_str(res)} |")
     return L
 
 
@@ -434,8 +464,8 @@ def readme_block_for(cfg):
         bal = f"values range {min(vals)}-{max(vals)}" if vals else "n/a"
     L = [f"**{cfg['title']}** — {total} clauses ({bal}), each model run {_runs_each(scored)}×/item:", ""]
     class_header = " | " + " | ".join(labels[c] for c in classes) if classes else ""
-    L.append("| Model | Size | **Wobble** ↓ | Consistency | Accuracy" + class_header + " |")
-    L.append("|---|---|---|---|---|" + ("---|" * len(classes) if classes else ""))
+    L.append("| Model | Size | **Wobble** ↓ | Consistency | Accuracy | Response rate" + class_header + " |")
+    L.append("|---|---|---|---|---|---|" + ("---|" * len(classes) if classes else ""))
     for k in _models(scored):
         res = scored[k]; a = res["accuracy"]; r = res["reliability"]
         if classes:
@@ -444,7 +474,7 @@ def readme_block_for(cfg):
         else:
             cells = ""
         L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res,field):.0f}%** | "
-                 f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}%{cells} |")
+                 f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}% | {response_rate_str(res)}{cells} |")
     return "\n".join(L)
 
 
