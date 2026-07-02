@@ -164,4 +164,46 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
 - Verified clean otherwise: all 10 unique clauses' multiples spot-checked against real
   `corpus/full/*.txt` filing text, correctly classified.
 
-## Next leaf: 1.3.3 participation_cap
+### [x] 1.3.3 participation_cap
+- **Verified clean, both models 100% accuracy / 0% wobble.** All 3 items' cap multiples
+  spot-checked against real `corpus/questions/*.txt` text (Jazz Semiconductor's 3.5x confirmed
+  verbatim: "received 3.5 times ($3.50) the aggregate face value").
+- **Minor, documented not fixed: N=3 is the smallest sample size found so far in this audit**,
+  and 2 of the 3 items share the exact same true value (3) that also appears as a worked
+  example in the prompt's instruction block ("if the clause says 'up to three (3) times...'
+  respond {"participation_cap": 3}"). This did NOT produce a detectable anchor-bias artifact —
+  both models also correctly extracted the one differing item (3.5, not the example's 3) — but
+  the sample is too small to be confident the task generalizes, and a future re-sourcing pass
+  should either grow N or swap the example to a value that doesn't match any real item.
+
+### [x] 1.3.4 preference_seniority
+- **Verified clean.** Class balance 6 pari-passu / 5 stacked. Non-trivial, plausible spread
+  (gemma3-1b 45% acc/45% wobble, deepseek-v4f 82% acc/0% wobble) — no shared-confusion signal
+  like the round_size/post_money_valuation bugs. Spot-checked the one item whose validating
+  quote looked ambiguous at a glance (E Centives — mentions "dividends" right next to the
+  seniority language): confirmed via full corpus window the real charter clause explicitly
+  covers BOTH "dividend rights and rights on liquidation, winding-up and dissolution" in one
+  combined seniority statement, so "stacked" is correctly derived from real liquidation-scope
+  text, not a dividend/liquidation clause-type mixup.
+
+### [x] 1.4.1 dividend_rate_pct
+- **Verified clean.** N=6, both models 100% accuracy / 0% wobble. Checked every corpus window
+  for multi-value ambiguity (a second % figure, e.g. a default/step-up rate) that could produce
+  a false-easy task — confirmed each of the 6 windows contains exactly ONE percentage figure,
+  so the 100% scores reflect a genuinely unambiguous extraction, not an artifact. Sourcing
+  documented as reusing already-fetched charters from the sibling `dividend_cumulative` leaf;
+  no duplicate companies within this leaf itself.
+
+### [x] 1.4.2 dividend_cumulative
+- **Verified clean.** N=16, perfect 8/8 class balance. gemma3-1b 87.5% acc, deepseek-v4f 100%.
+  Spot-checked the two Jazz Semiconductor/Jazz Technologies items whose truncated
+  `validating_quote` looked like it might be a non-cumulative tell ("payable if and when
+  declared") mislabeled cumulative — full quote confirms real charter text explicitly says
+  "...payable if and when declared by the Board of Directors ... and are cumulative", a
+  genuine, correctly-labeled edge case (declaration-timing-contingent but still cumulative in
+  amount) that both models handled correctly, a legitimately good trap item. Verified
+  gemma3-1b's 2 actual misses (BioAccelerate, Eiger BioPharmaceuticals) against real source
+  text — both oracle labels are unambiguous and correct; genuine model reasoning failures, not
+  data bugs.
+
+## Next leaf: 1.5.1 antidilution_type
