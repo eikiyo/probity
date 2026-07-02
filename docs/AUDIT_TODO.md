@@ -679,4 +679,23 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   both models get them right — confirming the bug is specific to the Medecision bulleted-list
   documents, not the leaf's whole design.
 
-## Next leaf: 6.5 exercise_window
+### [x] 6.5 exercise_window
+- **Verified clean, and a useful positive contrast to 6.4's finding.** N=5, deepseek-v4f 100%,
+  gemma3-1b 80%. This leaf's own docstring explicitly anticipates the exact multi-scenario-per-
+  document problem found broken in 6.4, and solves it correctly: confirmed via
+  `corpus/questions/sirva.txt` that every window opens with a literal "TARGET SCENARIO: ..."
+  header disambiguating which of the document's several termination-window clauses to answer
+  for — the same design pattern already verified working in leaf 4.3. Good reference example
+  for whatever remediation approach gets chosen for 6.4.
+
+**Family 6 (vesting, 6.1-6.5) now fully audited.**
+
+### [x] 7.1 securities_exemption
+- **Confirms the earlier checkpoint-staleness fix (commit `ba322a7`/`cd270fa`) landed clean.**
+  This was one of the 2 sibling leaves the repo-wide sweep found affected by the same bug as
+  1.1.1; already fixed + rerun earlier this session. Current state: N=10, deepseek-v4f and
+  gemma3-1b both 100% accuracy (0.3/0.4 wobble — some run-to-run flips but always converging to
+  the right majority answer). Class balance 6×506b / 4×506c; `504` is a defined taxonomy value
+  with zero real items — same class-coverage-gap pattern as 1.3.1/1.5.1, noted not fixed.
+
+## Next leaf: 7.2 form_d_fields
