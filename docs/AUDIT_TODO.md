@@ -5,12 +5,54 @@ breaking-points/stubs/hardcodes/half-done features, log findings here, fix what'
 immediately, flag judgment calls for explicit confirmation. Order = engine/registry.json ref
 order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
-**Counter: 36/60 done · 0 in-progress · 24 pending · 6 partial** — dated 2026-07-02. Families 1, 2.1, 2.2, 3 (all of 1.1.1-1.7, 2.1.1-2.1.6, 2.2.1-2.2.6, 3.1-3.6) complete.
+**Counter: 60/60 leaves audited · 52 fully resolved · 8 have a pending judgment call** — dated
+2026-07-02. **ALL 60 BUILT LEAVES NOW AUDITED, leaf-by-leaf, in registry order.** 9 code bugs
+found and fixed (with reruns where the fix could change scores); 8 findings need Eikiyo's
+confirmation before any oracle.jsonl data is touched.
 
 ## Legend
 - `[x]` audited + resolved (bugs fixed, or verified clean)
 - `[~]` audited, one finding still pending Eikiyo's confirmation (not a code bug — a judgment call)
 - `[ ]` not yet audited
+
+## Pending-your-call summary (8 items — oracle.jsonl NOT touched on any of these)
+1. **1.1.2 pre_vs_post_money** — 2/21 items are the same Cytosorbents transaction counted
+   twice (8-K body + its own Exhibit 10.1). Drop the 2 duplicates and rerun at N=19, or leave?
+2. **1.1.3 price_per_share — SEVERE** — 5/9 items (56%) are wrong instrument type (common-stock
+   private placements, not preferred-stock rounds the task requires). Drop+re-source, reframe
+   the taxonomy, or leave?
+3. **1.3.1 liquidation_preference_multiple** — 3/13 items are exact duplicate clauses (same
+   amendment text, different accession numbers) — true N is 10, not 13. Drop the 3 duplicates?
+4. **1.5.1 antidilution_type** — 1/5 items (Popular Inc, a bank holding company) is off-thesis
+   (TARP-era bank rights, not VC financing) though its label is textually correct. Re-source or
+   leave?
+5. **2.1.3 safe_cap_vs_discount_applies — SEVERE** — class distribution is 10 both-mfn / 1
+   discount / 0 cap-only — one of the leaf's own 3 taxonomy classes is completely untestable.
+   Re-source 2-3 genuine cap-only SAFEs, or accept as an effective 2-way task?
+6. **6.1 vesting_schedule — SEVERE** — the World Heart Corp item is labeled "3yr/no-cliff" but
+   the text explicitly says "one-year cliff" twice and describes 1/48-monthly vesting (textbook
+   4yr/1yr-cliff). Sibling leaf 6.2 independently confirms the underlying schedule has a cliff.
+   Evidence strongly favors relabeling to `4yr/1yr-cliff` — confirm?
+7. **6.4 option_strike_409a — SEVERE, confirmed real harm** — 4/7 items' windows show a whole
+   bulleted list of ~7 different real option grants with no target-grant marker, confirmed as
+   the actual cause of deepseek-v4f scoring WORSE than gemma3-1b on this leaf (an inversion from
+   every other leaf). Needs a window-redesign decision (narrow the window vs. add a "TARGET
+   GRANT" marker like leaves 4.3/6.5/7.5 already use correctly).
+8. **7.3 s1_use_of_proceeds — SEVERE, scoring methodology** — nearly every scored "miss" is a
+   semantically-correct paraphrase marked wrong by exact-string-match scoring, while the prompt
+   itself invites paraphrase ("as a short phrase"). Reported 20%/80% accuracy likely both
+   understate true ~100% semantic accuracy. Needs either fuzzy/semantic scoring for free-text
+   string fields, or a prompt change to request verbatim extraction (like the working 7.4
+   pattern) — which approach?
+
+9 code bugs found + fixed this session (all with reruns confirming the fix, except 2.2.5's
+no-discount-string path and 2.2.3's relative-date path, which are documented-but-unexercised):
+`engine/harness.py` checkpoint staleness (project-wide, 3 leaves affected) · `results/render.py`
++ `engine/models.py` DeepSeek retry logic (project-wide) · 1.2.1 round_size prompt ambiguity ·
+1.6.2 auto_conversion_trigger gross/net wording · 2.2.4 note_valuation_cap missing-window
+anchor · 2.2.5 note_discount NONE/null contradiction + anchor-bias example numbers · 2.2.6
+note_qualified_financing_threshold anchor-bias example numbers · `engine/registry.json` 2
+field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string vs number).
 
 ## Findings log
 
@@ -792,4 +834,14 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   Robotics, SOS Hydration) already independently verified as real, distinct entities elsewhere
   in this audit — no new concern.
 
-## Next leaf: 8.6 flag_internal_inconsistency
+### [x] 8.6 flag_internal_inconsistency
+- **Verified clean — independently re-derived all 5 labels from the raw citation pairs shown to
+  the model, all correct:** Actelis 94,318,590 vs 94,318,590 → match → False ✓; Castle Bio
+  (consistent) 17,203,496 vs 17,203,496 → match → False ✓; Castle Bio (inconsistent) 17,203,496
+  vs 17,360,096 → differ → True ✓; HyreCar 12,191,508 vs 12,331,348 → differ → True ✓; IGN
+  Entertainment 20,392,610 vs 20,824,068 → differ → True ✓. Good deliberate design: the two
+  Castle Bio items share the same Citation A but a different-dated Citation B, a clean
+  contrastive near-duplicate pair (not a bug) testing the same underlying number against two
+  different real comparison points. deepseek-v4f 100%, gemma3-1b 60%.
+
+**Family 8 (risk flags, 8.1/8.2/8.3/8.5/8.6) now fully audited. ALL 60 BUILT LEAVES AUDITED.**
