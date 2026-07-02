@@ -380,4 +380,37 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   Group, Inc.") — same recurring cosmetic filename-vs-company-field pattern as 1.1.3/2.1.3, the
   tested 8% figure itself is textually solid regardless.
 
-## Next leaf: 2.2.3 note_maturity_date
+### [x] 2.2.3 note_maturity_date
+- **Verified clean.** N=4 (small — flagging low-N, not fixing). deepseek-v4f 100%/0%,
+  gemma3-1b 50%/50%. Both of gemma3-1b's misses verified as genuine date-field confusion, not
+  oracle bugs: Gardenburger's clause reads "...MATURITY DATE...together with interest thereon
+  calculated from Sept[ember]..." — gemma appears to have latched onto the nearby interest-
+  accrual-start date instead of the explicit "MATURITY DATE" label. Acology's miss is a clean
+  off-by-one-year (2014 vs 2015), also a plausible extraction slip, not a labeling error.
+  task.py's design allows a "literal relative date text" fallback (e.g. "60 months from
+  Closing") for notes without a fixed calendar date, but 0/4 real items exercise that path —
+  an untested code path, not a bug, just unexercised.
+
+### [x] 2.2.4 note_valuation_cap
+- **CRITICAL bug found + FIXED:** `exyn_technologies`'s corpus window (built by `source.py`'s
+  `window_on(text, anchor, before=420, after=900)`) anchored on "the quotient resulting from
+  dividing the Valuation Cap by the number of fully diluted shares" — a formula clause that USES
+  the term "Valuation Cap" but never states its dollar value. Verified via the real EDGAR filing
+  (CIK 1960355, Exyn Technologies Inc., accession `0001104659-26-032156`,
+  `tm2525579d10_ex10-26.htm`) that the actual defining sentence — `"Valuation Cap" means
+  $90,000,000.` — sits ~3,500 characters LATER in the same document, far outside the anchor's
+  `after=900` reach. The model-facing window genuinely never contained the ground truth —
+  deepseek-v4f's pre-fix "100% accuracy" on this item was necessarily a lucky/plausible guess,
+  not real extraction (confirmed: it produced 90000000 with 100% run-to-run consistency despite
+  the number not being in its input, which is itself a small red flag for guess-vs-extraction
+  auditing in general). Fixed by re-anchoring on the actual defining sentence (grounded against
+  the real filing, not guessed) and regenerating the window via `source.py`. Reran clean:
+  deepseek-v4f still 100%/0% (now genuinely reading the value), **gemma3-1b now shows its real,
+  previously-hidden performance: 75% acc/50% wobble** (was 50%/50% under the old, unanswerable
+  window) — an honest score increase since the task became answerable, not a data-quality
+  regression.
+- Verified the other 3 items (`damon_tranche_19to22`, `realpha_cap_definition`,
+  `greenfield_robotics`) all cleanly anchor on the actual literal dollar-figure sentence, no
+  similar windowing gap.
+
+## Next leaf: 2.2.5 note_discount

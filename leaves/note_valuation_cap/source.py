@@ -26,8 +26,18 @@ ITEMS = {
         "Valuation Cap ” means Twenty-Five Million Dollars",
         "Unreal Estate Inc. (formerly Abode Technologies)"),
     "exyn_technologies": (
+        # WHY this anchor differs from the obvious "dividing the Valuation Cap by the number
+        # of fully diluted shares" formula text (added 2026-07-02, adversarial audit): that
+        # phrase appears ~3500 chars BEFORE the document's actual numeric definition of
+        # "Valuation Cap" -- window_on()'s after=900 default never reached it, so the original
+        # window showed the model a formula that USES "Valuation Cap" as a variable without
+        # ever stating its value. Verified via the real EDGAR filing (CIK 1960355, accession
+        # 0001104659-26-032156) that "“Valuation Cap” means $90,000,000." is a real, later
+        # sentence in the same document -- anchoring on the defining sentence itself instead of
+        # a formula that merely references the term fixes the window to actually contain the
+        # ground truth.
         "tm2525579d10_ex10-26.htm", 90000000, "medium",
-        "the quotient resulting from dividing the Valuation Cap by the number of fully diluted shares",
+        "Valuation Cap ” means $90,000,000",
         "Exyn Technologies, Inc."),
     "greenfield_robotics": (
         "tm2617498d1_ex3-8.htm", 30000000, "easy",
