@@ -206,4 +206,33 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   text — both oracle labels are unambiguous and correct; genuine model reasoning failures, not
   data bugs.
 
-## Next leaf: 1.5.1 antidilution_type
+### [~] 1.5.1 antidilution_type — PENDING EIKIYO'S CONFIRMATION
+- **OFF-THESIS DOCUMENT FINDING (data NOT touched):** 1 of 5 items (`763901_...`, labeled
+  `"none"`) is **Popular, Inc.** (BPOP) — a large public Puerto Rico bank holding company,
+  verified via the real corpus text ("the Bank", TARP-era "April 2010 offering" of depository
+  shares) — not a VC/startup preferred-stock financing charter at all, but a bank-regulatory
+  rights/warrant anti-dilution clause. This is the SAME contamination class the sibling
+  `dividend_rate_pct` leaf's `source.py` explicitly documents removing ("NOT bank-regulatory
+  perpetual preferred, which was this leaf's original off-thesis contamination") — but it went
+  unnoticed here. The `"none"` label is textually accurate (the clause does say "There will be
+  no anti-dilution adjustment..."), so this is NOT a mislabeling bug, but it is off-thesis for
+  a benchmark whose stated purpose is VC financing documents. Notably this is also the one
+  item gemma3-1b got wrong (guessed `full-ratchet`, 100% consistent) — the document's unusual
+  dual-instrument structure (adjusts a separate "Right"/warrant's exercise price via
+  full-ratchet-like mechanics while denying anti-dilution for the preferred conversion itself)
+  is genuinely confusing text, compounding the thesis-purity concern with a possible difficulty
+  distortion. **ACTION NEEDED FROM EIKIYO:** drop this item and re-source a genuine VC-preferred
+  "none" example (N drops to 4 immediately), or leave as-is since the label itself is correct?
+- **Minor, recurring pattern:** same as 1.3.1 — 2 of the 5 enum classes (`broad-based`,
+  `narrow-based`) are unused in this corpus (real distribution: 2 weighted-average / 2
+  full-ratchet / 1 none). N=5 is also on the small side. Not fixed, just noted.
+
+### [x] 1.5.2 antidilution_base
+- **Verified clean.** N=10, good class balance (4 narrow / 3 broad / 3 n/a). gemma3-1b 70%
+  acc/40% wobble, deepseek-v4f 100%/0% — plausible spread, no shared-confusion signal.
+  **Shares the same Popular Inc (`763901_...`) off-thesis item already flagged under 1.5.1**
+  (same corpus reused across sibling anti-dilution leaves) — not logging as a new separate
+  finding, covered by that entry's pending decision. All other 9 items' base classifications
+  spot-checked against their `validating_quote`, all textually correct.
+
+## Next leaf: 1.6.1 conversion_ratio
