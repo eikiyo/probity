@@ -67,6 +67,13 @@ def cmd_run(args):
         value = resolve_secret(var)
         if value:
             env[var] = value
+    # The leaf's run.py shim launches in its OWN subprocess and calls run_leaf() with no
+    # guard_config -- engine/runner.py's _guard_config_from_env() is the only path these flags
+    # can reach it through (see that function's docstring for why: 60 leaf shims stay untouched).
+    if args.max_steps is not None:
+        env["PROBITY_MAX_STEPS"] = str(args.max_steps)
+    if args.max_cost is not None:
+        env["PROBITY_MAX_COST_USD"] = str(args.max_cost)
 
     if not (leaf_dir / "corpus").is_dir():
         print(f"no local corpus for '{args.leaf}' yet -- fetching via source.py...")
@@ -86,6 +93,10 @@ def main(argv=None):
     sub.add_parser("list", help="list every leaf + local corpus status").set_defaults(func=cmd_list)
     run_p = sub.add_parser("run", help="benchmark one leaf with your configured models")
     run_p.add_argument("leaf")
+    run_p.add_argument("--max-steps", type=int, default=None, dest="max_steps",
+                        help="brake-pedal cap: stop after this many model calls (default: unlimited)")
+    run_p.add_argument("--max-cost", type=float, default=None, dest="max_cost",
+                        help="brake-pedal cap: stop after this much estimated USD spend (default: unlimited)")
     run_p.set_defaults(func=cmd_run)
 
     args = parser.parse_args(argv)

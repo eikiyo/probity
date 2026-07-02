@@ -196,6 +196,20 @@ class TestCliParsing(unittest.TestCase):
         with self.assertRaises(SystemExit):
             cli.main(["run"])
 
+    def test_run_accepts_optional_guard_flags(self):
+        with patch.object(cli, "cmd_run") as mock_run:
+            cli.main(["run", "vesting_schedule", "--max-steps", "10", "--max-cost", "0.5"])
+            args = mock_run.call_args[0][0]
+            self.assertEqual(args.max_steps, 10)
+            self.assertEqual(args.max_cost, 0.5)
+
+    def test_run_guard_flags_default_to_none_unlimited(self):
+        with patch.object(cli, "cmd_run") as mock_run:
+            cli.main(["run", "vesting_schedule"])
+            args = mock_run.call_args[0][0]
+            self.assertIsNone(args.max_steps)
+            self.assertIsNone(args.max_cost)
+
 
 if __name__ == "__main__":
     unittest.main()

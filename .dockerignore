@@ -1,0 +1,31 @@
+# Build artifacts
+.git
+.gitignore
+__pycache__
+*.pyc
+*.pyo
+*.egg-info
+dist/
+build/
+.tox/
+.pytest_cache/
+.coverage
+
+# Large data not needed in image
+engine/corpus/
+leaves/*/corpus/
+_archive_*
+
+# Development / CI
+# NOTE: Makefile and *.md are intentionally NOT excluded here -- `RUN make package-data`
+# needs the Makefile present in the build context, and `pip install .` needs README.md
+# (pyproject.toml's `readme = "README.md"` field) or the build fails.
+.github/
+.gitattributes
+tests/
+.env
+.dev.vars
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -8,6 +8,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 <!-- Group entries under: Added · Changed · Deprecated · Removed · Fixed · Security -->
 
+## [1.2.0] - 2026-07-02
+
+### Added
+- Brake-pedal runtime guard (`engine/guard.py`) -- caps a run's model-call steps and estimated
+  spend, tripping BEFORE the call that would breach the cap (fail closed). Wired into the actual
+  `harness.run_harness()` call-site, not just a config value. Exposed as `probity-bench run <leaf>
+  --max-steps N --max-cost X`.
+- Scorecard report (`results/scorecard.py`, terminal + HTML) -- refuses to render a green
+  headline on 0 scored tasks, and always shows scored/errored/total explicitly rather than
+  silently narrowing the denominator. Auto-written as `scorecard.html` next to each leaf's
+  `scored.json`.
+- Reproducibility manifest (`engine/manifest.py`) -- `manifest_<model>.json` per run, content-hash
+  keyed to the exact recorded run data so a re-score from the same data is provably identical.
+- A container image, published to `ghcr.io/eikiyo/probity` on every GitHub release
+  (`.github/workflows/docker-publish.yml`) -- `docker run ghcr.io/eikiyo/probity --help`.
+
 ## [1.1.0] - 2026-07-02
 
 ### Added

@@ -10,6 +10,7 @@ Calls: harness, scorer, models; <leaf>/task.TASK
 Imports: sys, json, subprocess, importlib.util, pathlib
 """
 
+import os
 import sys
 import json
 import subprocess
@@ -21,6 +22,8 @@ sys.path.insert(0, str(ENGINE))
 
 import harness                                       # noqa: E402
 import scorer                                        # noqa: E402
+import guard as guard_mod                            # noqa: E402
+import manifest as manifest_mod                       # noqa: E402
 from models import OllamaClient, DeepSeekClient      # noqa: E402
 
 # (label, ollama_model_or_None, factory). None ollama_model => hosted (no local unload).
@@ -46,6 +49,16 @@ def _load_task(leaf_dir):
     return mod.TASK
 
 
+def _load_scorecard():
+    """results/scorecard.py lives outside engine/'s sys.path -- load it the same explicit-path
+    way _load_task() loads a leaf's task.py, rather than adding a second package to sys.path."""
+    results_dir = ENGINE.parent / "results"
+    spec = importlib.util.spec_from_file_location("scorecard", results_dir / "scorecard.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
 def load_instances(leaf_dir, field):
     """Build (instance, ground_truth) pairs from questions + the SEPARATED oracle (file order)."""
     oracle = [json.loads(l) for l in open(leaf_dir / "oracle.jsonl") if l.strip()]
@@ -56,21 +69,50 @@ def load_instances(leaf_dir, field):
     return instances, oracle
 
 
-def run_model(leaf_dir, task, label, factory, ollama_model, instances):
-    """Run one model at N=20; unload local model after. Returns accuracy + reliability(wobble)."""
+def run_model(leaf_dir, task, label, factory, ollama_model, instances, guard_config=None):
+    """Run one model at N=20; unload local model after. Returns accuracy + reliability(wobble).
+    guard_config (optional dict: max_steps/max_cost_usd/allowed_models) wraps this run with a
+    BrakePedalGuard at the ACTUAL harness call-site (engine/guard.py) -- a guard that only lived
+    in config and never reached the call-site would be the dead-control trap the DESIGN doc
+    names. A reproducibility manifest (engine/manifest.py) is written next to the checkpoint on
+    every run, guard-tripped or not, so a partial run is still reproducible from what it did do."""
     client = factory()
     ckpt = str(leaf_dir / f"runs_{label}.jsonl")
-    runs, _ = harness.run_harness(client, task, instances, n_runs=N_RUNS,
-                                  temperature=TEMPERATURE, checkpoint_file=ckpt)
+    g = guard_mod.BrakePedalGuard(**guard_config) if guard_config else None
+    runs, stats = harness.run_harness(client, task, instances, n_runs=N_RUNS,
+                                       temperature=TEMPERATURE, checkpoint_file=ckpt,
+                                       guard=g, model_label=label)
     if ollama_model:
         subprocess.run(["ollama", "stop", ollama_model], capture_output=True)
+    m = manifest_mod.build_manifest(leaf_name=leaf_dir.name, model_label=label, run_records=runs,
+                                     task_name=task["name"], n_runs=N_RUNS, temperature=TEMPERATURE)
+    (leaf_dir / f"manifest_{label}.json").write_text(json.dumps(m, indent=1), encoding="utf-8")
     return {"model": getattr(client, "model", label),
             "accuracy": scorer.score_accuracy(task, instances, runs),
-            "reliability": scorer.score_runs(task, instances, runs)}
+            "reliability": scorer.score_runs(task, instances, runs),
+            "guard": {"tripped": stats.get("guard_tripped", False),
+                       "reason": stats.get("guard_reason")}}
 
 
-def run_leaf(leaf_dir, model_set=FAST_SET, only=None):
+def _guard_config_from_env():
+    """Fallback source for guard_config when a caller doesn't pass one explicitly -- needed
+    because probity_cli's `run` subcommand launches each leaf's run.py shim as a SEPARATE
+    subprocess (see leaves/*/run.py: `run_leaf(Path(__file__).parent, model_set=FAST_SET)`,
+    no guard_config arg, by design zero-touch across all 60 leaf shims). Without this, a user
+    passing `--max-steps`/`--max-cost` at the CLI would set an env var that nothing ever reads
+    -- the same dead-control failure mode the guard itself exists to prevent."""
+    cfg = {}
+    if os.environ.get("PROBITY_MAX_STEPS"):
+        cfg["max_steps"] = int(os.environ["PROBITY_MAX_STEPS"])
+    if os.environ.get("PROBITY_MAX_COST_USD"):
+        cfg["max_cost_usd"] = float(os.environ["PROBITY_MAX_COST_USD"])
+    return cfg or None
+
+
+def run_leaf(leaf_dir, model_set=FAST_SET, only=None, guard_config=None):
     leaf_dir = Path(leaf_dir)
+    if guard_config is None:
+        guard_config = _guard_config_from_env()
     task = _load_task(leaf_dir)
     field = list(task["fields"])[0]
     field_type = task["fields"][field].get("type", "enum")
@@ -90,7 +132,7 @@ def run_leaf(leaf_dir, model_set=FAST_SET, only=None):
         if only and label != only:
             continue
         print(f"=== {label} (N={N_RUNS}) ===", flush=True)
-        res = run_model(leaf_dir, task, label, factory, omodel, instances)
+        res = run_model(leaf_dir, task, label, factory, omodel, instances, guard_config=guard_config)
         a, r = res["accuracy"], res["reliability"]
         wob = r["field_flips"].get(field, 0.0) * 100
         print(f"  WOBBLE: {wob:.0f}% flipped across {N_RUNS} runs  |  consistency "
@@ -101,6 +143,25 @@ def run_leaf(leaf_dir, model_set=FAST_SET, only=None):
         prev.update(scored)
         out.write_text(json.dumps(prev, indent=1), encoding="utf-8")  # incremental
     print("wrote scored.json")
+    if scored:
+        scorecard = _load_scorecard()
+        guard_stats = _aggregate_guard_stats(scored)
+        report = scorecard.build_report(leaf_dir.name, scored, guard_stats=guard_stats)
+        print(scorecard.render_terminal(report))
+        (leaf_dir / "scorecard.html").write_text(scorecard.render_html(report), encoding="utf-8")
+
+
+def _aggregate_guard_stats(scored):
+    """One guard line for the whole leaf's scorecard: TRIPPED if any model's run tripped
+    (surface the first reason found), otherwise clean. None if no model carries guard info at
+    all (an older scored.json written before T5 existed)."""
+    entries = [v["guard"] for v in scored.values() if "guard" in v]
+    if not entries:
+        return None
+    tripped = next((e for e in entries if e.get("tripped")), None)
+    if tripped:
+        return {"guard_tripped": True, "guard_reason": tripped.get("reason")}
+    return {"guard_tripped": False, "guard_reason": None}
 
 
 def main():

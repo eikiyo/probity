@@ -11,6 +11,7 @@ from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
 from models import LLMClient
 import normalize
+import guard as guard_mod
 
 
 class StaleCheckpointError(RuntimeError):
@@ -30,7 +31,9 @@ def run_harness(
     n_runs: int = 20,
     temperature: float = 0.7,
     checkpoint_file: Optional[str] = None,
-) -> Tuple[List[Dict[str, Any]], Dict[str, int]]:
+    guard: Optional["guard_mod.BrakePedalGuard"] = None,
+    model_label: Optional[str] = None,
+) -> Tuple[List[Dict[str, Any]], Dict[str, Any]]:
     """
     What: runs every instance N times, checkpointing each individual model call to a JSONL file
           as it goes (so a killed/interrupted run can resume instead of re-spending API calls or
@@ -75,18 +78,32 @@ def run_harness(
 
     parse_failures, total_runs = 0, 0
     total_target = len(instances) * n_runs
+    guard_tripped, guard_reason = False, None
+    label_for_guard = model_label or getattr(client, "model", "unknown")
     for inst_idx, (instance, _truth) in enumerate(instances):
         for run_idx in range(n_runs):
+            if (inst_idx, run_idx) in done_keys:
+                total_runs += 1
+                _print_progress(task["name"], getattr(client, "model", "?"), total_runs, total_target)
+                continue
+            if guard is not None:
+                try:
+                    guard.before_call(label_for_guard)
+                except guard_mod.GuardTripped as e:
+                    guard_tripped, guard_reason = True, e.reason
+                    print(f"    GUARD TRIPPED: {e.reason} -- stopping run, {len(runs)}/{total_target} "
+                          f"calls completed.", flush=True)
+                    return runs, {"parse_failures": parse_failures, "total_runs": total_runs,
+                                   "guard_tripped": guard_tripped, "guard_reason": guard_reason}
             total_runs += 1
             _print_progress(task["name"], getattr(client, "model", "?"), total_runs, total_target)
-            if (inst_idx, run_idx) in done_keys:
-                continue
             record = _execute_run(client, task, instance, inst_idx, run_idx, temperature)
             if record.get("parsed") is None:
                 parse_failures += 1
             _checkpoint_run(checkpoint_path, record)
             runs.append(record)
-    return runs, {"parse_failures": parse_failures, "total_runs": total_runs}
+    return runs, {"parse_failures": parse_failures, "total_runs": total_runs,
+                   "guard_tripped": guard_tripped, "guard_reason": guard_reason}
 
 
 def _validate_checkpoint_freshness(runs, instances, checkpoint_path) -> None:
