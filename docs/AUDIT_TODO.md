@@ -598,4 +598,19 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   — deepseek's one miss (MotivNation, low-consistency "yes" vs true "no") is consistent with
   exactly this documented trap firing, not a data bug.
 
-## Next leaf: 5.6 drag_along
+### [x] 5.6 drag_along
+- **Verified clean.** N=12, perfect 6/6 class balance, deepseek-v4f 100%. gemma3-1b 41.7%
+  (below chance) — checked per-instance breakdown: 4/6 "yes" correct, 1/6 "no" correct, a mild
+  yes-leaning bias but genuinely mixed (not total collapse) — consistent with real difficulty on
+  the OBLIGATION-vs-RIGHT legal distinction this leaf is designed to test, not a data bug.
+
+### [x] 5.7 vesting_acceleration
+- **Verified clean.** N=9, class balance 6 yes / 3 no (mild 2:1 imbalance, noted but not
+  severe — the minority class still functions). deepseek-v4f 100%. gemma3-1b 66.7% happens to
+  equal the trivial "always yes" baseline exactly, so checked per-instance: genuinely mixed
+  (4/6 yes correct, 2/3 no correct, including one real "yes" miss) — not baseline-matching
+  class collapse, an honest score.
+
+**Family 5 (governance, 5.1-5.7) now fully audited.**
+
+## Next leaf: 6.1 vesting_schedule
