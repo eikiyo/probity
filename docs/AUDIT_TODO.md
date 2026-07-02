@@ -5,7 +5,7 @@ breaking-points/stubs/hardcodes/half-done features, log findings here, fix what'
 immediately, flag judgment calls for explicit confirmation. Order = engine/registry.json ref
 order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
-**Counter: 3/60 done · 57 pending · 0 partial** — dated 2026-07-02.
+**Counter: 3/60 done · 1 in-progress · 56 pending · 0 partial** — dated 2026-07-02.
 
 ## Legend
 - `[x]` audited + resolved (bugs fixed, or verified clean)
@@ -66,4 +66,22 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   document never says "Connecture" (uses deal codename "Cure") — verified correct via SEC EDGAR
   CIK 1211759, documented in source.py so a future reader doesn't mistake it for an error.
 
-## Next leaf: 1.1.2 pre_vs_post_money
+### [~] 1.1.2 pre_vs_post_money
+- **Verified clean:** gemma3:1b's 71% accuracy coincidentally equals the majority-class baseline
+  (15/21 pre-money) but per-class breakdown proves it's NOT class-collapse (9/15 pre-money, 6/6
+  post-money correct — genuine mixed performance). Explicit "pre-money"/"post-money" wording in
+  11/21 corpus windows is legitimate real-document signal for this extraction task, not leakage
+  (unlike an enum leaf where the class NAME itself appearing would be leakage).
+- **[~] DUPLICATE-FILING FINDING, PENDING EIKIYO'S CONFIRMATION (data NOT touched):** 2 of the
+  21 items are the same underlying Cytosorbents Corp convertible-note transaction, each counted
+  twice — once via the 8-K body (`..._v195191_8k` / `..._v212119_8k`) and once via its own
+  Exhibit 10.1 (`..._v195191_ex10-1` / `..._v212119_ex10-1`), same accession number each pair,
+  near-identical boilerplate text ("$750,000... pre-money basis at or below $35 million...").
+  This inflates N from a true 19 unique transactions to 21, and double-counts whatever the model
+  gets right/wrong on those 2 real facts. Confirmed NOT a pattern for the other same-company
+  pairs (Hague Corp, Oculus Innovative Sciences) — those have different accession numbers/years,
+  genuinely independent transactions. **ACTION NEEDED FROM EIKIYO:** drop the 2 `_8k` duplicate
+  entries (keeping the more complete `_ex10-1` full-text versions) and rerun this leaf at 19
+  items, or leave as-is?
+
+## Next leaf: 1.1.3 price_per_share
