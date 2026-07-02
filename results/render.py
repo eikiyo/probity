@@ -1,11 +1,20 @@
 """
 Location: results/render.py
-Purpose: Render RESULTS.md + the README landing-page table from EVERY leaf that has a scored.json.
-         WOBBLE (run-to-run inconsistency) is the headline — the core thesis — with accuracy beside
-         it, never averaged in. Multi-leaf: FIELD + CLASSES come from each leaf's own task.TASK
-         (single source of truth); per-leaf display config lives in LEAVES.
+Purpose: Render RESULTS.md (full per-leaf detail, all 60+ tables) + the README landing-page
+         summary (2 aggregate tables, color-coded via shields.io badges) from EVERY leaf that has
+         a scored.json. WOBBLE (run-to-run inconsistency) is the headline -- the core thesis --
+         with accuracy beside it, never averaged in. Multi-leaf: FIELD + CLASSES come from each
+         leaf's own task.TASK (single source of truth); per-leaf display config lives in LEAVES.
+         README REDESIGN (2026-07-02, Eikiyo-directed): the README previously injected all 60
+         individual per-leaf tables inline -- a wall of tables that buried the actual finding.
+         Replaced with 2 aggregate tables (suite_summary_table(): wobble/accuracy weighted by
+         item count, one row per model size -- THE headline result; family_summary_table(): same,
+         one row per registry family/category) computed by aggregate_by_model()/
+         aggregate_by_family() directly from every leaf's scored.json. The full 60-table
+         per-leaf breakdown stays in results/RESULTS.md, linked from the README, not duplicated.
 Functions: load_leaf(), wobble_pct(), per_class(), definitions(), render_leaf(), readme_block_for(),
-           auto_findings(), main()
+           auto_findings(), aggregate_by_model(), aggregate_by_family(), badge(),
+           suite_summary_table(), family_summary_table(), main()
 Imports: json, re, importlib.util, pathlib
 """
 
@@ -482,6 +491,136 @@ def _present_leaves():
     return [c for c in LEAVES if (ROOT / "leaves" / c["slug"] / "scored.json").exists()]
 
 
+
+FAMILY_DISPLAY = {
+    "priced_equity": "Priced equity rounds",
+    "convertibles": "SAFEs & convertible notes",
+    "cap_table": "Cap table math",
+    "exit_waterfall": "Exit waterfalls",
+    "rights_governance": "Investor rights & governance",
+    "founder_equity": "Founder & employee vesting",
+    "regulatory": "Regulatory disclosures",
+    "risk_flag": "Off-market risk flags",
+}
+
+MODEL_DISPLAY = {
+    "gemma3-1b": ("gemma3:1b", "1B, local"),
+    "llama3.2-3b": ("llama3.2:latest", "3B, local"),
+    "gemma4-12b": ("gemma4:12b", "12B, local"),
+    "qwen3.5-27b": ("qwen3.5:27b", "27B, local"),
+    "deepseek-v4f": ("deepseek-v4-flash", "hosted"),
+}
+
+
+def badge(pct, lower_is_better):
+    """A colored shields.io pill for a percentage -- green/yellow/red by threshold."""
+    if pct is None:
+        return "—"
+    if lower_is_better:
+        color = "brightgreen" if pct < 10 else "yellow" if pct < 30 else "red"
+    else:
+        color = "brightgreen" if pct > 85 else "yellow" if pct > 60 else "red"
+    label = f"{pct:.0f}%25"
+    return f"![{pct:.0f}%](https://img.shields.io/badge/-{label}-{color})"
+
+
+def aggregate_by_model():
+    """N-weighted wobble + accuracy per model, across every built leaf that has a scored.json."""
+    reg = json.loads((ROOT / "engine" / "registry.json").read_text())
+    built = [l for l in reg["leaves"] if l.get("tier") == "built" and "leaf" in l]
+    wobble_num, wobble_den = {}, {}
+    acc_num, acc_den = {}, {}
+    leaf_count = {}
+    for l in built:
+        sp = ROOT / l["leaf"] / "scored.json"
+        if not sp.exists():
+            continue
+        scored = json.loads(sp.read_text())
+        field = l["field"]
+        for model, res in scored.items():
+            rel, acc = res.get("reliability", {}), res.get("accuracy", {})
+            n_inst = acc.get("n_instances", 0)
+            n_meas = acc.get("n_measurable", 0)
+            flip = rel.get("field_flips", {}).get(field)
+            if flip is None or not rel.get("measurable", True) or not n_inst:
+                continue
+            wobble_num[model] = wobble_num.get(model, 0) + flip * n_inst
+            wobble_den[model] = wobble_den.get(model, 0) + n_inst
+            if n_meas:
+                acc_num[model] = acc_num.get(model, 0) + acc.get("accuracy_majority", 0) * n_meas
+                acc_den[model] = acc_den.get(model, 0) + n_meas
+            leaf_count[model] = leaf_count.get(model, 0) + 1
+    out = []
+    for model in sorted(wobble_den, key=lambda m: -leaf_count[m]):
+        w = 100 * wobble_num[model] / wobble_den[model] if wobble_den[model] else None
+        a = 100 * acc_num[model] / acc_den[model] if acc_den.get(model) else None
+        out.append({"model": model, "leaves": leaf_count[model], "wobble": w, "accuracy": a,
+                    "n_items": int(wobble_den[model])})
+    return out
+
+
+def aggregate_by_family(model_label="deepseek-v4f"):
+    """N-weighted wobble + accuracy per registry family, for ONE model (the hosted model by
+    default -- it has the widest leaf coverage of any single model in the suite)."""
+    reg = json.loads((ROOT / "engine" / "registry.json").read_text())
+    built = [l for l in reg["leaves"] if l.get("tier") == "built" and "leaf" in l]
+    wobble_num, wobble_den = {}, {}
+    acc_num, acc_den = {}, {}
+    leaf_count = {}
+    for l in built:
+        sp = ROOT / l["leaf"] / "scored.json"
+        if not sp.exists():
+            continue
+        scored = json.loads(sp.read_text())
+        res = scored.get(model_label)
+        if not res:
+            continue
+        field, fam = l["field"], l["family"]
+        rel, acc = res.get("reliability", {}), res.get("accuracy", {})
+        n_inst = acc.get("n_instances", 0)
+        n_meas = acc.get("n_measurable", 0)
+        flip = rel.get("field_flips", {}).get(field)
+        if flip is None or not rel.get("measurable", True) or not n_inst:
+            continue
+        wobble_num[fam] = wobble_num.get(fam, 0) + flip * n_inst
+        wobble_den[fam] = wobble_den.get(fam, 0) + n_inst
+        if n_meas:
+            acc_num[fam] = acc_num.get(fam, 0) + acc.get("accuracy_majority", 0) * n_meas
+            acc_den[fam] = acc_den.get(fam, 0) + n_meas
+        leaf_count[fam] = leaf_count.get(fam, 0) + 1
+    out = []
+    for fam in sorted(wobble_den, key=lambda f: -leaf_count[f]):
+        w = 100 * wobble_num[fam] / wobble_den[fam] if wobble_den[fam] else None
+        a = 100 * acc_num[fam] / acc_den[fam] if acc_den.get(fam) else None
+        out.append({"family": fam, "leaves": leaf_count[fam], "wobble": w, "accuracy": a})
+    return out
+
+
+def suite_summary_table():
+    """THE headline table: does wobble fall as model capability rises?"""
+    rows = aggregate_by_model()
+    lines = ["| Model | Size | Tests covered | **Wobble** ↓ | Accuracy |",
+             "|---|---|---|---|---|"]
+    for r in rows:
+        name, size = MODEL_DISPLAY.get(r["model"], (r["model"], "?"))
+        lines.append(f"| `{name}` | {size} | {r['leaves']} | {badge(r['wobble'], True)} | "
+                      f"{badge(r['accuracy'], False)} |")
+    return "\n".join(lines)
+
+
+def family_summary_table():
+    """One row per fundraising-document category, hosted model (deepseek) -- the widest-coverage
+    single model, so every family gets a real number, not a partial fast-set snapshot."""
+    rows = aggregate_by_family()
+    lines = ["| Category | Tests | **Wobble** ↓ (deepseek) | Accuracy (deepseek) |",
+             "|---|---|---|---|"]
+    for r in rows:
+        label = FAMILY_DISPLAY.get(r["family"], r["family"])
+        lines.append(f"| {label} | {r['leaves']} | {badge(r['wobble'], True)} | "
+                      f"{badge(r['accuracy'], False)} |")
+    return "\n".join(lines)
+
+
 def main():
     present = _present_leaves()
     header = ("# Probity — Benchmark Results\n\n"
@@ -495,19 +634,19 @@ def main():
     (ROOT / "results" / "RESULTS.md").write_text(header + body + REPRO + "\n", encoding="utf-8")
     print(f"wrote results/RESULTS.md ({len(present)} leaves)")
 
-    cap = (f"*{len(present)} test{'s' if len(present)!=1 else ''} so far. Each model run 20×/item at "
-           "temp 0.7. **Wobble** = % of items answered inconsistently across runs. During build-out a "
-           "leaf is run on the fast set (gemma3:1b + deepseek); the heavier rows (llama3.2 3B, "
-           "gemma4:12b, and hosted frontier models) are filled in by one comprehensive sweep once "
-           "every leaf exists, which is why newer leaves show fewer rows for now.*\n")
-    tables = "\n\n".join(readme_block_for(c) for c in present)
-    block = ("<!-- BENCHMARK:START -->\n" + cap + "\n" + tables + "\n\n" +
-             definitions(present[0]["labels"], generic=True) + "\n<!-- BENCHMARK:END -->")
+    cap = (f"*{len(present)} tests, each item run 20x/item at temp 0.7 across a model size ladder. "
+           "**Wobble** (lower = better) is the run-to-run inconsistency rate, weighted by item "
+           "count across every test that model ran. Full per-test breakdown (all "
+           f"{len(present)} tables): [`results/RESULTS.md`](results/RESULTS.md).*\n")
+    block = ("<!-- BENCHMARK:START -->\n" + cap +
+             "\n### Does reliability improve with model size?\n\n" + suite_summary_table() +
+             "\n\n### By fundraising-document category\n\n" + family_summary_table() +
+             "\n\n<!-- BENCHMARK:END -->")
     readme = ROOT / "README.md"
     txt = re.sub(r"<!-- BENCHMARK:START.*?-->.*?<!-- BENCHMARK:END -->", lambda m: block,
                  readme.read_text(), flags=re.S)
     readme.write_text(txt, encoding="utf-8")
-    print(f"injected {len(present)} benchmark tables into README.md")
+    print(f"injected 2 summary tables (suite + by-category) into README.md")
 
 
 REPRO = """
