@@ -301,4 +301,38 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   rate), not an overlooked ambiguity, and empirically doesn't correlate with the one model miss
   on this item (gemma3-1b guessed 20, which isn't even the alternate 75% reading).
 
-## Next leaf: 2.1.3 safe_cap_vs_discount_applies
+### [~] 2.1.3 safe_cap_vs_discount_applies — SEVERE CLASS-IMBALANCE FINDING, PENDING EIKIYO
+- **SEVERE, data NOT touched:** class distribution is 10 `both-mfn` / 1 `discount` / **0 `cap`**
+  out of 11 items. The `"cap"`-only class (a SAFE with a valuation cap and explicitly NO
+  discount rate) is entirely unrepresented — this leaf can never test whether a model can
+  correctly identify a cap-only SAFE, one of its own 3 defined taxonomy classes. A trivial
+  "always answer both-mfn" strategy would score 90.9% with zero real classification ability —
+  currently NOT being exploited (gemma3-1b actually scores 73%, worse than that trivial
+  baseline, and deepseek 100% genuinely discriminates), but it's a live gaming risk for any
+  future model evaluated against this leaf, and the benchmark can't currently claim to test
+  "cap" recognition at all. **ACTION NEEDED FROM EIKIYO:** re-source 2-3 genuine cap-only SAFE
+  items (pre-2018 YC SAFE format, before the 2018 post-money-with-MFN standard existed, is the
+  most likely place to find them) to make this leaf's 3-way classification meaningful, or accept
+  it as effectively a 2-way (`both-mfn` vs `discount`) task and document that explicitly?
+- **Minor, not fixed:** `taoweave_both_mfn`'s `id`/filename says "taoweave" but its real content
+  (confirmed via corpus text: "UK Corporation Tax Act 2010") is a UK-incorporated SAFE — the
+  `company` field correctly says "Manako Labs Ltd" (also UK, consistent), so this is the SAME
+  cosmetic filename-vs-real-content mismatch pattern already documented for 1.1.3, not a fresh
+  functional bug (the field used at runtime is correct).
+
+### [x] 2.1.4 safe_pre_vs_post_money (leaf dir: `safe_pre_post`)
+- **Bug found + FIXED (repo-wide sweep, cheap+safe):** wrote a one-off script to check every
+  built leaf's `engine/registry.json` `field` name against its real `task.py` `TASK["fields"]`
+  key — confirmed `registry.json` is pure documentation (grepped: **zero** Python code anywhere
+  in the repo actually reads it), so any mismatch is a doc-accuracy issue, not a functional bug.
+  Found exactly 2 mismatches across all 60 built leaves: this leaf (registry said
+  `safe_pre_vs_post_money`, real key is `safe_cap_type`) and leaf 7.2 `form_d_fields` (real key
+  `form_d_field_value`, not yet audited on its own merits). Fixed both registry.json entries.
+- **Verified clean otherwise.** N=16, class balance 10 post-money / 6 pre-money. Runs 4 models
+  (gemma3-1b/llama3.2-3b/gemma4-12b/deepseek-v4f) instead of the current project-wide 2-model
+  FAST_SET — this is a Round-1-era leaf whose own `run.py` predates `engine/runner.py` and
+  duplicates its own ~80-line run loop (same §0.8 rule-of-two legacy-duplication pattern already
+  flagged for 1.3.2's `participation_type`; not re-logging as a separate finding, just noting it
+  recurs here). Spot-checked 2 items' real EDGAR text against their labels — clean.
+
+## Next leaf: 2.1.5 safe_mfn_present

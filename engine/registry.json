@@ -270,7 +270,7 @@
     {
       "ref": "2.1.4",
       "family": "convertibles",
-      "field": "safe_pre_vs_post_money",
+      "field": "safe_cap_type",
       "type": "enum",
       "values": [
         "pre-money",
@@ -661,7 +661,7 @@
     {
       "ref": "7.2",
       "family": "regulatory",
-      "field": "form_d_fields",
+      "field": "form_d_field_value",
       "type": "string",
       "op": "EX",
       "stakes": 2,
