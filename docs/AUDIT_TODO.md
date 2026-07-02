@@ -5,7 +5,7 @@ breaking-points/stubs/hardcodes/half-done features, log findings here, fix what'
 immediately, flag judgment calls for explicit confirmation. Order = engine/registry.json ref
 order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
-**Counter: 14/60 done · 0 in-progress · 44 pending · 2 partial** — dated 2026-07-02. Family 1 (financing terms, 1.1.1-1.7) complete.
+**Counter: 20/60 done · 0 in-progress · 36 pending · 4 partial** — dated 2026-07-02. Families 1 (1.1.1-1.7) + 2.1 SAFEs (2.1.1-2.1.6) complete.
 
 ## Legend
 - `[x]` audited + resolved (bugs fixed, or verified clean)
@@ -335,4 +335,27 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   flagged for 1.3.2's `participation_type`; not re-logging as a separate finding, just noting it
   recurs here). Spot-checked 2 items' real EDGAR text against their labels — clean.
 
-## Next leaf: 2.1.5 safe_mfn_present
+### [x] 2.1.5 safe_mfn_present
+- **Verified clean.** N=7, class balance 4 yes / 3 no, both models 100% accuracy (gemma3-1b
+  28.6% wobble, deepseek 0%). Two "yes" items (Millennium Blockchain, Inc. / THC Therapeutics,
+  Inc.) share both an identical MFN boilerplate `validating_quote` AND a filename prefix
+  ("mblc") — checked this isn't a hidden duplicate: different accession suffixes (`-004207` vs
+  `-004955`), i.e. two genuinely different SAFE instruments, most likely from the same company
+  under an earlier/later name (Millennium Blockchain appears to have later operated as THC
+  Therapeutics) — legitimately independent data points that happen to share standard MFN
+  template language, not a counted-twice bug like the 1.1.2/1.3.1 findings.
+
+### [x] 2.1.6 safe_pro_rata_side_letter
+- **Verified clean.** N=15, class balance 9 yes / 6 no. gemma3-1b 93.3% acc/20% wobble,
+  deepseek-v4f 100%/0%. All 9 "yes" items share byte-identical `validating_quote` boilerplate
+  ("...pany will execute a Pro Rata Rights Agreement, unless the Investor is") — verified this
+  reflects genuinely standard YC SAFE template language (not a corpus copy-paste bug); the
+  actual test is yes-vs-no discrimination against the 6 "no" items where the clause is
+  genuinely absent, which both models handle well. Repeat-company pairs (SNM Global Holdings
+  ×2, SOS Hydration ×2) verified as different accession numbers / different SAFE instruments,
+  consistent with the already-established "legitimately independent, same company over time"
+  pattern from 1.1.2/2.1.5, not duplicates.
+
+**Family 2.1 (SAFEs, 2.1.1-2.1.6) now fully audited.**
+
+## Next leaf: 2.2.1 note_principal
