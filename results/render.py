@@ -223,6 +223,14 @@ LEAVES = [
      "title": "Test 8.6 — Cross-citation share-count consistency flag",
      "corpus_desc": "real S-1/424B4 filings, paired share-count citations",
      "labels": {}},
+    {"slug": "exercise_window",
+     "title": "Test 6.5 — Post-termination option exercise window extraction",
+     "corpus_desc": "real SEC-filed option grant agreement exhibits",
+     "labels": {}},
+    {"slug": "s1_risk_factors",
+     "title": "Test 7.4 — S-1 risk-factor heading extraction",
+     "corpus_desc": "real S-1/424B4 Risk Factors sections",
+     "labels": {}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",

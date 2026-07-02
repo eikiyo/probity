@@ -633,7 +633,8 @@
       "type": "string",
       "op": "EX",
       "stakes": 2,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/exercise_window"
     },
     {
       "ref": "7.1",

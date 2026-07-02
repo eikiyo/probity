@@ -1,0 +1,3 @@
+TARGET SCENARIO: termination for any reason other than the causes described earlier in the agreement
+
+ts Affiliates is terminated for any reason other than those described in clauses (i), (ii) and (iii) of this Section 3(d) , the unvested portion of the Option shall expire on the date of termination and the vested portion of the Option shall remain exercisable by the Participant through the earlier of (A) the expiration of the Option Period or (B) 90 days following the date of such termination (or, in the case of that portion of the Performance Portion of the Option that is scheduled to vest
