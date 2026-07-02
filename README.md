@@ -85,8 +85,8 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 
 | Model | Size | Tests covered | **Wobble** ↓ | Accuracy |
 |---|---|---|---|---|
+| `deepseek-v4-flash` | hosted | 60 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
 | `gemma-4-31b-it` | 31B, hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
-| `deepseek-v4-flash` | hosted | 58 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
 | `gemma3:1b` | 1B, local | 55 | ![43%](https://img.shields.io/badge/-43%25-red) | ![57%](https://img.shields.io/badge/-57%25-red) |
 
 ### By fundraising-document category
@@ -100,7 +100,7 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 | Founder & employee vesting | 5 | ![2%](https://img.shields.io/badge/-2%25-brightgreen) | ![98%](https://img.shields.io/badge/-98%25-brightgreen) |
 | Regulatory disclosures | 5 | ![15%](https://img.shields.io/badge/-15%25-yellow) | ![100%](https://img.shields.io/badge/-100%25-brightgreen) |
 | Off-market risk flags | 5 | ![8%](https://img.shields.io/badge/-8%25-brightgreen) | ![92%](https://img.shields.io/badge/-92%25-brightgreen) |
-| Exit waterfalls | 1 | ![25%](https://img.shields.io/badge/-25%25-yellow) | ![100%](https://img.shields.io/badge/-100%25-brightgreen) |
+| Exit waterfalls | 3 | ![12%](https://img.shields.io/badge/-12%25-yellow) | ![100%](https://img.shields.io/badge/-100%25-brightgreen) |
 
 <!-- BENCHMARK:END -->
 

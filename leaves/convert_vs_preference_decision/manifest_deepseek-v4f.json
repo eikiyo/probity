@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "deepseek-v4f",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "dfee004b575fe36915498123a50314e71a254518f7aa8885e401859d0e57325f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:15:25.086033+00:00"
+}

@@ -159,3 +159,42 @@
 {"_key": [7, 18], "instance_idx": 7, "run_idx": 18, "item_id": "1556898_000119312517274422", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
 {"_key": [7, 19], "instance_idx": 7, "run_idx": 19, "item_id": "1556898_000119312517274422", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
 {"_key": [8, 0], "instance_idx": 8, "run_idx": 0, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 1], "instance_idx": 8, "run_idx": 1, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 2], "instance_idx": 8, "run_idx": 2, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 3], "instance_idx": 8, "run_idx": 3, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 4], "instance_idx": 8, "run_idx": 4, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 5], "instance_idx": 8, "run_idx": 5, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 6], "instance_idx": 8, "run_idx": 6, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 8], "instance_idx": 8, "run_idx": 8, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 7], "instance_idx": 8, "run_idx": 7, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 9], "instance_idx": 8, "run_idx": 9, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 10], "instance_idx": 8, "run_idx": 10, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 11], "instance_idx": 8, "run_idx": 11, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 12], "instance_idx": 8, "run_idx": 12, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 13], "instance_idx": 8, "run_idx": 13, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 14], "instance_idx": 8, "run_idx": 14, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 15], "instance_idx": 8, "run_idx": 15, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 16], "instance_idx": 8, "run_idx": 16, "item_id": "1888780_000157587222000105", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [8, 17], "instance_idx": 8, "run_idx": 17, "item_id": "1888780_000157587222000105", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [8, 18], "instance_idx": 8, "run_idx": 18, "item_id": "1888780_000157587222000105", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [8, 19], "instance_idx": 8, "run_idx": 19, "item_id": "1888780_000157587222000105", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 1], "instance_idx": 9, "run_idx": 1, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 0], "instance_idx": 9, "run_idx": 0, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 3], "instance_idx": 9, "run_idx": 3, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 2], "instance_idx": 9, "run_idx": 2, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 7], "instance_idx": 9, "run_idx": 7, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 5], "instance_idx": 9, "run_idx": 5, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 6], "instance_idx": 9, "run_idx": 6, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 8], "instance_idx": 9, "run_idx": 8, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 4], "instance_idx": 9, "run_idx": 4, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 10], "instance_idx": 9, "run_idx": 10, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 11], "instance_idx": 9, "run_idx": 11, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 12], "instance_idx": 9, "run_idx": 12, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 13], "instance_idx": 9, "run_idx": 13, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 14], "instance_idx": 9, "run_idx": 14, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 9], "instance_idx": 9, "run_idx": 9, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 16], "instance_idx": 9, "run_idx": 16, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 15], "instance_idx": 9, "run_idx": 15, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 18], "instance_idx": 9, "run_idx": 18, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 17], "instance_idx": 9, "run_idx": 17, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}
+{"_key": [9, 19], "instance_idx": 9, "run_idx": 19, "item_id": "1411057_000168316822006041", "parsed": {"redemption_rights": "no"}, "normalized": {"redemption_rights": "no"}}

@@ -254,3 +254,104 @@
 {"_key": [12, 13], "instance_idx": 12, "run_idx": 13, "item_id": "1113481_000111348114000003", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
 {"_key": [12, 15], "instance_idx": 12, "run_idx": 15, "item_id": "1113481_000111348114000003", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
 {"_key": [12, 14], "instance_idx": 12, "run_idx": 14, "item_id": "1113481_000111348114000003", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [12, 16], "instance_idx": 12, "run_idx": 16, "item_id": "1113481_000111348114000003", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [12, 18], "instance_idx": 12, "run_idx": 18, "item_id": "1113481_000111348114000003", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [12, 19], "instance_idx": 12, "run_idx": 19, "item_id": "1113481_000111348114000003", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [12, 17], "instance_idx": 12, "run_idx": 17, "item_id": "1113481_000111348114000003", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 0], "instance_idx": 13, "run_idx": 0, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 1], "instance_idx": 13, "run_idx": 1, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 3], "instance_idx": 13, "run_idx": 3, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 2], "instance_idx": 13, "run_idx": 2, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 4], "instance_idx": 13, "run_idx": 4, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 6], "instance_idx": 13, "run_idx": 6, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 5], "instance_idx": 13, "run_idx": 5, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 7], "instance_idx": 13, "run_idx": 7, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 8], "instance_idx": 13, "run_idx": 8, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 9], "instance_idx": 13, "run_idx": 9, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 10], "instance_idx": 13, "run_idx": 10, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 11], "instance_idx": 13, "run_idx": 11, "item_id": "1447599_000119312515209758", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [13, 12], "instance_idx": 13, "run_idx": 12, "item_id": "1447599_000119312515209758", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [13, 13], "instance_idx": 13, "run_idx": 13, "item_id": "1447599_000119312515209758", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [13, 15], "instance_idx": 13, "run_idx": 15, "item_id": "1447599_000119312515209758", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [13, 14], "instance_idx": 13, "run_idx": 14, "item_id": "1447599_000119312515209758", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [13, 16], "instance_idx": 13, "run_idx": 16, "item_id": "1447599_000119312515209758", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [13, 18], "instance_idx": 13, "run_idx": 18, "item_id": "1447599_000119312515209758", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 0], "instance_idx": 14, "run_idx": 0, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 1], "instance_idx": 14, "run_idx": 1, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 2], "instance_idx": 14, "run_idx": 2, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [13, 19], "instance_idx": 13, "run_idx": 19, "item_id": "1447599_000119312515209758", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [13, 17], "instance_idx": 13, "run_idx": 17, "item_id": "1447599_000119312515209758", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 3], "instance_idx": 14, "run_idx": 3, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 6], "instance_idx": 14, "run_idx": 6, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 7], "instance_idx": 14, "run_idx": 7, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 4], "instance_idx": 14, "run_idx": 4, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 8], "instance_idx": 14, "run_idx": 8, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 9], "instance_idx": 14, "run_idx": 9, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 10], "instance_idx": 14, "run_idx": 10, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 5], "instance_idx": 14, "run_idx": 5, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 11], "instance_idx": 14, "run_idx": 11, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 12], "instance_idx": 14, "run_idx": 12, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 14], "instance_idx": 14, "run_idx": 14, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 16], "instance_idx": 14, "run_idx": 16, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 15], "instance_idx": 14, "run_idx": 15, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 13], "instance_idx": 14, "run_idx": 13, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 18], "instance_idx": 14, "run_idx": 18, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [15, 0], "instance_idx": 15, "run_idx": 0, "item_id": "1344413_000089161805000914", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 17], "instance_idx": 14, "run_idx": 17, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [15, 1], "instance_idx": 15, "run_idx": 1, "item_id": "1344413_000089161805000914", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [15, 3], "instance_idx": 15, "run_idx": 3, "item_id": "1344413_000089161805000914", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [15, 4], "instance_idx": 15, "run_idx": 4, "item_id": "1344413_000089161805000914", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [15, 2], "instance_idx": 15, "run_idx": 2, "item_id": "1344413_000089161805000914", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [15, 5], "instance_idx": 15, "run_idx": 5, "item_id": "1344413_000089161805000914", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [15, 6], "instance_idx": 15, "run_idx": 6, "item_id": "1344413_000089161805000914", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [14, 19], "instance_idx": 14, "run_idx": 19, "item_id": "1327811_000132781118000039", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [15, 7], "instance_idx": 15, "run_idx": 7, "item_id": "1344413_000089161805000914", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [15, 9], "instance_idx": 15, "run_idx": 9, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 8], "instance_idx": 15, "run_idx": 8, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 11], "instance_idx": 15, "run_idx": 11, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 10], "instance_idx": 15, "run_idx": 10, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 12], "instance_idx": 15, "run_idx": 12, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 14], "instance_idx": 15, "run_idx": 14, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 15], "instance_idx": 15, "run_idx": 15, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 13], "instance_idx": 15, "run_idx": 13, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 16], "instance_idx": 15, "run_idx": 16, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 17], "instance_idx": 15, "run_idx": 17, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 18], "instance_idx": 15, "run_idx": 18, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [15, 19], "instance_idx": 15, "run_idx": 19, "item_id": "1344413_000089161805000914", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 0], "instance_idx": 16, "run_idx": 0, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 1], "instance_idx": 16, "run_idx": 1, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 2], "instance_idx": 16, "run_idx": 2, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 3], "instance_idx": 16, "run_idx": 3, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 4], "instance_idx": 16, "run_idx": 4, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 5], "instance_idx": 16, "run_idx": 5, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 6], "instance_idx": 16, "run_idx": 6, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 7], "instance_idx": 16, "run_idx": 7, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 8], "instance_idx": 16, "run_idx": 8, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 9], "instance_idx": 16, "run_idx": 9, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 11], "instance_idx": 16, "run_idx": 11, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 10], "instance_idx": 16, "run_idx": 10, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 12], "instance_idx": 16, "run_idx": 12, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 13], "instance_idx": 16, "run_idx": 13, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 15], "instance_idx": 16, "run_idx": 15, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 14], "instance_idx": 16, "run_idx": 14, "item_id": "1374128_000119312517292995", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [16, 16], "instance_idx": 16, "run_idx": 16, "item_id": "1374128_000119312517292995", "parsed": {"participation_type": "participating"}, "normalized": {"participation_type": "participating"}}
+{"_key": [16, 17], "instance_idx": 16, "run_idx": 17, "item_id": "1374128_000119312517292995", "parsed": {"participation_type": "participating"}, "normalized": {"participation_type": "participating"}}
+{"_key": [17, 0], "instance_idx": 17, "run_idx": 0, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [16, 18], "instance_idx": 16, "run_idx": 18, "item_id": "1374128_000119312517292995", "parsed": {"participation_type": "participating"}, "normalized": {"participation_type": "participating"}}
+{"_key": [16, 19], "instance_idx": 16, "run_idx": 19, "item_id": "1374128_000119312517292995", "parsed": {"participation_type": "participating"}, "normalized": {"participation_type": "participating"}}
+{"_key": [17, 1], "instance_idx": 17, "run_idx": 1, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 2], "instance_idx": 17, "run_idx": 2, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 3], "instance_idx": 17, "run_idx": 3, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 4], "instance_idx": 17, "run_idx": 4, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 7], "instance_idx": 17, "run_idx": 7, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 8], "instance_idx": 17, "run_idx": 8, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 6], "instance_idx": 17, "run_idx": 6, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 10], "instance_idx": 17, "run_idx": 10, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 5], "instance_idx": 17, "run_idx": 5, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 11], "instance_idx": 17, "run_idx": 11, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 9], "instance_idx": 17, "run_idx": 9, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 12], "instance_idx": 17, "run_idx": 12, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 13], "instance_idx": 17, "run_idx": 13, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 14], "instance_idx": 17, "run_idx": 14, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 15], "instance_idx": 17, "run_idx": 15, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}
+{"_key": [17, 16], "instance_idx": 17, "run_idx": 16, "item_id": "1053148_000095014401503351", "parsed": {"participation_type": "capped"}, "normalized": {"participation_type": "capped"}}

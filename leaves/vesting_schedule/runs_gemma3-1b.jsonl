@@ -160,3 +160,21 @@
 {"_key": [7, 13], "instance_idx": 7, "run_idx": 13, "item_id": "0000020740-17-000006_a201610kex1012", "raw_output": "```json\n{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}\n```", "parsed": null}
 {"_key": [7, 15], "instance_idx": 7, "run_idx": 15, "item_id": "0000020740-17-000006_a201610kex1012", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}
 {"_key": [7, 16], "instance_idx": 7, "run_idx": 16, "item_id": "0000020740-17-000006_a201610kex1012", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}
+{"_key": [7, 17], "instance_idx": 7, "run_idx": 17, "item_id": "0000020740-17-000006_a201610kex1012", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}
+{"_key": [7, 19], "instance_idx": 7, "run_idx": 19, "item_id": "0000020740-17-000006_a201610kex1012", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}\n", "parsed": null}
+{"_key": [8, 0], "instance_idx": 8, "run_idx": 0, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "```json\n{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}\n```", "parsed": null}
+{"_key": [8, 2], "instance_idx": 8, "run_idx": 2, "item_id": "0001104659-09-054183_a09-26145_18k", "parsed": {"vesting_schedule": "4yr/1yr-cliff"}, "normalized": {"vesting_schedule": "4yr/1yr-cliff"}}
+{"_key": [8, 5], "instance_idx": 8, "run_idx": 5, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}
+{"_key": [8, 7], "instance_idx": 8, "run_idx": 7, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "```json\n{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}\n```", "parsed": null}
+{"_key": [8, 8], "instance_idx": 8, "run_idx": 8, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "```json\n{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}\n```", "parsed": null}
+{"_key": [8, 9], "instance_idx": 8, "run_idx": 9, "item_id": "0001104659-09-054183_a09-26145_18k", "parsed": {"vesting_schedule": "4yr/1yr-cliff"}, "normalized": {"vesting_schedule": "4yr/1yr-cliff"}}
+{"_key": [8, 10], "instance_idx": 8, "run_idx": 10, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}
+{"_key": [8, 11], "instance_idx": 8, "run_idx": 11, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}
+{"_key": [8, 12], "instance_idx": 8, "run_idx": 12, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}
+{"_key": [8, 13], "instance_idx": 8, "run_idx": 13, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "```json\n{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}\n```", "parsed": null}
+{"_key": [8, 14], "instance_idx": 8, "run_idx": 14, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}
+{"_key": [8, 15], "instance_idx": 8, "run_idx": 15, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}\n", "parsed": null}
+{"_key": [8, 16], "instance_idx": 8, "run_idx": 16, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}
+{"_key": [8, 17], "instance_idx": 8, "run_idx": 17, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}
+{"_key": [8, 18], "instance_idx": 8, "run_idx": 18, "item_id": "0001104659-09-054183_a09-26145_18k", "parsed": {"vesting_schedule": "4yr/1yr-cliff"}, "normalized": {"vesting_schedule": "4yr/1yr-cliff"}}
+{"_key": [8, 19], "instance_idx": 8, "run_idx": 19, "item_id": "0001104659-09-054183_a09-26145_18k", "raw_output": "{\"vesting_schedule\": \"4yr/1yr-cliff\" | \"3yr/no-cliff\"}", "parsed": null}

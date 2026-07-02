@@ -10,7 +10,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 11,
+     "n_valid": 16,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -23,7 +23,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 2,
+     "n_valid": 5,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -49,7 +49,7 @@
     },
     {
      "instance_idx": 3,
-     "n_valid": 15,
+     "n_valid": 17,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -62,7 +62,7 @@
     },
     {
      "instance_idx": 4,
-     "n_valid": 9,
+     "n_valid": 13,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -75,7 +75,7 @@
     },
     {
      "instance_idx": 5,
-     "n_valid": 11,
+     "n_valid": 15,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -88,7 +88,7 @@
     },
     {
      "instance_idx": 6,
-     "n_valid": 5,
+     "n_valid": 10,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -101,7 +101,7 @@
     },
     {
      "instance_idx": 7,
-     "n_valid": 8,
+     "n_valid": 9,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -114,7 +114,7 @@
     },
     {
      "instance_idx": 8,
-     "n_valid": 4,
+     "n_valid": 7,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -134,11 +134,15 @@
    "field_flips": {
     "vesting_schedule": 0.0
    },
-   "parse_failure_count": 115,
-   "parse_failure_rate": 0.6388888888888888,
-   "valid_run_count": 65,
+   "parse_failure_count": 88,
+   "parse_failure_rate": 0.4888888888888889,
+   "valid_run_count": 92,
    "measurable": false,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "deepseek-v4f": {

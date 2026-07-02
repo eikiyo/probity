@@ -22,3 +22,19 @@
 {"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "parsed": {"preference_stack_payout": 19.7}, "normalized": {"preference_stack_payout": 19.7}}
 {"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "parsed": {"preference_stack_payout": 19.7}, "normalized": {"preference_stack_payout": 19.7}}
 {"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "parsed": {"preference_stack_payout": 19.7}, "normalized": {"preference_stack_payout": 19.7}}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 5], "instance_idx": 0, "run_idx": 5, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 6], "instance_idx": 0, "run_idx": 6, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 7], "instance_idx": 0, "run_idx": 7, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 8], "instance_idx": 0, "run_idx": 8, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 11], "instance_idx": 0, "run_idx": 11, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 13], "instance_idx": 0, "run_idx": 13, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 14], "instance_idx": 0, "run_idx": 14, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "item_id": "series_a", "parsed": {"preference_stack_payout": 58.9}, "normalized": {"preference_stack_payout": 58.9}}
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "series_b", "parsed": {"preference_stack_payout": 19.7}, "normalized": {"preference_stack_payout": 19.7}}
+{"_key": [1, 9], "instance_idx": 1, "run_idx": 9, "item_id": "series_b", "parsed": {"preference_stack_payout": 19.7}, "normalized": {"preference_stack_payout": 19.7}}

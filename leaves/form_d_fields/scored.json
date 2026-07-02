@@ -10,7 +10,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 2,
+     "n_valid": 3,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -23,7 +23,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 13,
+     "n_valid": 19,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -43,11 +43,15 @@
    "field_flips": {
     "form_d_field_value": 0.0
    },
-   "parse_failure_count": 24,
-   "parse_failure_rate": 0.6,
-   "valid_run_count": 16,
+   "parse_failure_count": 17,
+   "parse_failure_rate": 0.425,
+   "valid_run_count": 23,
    "measurable": false,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "deepseek-v4f": {

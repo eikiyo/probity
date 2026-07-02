@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "deepseek-v4f",
+ "task_name": "preference_stack_payout",
+ "data_version": "b07236bf28400aa3989e58c51bf3605a80c6536baafa9c16f664d5525e31260b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-02T21:15:09.830313+00:00"
+}

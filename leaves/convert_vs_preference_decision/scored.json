@@ -61,7 +61,7 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 17,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -74,7 +74,7 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 10,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -94,11 +94,15 @@
    "field_flips": {
     "convert_vs_preference_decision": 0.0
    },
-   "parse_failure_count": 13,
-   "parse_failure_rate": 0.325,
-   "valid_run_count": 27,
-   "measurable": false,
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
    "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
   }
  },
  "gemma4-31b-or": {

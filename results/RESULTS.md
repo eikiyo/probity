@@ -235,6 +235,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **45%** | 97% | 45% | 11/11 | 215/220 (98%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 75% | 8/11 | 116/220 (53%) |
 
 **What the columns mean:**
 
@@ -252,16 +253,19 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 0/6 | 5/5 |
 | `deepseek-v4-flash` | 4/6 | 5/5 |
 | `google/gemma-4-31b-it` | 4/6 | 5/5 |
+| `mistralai/mistral-large-2512` | 3/5 | 3/3 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
+| IESI CORP | stacked | medium | mistral-large-or |
 | Banks.com, Inc. | stacked | medium | 1B |
 | Teladoc, Inc. | stacked | easy | 1B |
+| AMERICAN POWER GROUP C | stacked | easy | mistral-large-or |
 | VioQuest Pharmaceutica | pari-passu | easy | 1B |
 | RIGHT START INC /CA | pari-passu | medium | 1B |
-| PRECOM TECHNOLOGY INC | pari-passu | hard | 1B |
+| PRECOM TECHNOLOGY INC | pari-passu | hard | 1B, mistral-large-or |
 
 ## What this shows
 
@@ -333,6 +337,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **20%** | 97% | 50% | 10/10 | 200/200 (100%) |
 | `deepseek-v4-flash` | hosted | **10%** | 96% | 100% | 10/10 | 200/200 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 10/10 | 116/200 (58%) |
 
 **What the columns mean:**
 
@@ -350,6 +355,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 0/5 | 5/5 |
 | `deepseek-v4-flash` | 5/5 | 5/5 |
 | `google/gemma-4-31b-it` | 5/5 | 5/5 |
+| `mistralai/mistral-large-2512` | 5/5 | 5/5 |
 
 ### Which items make models wobble
 
@@ -469,6 +475,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **17%** | 96% | 100% | 12/12 | 165/240 (69%) |
 | `deepseek-v4-flash` | hosted | **8%** | 100% | 100% | 12/12 | 240/240 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `mistralai/mistral-large-2512` | ? | **8%** | 96% | 100% | 11/12 | 152/240 (63%) |
 
 **What the columns mean:**
 
@@ -486,12 +493,15 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 6/6 | 6/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
 | `google/gemma-4-31b-it` | 6/6 | 6/6 |
+| `mistralai/mistral-large-2512` | 6/6 | 5/5 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | SOS Hydration Inc. | yes | medium | 1B, hosted |
+| Cantabio Pharmaceutica | yes | medium | mistral-large-or |
+| Hoku Scientific, Inc. | no | easy | mistral-large-or |
 | Infinity Pharmaceutica | no | easy | 1B |
 
 ## What this shows
@@ -559,6 +569,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **17%** | 97% | 58% | 12/12 | 239/240 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 11/12 | 155/240 (65%) |
 
 **What the columns mean:**
 
@@ -576,6 +587,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 6/6 | 1/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
 | `google/gemma-4-31b-it` | 5/6 | 6/6 |
+| `mistralai/mistral-large-2512` | 6/6 | 5/5 |
 
 ### Which items make models wobble
 
@@ -583,6 +595,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | SCYNEXIS, Inc. | yes | medium | 1B |
 | Non-binding LOI (Omni  | no | easy | 1B |
+| Trident Bancshares, In | no | easy | mistral-large-or |
 
 ## What this shows
 
@@ -1686,7 +1699,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 38% | 8/9 | 65/180 (36%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 38% | 8/9 | 92/180 (51%) |
 | `deepseek-v4-flash` | hosted | **11%** | 97% | 100% | 9/9 | 180/180 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
 
@@ -1925,7 +1938,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/2 | 16/40 (40%) |
+| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/2 | 23/40 (57%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 22/40 (55%) |
@@ -1962,6 +1975,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **50%** | 87% | 30% | 10/10 | 199/200 (100%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 8/10 | 115/200 (57%) |
 
 **What the columns mean:**
 
@@ -1975,10 +1989,12 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
+| GTX INC /DE/ | 21272455 | ? | mistral-large-or |
 | VoCare, Inc. | 5000000 | ? | 1B |
 | McBride Sisters Collec | 14040000 | ? | 1B |
 | POSEIDON MEDICAL INC. | 6085780 | ? | 1B |
 | BEYONDCORE, INC. | 8881213 | ? | 1B |
+| ShopTap, Inc. | 5500000 | ? | mistral-large-or |
 | Link Labs, Inc. | 5787732 | ? | 1B |
 
 ## What this shows
@@ -2324,6 +2340,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | `gemma3:1b` | 1B | **100%** | 68% | 20% | 5/5 | 83/100 (83%) |
 | `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `google/gemma-4-31b-it` | ? | **20%** | 96% | 100% | 5/5 | 100/100 (100%) |
+| `mistralai/mistral-large-2512` | ? | **20%** | 96% | 100% | 4/5 | 69/100 (69%) |
 
 **What the columns mean:**
 
@@ -2339,9 +2356,9 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 |---|---|---|---|
 | HyreCar Inc. | general corporate purposes | ? | 1B |
 | Castle Biosciences, In | research and development activities | ? | 1B, gemma4-31b-or |
-| Axcella Health Inc. | advance our current liver programs | ? | 1B |
+| Axcella Health Inc. | advance our current liver programs | ? | 1B, mistral-large-or |
 | Veritone, Inc. | working capital and general corporate purposes | ? | 1B |
-| Civitas Solutions, Inc | redeem all of the senior notes | ? | 1B |
+| Civitas Solutions, Inc | redeem all of the senior notes | ? | 1B, mistral-large-or |
 
 ## What this shows
 
@@ -2434,7 +2451,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **0%** | 100% | 50% | 2/2 | 37/40 (92%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 27/40 (68%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 34/40 (85%) |
 
@@ -2517,7 +2534,7 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
 | `gemma3:1b` | 1B | **100%** | 52% | 50% | 2/2 | 40/40 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 24/40 (60%) |
+| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 24/40 (60%) |
 

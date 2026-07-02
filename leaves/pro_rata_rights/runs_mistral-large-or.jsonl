@@ -194,3 +194,47 @@
 {"_key": [9, 14], "instance_idx": 9, "run_idx": 14, "item_id": "0001193125-06-192598_dex1012", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
 {"_key": [9, 13], "instance_idx": 9, "run_idx": 13, "item_id": "0001193125-06-192598_dex1012", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
 {"_key": [9, 15], "instance_idx": 9, "run_idx": 15, "item_id": "0001193125-06-192598_dex1012", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [9, 18], "instance_idx": 9, "run_idx": 18, "item_id": "0001193125-06-192598_dex1012", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [9, 17], "instance_idx": 9, "run_idx": 17, "item_id": "0001193125-06-192598_dex1012", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [9, 19], "instance_idx": 9, "run_idx": 19, "item_id": "0001193125-06-192598_dex1012", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [9, 16], "instance_idx": 9, "run_idx": 16, "item_id": "0001193125-06-192598_dex1012", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 0], "instance_idx": 10, "run_idx": 0, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 2], "instance_idx": 10, "run_idx": 2, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 3], "instance_idx": 10, "run_idx": 3, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 1], "instance_idx": 10, "run_idx": 1, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 4], "instance_idx": 10, "run_idx": 4, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 5], "instance_idx": 10, "run_idx": 5, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 7], "instance_idx": 10, "run_idx": 7, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 6], "instance_idx": 10, "run_idx": 6, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 8], "instance_idx": 10, "run_idx": 8, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 9], "instance_idx": 10, "run_idx": 9, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 10], "instance_idx": 10, "run_idx": 10, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 11], "instance_idx": 10, "run_idx": 11, "item_id": "0000950123-15-006790_filename6", "error": "OpenRouter(mistralai/mistral-large-2512) generation failed: HTTP Error 429: Too Many Requests", "parsed": null}
+{"_key": [10, 12], "instance_idx": 10, "run_idx": 12, "item_id": "0000950123-15-006790_filename6", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [10, 14], "instance_idx": 10, "run_idx": 14, "item_id": "0000950123-15-006790_filename6", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [10, 13], "instance_idx": 10, "run_idx": 13, "item_id": "0000950123-15-006790_filename6", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [10, 15], "instance_idx": 10, "run_idx": 15, "item_id": "0000950123-15-006790_filename6", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [10, 18], "instance_idx": 10, "run_idx": 18, "item_id": "0000950123-15-006790_filename6", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [10, 17], "instance_idx": 10, "run_idx": 17, "item_id": "0000950123-15-006790_filename6", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [10, 19], "instance_idx": 10, "run_idx": 19, "item_id": "0000950123-15-006790_filename6", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 0], "instance_idx": 11, "run_idx": 0, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [10, 16], "instance_idx": 10, "run_idx": 16, "item_id": "0000950123-15-006790_filename6", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 1], "instance_idx": 11, "run_idx": 1, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 2], "instance_idx": 11, "run_idx": 2, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 4], "instance_idx": 11, "run_idx": 4, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 3], "instance_idx": 11, "run_idx": 3, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 7], "instance_idx": 11, "run_idx": 7, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 8], "instance_idx": 11, "run_idx": 8, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 6], "instance_idx": 11, "run_idx": 6, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 5], "instance_idx": 11, "run_idx": 5, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 9], "instance_idx": 11, "run_idx": 9, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 11], "instance_idx": 11, "run_idx": 11, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 10], "instance_idx": 11, "run_idx": 10, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 13], "instance_idx": 11, "run_idx": 13, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 14], "instance_idx": 11, "run_idx": 14, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 16], "instance_idx": 11, "run_idx": 16, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 17], "instance_idx": 11, "run_idx": 17, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 12], "instance_idx": 11, "run_idx": 12, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 18], "instance_idx": 11, "run_idx": 18, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 19], "instance_idx": 11, "run_idx": 19, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
+{"_key": [11, 15], "instance_idx": 11, "run_idx": 15, "item_id": "0001193125-03-085295_dex108", "parsed": {"pro_rata_rights": "no"}, "normalized": {"pro_rata_rights": "no"}}
