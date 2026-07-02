@@ -5,7 +5,7 @@ breaking-points/stubs/hardcodes/half-done features, log findings here, fix what'
 immediately, flag judgment calls for explicit confirmation. Order = engine/registry.json ref
 order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
-**Counter: 5/60 done · 0 in-progress · 53 pending · 2 partial** — dated 2026-07-02.
+**Counter: 14/60 done · 0 in-progress · 44 pending · 2 partial** — dated 2026-07-02. Family 1 (financing terms, 1.1.1-1.7) complete.
 
 ## Legend
 - `[x]` audited + resolved (bugs fixed, or verified clean)
@@ -258,4 +258,14 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   and spending API calls to "reprove" an already-100%/100% leaf isn't warranted.
   Commit pending.
 
-## Next leaf: 1.7 redemption_rights
+### [x] 1.7 redemption_rights
+- **Verified clean.** N=10, perfect 5/5 class balance. deepseek-v4f 100% acc/10% wobble.
+  gemma3-1b exactly 50% acc — investigated because 50% on a balanced binary task risks being
+  chance-level or class-collapse. Confirmed **complete class collapse**: gemma3-1b answered
+  "no" on literally all 10 items (got every true-"no" right by luck of the label, missed every
+  true-"yes"). Spot-checked 1 of the 5 missed "yes" items (Tenable Holdings) against the real
+  quote — unambiguous "the Company shall redeem, out of surplus, all of the shares..." — a
+  genuine, clear-cut mandatory-redemption clause. This is a real model behavior pattern (1B
+  local model systematically biased toward "no"/non-redeemable), not an oracle bug.
+
+## Next leaf: 2.1.1 safe_valuation_cap
