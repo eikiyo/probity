@@ -571,4 +571,31 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
   non-VC document types ("a Letter of Intent... generic Articles of Incorporation with only
   default majority-of-all-stock voting") — in-scope by the task's own design, not contamination.
 
-## Next leaf: 5.3 information_rights
+### [x] 5.3 information_rights
+- **Verified clean.** N=12, perfect 6/6 class balance. deepseek-v4f 91.7% (1 miss), gemma3-1b
+  50%. Task.py's own taxonomy documents a deliberate trap (waiver-of-delivery-obligation ->
+  "no"); spot-checked deepseek's one miss (Bell Microproducts, true "yes", predicted "no") since
+  it looked like exactly that trap firing backwards — confirmed via full text it's actually a
+  SUBTLER, correctly-labeled variant: the clause waives PAST DEFAULTS for late delivery and
+  extends the deadline, but explicitly keeps the underlying delivery obligation alive with new
+  dates (Dec 2008/Mar 2009/Jun 2009) — a waiver of default/timing, not a waiver of the right
+  itself, genuinely distinct from the taxonomy's documented "no" trap. Oracle's "yes" label is
+  correct; deepseek likely pattern-matched the word "waives" without parsing what was waived.
+
+### [x] 5.4 pro_rata_rights
+- **Verified clean, both models 100%.** N=12, perfect 6/6 class balance. Notably this leaf's
+  own `company` field already writes "Manako Labs (via TaoWeave filing)" for the item sharing
+  the cross-leaf id/filename mismatch flagged under 2.1.3 — confirms whoever built this leaf
+  was already aware of and correctly handled that naming quirk. Other repeat companies (SOS
+  Hydration, Cantabio, Millennium Blockchain, Greenfield Robotics) all consistent with
+  already-verified real-entity findings elsewhere in the audit — no new issue.
+
+### [x] 5.5 rofr_cosale
+- **Verified clean.** N=12, perfect 6/6 class balance. deepseek-v4f 91.7% (1 low-consistency
+  miss, 55%), gemma3-1b 66.7%. Well-designed leaf: task.py's own docstring documents deliberate
+  hard negatives (a company's own repurchase right on unvested stock, and a pro-rata future-
+  financing right, both use adjacent vocabulary to a real investor RoFR/co-sale but aren't one)
+  — deepseek's one miss (MotivNation, low-consistency "yes" vs true "no") is consistent with
+  exactly this documented trap firing, not a data bug.
+
+## Next leaf: 5.6 drag_along
