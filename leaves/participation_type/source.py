@@ -6,6 +6,48 @@ Purpose: Source REAL preferred-stock liquidation clauses from SEC EDGAR full-tex
 Functions: fts_search(), build_url(), fetch_clean(), extract_clause(), main()
 Calls: urllib, EDGAR efts.sec.gov + www.sec.gov/Archives
 Imports: urllib, json, re, html, time, pathlib
+
+HOW THIS LEAF'S ORACLE ACTUALLY GETS BUILT (intern-level walkthrough, since this leaf's build
+process spans 3 files unlike the newer single-source.py leaves): (1) this file's main() searches
+EDGAR full-text search for 12 hand-picked exact phrases (PHRASES below) that are STRONG
+indicators of one of the 3 classes, fetches each hit's real filing, extracts the richest
+liquidation-provision window around it (extract_clause()), and writes everything to
+candidates.jsonl -- NOT to oracle.jsonl. (2) source_more.py runs a second supplemental search
+pass with 10 more phrases, appending more candidates for the thinner classes (participating/
+capped were harder to find than non-participating). (3) oracle.jsonl itself is then built BY
+HAND by a human reading each candidate's real corpus/full/<id>.txt and writing the final
+participation_type label + a "note" explaining the reasoning -- this is intentional and
+important: hint_class (the search phrase's bucket) is explicitly documented as "never the
+oracle" because the search phrase that FOUND a candidate is not proof of what that candidate's
+clause actually says once you read the whole thing (this is the project-wide "keyword-is-
+candidate-not-oracle" discipline -- see root vault/mistakes.md).
+
+ADVERSARIAL AUDIT FINDING (2026-07-02, PENDING EIKIYO'S CONFIRMATION -- not yet acted on, the
+oracle.jsonl label below is UNCHANGED as of this note): the "Pfenex Inc." item
+(id=1478121_000119312514227132, oracle.jsonl's own hardest/"TRAP" item) is labeled
+"non-participating" with the stated reasoning "MPA implies capped, but MPA is the preference
+amount and the structure is greater-of => non-participating." A full re-read of the item's
+complete clause -- including subsections 2(a) and 2(b), which are REFERENCED by the visible
+model-facing window but are NOT actually shown to the model (the window starts mid-way through
+the clause, per extract_clause()'s 4200-char window landing past them) -- suggests the opposite
+conclusion. The real structure: 2(a)+2(b) establish a FIXED liquidation preference of the
+"Series A Original Issue Price" (confirmed elsewhere in the same document: $1.00/share) plus an
+8% PER ANNUM SIMPLE (non-compounding) dividend. 2(c) then gives Preferred a pro-rata,
+as-converted share of ALL remaining assets ALONGSIDE Common -- UNLESS the 2(a)+2(b) amount alone
+exceeds a $2.50/share "Maximum Participation Amount" threshold, in which case a greater-of
+override applies instead. Since $1.00 (the fixed preference) would need roughly 18.75 years of
+accrued-but-unpaid 8% simple dividends to cross $2.50, the override is realistically almost never
+triggered within a normal venture-exit timeline (typically 5-10 years) -- meaning in the
+overwhelming majority of real outcomes, this instrument functions as ordinary UNCAPPED
+PARTICIPATING preferred (fixed preference AND ALSO pro-rata sharing), not non-participating. See
+the full char-by-char verification (window text before/after the extracted clause, the exact
+$1.00 Original Issue Price definition, and the 8% simple-dividend clause) in the audit session
+transcript / vault/mistakes.md. The oracle.jsonl "note" field for this item has been appended
+with this counter-finding (not overwritten) so both readings are visible to a future reader --
+the "participation_type" value itself is left as originally labeled pending explicit sign-off,
+since flipping a human-validated legal classification is a materially different kind of change
+than a mechanical code/rendering fix and this project's own doctrine treats it as EIKIYO'S call,
+not something an AI audit silently overwrites.
 """
 
 import urllib.request

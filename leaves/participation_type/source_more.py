@@ -1,10 +1,45 @@
-"""Supplemental sourcing for thin classes (capped + participating). Incremental append."""
+"""
+Location: leaves/participation_type/source_more.py
+Purpose: Supplemental EDGAR sourcing pass for this leaf's two thinner classes (participating,
+         capped). source.py's first pass over-indexed on non-participating clauses (it's the
+         most common real-world structure, so it's also the easiest to find via full-text
+         search) -- this script runs 10 MORE hand-picked search phrases targeted specifically at
+         participating/capped language, and APPENDS results to candidates.jsonl (skips any CIK
+         already present via the `have` set below, so re-running this is safe/idempotent and
+         won't duplicate a company already sourced by source.py's first pass).
+Functions: fts() [EDGAR full-text search], build_url(), fetch(), extract() [see below for full run
+Calls: urllib, EDGAR efts.sec.gov + www.sec.gov/Archives -- same pattern as source.py
+Imports: urllib.request, urllib.parse, json, re, html, time, pathlib
+
+WHY this is a SEPARATE file rather than just adding more phrases to source.py's PHRASES list:
+this was written as an incremental, second sourcing pass AFTER source.py's first pass had
+already run and candidates.jsonl already existed with real data in it -- re-running source.py
+itself would have re-fetched everything from scratch (wasteful, and risks re-hitting EDGAR's
+rate limits for no reason). Keeping the supplemental pass separate means it can be re-run on its
+own, cheaply, without re-doing the first pass's work.
+
+NOTE (found during 2026-07-02 adversarial audit): unlike every other file in this leaf/repo, the
+module-level constants below (UA, HERE, RAW, FULL, existing, have, DET) are executed as TOP-LEVEL
+statements outside any function -- meaning simply `import`-ing this module (rather than running it
+as a script) immediately tries to open candidates.jsonl and parse it. This works fine as a
+one-off manual script (`python3 source_more.py`) but would break if anything ever tried to import
+this module for its function definitions alone (e.g. a future test file) without candidates.jsonl
+present. Left as-is since this script has always been run standalone and is not currently
+imported anywhere else in the codebase -- flagged here so a future maintainer doesn't hit this
+surprise if they try to `import source_more` from elsewhere.
+"""
 import urllib.request, urllib.parse, json, re, html, time
 from pathlib import Path
 UA = "Probity Research seyedmosayebalam@gmail.com"
 HERE = Path(__file__).parent; RAW = HERE/'corpus'/'raw'; FULL = HERE/'corpus'/'full'
 existing = [json.loads(l) for l in open(HERE/'candidates.jsonl') if l.strip()]
 have = {int(c['id'].split('_')[0]) for c in existing}
+# DET = the same "determinative liquidation-provision keywords" idea as source.py's DETERMINERS
+# (used to score which extracted window is richest in real participation-mechanism language) --
+# this is a genuine near-duplicate of source.py's DETERMINERS list (12 vs 15 overlapping terms).
+# Left un-deduplicated for now (each file's list was tuned independently for its own phrase set)
+# but flagged here as a §0.8 "rule of two" candidate for extraction into a shared engine helper
+# if a THIRD leaf ever needs the same kind of keyword-scored window extraction.
 DET = ["preference","original issue price","converted into common","as-converted","participate",
        "remaining assets","greater of","pari passu","times the original","ratably","pro rata",
        "distributed","not exceed","maximum participation","aggregate"]

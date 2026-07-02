@@ -6,6 +6,22 @@ Purpose: Run the corpus through a MODEL SIZE LADDER (gemma3:1b -> llama3.2 -> ge
 Functions: load_instances(), run_model(), main()
 Calls: engine.harness, engine.scorer, engine.models; task.TASK
 Imports: sys, json, subprocess, pathlib
+
+NOTE ON TECH DEBT (found during 2026-07-02 adversarial audit, not fixed in this pass -- flagged
+for a future decision, not acted on unilaterally): this leaf was the very first one built
+(Round 1), BEFORE engine/runner.py existed as a shared, leaf-agnostic runner. Its
+load_instances()/run_model()/main() below are a hand-written, ~90-line implementation that is
+now structurally near-identical to what engine/runner.py's load_instances()/run_model()/
+run_leaf() do generically for every newer leaf (compare this file to
+leaves/liquidation_waterfall_payout/run.py, which is a 12-line shim by contrast). This is a real
+§0.8 "rule of two" reuse violation -- this leaf's logic duplicates the now-centralized engine
+code. It was NOT migrated to the shared runner.py shim during this audit pass because: (1) this
+leaf uses the 5-model BIG_BATCH+FAST_SET "size ladder" (engine/runner.py's run_leaf() DOES
+already support an arbitrary model_set list, so this IS technically migratable), and (2) this
+leaf already has real, committed scored.json results that a maintainer would want to diff
+carefully against a re-run before trusting a migration didn't subtly change behavior (e.g. the
+exact ollama-unload timing, or checkpoint-file naming). Worth a dedicated follow-up pass across
+ALL "Round 1-era" leaves at once (this is likely not the only one), not a one-off fix here.
 """
 
 import sys
