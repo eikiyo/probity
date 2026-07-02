@@ -439,7 +439,8 @@
       ],
       "op": "CL",
       "stakes": 3,
-      "tier": "v1"
+      "tier": "built",
+      "leaf": "leaves/fully_diluted_basis"
     },
     {
       "ref": "3.5",
@@ -686,8 +687,8 @@
       "type": "number",
       "op": "EX",
       "stakes": 3,
-      "tier": "v3",
-      "uncertain": "needs a labeled financial-statement set"
+      "tier": "built",
+      "leaf": "leaves/financial_statement_qa"
     },
     {
       "ref": "8.1",

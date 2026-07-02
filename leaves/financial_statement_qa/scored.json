@@ -1,0 +1,182 @@
+{
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "accuracy": {
+   "task": "financial_statement_qa",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.2,
+   "accuracy_strict": 0.2,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "financial_statement_qa": {
+       "majority": 1062773.0,
+       "truth": 1123118.0,
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "financial_statement_qa": {
+       "majority": 11272.0,
+       "truth": 17541.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "financial_statement_qa": {
+       "majority": 22786.0,
+       "truth": 22786.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 18,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "financial_statement_qa": {
+       "majority": 1999.0,
+       "truth": 12619.0,
+       "consistency": 0.7777777777777778
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "financial_statement_qa": {
+       "majority": 1714183.0,
+       "truth": 9777079.0,
+       "consistency": 0.55
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "financial_statement_qa",
+   "consistency_rate": 0.8555555555555555,
+   "consistency_pct": 85.55555555555556,
+   "field_flips": {
+    "financial_statement_qa": 0.6
+   },
+   "parse_failure_count": 3,
+   "parse_failure_rate": 0.03,
+   "valid_run_count": 97,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "accuracy": {
+   "task": "financial_statement_qa",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.8,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "financial_statement_qa": {
+       "majority": 1123118.0,
+       "truth": 1123118.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "financial_statement_qa": {
+       "majority": 17541.0,
+       "truth": 17541.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "financial_statement_qa": {
+       "majority": 22786.0,
+       "truth": 22786.0,
+       "consistency": 0.85
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "financial_statement_qa": {
+       "majority": 12619.0,
+       "truth": 12619.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "financial_statement_qa": {
+       "majority": 9777079.0,
+       "truth": 9777079.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "financial_statement_qa",
+   "consistency_rate": 0.97,
+   "consistency_pct": 97.0,
+   "field_flips": {
+    "financial_statement_qa": 0.2
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  }
+ }
+}
