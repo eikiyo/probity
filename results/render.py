@@ -564,40 +564,47 @@ def aggregate_by_model():
     return out
 
 
-def aggregate_by_family(model_label="deepseek-v4f"):
-    """N-weighted wobble + accuracy per registry family, for ONE model (the hosted model by
-    default -- it has the widest leaf coverage of any single model in the suite)."""
+def aggregate_by_family():
+    """N-weighted wobble + accuracy per registry family, averaged ACROSS EVERY MODEL in the
+    current lineup -- not pinned to one model. Was pinned to deepseek-v4f until 2026-07-03
+    because it was the only model with full 60/60 coverage at the time; now all 11 models in
+    MODEL_DISPLAY hit full coverage, so picking one model would hide how every other model
+    performs per category (Eikiyo: "why cant this be average of all models?"). "leaves" counts
+    DISTINCT test leaves that contributed at least one model's measurable result, not
+    leaf*model combinations -- so the Tests column still reads as "how many of the 60 tests are
+    in this category," unchanged in meaning from the single-model version."""
     reg = json.loads((ROOT / "engine" / "registry.json").read_text())
     built = [l for l in reg["leaves"] if l.get("tier") == "built" and "leaf" in l]
     wobble_num, wobble_den = {}, {}
     acc_num, acc_den = {}, {}
-    leaf_count = {}
+    leaf_ids = {}
     for l in built:
         sp = ROOT / l["leaf"] / "scored.json"
         if not sp.exists():
             continue
         scored = json.loads(sp.read_text())
-        res = scored.get(model_label)
-        if not res:
-            continue
         field, fam = l["field"], l["family"]
-        rel, acc = res.get("reliability", {}), res.get("accuracy", {})
-        n_inst = acc.get("n_instances", 0)
-        n_meas = acc.get("n_measurable", 0)
-        flip = rel.get("field_flips", {}).get(field)
-        if flip is None or not rel.get("measurable", True) or not n_inst:
-            continue
-        wobble_num[fam] = wobble_num.get(fam, 0) + flip * n_inst
-        wobble_den[fam] = wobble_den.get(fam, 0) + n_inst
-        if n_meas:
-            acc_num[fam] = acc_num.get(fam, 0) + acc.get("accuracy_majority", 0) * n_meas
-            acc_den[fam] = acc_den.get(fam, 0) + n_meas
-        leaf_count[fam] = leaf_count.get(fam, 0) + 1
+        counted = False
+        for model_label, res in scored.items():
+            rel, acc = res.get("reliability", {}), res.get("accuracy", {})
+            n_inst = acc.get("n_instances", 0)
+            n_meas = acc.get("n_measurable", 0)
+            flip = rel.get("field_flips", {}).get(field)
+            if flip is None or not rel.get("measurable", True) or not n_inst:
+                continue
+            wobble_num[fam] = wobble_num.get(fam, 0) + flip * n_inst
+            wobble_den[fam] = wobble_den.get(fam, 0) + n_inst
+            if n_meas:
+                acc_num[fam] = acc_num.get(fam, 0) + acc.get("accuracy_majority", 0) * n_meas
+                acc_den[fam] = acc_den.get(fam, 0) + n_meas
+            counted = True
+        if counted:
+            leaf_ids.setdefault(fam, set()).add(l["leaf"])
     out = []
-    for fam in sorted(wobble_den, key=lambda f: -leaf_count[f]):
+    for fam in sorted(wobble_den, key=lambda f: -len(leaf_ids[f])):
         w = 100 * wobble_num[fam] / wobble_den[fam] if wobble_den[fam] else None
         a = 100 * acc_num[fam] / acc_den[fam] if acc_den.get(fam) else None
-        out.append({"family": fam, "leaves": leaf_count[fam], "wobble": w, "accuracy": a})
+        out.append({"family": fam, "leaves": len(leaf_ids[fam]), "wobble": w, "accuracy": a})
     return out
 
 
@@ -614,10 +621,10 @@ def suite_summary_table():
 
 
 def family_summary_table():
-    """One row per fundraising-document category, hosted model (deepseek) -- the widest-coverage
-    single model, so every family gets a real number, not a partial fast-set snapshot."""
+    """One row per fundraising-document category, N-weighted average ACROSS EVERY MODEL in the
+    lineup (see aggregate_by_family() docstring for why this isn't pinned to one model)."""
     rows = aggregate_by_family()
-    lines = ["| Category | Tests | **Wobble** ↓ (deepseek) | Accuracy (deepseek) |",
+    lines = ["| Category | Tests | **Wobble** ↓ (all models) | Accuracy (all models) |",
              "|---|---|---|---|"]
     for r in rows:
         label = FAMILY_DISPLAY.get(r["family"], r["family"])

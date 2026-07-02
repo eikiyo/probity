@@ -99,16 +99,16 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 
 ### By fundraising-document category
 
-| Category | Tests | **Wobble** ↓ (deepseek) | Accuracy (deepseek) |
+| Category | Tests | **Wobble** ↓ (all models) | Accuracy (all models) |
 |---|---|---|---|
-| Priced equity rounds | 16 | ![5%](https://img.shields.io/badge/-5%25-brightgreen) | ![90%](https://img.shields.io/badge/-90%25-brightgreen) |
-| SAFEs & convertible notes | 12 | ![4%](https://img.shields.io/badge/-4%25-brightgreen) | ![100%](https://img.shields.io/badge/-100%25-brightgreen) |
-| Cap table math | 7 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
-| Investor rights & governance | 7 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
-| Founder & employee vesting | 5 | ![2%](https://img.shields.io/badge/-2%25-brightgreen) | ![98%](https://img.shields.io/badge/-98%25-brightgreen) |
-| Regulatory disclosures | 5 | ![15%](https://img.shields.io/badge/-15%25-yellow) | ![100%](https://img.shields.io/badge/-100%25-brightgreen) |
-| Off-market risk flags | 5 | ![8%](https://img.shields.io/badge/-8%25-brightgreen) | ![92%](https://img.shields.io/badge/-92%25-brightgreen) |
-| Exit waterfalls | 3 | ![12%](https://img.shields.io/badge/-12%25-yellow) | ![100%](https://img.shields.io/badge/-100%25-brightgreen) |
+| Priced equity rounds | 16 | ![10%](https://img.shields.io/badge/-10%25-brightgreen) | ![85%](https://img.shields.io/badge/-85%25-brightgreen) |
+| SAFEs & convertible notes | 12 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
+| Cap table math | 7 | ![22%](https://img.shields.io/badge/-22%25-yellow) | ![80%](https://img.shields.io/badge/-80%25-yellow) |
+| Investor rights & governance | 7 | ![10%](https://img.shields.io/badge/-10%25-brightgreen) | ![88%](https://img.shields.io/badge/-88%25-brightgreen) |
+| Founder & employee vesting | 5 | ![8%](https://img.shields.io/badge/-8%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
+| Regulatory disclosures | 5 | ![18%](https://img.shields.io/badge/-18%25-yellow) | ![89%](https://img.shields.io/badge/-89%25-brightgreen) |
+| Off-market risk flags | 5 | ![7%](https://img.shields.io/badge/-7%25-brightgreen) | ![82%](https://img.shields.io/badge/-82%25-yellow) |
+| Exit waterfalls | 3 | ![41%](https://img.shields.io/badge/-41%25-red) | ![68%](https://img.shields.io/badge/-68%25-yellow) |
 
 <!-- BENCHMARK:END -->
 
