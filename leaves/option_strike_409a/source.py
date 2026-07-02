@@ -8,6 +8,18 @@ Purpose: Build the option_strike_409a leaf corpus + oracle (6.4) from real SEC E
          fair market value set per IRS 409A valuation rules for the grant date.
 Functions: window_on(), main()
 Imports: json, re, pathlib, collections
+
+WHY every window is now prefixed with a "TARGET GRANT:" marker (added 2026-07-02, adversarial
+audit, Eikiyo-confirmed): 4 of the Medecision, Inc. items share one filing that lists a WHOLE
+BULLETED SEQUENCE of many real option grants at many different strike prices in the same
+window (window_on()'s before=420/after=900 pulls in ~7 different grants around any one anchor).
+Confirmed as the actual cause of deepseek-v4f scoring WORSE than gemma3-1b on this leaf (every
+miss was a different REAL price from the same crowded window, not a hallucination) -- an
+inversion from every other leaf in this project. Fixed the same way leaves 4.3/6.5/7.5 already
+correctly handle multi-candidate windows: the anchor phrase itself IS the target grant's price
+statement, so main() now prepends "TARGET GRANT: the option grant stated to have an {anchor}
+(see below)." before every window, for every item in this leaf (not just the 4 affected ones,
+for consistency and to future-proof any newly-added item that shares this corpus shape).
 """
 import json
 import re
@@ -79,7 +91,8 @@ def main():
         win, quote = window_on(full, anchor)
         if not win:
             print(f"ANCHOR not found in {read_from} ({anchor!r}) -- skip (fail-closed)"); continue
-        (HERE / "corpus" / "questions" / f"{oid}.txt").write_text(win, encoding="utf-8")
+        marked_win = f"TARGET GRANT: the option grant stated to have an {anchor} (see below).\n\n{win}"
+        (HERE / "corpus" / "questions" / f"{oid}.txt").write_text(marked_win, encoding="utf-8")
         oracle.append({"id": oid, "company": company, "option_strike_409a": value,
                        "anchor": anchor, "validating_quote": quote, "difficulty": diff})
     with open(HERE / "oracle.jsonl", "w", encoding="utf-8") as f:

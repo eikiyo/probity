@@ -1,0 +1,14 @@
+b Holdings, LLC a Colorado limited liability company (the “ Company ”), hereby issues to the Investor the right to certain of the Company’s Units, subject to the terms set forth below.
+
+The “ Valuation Cap ” is $35,000,000. See Section 2 for certain additional defined terms.
+
+1.
+Events
+
+(a)      Equity Financing . If there is an Equity Financing before the expiration or termination of this instrument, the Company will automatically issue to the Investor either: (1) a number of Standard Preferred Units equal to the Purchase Amount divided by the price per share of the Standard Preferred Units, if the pre-money valuation is less than or equal to the Valuation Cap; or (2) a number of Safe Preferred Units equal to the Purchase Amount divided by the Safe Price, if the pre-money valuation is greater than the Valuation Cap.
+
+In connection with the issuance of Standard Preferred Units or Safe Preferred Units, as applicable, by the Company to the Investor pursuant to this Section 1(a), the Investor will execute and deliver to the Company all transaction documents related to the Equity Financing; provided, that such documents are the same documents to be entered into with the purchasers of Standard Preferred Units, with appropriate variations for the Safe Preferred Units if applicable, and provided further, that such documents have customary exceptions to any drag-along applicable to the Investor.
+
+(b)      Liquidity Event . If there is a Liquidity Event before the expiration or termination of this instrument, the Investor will, at its option, either (i) receive a cash payment equal to the Purchase Amount (subject to the following paragraph) or (ii) automatically receive from the Company a number of Common Units equal to the Purchase Amount divided by the Liquidity Price, if the Investor fails to select the cash option.
+
+In connection with Section (b)(i), the Purchase Amount will be due and payable by the Company to the Investor immediately prior to, or concurrent with, the consummation of the Liquidity Event. If there are not enough funds to

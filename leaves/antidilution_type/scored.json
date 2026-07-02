@@ -6,11 +6,11 @@
    "n_instances": 5,
    "n_measurable": 5,
    "accuracy_majority": 0.4,
-   "accuracy_strict": 0.4,
+   "accuracy_strict": 0.2,
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 9,
+     "n_valid": 7,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -23,20 +23,20 @@
     },
     {
      "instance_idx": 1,
-     "n_valid": 17,
+     "n_valid": 19,
      "majority_correct": true,
-     "strict_correct": true,
+     "strict_correct": false,
      "fields": {
       "antidilution_type": {
        "majority": "full-ratchet",
        "truth": "full-ratchet",
-       "consistency": 1.0
+       "consistency": 0.9473684210526315
       }
      }
     },
     {
      "instance_idx": 2,
-     "n_valid": 17,
+     "n_valid": 19,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -49,7 +49,7 @@
     },
     {
      "instance_idx": 3,
-     "n_valid": 12,
+     "n_valid": 11,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -62,7 +62,7 @@
     },
     {
      "instance_idx": 4,
-     "n_valid": 16,
+     "n_valid": 19,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
@@ -77,14 +77,14 @@
   },
   "reliability": {
    "task": "antidilution_type",
-   "consistency_rate": 1.0,
-   "consistency_pct": 100.0,
+   "consistency_rate": 0.9894736842105264,
+   "consistency_pct": 98.94736842105264,
    "field_flips": {
-    "antidilution_type": 0.0
+    "antidilution_type": 0.2
    },
-   "parse_failure_count": 4,
-   "parse_failure_rate": 0.04,
-   "valid_run_count": 96,
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.02,
+   "valid_run_count": 98,
    "measurable": true,
    "excluded_fields": []
   }

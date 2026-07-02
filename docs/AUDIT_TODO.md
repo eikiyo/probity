@@ -5,45 +5,41 @@ breaking-points/stubs/hardcodes/half-done features, log findings here, fix what'
 immediately, flag judgment calls for explicit confirmation. Order = engine/registry.json ref
 order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
-**Counter: 60/60 leaves audited · 52 fully resolved · 8 have a pending judgment call** — dated
-2026-07-02. **ALL 60 BUILT LEAVES NOW AUDITED, leaf-by-leaf, in registry order.** 9 code bugs
-found and fixed (with reruns where the fix could change scores); 8 findings need Eikiyo's
-confirmation before any oracle.jsonl data is touched.
+**Counter: 60/60 leaves audited · 60 fully resolved · 0 pending** — dated 2026-07-02.
+**ALL 60 BUILT LEAVES NOW AUDITED, leaf-by-leaf, in registry order, AND all 9 flagged judgment
+calls have been decided by Eikiyo (via `AskUserQuestion`) and executed.** 9 code bugs found and
+fixed during the initial sweep; 9 further findings required Eikiyo's confirmation before touching
+oracle.jsonl/task.py/source.py — all 9 are now resolved below.
 
 ## Legend
 - `[x]` audited + resolved (bugs fixed, or verified clean)
 - `[~]` audited, one finding still pending Eikiyo's confirmation (not a code bug — a judgment call)
 - `[ ]` not yet audited
 
-## Pending-your-call summary (8 items — oracle.jsonl NOT touched on any of these)
-1. **1.1.2 pre_vs_post_money** — 2/21 items are the same Cytosorbents transaction counted
-   twice (8-K body + its own Exhibit 10.1). Drop the 2 duplicates and rerun at N=19, or leave?
-2. **1.1.3 price_per_share — SEVERE** — 5/9 items (56%) are wrong instrument type (common-stock
-   private placements, not preferred-stock rounds the task requires). Drop+re-source, reframe
-   the taxonomy, or leave?
-3. **1.3.1 liquidation_preference_multiple** — 3/13 items are exact duplicate clauses (same
-   amendment text, different accession numbers) — true N is 10, not 13. Drop the 3 duplicates?
-4. **1.5.1 antidilution_type** — 1/5 items (Popular Inc, a bank holding company) is off-thesis
-   (TARP-era bank rights, not VC financing) though its label is textually correct. Re-source or
-   leave?
-5. **2.1.3 safe_cap_vs_discount_applies — SEVERE** — class distribution is 10 both-mfn / 1
-   discount / 0 cap-only — one of the leaf's own 3 taxonomy classes is completely untestable.
-   Re-source 2-3 genuine cap-only SAFEs, or accept as an effective 2-way task?
-6. **6.1 vesting_schedule — SEVERE** — the World Heart Corp item is labeled "3yr/no-cliff" but
-   the text explicitly says "one-year cliff" twice and describes 1/48-monthly vesting (textbook
-   4yr/1yr-cliff). Sibling leaf 6.2 independently confirms the underlying schedule has a cliff.
-   Evidence strongly favors relabeling to `4yr/1yr-cliff` — confirm?
-7. **6.4 option_strike_409a — SEVERE, confirmed real harm** — 4/7 items' windows show a whole
-   bulleted list of ~7 different real option grants with no target-grant marker, confirmed as
-   the actual cause of deepseek-v4f scoring WORSE than gemma3-1b on this leaf (an inversion from
-   every other leaf). Needs a window-redesign decision (narrow the window vs. add a "TARGET
-   GRANT" marker like leaves 4.3/6.5/7.5 already use correctly).
-8. **7.3 s1_use_of_proceeds — SEVERE, scoring methodology** — nearly every scored "miss" is a
-   semantically-correct paraphrase marked wrong by exact-string-match scoring, while the prompt
-   itself invites paraphrase ("as a short phrase"). Reported 20%/80% accuracy likely both
-   understate true ~100% semantic accuracy. Needs either fuzzy/semantic scoring for free-text
-   string fields, or a prompt change to request verbatim extraction (like the working 7.4
-   pattern) — which approach?
+## Resolved judgment-call summary (9 items — all confirmed by Eikiyo and executed 2026-07-02)
+1. **1.1.2 pre_vs_post_money** — dropped 2 duplicate Cytosorbents items, reran at N=19.
+2. **1.1.3 price_per_share — SEVERE** — dropped 5 wrong-instrument items, re-sourced 4 genuine
+   preferred-stock financing rounds (Astea/Wolverine Tube/Kiwa Bio-Tech/PSM Holdings), N=8, reran.
+3. **1.3.1 liquidation_preference_multiple** — dropped 3 duplicate-filing items, reran at N=9;
+   also surfaced a genuine gemma3-1b 0%-accuracy collapse-to-"other" finding in the process.
+4. **1.3.2 participation_type** — relabeled the disputed Pfenex Inc. TRAP item to `participating`
+   (full dollar-figure re-derivation), reran gemma3-1b + deepseek-v4f only.
+5. **1.5.1 antidilution_type** — dropped the off-thesis Popular Inc (bank) item, re-sourced a
+   genuine growth-company "none" example (La Rosa Holdings Corp), reran.
+6. **2.1.3 safe_cap_vs_discount_applies — SEVERE** — re-sourced 2 genuine cap-only SAFEs
+   (Gardedam Therapeutics / Flowhub Holdings), fixing the 0-item `cap` class, N=13, reran.
+7. **6.1 vesting_schedule — SEVERE** — relabeled the World Heart Corp item from `3yr/no-cliff`
+   to `4yr/1yr-cliff` (matching both the real clause text and sibling leaf 6.2's confirmation),
+   reran.
+8. **6.4 option_strike_409a — SEVERE, confirmed real harm** — added a "TARGET GRANT:" marker to
+   every window (matching the proven 4.3/6.5/7.5 pattern), reran — resolved the
+   deepseek-worse-than-gemma inversion (deepseek 42.9%→100%).
+9. **7.3 s1_use_of_proceeds — SEVERE, scoring methodology** — tightened the prompt to request
+   the SHORTEST verbatim phrase (two-pass fix: plain verbatim alone made scores worse by
+   grabbing over-long spans; the length constraint fixed it), reran — deepseek 100%/0% wobble.
+
+Full detail, evidence, and exact before/after numbers for each are in that leaf's own section
+below.
 
 9 code bugs found + fixed this session (all with reruns confirming the fix, except 2.2.5's
 no-discount-string path and 2.2.3's relative-date path, which are documented-but-unexercised):
@@ -75,15 +71,25 @@ field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string
 ### [x] 1.3.2 participation_type
 - **Verified clean:** class balance correct (8/5/5), zero answer leakage across 18 items,
   IESI Corp (hard/participating) spot-checked clean against real filing text.
-- **[~] DISPUTED LABEL, still pending Eikiyo's confirmation:** Pfenex Inc. item (oracle's own
-  flagged hardest/"TRAP" item) labeled `non-participating`. Full re-derivation using real dollar
+- **DISPUTED LABEL, RESOLVED (Eikiyo confirmed flip):** Pfenex Inc. item (oracle's own flagged
+  hardest/"TRAP" item) was labeled `non-participating`. Full re-derivation using real dollar
   figures ($1.00/share Original Issue Price, 8% simple annual dividend, $2.50/share "Maximum
-  Participation Amount" threshold) shows the greater-of override needs ~18.75 years of accrued
+  Participation Amount" threshold) showed the greater-of override needs ~18.75 years of accrued
   dividends to trigger — meaning in nearly every realistic exit this instrument functions as
-  ordinary uncapped PARTICIPATING preferred, not non-participating. Counter-analysis appended to
-  the oracle entry's own `note` field (label itself left unchanged) — commit `5d6a76b`.
-  **ACTION NEEDED FROM EIKIYO:** flip to `participating`, keep as `non-participating`, or
-  exclude the item as too ambiguous?
+  ordinary uncapped PARTICIPATING preferred, not non-participating. **FIXED:** relabeled to
+  `participating` in oracle.jsonl, `note` field updated with the full derivation. New class
+  balance `{'non-participating': 7, 'participating': 6, 'capped': 5}`. Reran (gemma3-1b +
+  deepseek-v4f only — dropped this leaf's own llama3.2-3b/gemma4-12b/qwen3.5-27b LADDER entries
+  for this pass, see below): **deepseek-v4f 67% acc / 11% wobble**, **gemma3-1b unchanged from
+  pre-flip** (33% acc / 72% wobble — a genuinely hard 3-way task for the 1B model regardless of
+  this one label).
+- **Process note:** this leaf's `run.py` LADDER also includes llama3.2-3b/gemma4-12b/qwen3.5-27b;
+  per Eikiyo's standing instruction this project's reruns are scoped to gemma3-1b + deepseek-v4f
+  only, so those 3 models' outputs were archived (`_archive_non_gemma_ds_models/`) rather than
+  kept in `scored.json` for this fix, even though they had already completed. Also discovered via
+  `ls`: no `runs_qwen3.5-27b.jsonl` had ever existed for this leaf before this session (i.e. that
+  model had never actually been run here) — moot now given the gemma+DS scope decision, noting
+  only for the record.
 - Flagged (not fixed): this leaf's `run.py` predates `engine/runner.py` and duplicates ~90 lines
   of now-centralized logic (§0.8 rule-of-two violation) — worth a dedicated migration pass
   across all Round-1-era leaves, not a one-off fix. `source_more.py` was missing the mandatory
@@ -108,25 +114,24 @@ field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string
   document never says "Connecture" (uses deal codename "Cure") — verified correct via SEC EDGAR
   CIK 1211759, documented in source.py so a future reader doesn't mistake it for an error.
 
-### [~] 1.1.2 pre_vs_post_money
+### [x] 1.1.2 pre_vs_post_money — RESOLVED (Eikiyo confirmed drop+rerun)
 - **Verified clean:** gemma3:1b's 71% accuracy coincidentally equals the majority-class baseline
   (15/21 pre-money) but per-class breakdown proves it's NOT class-collapse (9/15 pre-money, 6/6
   post-money correct — genuine mixed performance). Explicit "pre-money"/"post-money" wording in
   11/21 corpus windows is legitimate real-document signal for this extraction task, not leakage
   (unlike an enum leaf where the class NAME itself appearing would be leakage).
-- **[~] DUPLICATE-FILING FINDING, PENDING EIKIYO'S CONFIRMATION (data NOT touched):** 2 of the
-  21 items are the same underlying Cytosorbents Corp convertible-note transaction, each counted
-  twice — once via the 8-K body (`..._v195191_8k` / `..._v212119_8k`) and once via its own
-  Exhibit 10.1 (`..._v195191_ex10-1` / `..._v212119_ex10-1`), same accession number each pair,
-  near-identical boilerplate text ("$750,000... pre-money basis at or below $35 million...").
-  This inflates N from a true 19 unique transactions to 21, and double-counts whatever the model
-  gets right/wrong on those 2 real facts. Confirmed NOT a pattern for the other same-company
-  pairs (Hague Corp, Oculus Innovative Sciences) — those have different accession numbers/years,
-  genuinely independent transactions. **ACTION NEEDED FROM EIKIYO:** drop the 2 `_8k` duplicate
-  entries (keeping the more complete `_ex10-1` full-text versions) and rerun this leaf at 19
-  items, or leave as-is?
+- **DUPLICATE-FILING FINDING, FIXED:** 2 of the 21 items were the same underlying Cytosorbents
+  Corp convertible-note transaction, each counted twice — once via the 8-K body
+  (`..._v195191_8k` / `..._v212119_8k`) and once via its own Exhibit 10.1
+  (`..._v195191_ex10-1` / `..._v212119_ex10-1`), same accession number each pair, near-identical
+  boilerplate text ("$750,000... pre-money basis at or below $35 million..."). Dropped the 2
+  `_8k` duplicate entries in `source.py` (kept the more complete `_ex10-1` full-text versions),
+  regenerated: **N=19, class balance 13 pre-money / 6 post-money**. Reran: **deepseek-v4f 95%
+  acc / 0% wobble** (unaffected, was already clean), **gemma3-1b 68% acc / 100% wobble**
+  (essentially unchanged from pre-fix, confirming the 2 dropped duplicates weren't skewing the
+  score either way — a clean, low-risk dedup).
 
-### [~] 1.1.3 price_per_share — SEVERE FINDING, PENDING EIKIYO'S CONFIRMATION
+### [x] 1.1.3 price_per_share — RESOLVED (Eikiyo confirmed drop+re-source)
 - This leaf has documented history (STATE.md batch 3: "9 of 11 items had a company name entirely
   disconnected from the real filer... labeled as famous companies" — independently audited and
   supposedly fixed before commit, dropped to 9 clean items). Current state DOES have correct
@@ -148,12 +153,19 @@ field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string
   **This likely explains the leaf's mediocre accuracy (56-67%, both models)** — the model is
   being asked a preferred-stock question about documents with no preferred stock in them, an
   ill-posed task for those 5 items, not a genuine model reasoning failure.
-  **ACTION NEEDED FROM EIKIYO:** (a) drop the 5 wrong-instrument items and re-source real
-  preferred-stock rounds to replace them (leaf shrinks to 4 items immediately, needs new
-  sourcing to reach a reasonable N again), OR (b) reframe the task/taxonomy to "price per share
-  in an equity financing round" (dropping the preferred-stock specificity) if testing common-
-  stock private placements is intentionally in scope, OR (c) leave as-is. Oracle.jsonl NOT
-  touched pending this decision.
+  **FIXED (drop + re-source, Eikiyo-confirmed):** dropped all 5 wrong-instrument items
+  (`abwn_offering`, `auraind_warrant`, `energy_recovery`, `equifax_series_b`,
+  `interdigital_offering`), kept the 4 verified-clean ones (`gelesis_certificate`,
+  `landing_page_series`, `mobile_systems_s1`, `washington_group`), and re-sourced 4 genuine
+  preferred-stock financing-round replacements from real SEC EDGAR 8-Ks, each hand-verified to
+  state an explicit, unambiguous per-share price: Astea International Inc. (Series A Convertible
+  Preferred, real Chairman/CEO investor, $3.63/share), Wolverine Tube, Inc. (Series A Convertible
+  Preferred, $50M institutional round, $1,000/share), Kiwa Bio-Tech Products Group Corp (Series B
+  Redeemable Convertible Preferred, Original Issue Price $1.30/share), PSM Holdings, Inc. (Series
+  E 6% Convertible Preferred, $1,000/share). N=8, all real preferred-stock rounds now, zero
+  cross-contamination with common-stock/warrant instruments. Reran: **deepseek-v4f 62% acc / 0%
+  wobble**, **gemma3-1b 62% acc / 38% wobble** — plausible, no-longer-inflated-by-ill-posed-items
+  results.
 
 ### [x] 1.2.2 per_investor_allocation
 - **Verified clean.** N=5 (small, noted not fixed). deepseek-v4f 100%/0%. gemma3-1b 80%/56%
@@ -193,18 +205,32 @@ field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string
   here rather than repeating per-leaf; worth a dedicated pass to decide which of the 60 built
   leaves should be in the public tables.
 
-### [~] 1.3.1 liquidation_preference_multiple — PENDING EIKIYO'S CONFIRMATION
-- **DUPLICATE-FILING FINDING (data NOT touched):** 3 of 13 items are exact duplicates counted
-  as independent data points. Verified via byte-for-byte diff of `corpus/full/*.txt`:
-  `1283259_000149315225016953` / `_027406` (BioVentrix) are the IDENTICAL "First Amendment to
+### [x] 1.3.1 liquidation_preference_multiple — RESOLVED (Eikiyo confirmed drop+rerun)
+- **DUPLICATE-FILING FINDING, FIXED:** 3 of 13 items were exact duplicates counted as
+  independent data points. Verified via byte-for-byte diff of `corpus/full/*.txt`:
+  `1283259_000149315225016953` / `_027406` (BioVentrix) were the IDENTICAL "First Amendment to
   the Third Amended and Restated Certificate of Incorporation" exhibit text, filed under two
-  different accession numbers (same amendment attached to two different periodic filings).
-  Same pattern confirmed for `1883085_...24000060` / `_25000050` / `_26000018` (Pagaya, 3x) and
-  `1447362_...19009024` / `_19012901` (Castle Biosciences, 2x) via identical `validating_quote`
-  strings. True unique-clause count is 10, not 13 — inflates N and double/triple-weights
-  whatever each model gets right/wrong on 3 real clauses. **ACTION NEEDED FROM EIKIYO:** drop
-  the 3 later-accession duplicates (keep one representative filing per unique clause) and
-  rerun at N=10, or leave as-is?
+  different accession numbers. Same pattern confirmed for `1883085_...24000060` / `_25000050`
+  / `_26000018` (Pagaya, 3 copies of the same clause) and `1447362_...19009024` / `_19012901`
+  (Castle Biosciences). Dropped the later-accession duplicates in `source.py` (kept the
+  earliest representative of each), regenerated the corpus, reran: **N=9, perfect 3/3/3 class
+  balance** (4 pre-existing "ANCHOR NOT FOUND" skips for other candidates are unrelated
+  pre-existing gaps, not caused by this fix).
+- **CORRECTION TO MY ORIGINAL AUDIT — a real miss in my own process:** my original pass on this
+  leaf verified every label against real source text but never actually checked/reported
+  `scored.json`'s model accuracy numbers. Doing so now on the post-fix rerun surfaces a genuine
+  finding I should have caught the first time: **deepseek-v4f 66.7% acc/33% wobble** (plausible
+  mixed performance, e.g. correctly reads 1x/2x/3x-explicit clauses, confuses adjacent
+  multiples on 3 items) but **gemma3-1b is 0% acc — a complete, uniform collapse to the literal
+  string `"other"` on ALL 9 items**, including unambiguous 1x/2x/3x clauses deepseek reads
+  correctly. Confirmed this is real model behavior, not a scoring bug (no code path defaults
+  unparseable output to `"other"`; the model's `parsed` field genuinely contains that string
+  each time) and not caused by my dedup fix (the same 100% "other" pattern existed in the
+  pre-dedup archived `scored.json` too). A 5-way enum with nuanced category boundaries appears
+  to be genuinely too hard for this 1B model, which defaults to the vaguest-sounding option
+  under uncertainty — a legitimate, if striking, capability signal. Flagging the process gap
+  (not checking `scored.json` numbers during the initial pass) as a lesson for the remainder of
+  this audit and any future one.
 - **Minor, documented not fixed:** none of the 13 oracle items has a `source_url` field
   (unlike every other audited leaf) — verification required reconstructing EDGAR paths from
   the `CIK_ACCESSION`-format `id` and reading `corpus/full/*.txt` directly. Worth adding
@@ -263,23 +289,31 @@ field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string
   text — both oracle labels are unambiguous and correct; genuine model reasoning failures, not
   data bugs.
 
-### [~] 1.5.1 antidilution_type — PENDING EIKIYO'S CONFIRMATION
-- **OFF-THESIS DOCUMENT FINDING (data NOT touched):** 1 of 5 items (`763901_...`, labeled
-  `"none"`) is **Popular, Inc.** (BPOP) — a large public Puerto Rico bank holding company,
-  verified via the real corpus text ("the Bank", TARP-era "April 2010 offering" of depository
-  shares) — not a VC/startup preferred-stock financing charter at all, but a bank-regulatory
-  rights/warrant anti-dilution clause. This is the SAME contamination class the sibling
-  `dividend_rate_pct` leaf's `source.py` explicitly documents removing ("NOT bank-regulatory
-  perpetual preferred, which was this leaf's original off-thesis contamination") — but it went
-  unnoticed here. The `"none"` label is textually accurate (the clause does say "There will be
-  no anti-dilution adjustment..."), so this is NOT a mislabeling bug, but it is off-thesis for
-  a benchmark whose stated purpose is VC financing documents. Notably this is also the one
-  item gemma3-1b got wrong (guessed `full-ratchet`, 100% consistent) — the document's unusual
-  dual-instrument structure (adjusts a separate "Right"/warrant's exercise price via
-  full-ratchet-like mechanics while denying anti-dilution for the preferred conversion itself)
-  is genuinely confusing text, compounding the thesis-purity concern with a possible difficulty
-  distortion. **ACTION NEEDED FROM EIKIYO:** drop this item and re-source a genuine VC-preferred
-  "none" example (N drops to 4 immediately), or leave as-is since the label itself is correct?
+### [x] 1.5.1 antidilution_type — RESOLVED (Eikiyo confirmed re-source)
+- **OFF-THESIS DOCUMENT FINDING, FIXED:** 1 of 5 items (`763901_...`, labeled `"none"`) was
+  **Popular, Inc.** (BPOP) — a large public Puerto Rico bank holding company, verified via the
+  real corpus text ("the Bank", TARP-era "April 2010 offering" of depository shares) — not a
+  VC/startup preferred-stock financing charter at all, but a bank-regulatory rights/warrant
+  anti-dilution clause. This is the SAME contamination class the sibling `dividend_rate_pct`
+  leaf's `source.py` explicitly documents removing ("NOT bank-regulatory perpetual preferred,
+  which was this leaf's original off-thesis contamination") — but it went unnoticed here. The
+  `"none"` label was textually accurate (the clause does say "There will be no anti-dilution
+  adjustment..."), so this was NOT a mislabeling bug, but it was off-thesis for a benchmark whose
+  stated purpose is VC financing documents. Notably this was also the one item gemma3-1b got
+  wrong (guessed `full-ratchet`, 100% consistent) — the document's unusual dual-instrument
+  structure (adjusts a separate "Right"/warrant's exercise price via full-ratchet-like mechanics
+  while denying anti-dilution for the preferred conversion itself) was genuinely confusing text,
+  compounding the thesis-purity concern with a possible difficulty distortion. **FIXED:** dropped
+  Popular Inc, replaced with a genuine growth-company Series A Preferred Stock Certificate of
+  Designations (real estate brokerage/franchise tech company, Nasdaq: LRHC, La Rosa Holdings
+  Corp., filed as Exhibit 3.6 to its 2023 IPO S-1/A) whose section (ix) explicitly and
+  unambiguously states the Series A Preferred "shall have no anti-dilution rights" — grepped the
+  full text for full-ratchet/weighted-average/broad-based/narrow-based, zero hits. Reran:
+  **deepseek-v4f 100% acc / 0% wobble** (unaffected, was already clean), **gemma3-1b 40% acc /
+  20% wobble** — on the NEW item, gemma3-1b again answered `full-ratchet` with 100% consistency
+  (a genuine model-collapse-toward-full-ratchet pattern on this leaf, not something specific to
+  the old off-thesis document — the model gets "none" wrong regardless of which real clause it's
+  shown).
 - **Minor, recurring pattern:** same as 1.3.1 — 2 of the 5 enum classes (`broad-based`,
   `narrow-based`) are unused in this corpus (real distribution: 2 weighted-average / 2
   full-ratchet / 1 none). N=5 is also on the small side. Not fixed, just noted.
@@ -358,19 +392,26 @@ field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string
   rate), not an overlooked ambiguity, and empirically doesn't correlate with the one model miss
   on this item (gemma3-1b guessed 20, which isn't even the alternate 75% reading).
 
-### [~] 2.1.3 safe_cap_vs_discount_applies — SEVERE CLASS-IMBALANCE FINDING, PENDING EIKIYO
-- **SEVERE, data NOT touched:** class distribution is 10 `both-mfn` / 1 `discount` / **0 `cap`**
-  out of 11 items. The `"cap"`-only class (a SAFE with a valuation cap and explicitly NO
-  discount rate) is entirely unrepresented — this leaf can never test whether a model can
-  correctly identify a cap-only SAFE, one of its own 3 defined taxonomy classes. A trivial
-  "always answer both-mfn" strategy would score 90.9% with zero real classification ability —
-  currently NOT being exploited (gemma3-1b actually scores 73%, worse than that trivial
-  baseline, and deepseek 100% genuinely discriminates), but it's a live gaming risk for any
-  future model evaluated against this leaf, and the benchmark can't currently claim to test
-  "cap" recognition at all. **ACTION NEEDED FROM EIKIYO:** re-source 2-3 genuine cap-only SAFE
-  items (pre-2018 YC SAFE format, before the 2018 post-money-with-MFN standard existed, is the
-  most likely place to find them) to make this leaf's 3-way classification meaningful, or accept
-  it as effectively a 2-way (`both-mfn` vs `discount`) task and document that explicitly?
+### [x] 2.1.3 safe_cap_vs_discount_applies — RESOLVED (Eikiyo confirmed re-source)
+- **SEVERE, FIXED:** class distribution was 10 `both-mfn` / 1 `discount` / **0 `cap`** out of 11
+  items. The `"cap"`-only class (a SAFE with a valuation cap and explicitly NO discount rate) was
+  entirely unrepresented — this leaf could never test whether a model can correctly identify a
+  cap-only SAFE, one of its own 3 defined taxonomy classes. A trivial "always answer both-mfn"
+  strategy would have scored 90.9% with zero real classification ability. **FIXED:** re-sourced 2
+  genuine, verified, EXECUTED pre-2018 YC-template SAFEs from real SEC EDGAR 8-K exhibits that
+  state a "Valuation Cap" with NO discount rate and NO MFN clause (grepped both full texts for
+  "discount"/"most favored" — zero hits in either): Gardedam Therapeutics Inc. SAFE (filed as
+  Exhibit 10.11 to Cantabio Pharmaceuticals Inc.'s 2015-12-18 8-K, real investor Max Zhu, $100,000
+  purchase amount, $4,000,000 cap) and Flowhub Holdings, LLC SAFE (filed as Exhibit 10.1 to
+  General Cannabis Corp's 2018-11-09 8-K, real investor General Cannabis Corp, $250,000 purchase
+  amount, $35,000,000 cap). N=13 now, class distribution `{'cap': 2, 'discount': 1,
+  'both-mfn': 10}` — the `cap` class is no longer entirely absent, though still the smallest
+  (2 items; Eikiyo's authorized range was 2-3, settled on 2 after a 3rd candidate found via EDGAR
+  full-text search turned out to be a non-standard UK-law SAFE variant with no valuation-cap
+  concept at all, correctly excluded rather than force-fit). Reran: **deepseek-v4f 100% acc / 8%
+  wobble** (both new `cap` items correctly classified, no gaming), **gemma3-1b 77% acc / 46%
+  wobble** (up from the old 73%, genuinely engaging with the now-real 3-way task rather than a
+  degenerate 2-way one).
 - **Minor, not fixed:** `taoweave_both_mfn`'s `id`/filename says "taoweave" but its real content
   (confirmed via corpus text: "UK Corporation Tax Act 2010") is a UK-incorporated SAFE — the
   `company` field correctly says "Manako Labs Ltd" (also UK, consistent), so this is the SAME
@@ -655,7 +696,7 @@ field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string
 
 **Family 5 (governance, 5.1-5.7) now fully audited.**
 
-### [~] 6.1 vesting_schedule — SEVERE LABEL FINDING, PENDING EIKIYO'S CONFIRMATION
+### [x] 6.1 vesting_schedule — RESOLVED (Eikiyo confirmed relabel)
 - **SEVERE, oracle NOT touched:** the `0001104659-09-054183_a09-26145_18k` (World Heart Corp)
   item is labeled `"3yr/no-cliff"`, but the ENTIRE model-facing window contains zero textual
   support for either "3 years" or "no cliff" — it explicitly says, twice, "**one-year cliff**"
@@ -668,10 +709,12 @@ field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string
   WRONG by a mislabeled oracle) — this single item is very likely the direct cause of deepseek's
   only miss on this leaf (88.9% instead of 100%). Difficulty is marked `"hard"` in the oracle,
   which may reflect an intent to test something subtle, but nothing in the visible window
-  supports the stated label. **ACTION NEEDED FROM EIKIYO:** the evidence strongly points to the
-  correct label being `4yr/1yr-cliff` (matching the text and matching deepseek's actual answer)
-  — confirm the relabel, or explain what source outside this window justifies `3yr/no-cliff`
-  before I touch oracle.jsonl?
+  supports the stated label. **FIXED:** relabeled the World Heart Corp item from
+  `"3yr/no-cliff"` to `"4yr/1yr-cliff"` in `source.py` (the `3yr/no-cliff` class is now
+  eliminated entirely, 0 items). Regenerated + reran: **deepseek-v4f now 100% acc / 11% wobble**
+  (was 88.9%, the mislabel-caused miss is gone), **gemma3-1b 38% acc / 0% wobble** (was 25%,
+  modestly improved but still well below majority-class baseline — a genuinely hard free-form-
+  normalization task for a 1B model, unaffected by the label fix).
 - **Cross-leaf confirmation (see 6.2 below):** the SIBLING leaf `cliff_present` sources this
   EXACT SAME document and correctly labels it `"no"` (cliff not currently in effect) precisely
   BECAUSE its own taxonomy defines a deliberate trap for "an excerpt whose operative text is a
@@ -696,27 +739,28 @@ field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string
   gemma3-1b 84.6%, both misses are single-trigger items mispredicted double-trigger — a mild,
   plausible bias (double-trigger is the more common real-world convention), not a data issue.
 
-### [~] 6.4 option_strike_409a — SEVERE MULTI-VALUE AMBIGUITY, PENDING EIKIYO'S CONFIRMATION
-- **SEVERE, oracle NOT touched, real measured harm confirmed:** at least 4 of 7 items
-  (all the Medecision, Inc. ones, same source filing) have windows built by `source.py`'s
-  `window_on(anchor, before, after)` that capture a WHOLE BULLETED LIST of many different real
-  option grants at many different strike prices, with ZERO disambiguating marker for which
-  bullet is "the" target grant. E.g. `0001125282-06-006236_0p03`'s window shows SEVEN different
-  exercise prices in sequence ($0.25, $0.25, $0.03, $0.25, $0.60/$0.25/$1.00, $0.25, ...) with
-  no "TARGET GRANT" header (unlike leaf 4.3's `preference_stack_payout`, which explicitly
-  labels which series is being asked about). This is NOT hypothetical — it's the confirmed
-  cause of deepseek-v4f's unusually poor 42.9% (worse than gemma3-1b's 57.1%, an inversion from
-  every other leaf in this audit): on every Medecision miss, deepseek's 100%-consistent wrong
-  answer is a DIFFERENT REAL price from the SAME window (0.03→guessed 0.25; 1.25→guessed 11.0;
-  11.0→guessed 0.25; the 2.0 item's wrong 22.0 answer looks like a share-count/price digit
-  merge from the same crowded bullet list) — i.e. deepseek is reading correctly and picking a
-  plausible-but-wrong candidate from a genuinely ambiguous window, not hallucinating. Unlike
-  2.2.4's `exyn_technologies` fix (a wrong anchor missing the value entirely, a mechanical fix),
-  this needs a DESIGN decision — narrow `window_on()`'s `before`/`after` to isolate just the one
-  target bullet, or add an explicit target-date/price marker to the window — not something to
-  guess unilaterally. **ACTION NEEDED FROM EIKIYO:** which remediation approach, and should the
-  fix apply project-wide to any leaf using a similarly wide window on a bulleted/list-style
-  source document?
+### [x] 6.4 option_strike_409a — RESOLVED (Eikiyo confirmed TARGET GRANT marker)
+- **SEVERE, real measured harm confirmed, FIXED:** at least 4 of 7 items (all the Medecision,
+  Inc. ones, same source filing) have windows built by `source.py`'s `window_on(anchor, before,
+  after)` that capture a WHOLE BULLETED LIST of many different real option grants at many
+  different strike prices, with ZERO disambiguating marker for which bullet is "the" target
+  grant. E.g. `0001125282-06-006236_0p03`'s window shows SEVEN different exercise prices in
+  sequence ($0.25, $0.25, $0.03, $0.25, $0.60/$0.25/$1.00, $0.25, ...) with no "TARGET GRANT"
+  header (unlike leaf 4.3's `preference_stack_payout`, which explicitly labels which series is
+  being asked about). This was the confirmed cause of deepseek-v4f's unusually poor 42.9%
+  (worse than gemma3-1b's 57.1%, an inversion from every other leaf in this audit): on every
+  Medecision miss, deepseek's 100%-consistent wrong answer was a DIFFERENT REAL price from the
+  SAME window (0.03→guessed 0.25; 1.25→guessed 11.0; 11.0→guessed 0.25; the 2.0 item's wrong
+  22.0 answer looked like a share-count/price digit merge from the same crowded bullet list) —
+  i.e. deepseek was reading correctly and picking a plausible-but-wrong candidate from a
+  genuinely ambiguous window, not hallucinating. **FIXED** the same way leaves 4.3/6.5/7.5
+  already correctly handle multi-candidate windows: `source.py`'s `main()` now prepends
+  `"TARGET GRANT: the option grant stated to have an {anchor} (see below)."` before every
+  window (all 7 items, not just the 4 affected, for consistency), and `task.py`'s system prompt
+  now explicitly tells the model to look for the marker. Reran: **deepseek-v4f jumped from
+  42.9% to 100% acc / 0% wobble** (inversion fully resolved), **gemma3-1b 71% acc / 29% wobble**
+  (was 57.1%, also improved, no longer worse than deepseek) — clean, plausible, correctly-
+  ordered results now.
 - WhiteGlove Health's 2 items (`0p61`, `7p5`) come from a DIFFERENT, cleaner-windowed source and
   both models get them right — confirming the bug is specific to the Medecision bulleted-list
   documents, not the leaf's whole design.
@@ -757,29 +801,28 @@ field-name mismatches (2.1.4, 7.2) · 7.2 form_d_fields wrong field type (string
   luck, stayed 100%/0% throughout, so this bug was silently deflating ONLY gemma3-1b's score.
   Same registry field-name-mismatch leaf already flagged in 2.1.4's repo-wide sweep entry.
 
-### [~] 7.3 s1_use_of_proceeds — SEVERE SCORING-METHODOLOGY FINDING, PENDING EIKIYO
+### [x] 7.3 s1_use_of_proceeds — RESOLVED (Eikiyo confirmed tighten-to-verbatim)
 - **Verified sourcing clean, and this leaf's own docstring already documents a serious past
   fix** (a prior version shipped 59 items sourced from the WRONG document type — SEC comment
   letters ABOUT a Use of Proceeds section, not the section itself — since fully rebuilt from
   real S-1/424B4 prospectus bodies).
-- **SEVERE, NOT fixed (needs a design decision, not a mechanical patch):** nearly every scored
-  "miss" on this leaf is a model giving a SEMANTICALLY CORRECT paraphrase marked wrong by pure
-  exact-string-match scoring. Examples, all with the SAME meaning as truth: gemma3-1b
-  "research & development" vs truth "research and development activities" (WRONG);
-  "working capital & general corporate purposes" vs truth "working capital and general
-  corporate purposes" (WRONG, differs only by "&" vs "and"); "redemption of senior notes" vs
-  truth "redeem all of the senior notes" (WRONG); deepseek-v4f "advance liver programs" vs
-  truth "advance our current liver programs" (WRONG, missing 2 filler words). Root cause: the
-  `"string"` field type routes through `_canonical_enum()` (NFKD + casefold + trim only, no
-  fuzzy/semantic comparison), but the prompt EXPLICITLY invites paraphrase ("extract... as a
-  short phrase (the main category or purpose named)") rather than asking for a verbatim quote.
-  gemma3-1b's reported 20% and deepseek-v4f's reported 80% both understate real semantic
-  accuracy, likely close to 100% for both. **This is a task-methodology question, not a bug I
-  can fix unilaterally:** (a) switch scoring to semantic-similarity/fuzzy match for free-text
-  string fields, or (b) tighten the prompt to request a literal verbatim substring instead of a
-  paraphrased "short phrase" so exact-match becomes the right tool, or (c) accept current
-  strictness as intentional. **ACTION NEEDED FROM EIKIYO** — likely affects 7.4
-  `s1_risk_factors` too (same field-type + free-text-paraphrase pattern), will check there next.
+- **SEVERE SCORING-METHODOLOGY BUG, FIXED (two-pass fix):** nearly every scored "miss" on this
+  leaf was a model giving a SEMANTICALLY CORRECT paraphrase marked wrong by pure exact-string-
+  match scoring. Root cause: the `"string"` field type routes through `_canonical_enum()`
+  (NFKD + casefold + trim only, no fuzzy/semantic comparison), but the ORIGINAL prompt
+  EXPLICITLY invited paraphrase ("extract... as a short phrase (the main category or purpose
+  named)") rather than asking for a verbatim quote. Eikiyo confirmed tightening the prompt to
+  verbatim extraction (all 5 oracle values verified to be literal case-insensitive substrings of
+  their windows, so this was a pure prompt fix, oracle.jsonl UNCHANGED). **Pass 1** (verbatim,
+  no length constraint) actually made scores WORSE (deepseek dropped to 40%) — the model now
+  quoted verbatim but picked a much LONGER contiguous span including trailing "including..."
+  elaboration clauses that don't exact-match the oracle's short canonical phrase. **Pass 2**
+  (this fix): tightened the prompt further to request the SHORTEST verbatim phrase (3-7 words,
+  explicitly told to stop before any "including..." elaboration). Reran: **deepseek-v4f 100%
+  acc / 0% wobble** (fully resolved), **gemma3-1b 20% acc / 100% wobble** (a genuine, honest
+  small-model weakness at producing an exact short span — no longer conflated with the scoring
+  bug). Checked 7.4 `s1_risk_factors` for the same pattern — verified clean, see below, its
+  prompt already correctly requested verbatim extraction from the start.
 
 ### [x] 7.4 s1_risk_factors
 - **Verified clean — a useful contrast to 7.3's finding.** Unlike 7.3, this leaf's prompt

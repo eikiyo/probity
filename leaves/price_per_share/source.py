@@ -4,6 +4,19 @@ Purpose: Build the price_per_share leaf corpus + oracle (1.1.3) from SEC EDGAR
          venture financing documents. Extract the PRICE PER SHARE of preferred stock
          in a priced equity financing round as a bare decimal number (e.g., 2.4384).
          PREFER explicit statements; only include compute (round size / shares) if trivial.
+         WRONG-INSTRUMENT FIX (2026-07-02, adversarial audit, Eikiyo-confirmed): dropped 5 of the
+         original 9 items (abwn_offering, auraind_warrant, energy_recovery, equifax_series_b,
+         interdigital_offering) -- task.py explicitly requires "the PRICE PER SHARE of the
+         preferred stock in the financing round," but all 5 were penny-stock COMMON STOCK
+         private placements / warrant exercises (Reg D Rule 506 offerings) with ZERO mentions of
+         "preferred" anywhere in their windows, an ill-posed task for those items. Re-sourced 4
+         genuine preferred-stock financing-round replacements from real SEC EDGAR 8-Ks, each
+         verified to state an explicit, unambiguous per-share price (not a computed aggregate):
+         Astea International Inc. (Series A Convertible Preferred, real Chairman/CEO investor,
+         $3.63/share), Wolverine Tube, Inc. (Series A Convertible Preferred, $50M institutional
+         round, $1,000/share), Kiwa Bio-Tech Products Group Corp (Series B Redeemable
+         Convertible Preferred, Original Issue Price $1.30/share), PSM Holdings, Inc. (Series E
+         6% Convertible Preferred, $1,000/share). All 4 confirmed real via EDGAR filing indexes.
 Functions: window_on(), main()
 Imports: json, re, pathlib, collections
 """
@@ -19,33 +32,35 @@ FULL = HERE / "corpus" / "full"
 # Value = price per share as decimal (e.g., 2.4384 not "$2.4384")
 # Anchor = the exact phrase in the document that contains the per-share price.
 ITEMS = {
-    "abwn_offering": (
-        "000164033418000855",
-        1.5,
+    # -- 4 real preferred-stock financing-round items added 2026-07-02 (wrong-instrument fix,
+    # Eikiyo-confirmed). Sourced into THIS leaf's own corpus/full/.
+    "astea_series_a": (
+        "000095015908001314",
+        3.63,
         "easy",
-        "purchase price of $1.50 per share",
-        "Airborne Wireless Network"
+        "purchase price of $3.63 per share",
+        "Astea International Inc."
     ),
-    "auraind_warrant": (
-        "000149315226005258",
-        0.0031,
+    "wolverine_series_a": (
+        "000114420407005490",
+        1000.0,
+        "easy",
+        "at a price of $1,000 per share",
+        "Wolverine Tube, Inc."
+    ),
+    "kiwa_series_b": (
+        "000149315217015289",
+        1.30,
         "medium",
-        "purchase price of $0.0031 per share",
-        "IR-MED, INC."
+        "Original Issue Price ($1.30 per share)",
+        "Kiwa Bio-Tech Products Group Corporation"
     ),
-    "energy_recovery": (
-        "000111650209001166",
-        0.025,
+    "psm_series_e": (
+        "000143774914021556",
+        1000.0,
         "easy",
-        "purchase price of $0.025 per share",
-        "General Metals Corporation"
-    ),
-    "equifax_series_b": (
-        "000106299308002839",
-        0.05,
-        "easy",
-        "purchase price of $0.05 per share",
-        "General Metals Corporation"
+        "at a purchase price of $1,000 per share",
+        "PSM Holdings, Inc."
     ),
     "gelesis_certificate": (
         "000119312515142499",
@@ -53,13 +68,6 @@ ITEMS = {
         "medium",
         "The \u201cSeries A-1 Original Issue Price\u201d shall mean $1.26 per s",
         "Gelesis, Inc."
-    ),
-    "interdigital_offering": (
-        "000149315226027047",
-        0.1,
-        "easy",
-        "purchase price of $0.10 per share",
-        "IR-MED, INC."
     ),
     "landing_page_series": (
         "000119312521202695",
@@ -100,6 +108,13 @@ ITEMS = {
 #   Dropped "gefinancial_preferred" (000110465921125637, real company Winc, Inc.): the anchor
 #   contains curly quotes that fail to match after html-to-text normalization in this corpus copy;
 #   rather than chase encoding, dropped (fail-closed) since the leaf already has a healthy count.
+#   Dropped 2026-07-02 (WRONG INSTRUMENT, Eikiyo-confirmed): abwn_offering (Airborne Wireless
+#     Network, 000164033418000855), auraind_warrant (IR-MED Inc., 000149315226005258),
+#     energy_recovery (General Metals Corp, 000111650209001166), equifax_series_b (General
+#     Metals Corp, 000106299308002839), interdigital_offering (IR-MED Inc., 000149315226027047)
+#     -- all common-stock/warrant private placements, zero "preferred" mentions, wrong instrument
+#     for this field's task ("price per share of the preferred stock in the financing round").
+#     See replacement items at the top of this dict.
 
 
 def window_on(text, anchor, before=760, after=760):

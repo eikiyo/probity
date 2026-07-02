@@ -2,7 +2,19 @@
 Location: leaves/safe_cap_vs_discount_applies/source.py
 Purpose: Build safe_cap_vs_discount_applies leaf (2.1.3) — classify whether a SAFE uses cap only,
          discount only, or both cap+discount with MFN (most-favored-nation) clause.
-         Reuses 12 documents from safe_discount_rate corpus.
+         Reuses 12 documents from safe_discount_rate corpus, plus 2 items (2026-07-02,
+         adversarial audit, Eikiyo-confirmed) sourced independently into this leaf's own
+         corpus/full/ to fix a SEVERE class-imbalance finding: the "cap" (cap-only) class had
+         ZERO real items out of 11, meaning the leaf could never test whether a model can
+         recognize a cap-only SAFE -- one of its own 3 defined taxonomy classes. Sourced 2
+         genuine, verified, EXECUTED pre-2018 YC-template SAFEs from real SEC EDGAR 8-K exhibits
+         that state a "Valuation Cap" with NO discount rate and NO MFN clause (grepped both full
+         texts for "discount"/"most favored" -- zero hits in either): Gardedam Therapeutics Inc.
+         SAFE (filed as Exhibit 10.11 to Cantabio Pharmaceuticals Inc.'s 2015-12-18 8-K, real
+         investor Max Zhu, $100,000 purchase amount, $4,000,000 cap) and Flowhub Holdings, LLC
+         SAFE (filed as Exhibit 10.1 to General Cannabis Corp's 2018-11-09 8-K, real investor
+         General Cannabis Corp, $250,000 purchase amount, $35,000,000 cap). Both confirmed via
+         data.sec.gov/submissions as real, correctly-dated filings under their respective CIKs.
 Functions: window_on(), main()
 Imports: json, re, pathlib
 """
@@ -83,6 +95,21 @@ ITEMS = {
         "medium",
         "whichever calculation results in the greater number of Safe Shares",
         "Manako Labs Ltd"),
+    # -- 2 cap-only items added 2026-07-02 (adversarial audit fix, Eikiyo-confirmed) --
+    # These 2 are sourced into THIS leaf's own corpus/full/, not the shared
+    # safe_discount_rate corpus, so main() below checks here first.
+    "gardedam_cap_only": (
+        "0001424884-15-000185_exhibit10-11",
+        "cap",
+        "medium",
+        "if the pre-money valuation is less than or equal to the Valuation Cap",
+        "Gardedam Therapeutics Inc."),
+    "flowhub_cap_only": (
+        "0001398432-18-000125_exh10_01",
+        "cap",
+        "medium",
+        "if the pre-money valuation is less than or equal to the Valuation Cap",
+        "Flowhub Holdings, LLC"),
 }
 
 
@@ -103,13 +130,18 @@ def window_on(text, anchor, before=600, after=1400):
 def main():
     """Build corpus/questions and oracle.jsonl from source documents."""
     SAFE_DISCOUNT_FULL = HERE.parent / "safe_discount_rate" / "corpus" / "full"
+    OWN_FULL = HERE / "corpus" / "full"
 
     (HERE / "corpus" / "questions").mkdir(parents=True, exist_ok=True)
     (HERE / "corpus" / "full").mkdir(parents=True, exist_ok=True)
     oracle = []
 
     for oid, (read_from, classification, diff, anchor, company) in ITEMS.items():
-        p = SAFE_DISCOUNT_FULL / f"{read_from}.txt"
+        # check this leaf's own corpus/full first (independently-sourced items),
+        # fall back to the shared safe_discount_rate corpus (reused items)
+        p = OWN_FULL / f"{read_from}.txt"
+        if not p.exists():
+            p = SAFE_DISCOUNT_FULL / f"{read_from}.txt"
         if not p.exists():
             print(f"MISSING full text {read_from} -- skip")
             continue
@@ -136,7 +168,7 @@ def main():
         for o in oracle:
             f.write(json.dumps(o) + "\n")
 
-    print(f"wrote {len(oracle)} items | classifications: discount={sum(1 for o in oracle if o['safe_cap_vs_discount_applies']=='discount')}, both-mfn={sum(1 for o in oracle if o['safe_cap_vs_discount_applies']=='both-mfn')}")
+    print(f"wrote {len(oracle)} items | classifications: cap={sum(1 for o in oracle if o['safe_cap_vs_discount_applies']=='cap')}, discount={sum(1 for o in oracle if o['safe_cap_vs_discount_applies']=='discount')}, both-mfn={sum(1 for o in oracle if o['safe_cap_vs_discount_applies']=='both-mfn')}")
 
 
 if __name__ == "__main__":

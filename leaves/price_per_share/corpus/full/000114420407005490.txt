@@ -1,0 +1,731 @@
+8-K
+1
+v064621_8k.htm
+
+SECURITIES
+AND EXCHANGE COMMISSION
+Washington,
+D.C. 20549
+____________________
+ 
+FORM
+8-K
+CURRENT
+REPORT
+PURSUANT
+TO SECTION 13 OR 15(d) OF THE
+SECURITIES
+EXCHANGE ACT OF 1934
+____________________
+ 
+Date
+of
+Report (Date of earliest event reported): January 31, 2007
+
+THE
+ALPINE GROUP, INC.
+(Exact
+name of registrant as specified in its charter)
+
+Delaware
+
+ 
+
+000-02249
+
+ 
+
+22-1620387
+
+(State
+or other jurisdiction of incorporation or
+organization)
+
+ 
+
+(Commission
+File Number)
+
+ 
+
+(I.R.S.
+Employer
+Identification
+Number)
+
+ 
+ 
+ 
+ 
+ 
+
+One
+Meadowlands Plaza
+
+East
+Rutherford, New Jersey
+
+ 
+
+07073
+
+(Address
+of principal executive offices)
+
+ 
+
+(Zip
+Code)
+
+ 
+Registrant’s
+telephone number, including area code: (201)
+549-4400
+ 
+Not
+Applicable
+(Former
+name or former address, if changed since last report)
+ 
+ 
+Check
+the
+appropriate box below if the Form 8-K filing is intended to simultaneously
+satisfy the filing obligation of the registrant under any of the following
+provisions:
+ 
+ý
+Written
+communications pursuant to Rule 425 under the Securities Act (17 CFR 230.425)
+
+ 
+¨
+Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17 CFR
+240.14a-12)
+ 
+¨
+Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange
+Act
+(17 CFR 240.14d-2(b))
+ 
+¨
+Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange
+Act
+(17 CFR 240.13e-4(c))
+ 
+ 
+
+ 
+
+ 
+Item
+1.01.   Entry
+into a Material Definitive Agreement.
+ 
+On
+January 31, 2007, The Alpine Group, Inc. (the “Company”), along with Plainfield
+Special Situations Master Fund Limited (“Plainfield,” and together with the
+Company, the “Purchasers”), entered into a Preferred Stock Purchase Agreement
+(the “Preferred Stock Purchase Agreement”) with Wolverine Tube, Inc.
+(“Wolverine”) providing for the issuance and sale to the Purchasers of an
+aggregate of 50,000 shares of Wolverine’s Series A Convertible Preferred Stock
+(the “Series A Preferred Stock”), at a price of $1,000 per share, for a total
+purchase price of $50,000,000 (the “Transaction”). Pursuant to the Preferred
+Stock Purchase Agreement, the Company will purchase 10,000 shares of Series
+A
+Preferred Stock and Plainfield will purchase 40,000 shares of Series A Preferred
+Stock. Each share of Series A Preferred Stock will be convertible into a number
+of shares of Wolverine’s common stock (the “Common Stock”) equal to $1,000
+divided by the Conversion Price. The Conversion Price will be the lesser of
+$1.10 or the arithmetic average of the closing prices of the Common Stock on
+the
+OTC Bulletin Board for the ten consecutive trading days from the public
+announcement on February 1, 2007 of the Transaction. The Conversion Price will
+be subject to customary anti-dilution adjustments.
+ 
+Dividends
+on the Series A Preferred Stock are cumulative and are payable quarterly at
+the
+rate of 8% per annum. Wolverine is entitled to defer dividends in certain
+circumstances. Any deferred dividend will accrue at a rate of 10% per annum
+if
+the dividend payment date is before January 31, 2012 and at a rate of 12% per
+annum if the dividend payment date is on or after January 31, 2012. In addition,
+if at any time more than 120 days after the closing of the Transaction the
+following two conditions are not satisfied:
+ 
+
+o  
+
+the
+number of authorized but unissued and otherwise unreserved shares
+of
+Common Stock is sufficient to permit the conversion of the Series
+A
+Preferred Stock into Common Stock; and,
+
+ 
+
+o  
+
+the
+shares of Common Stock into which the Series A Preferred Stock is
+convertible are registered for resale under the Securities
+Act,
+
+ 
+then
+the
+dividend rate on the Series A Preferred Stock will increase by 0.50% for each
+quarter in which those two conditions remain unsatisfied, up to a maximum
+increase of 2%.
+ 
+The
+Series A Preferred Stock is mandatorily redeemable at par plus any accrued
+and
+unpaid dividends on January 31, 2017 and upon the occurrence of certain change
+of control transactions that are not approved by at least five of the members
+of
+Wolverine’s board of directors. Wolverine may redeem all, but not less than all,
+of the Series A Preferred Stock at its option, at par plus any accrued and
+unpaid dividends, at any time on or after January 31, 2014, but only if the
+two
+conditions described in the preceding paragraph are satisfied on each trading
+day between the delivery of the notice of redemption and the redemption
+date.
+ 
+The
+holders of Series A Preferred Stock will be entitled to vote with the holders
+of
+Common Stock on all matters on which holders of Common Stock are entitled to
+vote, including, without limitation, the election of directors. Each holder
+of
+Series A Preferred Stock will be entitled to a number of votes in respect of
+the
+Series A Preferred Stock owned by it equal to the number of shares of Common
+Stock into which such holder's Series A Preferred Stock is then convertible,
+subject to the limitations described below. Pursuant to the Certificate of
+Designations of the Series A Preferred Stock and a Voting Agreement among
+Wolverine and the Purchasers to be entered into at the closing of the
+Transaction (the “Voting Agreement”), for so long as any of Wolverine's 10.5%
+Senior Notes due 2009 are outstanding, no Purchaser (together with any other
+person with whom that Purchaser would be considered a “person” (as that term is
+used in Sections 13(d) and 14(d) of the Securities Exchange Act) with respect
+to
+the Series A Preferred Stock or the Common Stock) may vote Common Stock and
+Series A Preferred Stock in excess of 49% of the total voting power of all
+voting securities of Wolverine.
+ 
+
+2
+
+The
+Preferred Stock Purchase Agreement provides that Wolverine will conduct a rights
+offering (the “Rights Offering”) as soon as practicable after the closing of the
+Transaction. Pursuant to the Rights Offering, the existing stockholders of
+Wolverine (excluding the Purchasers) will receive, pro rata in proportion to
+the
+number of shares of Common Stock owned by them, transferable rights to purchase,
+in the aggregate, up to $51,100,000 of Common Stock to be issued by Wolverine
+at
+a price per share equal to the Conversion Price. If the gross proceeds to
+Wolverine from the Rights Offering are less than $25,000,000, the Purchasers
+have agreed to acquire additional shares of Series A Preferred Stock (“Standby
+Shares”), at the price of $1,000 per share, in an amount such that the sum of
+the total purchase price of such Standby Shares and the gross proceeds to
+Wolverine from the Rights Offering will equal $25,000,000. The Standby Shares
+(if applicable) must be purchased within 45 days after the closing of the Rights
+Offering. If the Purchasers own Series A Preferred Stock (including any Standby
+Shares, if applicable) representing less than 55% of the outstanding Common
+Stock on an as-converted, fully diluted basis after the closing of the Rights
+Offering, each Purchaser would have an option, exercisable until 90 days after
+the closing of the Rights Offering, to purchase its pro rata share of the number
+of additional shares of Series A Preferred Stock, at the price of $1,000 per
+share, that would be sufficient to increase the Purchasers’ aggregate ownership
+to 55% of Common Stock on an as-converted, fully diluted basis (“Option
+Shares”).
+ 
+Pursuant
+to a Letter Agreement between the Purchasers entered into on January 31, 2007
+(the “Letter Agreement”), the Company agreed to purchase a number of shares of
+Series A Preferred Stock representing 20% of the Standby Shares, and Plainfield
+agreed to purchase a number of shares of Series A Preferred Stock representing
+80% of the Standby Shares, in each case if applicable. The Purchasers also
+agreed that the Company would have the first option to purchase the Option
+Shares, if applicable, up to an amount such that the Company’s aggregate equity
+ownership of Wolverine acquired pursuant to the Preferred Stock Purchase
+Agreement, including any Standby Shares and Option Shares, if applicable, and
+including any option to be issued to the Company under an incentive equity
+plan
+of Wolverine, equals 25% of the fully diluted equity of Wolverine. If the
+Company exercises its option pursuant to the preceding sentence, the Company
+also has the right, exercisable during the 60-day period following the
+expiration of the right of the Purchasers to purchase Option Shares under the
+Preferred Stock Purchase Agreement, to purchase from Plainfield up to a number
+of shares of Series A Preferred Stock and/or Common Stock such that the
+Company’s aggregate equity ownership of Wolverine acquired pursuant to the
+Preferred Stock Purchase Agreement, including such purchase from Plainfield
+and
+including any option to be issued to the Company under an incentive equity
+plan
+of Wolverine, equals 25% of the fully diluted equity of Wolverine.
+ 
+The
+Preferred Stock Purchase Agreement also provides that Wolverine will conduct
+a
+registered exchange offer as promptly as practicable after the closing of the
+Transaction. In the exchange offer, Wolverine will offer to issue $1,000
+principal amount of senior notes similar to its existing 10.5% Senior Notes
+due
+2009, but with less restrictive covenants, in exchange for each $1,000 principal
+amount of its 7.375% Senior Notes due 2008 validly tendered or such other
+exchange of Wolverine’s outstanding debt securities for new securities as may be
+agreed between Wolverine and the Purchasers. Wolverine will also seek consents
+to amend the Indenture under which the 7.375% Senior Notes due 2008 were issued
+to remove substantially all of the restrictive covenants contained therein.
+Pursuant to the Preferred Stock Purchase Agreement, the Purchasers have agreed
+that they will cause to be tendered all of the 7.375% Senior Notes due 2008
+owned by them and at least $25,000,000 principal amount of the 7.375% Senior
+Notes due 2008 in the exchange offer. Pursuant to the Letter Agreement,
+Plainfield agreed to solely assume the obligation of the Purchasers to cause
+to
+be tendered at least $25,000,000 principal amount of the 7.375% Senior Notes
+due
+2008.
+ 
+
+3
+
+ 
+Four
+of
+the existing directors of Wolverine have agreed to resign from its board of
+directors and the board of directors has resolved to reduce the number of
+directors from eight members to seven and to appoint Steven S. Elbaum, Chairman
+and Chief Executive Officer of the Company, K. Mitchell Posner, Executive Vice
+President of the Company, Alan Kestenbaum and Brett Young as directors to fill
+the four vacancies remaining after the resignations and reduction of the size
+of
+the board of directors, all contingent upon the closing of the Transaction.
+Mr.
+Elbaum will become Wolverine’s Chairman. For so long as the voting rights of the
+Purchasers are limited as described in the preceding paragraph and the
+Purchasers collectively own in the aggregate at least 50% of the shares of
+the
+Series A Preferred Stock purchased at the closing of the Transaction or of
+the
+Common Stock issued upon conversion of such Series A Preferred Stock, Wolverine
+has agreed that its board of directors will consist of not more than seven
+members and that Wolverine will use commercially reasonable efforts to ensure
+that at least four persons designated by the Purchasers remain on the board
+of
+directors at all times.
+ 
+In
+order
+to have a sufficient number of authorized shares of Common Stock to issue upon
+exercise of the rights distributed in connection with the rights offering
+(including any Standby Shares and any Option Shares) and upon conversion of
+the
+Series A Preferred Stock, Wolverine will have to convene a meeting of its
+stockholders to vote on an amendment of its Restated Certificate of
+Incorporation to increase the number of authorized shares of Common Stock from
+40,000,000 to 175,000,000 (or such greater number as Wolverine’s board of
+directors may authorize). The holders of the Series A Preferred Stock will
+be
+entitled to vote at this meeting, subject to the limits described
+above.
+ 
+Wolverine
+has agreed not to, in the period between the signing date and the closing date
+of the Transaction:
+ 
+
+o  
+
+solicit
+bids or initiate offers or discussions or negotiations with,
+or
+
+ 
+
+o  
+
+on
+an unsolicited basis furnish or cause to be furnished any information
+concerning Wolverine to,
+
+ 
+
+4
+
+any
+other
+person relating to any proposal with respect to any merger or consolidation
+of
+Wolverine with any other person, the acquisition or disposition of any
+securities or any significant portion of the assets and properties of Wolverine,
+or any liquidation, dissolution, restructuring or recapitalization of Wolverine
+(an “Alternative Restructuring”). However, Wolverine will be released from these
+restrictions if Wolverine’s board of directors determines that any Alternative
+Restructuring is superior to the transactions contemplated by the Preferred
+Stock Purchase Agreement and if the board of directors determines that in the
+exercise of its fiduciary duties it is required to pursue that Alternative
+Restructuring.
+ 
+The
+Preferred Stock Purchase Agreement may be terminated in the following
+circumstances:
+ 
+
+o  
+
+by
+the mutual consent of Wolverine and each Purchaser (so long as Wolverine
+is not in material breach of any of the provisions of the Preferred
+Stock
+Purchase Agreement);
+
+ 
+
+o  
+
+by
+any Purchaser if the closing of the Transaction has not occurred
+by
+February 28, 2007 or if Wolverine is in material breach of its obligations
+under the Preferred Stock Purchase Agreement;
+or
+
+ 
+
+o  
+
+by
+Wolverine, if necessary to pursue an Alternative Restructuring in
+accordance with the preceding
+paragraph.
+
+ 
+Pursuant
+to the Letter Agreement, if any Purchaser elects to terminate the Preferred
+Stock Purchase Agreement because the closing of the Transaction has not occurred
+by February 28, 2007, then the non-terminating Purchaser may elect to accept
+an
+assignment of all of such terminating Purchaser’s rights and obligations under
+the Preferred Stock Purchase Agreement, in which case the Preferred Stock
+Purchase Agreement shall not be terminated.
+ 
+Wolverine
+has agreed to reimburse the Purchasers for certain fees and expenses incurred
+by
+them in connection with the Transaction. In addition, Wolverine will be
+obligated to pay the Investors a termination fee of $4,000,000, less the amount
+of certain expenses reimbursed, if the Preferred Stock Purchase Agreement is
+terminated prior to the closing in the following circumstances:
+ 
+
+o  
+
+any
+Purchaser terminates the Preferred Stock Purchase Agreement because
+Wolverine has violated its obligations with respect to Alternative
+Restructurings;
+
+ 
+
+o  
+
+any
+Purchaser terminates the Preferred Stock Purchase Agreement if the
+closing
+of the Transaction has not occurred by February 28, 2007 (unless
+the
+failure to close by that date is due solely to a breach of the Preferred
+Stock Purchase Agreement by such Purchaser) or if Wolverine is in
+material
+breach of its obligations under the Preferred Stock Purchase Agreement,
+and in either case Wolverine consummates an Alternative Restructuring
+within one year after the termination;
+or
+
+ 
+
+o  
+
+Wolverine
+terminates the Preferred Stock Purchase Agreement to pursue an Alternative
+Transaction as permitted by the Preferred Stock Purchase
+Agreement.
+
+ 
+
+5
+
+Pursuant
+to a Registration Rights Agreement to be entered into by Wolverine and the
+Purchasers at the closing of the Transaction (the “Registration Rights
+Agreement”), Wolverine will agree to file a shelf registration statement
+registering the resale of the Series A Preferred Stock and the shares of Common
+Stock into which the Series A Preferred Stock is convertible and to grant one
+“demand” registration right and unlimited “piggyback” registration rights to the
+holders of the Series A Preferred Stock and any Common Stock into which the
+Series A Preferred Stock is convertible.
+ 
+At
+the
+closing of the Transaction, Wolverine and the Company will enter into an
+agreement for a two-year period (the “Management Agreement”) pursuant to which
+the Company will provide Wolverine with certain services in exchange for an
+annual fee of $1,250,000 and reimbursement of reasonable and customary expenses
+incurred by Wolverine.
+ 
+The
+representations and warranties in the Preferred Stock Purchase Agreement are
+the
+product of negotiations among Wolverine and the Purchasers and are for the
+sole
+benefit of the parties thereto. Any inaccuracies in such representations and
+warranties are subject to waiver by the parties to the Preferred Stock Purchase
+Agreement in accordance with the Preferred Stock Purchase Agreement without
+notice or liability to any other person. In some instances, the representations
+and warranties in the Preferred Stock Purchase Agreement may represent an
+allocation among Wolverine and the Purchasers of risks associated with
+particular matters regardless of the knowledge of any of the parties to the
+Preferred Stock Purchase Agreement. Consequently, persons other than Wolverine
+and the Purchasers may not rely upon the representations and warranties in
+the
+Preferred Stock Purchase Agreement as characterizations of actual facts or
+circumstances as of the date of the Preferred Stock Purchase Agreement or as
+of
+any other date.
+ 
+Under
+the
+Preferred Stock Purchase Agreement, prior to the closing of the Transaction,
+Wolverine and Johann R. Manning, Jr., President and Chief Executive Officer
+of
+Wolverine, will enter into a separation agreement (the “Separation Agreement”)
+pursuant to which Mr. Manning will resign as President and Chief Executive
+Officer effective on the closing date of the Transaction, provided that the
+Transaction closes on or before February 28, 2007 (the “Resignation Date”).
+Harold
+M.
+Karp, Senior Vice President of the Company, will become Wolverine’s President
+and Chief Operating Officer .
+ 
+In
+addition, under the Preferred Stock Purchase Agreement, prior to the closing
+of
+the Transaction, Wolverine and Mr. Manning will also enter into a consulting
+agreement (the “Consulting Agreement”) whereby Mr. Manning will provide
+consulting and advisory services to Wolverine following the closing of the
+Transaction, provided that the Transaction closes on or before February 28,
+2007.
+ 
+
+6
+
+The
+foregoing description is qualified in its entirety by reference to the Preferred
+Stock Purchase Agreement and the related agreements attached as exhibits thereto
+to be entered into at the closing of the Transaction and the Letter Agreement.
+The Preferred Stock Purchase Agreement, including the exhibits thereto, is
+filed
+as Exhibit 10.1 to this report. The Letter Agreement is filed as Exhibit 10.2
+to
+this report.
+ 
+Item
+9.01   Financial
+Statements and Exhibits
+ 
+ 
+
+(d)
+Exhibit
+No.
+ 
+Description
+
+ 
+ 
+ 
+ 
+
+ 
+10.1
+ 
+
+Preferred
+Stock Purchase Agreement dated as of January 31, 2007 by and among
+The
+Alpine Group, Inc., Plainfield Special Situations Master Fund Limited
+and
+Wolverine Tube, Inc. (the “Preferred Stock Purchase
+Agreement”).
+
+ 
+ 
+ 
+ 
+
+ 
+10.2
+ 
+Letter Agreement dated as of January
+31, 2007
+between The Alpine Group, Inc. and Plainfield Special Situations Master
+Fund Limited.
+
+ 
+ 
+ 
+ 
+
+ 
+99.1
+ 
+Press release, dated February 1, 2007,
+issued
+by The Alpine Group, Inc. announcing the execution and delivery of
+the
+Preferred Stock Purchase Agreement.
+
+ 
+ 
+*
+* * * *
+*
+ 
+This
+Current Report on Form 8-K includes forward-looking statements, made pursuant
+to
+the “Safe Harbor” provisions of the Private Securities Litigation Reform Act of
+1995, regarding the issuance and sale of the Series A Preferred Stock by
+Wolverine Tube, Inc. Such statements are based on current expectations, as
+well
+as management’s beliefs and assumptions about Wolverine’s business and other
+information currently available. These forward-looking statements are subject
+to
+various risks and uncertainties, including, but not limited to, (i) Wolverine’s
+stockholders’ approval of the amendment to its Restated Certificate of
+Incorporation to increase the number of authorized shares of Common Stock,
+(ii)
+the level of participation by Wolverine’s stockholders in the proposed rights
+offering, (iii) the satisfaction of the conditions to closing contained in
+the
+Preferred Stock Purchase Agreement, and (iv) changes in economic and business
+conditions.   The
+Company undertakes no obligation to publicly release any revision of any
+forward-looking statements contained herein to reflect events or circumstances
+occurring after the date hereof or to reflect the occurrence of unanticipated
+events.
+ 
+
+7
+
+SIGNATURE
+
+Pursuant
+to the requirements of the Securities Exchange Act of 1934, the registrant
+has
+duly caused this report to be signed on its behalf by the undersigned hereto
+duly authorized.
+
+Date:
+February 6, 2007
+
+ 
+ 
+ 
+
+ 
+WOLVERINE
+TUBE,
+INC.
+
+   
+   
+   
+
+ 
+By:  
+/s/ Stewart
+H. Wahrsager
+
+ 
+
+Stewart
+H. Wahrsager
+
+ 
+
+Senior
+Vice President,
+General
+Counsel & Corporate
+Secretary
+
+ 
+
+8
+
+EXHIBIT
+INDEX
+ 
+
+ 
+Exhibit
+No.
+ 
+Description
+
+ 
+ 
+ 
+ 
+
+ 
+10.1
+ 
+
+Preferred
+Stock Purchase Agreement dated as of January 31, 2007 by and
+among The
+Alpine Group, Inc., Plainfield Special Situations Master Fund
+Limited and
+Wolverine Tube, Inc. (the “Preferred Stock Purchase
+Agreement”).
+
+ 
+ 
+ 
+ 
+
+ 
+10.2
+ 
+Letter Agreement dated
+as of
+January 31, 2007 between The Alpine Group, Inc. and Plainfield Special
+Situations Master Fund Limited.
+
+ 
+ 
+ 
+ 
+
+ 
+99.1
+ 
+Press release, dated
+February 1,
+2007, issued by The Alpine Group, Inc. announcing the execution and
+delivery of the Preferred Stock Purchase
+Agreement.
+
+ 
+ 
+
+9

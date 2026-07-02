@@ -22,8 +22,8 @@ oracle" because the search phrase that FOUND a candidate is not proof of what th
 clause actually says once you read the whole thing (this is the project-wide "keyword-is-
 candidate-not-oracle" discipline -- see root vault/mistakes.md).
 
-ADVERSARIAL AUDIT FINDING (2026-07-02, PENDING EIKIYO'S CONFIRMATION -- not yet acted on, the
-oracle.jsonl label below is UNCHANGED as of this note): the "Pfenex Inc." item
+ADVERSARIAL AUDIT FINDING (2026-07-02, RESOLVED -- Eikiyo confirmed the relabel, oracle.jsonl's
+label for this item is now "participating" and the leaf has been rerun): the "Pfenex Inc." item
 (id=1478121_000119312514227132, oracle.jsonl's own hardest/"TRAP" item) is labeled
 "non-participating" with the stated reasoning "MPA implies capped, but MPA is the preference
 amount and the structure is greater-of => non-participating." A full re-read of the item's
@@ -42,12 +42,11 @@ overwhelming majority of real outcomes, this instrument functions as ordinary UN
 PARTICIPATING preferred (fixed preference AND ALSO pro-rata sharing), not non-participating. See
 the full char-by-char verification (window text before/after the extracted clause, the exact
 $1.00 Original Issue Price definition, and the 8% simple-dividend clause) in the audit session
-transcript / vault/mistakes.md. The oracle.jsonl "note" field for this item has been appended
-with this counter-finding (not overwritten) so both readings are visible to a future reader --
-the "participation_type" value itself is left as originally labeled pending explicit sign-off,
-since flipping a human-validated legal classification is a materially different kind of change
-than a mechanical code/rendering fix and this project's own doctrine treats it as EIKIYO'S call,
-not something an AI audit silently overwrites.
+transcript / vault/mistakes.md. The oracle.jsonl "note" field for this item was appended with
+this counter-finding, then Eikiyo explicitly confirmed the relabel on 2026-07-02 -- the
+"participation_type" value was changed from "non-participating" to "participating" and the note
+field updated to record both the original TRAP reasoning and the resolution. This item's leaf
+was rerun after the flip so scored.json reflects the corrected ground truth.
 """
 
 import urllib.request

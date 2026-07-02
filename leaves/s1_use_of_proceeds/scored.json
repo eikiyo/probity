@@ -10,27 +10,27 @@
    "per_instance": [
     {
      "instance_idx": 0,
-     "n_valid": 19,
+     "n_valid": 18,
      "majority_correct": true,
      "strict_correct": false,
      "fields": {
       "s1_use_of_proceeds": {
        "majority": "general corporate purposes",
        "truth": "general corporate purposes",
-       "consistency": 0.8947368421052632
+       "consistency": 0.9444444444444444
       }
      }
     },
     {
      "instance_idx": 1,
-     "n_valid": 20,
+     "n_valid": 19,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "s1_use_of_proceeds": {
-       "majority": "research & development",
+       "majority": "research and development",
        "truth": "research and development activities",
-       "consistency": 0.9
+       "consistency": 0.7368421052631579
       }
      }
     },
@@ -41,35 +41,35 @@
      "strict_correct": false,
      "fields": {
       "s1_use_of_proceeds": {
-       "majority": "clinical development",
+       "majority": "underwriting discounts and commissions",
        "truth": "advance our current liver programs",
-       "consistency": 0.1111111111111111
+       "consistency": 0.4444444444444444
       }
      }
     },
     {
      "instance_idx": 3,
-     "n_valid": 17,
+     "n_valid": 16,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "s1_use_of_proceeds": {
        "majority": "working capital & general corporate purposes",
        "truth": "working capital and general corporate purposes",
-       "consistency": 1.0
+       "consistency": 0.6875
       }
      }
     },
     {
      "instance_idx": 4,
-     "n_valid": 8,
+     "n_valid": 12,
      "majority_correct": false,
      "strict_correct": false,
      "fields": {
       "s1_use_of_proceeds": {
        "majority": "redemption of senior notes",
        "truth": "redeem all of the senior notes",
-       "consistency": 0.75
+       "consistency": 0.5833333333333334
       }
      }
     }
@@ -77,14 +77,14 @@
   },
   "reliability": {
    "task": "s1_use_of_proceeds",
-   "consistency_rate": 0.7311695906432749,
-   "consistency_pct": 73.11695906432749,
+   "consistency_rate": 0.679312865497076,
+   "consistency_pct": 67.93128654970761,
    "field_flips": {
-    "s1_use_of_proceeds": 0.8
+    "s1_use_of_proceeds": 1.0
    },
-   "parse_failure_count": 18,
-   "parse_failure_rate": 0.18,
-   "valid_run_count": 82,
+   "parse_failure_count": 17,
+   "parse_failure_rate": 0.17,
+   "valid_run_count": 83,
    "measurable": true,
    "excluded_fields": []
   }
@@ -95,8 +95,8 @@
    "task": "s1_use_of_proceeds",
    "n_instances": 5,
    "n_measurable": 5,
-   "accuracy_majority": 0.8,
-   "accuracy_strict": 0.4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
    "per_instance": [
     {
      "instance_idx": 0,
@@ -115,25 +115,25 @@
      "instance_idx": 1,
      "n_valid": 20,
      "majority_correct": true,
-     "strict_correct": false,
+     "strict_correct": true,
      "fields": {
       "s1_use_of_proceeds": {
        "majority": "research and development activities",
        "truth": "research and development activities",
-       "consistency": 0.95
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 2,
      "n_valid": 20,
-     "majority_correct": false,
-     "strict_correct": false,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "s1_use_of_proceeds": {
-       "majority": "advance liver programs",
+       "majority": "advance our current liver programs",
        "truth": "advance our current liver programs",
-       "consistency": 0.8
+       "consistency": 1.0
       }
      }
     },
@@ -154,12 +154,12 @@
      "instance_idx": 4,
      "n_valid": 20,
      "majority_correct": true,
-     "strict_correct": false,
+     "strict_correct": true,
      "fields": {
       "s1_use_of_proceeds": {
        "majority": "redeem all of the senior notes",
        "truth": "redeem all of the senior notes",
-       "consistency": 0.85
+       "consistency": 1.0
       }
      }
     }
@@ -167,10 +167,10 @@
   },
   "reliability": {
    "task": "s1_use_of_proceeds",
-   "consistency_rate": 0.9199999999999999,
-   "consistency_pct": 92.0,
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
    "field_flips": {
-    "s1_use_of_proceeds": 0.6
+    "s1_use_of_proceeds": 0.0
    },
    "parse_failure_count": 0,
    "parse_failure_rate": 0.0,

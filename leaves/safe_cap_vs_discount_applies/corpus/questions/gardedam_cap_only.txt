@@ -1,0 +1,17 @@
+Delaware corporation (the “ Company ”), hereby issues to the Investor the right to certain shares of the Company’s capital stock, subject to the terms set forth below.
+ 
+The “ Valuation Cap ” is $4,000,000.  See Section 2 for certain additional defined terms.
+ 
+1.       Events
+ 
+(a)       Equity Financing . If there is an Equity Financing or before the expiration or termination of this instrument, the Company will automatically issue to the Investor a number of shares of Common Stock in the resulting legal entity equal to the Purchase Amount divided by the price per share of the Common Stock, if the pre-money valuation is less than or equal to the Valuation Cap.
+ 
+In connection with the issuance of Common Stock by the Company to the Investor pursuant to this Section 1(a):
+ 
+(i)      The Investor will execute and deliver to the Company all transaction documents related to the Equity Financing; provided, that such documents are the same documents to be entered into with the purchasers of Common Stock, and provided further, that such documents have customary exceptions to any drag-along applicable to the Investor, including, without limitation, limited representations and warranties and limited liability and indemnification obligations on the part of the Investor; and
+ 
+(ii)      The Investor and the Company will execute a Pro Rata Rights Agreement, unless the Investor is already included in such rights in the transaction documents related to the Equity Financing.
+ 
+(b)       Merger . If there is an Merger, comprising either a Reverse Takeover or an IPO, or before the expiration or termination of this instrument, the Company will automatically issue to the Investor a number of shares of Common Stock of the merged or public entity equal to the Purchase Amount divided by the price per share of the Common Stock, if the pre-money valuation is less than or equal to the Valuation Cap.
+ 
+(c)       Liquidity Event .  If there is a Liquidity Event before the expiration or termination of this instrument, the Investor will, at its option, either (

@@ -30,8 +30,12 @@ ITEMS = {
     "0001213900-25-077022_filename6": ("pre-money", "pre-money valuation", "easy"),
     "0000912057-19-000378_filename29": ("pre-money", "pre-money valuation", "easy"),
     "0000950123-14-012213_filename17": ("pre-money", "pre-money valuation", "easy"),
-    "0001144204-10-046527_v195191_8k": ("pre-money", "pre-money basis", "medium"),
-    "0001144204-11-010165_v212119_8k": ("pre-money", "pre-money basis", "medium"),
+    # NOTE (2026-07-02, adversarial audit, Eikiyo-confirmed): the "_8k" variants of these two
+    # Cytosorbents items were REMOVED here -- each was the SAME underlying convertible-note
+    # transaction as its sibling "_ex10-1" item below (same accession number, near-identical
+    # boilerplate text), just cited via the 8-K body instead of its own Exhibit 10.1. Counting
+    # both inflated N from 19 unique transactions to 21 and double-weighted 2 real facts. Kept
+    # the more complete "_ex10-1" full-text versions; see AUDIT_TODO.md for the full finding.
     "0001144204-10-046527_v195191_ex10-1": ("pre-money", "pre-money basis", "medium"),
     "0001193125-11-026716_filename6": ("pre-money", "pre-money valuation", "medium"),
     "0001193125-23-255006_d569281dex991": ("pre-money", "pre-money valuation", "medium"),

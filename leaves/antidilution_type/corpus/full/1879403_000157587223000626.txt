@@ -1,0 +1,406 @@
+EX-3.6
+2
+cm290_ex3-6.htm
+EXHIBIT 3.6
+
+ 
+Exhibit 3.6
+ 
+
+ 
+ 
+
+ 
+CERTIFICATE
+OF DESIGNATIONS, PREFERENCES AND RIGHTS OF
+SERIES A CONVERTIBLE PREFERRED STOCK OF
+ 
+LA
+ROSA HOLDINGS CORP.
+ 
+La
+Rosa Holdings Corp., a corporation organized and existing under the laws of the State of Nevada (the “Company”), hereby
+certifies that the following resolution was adopted by the Board of Directors of the Company on February 10, 2023 in accordance with
+the provisions of its Amended and Restated Articles of Incorporation (the “Articles of Incorporation”) and bylaws.
+ 
+“WHEREAS,
+pursuant to Article III, Section 3.03 of the Articles of Incorporation, the total number of authorized shares of Preferred Stock
+is 50,000,000 shares and the number of authorized, unissued shares of Preferred Stock, as of the date hereof, is 49,998,000 shares.
+ 
+WHEREAS,
+pursuant to Article III, Section 3.03 of the Articles of Incorporation, the Board of Directors of the Company (the “Board”)
+has the authority to authorize the issuance of the Preferred Stock from time to time in one or more classes or series, and to state
+in the resolution or resolutions from time to time adopted providing for the issuance thereof the designations, relative rights, preferences,
+privileges, powers and restrictions of the Preferred Stock.
+ 
+RESOLVED,
+that pursuant to the authority granted to and vested in the Board in accordance with the provisions of the Articles of Incorporation
+and bylaws of the Company, the Board hereby authorizes a series of the Company’s Preferred Stock, and hereby states the designation
+and number of shares, and fixes the relative rights, preferences, privileges, powers and restrictions thereof as follows:
+ 
+
+I. NAME
+OF THE COMPANY
+
+ 
+La
+Rosa Holdings Corp.
+ 
+
+II . DESIGNATION,
+AMOUNT, TERM AND REISSUANCE
+
+ 
+
+A. Designation .
+The designation of said series of preferred stock shall be Series A Convertible Preferred
+Stock, $0.0001 par value per share (the “Series A Preferred Stock”).
+
+ 
+
+B. Number
+of Shares . The number of shares of Series A Preferred Stock authorized shall be 11,000
+shares.
+
+ 
+
+C. Term .
+The term of the Series A Preferred Stock shall be perpetual.
+
+ 
+
+D. Reissuance .
+No shares of Series A Preferred Stock which have been converted to Common Stock shall be
+reissued by the Company; provided, however, that any such share, upon being converted and
+canceled, shall be restored to the status of an authorized but unissued share of Preferred
+Stock without designation as to series, rights or preferences and may thereafter be issued
+as a share of Preferred Stock not designated as Series A Preferred Stock.
+
+ 
+III.
+DIVIDENDS
+ 
+Dividends
+shall not be payable on the Series A Preferred Stock.
+ 
+IV.
+CONVERSION
+ 
+
+A. Mandatory
+Conversion . (i) Each share of the Series A Preferred Stock will automatically convert into shares of the Company’s common
+stock, S0.0001 par value per share (“Common Stock”), upon the earlier of (“Mandatory Conversion
+Date”): (x) the closing date of the Company's initial public offering (“IPO”) of the Common Stock (“IPO
+Conversion”); or (y) upon a Change in Control of the Company (“CiC Conversion”).
+
+ 
+
+(ii) The
+number of shares of Common Stock into which the Series A Preferred Stock will automatically convert shall be calculated as follows:
+
+ 
+
+(a) IPO
+Conversion Ratio: The number of shares of Common Stock into which the Series A Preferred Stock is convertible is equal to the quotient
+of: X divided by the product of (Y multiplied by Z), where:
+
+  
+
+    1 of 5
+ 
+
+ 
+X
+= the total dollar amount invested in the Series A Preferred Stock;
+ 
+Y
+= the initial public offering price of the Common Stock (“IPO Price”) as determined by the Board of Directors; and
+ 
+Z
+= 0.7 (representing a 30% discount off of the IPO Price
+of the Common Stock).
+ 
+Any
+fractional number of shares of Common Stock shall be rounded down to the next lower share number.
+ 
+So
+for example:
+ 
+If
+an investor invested $20,000 in the Series A Preferred Stock and the IPO Price was $5.00, the number of shares of Common Stock that the
+investor would receive on the closing date of the IPO would be 5,714 (rounded down), or $20,000/($5 X 0.7) = 20,000/3.5=5,714 shares
+of Common Stock.
+ 
+
+(b) CiC
+Conversion Ratio: The number of shares of Common Stock into which the Series A Preferred Stock is convertible is equal to the quotient
+of: X divided by the product of (Y multiplied by Z), where:
+
+ 
+X
+= the total dollar amount invested in the Series A Preferred Stock;
+ 
+Y
+= the highest price paid for a share of Common Stock
+during the 12 consecutive months prior to the effective date of the Change in Control by the person, group of persons or the entity who
+acquired control of the Company (the “CiC Price”); and
+ 
+Z
+= 0.7 (representing a 30% discount off of the CiC Price
+of the Common Stock), so for example:
+ 
+If
+an investor has invested $20,000 in the Preferred Stock and the CiC Price was $5.00, the number of shares of Common Stock that investor
+would receive on the closing date of the Change in Control would be 5,714 (rounded down), or $20,000/($5 X 0.7) = 20,000/3.5=5,714 shares
+of Common Stock.
+ 
+
+(iii) For
+purposes of this Certificate of Designation, “Change in Control” is defined as: (a) a change in the ownership of the
+Company which occurs on the date that any person, affiliated or associated group of persons or any entity obtains stock ownership of
+the Company that, together with any previously held stock, constitutes more than 50 percent of the total fair market value or more than
+50 percent of the total voting power of the stock of the Company, as determined by the Board of Directors in its sole discretion; (b)
+any consolidation or merger of the Company with or into another entity (other than a merger or consolidation in which the Company is
+the surviving corporation and in which the Common Stock outstanding immediately prior to the merger or consolidation is not exchanged
+for cash, securities or other property of the Company or another entity); (c) any sale, transfer, lease or conveyance to another person
+or entity of all or substantially all of the property and assets of the Company; or (d) any statutory exchange of securities of the Company
+with another Person (other than in connection with a merger or acquisition).
+
+ 
+
+(iv) Pursuant
+to Article IV.A., on the Mandatory Conversion Date, any outstanding shares of the Series A Preferred Stock shall mandatorily and automatically
+convert into shares of Common Stock. The person or persons entitled to receive the shares of Common Stock issuable upon Mandatory Conversion
+of the Series A Preferred Stock shall be treated as the record holder(s) of such shares of Common Stock as of the close of business on
+the Mandatory Conversion Date. Prior to the close of business on the Mandatory Conversion Date, the Common Stock issuable upon conversion
+of the Series A Preferred Stock shall not be outstanding for any purpose and holders thereof shall have no rights with respect to such
+Common Stock, including voting rights, rights to respond to tender offers and rights to receive any dividends or other distributions
+on the Common Stock, by virtue of holding the Series A Preferred Stock. Shares of the Series A Preferred Stock shall cease to be outstanding
+on the Mandatory Conversion Date, subject to the right of holders of such shares to receive shares of Common Stock issuable upon conversion
+of such shares of the Series A Preferred Stock.
+
+ 
+
+(v) The
+Company shall at all times reserve and keep available out of its authorized and unissued Common Stock, solely for issuance upon the conversion
+of shares of the Series A Preferred Stock as herein provided, free from any preemptive or other similar rights, a number of shares of
+Common Stock equal to the maximum number of shares of Common
+Stock that may be converted by a holder of the Series A Preferred Stock at any time or from time to time. Notwithstanding the foregoing,
+the Company shall be entitled to deliver upon conversion of shares of the Series A Preferred Stock, as herein provided, shares of Common
+Stock reacquired and held in the treasury of the Company (in lieu of the issuance of authorized and unissued shares of Common Stock),
+so long as any such treasury shares are free and clear of all liens, charges, security interests or encumbrances (other than liens, charges,
+security interests and other encumbrances created by the holders of the Series A Preferred Stock).
+
+ 
+
+    2 of 5
+ 
+
+ 
+
+(vi) All
+shares of Common Stock delivered upon conversion of the Series A Preferred Stock shall be duly authorized, validly issued, fully paid
+and non-assessable, free and clear of all liens, claims, security interests and other encumbrances of the Company (other than liens,
+charges, security interests and other encumbrances created by the holders of the Series A Preferred Stock).
+
+ 
+
+(vii) The
+holders of the Series A Preferred Stock have no rights to have the shares of the Series A Preferred Stock or any shares of the Common
+Stock into which the Series A Preferred Stock may convert registered under the Securities Act of 1933, as amended, or any similar state
+statute.
+
+ 
+
+(viii) The
+Company hereby covenants and agrees that, if at any time the Common Stock shall be listed on the Nasdaq Stock Market or any other national
+securities exchange or automated quotation system, the Company shall, if permitted by the rules of such market, exchange or automated
+quotation system, use commercially reasonable efforts to list and keep listed, so long as the Common Stock shall be so listed on such
+market, exchange or automated quotation system, all Common Stock issuable upon conversion of the Series A Preferred Stock; provided,
+however, that the Company shall not be required to list such Common Stock if such Common Stock has not been previously registered
+under the Securities Act of 1933, as amended; and provided further, that if the rules of such market, exchange or automated quotation
+system permit the Company to defer the listing of such Common Stock until the first conversion of the Series A Preferred Stock into Common
+Stock in accordance with the provisions hereof, the Company covenants to use its commercially reasonable efforts to list such Common
+Stock issuable upon the first conversion of the Series A Preferred Stock in accordance with the requirements of such exchange or automated
+quotation system at such time.
+
+ 
+
+(ix) The
+holders of the Series A Preferred Stock shall have no anti-dilution rights, including any rights relating to the Company’s issuance
+of additional shares of Common Stock, the issuance of stock purchase rights, the distribution of cash or additional shares of Common
+Stock or fundamental changes, provided however, that if the Board of Directors authorizes any forward or reverse stock split of
+the Common Stock, the Board shall authorize a split up of the Series A Preferred or make such other equitable adjustment such that the
+holders of the Series A Preferred Stock are able to maintain the right to convert their shares of Series A Preferred Stock into an equivalent
+number of shares of Common Stock after the split of the Common Stock. Such adjustment shall be determined in good faith by the Board
+of Directors (or an authorized committee thereof) and submitted by the Board of Directors (or such authorized committee thereof) to the
+Company’s Transfer Agent. If such a split and adjustment occurs, the Company will provide written notice to the holders of the
+Series A Preferred Stock that will state in reasonable detail how the change in number of shares was determined and the number of shares
+of Series A Preferred then held by such holder.
+
+ 
+
+(x) The
+Company shall not effect the conversion of shares of Series A Preferred Stock, and a holder of Series A Preferred Stock shall not have
+the right to convert any such shares, to the extent that after giving effect to such conversion, such an individual, a corporation, a
+limited liability company, a partnership, an association, a trust or any other entity (“Person” together with such
+Person’s affiliates) would beneficially own in excess of 4.99% (the “Beneficial Ownership Limitation”) of the
+shares of Common Stock outstanding immediately after giving effect to such conversion. For purposes of this paragraph, beneficial ownership
+shall be calculated in accordance with Section 13(d) of the Securities Exchange Act of 1934, as amended. The number of outstanding shares
+of Common Stock shall be determined after giving effect to the conversion of the Series A Preferred Stock by a holder thereof and its
+affiliates since the date as of which such number of outstanding shares of Common Stock was reported by the Company. By written notice
+to the Company, a holder of Series A Preferred Stock may from time to time increase or decrease the Beneficial Ownership Limitation to
+any other percentage specified in such notice; provided that (i) any such increase will not be effective until the sixty-first
+(61st) day after such notice is delivered to the Company, and (ii) any such increase or decrease will apply only to such holder and shall
+not exceed 9.9% of the total outstanding shares of the Company’s Common Stock.
+
+  
+
+    3 of 5
+ 
+
+ 
+
+B. Optional
+Conversion . Holders of the Series A Preferred Stock have no right to convert their shares of Series A Preferred Stock into shares
+of Common Stock or other equity security of the Company.
+
+ 
+V.
+VOTING RIGHTS
+ 
+Holders
+of the Series A Preferred Stock have no right to vote on any matters brought before the stockholders of the Company for a vote except
+as may otherwise be required by Chapter 78 of the Nevada Revised Statutes or any successor to such laws.
+ 
+VI.
+REDEMPTION
+ 
+The
+Series A Preferred Stock is not redeemable by the Company.
+ 
+VII.
+REPURCHASE BY COMPANY
+ 
+If
+the Board determines, in its sole discretion, at any time in the future that it is likely that within nine months tire securities of
+the Company will be held of record by a number of persons that would require the Company to register a class of its equity securities
+under the Securities Exchange Act of 1934, as amended, as required by Section 12(g) of such act, the Company shall have the option to
+repurchase the Series A Preferred Stock (or underlying Common Stock) from a holder for the greater of: (i) the original purchase price
+and (ii) the fair market value of the Series A Preferred Stock (or the underlying Common Stock) as determined by an independent appraiser
+of securities chosen by the Board of Directors in its sole discretion and paid by the Company. This repurchase option terminates upon
+the closing date of the IPO. Nothing in this Certificate of Designation precludes the Company from repurchasing the Series A Preferred
+Stock at any other time in the sole discretion of the Board.
+ 
+VIII.
+LIQUIDATION PREFERENCE
+ 
+In
+the event of any liquidation, dissolution or winding up of the Company, either voluntary or involuntary, the holders of record of shares
+of Series A Preferred Stock shall not be entitled to receive, immediately prior and in preference to any distribution to the holders
+of the Company’s Common Stock and other junior securities, any liquidation preference for their shares of the Series A Preferred
+Stock and shall participate, pari passu, with the holders of the Common Stock and other junior securities in the distribution
+of any remaining assets of the Company after first payment to all creditors of the Company.
+ 
+IX.
+PREEMPTIVE RIGHTS
+ 
+The
+Series A Preferred Stock has no preemptive, preferential or other similar right with respect to the issuance of any equity security of
+the Company, whether unissued, held in the treasury or hereafter created, or any warrants or obligations of the Company.
+ 
+X.
+RANK
+ 
+The
+Series A Preferred Stock shall be subordinated to all Company debt, junior to any senior equity securities of the Company and pari
+passu with the Common Stock.
+ 
+XI.
+OTHER RIGHTS.
+ 
+The
+shares of the Series A Preferred Stock shall not have any rights, preferences, privileges or voting powers or relative, participating,
+optional or other special rights, or qualifications, limitations or restrictions thereof, other than as set forth herein or as provided
+by applicable law.
+ 
+XII.
+NO IMPAIRMENT
+ 
+The
+Company will not, by amendment of its Articles of Incorporation or through any reorganization, transfer of assets, consolidation, merger,
+dissolution, issue or sale of securities or any other voluntary action, avoid or seek to avoid the observance or performance of any of
+the terms to be observed or performed hereunder by the Company, but will at all times in good faith assist in the carrying out of all
+the provisions of this Certificate of Designation and in the taking of all such action as may be necessary or appropriate in order to
+protect the rights of the holders of the Series A Preferred Stock against impairment.
+ 
+
+    4 of 5
+ 
+
+ 
+XIII.
+TAXES
+ 
+The
+Company shall pay any and all stock transfer and documentary stamp taxes that may be payable in respect of any issuance or delivery of
+shares of the Series A Preferred Stock or shares of Common Stock or certificates representing such shares or securities. The Company
+shall not, however, be required to pay any such tax that may be payable in respect of any transfer involved in the issuance or delivery
+of shares of Common Stock or other securities in a name other than that in which the shares of the Series A Preferred Stock with respect
+to which such shares or other securities are issued or delivered were registered, and shall not be required to make any such issuance
+or delivery unless and until the person otherwise entitled to such issuance or delivery has paid to the Company the amount of any such
+tax or has established, to the satisfaction of the Company, that such tax has been paid or is not payable.
+ 
+XIV.
+NOTICES
+ 
+Any
+notices required or permitted to be given under the terms hereof shall be sent by certified or registered mail (return receipt requested)
+or delivered personally, by nationally recognized overnight carrier or by confirmed facsimile or email transmission, and shall be effective
+five (5) days after being placed in the mail, if mailed, or upon receipt or refusal of receipt, if delivered personally or by nationally
+recognized overnight carrier or confirmed facsimile transmission, in each case addressed to a party as set forth below, or such other
+address and telephone and fax number as may be designated in writing hereafter in the same manner as set forth in this Article.
+ 
+If
+to the Company:
+ 
+La
+Rosa Holdings Corp.
+
+Attn:
+Chief Executive Officer
+
+1420
+Celebration Blvd, Suite 200
+
+Celebration,
+Florida 34747
+ 
+If
+to the holders of Series A Preferred Stock, to the address listed in the Company’s books and records.
+ 
+IN
+WITNESS WHEREOF, the undersigned has signed this Certificate of Designation of La Rosa Holdings Corp, as of the 13th day of February,
+2023.
+ 
+
+ 
+LA ROSA HOLDINGS
+CORP.
+
+ 
+ 
+
+ 
+By:
+/s/
+Joseph La Rosa
+
+ 
+ 
+Joseph La Rosa, Chief Executive
+Officer
+
+ 
+
+    5 of 5

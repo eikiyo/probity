@@ -1,0 +1,337 @@
+8-K
+1
+astea8k.htm
+FORM 8K
+
+astea8k.htm
+
+UNITED
+STATES
+SECURITIES
+AND EXCHANGE COMMISSION
+Washington,
+D.C. 20549
+
+FORM
+8-K
+
+CURRENT
+REPORT
+PURSUANT
+TO SECTION 13 OR 15(d)
+OF
+THE SECURITIES EXCHANGE ACT OF 1934
+
+Date of
+Report (Date of earliest event reported):  September 24,
+2008
+
+ASTEA INTERNATIONAL
+INC.
+(Exact
+name of registrant as specified in its charter)
+
+Delaware
+
+0-26330
+
+23-2119058
+
+(State
+or Other Jurisdiction
+of
+Incorporation)
+
+(Commission
+File
+Number)
+
+(I.R.S.
+Employer
+Identification
+No.)
+
+240
+Gibraltar Road
+Horsham,
+Pennsylvania  19044
+(Address
+of principal executive offices, including zip code)
+
+(215)
+682-2500
+(Registrant's
+telephone number, including area code)
+
+Not
+Applicable
+(Former
+name or former address, if changed since last report)
+
+Check the
+appropriate box below if the form 8-K filing is intended to simultaneously
+satisfy the filing obligation of the registrant under any of the following
+provisions:
+
+o      Written
+communications pursuant to Rule 425 under the Securities Act (17 CFR
+230.425)
+o
+Soliciting material pursuant to Rule 14a-12 under the Exchange Act (17
+CFR 240.14a-12)
+o      Pre-commencement
+communications pursuant to Rule 14d-2(b) under the Exchange Act (17
+CFR  240.14d-2(b))
+o
+Pre-commencement communications pursuant to Rule 13e-4(c) under the
+Exchange Act (17 CFR  240.13-4(c))
+ 
+
+ 
+
+ 
+
+ 
+
+Item
+1.01.  Entry into a Material Definitive Agreement.
+
+On
+September 24, 2008, Astea International Inc. (the “ Company ”)
+entered into a preferred stock purchase agreement (the “ Preferred Stock
+Purchase Agreement ”) with Zack Bergreen, the Company’s Chairman, Founder
+and Chief Executive Officer (the “ Purchaser ”),
+for the private placement of 826,446 shares (the “ Shares ”)
+of newly designated Series A Convertible Preferred Stock of the Company (the
+“ Series
+A Preferred
+Stock ”), for a purchase price of $3.63 per share and an aggregate
+investment of $3,000,000 (the “ Private Placement
+Transaction ”).   The per share purchase price was
+determined using a formula which took as the price the greater of (i) the
+average closing bid price of a share of the common stock of the Company (the
+“ Common
+Stock ”) on the NASDAQ Capital Market for the 30 trading days ending two
+trading days prior to the date of the purchase of the Series A Preferred Stock
+and (ii) 110% of the closing bid price of the Common Stock on the NASDAQ Capital
+Market on the date of the purchase.    Pursuant to the terms
+of the Preferred Stock Purchase Agreement, the Company also granted the
+Purchaser certain registration rights in the event the Company elects to file a
+registration statement with the Securities and Exchange Commission relating to
+an offering of its equity securities under the Securities Act of 1933, as
+amended (the “ Securities
+Act ”).  The audit committee (the “ Audit
+Committee ”) of the board of directors of the Company (the “ Board of
+Directors ”), consisting of three independent directors, negotiated and
+unanimously approved the Private Placement Transaction.
+
+Pursuant
+to the terms of the Certificate of Designation of Series A Convertible Preferred
+Stock (the “ Certificate of
+Designation ”), the Series A Preferred Stock is convertible into shares of
+Common Stock on a one-to-one ratio, subject to customary anti-dilution
+provisions.  The Series A Preferred Stock will pay a quarterly
+dividend, which will accrue at an annual rate of 6% of the purchase price,
+subject to certain rate adjustments as provided for under the Certificate of
+Designation.  The Purchaser may convert up to 40% of his Shares during
+the first six months following issuance of the Series A Preferred Stock, and
+thereafter, may convert up to 100% of his Shares at any time.  The
+Company has the right to redeem up to 60% of the Series A Preferred Stock at its
+option during the first six months following issuance, at a price equal to 110%
+of the purchase price plus all accrued and unpaid dividends.  Such
+conversion and redemption rights during the initial six month period following
+issuance of the Series A Preferred Stock are not applicable in the event certain
+change of control events occur.   Pursuant to the terms of the
+Certificate of Designation, commencing on the second anniversary of the date of
+issuance of the Series A Preferred Stock, the Company may cause all Series A
+Preferred Stock then outstanding to convert into Common Stock if the closing
+price of the Common Stock, as reported on the principal exchange on which the
+Common Stock is traded, exceeds 300% of the then current conversion price for 30
+consecutive trading days.  Commencing on the fourth anniversary of the
+date of issuance of the Series A Preferred Stock, the Company may redeem all
+Series A Preferred Stock then outstanding at a price equal to the greater of (i)
+130% of the purchase price plus all accrued and unpaid dividends and (ii) the
+fair market value of such number of shares of Common Stock which the holder of
+the Series A Preferred Stock would be entitled to receive had the redeemed
+Series A Preferred Stock been converted immediately prior to the
+redemption.
+
+Copies of
+the Preferred Stock Purchase Agreement, the Certificate of Designation and the
+Company’s press release dated September 25, 2008 announcing the Private
+Placement Transaction, are filed as Exhibit 10.1, Exhibit 3.1 and Exhibit 99.1,
+respectively, to this Current Report on Form 8-K and are incorporated herein by
+reference.  The description of the material terms of the Preferred
+Stock Purchase Agreement is qualified in its entirety by reference to Exhibit
+10.1.  The description of the material terms of the Certificate of
+Designation is qualified in its entirety by reference to Exhibit
+3.1.
+
+Item
+3.02.  Unregistered Sales of Equity Securities.
+
+The
+information set forth under Item 1.01 of this Current Report is incorporated
+herein by reference.
+
+The
+Company issued the Shares in the Private Placement Transaction in reliance on
+the exemption from registration provided for under Section 4(2) of the
+Securities Act, and Rule 506 of Regulation D thereunder.  The Company
+relied on the exemption from registration provided for under Section 4(2) of the
+Securities Act based in part on the representations made by the Purchaser,
+including the representations with respect to the Purchaser’s status as an
+accredited investor, as such term is defined in Rule 501(a) of the Securities
+Act, and the Purchaser’s investment intent with respect to the Shares
+purchased.
+
+ 
+
+ 
+ 
+Item
+5.03.  Amendments to Articles of Incorporation or Bylaws; Change in
+Fiscal Year.
+
+The information set forth under Item
+1.01 of this Current Report is incorporated herein by reference.
+
+On
+September 25, 2008, the Company filed the Certificate of Designation with the
+Secretary of State of the State of Delaware.  The Board of Directors
+authorized and approved this filing on September 24, 2008 in connection with the
+creation, reservation and designation of 826,446 shares of a series of preferred
+stock as Series A Preferred Stock.
+
+Item
+9.01.  Financial Statements and Exhibits.
+
+(d)
+
+The
+following exhibits are furnished with this Current Report on Form
+8-K:
+
+ 
+
+ 
+
+3.1
+
+Certificate of Designation of Series A Convertible
+Preferred Stock
+
+ 
+
+ 
+
+10.1
+
+Preferred Stock Purchase Agreement by and between Astea
+International Inc. and Zack Bergreen, dated September 24,
+2008
+
+ 
+
+ 
+
+99.1
+
+Press Release Astea International Inc. dated September
+25, 2008
+
+Rule 135c
+Statement
+
+This
+Current Report on Form 8-K and the attached exhibits are being filed pursuant to
+Rule 135c under the Securities Act and do not constitute an offer to sell or the
+solicitation of an offer to buy, nor shall there be any sale of these securities
+in any state or jurisdiction in which such offer, solicitation or sale would be
+unlawful prior to registration or qualification under the securities laws of any
+such state or jurisdiction.
+
+Forward
+Looking Statements
+
+This
+Current Report on Form 8-K contains forward-looking statements and expectations
+of future results that are made under the “safe harbor” provisions of the
+Private Securities Litigation Reform Act of 1995 and involve a number of risks
+and uncertainties that could materially affect future results. Among these risk
+factors are the continuing acceptance of the Company’s products, general
+competitive pressures in the marketplace, and continued overall growth in the
+customer relationship management solutions industry. Further information
+regarding these as well as other key risk factors and meaningful cautionary
+statements that could affect the Company’s  financial results are
+included at length in the Company’s Form 10-K for the fiscal year ended December
+31, 2007, supplemented by subsequent filings made with the Securities and
+Exchange Commission.
+ 
+ 
+ 
+
+SIGNATURES
+
+Pursuant
+to the requirements of the Securities Exchange Act of 1934, the registrant has
+duly caused this report to be signed on its behalf by the undersigned hereunto
+duly authorized.
+ 
+
+ 
+
+Astea
+International Inc.
+
+Date:  September
+26, 2008
+
+By:           /s/ Rick
+Etskovitz
+Name:  Rick
+Etskovitz
+Title: Chief
+Financial Officer
+ 
+ 
+
+ 
+ 
+
+ 
+EXHIBIT
+INDEX
+
+Exhibit
+Number
+
+Exhibit
+
+ 
+
+ 
+
+3.1
+
+Certificate of Designation of Series A Convertible
+Preferred Stock
+
+ 
+
+ 
+
+10.1
+
+Preferred Stock Purchase Agreement by and between Astea
+International Inc. and Zack Bergreen, dated September 24,
+2008
+
+ 
+
+ 
+
+99.1
+
+Press Release of Astea International Inc. dated
+September 25, 2008

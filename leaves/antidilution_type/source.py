@@ -21,7 +21,15 @@ ITEMS = {
     '1093207_000114420414015857': ('full-ratchet', 'medium', 'full ratchet', 'CROSSROADS SYSTEMS INC  (CIK 0001093207)'),
     '1103078_000119312505072191': ('weighted-average', 'medium', 'weighted average', 'RASER TECHNOLOGIES INC  (CIK 0001103078)'),
     '1161315_000095012314003249': ('full-ratchet', 'medium', 'full ratchet', 'YODLEE INC  (CIK 0001161315)'),
-    '763901_000095012310045398': ('none', 'easy', 'no anti-dilution', 'POPULAR INC  (BPOP, BPOPM, BPOPO)  (CIK 0000763901)'),
+    # replaced 2026-07-02 (adversarial audit, Eikiyo-confirmed): the old 'none' item, POPULAR INC
+    # (763901_000095012310045398), is a large public Puerto Rico BANK holding company off-thesis
+    # for a VC/startup-financing benchmark (TARP-era depository-share rights/warrant clause, not
+    # a preferred-stock financing charter). Replaced with a genuine growth-company Series A
+    # Preferred Stock Certificate of Designations (real estate brokerage/franchise tech company,
+    # Nasdaq: LRHC, filed as Exhibit 3.6 to its 2023 IPO S-1/A) whose section (ix) explicitly and
+    # unambiguously states the Series A Preferred "shall have no anti-dilution rights" -- grepped
+    # the full text for full-ratchet/weighted-average/broad-based/narrow-based, zero hits.
+    '1879403_000157587223000626': ('none', 'easy', 'no anti-dilution rights', 'LA ROSA HOLDINGS CORP.  (LRHC)  (CIK 0001879403)'),
 }
 # Excluded (audit caught wrong document type, kept for trail, NEVER in oracle):
 #   CROSS MEDIA, VOIP INC, XERIANT, LEAP THERAPEUTICS, UTIX GROUP: the anti-dilution clause is on
@@ -32,6 +40,8 @@ ITEMS = {
 #     Series A WARRANTS, not preferred stock.
 #   EMMIS COMMUNICATIONS, TRAVEL HUNT HOLDINGS: tender-offer/earnout share-count mechanics, not a
 #     charter clause stating the preferred stock itself has no anti-dilution protection.
+#   POPULAR INC (763901_000095012310045398): removed 2026-07-02, off-thesis bank-regulatory
+#     document (see replacement note above) -- was NOT a mislabeling bug, just wrong document type.
 
 
 def window_on(text, anchor, before=420, after=900):

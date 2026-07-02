@@ -1,0 +1,764 @@
+8-K
+1
+psmh20141201_8k.htm
+FORM 8-K
+
+psmh20141201_8k.htm
+
+United States
+SECURITIES AND EXCHANGE COMMISSION
+WASHINGTON, D.C. 20549
+ 
+FORM 8-K
+ 
+CURRENT REPORT
+PURSUANT TO SECTION 13 OR 15(d) OF THE
+SECURITIES EXCHANGE ACT OF 1934
+ 
+ 
+Date of report (Date of earliest event reported) November 25, 2014
+ 
+PSM Holdings, Inc.
+(Exact Name of Registrant as Specified in its Charter)
+ 
+
+Delaware
+
+000-54988
+
+90-0332127
+
+(State or Other Jurisdiction of Incorporation)
+
+(Commission File Number)
+
+(IRS Employer Identification No.)
+ 
+
+5900 Mosteller Drive, Oklahoma City, OK
+
+73112
+
+(Address of Principal Executive Offices)
+
+(Zip Code)
+ 
+Registrant’s telephone number, including area code: (575) 624-4170
+ 
+Check the appropriate box below if the Form 8-K filing is intended to simultaneously satisfy the filing obligation of the registrant under any of the following provisions:
+ 
+
+ 
+[ ]
+
+Written communications pursuant to Rule 425 under the Securities Act
+
+ 
+ 
+ 
+
+ 
+[ ] 
+
+Soliciting material pursuant to Rule 14a-12 under the Exchange Act
+
+ 
+ 
+ 
+
+ 
+
+[ ]
+
+Pre-commencement communications pursuant to Rule 14d-2(b) under the Exchange Act
+ 
+
+ 
+
+[ ]
+
+Pre-commencement communications pursuant to Rule 13e-4(c) under the Exchange Act
+ 
+
+ 
+ 
+
+ 
+   
+Item 1.01      Entry into a Material Definitive Agreement.
+ 
+On November 26, 2014, PSM Holdings, Inc., a Delaware corporation (the “ Company ”) entered into a Stock Purchase Agreement dated effective November 24, 2014 (the “ Series E SPA ”) providing for the issuance and sale of up to $1,250,000 of the Company’s Series E 6% Convertible Preferred Stock (1,250 shares) at a purchase price of $1,000 per share (the “ Series E Preferred Stock ”). The first closing of the Series E SPA occurred on November 26, 2014, with 612.5 shares of Series E Preferred Stock being sold to LB Merchant PSMH-3, LLC, an entity controlled by Michael Margolies, a director and principal shareholder of the Company (the “ Purchaser ”). Each share of Series E Preferred Stock is convertible into a number of shares of common stock of the Company equal to the quotient of (i) $1,000 (subject to adjustment for stock splits, stock dividends, recapitalizations, and the like) plus the amount of accrued but unpaid dividends, divided by (ii) the conversion price then in effect. The initial conversion price is $0.01, subject to adjustment, and the 612.5 shares issued in the first closing would be convertible into 61,250,000 common shares. If all of the shares of Series E Preferred Stock being offered were converted at the present conversion price, the Company would be obligated to issue 125,000,000 shares of common stock to the holders of the Series E Preferred Stock. The holders of Series E Preferred Stock are entitled to certain voting rights designated in the certificate of designation for the series. Holders of the shares of Series E Preferred Stock are entitled to receive cumulative cash dividends at the rate per share (as a percentage of the stated value per share) of 6% per annum from the date of issuance, payable quarterly in arrears on April 15, July 15, October 15 and January 15, beginning on January 15, 2015. The offering of the Series E Preferred Stock will terminate not later than December 15, 2014.
+ 
+Littlebanc Advisors, LLC, an associate of Wilmington Capital Securities, LLC (the “ Placement Agent ”) acted as exclusive placement agent for the offering. In accordance with the placement agent agreement for the offering, warrants to purchase 16% of the common stock into which the Series E Preferred Stock sold in the offering may be converted (the “ Warrants ”) will be issued in connection with the offering. The Warrants will be exercisable at $0.011 per share and will expire on November 26, 2019. The Series E SPA, the form of the Warrants, and the Certificate of Designation with respect to the Series E Preferred Stock are filed herewith as Exhibits 10.1, 10.2, and 3.1, respectively.
+ 
+The shares of Series E Preferred Stock, as well as the Warrants, were sold without registration under the Securities Act of 1933, as amended (the “ Securities Act ”) by reason of the exemption from registration afforded by the provisions of Section 4(a)(5) and/or Section 4(a)(2) thereof, and Rule 506(b) promulgated thereunder, as a transaction by an issuer not involving any public offering. The initial purchaser of the Series E Preferred Stock and the Placement Agent were accredited investors as defined in Rule 501(a) of Regulation D promulgated by the SEC. The securities sold in this transaction were not registered under the Securities Act and may not be offered or sold in the United States absent registration or an applicable exemption from registration requirements.
+ 
+Holders of the Series E Preferred Stock will have demand and piggyback registration rights for the common stock issuable upon conversion of the Series E Preferred Stock. The registration rights are pari passu with the registration rights of the Company’s Series A 6% Convertible Preferred Stock (“ Series A Preferred Stock ”), Series B 6% Convertible Preferred Stock (“ Series B Preferred Stock ”), Series C 6% Convertible Preferred Stock (“ Series C Preferred Stock ”), and Series D 6% Convertible Preferred Stock (“ Series D Preferred Stock ”).
+ 
+In connection with the first closing of the Series E SPA, the Company amended the Stock Purchase Agreement dated February 3, 2013 and amended on April 1, 2014 (the “ Series A & B SPA ”), entered into in connection with the sale of the Series A Preferred Stock and Series B Preferred Stock and also amended the original Stock Purchase Agreement dated April 1, 2014 (the “ Series C & D SPA ”), entered into in connection with the sale of the Series C Preferred Stock and Series D Preferred Stock. The amendments permitted the issuance of the Series E Preferred Stock senior to dividend and liquidation rights of the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock and Series D Preferred Stock. Amendments to the Series A & B SPA and the Series C & D SPA are filed herewith as Exhibits 10.3 and 10.4, respectively.
+ 
+Pursuant to the provisions of the Certificates of Designation for the Series A Preferred Stock and Series B Preferred Stock regarding adjustments in conversion price, because the Company issued and sold additional shares at a price less than the current $0.24 conversion price of the Series A Preferred Stock and Series B Preferred Stock, the conversion price was adjusted to $0.10 per share. After this adjustment to the conversion price of the Series A Preferred Stock and Series B Preferred Stock, the Series A Preferred Stock and Series B Preferred Stock would convert into a total of 57,000,000 shares of Common Stock (adjusted from 24,782,609).
+ 
+Pursuant to the provisions of the Certificates of Designation for the Series C Preferred Stock and Series D Preferred Stock regarding adjustments in conversion price, because the Company issued and sold additional shares at a price less than the current $0.08 conversion price of the Series C Preferred Stock and Series D Preferred Stock, the conversion price was adjusted to $0.04 per share. After this adjustment to the conversion price of the Series C Preferred Stock and Series D Preferred Stock, the Series C Preferred Stock and Series D Preferred Stock would convert into a total of 80,000,000 shares of Common Stock (adjusted from 40,000,000).
+ 
+
+ 
+2
+
+ 
+ 
+The 454,000 Common Stock Purchase Warrants issued in February and March 2014, as amended, contained provisions requiring adjustment to the exercise price in the event the Company were to issue or sell additional shares of Common Stock pursuant to convertible securities or Common Stock equivalents at a price per share less than the exercise price of these warrants. Given the exercise price of the Series E Preferred Stock of $0.01 (less than the exercise price of the Common Stock Warrants of $0.24), the adjusted exercise price of these warrants became $0.10 at the first closing of the Series E SPA.
+ 
+The 76,000 Common Stock Purchase Warrants issued in September and November 2014 contained provisions requiring adjustment to the exercise price in the event the Company were to issue or sell additional shares of Common Stock pursuant to convertible securities or Common Stock equivalents at a price per share less than the exercise price of these warrants. Given the exercise price of the Series E Preferred Stock of $0.01 (less than the exercise price of the Common Stock Warrants of $0.40), the adjusted exercise price of these warrants became $0.125 at the first closing of the Series E SPA.
+ 
+Assuming the issuance of all of the shares of Series E Preferred Stock, and the restating of the conversion price of the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, and Series D Preferred Stock, the Company will not have sufficient shares of Common Stock to reserve for 130% of the shares issuable upon conversion of the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, and Series D Preferred Stock, and Series E Preferred Stock as required in the Series E SPA, the Series A & B SPA and the Series C & D SPA. Pursuant to the terms of these agreements, the Company is required to amend its Certificate of Incorporation to increase the number of authorized shares of Common Stock at its next annual shareholders’ meeting or upon request of the preferred shareholders.
+ 
+Item 3.02     Unregistered Sales of Equity Securities.
+ 
+The information contained in Item 1.01 of this Current Report on Form 8-K with respect to the securities sold in the above transaction is hereby incorporated by reference into this item. The securities sold in this transaction have not been registered under the Securities Act and may not be offered or sold in the United States absent registration or an applicable exemption from registration requirements
+ 
+Item 5.03     Amendments to Articles of Incorporation or Bylaws; Change in Fiscal Year.
+ 
+In connection with the Series E SPA transaction, the Company designated a new series of preferred stock, the Series E Preferred Stock. A copy of the Certificate of Designation, Preferences, and Rights for the Series E Preferred Stock as filed with the Secretary of State of the State of Delaware effective November 25, 2014, is attached hereto as Exhibit 3.1 (the “ Certificate of Designation ”). The Certificate of Designation of the Series E Preferred Stock authorizes 2,000 shares of Series E Preferred Stock. Under the terms of the Certificate of Designation, the holders of the Series E Preferred Stock are granted the following rights and preferences:
+ 
+
+ 
+
+●
+
+The Series E Preferred Stock will be convertible into shares of our common stock at any time at a conversion rate of $0.01 per share, based upon the stated value of $1,000 per share of Series E Preferred Stock, subject to the following limitations and conditions: If we issue or sell shares of our common stock, or grant options or other convertible securities which are exercisable or convertible into our common shares (other than shares currently authorized under the existing management equity compensation plan and subsequently issued following approval by the Compensation Committee including, if required, the affirmative vote of the Director on the Compensation Committee appointed by the Directors elected by the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock) at prices less than the conversion price of our Series E Preferred Stock, then the conversion price of the Series E Preferred Stock will be reduced based upon a weighted average formula.
+
+ 
+
+●
+
+The Series E Preferred Stock will be entitled to the number of votes equal to the number of whole shares of common stock into which the shares of Series E Preferred Stock are convertible and vote together with the holders of the common stock, except (i) with respect to transactions upon which the Series E Preferred Stock will be entitled to vote separately, (ii) with respect to transactions upon which the Series E Preferred Stock will be entitled to vote with the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, and Series D Preferred Stock as a single class, (iii) with respect to the election of the two directors to be elected by the holders of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock voting as a single class, (iv) with respect to the election of the three directors whose election is reserved solely to the common shareholders, (v) with respect to certain transactions upon which the holders of Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, or Series D Preferred Stock are entitled to vote separately as a class, and (vi) as otherwise required by Delaware General Corporation Law. With respect to the election of the Board, the Series E Preferred Stock will vote with the Series A Preferred Stock and Series C Preferred Stock.
+ 
+
+ 
+3
+
+ 
+ 
+
+ 
+
+●
+
+A majority vote of the outstanding shares of Series E Preferred Stock voting as a single class is required for any of the following actions:
+
+ 
+
+o
+
+Any alteration, amendment, or change in the rights, preferences or privileges of the Series E Preferred Stock;
+
+ 
+
+o
+
+Any amendment to the Company’s Certificate of Incorporation or Bylaws that would impair or reduce the rights of the Series E Preferred Stock;
+
+ 
+
+o
+
+Any transaction resulting in the redemption of any of the Company’s securities;
+
+ 
+
+o
+
+Any termination without cause, reassignment, or other change of any executive personnel of the Company or its subsidiaries within 18 months after the issuance date of the Series E Preferred Stock; and
+
+ 
+
+o
+
+Any agreement that would restrict the Company’s right or ability to perform its obligations under the Stock Purchase Agreement between the Company and the initial holders of the Series E Preferred Stock.
+
+ 
+
+●
+
+A majority vote of the outstanding Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, and Series E Preferred Stock voting together as a single class will be required for any of the following actions:
+
+ 
+
+o
+
+Creation (by reclassification or otherwise) of any new class or series of securities having rights, preferences or privileges senior to, or on a parity with, the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, or Series E Preferred Stock or issuance of any junior class of securities, or options or warrants to purchase, or securities convertible into, any junior class of securities resulting in dilution of the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, or Series E Preferred Stock of 5% or more on an as-converted basis;
+
+ 
+
+o
+
+Any transaction resulting in any merger, other corporate reorganization, change of control, or any transaction in which substantially all of the assets of the Company are sold;
+
+ 
+
+o
+
+Payment or declaration of any dividends or distribution on the Company’s capital stock other than dividends on the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, and Series E Preferred Stock;
+
+ 
+
+o
+
+Any decrease or increase in the size of the Board of Directors;
+
+ 
+
+o
+
+Any transaction resulting in a related party transaction;
+
+ 
+
+o
+
+Unless otherwise approved by the Company’s Compensation Committee, including the member of the Compensation Committee appointed by the holder(s) of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock, authorize the payment of compensation, including any equity compensation, to any individual in excess of $250,000 in any fiscal year; and
+
+ 
+
+o
+
+Make any payment or series of payments in any 12 month period in cash or securities in excess of $75,000 within 18 months after the issuance date of the Series A Shares (or in excess of $250,000 thereafter) for any purposes, including operating expenses, capital expenditures or acquisitions, except payments that are contemplated in a budget approved by the Board of Directors, including the affirmative vote of at least one director elected by the holder(s) of the Series A Preferred Stock Series C Preferred Stock and Series E Preferred Stock.
+
+ 
+
+●
+
+In the event of any voluntary or involuntary liquidation, dissolution or winding up of our company (including a disposition of substantially all of our assets, whether by sale, merger or other reorganization, or a sale of over 50% of the ownership of the Company), the holders of the Series E Preferred Stock will be entitled to receive the greater of 150% of the purchase price of the Series E Preferred Stock, plus accrued dividends or the amount distributed to the holders of the common stock as though the Series E Preferred Stock were converted. Liquidating distributions will be in preference to the holders of common stock and the holders of the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, and Series D Preferred Stock.
+ 
+
+ 
+4
+
+ 
+ 
+
+ 
+
+●
+
+The holders of the Series E Preferred Stock are entitled to dividends equal to 6% of the stated value of the Series E Preferred Stock, paid quarterly in preference to any other class of stock, including the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, and Series D Preferred Stock. Any unpaid dividends will accrue and the non-payment of dividends for two quarters is an event of default. Any event of default under the Certificate of Designations for the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, or Series D Preferred Stock shall constitute an event of default under the Certificate of Designations for the Series E Preferred Stock.
+
+ 
+
+●
+
+The holders of the Series E Preferred Stock have preemptive rights on a pro rata basis (based upon the percentage ownership of the Company on an as-converted basis) to purchase shares of our common stock in future equity offerings, other than in connection with shares issued in a public offering, bona fide acquisitions, strategic alliances, or any management equity plan approved by the Compensation Committee.
+
+ 
+
+●
+
+There are no redemption or sinking fund provisions applicable to the Series E Preferred Stock.
+
+ 
+
+●
+
+The Series E Preferred Stock will be pari passu with the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, and Series D Preferred Stock in regard to registration rights.
+ 
+Also in connection with the closing of the Series E SPA, the Company amended its Certificates of Designation for the existing Series A Preferred Stock and Series B Preferred Stock. Copies of the Second Amended and Restated Certificates of Designation of Series A Preferred Stock and the Series B Preferred Stock as filed with the Secretary of State of the State of Delaware effective November 25, 2014, are attached hereto as Exhibits 3.2 and 3.3, respectively. As amended and restated, the Certificate of Designation of the Series A Preferred Stock authorizes 4,000 shares of Series A Preferred Stock and as amended and restated the Certificate of Designation for the Series B Preferred Stock authorizes 2,000 shares of Series B Preferred Stock. Under the terms of the Amended and Restated Certificates of Designation, the holders of the Series A Preferred Stock and the Series B Preferred Stock are granted the following rights and preferences:
+ 
+
+ 
+
+●
+
+The Series A Preferred Stock and Series B Preferred Stock are convertible into shares of Common Stock at any time at a conversion rate of $0.10 per share, based upon the stated value of $1,000 per share of Series A Preferred Stock and Series B Preferred Stock, subject to the following limitations and conditions:
+
+ 
+
+o
+
+If we issue or sell shares of Common Stock, or grant options or other convertible securities which are exercisable or convertible into Common Stock (excluding securities granted under the Company’s 2012 Stock Incentive Plan or in connection with acquisitions of mortgage related businesses), at prices less than the conversion price of the Company’s Series A Preferred Stock and Series B Preferred Stock, then the conversion price of the Series A Preferred Stock and Series B Preferred Stock will be reduced based upon a weighted average formula. As a result of the closing of the Series E SPA disclosed in Item 1.01 above, the conversion price of the Company’s Series A Preferred Stock and Series B Preferred Stock was reduced to $0.10.
+
+ 
+
+o
+
+The Series B Preferred Stock may not be converted into Common Stock if the beneficial owner of such shares (together with such beneficial owner’s affiliates) would thereafter exceed 4.99% of the outstanding Common Stock whether through conversion of the Series B Preferred Stock or otherwise.
+
+ 
+
+o
+
+We may require conversion of the Series A Preferred Stock and Series B Preferred Stock at any time if during a 90-day period Common Stock has traded an average of 100,000 shares per day at a price greater than $2.50 per share.
+ 
+
+ 
+5
+
+ 
+ 
+
+ 
+
+●
+
+The Series A Preferred Stock will be entitled to the number of votes equal to the number of whole shares of Common Stock into which the Series A Preferred Stock are convertible and vote together with the holders of the Common Stock, except (i) as provided by law, (ii) with respect to the election of the three directors to be elected by the holders of Common Stock, (iii) with respect to the election of the two directors to be elected by the holders of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock voting as a single class, (iv) with respect to certain transactions upon which the Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, or Series E Preferred Stock are entitled to vote separately as a single class, and (v) with respect to certain transactions described below upon which the Series A Preferred Stock are entitled to vote separately as a single class.
+
+ 
+
+●
+
+The Series B Preferred Stock will be entitled to the number of votes equal to the number of whole shares of Common Stock into which the Series B Preferred Stock are convertible and vote together with the holders of the Common Stock, except (i) as provided by law, (ii) with respect to the election of the three directors to be elected by the holders of Common Stock, (iii) with respect to the election of the two directors to be elected by the holders of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock voting as a single class, (iv) with respect to certain transactions upon which the Series A Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, or Series E Preferred Stock are entitled to vote separately as a single class, and (v) with respect to certain transactions described below upon which the Series B Preferred Stock are entitled to vote separately as a single class.
+
+ 
+
+●
+
+A majority vote of the outstanding Series A Preferred Stock voting separately as a class is required for any of the following actions:
+
+ 
+
+o
+
+Any alteration, amendment, or change in the rights, preferences or privileges of the Series A Preferred Stock;
+
+ 
+
+o
+
+Any amendment to the Company’s Certificate of Incorporation or Bylaws that would impair or reduce the rights of the Series A Preferred Stock;
+
+ 
+
+o
+
+Any transaction resulting in the redemption of any of the Company’s securities; and
+
+ 
+
+o
+
+Any termination without cause, reassignment, or other change of any executive personnel of the Company or its subsidiaries within 18 months after the issuance date of the Series A Preferred Stock.
+
+ 
+
+●
+
+A majority vote of the outstanding Series B Preferred Stock voting separately as a class is required for any of the following actions:
+
+ 
+
+o
+
+Any alteration, amendment, or change in the rights, preferences or privileges of the Series B Preferred Stock;
+
+ 
+
+o
+
+Any amendment to the Company’s Certificate of Incorporation or Bylaws that would impair or reduce the rights of the Series B Preferred Stock; and
+
+ 
+
+o
+
+Any transaction resulting in the redemption of any of the Company’s securities.
+
+ 
+
+●
+
+A majority vote of the outstanding Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, and Series E Preferred Stock voting together as a single class will be required for any of the following actions:
+
+ 
+
+o
+
+Creation (by reclassification or otherwise) of any new class or series of securities having rights, preferences or privileges senior to, or on a parity with, the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock or Series E Preferred Stock or issuance of any junior class of securities, or options or warrants to purchase, or securities convertible into, any junior class of securities resulting in dilution of the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, or Series E Preferred Stock of 5% or more on an as-converted basis;
+
+ 
+
+o
+
+Any transaction resulting in any merger, other corporate reorganization, change of control, or any transaction in which substantially all of the assets of the Company are sold;
+ 
+
+ 
+6
+
+ 
+ 
+
+ 
+
+o
+
+Payment or declaration of any dividends or distribution on the Company’s capital stock other than dividends on the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, and Series E Preferred Stock;
+
+ 
+
+o
+
+Any decrease or increase in the size of the Board of Directors;
+
+ 
+
+o
+
+Any transaction resulting in a related party transaction;
+
+ 
+
+o
+
+Unless otherwise approved by the Company’s Compensation Committee, including the member of the Compensation Committee appointed by the holder(s) of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock, authorize the payment of compensation, including any equity compensation, to any individual in excess of $250,000 in any fiscal year; and
+
+ 
+
+o
+
+Make any payment or series of payments in any 12 month period in cash or securities in excess of $75,000 within 18 months after the issuance date of the Series A Preferred Stock (or in excess of $250,000 thereafter) for any purposes, including operating expenses, capital expenditures or acquisitions, except payments that are contemplated in a budget approved by the Board of Directors, including the affirmative vote of at least one director elected by the holder(s) of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock.
+
+ 
+
+●
+
+The majority of the holders of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock voting together as a single class will have the right to elect two directors, who will have the right to appoint at least one member of the Compensation Committee. The holders of the Series B Preferred Stock are not entitled to elect any directors.
+
+ 
+
+●
+
+In the event of any voluntary or involuntary liquidation, dissolution or winding up of the Company (including a disposition of substantially all of the Company’s assets, whether by sale, merger or other reorganization, or a sale of over 50% of the ownership of the Company), the holders of the Series A Preferred Stock and Series B Preferred Stock will be entitled to receive the greater of 150% of the purchase price of the Series A Preferred Stock and Series B Preferred Stock, plus accrued dividends or the amount distributed to the holders of the Common Stock as though the Series A Preferred Stock and Series B Preferred Stock were converted.
+
+ 
+
+●
+
+The holders of the Series A Preferred Stock and Series B Preferred Stock are entitled to dividends equal to 6% of the stated value of the Series A Preferred Stock and Series B Preferred Stock, paid quarterly. Any unpaid dividends will accrue and the non-payment of dividends for two consecutive quarters is an event of default.
+
+ 
+
+●
+
+The holders of the Series A Preferred Stock and Series B Preferred Stock have preemptive rights on a pro rata basis (based upon the percentage ownership of the Company on an as-converted basis) to purchase shares of Common Stock in future equity offerings, other than in connection with shares issued in a public offering, bona fide acquisitions, strategic alliances, or any management equity plan approved by the Compensation Committee.
+
+ 
+
+●
+
+There are no redemption or sinking fund provisions applicable to the Series A Preferred Stock and Series B Preferred Stock.
+ 
+Also in connection with the closing of the Series E SPA, the Company amended its Certificates of Designation for the existing Series C Preferred Stock and Series D Preferred Stock. Copies of the Amended and Restated Certificates of Designation of Series C Preferred Stock and the Series D Preferred Stock as filed with the Secretary of State of the State of Delaware effective November 25, 2014, are attached hereto as Exhibits 3.4 and 3.5, respectively. As amended and restated, the Certificate of Designation of the Series C Preferred Stock authorizes 4,000 shares of Series C Preferred Stock and as amended and restated the Certificate of Designation for the Series D Preferred Stock authorizes 2,000 shares of Series D Preferred Stock. Under the terms of the Amended and Restated Certificates of Designation, the holders of the Series C Preferred Stock and the Series D Preferred Stock are granted the following rights and preferences:
+ 
+
+ 
+
+●
+
+The Series C Preferred Stock and Series D Preferred Stock will be convertible into shares of Common Stock at any time at a conversion rate of $0.04 per share, based upon the stated value of $1,000 per share of Series C Preferred Stock and Series D Preferred Stock, subject to the following limitations and conditions:
+
+ 
+
+o
+
+If we issue or sell shares of Common Stock, or grant options or other convertible securities which are exercisable or convertible into Common Stock (other than shares currently authorized under the existing management equity compensation plan and subsequently issued following approval by the Compensation Committee including, if required, the affirmative vote of the Director on the Compensation Committee appointed by the directors elected by the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock) at prices less than the conversion price of the Company’s Series C Preferred Stock and Series D Preferred Stock, then the conversion price of the Series C Preferred Stock and Series D Preferred Stock will be reduced based upon a weighted average formula.
+ 
+
+ 
+7
+
+ 
+ 
+
+ 
+
+o
+
+The Series D Preferred Stock may not be converted into Common Stock if the beneficial owner of such shares (together with such beneficial owner’s affiliates) would thereafter exceed 4.99% of the outstanding Common Stock whether through conversion of the Series D Preferred Stock or otherwise.
+
+ 
+
+o
+
+We may require conversion of the Series C Preferred Stock and Series D Preferred Stock at any time if during a 90-day period Common Stock has traded an average of 100,000 shares per day at a price greater than $2.50 per share.
+
+ 
+
+●
+
+The Series C Preferred Stock will be entitled to the number of votes equal to the number of whole shares of Common Stock into which the Series C Preferred Stock are convertible and vote together with the holders of the Common Stock, except (i) with respect to transactions upon which the Series C Preferred Stock will be entitled to vote separately, (ii) with respect to transactions upon which the Series C Preferred Stock will be entitled to vote with the Series A Preferred Stock, Series B Preferred Stock, Series D Preferred Stock, and Series E Preferred Stock as a single class, (iii) with respect to the election of the two directors to be elected by the holders of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock voting as a single class, (iv) with respect to the election of the three directors whose election is reserved solely to the common shareholders, (v) with respect to certain transactions upon which the holders of Series A Preferred Stock, Series B Preferred Stock, Series D Preferred Stock, or Series E Preferred Stock are entitled to vote separately as a class, and (vi) as otherwise required by Delaware General Corporation Law. With respect to the election of the Board, the Series C Preferred Stock will vote with the Series A Preferred Stock and Series E Preferred Stock.
+
+ 
+
+●
+
+The Series D Preferred Stock will be entitled to the number of votes equal to the number of whole shares of Common Stock into which the Series D Preferred Stock are convertible and vote together with the holders of the Common Stock, except (i) with respect to transactions upon which the Series D Preferred Stock will be entitled to vote separately, (ii) with respect to transactions upon which the Series D Preferred Stock will be entitled to vote with the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock as a single class, (iii) with respect to the election of the two directors to be elected by the holders of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock voting as a single class, (iv) with respect to the election of the three directors whose election is reserved solely to the common shareholders, (v) with respect to certain transactions upon which the holders of Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, or Series E Preferred Stock are entitled to vote separately as a class, and (vi) as otherwise required by Delaware General Corporation Law. Similar to the Series B Preferred Stock, the Series D Preferred Stock will not be entitled to elect any directors.
+
+ 
+
+●
+
+A majority vote of the outstanding Series C Preferred Stock voting as a single class is required for any of the following actions:
+
+ 
+
+o
+
+Any alteration, amendment, or change in the rights, preferences or privileges of the Series C Preferred Stock;
+
+ 
+
+o
+
+Any amendment to the Company’s Certificate of Incorporation or Bylaws that would impair or reduce the rights of the Series C Preferred Stock;
+
+ 
+
+o
+
+Any transaction resulting in the redemption of any of the Company’s securities;
+ 
+
+ 
+8
+
+ 
+ 
+
+ 
+
+o
+
+Any termination without cause, reassignment, or other change of any executive personnel of the Company or its subsidiaries within 18 months after the issuance date of the Series C Preferred Stock; and
+
+ 
+
+o
+
+Any agreement that would restrict the Company’s right or ability to perform its obligations under the Series E SPA.
+
+ 
+
+●
+
+A majority vote of the outstanding Series D Preferred Stock voting as a single class is required for any of the following actions:
+
+ 
+
+o
+
+Any alteration, amendment, or change in the rights, preferences or privileges of the Series D Preferred Stock;
+
+ 
+
+o
+
+Any amendment to the Company’s Certificate of Incorporation or Bylaws that would impair or reduce the rights of the Series D Preferred Stock;
+
+ 
+
+o
+
+Any transaction resulting in the redemption of any of the Company’s securities; and
+
+ 
+
+o
+
+Any agreement that would restrict the Company’s right or ability to perform its obligations under the Series E SPA.
+
+ 
+
+●
+
+A majority vote of the outstanding Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, and Series E Preferred Stock voting together as a single class will be required for any of the following actions:
+
+ 
+
+o
+
+Creation (by reclassification or otherwise) of any new class or series of securities having rights, preferences or privileges senior to, or on a parity with, the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, or Series E Preferred Stock or issuance of any junior class of securities, or options or warrants to purchase, or securities convertible into, any junior class of securities resulting in dilution of the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, or Series E Preferred Stock of 5% or more on an as-converted basis;
+
+ 
+
+o
+
+Any transaction resulting in any merger, other corporate reorganization, change of control, or any transaction in which substantially all of the assets of the Company are sold;
+
+ 
+
+o
+
+Payment or declaration of any dividends or distribution on the Company’s capital stock other than dividends on the Series A Preferred Stock, Series B Preferred Stock, Series C Preferred Stock, Series D Preferred Stock, and Series E Preferred Stock;
+
+ 
+
+o
+
+Any decrease or increase in the size of the Board of Directors;
+
+ 
+
+o
+
+Any transaction resulting in a related party transaction;
+
+ 
+
+o
+
+Unless otherwise approved by the Company’s Compensation Committee, including the member of the Compensation Committee appointed by the holder(s) of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock, authorize the payment of compensation, including any equity compensation, to any individual in excess of $250,000 in any fiscal year; and
+
+ 
+
+o
+
+Make any payment or series of payments in any 12 month period in cash or securities in excess of $75,000 within 18 months after the issuance date of the Series A Preferred Stock (or in excess of $250,000 thereafter) for any purposes, including operating expenses, capital expenditures or acquisitions, except payments that are contemplated in a budget approved by the Board of Directors, including the affirmative vote of at least one director elected by the holder(s) of the Series A Preferred Stock, Series C Preferred Stock, and Series E Preferred Stock.
+
+ 
+
+●
+
+In the event of any voluntary or involuntary liquidation, dissolution or winding up of the Company (including a disposition of substantially all of the Company’s assets, whether by sale, merger or other reorganization, or a sale of over 50% of the ownership of the Company), the holders of the Series C Preferred Stock and Series D Preferred Stock will be entitled to receive the greater of 150% of the purchase price of the Series C Preferred Stock and Series D Preferred Stock, plus accrued dividends or the amount distributed to the holders of the Common Stock as though the Series C Preferred Stock and Series D Preferred Stock were converted.
+
+ 
+
+●
+
+The holders of the Series C Preferred Stock and Series D Preferred Stock are entitled to dividends equal to 6% of the stated value of the Series C Preferred Stock and Series D Preferred Stock, paid quarterly. Any unpaid dividends will accrue and the non-payment of dividends for two consecutive quarters is an event of default.
+ 
+
+ 
+9
+
+ 
+ 
+
+ 
+
+●
+
+The holders of the Series C Preferred Stock and Series D Preferred Stock have preemptive rights on a pro rata basis (based upon the percentage ownership of the Company on an as-converted basis) to purchase shares of Common Stock in future equity offerings, other than in connection with shares issued in a public offering, bona fide acquisitions, strategic alliances, or any management equity plan approved by the Compensation Committee.
+
+ 
+
+●
+
+There are no redemption or sinking fund provisions applicable to the Series C Preferred Stock and Series D Preferred Stock.
+
+ 
+
+●
+
+The Series C Preferred Stock and Series D Preferred Stock will be pari passu with the Series A Preferred Stock, Series B Preferred Stock, and Series E Preferred Stock in regard to registration rights.
+ 
+Item 9.01     Financial Statements and Exhibits.
+ 
+(d) Exhibits.
+ 
+
+Exhibit Number
+
+Exhibit Title
+
+ 
+ 
+
+3.1
+
+Certificate of Designation, Preferences, and Rights of Series E 6% Convertible Preferred Stock of the Company
+
+ 
+ 
+
+3.2
+
+Second Amended and Restated Certificate of Designation, Preferences, and Rights of Series A 6% Convertible Preferred Stock
+
+ 
+ 
+
+3.3
+
+Second Amended and Restated Certificate of Designation, Preferences, and Rights of Series B 6% Convertible Preferred Stock
+
+ 
+ 
+
+3.4
+
+Amended and Restated Certificate of Designation, Preferences, and Rights of Series C 6% Convertible Preferred Stock
+
+ 
+ 
+
+3.5
+
+Amended and Restated Certificate of Designation, Preferences, and Rights of Series D 6% Convertible Preferred Stock
+
+ 
+ 
+
+10.1
+
+Stock Purchase Agreement dated November 24, 2014
+
+ 
+ 
+
+10.2
+
+Amendment dated November 24, 2014, to Stock Purchase Agreement dated February 4, 2013, as amended April 1, 2014
+
+ 
+ 
+
+10.3
+
+Amendment dated November 24, 2014, to Stock Purchase Agreement dated April 1, 2014
+ 
+ 
+SIGNATURES
+ 
+Pursuant to the requirements of the Securities Exchange Act of 1934, as amended, the Registrant has duly caused this report to be signed on its behalf by the undersigned hereunto duly authorized.
+ 
+
+ 
+
+PSM Holdings, Inc.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Date: December 2, 2014 
+
+By:
+
+/s/  Kevin Gadawski
+
+ 
+
+ 
+
+ 
+
+Kevin Gadawski, President
+
+ 
+ 
+ 
+10

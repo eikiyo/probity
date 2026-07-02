@@ -33,7 +33,13 @@ ITEMS = {
     "0001144204-15-053727_v419640_ex10-1": ("4yr/no-cliff", "easy", "vests over four years of employment with no cliff", "ATOSSA GENETICS INC."),
     "0001516513-23-000036_ex-107xcraigoverpeckofferl": ("4yr/no-cliff", "medium", "4yr RSU, vests qtrly, no cliff", "DOXIMITY, INC."),
     "0000020740-17-000006_a201610kex1012": ("4yr/no-cliff", "hard", "shall vest on each anniversary", "CLARCOR INC."),
-    "0001104659-09-054183_a09-26145_18k": ("3yr/no-cliff", "hard", "waiver of one-year cliff", "WORLD HEART CORP"),
+    # RELABELED 2026-07-02 (Eikiyo-confirmed, adversarial audit): was "3yr/no-cliff", but the
+    # model-facing window explicitly says "one-year cliff" TWICE and describes 1/48th-monthly
+    # vesting credit -- the textbook implementation of a 4yr/1yr-cliff schedule (25% at year 1,
+    # monthly thereafter). Sibling leaf cliff_present independently confirms this same document's
+    # underlying schedule HAS a cliff (its own label is "no" specifically because the operative
+    # text WAIVES that cliff -- a waiver presupposes the cliff exists). See AUDIT_TODO.md.
+    "0001104659-09-054183_a09-26145_18k": ("4yr/1yr-cliff", "hard", "waiver of one-year cliff", "WORLD HEART CORP"),
 }
 
 
