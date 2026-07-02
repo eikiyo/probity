@@ -613,4 +613,25 @@ order (1.1.1 -> 8.6). Status counter recounted on every edit.
 
 **Family 5 (governance, 5.1-5.7) now fully audited.**
 
-## Next leaf: 6.1 vesting_schedule
+### [~] 6.1 vesting_schedule — SEVERE LABEL FINDING, PENDING EIKIYO'S CONFIRMATION
+- **SEVERE, oracle NOT touched:** the `0001104659-09-054183_a09-26145_18k` (World Heart Corp)
+  item is labeled `"3yr/no-cliff"`, but the ENTIRE model-facing window contains zero textual
+  support for either "3 years" or "no cliff" — it explicitly says, twice, "**one-year cliff**"
+  ("waiver of one-year cliff vesting requirement for any options that have not reached the
+  one-year vesting cliff date") and describes a "credit for vesting... equal to **1/48th** of
+  the option shares [per] full month" — 1/48 monthly is the textbook implementation of a
+  4-year/1-year-cliff schedule (25% at the 1-year mark, 1/48 monthly thereafter), which is
+  EXACTLY what task.py's own taxonomy defines `"4yr/1yr-cliff"` to mean. deepseek-v4f answered
+  `"4yr/1yr-cliff"` with 100% consistency (i.e. it read the clause correctly and was marked
+  WRONG by a mislabeled oracle) — this single item is very likely the direct cause of deepseek's
+  only miss on this leaf (88.9% instead of 100%). Difficulty is marked `"hard"` in the oracle,
+  which may reflect an intent to test something subtle, but nothing in the visible window
+  supports the stated label. **ACTION NEEDED FROM EIKIYO:** the evidence strongly points to the
+  correct label being `4yr/1yr-cliff` (matching the text and matching deepseek's actual answer)
+  — confirm the relabel, or explain what source outside this window justifies `3yr/no-cliff`
+  before I touch oracle.jsonl?
+- Otherwise verified clean: 8/9 other items' normalized formats spot-checked against real clause
+  text, all correct. gemma3-1b's 25% (well below the 44% majority-class baseline) confirms it's
+  not gaming class imbalance — a genuinely hard free-form-normalization task for a 1B model.
+
+## Next leaf: 6.2 cliff_present
