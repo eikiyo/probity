@@ -231,6 +231,14 @@ LEAVES = [
      "title": "Test 7.4 — S-1 risk-factor heading extraction",
      "corpus_desc": "real S-1/424B4 Risk Factors sections",
      "labels": {}},
+    {"slug": "flag_missing_pro_rata",
+     "title": "Test 8.5 — Explicit pro-rata waiver vs grant flag",
+     "corpus_desc": "real SEC-filed investor rights agreements + waivers",
+     "labels": {}},
+    {"slug": "s1_use_of_proceeds",
+     "title": "Test 7.3 — Primary use of IPO proceeds extraction",
+     "corpus_desc": "real S-1/424B4 Use of Proceeds sections",
+     "labels": {}},
 ]
 
 SIZE = {"gemma3-1b": "1B", "llama3.2-3b": "3B", "gemma4-12b": "12B",

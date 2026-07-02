@@ -739,7 +739,8 @@
       "type": "bool",
       "op": "FL",
       "stakes": 3,
-      "tier": "v2"
+      "tier": "built",
+      "leaf": "leaves/flag_missing_pro_rata"
     },
     {
       "ref": "8.6",
