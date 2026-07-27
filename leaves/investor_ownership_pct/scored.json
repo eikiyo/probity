@@ -1448,5 +1448,89 @@
    "tripped": true,
    "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
   }
+ },
+ "deepseek-v4p": {
+  "model": "deepseek-v4-pro",
+  "temperature_requested": 0.7,
+  "routing": "direct",
+  "accuracy": {
+   "task": "investor_ownership_pct",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "investor_ownership_pct": {
+       "majority": 16.3,
+       "truth": 16.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "investor_ownership_pct": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "investor_ownership_pct": {
+       "majority": 5.3,
+       "truth": 5.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "investor_ownership_pct": {
+       "majority": 5.2,
+       "truth": 5.2,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "investor_ownership_pct",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "investor_ownership_pct": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

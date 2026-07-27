@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "deepseek-v4f",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "121e9a405a3541630289a49e6af5a7144390a14ec404fe9964880f0c66ddea99",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:01:00.398516+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "deepseek-v4f",
+ "task_name": "employee_pool_pct",
+ "data_version": "2db81fccf096085774a084922d8a5e14dd0aef0bd8adeb2c39ca769e05e841c5",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:09.424751+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

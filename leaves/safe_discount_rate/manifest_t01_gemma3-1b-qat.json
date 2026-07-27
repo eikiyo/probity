@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "gemma3-1b-qat",
+ "task_name": "safe_discount_rate",
+ "data_version": "54f3418bba1e9b66e7118c93c68f5d0c1cebb1977c7a866615205449269e1f7c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:40:25.393944+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

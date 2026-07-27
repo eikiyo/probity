@@ -1,0 +1,14 @@
+{
+ "leaf": "preference_seniority",
+ "model": "gemma3-1b",
+ "task_name": "preference_seniority",
+ "data_version": "7664cf7444e98830224b5f43eb47f707b0ab2dd0ded5ee482d33c282e12ec54a",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:13:29.554301+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

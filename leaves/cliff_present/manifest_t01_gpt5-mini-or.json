@@ -1,0 +1,14 @@
+{
+ "leaf": "cliff_present",
+ "model": "gpt5-mini-or",
+ "task_name": "cliff_present",
+ "data_version": "db5cf69e0bd7d7bd9ea46fc30cd8bdcdf1744ce8a6ebffa7dff3e885398ab7df",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:33:11.826718+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "llama3.3-70b-or",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "2a1acacfe3760159683276905cefc5f45e8cc55f85365ef5d94d59ed596c065c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:15:49.966781+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

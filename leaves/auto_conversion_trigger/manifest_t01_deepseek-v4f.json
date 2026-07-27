@@ -1,0 +1,14 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "deepseek-v4f",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "9727095521a9ef1bb2cf0a7ac55217aed705d04b328b0dfbbb6d2b9e4e3753f8",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:58:47.403364+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

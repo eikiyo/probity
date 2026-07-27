@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "gemma3-1b-qat",
+ "task_name": "dividend_cumulative",
+ "data_version": "66abf0fad899cf686fb12d79b55ca28bf76303b36a884471fa61002d57217517",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:32:53.478625+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

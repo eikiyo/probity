@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "minimax-m2.5-or",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "2f4f54b977a136f15622ae7b01876fa197d115898e71bcddb86f0a74aaa7f483",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:42:38.977506+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

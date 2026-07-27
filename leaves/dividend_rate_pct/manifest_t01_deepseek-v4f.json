@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "deepseek-v4f",
+ "task_name": "dividend_rate_pct",
+ "data_version": "27b170e95d144f1d7ecb1b54736cbc149da2a467f26dc0c86aa85f65aa0b4ded",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:13.375347+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

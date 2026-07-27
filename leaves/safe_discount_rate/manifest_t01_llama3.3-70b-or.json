@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "llama3.3-70b-or",
+ "task_name": "safe_discount_rate",
+ "data_version": "49a98634f72006e62289409d84acec2c9d34c5afa466eacb720a4fdee0c88222",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:43:30.950992+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

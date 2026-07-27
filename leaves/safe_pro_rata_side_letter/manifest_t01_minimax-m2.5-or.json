@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "minimax-m2.5-or",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "b334abc43e5807ebe6151d860a67a200320b124341ab5b29847ce379e5e1223e",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:57:02.937397+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

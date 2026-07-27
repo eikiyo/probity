@@ -1,0 +1,14 @@
+{
+ "leaf": "price_per_share",
+ "model": "gemma3-1b-qat",
+ "task_name": "price_per_share",
+ "data_version": "5b503cf40f102d2652498bbdb49308e227c96ecd87e2fd4b15913395b026168d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:21:05.541020+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

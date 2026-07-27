@@ -1,0 +1,14 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "gemma3-1b-qat",
+ "task_name": "option_pool_shuffle",
+ "data_version": "fb6aba7d6b1e5e9e783ec3fd1330f2ce4553156ecde9696602cdaa93114b4a8c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:04:32.461282+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

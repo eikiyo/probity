@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "llama3.3-70b-or",
+ "task_name": "safe_valuation_cap",
+ "data_version": "68d7d57e4e492587ba0d3b43c47048018a0f2d78b43cf90d8a3fd0e183e6633d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:44:29.961920+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

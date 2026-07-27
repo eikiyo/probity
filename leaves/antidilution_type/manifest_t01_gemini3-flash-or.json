@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_type",
+ "model": "gemini3-flash-or",
+ "task_name": "antidilution_type",
+ "data_version": "56d97f9827d9379054f6d024587c406043579f9a37ec6cc20358333332c3f1fc",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:17:14.744910+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

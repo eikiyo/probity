@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "llama3.3-70b-or",
+ "task_name": "flag_full_ratchet",
+ "data_version": "200cb47a4619aacb7b7491de7d31ee302f1a8ba98bb2b34a692f5ddf6972339c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:29:41.302342+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

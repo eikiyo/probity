@@ -1,0 +1,14 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "deepseek-v4f",
+ "task_name": "preference_stack_payout",
+ "data_version": "15fc76f5c96db8ab8542679630c7a35892ab2b01821b4e813248bb34de032786",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:07:56.013814+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

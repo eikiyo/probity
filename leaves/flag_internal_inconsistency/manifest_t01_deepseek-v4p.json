@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "deepseek-v4p",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "133cb1d0f0016f426aa8de5a75c42ddd577375aa5e700df1ddb2bae2a894bd86",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:39:32.887208+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "deepseek-v4p",
+ "task_name": "pre_vs_post_money",
+ "data_version": "0972fa285a39f2788fbad964d41f51d30d73352863fee748c1752f1fc3374df3",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:47:56.182892+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

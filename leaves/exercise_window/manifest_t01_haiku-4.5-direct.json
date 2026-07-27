@@ -1,0 +1,14 @@
+{
+ "leaf": "exercise_window",
+ "model": "haiku-4.5-direct",
+ "task_name": "exercise_window",
+ "data_version": "4511fe2c1eb9d03bc91b0261e0b4ea0feba3a245f6a22bccc56b85cd645f1fb9",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:19:06.356523+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "gpt5-mini-or",
+ "task_name": "note_interest_rate",
+ "data_version": "e8b57c5a2dbd9459002fce0027327452dd8cafed47ac1dd32529af3ee37d4a89",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:41:54.126626+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

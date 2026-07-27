@@ -1,0 +1,14 @@
+{
+ "leaf": "redemption_rights",
+ "model": "gemma3-1b-qat",
+ "task_name": "redemption_rights",
+ "data_version": "a5c9eec8969ce9af5d18666c625cb6a597f2be104fd39f7cdec2263d64f1df65",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:28:00.038417+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

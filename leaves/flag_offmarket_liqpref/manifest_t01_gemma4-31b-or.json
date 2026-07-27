@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "gemma4-31b-or",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "41dab7dec8de087180ce07523abfaa6583bcaf72b7623ef4ed5d3c758e4c653b",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:01:46.437184+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

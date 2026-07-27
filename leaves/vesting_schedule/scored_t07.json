@@ -1,0 +1,300 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "vesting_schedule",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.3333333333333333,
+   "accuracy_strict": 0.3333333333333333,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/1yr-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/1yr-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "1/18yr/1yr-cliff",
+       "truth": "1.5yr/no-cliff",
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "3yr/cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "25yr/1yr-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/1yr-cliff",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "vesting_schedule",
+   "consistency_rate": 0.8833333333333333,
+   "consistency_pct": 88.33333333333333,
+   "field_flips": {
+    "vesting_schedule": 0.2222222222222222
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "vesting_schedule",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.3333333333333333,
+   "accuracy_strict": 0.3333333333333333,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/1yr-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/1yr-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "1.5yr/no-cliff",
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "3yr/cliff",
+       "consistency": 0.8421052631578947
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "25yr/1yr-cliff",
+       "truth": "4yr/no-cliff",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "vesting_schedule": {
+       "majority": "4yr/1yr-cliff",
+       "truth": "4yr/1yr-cliff",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "vesting_schedule",
+   "consistency_rate": 0.9102339181286551,
+   "consistency_pct": 91.02339181286551,
+   "field_flips": {
+    "vesting_schedule": 0.3333333333333333
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.011111111111111112,
+   "valid_run_count": 178,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

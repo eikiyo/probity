@@ -82,5 +82,929 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "llama3.3-70b-or": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.25,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.51,
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.41,
+       "truth": 0.42,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.08,
+       "truth": 0.39,
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.44,
+       "consistency": 0.6
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 0.775,
+   "consistency_pct": 77.5,
+   "field_flips": {
+    "liquidation_waterfall_payout": 0.75
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.51,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.42,
+       "truth": 0.42,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.39,
+       "truth": 0.39,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.44,
+       "truth": 0.44,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "liquidation_waterfall_payout": 0.0
+   },
+   "parse_failure_count": 5,
+   "parse_failure_rate": 0.0625,
+   "valid_run_count": 75,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-31b-or": {
+  "model": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.51,
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.42,
+       "truth": 0.42,
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.39,
+       "truth": 0.39,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.43,
+       "truth": 0.44,
+       "consistency": 0.65
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 0.8125,
+   "consistency_pct": 81.25,
+   "field_flips": {
+    "liquidation_waterfall_payout": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "haiku-4.5-direct": {
+  "model": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": -0.04,
+       "truth": 0.51,
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": -0.49,
+       "truth": 0.42,
+       "consistency": 0.45
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": -0.49,
+       "truth": 0.39,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.16,
+       "truth": 0.44,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 0.8375,
+   "consistency_pct": 83.75,
+   "field_flips": {
+    "liquidation_waterfall_payout": 0.5
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt5-mini-or": {
+  "model": "openai/gpt-5-mini",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.5,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.51,
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.4166666667,
+       "truth": 0.42,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.3849206349,
+       "truth": 0.39,
+       "consistency": 0.45
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.44,
+       "truth": 0.44,
+       "consistency": 0.5
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 0.5625,
+   "consistency_pct": 56.25,
+   "field_flips": {
+    "liquidation_waterfall_payout": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "deepseek-v4p": {
+  "model": "deepseek-v4-pro",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.75,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.51,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.42,
+       "truth": 0.42,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.38,
+       "truth": 0.39,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.44,
+       "truth": 0.44,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "liquidation_waterfall_payout": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.51,
+       "consistency": 0.65
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.42,
+       "truth": 0.42,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.39,
+       "truth": 0.39,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.45,
+       "truth": 0.44,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 0.9125,
+   "consistency_pct": 91.25,
+   "field_flips": {
+    "liquidation_waterfall_payout": 0.25
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemini3-flash-or": {
+  "model": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.75,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 16,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.51,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.42,
+       "truth": 0.42,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.38,
+       "truth": 0.39,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.44,
+       "truth": 0.44,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "liquidation_waterfall_payout": 0.0
+   },
+   "parse_failure_count": 4,
+   "parse_failure_rate": 0.05,
+   "valid_run_count": 76,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "minimax-m2.5-or": {
+  "model": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.51,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.42,
+       "truth": 0.42,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.38,
+       "truth": 0.39,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.44,
+       "truth": 0.44,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 0.875,
+   "consistency_pct": 87.5,
+   "field_flips": {
+    "liquidation_waterfall_payout": 0.5
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.25,
+   "accuracy_strict": 0.25,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.51,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.42,
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.39,
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.51,
+       "truth": 0.44,
+       "consistency": 0.95
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 0.95,
+   "consistency_pct": 95.0,
+   "field_flips": {
+    "liquidation_waterfall_payout": 0.75
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.1,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "liquidation_waterfall_payout",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.26,
+       "truth": 0.51,
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.3,
+       "truth": 0.42,
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.3,
+       "truth": 0.39,
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_waterfall_payout": {
+       "majority": 0.3,
+       "truth": 0.44,
+       "consistency": 0.7
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_waterfall_payout",
+   "consistency_rate": 0.6125,
+   "consistency_pct": 61.25000000000001,
+   "field_flips": {
+    "liquidation_waterfall_payout": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

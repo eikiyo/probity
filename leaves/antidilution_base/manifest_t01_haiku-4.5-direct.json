@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_base",
+ "model": "haiku-4.5-direct",
+ "task_name": "antidilution_base",
+ "data_version": "dbb0c578db91c4484960f5e2e5e849cbc2df565d751b7400e3648ea255987fc4",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:17:49.569561+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

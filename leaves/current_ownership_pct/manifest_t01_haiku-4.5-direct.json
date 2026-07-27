@@ -1,0 +1,14 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "haiku-4.5-direct",
+ "task_name": "current_ownership_pct",
+ "data_version": "e5ee00c34ac1c10bfb460c7928e52adf0521c0ef46d2b4891e397e04111cc6d9",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:17:57.369514+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

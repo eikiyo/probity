@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "deepseek-v4p",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "00e572bbd57022fa7efeda495a25b8e11a1eee0536cfaa9df040a55f33aca637",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:39:37.353675+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

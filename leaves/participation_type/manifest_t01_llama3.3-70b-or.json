@@ -1,0 +1,14 @@
+{
+ "leaf": "participation_type",
+ "model": "llama3.3-70b-or",
+ "task_name": "participation_type",
+ "data_version": "49f9d8a527e0f3698ae313ece264b232cef885af09c0a09fab974122516aee9e",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:31:58.100778+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

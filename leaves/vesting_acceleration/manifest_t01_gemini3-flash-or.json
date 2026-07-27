@@ -1,0 +1,14 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "gemini3-flash-or",
+ "task_name": "vesting_acceleration",
+ "data_version": "a075300c2bdd7ba222462567a027e68268f6599dd6ecfcb08fb75e4925cfecdf",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:27:49.115314+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

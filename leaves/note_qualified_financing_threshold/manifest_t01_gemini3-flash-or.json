@@ -1,0 +1,14 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "gemini3-flash-or",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "669c61c4dfac04a6db222209007b379f079e5fb71165fb6f5a4eadd6870f04dd",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:21:18.077949+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "llama3.3-70b-or",
+ "task_name": "founder_ownership_pct",
+ "data_version": "d335866e8496be84694fc95f06f5b2bebafa8071ab2fb8d0692c3b9bd0bc921b",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:24:23.016092+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

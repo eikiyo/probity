@@ -1,0 +1,14 @@
+{
+ "leaf": "drag_along",
+ "model": "minimax-m2.5-or",
+ "task_name": "drag_along",
+ "data_version": "054832efea8aac1fc3b412c437c5b92f6f3f284d7e398b5662b47262fd9dda36",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:47:57.257818+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

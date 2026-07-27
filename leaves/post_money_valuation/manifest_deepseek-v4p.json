@@ -1,0 +1,14 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "deepseek-v4p",
+ "task_name": "post_money_valuation",
+ "data_version": "ae91d523a82a7d5344d2439189d9e196f541fbd5736600edebe10c2c499fa676",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:58:53.641024+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

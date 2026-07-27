@@ -1,0 +1,14 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "haiku-4.5-direct",
+ "task_name": "vesting_acceleration",
+ "data_version": "8eb87e7e5798ab052cd5b4894519232902faa2f5a73cad2225882a36ad9ca0e9",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:26:53.193639+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

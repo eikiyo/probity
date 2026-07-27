@@ -1,0 +1,14 @@
+{
+ "leaf": "cliff_present",
+ "model": "minimax-m2.5-or",
+ "task_name": "cliff_present",
+ "data_version": "87e7e687db5e80845a08048915e1aacc112c5dfdfc31cdacd37c72dcabaaef96",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:42:59.370649+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

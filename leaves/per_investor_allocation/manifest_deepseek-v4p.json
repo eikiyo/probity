@@ -1,0 +1,14 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "deepseek-v4p",
+ "task_name": "per_investor_allocation",
+ "data_version": "adee93a9bda5488d4afd29acc8c318c34e3f20e260b8ba8153543b1af2fa4e92",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:58:58.896281+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

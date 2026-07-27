@@ -1,0 +1,14 @@
+{
+ "leaf": "securities_exemption",
+ "model": "deepseek-v4p",
+ "task_name": "securities_exemption",
+ "data_version": "d4fc8e8cede3a1bb630e036fbbe2b7781b08cb2fd5e234366ad9b9516bcbf7f1",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:04:16.398291+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

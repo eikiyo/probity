@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "gemma3-1b",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "e554661b69ce7271639c63d78fbdd63aa934a56e3516e6be3ad0a547530ab445",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:12:31.987723+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

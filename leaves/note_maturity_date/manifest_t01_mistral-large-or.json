@@ -1,0 +1,14 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "mistral-large-or",
+ "task_name": "note_maturity_date",
+ "data_version": "327ee08827ad8a3f03b249a87a6e6d535db5844a36241eea5643ee0bdc2d0bb2",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:10:06.892968+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

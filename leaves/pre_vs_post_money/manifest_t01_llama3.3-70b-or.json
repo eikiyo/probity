@@ -1,0 +1,14 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "llama3.3-70b-or",
+ "task_name": "pre_vs_post_money",
+ "data_version": "5969991a2641182389f4d6dd785b9c440c512759a2d077480173ce9f0acc7f52",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:33:48.255078+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

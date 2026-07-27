@@ -1,0 +1,14 @@
+{
+ "leaf": "protective_provisions",
+ "model": "deepseek-v4f",
+ "task_name": "protective_provisions",
+ "data_version": "e04a4b26838c469f9da40a5af28f74ce58ec3acb2fc6a8421f027f3549df3009",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:11:28.760256+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

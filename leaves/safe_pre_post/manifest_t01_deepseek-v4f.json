@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pre_post",
+ "model": "deepseek-v4f",
+ "task_name": "safe_pre_post",
+ "data_version": "3bd494bfd564e628741c9db7b9ee8f4ef087f5b9f4efdd7c50e6b2fe63e633fd",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:15:03.687057+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

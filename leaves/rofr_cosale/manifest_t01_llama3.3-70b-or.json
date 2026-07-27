@@ -1,0 +1,14 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "llama3.3-70b-or",
+ "task_name": "rofr_cosale",
+ "data_version": "8460d1f58a78756cd3db09e503df7eb8202b8349d9428bb7c5bfc32efa92b2ee",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:57:03.958846+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

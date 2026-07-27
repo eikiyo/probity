@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_type",
+ "model": "mistral-large-or",
+ "task_name": "antidilution_type",
+ "data_version": "0f35e4be8cf42e4c8697f485d707ee65047b15c28659c0d91b653f1e303cdb24",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:04:33.729406+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

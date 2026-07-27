@@ -1,0 +1,14 @@
+{
+ "leaf": "securities_exemption",
+ "model": "mistral-large-or",
+ "task_name": "securities_exemption",
+ "data_version": "70acaf9632ea96b0efeabd0af644817d46b2ca9564a28ea258ab3f2bfaa73a5c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:15:21.064351+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

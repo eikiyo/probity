@@ -1,0 +1,14 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "gemma3-1b",
+ "task_name": "financial_statement_qa",
+ "data_version": "25d3169d02cb4f1e7daf12fdc67d16113c54518486399dca2a32747fdbfcaad7",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:01:41.171523+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

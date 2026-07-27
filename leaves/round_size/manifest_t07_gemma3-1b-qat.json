@@ -1,0 +1,14 @@
+{
+ "leaf": "round_size",
+ "model": "gemma3-1b-qat",
+ "task_name": "round_size",
+ "data_version": "21b8b3457c4db1ad2ebf624b9c358831a4c29b3dcc78c0bccc835cdb4be0d652",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:32:50.934546+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

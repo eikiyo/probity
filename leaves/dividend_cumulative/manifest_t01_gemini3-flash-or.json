@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "gemini3-flash-or",
+ "task_name": "dividend_cumulative",
+ "data_version": "79a949239ece0013b463f21dd0aef3cae6a79dd7706041d2616302a948937423",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:19:45.647196+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

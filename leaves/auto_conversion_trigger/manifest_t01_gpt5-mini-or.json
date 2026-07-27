@@ -1,0 +1,14 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "gpt5-mini-or",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "a9da0162ca35efb436bd26468757080895f6868f94dc920e2e2a4338d7951e1d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:28:41.402481+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

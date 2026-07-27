@@ -1,0 +1,14 @@
+{
+ "leaf": "vesting_schedule",
+ "model": "gemma4-31b-or",
+ "task_name": "vesting_schedule",
+ "data_version": "7710defdb04600cddf7228e3814e1d5b410ca25a8328786bfd595b09068dbce2",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:20:14.135377+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

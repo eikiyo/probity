@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "gemma4-31b-or",
+ "task_name": "flag_full_ratchet",
+ "data_version": "2b7e6f550e81b0a2cd04ab95c98053a6ee2b7791bb683d7ea582e40358895205",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:05:01.363520+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "deepseek-v4p",
+ "task_name": "rofr_cosale",
+ "data_version": "c69b1514a732db58aac8cf72406bbb408cf18e59801789b6cad32a18c35173d9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:02:09.215292+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

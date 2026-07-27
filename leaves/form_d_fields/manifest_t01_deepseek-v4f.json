@@ -1,0 +1,14 @@
+{
+ "leaf": "form_d_fields",
+ "model": "deepseek-v4f",
+ "task_name": "form_d_fields",
+ "data_version": "6c8957066d1c9fe158e1b898322266453053d3714dd514b8ecd1ccf0762be040",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:41.134160+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

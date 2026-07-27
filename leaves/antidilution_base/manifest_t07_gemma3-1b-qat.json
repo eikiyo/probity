@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_base",
+ "model": "gemma3-1b-qat",
+ "task_name": "antidilution_base",
+ "data_version": "2a8eee064424d79344ef33faec59b4c5badb1853e2ad9faee987e38cb1c4f990",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:19:29.430947+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

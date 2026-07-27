@@ -1,0 +1,274 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "fully_diluted_basis",
+   "n_instances": 8,
+   "n_measurable": 8,
+   "accuracy_majority": 0.625,
+   "accuracy_strict": 0.375,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "fully-diluted",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "fully-diluted",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "fully-diluted",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "fully-diluted",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "issued-outstanding",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "issued-outstanding",
+       "truth": "issued-outstanding",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "issued-outstanding",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "issued-outstanding",
+       "consistency": 0.75
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "fully_diluted_basis",
+   "consistency_rate": 0.90625,
+   "consistency_pct": 90.625,
+   "field_flips": {
+    "fully_diluted_basis": 0.5
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 160,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "fully_diluted_basis",
+   "n_instances": 8,
+   "n_measurable": 8,
+   "accuracy_majority": 0.5,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "fully-diluted",
+       "consistency": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "fully-diluted",
+       "consistency": 0.6842105263157895
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "fully-diluted",
+       "consistency": 0.7777777777777778
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "fully-diluted",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "issued-outstanding",
+       "consistency": 0.8421052631578947
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 16,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "issued-outstanding",
+       "consistency": 0.625
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 18,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "issued-outstanding",
+       "consistency": 0.7222222222222222
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 18,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "fully_diluted_basis": {
+       "majority": "fully-diluted",
+       "truth": "issued-outstanding",
+       "consistency": 0.5555555555555556
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "fully_diluted_basis",
+   "consistency_rate": 0.6841922514619883,
+   "consistency_pct": 68.41922514619883,
+   "field_flips": {
+    "fully_diluted_basis": 1.0
+   },
+   "parse_failure_count": 10,
+   "parse_failure_rate": 0.0625,
+   "valid_run_count": 150,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

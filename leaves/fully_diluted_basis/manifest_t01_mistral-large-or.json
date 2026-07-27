@@ -1,0 +1,14 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "mistral-large-or",
+ "task_name": "fully_diluted_basis",
+ "data_version": "2fc959d80955ed03e6e5439454a553c2f0339325c239e11c1f7f3d495d708fe3",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:09:18.523759+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

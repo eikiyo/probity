@@ -1,0 +1,14 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "gemma3-1b-qat",
+ "task_name": "post_money_valuation",
+ "data_version": "782d14f3343fbd6911c9128efcaf090da00bc155ddffd6cd70d09df2a02afc83",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:12:10.071167+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

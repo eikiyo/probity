@@ -1,0 +1,14 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "gemma4-31b-or",
+ "task_name": "employee_pool_pct",
+ "data_version": "1669e0331d62b92bc29e34cae8332ece270add637a52e30832b06ebfaf90f4bc",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:04.715148+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

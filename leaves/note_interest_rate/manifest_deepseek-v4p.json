@@ -1,0 +1,14 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "deepseek-v4p",
+ "task_name": "note_interest_rate",
+ "data_version": "4fb773f928fd6bcd0328e4585be0cef2e08906553c698d820a7be3ee13eb95c9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:57:39.716247+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

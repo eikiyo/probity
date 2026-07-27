@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "gemini3-flash-or",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "1e59d3738aa18843a4434eb2c2c8804fbd36c5f13c2f75a416b63016220a8309",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:28:30.669897+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

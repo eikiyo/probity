@@ -1,0 +1,196 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "multi_round_stacked_dilution",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "multi_round_stacked_dilution": {
+       "majority": 13.6,
+       "truth": 32.89,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "multi_round_stacked_dilution": {
+       "majority": 0.47,
+       "truth": 2.09,
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "multi_round_stacked_dilution": {
+       "majority": 3.07,
+       "truth": 28.82,
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "multi_round_stacked_dilution": {
+       "majority": 2.18,
+       "truth": 14.9,
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "multi_round_stacked_dilution": {
+       "majority": 0.77,
+       "truth": 1.96,
+       "consistency": 0.8
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "multi_round_stacked_dilution",
+   "consistency_rate": 0.77,
+   "consistency_pct": 77.0,
+   "field_flips": {
+    "multi_round_stacked_dilution": 0.8
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "multi_round_stacked_dilution",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "multi_round_stacked_dilution": {
+       "majority": 13.6,
+       "truth": 32.89,
+       "consistency": 0.8947368421052632
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "multi_round_stacked_dilution": {
+       "majority": 0.0,
+       "truth": 2.09,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "multi_round_stacked_dilution": {
+       "majority": 3.07,
+       "truth": 28.82,
+       "consistency": 0.2
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "multi_round_stacked_dilution": {
+       "majority": 0.0,
+       "truth": 14.9,
+       "consistency": 0.25
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "multi_round_stacked_dilution": {
+       "majority": 0.77,
+       "truth": 1.96,
+       "consistency": 0.65
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "multi_round_stacked_dilution",
+   "consistency_rate": 0.4989473684210527,
+   "consistency_pct": 49.89473684210527,
+   "field_flips": {
+    "multi_round_stacked_dilution": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "gemma3-1b",
+ "task_name": "fully_diluted_basis",
+ "data_version": "80901ef6aacde07c520eaf56e212f721c3ad8bd3f9714c2bd7eadc2eab6ebc47",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:22:56.494466+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

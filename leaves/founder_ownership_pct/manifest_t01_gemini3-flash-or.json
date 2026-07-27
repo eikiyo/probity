@@ -1,0 +1,14 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "gemini3-flash-or",
+ "task_name": "founder_ownership_pct",
+ "data_version": "d61888433875fd178609366f5bb6c936e0981408f57fca94c6ce0b38455974c2",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:19:47.751228+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

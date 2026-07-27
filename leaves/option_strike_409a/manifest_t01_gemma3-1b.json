@@ -1,0 +1,14 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "gemma3-1b",
+ "task_name": "option_strike_409a",
+ "data_version": "6b3c407b9f3fd32fabf646a12c08677dc1542d6e6457ec4caca74ea35637e0aa",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:50:43.334330+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

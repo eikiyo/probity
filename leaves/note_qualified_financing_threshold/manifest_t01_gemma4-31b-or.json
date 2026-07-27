@@ -1,0 +1,14 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "gemma4-31b-or",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "8c4c8d3d25a3c8865a26da9ed89f97ef2bed9b9698133a976730c42a5db50939",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:03:52.526798+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

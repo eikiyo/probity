@@ -1,0 +1,14 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "llama3.3-70b-or",
+ "task_name": "fully_diluted_basis",
+ "data_version": "8cd8c693925a43521b4918498ec3783844905e41e77b2a05a128390b9eed543f",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:25:30.396771+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

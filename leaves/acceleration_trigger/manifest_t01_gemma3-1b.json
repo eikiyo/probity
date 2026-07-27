@@ -1,0 +1,14 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "gemma3-1b",
+ "task_name": "acceleration_trigger",
+ "data_version": "aa50113572024a0beb698352d58d239a4aee496197a0ae11df4dd31a46d2d040",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:19:20.857271+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

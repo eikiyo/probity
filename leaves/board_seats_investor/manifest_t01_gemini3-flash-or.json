@@ -1,0 +1,14 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "gemini3-flash-or",
+ "task_name": "board_seats_investor",
+ "data_version": "00f22befb784ce7df04cac147b2e895b03d24df5a6a70915752c7d424f1211dc",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:18:18.243878+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

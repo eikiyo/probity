@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "gemini3-flash-or",
+ "task_name": "dividend_rate_pct",
+ "data_version": "71c08d0ffe1c8929b072279eff6bd9bf1ff9c34bf7cbe150ddce4b8537d1b483",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:17:43.671552+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

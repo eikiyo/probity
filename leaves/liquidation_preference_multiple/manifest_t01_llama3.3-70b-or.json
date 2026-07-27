@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "llama3.3-70b-or",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "e9de65cd79ecf1adcd56541a7c919de6411d05745a725789e226452363ba3d2b",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:39:46.825943+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

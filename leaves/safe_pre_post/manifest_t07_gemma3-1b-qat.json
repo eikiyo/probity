@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pre_post",
+ "model": "gemma3-1b-qat",
+ "task_name": "safe_pre_post",
+ "data_version": "b9aa0a94fda9f3a65e416773fe3311b5fb9cf796d082063c8be586a8499f0f74",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:45:18.237514+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

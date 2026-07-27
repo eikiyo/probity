@@ -1,0 +1,14 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "llama3.3-70b-or",
+ "task_name": "note_maturity_date",
+ "data_version": "4740f6191a1ec6c36c7008154b5b5ff7ff7e58b2cc1ae319b17ec274bce0c2a8",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:40:54.973885+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "deepseek-v4f",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "c2790e0788124f75eb6a4915b95e79eef2ec4da1eefa565c354d194c976ac286",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:07:27.794381+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

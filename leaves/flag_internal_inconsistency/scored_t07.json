@@ -1,0 +1,196 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.2,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": true,
+       "consistency": 0.85
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.7899999999999999,
+   "consistency_pct": 78.99999999999999,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.8
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 17,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.99,
+   "consistency_pct": 99.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.2
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.02,
+   "valid_run_count": 98,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

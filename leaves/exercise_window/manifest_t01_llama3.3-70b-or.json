@@ -1,0 +1,14 @@
+{
+ "leaf": "exercise_window",
+ "model": "llama3.3-70b-or",
+ "task_name": "exercise_window",
+ "data_version": "d6aff1a8d59dccc705d869d698873a458f49b33fd71114f6ee5a5b25a6994d82",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:24:31.658717+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

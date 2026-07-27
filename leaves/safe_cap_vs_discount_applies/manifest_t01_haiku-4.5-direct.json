@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "haiku-4.5-direct",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "accff6a2cd667046e72bdd5a9533dca2712a440cf1f9fefbf384096223ffe0d2",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:26:55.254889+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

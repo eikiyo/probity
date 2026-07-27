@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "gemma4-31b-or",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "616e9377140b16a1a0e85d2890499596a5c7a3fba31b8c9f87a9e986c11022d8",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:02:31.810583+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "gemma3-1b",
+ "task_name": "pro_rata_rights",
+ "data_version": "e6f60ec2f4a4e7a5175f7557259f5e5b4c2a78b07d0679e39dc54e660a16e639",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T16:21:52.738122+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

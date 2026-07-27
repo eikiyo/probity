@@ -1,0 +1,14 @@
+{
+ "leaf": "cliff_present",
+ "model": "haiku-4.5-direct",
+ "task_name": "cliff_present",
+ "data_version": "40d87596242409c2fe78a221b227fe97175da7ec1d48a6d003c141f6f0b72882",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:17:28.859891+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "haiku-4.5-direct",
+ "task_name": "option_strike_409a",
+ "data_version": "b72d3dc23b4696a514e1e82f8f77c2aa22238b3fbb713db53bdc34b4c73a4ead",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:22:43.940103+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

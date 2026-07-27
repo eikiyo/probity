@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "deepseek-v4p",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "b37d5ae114f5d1d6b7ecc1d6f664c4e5ee1c5a0e8540404a631e5f7f75f28183",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:03:43.942679+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

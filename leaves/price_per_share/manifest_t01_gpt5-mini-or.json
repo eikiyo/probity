@@ -1,0 +1,14 @@
+{
+ "leaf": "price_per_share",
+ "model": "gpt5-mini-or",
+ "task_name": "price_per_share",
+ "data_version": "1a69e0391f017f0a22f5f482678da45e48b8a5a470623ba494a72116e7599c12",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:48:12.519640+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

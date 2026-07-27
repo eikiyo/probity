@@ -1,0 +1,14 @@
+{
+ "leaf": "note_principal",
+ "model": "gpt5-mini-or",
+ "task_name": "note_principal",
+ "data_version": "73036057aeb106e5571d541fb8f2d8829b15633777f64736af961fb934262394",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:42:10.667584+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

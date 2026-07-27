@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "gpt5-mini-or",
+ "task_name": "safe_mfn_present",
+ "data_version": "cb362d360259734eabe665b7c0bdcdaf8f75b839ca8aa3efa056d2d924b6f563",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:53:55.372073+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "drag_along",
+ "model": "deepseek-v4f",
+ "task_name": "drag_along",
+ "data_version": "ce75cba3496d14a56138c0a45f43c9ca4dd4565c880e9eb440818cf6bbc9e2f6",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:42.453391+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

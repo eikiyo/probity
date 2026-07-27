@@ -1,0 +1,14 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "haiku-4.5-direct",
+ "task_name": "employee_pool_pct",
+ "data_version": "bb06cf2f8e97ae84f391f318e2e4d3bf69997aa3e7e05592b423c4a3ba5b81e1",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:18:05.537790+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

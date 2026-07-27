@@ -1,0 +1,14 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "gemini3-flash-or",
+ "task_name": "rofr_cosale",
+ "data_version": "272ec72ab29ad4669e1322ee2cc0263f89dbec2e815405e7175da51237df67f8",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:26:01.606311+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "minimax-m2.5-or",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "9a4e8989f6f76e866417077093dfe59807ef40e1d67a540c519429a78b45d18b",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:54:23.769722+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

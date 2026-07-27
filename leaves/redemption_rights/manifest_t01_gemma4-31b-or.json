@@ -1,0 +1,14 @@
+{
+ "leaf": "redemption_rights",
+ "model": "gemma4-31b-or",
+ "task_name": "redemption_rights",
+ "data_version": "c0be2e8d8525203a7ba27ae4b04ce934e23e34ab1fe4ef0e33a96dff1a21a730",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:10:53.077422+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

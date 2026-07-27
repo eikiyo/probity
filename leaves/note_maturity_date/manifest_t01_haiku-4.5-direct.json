@@ -1,0 +1,14 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "haiku-4.5-direct",
+ "task_name": "note_maturity_date",
+ "data_version": "bf1581bc0ccde8512b1864981e93248b32383d126fa6e24d4a8fadbfc91a1f29",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:21:09.357972+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

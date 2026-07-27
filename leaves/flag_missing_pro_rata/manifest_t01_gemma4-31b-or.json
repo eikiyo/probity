@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "gemma4-31b-or",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "cf7472f8684b481fa4a16695cbf7f8b493436bd6f9af3d37a18af95da0b2e3b5",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:51.879256+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

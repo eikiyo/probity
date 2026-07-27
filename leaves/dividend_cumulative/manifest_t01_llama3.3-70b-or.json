@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "llama3.3-70b-or",
+ "task_name": "dividend_cumulative",
+ "data_version": "bd08faa9557bf4b95d064ae03ab434d7a0b636ed2c33ef76c96225084c9e392c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:25:27.400945+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

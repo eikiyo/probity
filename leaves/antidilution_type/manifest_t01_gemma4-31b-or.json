@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_type",
+ "model": "gemma4-31b-or",
+ "task_name": "antidilution_type",
+ "data_version": "9c5bb886e88ffcd663957dc0811445dc527ca6092a6f64ca3c09b38a6cb84560",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:58:52.114087+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

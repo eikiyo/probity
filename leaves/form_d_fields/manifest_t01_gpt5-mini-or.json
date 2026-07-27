@@ -1,0 +1,14 @@
+{
+ "leaf": "form_d_fields",
+ "model": "gpt5-mini-or",
+ "task_name": "form_d_fields",
+ "data_version": "c37c6e74dc7b9fbdbb1932980841a20a8895f25e3a53df4aa966a3d063dc30ac",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:34:04.666039+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

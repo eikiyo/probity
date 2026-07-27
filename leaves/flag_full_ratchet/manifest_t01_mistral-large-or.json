@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "mistral-large-or",
+ "task_name": "flag_full_ratchet",
+ "data_version": "56bc79fca9742fe0d98a4bc44e34057df465214731417f0b8d287c57965f11d5",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:07:20.633616+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

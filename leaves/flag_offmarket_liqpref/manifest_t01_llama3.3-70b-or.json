@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "llama3.3-70b-or",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "c0bf563837843a92c39b4b74b91c276931f9555da1cad80512abab5ba0d93999",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:37:24.355493+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

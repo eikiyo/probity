@@ -1,0 +1,14 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "gemma4-31b-or",
+ "task_name": "founder_ownership_pct",
+ "data_version": "18ba722b17889be1a73488555287ee598632ca78550ae94ff688efbb2e6da22d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:00:00.538769+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

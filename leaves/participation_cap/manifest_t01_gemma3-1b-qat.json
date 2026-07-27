@@ -1,0 +1,14 @@
+{
+ "leaf": "participation_cap",
+ "model": "gemma3-1b-qat",
+ "task_name": "participation_cap",
+ "data_version": "c20689b0e19c1a7712e68fe0b645f6073ea12f441bc5de188e999c0eeb72f244",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:06:28.559789+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

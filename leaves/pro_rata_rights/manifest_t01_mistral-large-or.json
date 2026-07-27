@@ -1,0 +1,14 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "mistral-large-or",
+ "task_name": "pro_rata_rights",
+ "data_version": "b73d15431069bc9f3af452dc49524ece989e5bb29937613f9a5f7643206c3555",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:13:07.342398+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

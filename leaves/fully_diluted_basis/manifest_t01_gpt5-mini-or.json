@@ -1,0 +1,14 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "gpt5-mini-or",
+ "task_name": "fully_diluted_basis",
+ "data_version": "134f846bb482d60f317c780812dbcb19d95c066a9cf43dd085f8181b29e77327",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:38:10.798657+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

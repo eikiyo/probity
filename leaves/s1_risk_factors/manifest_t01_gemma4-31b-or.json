@@ -1,0 +1,14 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "gemma4-31b-or",
+ "task_name": "s1_risk_factors",
+ "data_version": "2671c627f7271e981b2bb67f8ff73b0cd64560648bc2cd41ac108323227dc535",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:11:11.784652+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

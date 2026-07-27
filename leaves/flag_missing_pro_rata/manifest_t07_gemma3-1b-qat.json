@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "gemma3-1b-qat",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "4383689a72d049f74f0d401afb474402462f1ee861aadeb684f522e8a1a14420",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:42:13.029646+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "price_per_share",
+ "model": "gemma4-31b-or",
+ "task_name": "price_per_share",
+ "data_version": "11b95496b4254b0ffa27d2096a14b0e0f04446d54763f54f256677a1e51ea654",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:09:20.732852+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

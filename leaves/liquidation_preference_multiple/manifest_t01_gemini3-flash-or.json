@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "gemini3-flash-or",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "33ae88918efa7ca7951cd0a53227f084c90a15618534598ba46c50b4ed74c408",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:21:46.060830+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

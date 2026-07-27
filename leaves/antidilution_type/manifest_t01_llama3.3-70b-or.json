@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_type",
+ "model": "llama3.3-70b-or",
+ "task_name": "antidilution_type",
+ "data_version": "e8e878f3ad257bc5d535d9be26edafde381556566427934c3d3e4fe4ea85b632",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:14:53.182214+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

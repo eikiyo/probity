@@ -1,0 +1,14 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "haiku-4.5-direct",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "3a6429e1563f0b73fce597392d163d265fd193baf1822c6a7b03416f8bcf3843",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:17:04.726547+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

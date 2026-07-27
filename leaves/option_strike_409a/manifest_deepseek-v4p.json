@@ -1,0 +1,14 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "deepseek-v4p",
+ "task_name": "option_strike_409a",
+ "data_version": "c19937d89816c6a4f745b4e5d221a47ae3265572bc310361edb00a279a6bf2c4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:59:22.356301+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

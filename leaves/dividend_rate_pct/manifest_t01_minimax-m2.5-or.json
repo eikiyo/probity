@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "minimax-m2.5-or",
+ "task_name": "dividend_rate_pct",
+ "data_version": "2ac86953e36288253edf1693a0be3baa99e78d7aed6d0b28929cf6f36a40afa3",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:32:40.553825+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

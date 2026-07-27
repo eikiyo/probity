@@ -1,0 +1,14 @@
+{
+ "leaf": "form_d_fields",
+ "model": "minimax-m2.5-or",
+ "task_name": "form_d_fields",
+ "data_version": "5f5deae96f097fe5bc07a5234b750e0be5b29b32a757747c4520088c4d1d3990",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:43:55.759068+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

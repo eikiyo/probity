@@ -83,7 +83,34 @@ def per_item(dump, field_of):
     return answers
 
 
-def score_model(answers, truth):
+def unmeasurable_cells(dump):
+    """
+    (arm, model, leaf) cells the benchmark EXCLUDES from its published numbers.
+
+    The scorer refuses to score a leaf for a model when more than 30% of that leaf's runs could
+    not be parsed at all: the surviving answers are too thin a sample to characterise the model on
+    that test. This is a real methodological choice, not a rounding detail -- gemma3-1b on the 0.7
+    Kaggle arm hit a 56.2% parse-failure rate on `note_discount`, so the paper scores it over 466
+    items while a verifier ignorant of the rule scores 470 and reports a different accuracy.
+
+    A reviewer must be able to SEE that choice, not inherit it invisibly, so main() prints every
+    excluded cell. The flag is read from the dump's own scored records -- this file still imports
+    nothing from the benchmark.
+    """
+    out = set()
+    try:
+        path = _find(dump, "scored")
+    except SystemExit:
+        return out                     # older dump without scored records: exclude nothing
+    with _open(path) as f:
+        for line in f:
+            r = json.loads(line)
+            if (r.get("reliability") or {}).get("measurable", True) is False:
+                out.add((r["arm"], r["model_label"], r["leaf"]))
+    return out
+
+
+def score_model(answers, truth, excluded=frozenset()):
     """
     Independent reimplementation of the two headline metrics.
 
@@ -96,7 +123,7 @@ def score_model(answers, truth):
     """
     agg = defaultdict(lambda: {"flipped": 0, "measured": 0, "correct": 0, "leaves": set()})
     for (arm, model, leaf, idx), vals in answers.items():
-        if not vals:
+        if not vals or (arm, model, leaf) in excluded:
             continue
         a = agg[(arm, model)]
         a["measured"] += 1
@@ -130,7 +157,14 @@ def main():
     dump = Path(args.dump)
 
     truth, field_of = load_oracle(dump)
-    scores = score_model(per_item(dump, field_of), truth)
+    excluded = unmeasurable_cells(dump)
+    scores = score_model(per_item(dump, field_of), truth, excluded)
+    if excluded:
+        print(f"EXCLUDED {len(excluded)} (arm, model, test) cells: the benchmark does not score a "
+              "test for a model when >30% of that test's runs were unparseable. Listed so you can "
+              "judge the rule, not just inherit it:")
+        for arm, model, leaf in sorted(excluded):
+            print(f"  {arm:12s} {model:22s} {leaf}")
 
     by_arm = defaultdict(dict)
     for (arm, model), s in scores.items():

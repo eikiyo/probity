@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_type",
+ "model": "minimax-m2.5-or",
+ "task_name": "antidilution_type",
+ "data_version": "94c2c87f61f2d4e484ce23ad901f04b68893e462304047526b00b99731e52011",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:32:41.799655+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

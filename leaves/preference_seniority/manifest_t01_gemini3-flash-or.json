@@ -1,0 +1,14 @@
+{
+ "leaf": "preference_seniority",
+ "model": "gemini3-flash-or",
+ "task_name": "preference_seniority",
+ "data_version": "9a4310c1634379a066fe5eba4cefad334074e684c35eb200ddecf678ae04e325",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:24:11.209611+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "gpt5-mini-or",
+ "task_name": "per_investor_allocation",
+ "data_version": "d377e6ca1dda427d59b760b1dcc9ddc38185aa9e8bcb3c38ba7a00586f75b754",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:44:34.402491+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

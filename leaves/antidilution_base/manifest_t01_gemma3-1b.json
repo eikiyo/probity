@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_base",
+ "model": "gemma3-1b",
+ "task_name": "antidilution_base",
+ "data_version": "022457da2aebac5ed62ae43a2a873d03df61e07aaa1824188997b61a13cdc26c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:23:43.354000+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

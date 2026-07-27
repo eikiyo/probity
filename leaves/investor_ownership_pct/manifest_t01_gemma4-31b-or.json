@@ -1,0 +1,14 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "gemma4-31b-or",
+ "task_name": "investor_ownership_pct",
+ "data_version": "f71de9e12b4fb5569f6c661f0b33ad1e25f0e85b29410f691cedf8f3e8d3c8f8",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:01:48.065380+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

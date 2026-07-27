@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "llama3.3-70b-or",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "4ad3d71c113c3574b8aefa9321148e914c65a213db771b0a31049793a8a093ef",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:26:04.016920+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

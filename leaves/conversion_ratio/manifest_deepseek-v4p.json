@@ -1,0 +1,14 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "deepseek-v4p",
+ "task_name": "conversion_ratio",
+ "data_version": "6db200bd37871e09b0b81d61313060f69278f6be60dc2a3fe3dc1a325e7a7c82",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:52:16.073020+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

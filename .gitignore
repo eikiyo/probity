@@ -17,3 +17,7 @@ probity_cli/data/
 dist/
 build/
 *.egg-info/
+
+# Peer-review artifacts: regenerable from leaves/ via results/raw_tree.py and results/datadump.py
+Raw/
+dump/

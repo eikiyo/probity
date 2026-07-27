@@ -1,0 +1,14 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "llama3.3-70b-or",
+ "task_name": "board_seats_investor",
+ "data_version": "b920cfbe36e0a09b3361e12436661a1a90774afd5667887cbc5e85f34254ba7c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:14:53.239181+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

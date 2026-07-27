@@ -1,0 +1,14 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "gpt5-mini-or",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "85f722aed2717774e9cdc923bd326214f32d6c23bba7c67463c231ab2c1bba1b",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:36:46.474916+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

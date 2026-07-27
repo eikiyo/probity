@@ -1,0 +1,14 @@
+{
+ "leaf": "round_size",
+ "model": "llama3.3-70b-or",
+ "task_name": "round_size",
+ "data_version": "0cd50371eea401f8ee1b4b8ec9116d365f461515bedd896caaefb8fb1af39a4d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:42:05.488542+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

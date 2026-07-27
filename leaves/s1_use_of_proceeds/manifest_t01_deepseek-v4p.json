@@ -1,0 +1,14 @@
+{
+ "leaf": "s1_use_of_proceeds",
+ "model": "deepseek-v4p",
+ "task_name": "s1_use_of_proceeds",
+ "data_version": "65d02f016d0a131acbeb12fa749eca18aa7a72da1793743bdf7e41c9295bab78",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:46:18.616108+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

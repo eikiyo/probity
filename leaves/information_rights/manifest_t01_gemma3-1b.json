@@ -1,0 +1,14 @@
+{
+ "leaf": "information_rights",
+ "model": "gemma3-1b",
+ "task_name": "information_rights",
+ "data_version": "6b482c6f4fcec78fea6630acb55f1b98472d023b87085db818aca55b6577d0e2",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:27:26.321401+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "llama3.3-70b-or",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "5763facd94f9b000e0449060c2fcfebff23d0e02d9499ee304288c6aa4f9ba6e",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:26:17.456874+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

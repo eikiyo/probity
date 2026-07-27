@@ -1,0 +1,14 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "minimax-m2.5-or",
+ "task_name": "current_ownership_pct",
+ "data_version": "6dc0433357b12f34d9d34eb32ae7783cae58ea9bf382467b53a7fd0655bdf669",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:10:43.665414+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

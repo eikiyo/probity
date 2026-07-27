@@ -1,0 +1,14 @@
+{
+ "leaf": "price_per_share",
+ "model": "deepseek-v4p",
+ "task_name": "price_per_share",
+ "data_version": "b2d5ddec99ec69a61970637c3ccbf5ae1144704634cc54a86daf8f9f7cdc5114",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:44:17.179581+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

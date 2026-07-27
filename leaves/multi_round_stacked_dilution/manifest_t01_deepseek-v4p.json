@@ -1,0 +1,14 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "deepseek-v4p",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "5de66090917f80c49153c148bb43255317e9c711c8316b34caf804fdcf80feff",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:41:29.645603+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

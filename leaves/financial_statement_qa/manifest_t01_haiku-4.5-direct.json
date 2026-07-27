@@ -1,0 +1,14 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "haiku-4.5-direct",
+ "task_name": "financial_statement_qa",
+ "data_version": "7ca427e51cb58818f0bd944d9d01a9f510c10c3249b066c592edcf44d8cf6ebc",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:18:56.042098+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

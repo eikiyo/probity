@@ -1,0 +1,14 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "gemma4-31b-or",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "7b0863c223ce135d70764243247a0b8188a843aa862c30d3707970b317f3f0a0",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:58:34.691522+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

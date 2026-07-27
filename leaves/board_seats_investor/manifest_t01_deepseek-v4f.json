@@ -1,0 +1,14 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "deepseek-v4f",
+ "task_name": "board_seats_investor",
+ "data_version": "add1192ed9321960b3690cb5be907846382e56c2ff25215c09aa94d24b0e6a86",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:04.709529+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

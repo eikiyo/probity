@@ -1,0 +1,14 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "gemma4-31b-or",
+ "task_name": "conversion_ratio",
+ "data_version": "967b7341cc56fb22fc26f4b1bcfa0b15d9bec4e1dfadbd4971f1c443a64f4097",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:58:55.517677+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

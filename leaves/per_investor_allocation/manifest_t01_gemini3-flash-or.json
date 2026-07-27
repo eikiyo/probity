@@ -1,0 +1,14 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "gemini3-flash-or",
+ "task_name": "per_investor_allocation",
+ "data_version": "6bbdb8c301def9bbb8cb247eabef5ee5e07008c217a05b43e72c150a3de9e7aa",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:23:06.471017+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "gemini3-flash-or",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "6085cf482607548f68a09252001e0ace1f4f3629063a28c12de509c13fe695f5",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:20:49.663407+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

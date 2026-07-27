@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "deepseek-v4p",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "fa9c82d04802e6e41d21f2d715db131a08727f84d30a8e83311bef893b8a8a1b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:56:56.858972+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

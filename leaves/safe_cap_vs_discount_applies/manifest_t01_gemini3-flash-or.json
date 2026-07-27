@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "gemini3-flash-or",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "d146d0e2eecba251caa570fee27a03134f1f076aa59b41cbbf39a8fd2da8e9d6",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:27:32.965374+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "deepseek-v4p",
+ "task_name": "safe_mfn_present",
+ "data_version": "6c903b495ef998c4611e66841c0eda027c6e62e372a1b7575fc221ab91e13761",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:03:27.358763+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

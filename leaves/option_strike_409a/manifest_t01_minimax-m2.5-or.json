@@ -1,0 +1,14 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "minimax-m2.5-or",
+ "task_name": "option_strike_409a",
+ "data_version": "d2d2a3ec87427dd7978a76dd3ceb1a60fd94ec77052a7d73c2008105822d442c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:07:00.780430+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

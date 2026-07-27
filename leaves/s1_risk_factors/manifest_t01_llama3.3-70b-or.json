@@ -1,0 +1,14 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "llama3.3-70b-or",
+ "task_name": "s1_risk_factors",
+ "data_version": "a967418f6d7ea4a4d663405140f2a360c6b90c1509ad6bd9cdefa0ae6d19b03b",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:43:21.506955+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

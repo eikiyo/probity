@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "haiku-4.5-direct",
+ "task_name": "flag_full_ratchet",
+ "data_version": "daeb34a63b4aa1e82fdaeb12d04457eee7d8a3181204cac692fa6fc146abd744",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:19:05.686002+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

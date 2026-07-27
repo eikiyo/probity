@@ -1,0 +1,14 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "gemma3-1b-qat",
+ "task_name": "note_interest_rate",
+ "data_version": "9dc4fc8dd3e8a6ac6eacda931f2ef55732a7253a569cad41e95d1e827c5c4f87",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:59:36.091002+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

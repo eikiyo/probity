@@ -82,5 +82,929 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "llama3.3-70b-or": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_valuation_cap": 0.0
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.0125,
+   "valid_run_count": 79,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-31b-or": {
+  "model": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_valuation_cap": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 8,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_valuation_cap": 0.0
+   },
+   "parse_failure_count": 12,
+   "parse_failure_rate": 0.15,
+   "valid_run_count": 68,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "haiku-4.5-direct": {
+  "model": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_valuation_cap": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "deepseek-v4p": {
+  "model": "deepseek-v4-pro",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_valuation_cap": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt5-mini-or": {
+  "model": "openai/gpt-5-mini",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_valuation_cap": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_valuation_cap": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemini3-flash-or": {
+  "model": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 17,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_valuation_cap": 0.0
+   },
+   "parse_failure_count": 3,
+   "parse_failure_rate": 0.0375,
+   "valid_run_count": 77,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "minimax-m2.5-or": {
+  "model": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "note_valuation_cap": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.75,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 0.8875,
+   "consistency_pct": 88.75,
+   "field_flips": {
+    "note_valuation_cap": 0.25
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.1,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 1250000.0,
+       "truth": 125000000.0,
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 0.9
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 0.9,
+   "consistency_pct": 90.0,
+   "field_flips": {
+    "note_valuation_cap": 0.5
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

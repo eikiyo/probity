@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "deepseek-v4p",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "b04c6250a95536e70fdc863bf81ef2068aa6f99361b20e92104512b2e7e207cb",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:04:54.670899+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

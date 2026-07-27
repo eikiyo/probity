@@ -1,0 +1,14 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "gemma3-1b-qat",
+ "task_name": "rofr_cosale",
+ "data_version": "5073e4b325127a5378d2297f3cf017598187a1cb6c7833198ea2af35612a3329",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:30:23.883342+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

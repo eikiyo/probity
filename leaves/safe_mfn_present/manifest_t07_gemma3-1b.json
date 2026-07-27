@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "gemma3-1b",
+ "task_name": "safe_mfn_present",
+ "data_version": "b8039d6217af785efbf2999f62eaee7681d3c0d0923c58bfd08509a26ccf7f80",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T16:55:20.014016+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

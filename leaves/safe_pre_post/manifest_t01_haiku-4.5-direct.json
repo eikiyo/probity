@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pre_post",
+ "model": "haiku-4.5-direct",
+ "task_name": "safe_pre_post",
+ "data_version": "e20f364db9711fed556bade15b84a0f0a56b07cc09b9a0f2b65ebfafec4b78f8",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:27:42.679805+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

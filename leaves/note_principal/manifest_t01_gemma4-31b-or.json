@@ -1,0 +1,14 @@
+{
+ "leaf": "note_principal",
+ "model": "gemma4-31b-or",
+ "task_name": "note_principal",
+ "data_version": "88423989a9a16c7b5b3484269192fd07e660789b495defe65facf69e945c0604",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:05:39.360764+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

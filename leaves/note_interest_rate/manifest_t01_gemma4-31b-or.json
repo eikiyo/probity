@@ -1,0 +1,14 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "gemma4-31b-or",
+ "task_name": "note_interest_rate",
+ "data_version": "6872d181bac8c7d57952f29a2d4640ae395a7e8d3b3cdbc461007ccf503aa5d2",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:05:11.028597+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

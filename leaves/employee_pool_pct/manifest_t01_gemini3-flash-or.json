@@ -1,0 +1,14 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "gemini3-flash-or",
+ "task_name": "employee_pool_pct",
+ "data_version": "f182dd2ea135f5943a56d24f0cf98c87a4044ee0cdaaa05161821faaeea70b78",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:17:23.631627+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

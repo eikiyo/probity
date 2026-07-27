@@ -1,0 +1,14 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "deepseek-v4p",
+ "task_name": "note_maturity_date",
+ "data_version": "70f1f2b95064935156c71bb0175e9295c71ec2884443b3e845333cee9643a118",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:41:45.817135+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

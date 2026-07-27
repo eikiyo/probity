@@ -1,0 +1,14 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "haiku-4.5-direct",
+ "task_name": "option_pool_shuffle",
+ "data_version": "c5a72788d08e794c36e7b45f9f366fedec7e517ee67df8e0ec56a72dab317b3b",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:21:47.950895+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

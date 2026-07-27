@@ -1,0 +1,14 @@
+{
+ "leaf": "drag_along",
+ "model": "gemma3-1b",
+ "task_name": "drag_along",
+ "data_version": "2ecf1b164edda2a1c808fe2d97293832b1e8a2b2b32df5460db8e39df8c2e883",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:57:16.036681+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

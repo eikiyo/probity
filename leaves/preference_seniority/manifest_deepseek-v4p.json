@@ -1,0 +1,14 @@
+{
+ "leaf": "preference_seniority",
+ "model": "deepseek-v4p",
+ "task_name": "preference_seniority",
+ "data_version": "7bb0f47f34b35110dc5973218ba6b2edbc87424ae3abff8a694b1ec4a43d5abe",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:00:42.170485+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

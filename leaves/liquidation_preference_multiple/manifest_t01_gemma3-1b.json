@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "gemma3-1b",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "834897a967acfe0257c7156b448f032d5469e3beeda0dfc3ecd7f51136d2adb5",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:32:26.372548+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

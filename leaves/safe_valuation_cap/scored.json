@@ -2122,5 +2122,141 @@
    "tripped": true,
    "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
   }
+ },
+ "deepseek-v4p": {
+  "model": "deepseek-v4-pro",
+  "temperature_requested": 0.7,
+  "routing": "direct",
+  "accuracy": {
+   "task": "safe_valuation_cap",
+   "n_instances": 8,
+   "n_measurable": 8,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 15000000.0,
+       "truth": 15000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 20000000.0,
+       "truth": 20000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 40000000.0,
+       "truth": 40000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 53540000.0,
+       "truth": 53540000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 100000000.0,
+       "truth": 100000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 100000000.0,
+       "truth": 100000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_valuation_cap": {
+       "majority": 150000000.0,
+       "truth": 150000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_valuation_cap",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "safe_valuation_cap": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 160,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

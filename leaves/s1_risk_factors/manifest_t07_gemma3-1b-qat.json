@@ -1,0 +1,14 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "gemma3-1b-qat",
+ "task_name": "s1_risk_factors",
+ "data_version": "05558d05e5ebc97c378c5f1b55098bb7429654bcc74b2e92a8d4feb3989299f9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:34:24.631256+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "note_discount",
+ "model": "deepseek-v4f",
+ "task_name": "note_discount",
+ "data_version": "dc947df6e752b5d0566c9165d80ec0960ac3e6abd828fdc9b140912cdf1142fd",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:04:02.746855+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

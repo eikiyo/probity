@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "gemma3-1b-qat",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "d9fe70531100a20efbe7ed15fd79606db3df0b937b8936d8f1fe9f6bd1facc06",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:41:19.278097+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

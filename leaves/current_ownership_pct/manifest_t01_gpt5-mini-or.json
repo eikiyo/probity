@@ -1,0 +1,14 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "gpt5-mini-or",
+ "task_name": "current_ownership_pct",
+ "data_version": "76b9715f89040ae7fcb07c60dc3ac7530ff0bb6541b8e76bceece4886a9c945a",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:42:54.707248+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

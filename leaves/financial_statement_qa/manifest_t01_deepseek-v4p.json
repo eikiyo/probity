@@ -1,0 +1,14 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "deepseek-v4p",
+ "task_name": "financial_statement_qa",
+ "data_version": "c4cb537b76cd0929ed96daa469469eba22a37d437a83d043e933db985c9bfac4",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:38:16.066745+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

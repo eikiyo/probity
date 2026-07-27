@@ -1,0 +1,14 @@
+{
+ "leaf": "form_d_fields",
+ "model": "gemma3-1b-qat",
+ "task_name": "form_d_fields",
+ "data_version": "4d923a802eaa406cad3c0bed4d99ac72da0089a2fedf7e04030a2897124fbaa7",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:47:55.769260+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

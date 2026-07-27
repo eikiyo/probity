@@ -1,0 +1,14 @@
+{
+ "leaf": "protective_provisions",
+ "model": "gemma3-1b-qat",
+ "task_name": "protective_provisions",
+ "data_version": "a01bb83ddcde0271cac4befe679b37f4dda9c763f19e5f881aa32547bffc6a1f",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:25:51.443364+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

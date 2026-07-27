@@ -1,0 +1,14 @@
+{
+ "leaf": "securities_exemption",
+ "model": "minimax-m2.5-or",
+ "task_name": "securities_exemption",
+ "data_version": "95407d2585de29cfb85bc03cba2a9eeefd825c449925cb6de18e5c55f0f8beba",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T17:10:27.049279+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

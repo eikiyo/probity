@@ -1,0 +1,222 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "note_interest_rate",
+   "n_instances": 6,
+   "n_measurable": 6,
+   "accuracy_majority": 0.8333333333333334,
+   "accuracy_strict": 0.16666666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 17,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 0.28,
+       "truth": 0.28,
+       "consistency": 0.8823529411764706
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 10.0,
+       "truth": 10.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 10.0,
+       "truth": 10.0,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 8.0,
+       "truth": 8.0,
+       "consistency": 0.3333333333333333
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 8.0,
+       "truth": 8.0,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 12.0,
+       "truth": 10.0,
+       "consistency": 0.7
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_interest_rate",
+   "consistency_rate": 0.6859477124183005,
+   "consistency_pct": 68.59477124183006,
+   "field_flips": {
+    "note_interest_rate": 0.8333333333333334
+   },
+   "parse_failure_count": 5,
+   "parse_failure_rate": 0.041666666666666664,
+   "valid_run_count": 115,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "note_interest_rate",
+   "n_instances": 6,
+   "n_measurable": 6,
+   "accuracy_majority": 0.8333333333333334,
+   "accuracy_strict": 0.6666666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 0.28,
+       "truth": 0.28,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 10.0,
+       "truth": 10.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 10.0,
+       "truth": 10.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 8.0,
+       "truth": 8.0,
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 8.0,
+       "truth": 8.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "note_interest_rate": {
+       "majority": 6.0,
+       "truth": 10.0,
+       "consistency": 0.9473684210526315
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_interest_rate",
+   "consistency_rate": 0.9828947368421052,
+   "consistency_pct": 98.28947368421052,
+   "field_flips": {
+    "note_interest_rate": 0.3333333333333333
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.016666666666666666,
+   "valid_run_count": 118,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

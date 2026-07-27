@@ -1,0 +1,14 @@
+{
+ "leaf": "note_discount",
+ "model": "gemini3-flash-or",
+ "task_name": "note_discount",
+ "data_version": "50861e1d4f59eb578872f77665f0efc9355e40f7468da2196f15d444e0795848",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:20:42.647311+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

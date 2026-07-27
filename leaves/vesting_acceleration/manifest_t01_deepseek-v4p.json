@@ -1,0 +1,14 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "deepseek-v4p",
+ "task_name": "vesting_acceleration",
+ "data_version": "e43f9145fb898164628d150dd1658f4f99df59e8c89a534a438a2bba89a3bbc7",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:49:53.682686+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "gemma4-31b-or",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "2ce5977dcda823e8f53c448e3c85b9600c112f9b2aa30903202fa239218be612",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:02:55.196718+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "gemma3-1b",
+ "task_name": "note_maturity_date",
+ "data_version": "edab3f041166c3819a8c7080dbfd4710c90c0fdde6ce8f240dd8b8bb78fdbace",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:41:22.708383+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

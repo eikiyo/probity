@@ -1,0 +1,14 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "deepseek-v4p",
+ "task_name": "fully_diluted_basis",
+ "data_version": "7f47dba6f00c5358fa00ca441d7c9fccd5a28d5abfc667ba4c5e7e4390a9f04e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:57:35.605082+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

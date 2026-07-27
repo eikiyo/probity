@@ -1,0 +1,14 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "gemma3-1b-qat",
+ "task_name": "current_ownership_pct",
+ "data_version": "3918098c294da26974c73fda87a2eba02215d1d46a6d66e46f6153dedb2f2020",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:29:25.518374+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

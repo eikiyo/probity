@@ -1,0 +1,14 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "minimax-m2.5-or",
+ "task_name": "board_seats_investor",
+ "data_version": "cf6489a04bfec88f032cedd9df21f53e7d1c9157ab5fa7edc2c00fac96816685",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:49:17.064834+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

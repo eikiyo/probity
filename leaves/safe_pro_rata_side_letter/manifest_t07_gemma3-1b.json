@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "gemma3-1b",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "75e090fb7603d1cec46335500cf318f2e25e185c7992ed00750cb1862a153f0e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T17:07:46.922688+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

@@ -1,0 +1,352 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "preference_seniority",
+   "n_instances": 11,
+   "n_measurable": 11,
+   "accuracy_majority": 0.45454545454545453,
+   "accuracy_strict": 0.45454545454545453,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "preference_seniority",
+   "consistency_rate": 0.9818181818181819,
+   "consistency_pct": 98.18181818181819,
+   "field_flips": {
+    "preference_seniority": 0.09090909090909091
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 220,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "preference_seniority",
+   "n_instances": 11,
+   "n_measurable": 11,
+   "accuracy_majority": 0.45454545454545453,
+   "accuracy_strict": 0.2727272727272727,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 0.8333333333333334
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 18,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 0.7368421052631579
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 0.7894736842105263
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "preference_seniority",
+   "consistency_rate": 0.9099681020733652,
+   "consistency_pct": 90.99681020733652,
+   "field_flips": {
+    "preference_seniority": 0.45454545454545453
+   },
+   "parse_failure_count": 5,
+   "parse_failure_rate": 0.022727272727272728,
+   "valid_run_count": 215,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

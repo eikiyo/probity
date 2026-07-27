@@ -1,0 +1,14 @@
+{
+ "leaf": "note_valuation_cap",
+ "model": "gemma3-1b",
+ "task_name": "note_valuation_cap",
+ "data_version": "6af791cd211e634fab9b9b99898342d0aae6b9088473820cd68fd4a4422b409c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:46:47.113123+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

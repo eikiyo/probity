@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_base",
+ "model": "gpt5-mini-or",
+ "task_name": "antidilution_base",
+ "data_version": "b4026d0a3cf61cc4a9e165775ebd66b0ca382dfc8b5d328da333960ca553fac4",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:31:15.640712+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "cliff_present",
+ "model": "gemma3-1b-qat",
+ "task_name": "cliff_present",
+ "data_version": "f0c24bff56b3f67b9a638448fe12b7646c56d2c3f182868711f2b2151dd993d5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:26:07.748808+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

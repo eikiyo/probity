@@ -1,0 +1,14 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "deepseek-v4f",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "c65b9a2114c6ac5559a56b38fbf9c4314e9d826c2cbac71e642d7bbe068e6e76",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:07:27.597698+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

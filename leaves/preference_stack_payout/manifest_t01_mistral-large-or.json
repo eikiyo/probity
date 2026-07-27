@@ -1,0 +1,14 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "mistral-large-or",
+ "task_name": "preference_stack_payout",
+ "data_version": "c3cbb78db17219ee1d90613d432cb6285a41b41e995b3a361ca464130bafbf4c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:10:30.913003+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

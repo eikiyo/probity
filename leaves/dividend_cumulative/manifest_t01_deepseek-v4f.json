@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "deepseek-v4f",
+ "task_name": "dividend_cumulative",
+ "data_version": "f64d67651d9816b28b7fbdc23953ed1c2b1f657d7d19dc3f4cf792c829f78dbf",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:58.844597+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

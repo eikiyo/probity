@@ -186,5 +186,2073 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "llama3.3-70b-or": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.75,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "drag_along": 0.0
+   },
+   "parse_failure_count": 5,
+   "parse_failure_rate": 0.020833333333333332,
+   "valid_run_count": 235,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.9166666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 0.9791666666666666,
+   "consistency_pct": 97.91666666666666,
+   "field_flips": {
+    "drag_along": 0.08333333333333333
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-31b-or": {
+  "model": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "drag_along": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "haiku-4.5-direct": {
+  "model": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.9166666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 0.9791666666666666,
+   "consistency_pct": 97.91666666666666,
+   "field_flips": {
+    "drag_along": 0.08333333333333333
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt5-mini-or": {
+  "model": "openai/gpt-5-mini",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.8333333333333334,
+   "accuracy_strict": 0.8333333333333334,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 0.9625,
+   "consistency_pct": 96.25,
+   "field_flips": {
+    "drag_along": 0.16666666666666666
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "deepseek-v4p": {
+  "model": "deepseek-v4-pro",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.9166666666666666,
+   "accuracy_strict": 0.9166666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "drag_along": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.9166666666666666,
+   "accuracy_strict": 0.9166666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "drag_along": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemini3-flash-or": {
+  "model": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 17,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 16,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "drag_along": 0.0
+   },
+   "parse_failure_count": 8,
+   "parse_failure_rate": 0.03333333333333333,
+   "valid_run_count": 232,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "minimax-m2.5-or": {
+  "model": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.8333333333333334,
+   "accuracy_strict": 0.8333333333333334,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 0.5789473684210527
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 0.8947368421052632
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 0.956140350877193,
+   "consistency_pct": 95.6140350877193,
+   "field_flips": {
+    "drag_along": 0.16666666666666666
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.008333333333333333,
+   "valid_run_count": 238,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.5833333333333334,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 0.9583333333333334,
+   "consistency_pct": 95.83333333333334,
+   "field_flips": {
+    "drag_along": 0.16666666666666666
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.1,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "drag_along",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.4166666666666667,
+   "accuracy_strict": 0.3333333333333333,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "drag_along": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "drag_along": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "drag_along",
+   "consistency_rate": 0.9958333333333332,
+   "consistency_pct": 99.58333333333333,
+   "field_flips": {
+    "drag_along": 0.08333333333333333
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

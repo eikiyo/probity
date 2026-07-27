@@ -1,0 +1,14 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "gemma3-1b",
+ "task_name": "preference_stack_payout",
+ "data_version": "1db6d1193a6a549bc76d749f80a6ceb3a01d96f723ae734cc8a455abd32b9741",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T16:14:30.387415+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

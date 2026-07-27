@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "gpt5-mini-or",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "6d8e4dace6e196e7662be48f294ffe5384b8cb7cfcc90625686433cd81c103d6",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:57:00.915253+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

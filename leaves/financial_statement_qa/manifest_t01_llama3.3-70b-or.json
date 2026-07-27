@@ -1,0 +1,14 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "llama3.3-70b-or",
+ "task_name": "financial_statement_qa",
+ "data_version": "c33fb23977a30ca4cc9091cefae63ac56e93734552f580882e00358c67060c7f",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:16:16.457165+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

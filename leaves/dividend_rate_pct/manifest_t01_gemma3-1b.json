@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "gemma3-1b",
+ "task_name": "dividend_rate_pct",
+ "data_version": "55e2a5baeead8157e1321e8cd97b1a431fce2adad14593b7a91708890f6c70d6",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:52:19.187976+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

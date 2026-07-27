@@ -1,0 +1,14 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "gemini3-flash-or",
+ "task_name": "post_money_valuation",
+ "data_version": "3f6c40e94be2499e7d7b69603247ff37ed65abf33d8069e54416e2438fc20ce8",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:22:56.470494+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

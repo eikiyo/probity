@@ -1,0 +1,14 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "minimax-m2.5-or",
+ "task_name": "fully_diluted_basis",
+ "data_version": "d639969eaa9d13c651ce366196a47c1cd351c725551608d346663ed70e13f8ad",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:50:39.500909+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

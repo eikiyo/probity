@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "mistral-large-or",
+ "task_name": "dividend_rate_pct",
+ "data_version": "d3f829f0c668b91634424b2a9fbfdd12ea7f3ea38c1ca2117eca6d32e13260e2",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:05:10.632442+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "cliff_present",
+ "model": "deepseek-v4f",
+ "task_name": "cliff_present",
+ "data_version": "ad6be4b8791ffd615e09db612246e32ed0c3f8ae413737fd8d14bfe6da5c8d8a",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:19.661155+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

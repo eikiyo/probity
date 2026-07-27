@@ -186,5 +186,2073 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "llama3.3-70b-or": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.8333333333333334,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 0.8421052631578947
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 0.9618421052631579,
+   "consistency_pct": 96.1842105263158,
+   "field_flips": {
+    "cliff_present": 0.16666666666666666
+   },
+   "parse_failure_count": 7,
+   "parse_failure_rate": 0.029166666666666667,
+   "valid_run_count": 233,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.9166666666666666,
+   "accuracy_strict": 0.9166666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "cliff_present": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-31b-or": {
+  "model": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "cliff_present": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "haiku-4.5-direct": {
+  "model": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "cliff_present": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt5-mini-or": {
+  "model": "openai/gpt-5-mini",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.9166666666666666,
+   "accuracy_strict": 0.8333333333333334,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 0.85
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 0.9791666666666666,
+   "consistency_pct": 97.91666666666666,
+   "field_flips": {
+    "cliff_present": 0.16666666666666666
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "deepseek-v4p": {
+  "model": "deepseek-v4-pro",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "cliff_present": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "cliff_present": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemini3-flash-or": {
+  "model": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 16,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 17,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "cliff_present": 0.0
+   },
+   "parse_failure_count": 11,
+   "parse_failure_rate": 0.04583333333333333,
+   "valid_run_count": 229,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "minimax-m2.5-or": {
+  "model": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.75,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 0.8421052631578947
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 0.85
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 0.9
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 0.9660087719298245,
+   "consistency_pct": 96.60087719298245,
+   "field_flips": {
+    "cliff_present": 0.25
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.004166666666666667,
+   "valid_run_count": 239,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.9166666666666666,
+   "accuracy_strict": 0.8333333333333334,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 0.9916666666666667,
+   "consistency_pct": 99.16666666666667,
+   "field_flips": {
+    "cliff_present": 0.08333333333333333
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.1,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "cliff_present",
+   "n_instances": 12,
+   "n_measurable": 12,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.5833333333333334,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "yes",
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "cliff_present": {
+       "majority": "no",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "cliff_present": {
+       "majority": "yes",
+       "truth": "no",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "cliff_present",
+   "consistency_rate": 0.975,
+   "consistency_pct": 97.5,
+   "field_flips": {
+    "cliff_present": 0.08333333333333333
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 240,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

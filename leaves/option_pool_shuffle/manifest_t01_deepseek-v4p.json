@@ -1,0 +1,14 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "deepseek-v4p",
+ "task_name": "option_pool_shuffle",
+ "data_version": "ed82a35ca694e72e55357e46cd91bc40d0b2e34231b80b2123b8fa6eb441bc10",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:42:30.499867+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "gemma4-31b-or",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "ff91dbdffb1d7adcd5c684f3f41dade7549c54edc72b52b74a565f542d8dcc5e",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:04:24.507622+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "deepseek-v4p",
+ "task_name": "investor_ownership_pct",
+ "data_version": "73e8d473292981abdc53e86dadf27b81f2185042c01137908b0f8fe7aa751d08",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:40:13.019092+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

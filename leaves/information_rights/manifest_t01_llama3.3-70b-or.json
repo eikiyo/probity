@@ -1,0 +1,14 @@
+{
+ "leaf": "information_rights",
+ "model": "llama3.3-70b-or",
+ "task_name": "information_rights",
+ "data_version": "5feb1908346d545ebacf371df1ff603f98dc2cac9ad9bb501b8519d299ad03e7",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:40:21.818608+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

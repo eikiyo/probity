@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_base",
+ "model": "deepseek-v4p",
+ "task_name": "antidilution_base",
+ "data_version": "bfc280cbea564d8d02efbfd03db102d062bddbf48f3ddb8efdaac86c0b140569",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:37:37.200199+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

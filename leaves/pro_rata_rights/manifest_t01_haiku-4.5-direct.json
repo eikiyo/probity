@@ -1,0 +1,14 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "haiku-4.5-direct",
+ "task_name": "pro_rata_rights",
+ "data_version": "0e05942cf1c97afeb753babe1e45d2d5d35b02591002ed45a604e356f0d03b23",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:24:30.218868+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

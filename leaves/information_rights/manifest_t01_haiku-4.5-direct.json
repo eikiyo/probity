@@ -1,0 +1,14 @@
+{
+ "leaf": "information_rights",
+ "model": "haiku-4.5-direct",
+ "task_name": "information_rights",
+ "data_version": "6b45d0e6bc5a9064f49872d6add973eeb22dc97a7e28927523b5695e05a289a5",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:21:24.134396+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

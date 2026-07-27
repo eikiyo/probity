@@ -3759,5 +3759,206 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "deepseek-v4p": {
+  "model": "deepseek-v4-pro",
+  "temperature_requested": 0.7,
+  "routing": "direct",
+  "accuracy": {
+   "task": "safe_cap_vs_discount_applies",
+   "n_instances": 13,
+   "n_measurable": 13,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.6923076923076923,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "discount",
+       "truth": "discount",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "both-mfn",
+       "truth": "both-mfn",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "both-mfn",
+       "truth": "both-mfn",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "both-mfn",
+       "truth": "both-mfn",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "both-mfn",
+       "truth": "both-mfn",
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "both-mfn",
+       "truth": "both-mfn",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "both-mfn",
+       "truth": "both-mfn",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "both-mfn",
+       "truth": "both-mfn",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "both-mfn",
+       "truth": "both-mfn",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "both-mfn",
+       "truth": "both-mfn",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "both-mfn",
+       "truth": "both-mfn",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "cap",
+       "truth": "cap",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_vs_discount_applies": {
+       "majority": "cap",
+       "truth": "cap",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_cap_vs_discount_applies",
+   "consistency_rate": 0.9576923076923076,
+   "consistency_pct": 95.76923076923076,
+   "field_flips": {
+    "safe_cap_vs_discount_applies": 0.3076923076923077
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 260,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

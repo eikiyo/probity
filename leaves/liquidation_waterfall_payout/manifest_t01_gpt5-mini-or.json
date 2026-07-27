@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "gpt5-mini-or",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "634e69666e5fd28cfa75ba98e6d8f45ade699c688269b2966404d3a64a1a4271",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:38:50.336127+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

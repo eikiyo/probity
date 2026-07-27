@@ -1,0 +1,14 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "llama3.3-70b-or",
+ "task_name": "post_money_valuation",
+ "data_version": "e6337a690b4cd001dea6cfde5eeccb3f6da5d10ee1e629968b0589e4eebe073b",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:31:24.583251+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

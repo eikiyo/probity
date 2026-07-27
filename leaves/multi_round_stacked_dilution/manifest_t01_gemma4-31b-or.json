@@ -1,0 +1,14 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "gemma4-31b-or",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "d6693f096bb6ce2ceff355deae9726c75ca413d15e0e34a8e85fb413028d9e20",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:04:25.920979+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

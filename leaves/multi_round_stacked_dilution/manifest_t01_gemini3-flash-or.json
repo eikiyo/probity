@@ -1,0 +1,14 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "gemini3-flash-or",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "ab98ebd79bec6ec8d117e8d146bee58e90bd1796ab92a50d778931194c30026c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:21:13.898932+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

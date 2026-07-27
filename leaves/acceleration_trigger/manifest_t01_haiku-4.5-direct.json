@@ -1,0 +1,14 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "haiku-4.5-direct",
+ "task_name": "acceleration_trigger",
+ "data_version": "6db034e580fd9b7d3466a2d72d4f4c82f06ffb5ea71f1a0dd5bbe0e546fb21e3",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:17:51.916544+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

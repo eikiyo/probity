@@ -1,0 +1,14 @@
+{
+ "leaf": "note_discount",
+ "model": "gemma3-1b",
+ "task_name": "note_discount",
+ "data_version": "9767a0decb88d515a16279dc0dfd3151cbcf8605280bf452bbcf8a250b8fba21",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:37:19.969166+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

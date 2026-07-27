@@ -1,0 +1,14 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "minimax-m2.5-or",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "43e5da34aa835806150495688a379eff73db960945acc33ed5947196a85564ba",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:04:15.121735+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

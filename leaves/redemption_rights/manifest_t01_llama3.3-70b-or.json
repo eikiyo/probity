@@ -1,0 +1,14 @@
+{
+ "leaf": "redemption_rights",
+ "model": "llama3.3-70b-or",
+ "task_name": "redemption_rights",
+ "data_version": "c2c9133e11090d4b10e63089f6b53b08dc46bb02c8239d841d5189e95611f50a",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:41:29.861858+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

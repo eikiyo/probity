@@ -1,0 +1,14 @@
+{
+ "leaf": "redemption_rights",
+ "model": "deepseek-v4f",
+ "task_name": "redemption_rights",
+ "data_version": "b7f200d543ef51c19bc99fc5659b715dc5d5b7f3d2515238c89fde3600c30c2e",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:11:28.349525+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

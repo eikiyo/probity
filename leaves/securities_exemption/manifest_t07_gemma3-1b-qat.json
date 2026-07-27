@@ -1,0 +1,14 @@
+{
+ "leaf": "securities_exemption",
+ "model": "gemma3-1b-qat",
+ "task_name": "securities_exemption",
+ "data_version": "ccdae99d5f1ab1de32465ad3f04fe3928723602523155f4f9e25332376584d01",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:52:45.643675+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "deepseek-v4f",
+ "task_name": "pro_rata_rights",
+ "data_version": "653fde47f26a58712a5359f51aca3eb311e4abd1c9d8d299c92ae7cd8b9f73b0",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:11:31.823255+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

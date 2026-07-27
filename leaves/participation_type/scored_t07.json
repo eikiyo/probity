@@ -1,0 +1,534 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "participation_type",
+   "n_instances": 18,
+   "n_measurable": 18,
+   "accuracy_majority": 0.3888888888888889,
+   "accuracy_strict": 0.1111111111111111,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "participating",
+       "truth": "non-participating",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "non-participating",
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "participating",
+       "truth": "participating",
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "non-participating",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "capped",
+       "truth": "non-participating",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "non-participating",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "non-participating",
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "participating",
+       "truth": "non-participating",
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "participating",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "capped",
+       "truth": "participating",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "participating",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "participating",
+       "truth": "capped",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "capped",
+       "truth": "capped",
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "participating",
+       "truth": "capped",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "capped",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "participating",
+       "truth": "capped",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 16,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "participating",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 17,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "participating",
+       "truth": "participating",
+       "consistency": 0.7
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "participation_type",
+   "consistency_rate": 0.9083333333333334,
+   "consistency_pct": 90.83333333333334,
+   "field_flips": {
+    "participation_type": 0.4444444444444444
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 360,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "participation_type",
+   "n_instances": 18,
+   "n_measurable": 18,
+   "accuracy_majority": 0.3333333333333333,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "capped",
+       "truth": "non-participating",
+       "consistency": 0.85
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "non-participating",
+       "consistency": 0.9473684210526315
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "participating",
+       "consistency": 0.85
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "non-participating",
+       "consistency": 0.7368421052631579
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 17,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "non-participating",
+       "consistency": 0.9411764705882353
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 16,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "non-participating",
+       "consistency": 0.8125
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "non-participating",
+       "consistency": 0.8421052631578947
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 17,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "non-participating",
+       "consistency": 0.8235294117647058
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "participating",
+       "consistency": 0.5789473684210527
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "capped",
+       "truth": "participating",
+       "consistency": 0.65
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 16,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "participating",
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 16,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "capped",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "capped",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "capped",
+       "consistency": 0.8421052631578947
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "participating",
+       "truth": "capped",
+       "consistency": 0.8947368421052632
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 17,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "capped",
+       "consistency": 0.9411764705882353
+      }
+     }
+    },
+    {
+     "instance_idx": 16,
+     "n_valid": 18,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "participating",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 17,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "participation_type": {
+       "majority": "non-participating",
+       "truth": "participating",
+       "consistency": 0.7
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "participation_type",
+   "consistency_rate": 0.8311382008943928,
+   "consistency_pct": 83.11382008943929,
+   "field_flips": {
+    "participation_type": 0.8888888888888888
+   },
+   "parse_failure_count": 29,
+   "parse_failure_rate": 0.08055555555555556,
+   "valid_run_count": 331,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

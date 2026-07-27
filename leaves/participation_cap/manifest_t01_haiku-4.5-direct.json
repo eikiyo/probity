@@ -1,0 +1,14 @@
+{
+ "leaf": "participation_cap",
+ "model": "haiku-4.5-direct",
+ "task_name": "participation_cap",
+ "data_version": "71bb347499264fb9cc9f3a13de26e49590fafc32c85159367c2fcecb44de66ac",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:22:02.182167+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

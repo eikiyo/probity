@@ -1,0 +1,14 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "minimax-m2.5-or",
+ "task_name": "vesting_acceleration",
+ "data_version": "80d3769c4a695fb660bcc9061236e274d49fec033fb36ab4a89bf90d9752792f",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:48:05.906982+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

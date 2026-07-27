@@ -1,0 +1,14 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "gemma3-1b",
+ "task_name": "pre_vs_post_money",
+ "data_version": "bcfc685bf6fc24551b2075ccb74d6966eee88ad0cdbc65ee944cbd6c4d941406",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T16:09:46.508801+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

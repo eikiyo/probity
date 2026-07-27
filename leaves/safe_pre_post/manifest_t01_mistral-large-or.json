@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pre_post",
+ "model": "mistral-large-or",
+ "task_name": "safe_pre_post",
+ "data_version": "2f0d666f60a244355becf485f8c13e871bc1796efe00fcde1db835f343e7554d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:15:29.199309+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

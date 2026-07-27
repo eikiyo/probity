@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "deepseek-v4p",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "96cf52c1c5b5a3d18b5ceb662a24fcb9b4afbdec0e1b860ffba57cc87bc6bad9",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:41:42.852409+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "haiku-4.5-direct",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "bac919a18258fb58cd24340769a9d459d19a69f6ff4fa0b7dd07f6e43ca73345",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:19:01.111887+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

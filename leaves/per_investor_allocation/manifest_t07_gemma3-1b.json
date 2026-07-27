@@ -1,0 +1,14 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "gemma3-1b",
+ "task_name": "per_investor_allocation",
+ "data_version": "c3f13b5ba50a04fd1a936db51ad16a6f96b08c0e7c40c47278cb3e709b28f5c8",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T16:00:45.901357+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

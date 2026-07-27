@@ -1,0 +1,14 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "gemma3-1b-qat",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "4bce46bb02aa6013bd8a0a21596be131fa7ced2f78d52a368fdb79124203149c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:27:31.889348+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "note_discount",
+ "model": "llama3.3-70b-or",
+ "task_name": "note_discount",
+ "data_version": "b89a04858dc089af019a19912c8316f309dd874f6826d4297f858bdc7d8fd391",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:40:21.537713+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

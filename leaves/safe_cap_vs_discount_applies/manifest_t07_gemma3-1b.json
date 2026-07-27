@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "gemma3-1b",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "24703190de840690d700300ef2f272113606d9d6b395fd9c598334a805bca68a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T16:48:51.315200+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "preference_seniority",
+ "model": "deepseek-v4f",
+ "task_name": "preference_seniority",
+ "data_version": "206e2d6a83598a951e8a7248fd073eac9f762cd899dc4e6d5a0bd993a710d251",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:11:27.373016+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

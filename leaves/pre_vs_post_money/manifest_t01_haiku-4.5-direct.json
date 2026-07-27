@@ -1,0 +1,14 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "haiku-4.5-direct",
+ "task_name": "pre_vs_post_money",
+ "data_version": "65a146308064be1f2f1856f885434f9307694bae4737fa375dddfe157c953087",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:25:20.432372+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

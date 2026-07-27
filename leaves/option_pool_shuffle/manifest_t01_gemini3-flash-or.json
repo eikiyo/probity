@@ -1,0 +1,14 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "gemini3-flash-or",
+ "task_name": "option_pool_shuffle",
+ "data_version": "2c608f8b81628b57c536f82c514eaa1f63061def1b9cdfd5d1278cf95d2e3bd7",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:21:45.254681+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

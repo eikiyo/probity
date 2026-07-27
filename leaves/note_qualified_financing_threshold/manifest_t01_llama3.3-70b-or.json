@@ -1,0 +1,14 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "llama3.3-70b-or",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "6fd91802f2e6c211d975f900e2069e8d63ceb642300206132f193e546f029414",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:28:24.299924+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

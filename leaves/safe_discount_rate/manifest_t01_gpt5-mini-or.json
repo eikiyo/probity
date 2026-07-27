@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "gpt5-mini-or",
+ "task_name": "safe_discount_rate",
+ "data_version": "dec2e9585fa77ad82b5f5135fa9f0d183d7d081a45f6bf3af6e3451b85d1dc8e",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:57:25.036662+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

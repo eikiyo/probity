@@ -1,0 +1,14 @@
+{
+ "leaf": "round_size",
+ "model": "deepseek-v4p",
+ "task_name": "round_size",
+ "data_version": "9fb005827af966e26418ef6e07bd478af3d504d8be209a7f804a6953d34c9009",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:46:30.069596+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

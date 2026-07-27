@@ -1,0 +1,14 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "gemma3-1b-qat",
+ "task_name": "employee_pool_pct",
+ "data_version": "fa9c1dd2a17315ebcb50c86db81efe9f39183e7a7360e8b96c97335363f03dd9",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:36:42.076271+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

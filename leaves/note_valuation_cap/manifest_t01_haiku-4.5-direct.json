@@ -1,0 +1,14 @@
+{
+ "leaf": "note_valuation_cap",
+ "model": "haiku-4.5-direct",
+ "task_name": "note_valuation_cap",
+ "data_version": "f22552430db78a0b48b5ed7f07fdc97e749f09676129009e6da2ed28627dceff",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:21:48.762422+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

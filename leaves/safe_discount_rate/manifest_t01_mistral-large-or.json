@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "mistral-large-or",
+ "task_name": "safe_discount_rate",
+ "data_version": "01689cc50bf69a8589447ce462239829b90a7849a0912d4909839349e6182d5f",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:14:10.782608+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

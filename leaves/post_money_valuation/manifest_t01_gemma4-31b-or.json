@@ -1,0 +1,14 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "gemma4-31b-or",
+ "task_name": "post_money_valuation",
+ "data_version": "0a9f65f8e1d64dd7ba4c95114a31123357cd63114c19c31292c321258e04a5ab",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:05:33.537102+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

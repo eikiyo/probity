@@ -1,0 +1,14 @@
+{
+ "leaf": "participation_type",
+ "model": "haiku-4.5-direct",
+ "task_name": "participation_type",
+ "data_version": "599580b27ebe1aef0d4c851502281113e709be98af6fea0546443ceb8f0e699d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:25:22.100385+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

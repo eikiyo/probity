@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "gemma4-31b-or",
+ "task_name": "safe_discount_rate",
+ "data_version": "b08dd4ecba1fed5ee73950f817465f6eab4fb7938446a81c6167d80043dbe19b",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:18:55.564846+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

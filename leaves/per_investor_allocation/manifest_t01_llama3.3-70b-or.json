@@ -1,0 +1,14 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "llama3.3-70b-or",
+ "task_name": "per_investor_allocation",
+ "data_version": "772c0bf0931004c0f02870f56d4aa4cacef678168558b0a087a81b6e4c73642d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:30:38.162732+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

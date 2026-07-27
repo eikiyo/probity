@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "haiku-4.5-direct",
+ "task_name": "dividend_rate_pct",
+ "data_version": "2d180de5528388f14c4145fe4db8bc4d2f0732c3ed1693b84c348ee2a020a2c3",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:17:44.918335+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

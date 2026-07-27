@@ -1,0 +1,14 @@
+{
+ "leaf": "participation_cap",
+ "model": "mistral-large-or",
+ "task_name": "participation_cap",
+ "data_version": "815fb451587657cb08939d69699d4fb44b37dfaeb46597a29629ecce0309b2b6",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:10:19.201473+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

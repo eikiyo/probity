@@ -1,0 +1,14 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "gemma3-1b-qat",
+ "task_name": "per_investor_allocation",
+ "data_version": "258eeaf005f84ffab00f4219195b6e09a6c74d1ec6a362368b70707d26ca8fb4",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:11:11.212808+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

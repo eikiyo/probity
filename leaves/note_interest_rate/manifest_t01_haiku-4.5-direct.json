@@ -1,0 +1,14 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "haiku-4.5-direct",
+ "task_name": "note_interest_rate",
+ "data_version": "88c3ade7dea48e8f6230b5c8084853a24851ec02450b7d2432fd4ee1a83c0651",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:21:54.534650+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

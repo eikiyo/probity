@@ -1,0 +1,14 @@
+{
+ "leaf": "vesting_schedule",
+ "model": "gemma3-1b",
+ "task_name": "vesting_schedule",
+ "data_version": "0cac7815a78bf695d9aaeb3042116acf6ef2b5ab4b0a471a960c090f0081e84e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T17:21:55.300544+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

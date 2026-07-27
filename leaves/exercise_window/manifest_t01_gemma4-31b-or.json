@@ -1,0 +1,14 @@
+{
+ "leaf": "exercise_window",
+ "model": "gemma4-31b-or",
+ "task_name": "exercise_window",
+ "data_version": "f4471334037bf132734482cb45902669006acc6d15f27626532a786043ce698d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:26.057096+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

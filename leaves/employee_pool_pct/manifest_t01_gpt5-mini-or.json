@@ -1,0 +1,14 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "gpt5-mini-or",
+ "task_name": "employee_pool_pct",
+ "data_version": "6f7a99f93bacccc1663e110e65e4f52efaa340395b0f37b804c56aeba0054130",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:29:51.985704+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

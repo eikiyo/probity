@@ -1,0 +1,14 @@
+{
+ "leaf": "exercise_window",
+ "model": "deepseek-v4p",
+ "task_name": "exercise_window",
+ "data_version": "c8e7fc13ffa9048b1f79c59535430384dbb056e484edcf79acfdd79987ae38e4",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:37:04.391071+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

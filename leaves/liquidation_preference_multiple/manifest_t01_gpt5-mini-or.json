@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "gpt5-mini-or",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "9c3c293301fe262f05777389891adfa93b933e938d1f7dad8ea03c9582eb27e2",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:39:02.765575+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

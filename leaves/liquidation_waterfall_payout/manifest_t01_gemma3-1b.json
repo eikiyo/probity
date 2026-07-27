@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "gemma3-1b",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "610b67bdc82d1420f8e3cb1df74212e5d991b57315b9128edb45ba944bd453d4",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:33:59.058187+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "llama3.3-70b-or",
+ "task_name": "dividend_rate_pct",
+ "data_version": "9c14d4543b2a760bbd8920538224cbbf4f30f01b1f98660634e6b6c02009946a",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:23:55.257889+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

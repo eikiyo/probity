@@ -1,0 +1,14 @@
+{
+ "leaf": "s1_use_of_proceeds",
+ "model": "minimax-m2.5-or",
+ "task_name": "s1_use_of_proceeds",
+ "data_version": "faaee276d41645cb667430ec28fd195f7c71dcabf9ec6e52b982fa9cc1349388",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:36:21.201732+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

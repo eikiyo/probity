@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "gemini3-flash-or",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "ab344a1aced71addd60970ed7f04110f11c75df5e41a53e4430d159bf585be12",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:21:22.217725+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "note_principal",
+ "model": "haiku-4.5-direct",
+ "task_name": "note_principal",
+ "data_version": "860ad2292faea9784f6e2e8efd8ff295000c4b9e2930b9830f99d1f71ae60a26",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:22:13.005999+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

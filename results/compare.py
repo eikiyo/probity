@@ -228,11 +228,22 @@ def build_report(temp_a, temp_b):
     return "\n".join(out)
 
 
+def _arm(value):
+    """`legacy` -> None, the unsuffixed published arm; anything else a temperature."""
+    return None if str(value).lower() == "legacy" else float(value)
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--arms", nargs=2, type=float, default=[0.7, 0.1],
-                    help="two temperatures: baseline first, new arm second")
-    p.add_argument("--out", default=str(ROOT / "results" / "RESULTS_T01.md"))
+    p.add_argument("--arms", nargs=2, type=_arm, default=["legacy", 0.1],
+                    help="two arms, baseline first: a temperature, or 'legacy' for the published "
+                         "unsuffixed 0.7 sweep. NOT interchangeable: `0.7` selects the t07 "
+                         "namespace, which holds only the two LOCAL models re-measured on Kaggle, "
+                         "so passing it here would pair 2 models and look like a finished report.")
+    # NOT RESULTS_T01.md: render.py already owns that name for the 0.1 arm's per-leaf detail
+    # (`RESULTS_{arm}.md`). Both defaulting to it meant whichever ran second silently replaced the
+    # other's document with an unrelated one of the same name -- and it did, once.
+    p.add_argument("--out", default=str(ROOT / "results" / "PAIRED_legacy_vs_t01.md"))
     args = p.parse_args()
     text = build_report(args.arms[0], args.arms[1])
     Path(args.out).write_text(text, encoding="utf-8")

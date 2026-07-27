@@ -1,0 +1,14 @@
+{
+ "leaf": "round_size",
+ "model": "haiku-4.5-direct",
+ "task_name": "round_size",
+ "data_version": "121a99a6b8248af8aa92a2b4574ad4a5c8cfcb75142a0730a508d99bda393e6a",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:25:20.255405+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

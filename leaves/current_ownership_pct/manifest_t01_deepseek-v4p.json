@@ -1,0 +1,14 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "deepseek-v4p",
+ "task_name": "current_ownership_pct",
+ "data_version": "4e6fca555ee418ca1c9f4cf3f2eca8d5bcc709256ee087dfc5a8d0e4d5d4d893",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:37:26.424009+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.1
+ }
+}

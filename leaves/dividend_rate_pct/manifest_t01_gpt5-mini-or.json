@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "gpt5-mini-or",
+ "task_name": "dividend_rate_pct",
+ "data_version": "1e34307884635c23e1a976264ac9635ebfed5b17ef569c31fb83dee7943f5f19",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:32:29.398360+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

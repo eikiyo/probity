@@ -1,0 +1,300 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 81.575,
+       "truth": 6.0,
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 150.0,
+       "truth": 11.0,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 33.184,
+       "truth": 2.4,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 117.5,
+       "truth": 8.6,
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 8.7,
+       "truth": 5.4,
+       "consistency": 0.25
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 22.2,
+       "truth": 16.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 71.097,
+       "truth": 5.2,
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 72.84,
+       "truth": 5.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 46.2,
+       "truth": 33.9,
+       "consistency": 0.3
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 0.6555555555555556,
+   "consistency_pct": 65.55555555555556,
+   "field_flips": {
+    "current_ownership_pct": 0.7777777777777778
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 18,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 81.56,
+       "truth": 6.0,
+       "consistency": 0.16666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 12.0,
+       "truth": 11.0,
+       "consistency": 0.15789473684210525
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 17,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 33.16,
+       "truth": 2.4,
+       "consistency": 0.23529411764705882
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 1.0,
+       "truth": 8.6,
+       "consistency": 0.1
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 85.4,
+       "truth": 5.4,
+       "consistency": 0.10526315789473684
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 18,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 22.2,
+       "truth": 16.3,
+       "consistency": 0.4444444444444444
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 18,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 86.54,
+       "truth": 5.2,
+       "consistency": 0.1111111111111111
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 17,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 12.0,
+       "truth": 5.3,
+       "consistency": 0.11764705882352941
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 87.2,
+       "truth": 33.9,
+       "consistency": 0.1
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 0.17092458815885025,
+   "consistency_pct": 17.092458815885024,
+   "field_flips": {
+    "current_ownership_pct": 1.0
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.011111111111111112,
+   "valid_run_count": 178,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

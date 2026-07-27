@@ -1,0 +1,170 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.75,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 125000000.0,
+       "truth": 125000000.0,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 0.9,
+   "consistency_pct": 90.0,
+   "field_flips": {
+    "note_valuation_cap": 0.25
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "note_valuation_cap",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.75,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 1250000.0,
+       "truth": 125000000.0,
+       "consistency": 0.45
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 25000000.0,
+       "truth": 25000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 90000000.0,
+       "truth": 90000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 18,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "note_valuation_cap": {
+       "majority": 30000000.0,
+       "truth": 30000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "note_valuation_cap",
+   "consistency_rate": 0.8625,
+   "consistency_pct": 86.25,
+   "field_flips": {
+    "note_valuation_cap": 0.25
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.0125,
+   "valid_run_count": 79,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

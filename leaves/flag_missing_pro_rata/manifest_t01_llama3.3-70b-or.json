@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "llama3.3-70b-or",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "b90db3711c1ab9591b0a073c4c48b7e3f8de0410abc68e47d3fe69c78c8ff5bf",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:16:52.765142+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "gemma3-1b",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "14a7c42a7e1388e847d13e0124a5487713fadfe750163b69beb0b900a5b3ce02",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:35:52.326042+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

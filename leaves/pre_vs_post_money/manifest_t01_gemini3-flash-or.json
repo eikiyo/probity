@@ -1,0 +1,14 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "gemini3-flash-or",
+ "task_name": "pre_vs_post_money",
+ "data_version": "ddeb1a05c31efa430bb8d404409cacb998d6043f4bb558c6b8ae68a8b1470611",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:27:25.428192+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

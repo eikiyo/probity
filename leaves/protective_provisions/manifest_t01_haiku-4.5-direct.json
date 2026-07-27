@@ -1,0 +1,14 @@
+{
+ "leaf": "protective_provisions",
+ "model": "haiku-4.5-direct",
+ "task_name": "protective_provisions",
+ "data_version": "5daac31294e9355434cf8b45b9c9ebde6852f23fda23c7f6ca219e2aacdb81f3",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:24:50.371427+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

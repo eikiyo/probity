@@ -1,0 +1,14 @@
+{
+ "leaf": "exercise_window",
+ "model": "gpt5-mini-or",
+ "task_name": "exercise_window",
+ "data_version": "66374b52e10ecde74372a242fd0cc2b49e02d5f75d3ec03ddccb7a78bc1996dc",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:31:16.779075+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

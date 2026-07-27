@@ -1,0 +1,14 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "haiku-4.5-direct",
+ "task_name": "rofr_cosale",
+ "data_version": "39e707f59d4dce92965f74259102e1c12632eef76701876e4ac1a50eea7732f7",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:25:21.451882+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

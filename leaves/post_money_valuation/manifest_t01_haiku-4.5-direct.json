@@ -1,0 +1,14 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "haiku-4.5-direct",
+ "task_name": "post_money_valuation",
+ "data_version": "b3be9120b97f666e57df60b6f035a4a1c8b4f0ec23e2e57ac4f7e14598fbc381",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:22:31.071106+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

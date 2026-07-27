@@ -1,0 +1,14 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "gpt5-mini-or",
+ "task_name": "pre_vs_post_money",
+ "data_version": "376b564379efd3df690a4f9f7f42ad7a6b81aaa1134da5d3f25dad519003d3d4",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:53:17.296396+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

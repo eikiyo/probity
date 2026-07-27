@@ -1,0 +1,14 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "gemma3-1b",
+ "task_name": "founder_ownership_pct",
+ "data_version": "daa9feb820934b333066a69401d42ca736f3b170eee80b7e4f962a440d3de35a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:19:46.085694+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

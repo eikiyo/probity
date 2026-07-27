@@ -1,0 +1,14 @@
+{
+ "leaf": "round_size",
+ "model": "gemini3-flash-or",
+ "task_name": "round_size",
+ "data_version": "25495ddc9b1c27d26419e02391cd6ec84e447a2e5a47bf49b3545be8435f4c5d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:25:50.574998+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

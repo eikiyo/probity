@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "haiku-4.5-direct",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "8f742a7149dcd53a4a977966205e0f49cb53ed6bd3c6104b0e02100daf0b5457",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:20:12.240098+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

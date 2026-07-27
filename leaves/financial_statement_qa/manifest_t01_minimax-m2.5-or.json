@@ -1,0 +1,14 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "minimax-m2.5-or",
+ "task_name": "financial_statement_qa",
+ "data_version": "8e91a2eeba00b36a82ccf72fcfcfe60e2f46cb5093345b280b04f5c1bf3ac098",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:47:05.523587+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

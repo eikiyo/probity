@@ -1,0 +1,14 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "mistral-large-or",
+ "task_name": "post_money_valuation",
+ "data_version": "f9f72e6e2a41e5c39369c5b95caf41b5626720be54871d7c31e9dd6afba7b576",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:10:46.886453+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1
+ }
+}

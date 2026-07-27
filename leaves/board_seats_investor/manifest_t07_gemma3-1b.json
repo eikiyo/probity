@@ -1,0 +1,14 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "gemma3-1b",
+ "task_name": "board_seats_investor",
+ "data_version": "75ed910b0d3843c99ef3ce6a98a990e10cdd47574cad8cb0612f6655df321409",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:32:01.900336+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

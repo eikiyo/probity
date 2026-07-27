@@ -1,0 +1,14 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "llama3.3-70b-or",
+ "task_name": "option_pool_shuffle",
+ "data_version": "77286b2eaadbd8be7aa300abdaaf74270d5179786ebfd3c9803b71b90ccf0bb8",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:28:36.335798+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

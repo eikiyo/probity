@@ -1,0 +1,14 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "gemini3-flash-or",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "5b737d18bc4e0ff1b148c3c585fbcb39e61620aceca9940f07ff4d45fcd0cf44",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:17:04.133447+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

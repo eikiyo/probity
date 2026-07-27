@@ -1,0 +1,14 @@
+{
+ "leaf": "form_d_fields",
+ "model": "llama3.3-70b-or",
+ "task_name": "form_d_fields",
+ "data_version": "b517a8024bbdbba62598493e48f7d96e0ff7c340e64c84f98fa4506fa8e3bf56",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:23:43.253936+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

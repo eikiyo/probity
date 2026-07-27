@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "gemma3-1b-qat",
+ "task_name": "flag_full_ratchet",
+ "data_version": "6f31928eaa62f477a762d97c413544f8fcd12f99b87b3840d63d96acf82b7df5",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:40:17.755969+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

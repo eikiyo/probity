@@ -121,5 +121,1358 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "llama3.3-70b-or": {
+  "model": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.03,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 1.25,
+       "truth": 1.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.0,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "option_strike_409a": 0.0
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.007142857142857143,
+   "valid_run_count": 139,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-31b-or": {
+  "model": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.03,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 1.25,
+       "truth": 1.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.0,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "option_strike_409a": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "deepseek-v4f": {
+  "model": "deepseek-v4-flash",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.03,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 1.25,
+       "truth": 1.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.0,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "option_strike_409a": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "haiku-4.5-direct": {
+  "model": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.03,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 1.25,
+       "truth": 1.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.0,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "option_strike_409a": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "deepseek-v4p": {
+  "model": "deepseek-v4-pro",
+  "temperature_requested": 0.1,
+  "routing": "direct",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.03,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 1.25,
+       "truth": 1.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.0,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "option_strike_409a": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gpt5-mini-or": {
+  "model": "openai/gpt-5-mini",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.03,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 1.25,
+       "truth": 1.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.0,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "option_strike_409a": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mistral-large-or": {
+  "model": "mistralai/mistral-large-2512",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.03,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 1.25,
+       "truth": 1.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.0,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "option_strike_409a": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemini3-flash-or": {
+  "model": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.03,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 16,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 1.25,
+       "truth": 1.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.0,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "option_strike_409a": 0.0
+   },
+   "parse_failure_count": 4,
+   "parse_failure_rate": 0.02857142857142857,
+   "valid_run_count": 136,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "minimax-m2.5-or": {
+  "model": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.03,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 1.25,
+       "truth": 1.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.0,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "option_strike_409a": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 0.42857142857142855,
+   "accuracy_strict": 0.42857142857142855,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.31,
+       "truth": 0.03,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.31,
+       "truth": 0.25,
+       "consistency": 0.65
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.31,
+       "truth": 1.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.5,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 0.9500000000000001,
+   "consistency_pct": 95.0,
+   "field_flips": {
+    "option_strike_409a": 0.14285714285714285
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 140,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.1,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "option_strike_409a",
+   "n_instances": 7,
+   "n_measurable": 7,
+   "accuracy_majority": 0.7142857142857143,
+   "accuracy_strict": 0.5714285714285714,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 14,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.03,
+       "consistency": 0.7142857142857143
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.25,
+       "truth": 0.25,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 0.61,
+       "truth": 0.61,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 1.25,
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 2.0,
+       "truth": 2.0,
+       "consistency": 0.65
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 7.5,
+       "truth": 7.5,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_strike_409a": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_strike_409a",
+   "consistency_rate": 0.9020408163265305,
+   "consistency_pct": 90.20408163265306,
+   "field_flips": {
+    "option_strike_409a": 0.42857142857142855
+   },
+   "parse_failure_count": 6,
+   "parse_failure_rate": 0.04285714285714286,
+   "valid_run_count": 134,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

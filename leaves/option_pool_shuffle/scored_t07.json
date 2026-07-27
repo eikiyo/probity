@@ -1,0 +1,144 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "option_pool_shuffle",
+   "n_instances": 3,
+   "n_measurable": 3,
+   "accuracy_majority": 0.3333333333333333,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_pool_shuffle": {
+       "majority": 0.0909091,
+       "truth": 0.909,
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "option_pool_shuffle": {
+       "majority": 0.24,
+       "truth": 0.24,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_pool_shuffle": {
+       "majority": 909.0,
+       "truth": 0.6956,
+       "consistency": 0.4
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_pool_shuffle",
+   "consistency_rate": 0.5666666666666667,
+   "consistency_pct": 56.666666666666664,
+   "field_flips": {
+    "option_pool_shuffle": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 60,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "option_pool_shuffle",
+   "n_instances": 3,
+   "n_measurable": 3,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_pool_shuffle": {
+       "majority": 9.0,
+       "truth": 0.909,
+       "consistency": 0.5263157894736842
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_pool_shuffle": {
+       "majority": 0.909,
+       "truth": 0.24,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_pool_shuffle": {
+       "majority": 0.909,
+       "truth": 0.6956,
+       "consistency": 0.65
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_pool_shuffle",
+   "consistency_rate": 0.6421052631578947,
+   "consistency_pct": 64.21052631578948,
+   "field_flips": {
+    "option_pool_shuffle": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 60,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

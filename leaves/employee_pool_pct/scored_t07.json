@@ -1,0 +1,92 @@
+{
+ "gemma3-1b-qat": {
+  "model": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "employee_pool_pct",
+   "n_instances": 1,
+   "n_measurable": 1,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "employee_pool_pct": {
+       "majority": 130.0,
+       "truth": 9.5,
+       "consistency": 0.9
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "employee_pool_pct",
+   "consistency_rate": 0.9,
+   "consistency_pct": 90.0,
+   "field_flips": {
+    "employee_pool_pct": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 20,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma3-1b": {
+  "model": "gemma3:1b",
+  "temperature_requested": 0.7,
+  "routing": "ollama",
+  "accuracy": {
+   "task": "employee_pool_pct",
+   "n_instances": 1,
+   "n_measurable": 1,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "employee_pool_pct": {
+       "majority": 10.0,
+       "truth": 9.5,
+       "consistency": 0.5263157894736842
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "employee_pool_pct",
+   "consistency_rate": 0.5263157894736842,
+   "consistency_pct": 52.63157894736842,
+   "field_flips": {
+    "employee_pool_pct": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 20,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

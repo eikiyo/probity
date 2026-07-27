@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "deepseek-v4p",
+ "task_name": "safe_valuation_cap",
+ "data_version": "c94af7cce3b8d3966468546bf799a83ac508cf5acbb295c274e68fe943300187",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:04:39.311371+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

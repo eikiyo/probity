@@ -1,0 +1,14 @@
+{
+ "leaf": "cliff_present",
+ "model": "gemini3-flash-or",
+ "task_name": "cliff_present",
+ "data_version": "c0ebdfd51616780abe30794fc04f49eaa5adfa1560c22c0b3307378aea30f5ec",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:24:20.082788+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

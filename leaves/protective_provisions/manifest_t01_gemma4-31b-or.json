@@ -1,0 +1,14 @@
+{
+ "leaf": "protective_provisions",
+ "model": "gemma4-31b-or",
+ "task_name": "protective_provisions",
+ "data_version": "d1788831f26720a26da9f1fb19c7e13d313c6f4465b8acf0102721e222b0a744",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:12:27.517348+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

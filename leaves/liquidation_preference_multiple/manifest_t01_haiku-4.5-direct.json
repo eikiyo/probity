@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "haiku-4.5-direct",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "40fb7611cdbaf412c8ac87eca20ab6589a0673cf78d3c1b0c7ca3f5bb86eaa65",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:21:24.591135+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

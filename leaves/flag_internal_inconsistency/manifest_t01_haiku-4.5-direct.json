@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "haiku-4.5-direct",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "ee9ea4c5925a64e39a233eb7e6d5ade284f9e7bedd85dec1923e637359bce04a",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:18:46.642579+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

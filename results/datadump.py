@@ -141,7 +141,7 @@ def write_scored(out, labels, gz=True):
         for leaf in ag.built_leaves():
             for suffix, temp, arm in ARMS:
                 p = ROOT / leaf["leaf"] / coverage.scored_filename(None if not suffix else temp)
-                if suffix == "t07_" or not p.exists():
+                if not p.exists():
                     continue
                 blob = json.loads(p.read_text())
                 for label in labels:

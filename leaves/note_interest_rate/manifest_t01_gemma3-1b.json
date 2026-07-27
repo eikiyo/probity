@@ -1,0 +1,14 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "gemma3-1b",
+ "task_name": "note_interest_rate",
+ "data_version": "774c52015fecceb4dbfdfd6f51880233400c44a74c524ba6b909753a015d76e2",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:39:33.782732+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

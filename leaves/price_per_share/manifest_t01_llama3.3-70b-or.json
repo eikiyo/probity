@@ -1,0 +1,14 @@
+{
+ "leaf": "price_per_share",
+ "model": "llama3.3-70b-or",
+ "task_name": "price_per_share",
+ "data_version": "6544fd1568c5f591c2d771b2b7f70c2baf9ea308ed3ecf669d95a72b6aa3a013",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:49:48.775605+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

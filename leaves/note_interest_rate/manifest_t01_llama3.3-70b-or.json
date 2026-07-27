@@ -1,0 +1,14 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "llama3.3-70b-or",
+ "task_name": "note_interest_rate",
+ "data_version": "755bb4e59c459d168510bb73d8c5dc0d0b53412ea78543fca3dd57ee42a3ce14",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:27:04.225023+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

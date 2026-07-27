@@ -1,0 +1,14 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "deepseek-v4f",
+ "task_name": "s1_risk_factors",
+ "data_version": "3c5eb482d915d4500ed8375b4982264ea0fdc0b64d437eadb2cc58d466b171fa",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:12:42.067581+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "haiku-4.5-direct",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "b14765ffc7cf17e74cdd80ccb77ede77f530f1ff30efaaa41925328cba48b733",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:21:28.589038+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

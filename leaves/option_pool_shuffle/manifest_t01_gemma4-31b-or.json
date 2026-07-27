@@ -1,0 +1,14 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "gemma4-31b-or",
+ "task_name": "option_pool_shuffle",
+ "data_version": "8a8f30b91e8c9e8050b37725393af88554bc46ac0d6736ee6bda9db45ed4c42f",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:05:03.000030+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

@@ -1214,5 +1214,76 @@
    "tripped": true,
    "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
   }
+ },
+ "deepseek-v4p": {
+  "model": "deepseek-v4-pro",
+  "temperature_requested": 0.7,
+  "routing": "direct",
+  "accuracy": {
+   "task": "option_pool_shuffle",
+   "n_instances": 3,
+   "n_measurable": 3,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.6666666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_pool_shuffle": {
+       "majority": 0.909,
+       "truth": 0.909,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "option_pool_shuffle": {
+       "majority": 0.24,
+       "truth": 0.24,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "option_pool_shuffle": {
+       "majority": 0.696,
+       "truth": 0.6956,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "option_pool_shuffle",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "option_pool_shuffle": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 60,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

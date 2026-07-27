@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "minimax-m2.5-or",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "e8098ce1487c889ca72097085cf9b8820bd406376a4144d033497266ee42bd39",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:56:38.289550+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

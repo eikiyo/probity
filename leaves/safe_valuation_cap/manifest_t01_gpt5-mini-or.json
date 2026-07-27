@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "gpt5-mini-or",
+ "task_name": "safe_valuation_cap",
+ "data_version": "253a5503ffd86f5c656fa83fe64348b3dd547f894ffc3d2404a35f6bd1514a5d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:54:10.624011+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

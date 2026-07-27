@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "deepseek-v4p",
+ "task_name": "safe_discount_rate",
+ "data_version": "d0a74e43b66e76c4d8b46397ea8d17bf4ccd95fdca5b0ebe0ed1b91ebe4adc4f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:03:56.884421+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

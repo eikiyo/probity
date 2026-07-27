@@ -1,0 +1,14 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "llama3.3-70b-or",
+ "task_name": "vesting_acceleration",
+ "data_version": "000a8714e10e396c7c32dc4c25f6df13a1bc647eb5f26a87f13920d0a3ab0a85",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:28:38.359630+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

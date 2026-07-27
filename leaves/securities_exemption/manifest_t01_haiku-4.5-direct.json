@@ -1,0 +1,14 @@
+{
+ "leaf": "securities_exemption",
+ "model": "haiku-4.5-direct",
+ "task_name": "securities_exemption",
+ "data_version": "9434fca218adcc006f9f3db2f0c541a1cd43b543f6c16e58a080e74ac842755c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:27:25.741587+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

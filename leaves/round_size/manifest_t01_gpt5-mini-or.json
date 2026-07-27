@@ -1,0 +1,14 @@
+{
+ "leaf": "round_size",
+ "model": "gpt5-mini-or",
+ "task_name": "round_size",
+ "data_version": "4e72d6e61f4ec495a5398b95f66203774c227f9249765a608f03a8f8842b3cd3",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:50:08.451443+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-5-mini",
+  "temperature_requested": 0.1
+ }
+}

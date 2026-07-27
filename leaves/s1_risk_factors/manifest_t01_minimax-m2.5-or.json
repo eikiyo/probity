@@ -1,0 +1,14 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "minimax-m2.5-or",
+ "task_name": "s1_risk_factors",
+ "data_version": "12bfb3b26699f7d9751d6441b664e1975f0af10b0580e83b66b8505030aba17d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:31:58.371137+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

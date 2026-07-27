@@ -1,0 +1,14 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "gemma3-1b-qat",
+ "task_name": "preference_stack_payout",
+ "data_version": "b759c41ad9acbf38b0ab319df832879c340e97f972cc5c1baf42daa07d91ad3c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:19:25.617138+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "protective_provisions",
+ "model": "minimax-m2.5-or",
+ "task_name": "protective_provisions",
+ "data_version": "7c6df3fc89d6c53949937efe94805c1370827998932c7e74c80fcdd563bb3d1c",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:33:01.992151+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

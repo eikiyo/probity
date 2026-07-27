@@ -2579,5 +2579,63 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "deepseek-v4p": {
+  "model": "deepseek-v4-pro",
+  "temperature_requested": 0.7,
+  "routing": "direct",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.875,
+   "consistency_pct": 87.5,
+   "field_flips": {
+    "form_d_field_value": 0.5
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

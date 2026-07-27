@@ -1,0 +1,14 @@
+{
+ "leaf": "vesting_schedule",
+ "model": "deepseek-v4p",
+ "task_name": "vesting_schedule",
+ "data_version": "833be9294c221f87e0aa40bf0547acbbab6c9859b050c8b63bc20acd22e34f6b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:04:27.610245+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-pro",
+  "temperature_requested": 0.7
+ }
+}

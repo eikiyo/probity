@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "haiku-4.5-direct",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "2c6b45f3a8242d44200d3d06c3bc5a664fd0ea44c82e2ebca84c83a83f2b8a14",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:20:25.649923+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.1
+ }
+}

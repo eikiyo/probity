@@ -1,0 +1,14 @@
+{
+ "leaf": "cliff_present",
+ "model": "llama3.3-70b-or",
+ "task_name": "cliff_present",
+ "data_version": "217e34ad690ac7a3fc0255aa1b60b320e6ad9965460ae61b431e1918d6c405a7",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:28:12.644623+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

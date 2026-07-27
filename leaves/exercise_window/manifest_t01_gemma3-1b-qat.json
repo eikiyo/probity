@@ -1,0 +1,14 @@
+{
+ "leaf": "exercise_window",
+ "model": "gemma3-1b-qat",
+ "task_name": "exercise_window",
+ "data_version": "430a5516b7270930be2a8699f7169faa1277f5b301a97bace58a283ab25dc945",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:37:45.970448+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

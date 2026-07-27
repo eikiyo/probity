@@ -1,0 +1,14 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "gemma3-1b",
+ "task_name": "conversion_ratio",
+ "data_version": "bc8fe5e0b6391803553275f2179f5b2353ee451f53954e20f34c9f97d280adf8",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:38:59.511858+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.1
+ }
+}

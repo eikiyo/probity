@@ -1,0 +1,14 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "gemini3-flash-or",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "f5c51d55ddb6eedba7bb7138ea5cc8597ff6c1ea7efa55c28cd433de460cd73f",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:20:41.216201+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

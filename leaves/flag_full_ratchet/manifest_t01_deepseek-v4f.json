@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "deepseek-v4f",
+ "task_name": "flag_full_ratchet",
+ "data_version": "0af4914d2c7e4578f099cc73b87475f6b2eba30413713d7a0716df3131a5dbed",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:59:43.220023+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "deepseek-v4-flash",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "gemma4-31b-or",
+ "task_name": "safe_valuation_cap",
+ "data_version": "6761e2e02acc604f84cf631f0b130a4b45c59de17a155394a4dbd735317ef5cb",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T14:20:26.324325+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemma-4-31b-it",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "gemma3-1b",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "c2e2374a15e7845c79ed81b1f8ba0e030fe8d067a771c6f340098c1d2b565b51",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T15:45:04.761092+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b",
+  "temperature_requested": 0.7
+ }
+}

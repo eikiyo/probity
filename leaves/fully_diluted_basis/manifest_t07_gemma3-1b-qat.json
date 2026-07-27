@@ -1,0 +1,14 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "gemma3-1b-qat",
+ "task_name": "fully_diluted_basis",
+ "data_version": "c6d852963dcb7ff2b9ae6281ae49a640f629d0d980be9bddf4a37049b5f31f56",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-27T14:50:28.489340+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.7
+ }
+}

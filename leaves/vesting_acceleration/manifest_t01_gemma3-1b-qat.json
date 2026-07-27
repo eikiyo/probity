@@ -1,0 +1,14 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "gemma3-1b-qat",
+ "task_name": "vesting_acceleration",
+ "data_version": "8921b00630cc526cfbc6c601a6878b704cb8ab92e6bb1012ea3c3e1f62dafd83",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:54:42.327177+00:00",
+ "extra": {
+  "routing": "ollama",
+  "model_id": "gemma3:1b-it-qat",
+  "temperature_requested": 0.1
+ }
+}

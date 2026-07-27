@@ -1,0 +1,14 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "minimax-m2.5-or",
+ "task_name": "option_pool_shuffle",
+ "data_version": "4b9d9f5e24cd1d0752124b12a70fbe507de5378fe7837b2e1b1cae361efd3ec2",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:10:33.264261+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}

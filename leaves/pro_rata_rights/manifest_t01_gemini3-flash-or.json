@@ -1,0 +1,14 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "gemini3-flash-or",
+ "task_name": "pro_rata_rights",
+ "data_version": "5650cd75ea9b09824bf0743f84cac1e14f13f2056368410c021205f167b90815",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T15:25:10.510674+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.1
+ }
+}

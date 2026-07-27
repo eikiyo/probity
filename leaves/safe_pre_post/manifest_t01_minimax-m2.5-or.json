@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pre_post",
+ "model": "minimax-m2.5-or",
+ "task_name": "safe_pre_post",
+ "data_version": "6a0d52cc4aff4ffc7aee643ce9a66664dd1ca4b9dab2fd8e2556a1b6aefb090a",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T16:44:48.170258+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "minimax/minimax-m2.5",
+  "temperature_requested": 0.1
+ }
+}
