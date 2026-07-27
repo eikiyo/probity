@@ -21,6 +21,7 @@ ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "results"))
 sys.path.insert(0, str(ROOT / "engine"))
 
+import aggregate as ag  # noqa: E402
 import summary  # noqa: E402
 
 
@@ -32,11 +33,13 @@ class TestReproducesPublishedReadme:
         "gemma3-1b": 42, "deepseek-v4f": 6, "gemma4-31b-or": 3, "mistral-large-or": 3,
         "minimax-m2.5-or": 7, "llama3.3-70b-or": 3, "gemma3-1b-qat": 34,
         "gemini3-flash-or": 3, "haiku-4.5-direct": 3, "gpt-oss-120b-or": 6, "gpt5-mini-or": 6,
+        "deepseek-v4p": 4,
     }
     PUBLISHED_ACCURACY = {
         "gemma3-1b": 58, "deepseek-v4f": 95, "gemma4-31b-or": 94, "mistral-large-or": 93,
         "minimax-m2.5-or": 94, "llama3.3-70b-or": 93, "gemma3-1b-qat": 61,
         "gemini3-flash-or": 94, "haiku-4.5-direct": 93, "gpt-oss-120b-or": 94, "gpt5-mini-or": 94,
+        "deepseek-v4p": 95,
     }
 
     def test_every_published_wobble_and_accuracy_is_reproduced(self):
@@ -68,14 +71,18 @@ class TestLineupFilterIsLive:
         scored = json.loads((ROOT / "leaves" / "drag_along" / "scored.json").read_text())
         kept = render._models(scored)
         assert len(scored) > 40, "fixture must contain the fine-tune labels for this to mean anything"
-        assert len(kept) == 11
+        assert len(kept) == len(ag.canonical_lineup())
         assert set(kept) <= set(scored)
         excluded = set(scored) - set(kept)
         assert {"tuned-v4", "mlx-base-n20"} <= excluded
 
-    def test_suite_table_has_exactly_eleven_data_rows(self):
+    def test_suite_table_has_exactly_one_row_per_lineup_model(self):
+        """Derived from canonical_lineup() rather than a literal. The lineup SIZE is declared once,
+        in test_aggregate's `len(lineup) == 12`, which is the gate that fires if a model is added
+        silently; restating the number here only meant five files went red when deepseek-v4p was
+        added legitimately, each needing a hand edit that could as easily have been a wrong one."""
         body = summary.suite_summary_table(None).splitlines()[2:]   # drop header + separator
-        assert len(body) == 11
+        assert len(body) == len(ag.canonical_lineup())
 
 
 class TestBadgeAndRateSadPaths:

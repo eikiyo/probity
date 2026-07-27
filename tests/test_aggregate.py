@@ -25,10 +25,12 @@ import aggregate as ag  # noqa: E402
 
 
 class TestLineup:
-    # Models in the lineup that have NOT yet been measured in the legacy 0.7 arm. deepseek-v4p
-    # was added 2026-07-27 and is being swept now. Listing it explicitly is the point: a lineup
-    # member with no data must be a DECLARED exception, never something a test quietly tolerates.
-    NOT_YET_MEASURED_IN_LEGACY = {"deepseek-v4p"}
+    # Models in the lineup that have NOT yet been measured in the legacy 0.7 arm. Empty since
+    # 2026-07-27, when deepseek-v4p finished its 0.7 sweep at 9400/9400 -- the exception was
+    # DELETED the moment it stopped being true, per the honesty test below, rather than left to
+    # rot into a permanent excuse. A lineup member with no data must be a DECLARED exception,
+    # never something a test quietly tolerates.
+    NOT_YET_MEASURED_IN_LEGACY = set()
 
     def test_lineup_is_declared_and_has_no_duplicates(self):
         lineup = ag.canonical_lineup()
@@ -70,6 +72,7 @@ class TestReproducesPublishedNumbers:
         "minimax-m2.5-or": 94, "llama3.3-70b-or": 93, "gemma3-1b-qat": 61,
         "gemini3-flash-or": 94, "haiku-4.5-direct": 93, "gpt-oss-120b-or": 94,
         "gpt5-mini-or": 94,
+        "deepseek-v4p": 95,     # added to the published table 2026-07-27
     }
 
     def test_accuracy_matches_the_published_table(self):
@@ -92,7 +95,7 @@ class TestReproducesPublishedNumbers:
         "gemma3-1b": 469, "deepseek-v4f": 470, "gemma4-31b-or": 469, "mistral-large-or": 470,
         "minimax-m2.5-or": 470, "llama3.3-70b-or": 469, "gemma3-1b-qat": 470,
         "gemini3-flash-or": 469, "haiku-4.5-direct": 468, "gpt-oss-120b-or": 469,
-        "gpt5-mini-or": 470,
+        "gpt5-mini-or": 470, "deepseek-v4p": 469,
     }
 
     def test_measured_item_counts_match_disk(self):

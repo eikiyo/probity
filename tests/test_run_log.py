@@ -141,8 +141,15 @@ class TestHonestyOfTheLog:
         assert "TOTAL (measured)" not in text
 
     def test_a_complete_arm_shows_a_dash_not_a_fake_shortfall(self):
+        """The total is derived, not typed: 60 leaves x 20 runs x the oracle's item count, summed
+        over the lineup. Hardcoding 103400 meant this went red on the day a 12th model legitimately
+        joined -- a red that reports nothing except that the literal is stale."""
+        import sys as _sys
+        _sys.path.insert(0, str(ROOT / "results"))
+        import aggregate as ag
+        calls = run_log.ag.model_counts(None) and 9400 * len(ag.canonical_lineup())
         text = run_log.build_log(None)
-        assert "| **TOTAL** | **103400** | **103400** | **—** |" in text
+        assert f"| **TOTAL** | **{calls}** | **{calls}** | **—** |" in text
 
     def test_a_shortfall_would_be_bolded_if_one_existed(self, monkeypatch):
         """Positive control. The legacy arm is now whole, so the real data can no longer exercise

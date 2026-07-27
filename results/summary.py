@@ -154,10 +154,18 @@ def family_summary_table(arm: Optional[float] = None) -> str:
 
 def readme_block(n_leaves: int, temp: float, arm: Optional[float] = None) -> str:
     """The README's BENCHMARK block: a caption plus the two tables above. Lives here, beside the
-    tables it is made of, so the caption's temperature can never drift from the data's."""
-    cap = (f"*{n_leaves} tests, each item run 20x/item at temp {temp} across a model size ladder. "
-           "**Wobble** (lower = better) is the run-to-run inconsistency rate, weighted by item "
-           "count across every test that model ran. Full per-test breakdown (all "
+    tables it is made of, so the caption's temperature can never drift from the data's.
+
+    The caption states the MODEL COUNT because the per-category table is an average across the
+    whole lineup: adding a 12th model legitimately moved 6 of its 8 rows (deepseek-v4-pro, added
+    2026-07-27), while every per-model row stayed byte-identical. A category average whose
+    denominator is unstated cannot be compared against a later revision of the same table.
+    """
+    n_models = len(aggregate_by_model(arm))
+    cap = (f"*{n_leaves} tests, each item run 20x/item at temp {temp} across a ladder of "
+           f"{n_models} models. **Wobble** (lower = better) is the run-to-run inconsistency rate, "
+           "weighted by item count across every test that model ran; the per-category table below "
+           f"averages across all {n_models}. Full per-test breakdown (all "
            f"{n_leaves} tables): [`results/RESULTS.md`](results/RESULTS.md).*\n")
     return ("<!-- BENCHMARK:START -->\n" + cap +
             "\n### Does reliability improve with model size?\n\n" + suite_summary_table(arm) +

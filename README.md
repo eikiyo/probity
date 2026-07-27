@@ -79,7 +79,7 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 ## Benchmark results
 
 <!-- BENCHMARK:START -->
-*60 tests, each item run 20x/item at temp 0.7 across a model size ladder. **Wobble** (lower = better) is the run-to-run inconsistency rate, weighted by item count across every test that model ran. Full per-test breakdown (all 60 tables): [`results/RESULTS.md`](results/RESULTS.md).*
+*60 tests, each item run 20x/item at temp 0.7 across a ladder of 12 models. **Wobble** (lower = better) is the run-to-run inconsistency rate, weighted by item count across every test that model ran; the per-category table below averages across all 12. Full per-test breakdown (all 60 tables): [`results/RESULTS.md`](results/RESULTS.md).*
 
 ### Does reliability improve with model size?
 
@@ -87,6 +87,7 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 |---|---|---|---|---|
 | `gemma3:1b` | 1B, local | 60 | ![42%](https://img.shields.io/badge/-42%25-red) | ![58%](https://img.shields.io/badge/-58%25-red) |
 | `deepseek-v4-flash` | hosted, direct | 60 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
+| `deepseek-v4-pro` | hosted, direct | 60 | ![4%](https://img.shields.io/badge/-4%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
 | `gemma-4-31b-it` | 31B, hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
 | `mistral-large-2512` | hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
 | `minimax-m2.5` | hosted (OR) | 60 | ![7%](https://img.shields.io/badge/-7%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
@@ -101,14 +102,14 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 
 | Category | Tests | **Wobble** ↓ (all models) | Accuracy (all models) |
 |---|---|---|---|
-| Priced equity rounds | 16 | ![10%](https://img.shields.io/badge/-10%25-yellow) | ![85%](https://img.shields.io/badge/-85%25-yellow) |
-| SAFEs & convertible notes | 12 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
-| Cap table math | 7 | ![22%](https://img.shields.io/badge/-22%25-yellow) | ![80%](https://img.shields.io/badge/-80%25-yellow) |
-| Investor rights & governance | 7 | ![10%](https://img.shields.io/badge/-10%25-yellow) | ![88%](https://img.shields.io/badge/-88%25-brightgreen) |
+| Priced equity rounds | 16 | ![9%](https://img.shields.io/badge/-9%25-brightgreen) | ![85%](https://img.shields.io/badge/-85%25-yellow) |
+| SAFEs & convertible notes | 12 | ![7%](https://img.shields.io/badge/-7%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
+| Cap table math | 7 | ![20%](https://img.shields.io/badge/-20%25-yellow) | ![81%](https://img.shields.io/badge/-81%25-yellow) |
+| Investor rights & governance | 7 | ![9%](https://img.shields.io/badge/-9%25-brightgreen) | ![88%](https://img.shields.io/badge/-88%25-brightgreen) |
 | Founder & employee vesting | 5 | ![8%](https://img.shields.io/badge/-8%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
-| Regulatory disclosures | 5 | ![18%](https://img.shields.io/badge/-18%25-yellow) | ![89%](https://img.shields.io/badge/-89%25-brightgreen) |
-| Off-market risk flags | 5 | ![7%](https://img.shields.io/badge/-7%25-brightgreen) | ![82%](https://img.shields.io/badge/-82%25-yellow) |
-| Exit waterfalls | 3 | ![41%](https://img.shields.io/badge/-41%25-red) | ![68%](https://img.shields.io/badge/-68%25-yellow) |
+| Regulatory disclosures | 5 | ![17%](https://img.shields.io/badge/-17%25-yellow) | ![90%](https://img.shields.io/badge/-90%25-brightgreen) |
+| Off-market risk flags | 5 | ![7%](https://img.shields.io/badge/-7%25-brightgreen) | ![83%](https://img.shields.io/badge/-83%25-yellow) |
+| Exit waterfalls | 3 | ![39%](https://img.shields.io/badge/-39%25-red) | ![70%](https://img.shields.io/badge/-70%25-yellow) |
 
 <!-- BENCHMARK:END -->
 

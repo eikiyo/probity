@@ -142,8 +142,10 @@ class TestHoleArithmetic:
             assert h["short_by"] == h["expected"] - h["recorded"]
             assert h["short_by"] > 0
 
-    def test_the_t01_arm_reports_no_holes_from_unrun_cells(self):
-        """The 0.1 arm is mid-sweep. Every cell it has not reached yet must read as 'not run',
-        never as a hole -- otherwise a backfill would race the sweep on the same checkpoints."""
-        holes = backfill.find_holes(["mistral-large-or"], 0.1)
-        assert holes == []
+    # The zero-recorded vs partially-recorded distinction is pinned by
+    # TestFindHolesSkipsUnrunCells above, which builds REAL leaf fixtures and drives the real
+    # coverage.cell_status. A live-state test used to sit here asserting that "mistral-large-or"
+    # had no t01 holes; that was a test of the sweep's progress, not of find_holes -- it passed
+    # while mistral was unstarted and went red the hour it began, having found no defect. It was
+    # removed rather than re-pointed at another not-yet-started label, which would only reset the
+    # same fuse.

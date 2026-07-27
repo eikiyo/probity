@@ -23,6 +23,7 @@ ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / "results"))
 sys.path.insert(0, str(ROOT / "engine"))
 
+import aggregate as ag  # noqa: E402
 import datadump      # noqa: E402
 import dump_docs     # noqa: E402
 import dump_verify   # noqa: E402
@@ -34,7 +35,8 @@ class TestArmCompletenessGate:
         arms = {a["arm"] for a in ready}
         assert "t07_legacy" in arms
         legacy = next(a for a in ready if a["arm"] == "t07_legacy")
-        assert legacy["cells"] == 660 and legacy["short_cells"] == 0
+        assert legacy["cells"] == 60 * len(ag.canonical_lineup())
+        assert legacy["short_cells"] == 0
 
     def test_an_arm_with_any_short_cell_is_not_certified(self, monkeypatch):
         """One short cell is enough. A dump built over a running sweep reads runs.jsonl and the
@@ -145,7 +147,7 @@ class TestVerifierReproducesPaper:
     def test_the_certified_arm_covers_all_eleven_models(self, dump):
         exp = json.loads((dump / "expected_numbers.json").read_text())
         assert "t07_legacy" in exp
-        assert len(exp["t07_legacy"]) == 11
+        assert len(exp["t07_legacy"]) == len(ag.canonical_lineup())
 
     def test_a_tampered_expectation_makes_the_verifier_fail(self, dump, tmp_path):
         """Prove the gate can go RED. A verifier that cannot fail certifies nothing."""

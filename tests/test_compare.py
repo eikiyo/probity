@@ -75,7 +75,7 @@ class TestSelfPairingIsANullResult:
 
     def test_every_model_reports_zero_delta_against_itself(self):
         rows = compare.paired_rows(None, None)
-        assert len(rows) == 11
+        assert len(rows) == len(compare.ag.canonical_lineup())
         for r in rows:
             assert r["discordant"] == (0, 0)
             assert r["delta"].point == 0.0
@@ -83,7 +83,8 @@ class TestSelfPairingIsANullResult:
 
     def test_self_paired_table_establishes_no_difference_anywhere(self):
         table = compare.paired_table(None, None)
-        assert table.count("no difference established") == 11
+        assert (table.count("no difference established")
+                == len(compare.ag.canonical_lineup()))
         assert "lower at" not in table.replace("no difference established", "")
 
 
@@ -116,9 +117,10 @@ class TestCoverageSectionReportsHoles:
         holes = [c for c in measured if not c["complete"]]
         assert len(matrix) == 60 * len(compare.ag.canonical_lineup())
         assert holes == [], "a cell with data must have ALL its data"
-        # deepseek-v4p joined the lineup 2026-07-27 and has no legacy-arm data yet; its cells are
-        # ABSENT (0 recorded), which is a different state from SHORT and must not read as a hole.
-        assert len(measured) == 660, "the 11 measured models x 60 leaves"
+        # deepseek-v4p joined the lineup 2026-07-27 and completed its legacy sweep the same day,
+        # so every lineup model now has data. A model with 0 recorded cells would be ABSENT, which
+        # is a different state from SHORT and must never read as a hole.
+        assert len(measured) == 60 * len(compare.ag.canonical_lineup())
 
     def test_render_matrix_bolds_a_short_cell(self):
         """The capability the test above used to cover, on synthetic data that cannot rot."""
