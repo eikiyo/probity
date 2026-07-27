@@ -127,7 +127,7 @@ def spend_table(temperature: Optional[float]) -> str:
     lines = ["| Model | Routing | Wall-clock | Exit | Measured spend | Sweep runs |",
              "|---|---|---|---|---|---|"]
     total = 0.0
-    unmeasured = []
+    unmeasured, reconstructed = [], []
     for r in sorted(rows, key=lambda x: x["label"]):
         spend = r.get("total_spend_usd")
         if spend is None:
@@ -136,9 +136,20 @@ def spend_table(temperature: Optional[float]) -> str:
         else:
             total += spend
             cell = f"${spend:.4f}"
+            # A reconstructed row's pre-run balance was typed by the operator, not sampled by the
+            # harness. Marking it is the whole point: a spend table that cannot distinguish a
+            # measured figure from a remembered one is not an audit trail.
+            if r.get("provenance") == "reconstructed":
+                reconstructed.append(r["label"])
+                cell += " †"
         lines.append(f"| `{r['label']}` | {r['client']} | {fmt_hms(r.get('total_seconds'))} | "
                       f"{r['exit_code']} | {cell} | {r.get('runs', 1)} |")
     lines.append(f"| **TOTAL (measured)** | | | | **${total:.2f}** | |")
+    if reconstructed:
+        lines += ["", f"† Pre-run balance for {', '.join('`' + x + '`' for x in reconstructed)} "
+                       "was recorded by the operator rather than sampled by the harness (the model "
+                       "was launched before the ledger existed). The post-run balance IS a live "
+                       "reading, so the delta is accurate to the accuracy of that one figure."]
     if unmeasured:
         lines += ["", f"*{len(unmeasured)} model(s) ran on a direct provider API with no readable "
                        f"balance endpoint ({', '.join('`' + u + '`' for u in unmeasured)}), so "

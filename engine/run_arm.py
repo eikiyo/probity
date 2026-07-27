@@ -122,15 +122,56 @@ def append_ledger(row):
         f.write(json.dumps(row) + "\n")
 
 
+def adopt(label, client, model_id, temperature, balance_before):
+    """
+    Write a ledger row for a model that ran OUTSIDE this driver (gpt-oss-120b-or was launched
+    directly from run_hosted_sweep.py before the ledger existed).
+
+    The before-balance cannot be sampled retroactively, so it is supplied by the operator and the
+    row is stamped `provenance: "reconstructed"`. RUN_LOG renders those rows with a footnote
+    saying the figure was not machine-sampled. This is the honest option: the alternative is
+    either omitting a real cost or printing an operator-typed number as if the harness measured
+    it, and a spend table that cannot tell those apart is not an audit trail.
+    """
+    after = preflight.or_balance() if client == "openrouter" else None
+    recorded, owed, holes = coverage_of(label, temperature)
+    row = {"label": label, "client": client, "model_id": model_id, "temperature": temperature,
+           "exit_code": 0 if recorded == owed else 1, "seconds": None,
+           "recorded": recorded, "owed": owed, "holes": len(holes),
+           "complete": recorded == owed, "balance_before": balance_before,
+           "balance_after": after, "provenance": "reconstructed",
+           "measured_spend_usd": (round(balance_before - after, 4)
+                                   if balance_before is not None and after is not None else None)}
+    append_ledger(row)
+    return row
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--temperature", type=float, required=True)
+    p.add_argument("--adopt", default=None,
+                    help="write a reconstructed ledger row for a label that ran outside this "
+                         "driver; requires --balance-before. Makes NO model calls.")
+    p.add_argument("--balance-before", type=float, default=None,
+                    help="the operator-observed provider balance before the adopted run")
     p.add_argument("--from", dest="start", default=None, help="resume the arm at this label")
     p.add_argument("--only", action="append", dest="only", help="run only these labels")
     p.add_argument("--leaf-parallelism", type=int, default=10)
     p.add_argument("--workers-per-leaf", type=int, default=4)
     p.add_argument("--dry-run", action="store_true", help="print the plan, make ZERO calls")
     args = p.parse_args()
+
+    if args.adopt:
+        known = {l: (c, m) for l, c, m in preflight.LINEUP}
+        if args.adopt not in known:
+            raise SystemExit(f"--adopt {args.adopt!r} is not a known label")
+        if args.balance_before is None:
+            raise SystemExit("--adopt requires --balance-before (the observed pre-run balance)")
+        client, model_id = known[args.adopt]
+        row = adopt(args.adopt, client, model_id, args.temperature, args.balance_before)
+        print(f"adopted {args.adopt}: {row['recorded']}/{row['owed']} calls, "
+              f"spend {row['measured_spend_usd']} (provenance: reconstructed)")
+        return
 
     order = list(ARM_ORDER)
     if args.start:

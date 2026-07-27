@@ -144,3 +144,32 @@ class TestHonestyOfTheLog:
         assert "**283**" in text      # haiku's shortfall
         assert "**74**" in text       # gemini's shortfall
         assert "**357**" in text      # and the arm total
+
+
+class TestReconstructedSpendIsLabelled:
+    def test_an_operator_supplied_balance_is_daggered_and_footnoted(self, tmp_path, monkeypatch):
+        """A reconstructed figure must be visibly distinguishable from a sampled one. If both
+        render identically the table quietly claims a measurement it did not make."""
+        p = tmp_path / "run_ledger.jsonl"
+        p.write_text("".join(json.dumps(r) + "\n" for r in [
+            {"label": "sampled-or", "client": "openrouter", "temperature": 0.1, "exit_code": 0,
+             "seconds": 60, "measured_spend_usd": 1.00},
+            {"label": "gpt-oss-120b-or", "client": "openrouter", "temperature": 0.1,
+             "exit_code": 0, "seconds": 60, "measured_spend_usd": 0.50,
+             "provenance": "reconstructed"},
+        ]))
+        monkeypatch.setattr(run_log, "LEDGER", p)
+        table = run_log.spend_table(0.1)
+        assert "$0.5000 †" in table
+        assert "$1.0000 †" not in table, "a sampled row must NOT be daggered"
+        assert "recorded by the operator rather than sampled" in table
+        assert "**$1.50**" in table, "a reconstructed row still counts toward the total"
+
+    def test_no_dagger_and_no_footnote_when_every_row_is_sampled(self, tmp_path, monkeypatch):
+        p = tmp_path / "run_ledger.jsonl"
+        p.write_text(json.dumps({"label": "a", "client": "openrouter", "temperature": 0.1,
+                                  "exit_code": 0, "seconds": 60,
+                                  "measured_spend_usd": 1.0}) + "\n")
+        monkeypatch.setattr(run_log, "LEDGER", p)
+        table = run_log.spend_table(0.1)
+        assert "†" not in table
