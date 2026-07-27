@@ -18,12 +18,28 @@ Functions: load_leaf(), wobble_pct(), per_class(), definitions(), render_leaf(),
 Imports: json, re, importlib.util, pathlib
 """
 
+import argparse
 import json
 import re
+import sys
 import importlib.util
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(ROOT / "engine"))
+
+import aggregate as ag   # noqa: E402
+import coverage          # noqa: E402
+
+# Which temperature ARM this render reads. None = the LEGACY published 0.7 arm, whose artifacts
+# keep their original unsuffixed names. Set once by main(); every disk read goes through
+# _scored_name() so a half-converted renderer cannot mix two arms into one table.
+ARM = None
+
+
+def _scored_name():
+    return coverage.scored_filename(ARM)
 
 # Per-leaf DISPLAY config only — field + class enum are read from the leaf's task.TASK.
 LEAVES = [
@@ -284,7 +300,7 @@ def load_leaf(slug):
     spec.loader.exec_module(mod)
     field = list(mod.TASK["fields"])[0]
     classes = mod.TASK["fields"][field].get("values")
-    scored = json.loads((leaf / "scored.json").read_text())
+    scored = json.loads((leaf / _scored_name()).read_text())
     oracle = [json.loads(l) for l in open(leaf / "oracle.jsonl") if l.strip()]
     return field, classes, scored, oracle
 
@@ -327,8 +343,20 @@ def per_class(per_instance, oracle, field, classes):
     return out
 
 
+def _arm_temp():
+    """The temperature to PRINT. Never a literal: a table that says 0.7 while rendering the 0.1
+    arm is a caption lying about its own data, and captions are what a reader trusts."""
+    return 0.7 if ARM is None else ARM
+
+
 def _models(scored):
-    return [k for k in ORDER if k in scored] + [k for k in scored if k not in ORDER]
+    """Lineup members present in this cell, in display order. The trailing 'everything else'
+    used to append every key found on disk -- which now includes 43 fine-tune lab labels written
+    into the same scored.json files, putting training experiments in the published per-leaf
+    tables. Restricted to the declared lineup (see aggregate.CANONICAL_LINEUP)."""
+    lineup = set(ag.canonical_lineup())
+    present = [k for k in scored if k in lineup]
+    return [k for k in ORDER if k in present] + [k for k in present if k not in ORDER]
 
 
 def _runs_each(scored):
@@ -430,7 +458,7 @@ def render_leaf(cfg):
         bal = f"values range {min(vals)}-{max(vals)}" if vals else "n/a"
     L = [f"## {cfg['title']}\n"]
     L.append(f"**Corpus:** {total} {cfg['corpus_desc']}, human-validated answers ({bal}). "
-             f"Each model run **{_runs_each(scored)}×/item at temp 0.7**.\n")
+             f"Each model run **{_runs_each(scored)}×/item at temp {_arm_temp()}**.\n")
     L.append("### Headline — WOBBLE (the core metric)\n")
     L.append("*Wobble = % of items where the model gave more than one answer across its runs. "
              "A model that wobbles cannot be trusted in a money workflow even when it is often right.*\n")
@@ -478,177 +506,74 @@ def readme_block_for(cfg):
 
 
 def _present_leaves():
-    return [c for c in LEAVES if (ROOT / "leaves" / c["slug"] / "scored.json").exists()]
+    return [c for c in LEAVES if (ROOT / "leaves" / c["slug"] / _scored_name()).exists()]
 
 
 
-FAMILY_DISPLAY = {
-    "priced_equity": "Priced equity rounds",
-    "convertibles": "SAFEs & convertible notes",
-    "cap_table": "Cap table math",
-    "exit_waterfall": "Exit waterfalls",
-    "rights_governance": "Investor rights & governance",
-    "founder_equity": "Founder & employee vesting",
-    "regulatory": "Regulatory disclosures",
-    "risk_flag": "Off-market risk flags",
-}
-
-MODEL_DISPLAY = {
-    "gemma3-1b": ("gemma3:1b", "1B, local"),
-    "gemma3-1b-qat": ("gemma3:1b-it-qat", "1B QAT, local"),
-    "qwen3.5-27b": ("qwen3.5:27b", "27B, local"),
-    "deepseek-v4f": ("deepseek-v4-flash", "hosted"),
-    # OpenRouter lineup added 2026-07-02 -- hosted, no local heat/time limit (Eikiyo: "not
-    # limited by laptop anymore"). Label is the guard/checkpoint label from
-    # engine/runner.openrouter_model_set(), not the raw OpenRouter model id.
-    "gemma4-31b-or": ("gemma-4-31b-it", "31B, hosted (OR)"),
-    "mistral-large-or": ("mistral-large-2512", "hosted (OR)"),
-    "minimax-m2.5-or": ("minimax-m2.5", "hosted (OR)"),
-    "llama3.3-70b-or": ("llama-3.3-70b", "70B, hosted (OR)"),
-    "gemini3-flash-or": ("gemini-3-flash", "hosted (OR)"),
-    "gpt-oss-120b-or": ("gpt-oss-120b", "120B, hosted (OR)"),
-    "gpt5-mini-or": ("gpt-5-mini", "hosted (OR)"),
-    "haiku-4.5-direct": ("claude-haiku-4.5", "direct API"),
-}
-
-
-def badge(pct, lower_is_better):
-    """A colored shields.io pill for a percentage -- green/yellow/red by threshold."""
-    if pct is None:
-        return "—"
-    if lower_is_better:
-        color = "brightgreen" if pct < 10 else "yellow" if pct < 30 else "red"
-    else:
-        color = "brightgreen" if pct > 85 else "yellow" if pct > 60 else "red"
-    label = f"{pct:.0f}%25"
-    return f"![{pct:.0f}%](https://img.shields.io/badge/-{label}-{color})"
+# Display maps, the badge helper and the two aggregate tables now live in results/summary.py --
+# extracted 2026-07-27 because this file was 695 LOC against a 300 budget AND held a second copy
+# of the display maps that results/compare.py also defined. Re-exported here so existing callers
+# (and tests) that import them from render keep working.
+from summary import (FAMILY_DISPLAY, MODEL_DISPLAY, badge,          # noqa: E402,F401
+                     display_name, display_size)
+import summary                                                       # noqa: E402
 
 
 def aggregate_by_model():
-    """N-weighted wobble + accuracy per model, across every built leaf that has a scored.json."""
-    reg = json.loads((ROOT / "engine" / "registry.json").read_text())
-    built = [l for l in reg["leaves"] if l.get("tier") == "built" and "leaf" in l]
-    wobble_num, wobble_den = {}, {}
-    acc_num, acc_den = {}, {}
-    leaf_count = {}
-    for l in built:
-        sp = ROOT / l["leaf"] / "scored.json"
-        if not sp.exists():
-            continue
-        scored = json.loads(sp.read_text())
-        field = l["field"]
-        for model, res in scored.items():
-            rel, acc = res.get("reliability", {}), res.get("accuracy", {})
-            n_inst = acc.get("n_instances", 0)
-            n_meas = acc.get("n_measurable", 0)
-            flip = rel.get("field_flips", {}).get(field)
-            if flip is None or not rel.get("measurable", True) or not n_inst:
-                continue
-            wobble_num[model] = wobble_num.get(model, 0) + flip * n_inst
-            wobble_den[model] = wobble_den.get(model, 0) + n_inst
-            if n_meas:
-                acc_num[model] = acc_num.get(model, 0) + acc.get("accuracy_majority", 0) * n_meas
-                acc_den[model] = acc_den.get(model, 0) + n_meas
-            leaf_count[model] = leaf_count.get(model, 0) + 1
-    # A model with a handful of leaves is a one-off smoke test, not a suite measurement --
-    # excluded so a stray spot-check never pollutes the headline table.
-    MIN_LEAVES_FOR_SUITE_TABLE = 10
-    out = []
-    for model in sorted(wobble_den, key=lambda m: -leaf_count[m]):
-        if leaf_count[model] < MIN_LEAVES_FOR_SUITE_TABLE:
-            continue
-        w = 100 * wobble_num[model] / wobble_den[model] if wobble_den[model] else None
-        a = 100 * acc_num[model] / acc_den[model] if acc_den.get(model) else None
-        out.append({"model": model, "leaves": leaf_count[model], "wobble": w, "accuracy": a,
-                    "n_items": int(wobble_den[model])})
-    return out
+    return summary.aggregate_by_model(ARM)
 
 
 def aggregate_by_family():
-    """N-weighted wobble + accuracy per registry family, averaged ACROSS EVERY MODEL in the
-    current lineup -- not pinned to one model. Was pinned to deepseek-v4f until 2026-07-03
-    because it was the only model with full 60/60 coverage at the time; now all 11 models in
-    MODEL_DISPLAY hit full coverage, so picking one model would hide how every other model
-    performs per category (Eikiyo: "why cant this be average of all models?"). "leaves" counts
-    DISTINCT test leaves that contributed at least one model's measurable result, not
-    leaf*model combinations -- so the Tests column still reads as "how many of the 60 tests are
-    in this category," unchanged in meaning from the single-model version."""
-    reg = json.loads((ROOT / "engine" / "registry.json").read_text())
-    built = [l for l in reg["leaves"] if l.get("tier") == "built" and "leaf" in l]
-    wobble_num, wobble_den = {}, {}
-    acc_num, acc_den = {}, {}
-    leaf_ids = {}
-    for l in built:
-        sp = ROOT / l["leaf"] / "scored.json"
-        if not sp.exists():
-            continue
-        scored = json.loads(sp.read_text())
-        field, fam = l["field"], l["family"]
-        counted = False
-        for model_label, res in scored.items():
-            rel, acc = res.get("reliability", {}), res.get("accuracy", {})
-            n_inst = acc.get("n_instances", 0)
-            n_meas = acc.get("n_measurable", 0)
-            flip = rel.get("field_flips", {}).get(field)
-            if flip is None or not rel.get("measurable", True) or not n_inst:
-                continue
-            wobble_num[fam] = wobble_num.get(fam, 0) + flip * n_inst
-            wobble_den[fam] = wobble_den.get(fam, 0) + n_inst
-            if n_meas:
-                acc_num[fam] = acc_num.get(fam, 0) + acc.get("accuracy_majority", 0) * n_meas
-                acc_den[fam] = acc_den.get(fam, 0) + n_meas
-            counted = True
-        if counted:
-            leaf_ids.setdefault(fam, set()).add(l["leaf"])
-    out = []
-    for fam in sorted(wobble_den, key=lambda f: -len(leaf_ids[f])):
-        w = 100 * wobble_num[fam] / wobble_den[fam] if wobble_den[fam] else None
-        a = 100 * acc_num[fam] / acc_den[fam] if acc_den.get(fam) else None
-        out.append({"family": fam, "leaves": len(leaf_ids[fam]), "wobble": w, "accuracy": a})
-    return out
+    return summary.aggregate_by_family(ARM)
 
 
 def suite_summary_table():
-    """THE headline table: does wobble fall as model capability rises?"""
-    rows = aggregate_by_model()
-    lines = ["| Model | Size | Tests covered | **Wobble** ↓ | Accuracy |",
-             "|---|---|---|---|---|"]
-    for r in rows:
-        name, size = MODEL_DISPLAY.get(r["model"], (r["model"], "?"))
-        lines.append(f"| `{name}` | {size} | {r['leaves']} | {badge(r['wobble'], True)} | "
-                      f"{badge(r['accuracy'], False)} |")
-    return "\n".join(lines)
+    return summary.suite_summary_table(ARM)
 
 
 def family_summary_table():
-    """One row per fundraising-document category, N-weighted average ACROSS EVERY MODEL in the
-    lineup (see aggregate_by_family() docstring for why this isn't pinned to one model)."""
-    rows = aggregate_by_family()
-    lines = ["| Category | Tests | **Wobble** ↓ (all models) | Accuracy (all models) |",
-             "|---|---|---|---|"]
-    for r in rows:
-        label = FAMILY_DISPLAY.get(r["family"], r["family"])
-        lines.append(f"| {label} | {r['leaves']} | {badge(r['wobble'], True)} | "
-                      f"{badge(r['accuracy'], False)} |")
-    return "\n".join(lines)
+    return summary.family_summary_table(ARM)
 
 
 def main():
+    global ARM
+    p = argparse.ArgumentParser(description="render RESULTS.md + the README summary for one arm")
+    p.add_argument("--temperature", type=float, default=None,
+                    help="omit for the LEGACY published 0.7 arm (unsuffixed artifacts)")
+    p.add_argument("--out", default=None, help="override the RESULTS path")
+    args = p.parse_args()
+    ARM = args.temperature
+
     present = _present_leaves()
+    if not present:
+        # Fail closed: rendering an empty arm would write a valid-looking RESULTS file with no
+        # rows, which reads as "measured, found nothing" instead of "never ran".
+        raise SystemExit(f"no leaf has a {_scored_name()} -- arm {_arm_temp()} has not been run")
+    n_models = len(aggregate_by_model())
     header = ("# Probity — Benchmark Results\n\n"
               "**Wobble** = run-to-run inconsistency (the core metric): ask the same question 20× at "
-              "temperature 0.7 and count how often the answer changes. **Accuracy** = % correct vs a "
+              f"temperature {_arm_temp()} and count how often the answer changes. **Accuracy** = % correct vs a "
               "human-validated answer extracted from the source document. They are reported separately "
               "and never averaged — a model can be perfectly consistent and consistently wrong.\n\n"
-              "Models span a size ladder (1B → 12B local + a hosted model) to test whether wobble "
-              "falls as capability rises. Local via Ollama (zero egress); hosted = deepseek-v4-flash.\n\n---\n\n")
+              f"{n_models} models span a size ladder (1B local → hosted frontier) to test whether "
+              "wobble falls as capability rises. Local via Ollama (zero egress); hosted via "
+              "OpenRouter and direct provider APIs.\n\n---\n\n")
     body = "\n\n---\n\n".join(render_leaf(c) for c in present)
-    (ROOT / "results" / "RESULTS.md").write_text(header + body + REPRO + "\n", encoding="utf-8")
-    print(f"wrote results/RESULTS.md ({len(present)} leaves)")
+    default_out = "RESULTS.md" if ARM is None else f"RESULTS_{coverage.arm_tag(ARM).upper()}.md"
+    out = Path(args.out) if args.out else ROOT / "results" / default_out
+    out.write_text(header + body + REPRO + "\n", encoding="utf-8")
+    print(f"wrote {out.relative_to(ROOT)} ({len(present)} leaves, {n_models} models)")
 
-    cap = (f"*{len(present)} tests, each item run 20x/item at temp 0.7 across a model size ladder. "
-           "**Wobble** (lower = better) is the run-to-run inconsistency rate, weighted by item "
-           "count across every test that model ran. Full per-test breakdown (all "
+    # The README carries the PUBLISHED arm only. Injecting a second arm's numbers into the same
+    # block would overwrite the baseline half of the comparison with the new half, in a file whose
+    # markers give no hint which arm is showing -- the paired report (results/compare.py) is where
+    # the 0.1 arm belongs.
+    if ARM is not None:
+        print(f"arm {_arm_temp()}: README NOT touched (it carries the published 0.7 arm)")
+        return
+    cap = (f"*{len(present)} tests, each item run 20x/item at temp {_arm_temp()} across a model size "
+           "ladder. **Wobble** (lower = better) is the run-to-run inconsistency rate, weighted by "
+           "item count across every test that model ran. Full per-test breakdown (all "
            f"{len(present)} tables): [`results/RESULTS.md`](results/RESULTS.md).*\n")
     block = ("<!-- BENCHMARK:START -->\n" + cap +
              "\n### Does reliability improve with model size?\n\n" + suite_summary_table() +
@@ -658,27 +583,20 @@ def main():
     txt = re.sub(r"<!-- BENCHMARK:START.*?-->.*?<!-- BENCHMARK:END -->", lambda m: block,
                  readme.read_text(), flags=re.S)
     readme.write_text(txt, encoding="utf-8")
-    print(f"injected 2 summary tables (suite + by-category) into README.md")
+    print("injected 2 summary tables (suite + by-category) into README.md")
 
 
 REPRO = """
 
 ---
 
-## Models and scope
-
-Per leaf during the build-out, Probity runs the **fast set** (1B/3B/12B local via Ollama, zero
-egress, plus deepseek-v4-flash) so a leaf costs minutes. The **heavy comprehensive run**
-(qwen3.5:27b and hosted frontier models - Gemini, Haiku, etc. - at N=20+) is deferred to a single
-sweep across all leaves once the full benchmark exists.
-
 ## Reproduce
 
 ```bash
 cd leaves/<test_name>
-python3 source.py          # fetch the real SEC documents
-python3 run.py             # run the model ladder, N=20
-python3 ../../results/render.py
+python3 source.py                                   # fetch the real SEC documents
+python3 ../../engine/run_hosted_sweep.py --label <model> --model <id> --temperature 0.1
+python3 ../../results/render.py --temperature 0.1
 ```
 
 Answers are human-validated from each document's own legal text (`leaves/<test>/oracle.jsonl`, with

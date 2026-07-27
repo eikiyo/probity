@@ -86,14 +86,14 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 | Model | Size | Tests covered | **Wobble** ↓ | Accuracy |
 |---|---|---|---|---|
 | `gemma3:1b` | 1B, local | 60 | ![42%](https://img.shields.io/badge/-42%25-red) | ![58%](https://img.shields.io/badge/-58%25-red) |
-| `deepseek-v4-flash` | hosted | 60 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
+| `deepseek-v4-flash` | hosted, direct | 60 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
 | `gemma-4-31b-it` | 31B, hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
 | `mistral-large-2512` | hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
 | `minimax-m2.5` | hosted (OR) | 60 | ![7%](https://img.shields.io/badge/-7%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
 | `llama-3.3-70b` | 70B, hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
 | `gemma3:1b-it-qat` | 1B QAT, local | 60 | ![34%](https://img.shields.io/badge/-34%25-red) | ![61%](https://img.shields.io/badge/-61%25-yellow) |
 | `gemini-3-flash` | hosted (OR) | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
-| `claude-haiku-4.5` | direct API | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
+| `claude-haiku-4.5` | hosted, direct API | 60 | ![3%](https://img.shields.io/badge/-3%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
 | `gpt-oss-120b` | 120B, hosted (OR) | 60 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
 | `gpt-5-mini` | hosted (OR) | 60 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![94%](https://img.shields.io/badge/-94%25-brightgreen) |
 
@@ -102,7 +102,7 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 | Category | Tests | **Wobble** ↓ (all models) | Accuracy (all models) |
 |---|---|---|---|
 | Priced equity rounds | 16 | ![10%](https://img.shields.io/badge/-10%25-brightgreen) | ![85%](https://img.shields.io/badge/-85%25-brightgreen) |
-| SAFEs & convertible notes | 12 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
+| SAFEs & convertible notes | 12 | ![7%](https://img.shields.io/badge/-7%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
 | Cap table math | 7 | ![22%](https://img.shields.io/badge/-22%25-yellow) | ![80%](https://img.shields.io/badge/-80%25-yellow) |
 | Investor rights & governance | 7 | ![10%](https://img.shields.io/badge/-10%25-brightgreen) | ![88%](https://img.shields.io/badge/-88%25-brightgreen) |
 | Founder & employee vesting | 5 | ![8%](https://img.shields.io/badge/-8%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |

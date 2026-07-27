@@ -2,7 +2,7 @@
 
 **Wobble** = run-to-run inconsistency (the core metric): ask the same question 20× at temperature 0.7 and count how often the answer changes. **Accuracy** = % correct vs a human-validated answer extracted from the source document. They are reported separately and never averaged — a model can be perfectly consistent and consistently wrong.
 
-Models span a size ladder (1B → 12B local + a hosted model) to test whether wobble falls as capability rises. Local via Ollama (zero egress); hosted = deepseek-v4-flash.
+11 models span a size ladder (1B local → hosted frontier) to test whether wobble falls as capability rises. Local via Ollama (zero egress); hosted via OpenRouter and direct provider APIs.
 
 ---
 
@@ -3255,20 +3255,13 @@ Models span a size ladder (1B → 12B local + a hosted model) to test whether wo
 
 ---
 
-## Models and scope
-
-Per leaf during the build-out, Probity runs the **fast set** (1B/3B/12B local via Ollama, zero
-egress, plus deepseek-v4-flash) so a leaf costs minutes. The **heavy comprehensive run**
-(qwen3.5:27b and hosted frontier models - Gemini, Haiku, etc. - at N=20+) is deferred to a single
-sweep across all leaves once the full benchmark exists.
-
 ## Reproduce
 
 ```bash
 cd leaves/<test_name>
-python3 source.py          # fetch the real SEC documents
-python3 run.py             # run the model ladder, N=20
-python3 ../../results/render.py
+python3 source.py                                   # fetch the real SEC documents
+python3 ../../engine/run_hosted_sweep.py --label <model> --model <id> --temperature 0.1
+python3 ../../results/render.py --temperature 0.1
 ```
 
 Answers are human-validated from each document's own legal text (`leaves/<test>/oracle.jsonl`, with

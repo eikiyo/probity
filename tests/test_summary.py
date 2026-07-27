@@ -1,0 +1,126 @@
+"""
+Location: tests/test_summary.py
+Purpose: Pin results/summary.py and render.py's lineup filter against the committed 0.7 arm. The
+         load-bearing checks are: (1) the published README numbers are reproduced exactly, so the
+         extraction out of render.py changed no result; (2) the table is 11 rows and can never
+         again become 29 by admitting fine-tune lab labels; (3) an UNMEASURED rate renders as an
+         em-dash, never as a confident 0%; and (4) an arm that was never run yields nothing rather
+         than zeros.
+Functions: TestReproducesPublishedReadme, TestLineupFilterIsLive, TestBadgeAndRateSadPaths,
+           TestArmIsolation, TestDisplayMapsAreShared
+Imports: json, sys, pytest, pathlib, summary, render, compare
+"""
+
+import json
+import sys
+from pathlib import Path
+
+import pytest
+
+ROOT = Path(__file__).parent.parent
+sys.path.insert(0, str(ROOT / "results"))
+sys.path.insert(0, str(ROOT / "engine"))
+
+import summary  # noqa: E402
+
+
+class TestReproducesPublishedReadme:
+    """Ground truth: the two tables committed in README.md for the 0.7 arm. If the extraction out
+    of render.py had changed any reduction, these would move."""
+
+    PUBLISHED_WOBBLE = {
+        "gemma3-1b": 42, "deepseek-v4f": 6, "gemma4-31b-or": 3, "mistral-large-or": 3,
+        "minimax-m2.5-or": 7, "llama3.3-70b-or": 3, "gemma3-1b-qat": 34,
+        "gemini3-flash-or": 3, "haiku-4.5-direct": 3, "gpt-oss-120b-or": 6, "gpt5-mini-or": 6,
+    }
+    PUBLISHED_ACCURACY = {
+        "gemma3-1b": 58, "deepseek-v4f": 95, "gemma4-31b-or": 94, "mistral-large-or": 93,
+        "minimax-m2.5-or": 94, "llama3.3-70b-or": 93, "gemma3-1b-qat": 61,
+        "gemini3-flash-or": 94, "haiku-4.5-direct": 93, "gpt-oss-120b-or": 94, "gpt5-mini-or": 94,
+    }
+
+    def test_every_published_wobble_and_accuracy_is_reproduced(self):
+        rows = {r["model"]: r for r in summary.aggregate_by_model(None)}
+        assert set(rows) == set(self.PUBLISHED_WOBBLE)
+        for label, w in self.PUBLISHED_WOBBLE.items():
+            assert round(rows[label]["wobble"]) == w, f"{label} wobble"
+            assert round(rows[label]["accuracy"]) == self.PUBLISHED_ACCURACY[label], \
+                f"{label} accuracy"
+
+    def test_every_model_covers_all_sixty_leaves(self):
+        for r in summary.aggregate_by_model(None):
+            assert r["leaves"] == 60, f"{r['model']} covers {r['leaves']} leaves"
+
+    def test_rows_are_in_declared_lineup_order_not_dict_order(self):
+        """Dict-insertion order is whatever the scorer happened to write. A published table's row
+        order is an editorial decision and must come from the declared lineup."""
+        import aggregate as ag
+        got = [r["model"] for r in summary.aggregate_by_model(None)]
+        assert got == [m for m in ag.canonical_lineup() if m in set(got)]
+
+
+class TestLineupFilterIsLive:
+    """A filter that removes nothing is indistinguishable from no filter. These prove it FIRES --
+    the positive control for the '29-row table' regression."""
+
+    def test_finetune_labels_exist_on_disk_and_are_excluded(self):
+        import render
+        scored = json.loads((ROOT / "leaves" / "drag_along" / "scored.json").read_text())
+        kept = render._models(scored)
+        assert len(scored) > 40, "fixture must contain the fine-tune labels for this to mean anything"
+        assert len(kept) == 11
+        assert set(kept) <= set(scored)
+        excluded = set(scored) - set(kept)
+        assert {"tuned-v4", "mlx-base-n20"} <= excluded
+
+    def test_suite_table_has_exactly_eleven_data_rows(self):
+        body = summary.suite_summary_table(None).splitlines()[2:]   # drop header + separator
+        assert len(body) == 11
+
+
+class TestBadgeAndRateSadPaths:
+    def test_unmeasured_renders_as_em_dash_not_zero_percent(self):
+        """A 0% wobble badge from NO data is a confident lie in the safest-looking direction --
+        exactly the failure this benchmark exists to measure in models."""
+        assert summary.badge(None, True) == "—"
+        assert summary.badge(None, False) == "—"
+        assert "0%25" not in summary.badge(None, True)
+
+    def test_rate_of_empty_denominator_is_none_not_zero(self):
+        assert summary._rate(0, 0) is None
+        assert summary._rate(3, 0) is None
+        assert summary._rate(0, 10) == 0.0        # a real measured zero IS zero
+
+    @pytest.mark.parametrize("pct,lower,color", [
+        (3, True, "brightgreen"), (22, True, "yellow"), (42, True, "red"),
+        (95, False, "brightgreen"), (61, False, "yellow"), (58, False, "red"),
+    ])
+    def test_badge_colors_match_the_published_thresholds(self, pct, lower, color):
+        assert color in summary.badge(pct, lower)
+
+    def test_unknown_label_falls_back_to_the_label_itself(self):
+        assert summary.display_name("brand-new-model") == "brand-new-model"
+        assert summary.display_size("brand-new-model") == "?"
+
+
+class TestArmIsolation:
+    def test_an_unrun_arm_produces_no_rows_rather_than_zeros(self):
+        assert summary.aggregate_by_model(0.42) == []
+        assert summary.aggregate_by_family(0.42) == []
+
+    def test_an_unrun_arm_table_has_a_header_and_no_data_rows(self):
+        assert len(summary.suite_summary_table(0.42).splitlines()) == 2
+
+
+class TestDisplayMapsAreShared:
+    def test_compare_and_render_resolve_a_name_identically(self):
+        """The whole point of the extraction: two reports cannot call one model by two names."""
+        import compare
+        import render
+        for label in summary.MODEL_DISPLAY:
+            assert compare._name(label) == render.display_name(label) == summary.display_name(label)
+
+    def test_every_lineup_member_has_a_display_entry(self):
+        import aggregate as ag
+        missing = [m for m in ag.canonical_lineup() if m not in summary.MODEL_DISPLAY]
+        assert not missing, f"lineup members with no display name: {missing}"
