@@ -1,0 +1,14 @@
+{
+ "leaf": "cliff_present",
+ "model": "gpt-oss-120b-or",
+ "task_name": "cliff_present",
+ "data_version": "16ed641159672a3c9860bdac696a28e57f3d94c4ecf80c73ff99e3568dd38d17",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:24:44.800818+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

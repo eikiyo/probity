@@ -88,31 +88,41 @@ class TestSelfPairingIsANullResult:
 
 
 class TestDroppedPairsAreDisclosed:
-    def test_the_guard_truncated_items_are_counted_and_stated_in_the_table(self):
-        """16 haiku + 4 gemini items have no valid runs in the 0.7 arm. They must be excluded from
-        BOTH arms of a pair and the exclusion must appear in the output -- a silently shrinking
-        denominator is exactly how a self-referential coverage number gets built."""
+    def test_unmeasurable_items_are_counted_and_stated_in_the_table(self):
+        """The 16 haiku + 4 gemini items lost to guard TRUNCATION were backfilled 2026-07-27.
+        What remains dropped are items whose every one of 20 runs was unparseable. Those must
+        still be excluded from BOTH arms of a pair and disclosed in the output -- a silently
+        shrinking denominator is how a self-referential coverage number gets built."""
         rows = {r["label"]: r for r in compare.paired_rows(None, None)}
-        assert rows["haiku-4.5-direct"]["dropped"] == 16
-        assert rows["haiku-4.5-direct"]["n_pairs"] == 454
-        assert rows["gemini3-flash-or"]["dropped"] == 4
+        assert rows["haiku-4.5-direct"]["dropped"] == 2
+        assert rows["haiku-4.5-direct"]["n_pairs"] == 468
+        assert rows["gemini3-flash-or"]["dropped"] == 1
         assert rows["mistral-large-or"]["dropped"] == 0
         table = compare.paired_table(None, None)
         assert "item-pairs excluded" in table
 
-    def test_a_model_with_no_holes_uses_the_full_item_set(self):
+    def test_a_model_that_answered_everything_uses_the_full_item_set(self):
         rows = {r["label"]: r for r in compare.paired_rows(None, None)}
         assert rows["mistral-large-or"]["n_pairs"] == 470
 
 
 class TestCoverageSectionReportsHoles:
-    def test_the_legacy_arm_matrix_shows_its_five_short_cells_in_bold(self):
+    def test_the_legacy_arm_matrix_is_complete_after_the_backfill(self):
+        """Was: 'shows its five short cells in bold'. Those five were backfilled 2026-07-27. The
+        BOLD-a-hole rendering is still pinned directly by test_render_matrix_bolds_a_short_cell
+        on a synthetic matrix, so losing this instance does not lose the capability."""
         text, matrix = compare.coverage_section(None)
         holes = [c for c in matrix if not c["complete"]]
         assert len(matrix) == 660, "60 leaves x 11 models"
-        assert len(holes) == 5
-        assert "**199/320**" in text          # safe_pre_post / haiku, rendered as a visible hole
-        assert "655/660 cells complete" in text
+        assert holes == []
+        assert "660/660 cells complete" in text
+
+    def test_render_matrix_bolds_a_short_cell(self):
+        """The capability the test above used to cover, on synthetic data that cannot rot."""
+        import coverage as cov
+        matrix = [{"leaf": "l1", "label": "m", "expected": 320, "recorded": 199,
+                   "complete": False, "short_by": 121}]
+        assert "**199/320**" in cov.render_matrix(matrix, ["m"])
 
     def test_a_complete_cell_is_not_rendered_as_a_bare_tick(self):
         """A tick cannot be distinguished from a tick-that-was-never-checked. Print the count."""

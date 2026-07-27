@@ -1,0 +1,14 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "gpt-oss-120b-or",
+ "task_name": "vesting_acceleration",
+ "data_version": "08b48a336a18dab3856af96ebf9e4b63caad35613ee9361dceec83f22297dae1",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:49:02.506675+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

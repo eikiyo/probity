@@ -1,0 +1,10 @@
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "1456554_000145655410000002", "parsed": {"form_d_field_value": "23665320.00"}, "normalized": {"form_d_field_value": 23665320.0}}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "1456554_000145655410000002", "parsed": {"form_d_field_value": "2366532"}, "normalized": {"form_d_field_value": 2366532.0}}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "1456554_000145655410000002", "parsed": {"form_d_field_value": "2366532"}, "normalized": {"form_d_field_value": 2366532.0}}
+{"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "1456554_000145655410000002", "parsed": {"form_d_field_value": "2366532.00"}, "normalized": {"form_d_field_value": 2366532.0}}
+{"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "item_id": "1456554_000145655410000002", "raw_output": "{\"form_d_field_value\": \"2366532.00", "parsed": null}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "1549044_000154904412000001", "parsed": {"form_d_field_value": "70227931.85"}, "normalized": {"form_d_field_value": 70227931.85}}
+{"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "1549044_000154904412000001", "parsed": {"form_d_field_value": "70227931.85"}, "normalized": {"form_d_field_value": 70227931.85}}
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "1549044_000154904412000001", "parsed": {"form_d_field_value": "70227931.85"}, "normalized": {"form_d_field_value": 70227931.85}}
+{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "item_id": "1549044_000154904412000001", "raw_output": "{\"form_d_field_value\": \"10,227,931.859154411455984852361958689", "parsed": null}
+{"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "item_id": "1549044_000154904412000001", "raw_output": "{\"form_d_field_value\": \"70227931.85", "parsed": null}

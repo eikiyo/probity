@@ -1,0 +1,80 @@
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro_rata\": false", "parsed": null}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "xcyte_waiver", "raw_output": "676", "parsed": null}
+{"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "xcyte_waiver", "raw_output": "10.8", "parsed": null}
+{"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "item_id": "xcyte_waiver", "raw_output": "```json\n{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [0, 5], "instance_idx": 0, "run_idx": 5, "item_id": "xcyte_waiver", "raw_output": "{flag_missing_pro_rata\": false", "parsed": null}
+{"_key": [0, 6], "instance_idx": 0, "run_idx": 6, "item_id": "xcyte_waiver", "raw_output": "10.8", "parsed": null}
+{"_key": [0, 7], "instance_idx": 0, "run_idx": 7, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [0, 8], "instance_idx": 0, "run_idx": 8, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [0, 10], "instance_idx": 0, "run_idx": 10, "item_id": "xcyte_waiver", "raw_output": "```json\n{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [0, 11], "instance_idx": 0, "run_idx": 11, "item_id": "xcyte_waiver", "raw_output": "0000", "parsed": null}
+{"_key": [0, 12], "instance_idx": 0, "run_idx": 12, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [0, 13], "instance_idx": 0, "run_idx": 13, "item_id": "xcyte_waiver", "raw_output": "10.8", "parsed": null}
+{"_key": [0, 14], "instance_idx": 0, "run_idx": 14, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro-rata\": false", "parsed": null}
+{"_key": [0, 15], "instance_idx": 0, "run_idx": 15, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro_rata\": false", "parsed": null}
+{"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [0, 18], "instance_idx": 0, "run_idx": 18, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro-rata\": false", "parsed": null}
+{"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "item_id": "xcyte_waiver", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "rapid7_waiver", "raw_output": "6.14 Waiver of Right to Future Stock Issuances", "parsed": null}
+{"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "rapid7_waiver", "raw_output": "{\"flag_missing_pro_rata\": false", "parsed": null}
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "rapid7_waiver", "raw_output": "6.13 Acknowledgment", "parsed": null}
+{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "item_id": "rapid7_waiver", "raw_output": "6.13 Acknowledgment", "parsed": null}
+{"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "item_id": "rapid7_waiver", "raw_output": "6.14.2.145b.53", "parsed": null}
+{"_key": [1, 5], "instance_idx": 1, "run_idx": 5, "item_id": "rapid7_waiver", "raw_output": "6.13. Acknowledgment", "parsed": null}
+{"_key": [1, 6], "instance_idx": 1, "run_idx": 6, "item_id": "rapid7_waiver", "raw_output": "6.13 Acknowledgment", "parsed": null}
+{"_key": [1, 7], "instance_idx": 1, "run_idx": 7, "item_id": "rapid7_waiver", "raw_output": "6.13 Acknowledgment", "parsed": null}
+{"_key": [1, 8], "instance_idx": 1, "run_idx": 8, "item_id": "rapid7_waiver", "raw_output": "6.14 Waiver of Right to Future Stock Issuances", "parsed": null}
+{"_key": [1, 9], "instance_idx": 1, "run_idx": 9, "item_id": "rapid7_waiver", "raw_output": "6.13 Acknowledgment", "parsed": null}
+{"_key": [1, 10], "instance_idx": 1, "run_idx": 10, "item_id": "rapid7_waiver", "raw_output": "6.13 Acknowledgment", "parsed": null}
+{"_key": [1, 11], "instance_idx": 1, "run_idx": 11, "item_id": "rapid7_waiver", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [1, 12], "instance_idx": 1, "run_idx": 12, "item_id": "rapid7_waiver", "raw_output": "6.12 Delays or O omissions", "parsed": null}
+{"_key": [1, 13], "instance_idx": 1, "run_idx": 13, "item_id": "rapid7_waiver", "raw_output": "6.13 Acknowledgment 27 6.14 Waiver of right to future stock issuance", "parsed": null}
+{"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "item_id": "rapid7_waiver", "raw_output": "6.13", "parsed": null}
+{"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "item_id": "rapid7_waiver", "raw_output": "6.13 Acknowledgment", "parsed": null}
+{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "item_id": "rapid7_waiver", "raw_output": "6.13 Acknowledgment", "parsed": null}
+{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "item_id": "rapid7_waiver", "raw_output": "6.12 Delays or Omissions", "parsed": null}
+{"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "item_id": "rapid7_waiver", "raw_output": "6.14 Waiver of Right to future stock issuances", "parsed": null}
+{"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "item_id": "rapid7_waiver", "raw_output": "6.12420141209.07", "parsed": null}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "greenfield_grant", "raw_output": "100000000000000000", "parsed": null}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "greenfield_grant", "raw_output": "17.0", "parsed": null}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "greenfield_grant", "raw_output": "```json\n{\"flag_missing_pro_rata\": false", "parsed": null}
+{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "item_id": "greenfield_grant", "raw_output": "110000", "parsed": null}
+{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "item_id": "greenfield_grant", "raw_output": "```json\n{\n0:00", "parsed": null}
+{"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "item_id": "greenfield_grant", "raw_output": "165", "parsed": null}
+{"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "item_id": "greenfield_grant", "raw_output": "{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "item_id": "greenfield_grant", "raw_output": "100000", "parsed": null}
+{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "item_id": "greenfield_grant", "raw_output": "121", "parsed": null}
+{"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "item_id": "greenfield_grant", "raw_output": "{flag_missing_pro_rata\": true}", "parsed": null}
+{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "item_id": "greenfield_grant", "raw_output": "{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "item_id": "greenfield_grant", "raw_output": "```json\n{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [2, 12], "instance_idx": 2, "run_idx": 12, "item_id": "greenfield_grant", "raw_output": "{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [2, 13], "instance_idx": 2, "run_idx": 13, "item_id": "greenfield_grant", "raw_output": "{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [2, 14], "instance_idx": 2, "run_idx": 14, "item_id": "greenfield_grant", "raw_output": "```json\n{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [2, 15], "instance_idx": 2, "run_idx": 15, "item_id": "greenfield_grant", "raw_output": "{\"flag_missing_pro_rata\": false", "parsed": null}
+{"_key": [2, 16], "instance_idx": 2, "run_idx": 16, "item_id": "greenfield_grant", "raw_output": "120000", "parsed": null}
+{"_key": [2, 17], "instance_idx": 2, "run_idx": 17, "item_id": "greenfield_grant", "raw_output": "```json", "parsed": null}
+{"_key": [2, 18], "instance_idx": 2, "run_idx": 18, "item_id": "greenfield_grant", "raw_output": "10000", "parsed": null}
+{"_key": [2, 19], "instance_idx": 2, "run_idx": 19, "item_id": "greenfield_grant", "raw_output": "{flag_missing_pro_rata\": true}", "parsed": null}
+{"_key": [3, 0], "instance_idx": 3, "run_idx": 0, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [3, 1], "instance_idx": 3, "run_idx": 1, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [3, 2], "instance_idx": 3, "run_idx": 2, "item_id": "soshydration_grant", "raw_output": "```json\n{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [3, 3], "instance_idx": 3, "run_idx": 3, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [3, 4], "instance_idx": 3, "run_idx": 4, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [3, 5], "instance_idx": 3, "run_idx": 5, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [3, 6], "instance_idx": 3, "run_idx": 6, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [3, 7], "instance_idx": 3, "run_idx": 7, "item_id": "soshydration_grant", "raw_output": "{flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [3, 8], "instance_idx": 3, "run_idx": 8, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [3, 9], "instance_idx": 3, "run_idx": 9, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [3, 10], "instance_idx": 3, "run_idx": 10, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": false", "parsed": null}
+{"_key": [3, 11], "instance_idx": 3, "run_idx": 11, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [3, 12], "instance_idx": 3, "run_idx": 12, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [3, 13], "instance_idx": 3, "run_idx": 13, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [3, 14], "instance_idx": 3, "run_idx": 14, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro_rata\": false", "parsed": null}
+{"_key": [3, 15], "instance_idx": 3, "run_idx": 15, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [3, 16], "instance_idx": 3, "run_idx": 16, "item_id": "soshydration_grant", "raw_output": "```json\n{\"flag_missing_pro_rata\": true", "parsed": null}
+{"_key": [3, 17], "instance_idx": 3, "run_idx": 17, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\":true", "parsed": null}
+{"_key": [3, 18], "instance_idx": 3, "run_idx": 18, "item_id": "soshydration_grant", "raw_output": "{\"flag_missing_pro-rata\": true", "parsed": null}
+{"_key": [3, 19], "instance_idx": 3, "run_idx": 19, "item_id": "soshydration_grant", "raw_output": "{\\\"flag_missing_pro-rata\": true", "parsed": null}

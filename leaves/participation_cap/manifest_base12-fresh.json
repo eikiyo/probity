@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "base12-fresh",
+ "task_name": "participation_cap",
+ "data_version": "66b1c86d4d1b01789ecaa98c89ecdbcb9e7a428ba1045c0f56271cde1eb2553c",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:09:38.645595+00:00"
+}

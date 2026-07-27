@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "tuned-v4-final",
+ "task_name": "participation_cap",
+ "data_version": "ab7f03c8537e7d95608a918eaf337c26b78d25d0eb8c453725f123f808b6debb",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:59:48.184506+00:00"
+}

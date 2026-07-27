@@ -1,0 +1,14 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "gpt-oss-120b-or",
+ "task_name": "note_maturity_date",
+ "data_version": "aac7bd39018535ed6223fdbf74ed8c467d2622aa081963d6e09078be957bd895",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:34:06.253033+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

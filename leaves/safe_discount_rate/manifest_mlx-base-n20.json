@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "mlx-base-n20",
+ "task_name": "safe_discount_rate",
+ "data_version": "f3b14b19e11138968d17ce623de87c82c3100826d3e5dae3e9380e439f962036",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:39:55.279645+00:00"
+}

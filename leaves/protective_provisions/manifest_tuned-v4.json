@@ -1,0 +1,9 @@
+{
+ "leaf": "protective_provisions",
+ "model": "tuned-v4",
+ "task_name": "protective_provisions",
+ "data_version": "aa9171a721457436566f3be0197396019f0cf78c108dfeb79296f8eb70c9c047",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:02:26.406584+00:00"
+}

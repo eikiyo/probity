@@ -1,0 +1,9 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "tuned-v4-final",
+ "task_name": "per_investor_allocation",
+ "data_version": "a374c4d607c1322c36ee62ceec69eaab916e80a094caf61f3ae59e0b5da73bae",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:01:39.166328+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "v5-r1-iter0050",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "59ba8301d514bcb6eacb102d04348b2fdd9678077f4ff250c3ba4a3b11882bbe",
+ "n_runs": 10,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T19:28:04.366053+00:00"
+}

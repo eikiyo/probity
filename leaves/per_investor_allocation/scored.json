@@ -1024,5 +1024,663 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "tuned-v4": {
+  "model": "tuned-v4",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 3,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": null,
+       "truth": 4000000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": null,
+       "truth": 1650000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "per_investor_allocation": 0.0
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.4,
+   "valid_run_count": 3,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-n20": {
+  "model": "tuned-v4-n20",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.8,
+   "accuracy_strict": 0.8,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 36715.64,
+       "truth": 1650000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "per_investor_allocation": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-final": {
+  "model": "tuned-v4-final",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 2,
+   "accuracy_majority": 0.5,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": null,
+       "truth": 9418200.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": null,
+       "truth": 1650000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": null,
+       "truth": 3000000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 715.64,
+       "truth": 46715.64,
+       "consistency": 0.3333333333333333
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 0.6666666666666666,
+   "consistency_pct": 66.66666666666666,
+   "field_flips": {
+    "per_investor_allocation": 0.2
+   },
+   "parse_failure_count": 94,
+   "parse_failure_rate": 0.94,
+   "valid_run_count": 6,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mlx-base-n20": {
+  "model": "mlx-base-n20",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.8,
+   "accuracy_strict": 0.8,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 36715.64,
+       "truth": 1650000.0,
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 0.9800000000000001,
+   "consistency_pct": 98.00000000000001,
+   "field_flips": {
+    "per_investor_allocation": 0.2
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "1b-base-n5": {
+  "model": "1b-base-n5",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.8,
+   "accuracy_strict": 0.8,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 36715.64,
+       "truth": 1650000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "per_investor_allocation": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "4b-base-n5": {
+  "model": "4b-base-n5",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 9418200.0,
+       "truth": 9418200.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 1650000.0,
+       "truth": 1650000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 3000000.0,
+       "truth": 3000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 46715.64,
+       "truth": 46715.64,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "per_investor_allocation": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-26ba4b-or": {
+  "model": "google/gemma-4-26b-a4b-it",
+  "accuracy": {
+   "task": "per_investor_allocation",
+   "n_instances": 5,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": 4000000.0,
+       "truth": 4000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": null,
+       "truth": 9418200.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": null,
+       "truth": 1650000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": null,
+       "truth": 3000000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "per_investor_allocation": {
+       "majority": null,
+       "truth": 46715.64,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "per_investor_allocation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "per_investor_allocation": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
+  }
  }
 }

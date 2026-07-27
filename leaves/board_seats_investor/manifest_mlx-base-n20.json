@@ -1,0 +1,9 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "mlx-base-n20",
+ "task_name": "board_seats_investor",
+ "data_version": "82dfba95311cb4c66de7b155e3f0bfcb38256c77f832e0fdc547426c6133276e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:19:43.480750+00:00"
+}

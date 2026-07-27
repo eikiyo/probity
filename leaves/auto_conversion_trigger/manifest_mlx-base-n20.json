@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "mlx-base-n20",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "776f783c1bad7ab814d4f38454d01771023f590369c488e04eaab449c57478ca",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:19:22.710756+00:00"
+}

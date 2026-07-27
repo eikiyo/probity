@@ -1,0 +1,9 @@
+{
+ "leaf": "redemption_rights",
+ "model": "gemma4-12b-smoke",
+ "task_name": "redemption_rights",
+ "data_version": "6e744e06fb542e9cfe322e249fb2536b1301e4e36aee1868b7e7f7ff3c4591fd",
+ "n_runs": 2,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:07:16.227068+00:00"
+}

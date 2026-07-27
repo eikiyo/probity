@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "employee_pool_pct",
+ "data_version": "8bce374bd41ba03cd170ec123d9cd22e958846787eb28b752ed563b16e801c4f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:25.447821+00:00"
+}

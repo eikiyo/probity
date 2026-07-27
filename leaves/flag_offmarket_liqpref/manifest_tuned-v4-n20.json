@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "tuned-v4-n20",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "d5e03ae999794d594788edb2b74bc5bed7cc633c568ecf4cbb3ecc4701fbba51",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:27:13.772413+00:00"
+}

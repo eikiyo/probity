@@ -1,0 +1,9 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "tuned-v4-final",
+ "task_name": "note_maturity_date",
+ "data_version": "d897c41c7cbb73574985d15cec272abc171547e482ee77c8384c7d10661dbc74",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:58:26.379854+00:00"
+}

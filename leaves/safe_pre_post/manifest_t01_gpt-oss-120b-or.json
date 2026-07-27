@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pre_post",
+ "model": "gpt-oss-120b-or",
+ "task_name": "safe_pre_post",
+ "data_version": "dd4fa8eb1d9c870628f5ea99f23f5d9a7a7256e6fd21eb470d8669c2612928ad",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:48:28.576201+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

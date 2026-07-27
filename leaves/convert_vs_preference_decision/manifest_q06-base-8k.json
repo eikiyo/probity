@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "q06-base-8k",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "c90788c1768cc06bad679d335432af8adeff2079a93db3401c0c0abc9214aafd",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T11:41:17.080948+00:00"
+}

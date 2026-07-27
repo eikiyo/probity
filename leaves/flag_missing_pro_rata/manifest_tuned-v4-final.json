@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "tuned-v4-final",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "7ab194da5b1b77bd23750671a95ce1a29faa4c73b9a78aa7703ec3f5f4999691",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:54:07.001386+00:00"
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "gpt-oss-120b-or",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "1940373fbac8c36ad6511d250efd08ca7a62e46606b2b93ba6713f7383b9cf21",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:33:01.689708+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "round_size",
+ "model": "tuned-v4-final",
+ "task_name": "round_size",
+ "data_version": "bcbbb2239a8ff0dc2ca3db1453ddc7093f63bafd5450462e07b705cc69d06ce4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:07:56.704337+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "qwen3-0.6b-think",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "95932ac76e33b982ab33025a495408907e0bf24e4dff6dce75e7cfaf196468fa",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T16:09:08.341341+00:00"
+}

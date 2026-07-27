@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "base-1b-diagnostic-clean",
+ "task_name": "financial_statement_qa",
+ "data_version": "1caecbb0180be19dabe4c5415cabce0c58fa133f897812dbb1e68ef6778a479a",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:35:07.453687+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "mlx-base-n20",
+ "task_name": "flag_full_ratchet",
+ "data_version": "8d610dad62cbbd2cadb6725650ddc92a2962ed781469d26e85f37f0c3e04b86b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:24:16.357279+00:00"
+}

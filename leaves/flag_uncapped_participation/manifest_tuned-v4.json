@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "tuned-v4",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "60e3924cc2e7857b34a47ffbaf312ff0e72c6336ff2cb53f1faa431a3318bc31",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:01:12.798950+00:00"
+}

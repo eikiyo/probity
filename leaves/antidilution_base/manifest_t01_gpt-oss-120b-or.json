@@ -1,0 +1,14 @@
+{
+ "leaf": "antidilution_base",
+ "model": "gpt-oss-120b-or",
+ "task_name": "antidilution_base",
+ "data_version": "09f39e3f005cbcfd20edac86af70b6d9b347bb33d6ee0f5d8b85d550447abe94",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:23:49.035973+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

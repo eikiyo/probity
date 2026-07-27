@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "q06-base-8k",
+ "task_name": "form_d_fields",
+ "data_version": "857e143cfa1e17cc388ea0a0146077dd7fdb680eba3cddd0ea03343218d23980",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T11:46:13.145022+00:00"
+}

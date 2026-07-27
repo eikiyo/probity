@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "gemma4-12b",
+ "task_name": "conversion_ratio",
+ "data_version": "e763704ef761cfb5f84b7512373a2ae11cc86bc99126f3bdf3193ce2557522b9",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:17:43.576088+00:00"
+}

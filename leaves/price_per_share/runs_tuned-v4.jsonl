@@ -1,0 +1,8 @@
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "kiwa_series_b", "raw_output": "{\"price_per_share\": 0.148}\n<end_of_turn>\u0423veiled:\n{\"price_per_share\": 0.148}<end_of_turn><end_of_turn>\"<end_of_turn>\"<end_of_turn>\"<end_of_turn>\"<end_of_turn>\"<end_of_turn>\"<end_of_turn>\"<end_of_turn>\"", "parsed": null}
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "astea_series_a", "parsed": {"price_per_share": 3.63}, "normalized": {"price_per_share": 3.63}}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "wolverine_series_a", "parsed": {"price_per_share": 1000.0}, "normalized": {"price_per_share": 1000.0}}
+{"_key": [3, 0], "instance_idx": 3, "run_idx": 0, "item_id": "psm_series_e", "parsed": {"price_per_share": 1000.0}, "normalized": {"price_per_share": 1000.0}}
+{"_key": [4, 0], "instance_idx": 4, "run_idx": 0, "item_id": "gelesis_certificate", "parsed": {"price_per_share": 0.85}, "normalized": {"price_per_share": 0.85}}
+{"_key": [5, 0], "instance_idx": 5, "run_idx": 0, "item_id": "landing_page_series", "parsed": {"price_per_share": 1.0}, "normalized": {"price_per_share": 1.0}}
+{"_key": [6, 0], "instance_idx": 6, "run_idx": 0, "item_id": "mobile_systems_s1", "parsed": {"price_per_share": 0.2}, "normalized": {"price_per_share": 0.2}}
+{"_key": [7, 0], "instance_idx": 7, "run_idx": 0, "item_id": "washington_group", "parsed": {"price_per_share": 0.625}, "normalized": {"price_per_share": 0.625}}

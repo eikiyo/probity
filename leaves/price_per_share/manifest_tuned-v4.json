@@ -1,0 +1,9 @@
+{
+ "leaf": "price_per_share",
+ "model": "tuned-v4",
+ "task_name": "price_per_share",
+ "data_version": "e9b9a113c962709bd52913b8ad3e96642facbf694e4f907d7c5f3e84a8f562ff",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:02:03.091927+00:00"
+}

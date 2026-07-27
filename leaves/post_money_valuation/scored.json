@@ -885,5 +885,572 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "tuned-v4": {
+  "model": "tuned-v4",
+  "accuracy": {
+   "task": "post_money_valuation",
+   "n_instances": 4,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 68000000.0,
+       "truth": 68000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": null,
+       "truth": 275000000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 5000000.0,
+       "truth": 5000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": null,
+       "truth": 106000000.0,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "post_money_valuation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "post_money_valuation": 0.0
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.25,
+   "valid_run_count": 3,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-n20": {
+  "model": "tuned-v4-n20",
+  "accuracy": {
+   "task": "post_money_valuation",
+   "n_instances": 4,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 68000000.0,
+       "truth": 68000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": null,
+       "truth": 275000000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 5000000.0,
+       "truth": 5000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": null,
+       "truth": 106000000.0,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "post_money_valuation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "post_money_valuation": 0.0
+   },
+   "parse_failure_count": 20,
+   "parse_failure_rate": 0.25,
+   "valid_run_count": 60,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-final": {
+  "model": "tuned-v4-final",
+  "accuracy": {
+   "task": "post_money_valuation",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.25,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 13,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 68.0,
+       "truth": 68000000.0,
+       "consistency": 0.46153846153846156
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 5750000.0,
+       "truth": 275000000.0,
+       "consistency": 0.3333333333333333
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 16,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 5000000.0,
+       "truth": 5000000.0,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 8,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 6.0,
+       "truth": 106000000.0,
+       "consistency": 0.375
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "post_money_valuation",
+   "consistency_rate": 0.47996794871794873,
+   "consistency_pct": 47.996794871794876,
+   "field_flips": {
+    "post_money_valuation": 1.0
+   },
+   "parse_failure_count": 40,
+   "parse_failure_rate": 0.5,
+   "valid_run_count": 40,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mlx-base-n20": {
+  "model": "mlx-base-n20",
+  "accuracy": {
+   "task": "post_money_valuation",
+   "n_instances": 4,
+   "n_measurable": 3,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 17,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 68000000.0,
+       "truth": 68000000.0,
+       "consistency": 0.8823529411764706
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": null,
+       "truth": 275000000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 16,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 5000000.0,
+       "truth": 5000000.0,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 4,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 10600000.0,
+       "truth": 106000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "post_money_valuation",
+   "consistency_rate": 0.8774509803921569,
+   "consistency_pct": 87.74509803921569,
+   "field_flips": {
+    "post_money_valuation": 0.5
+   },
+   "parse_failure_count": 26,
+   "parse_failure_rate": 0.325,
+   "valid_run_count": 54,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "1b-base-n5": {
+  "model": "1b-base-n5",
+  "accuracy": {
+   "task": "post_money_valuation",
+   "n_instances": 4,
+   "n_measurable": 3,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.3333333333333333,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 68000000.0,
+       "truth": 68000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": null,
+       "truth": 275000000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 5000000.0,
+       "truth": 5000000.0,
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 10600000.0,
+       "truth": 106000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "post_money_valuation",
+   "consistency_rate": 0.9333333333333332,
+   "consistency_pct": 93.33333333333333,
+   "field_flips": {
+    "post_money_valuation": 0.25
+   },
+   "parse_failure_count": 3,
+   "parse_failure_rate": 0.15,
+   "valid_run_count": 17,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "4b-base-n5": {
+  "model": "4b-base-n5",
+  "accuracy": {
+   "task": "post_money_valuation",
+   "n_instances": 4,
+   "n_measurable": 4,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.75,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 68000000.0,
+       "truth": 68000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 27500000.0,
+       "truth": 275000000.0,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 5000000.0,
+       "truth": 5000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 106000000.0,
+       "truth": 106000000.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "post_money_valuation",
+   "consistency_rate": 0.9,
+   "consistency_pct": 90.0,
+   "field_flips": {
+    "post_money_valuation": 0.25
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 20,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-26ba4b-or": {
+  "model": "google/gemma-4-26b-a4b-it",
+  "accuracy": {
+   "task": "post_money_valuation",
+   "n_instances": 4,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "post_money_valuation": {
+       "majority": 68000000.0,
+       "truth": 68000000.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": null,
+       "truth": 275000000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": null,
+       "truth": 5000000.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "post_money_valuation": {
+       "majority": null,
+       "truth": 106000000.0,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "post_money_valuation",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "post_money_valuation": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
+  }
  }
 }

@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "base-1b-diagnostic-clean",
+ "task_name": "participation_cap",
+ "data_version": "cb7d8b79cc9197073bc880cf2703dffcf0bdf63efa1dd146e35173db509a906a",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:31:52.398312+00:00"
+}

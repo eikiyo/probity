@@ -1,0 +1,14 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "gpt-oss-120b-or",
+ "task_name": "post_money_valuation",
+ "data_version": "05aa1d07c80241ed5736395fdf7c7e25af389ca8d91399aa2d87ce76c48b2b97",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:35:20.353838+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

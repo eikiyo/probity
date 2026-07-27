@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "tuned-v4-n20",
+ "task_name": "form_d_fields",
+ "data_version": "d6c8b7b4e683f4a2d91993cefb082cbafa566c60b2a4a5af8169af1f8b4fe889",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:24:33.219977+00:00"
+}

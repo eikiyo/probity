@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "tuned-v4",
+ "task_name": "safe_valuation_cap",
+ "data_version": "af15595cf9ae9870459a10ca4259e7fda862d686849b6f2dddc7cfd59d80b9cf",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:03:27.217682+00:00"
+}

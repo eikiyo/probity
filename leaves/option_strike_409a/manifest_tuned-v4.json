@@ -1,0 +1,9 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "tuned-v4",
+ "task_name": "option_strike_409a",
+ "data_version": "0b440c2c148fb717c85d6f1bfe34dffa8d1444225447f485b35c48b1a7c48ee7",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:01:39.607033+00:00"
+}

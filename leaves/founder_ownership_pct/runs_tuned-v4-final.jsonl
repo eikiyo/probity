@@ -1,0 +1,60 @@
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "uber_garrett_camp_founder", "parsed": {"founder_ownership_pct": "12.0"}, "normalized": {"founder_ownership_pct": 12.0}}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "uber_garrett_camp_founder", "parsed": {"founder_ownership_pct": "0.0"}, "normalized": {"founder_ownership_pct": 0.0}}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"\nfind-user_1234567100\": 81.5", "parsed": null}
+{"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"founder_ownership_pct\": 8.4", "parsed": null}
+{"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "item_id": "uber_garrett_camp_founder", "parsed": {"founder_ownership_pct": "11.1"}, "normalized": {"founder_ownership_pct": 11.1}}
+{"_key": [0, 5], "instance_idx": 0, "run_idx": 5, "item_id": "uber_garrett_camp_founder", "parsed": {"founder_ownership_pct": "81.2"}, "normalized": {"founder_ownership_pct": 81.2}}
+{"_key": [0, 6], "instance_idx": 0, "run_idx": 6, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"founder_ownership_pct\": 12.5", "parsed": null}
+{"_key": [0, 7], "instance_idx": 0, "run_idx": 7, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"founder_ownership_pct\": 6.9", "parsed": null}
+{"_key": [0, 8], "instance_idx": 0, "run_idx": 8, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"12.2", "parsed": null}
+{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "item_id": "uber_garrett_camp_founder", "raw_output": "{ \"founder_ownership_pct\": 3.5", "parsed": null}
+{"_key": [0, 10], "instance_idx": 0, "run_idx": 10, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"founder_ownership_pct\": 2.1", "parsed": null}
+{"_key": [0, 11], "instance_idx": 0, "run_idx": 11, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"founder_ownership_pct\": 5.2", "parsed": null}
+{"_key": [0, 12], "instance_idx": 0, "run_idx": 12, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"founder_ownership_pct\": 20.8", "parsed": null}
+{"_key": [0, 13], "instance_idx": 0, "run_idx": 13, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"founder_ownership_pct\": 15.1", "parsed": null}
+{"_key": [0, 14], "instance_idx": 0, "run_idx": 14, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"founder_ownership_pct\": 23.3", "parsed": null}
+{"_key": [0, 15], "instance_idx": 0, "run_idx": 15, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"\ncom.1000.153", "parsed": null}
+{"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"\n0.56", "parsed": null}
+{"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "item_id": "uber_garrett_camp_founder", "raw_output": "{18.1", "parsed": null}
+{"_key": [0, 18], "instance_idx": 0, "run_idx": 18, "item_id": "uber_garrett_camp_founder", "raw_output": "{\n0.52", "parsed": null}
+{"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "item_id": "uber_garrett_camp_founder", "raw_output": "{\"\nso.founder_ownership_pct\": 3.7", "parsed": null}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "uber_travis_kalanick_founder", "raw_output": "{\"founder_ownership_pct\": 1.0", "parsed": null}
+{"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "uber_travis_kalanick_founder", "raw_output": "{\"\nconst30.0", "parsed": null}
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "uber_travis_kalanick_founder", "parsed": {"founder_ownership_pct": "11.0"}, "normalized": {"founder_ownership_pct": 11.0}}
+{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "item_id": "uber_travis_kalanick_founder", "parsed": {"founder_ownership_pct": "117.0"}, "normalized": {"founder_ownership_pct": 117.0}}
+{"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "item_id": "uber_travis_kalanick_founder", "raw_output": "{\"\n\"founder_ownership_pct\": 2.0", "parsed": null}
+{"_key": [1, 5], "instance_idx": 1, "run_idx": 5, "item_id": "uber_travis_kalanick_founder", "raw_output": "{\"founder_ownership_pct\": 9.8", "parsed": null}
+{"_key": [1, 6], "instance_idx": 1, "run_idx": 6, "item_id": "uber_travis_kalanick_founder", "parsed": {"founder_ownership_pct": "11.1"}, "normalized": {"founder_ownership_pct": 11.1}}
+{"_key": [1, 7], "instance_idx": 1, "run_idx": 7, "item_id": "uber_travis_kalanick_founder", "parsed": {"founder_ownership_pct": "11.0"}, "normalized": {"founder_ownership_pct": 11.0}}
+{"_key": [1, 8], "instance_idx": 1, "run_idx": 8, "item_id": "uber_travis_kalanick_founder", "raw_output": "{\n0.0", "parsed": null}
+{"_key": [1, 9], "instance_idx": 1, "run_idx": 9, "item_id": "uber_travis_kalanick_founder", "raw_output": "{\"founder_ownership_pct\": \"14.1", "parsed": null}
+{"_key": [1, 10], "instance_idx": 1, "run_idx": 10, "item_id": "uber_travis_kalanick_founder", "parsed": {"founder_ownership_pct": "110.0"}, "normalized": {"founder_ownership_pct": 110.0}}
+{"_key": [1, 11], "instance_idx": 1, "run_idx": 11, "item_id": "uber_travis_kalanick_founder", "parsed": {"founder_ownership_pct": "16.1"}, "normalized": {"founder_ownership_pct": 16.1}}
+{"_key": [1, 12], "instance_idx": 1, "run_idx": 12, "item_id": "uber_travis_kalanick_founder", "parsed": {"founder_ownership_pct": "11.2"}, "normalized": {"founder_ownership_pct": 11.2}}
+{"_key": [1, 13], "instance_idx": 1, "run_idx": 13, "item_id": "uber_travis_kalanick_founder", "parsed": {"founder_ownership_pct": "11.0"}, "normalized": {"founder_ownership_pct": 11.0}}
+{"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "item_id": "uber_travis_kalanick_founder", "parsed": {"founder_ownership_pct": "111.7"}, "normalized": {"founder_ownership_pct": 111.7}}
+{"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "item_id": "uber_travis_kalanick_founder", "raw_output": "{\"founder_ownership_pct\": 17.5", "parsed": null}
+{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "item_id": "uber_travis_kalanick_founder", "parsed": {"founder_ownership_pct": "110.3"}, "normalized": {"founder_ownership_pct": 110.3}}
+{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "item_id": "uber_travis_kalanick_founder", "raw_output": "{\"founder_ownership_pct\": 30.0", "parsed": null}
+{"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "item_id": "uber_travis_kalanick_founder", "raw_output": "{\n0.11", "parsed": null}
+{"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "item_id": "uber_travis_kalanick_founder", "raw_output": "{\"founder_ownership_pct\": 14.5", "parsed": null}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 31.2", "parsed": null}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"owner_\n", "parsed": null}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"\n44.7", "parsed": null}
+{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"\n120.1", "parsed": null}
+{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"\n0.0", "parsed": null}
+{"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"\n4.4", "parsed": null}
+{"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "item_id": "uber_ryan_graves_ceo", "parsed": {"founder_ownership_pct": "0.0"}, "normalized": {"founder_ownership_pct": 0.0}}
+{"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 35.1", "parsed": null}
+{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"\n0.0", "parsed": null}
+{"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 30.2", "parsed": null}
+{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 33.0", "parsed": null}
+{"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 33.1", "parsed": null}
+{"_key": [2, 12], "instance_idx": 2, "run_idx": 12, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 37.6", "parsed": null}
+{"_key": [2, 13], "instance_idx": 2, "run_idx": 13, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 32.7", "parsed": null}
+{"_key": [2, 14], "instance_idx": 2, "run_idx": 14, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 11.7", "parsed": null}
+{"_key": [2, 15], "instance_idx": 2, "run_idx": 15, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 0.5", "parsed": null}
+{"_key": [2, 16], "instance_idx": 2, "run_idx": 16, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"\ntrue", "parsed": null}
+{"_key": [2, 17], "instance_idx": 2, "run_idx": 17, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 30.1", "parsed": null}
+{"_key": [2, 18], "instance_idx": 2, "run_idx": 18, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\": 33.1", "parsed": null}
+{"_key": [2, 19], "instance_idx": 2, "run_idx": 19, "item_id": "uber_ryan_graves_ceo", "raw_output": "{\"founder_ownership_pct\":30.3", "parsed": null}

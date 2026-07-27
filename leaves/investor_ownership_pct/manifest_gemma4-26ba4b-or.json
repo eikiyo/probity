@@ -1,0 +1,9 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "investor_ownership_pct",
+ "data_version": "34e59918423e9671ad7d0784b4c303c0d771bd03c67fa69a9ddfbcc61060014c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:39.259347+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "v5-r1-iter0050",
+ "task_name": "employee_pool_pct",
+ "data_version": "39d92e4c7ccf2eae6281b51bc3216935e9a71ff0e881f5348c0c1e6ad52c900a",
+ "n_runs": 10,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T19:28:27.820817+00:00"
+}

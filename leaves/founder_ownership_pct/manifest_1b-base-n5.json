@@ -1,0 +1,9 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "1b-base-n5",
+ "task_name": "founder_ownership_pct",
+ "data_version": "34988cfb84bc532271153da1e0d74080949ebcc08da9be8416edc00591247753",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:28:19.875600+00:00"
+}

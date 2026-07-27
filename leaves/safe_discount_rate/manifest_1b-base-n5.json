@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "1b-base-n5",
+ "task_name": "safe_discount_rate",
+ "data_version": "a60a798d2f273639a8e7b6c0191ba4e19b2686ea1b092974080fd7ff8de258f4",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:47:01.004659+00:00"
+}

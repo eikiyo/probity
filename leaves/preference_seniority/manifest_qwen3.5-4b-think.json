@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "qwen3.5-4b-think",
+ "task_name": "preference_seniority",
+ "data_version": "f73c15b6ae84acbfe1d1a91f8f2ef2cfd800d2ea69f23e579b2515fc43ce6a44",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T20:45:14.036639+00:00"
+}

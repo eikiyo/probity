@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_base",
+ "model": "base-1b-fresh-20260703-v2",
+ "task_name": "antidilution_base",
+ "data_version": "3094e7ca8b0273b566850c7b6c8f5786bf5a409f7436d774a0d7e703689f6f00",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:42:26.855692+00:00"
+}

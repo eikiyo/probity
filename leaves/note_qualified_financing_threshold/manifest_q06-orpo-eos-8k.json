@@ -1,0 +1,9 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "q06-orpo-eos-8k",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "1e26efc449522373ba6ad282b8f901c46c7c6ca94cb13417da624c24b0300e35",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T12:03:59.595954+00:00"
+}

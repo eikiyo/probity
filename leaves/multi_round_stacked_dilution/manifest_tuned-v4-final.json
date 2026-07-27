@@ -1,0 +1,9 @@
+{
+ "leaf": "multi_round_stacked_dilution",
+ "model": "tuned-v4-final",
+ "task_name": "multi_round_stacked_dilution",
+ "data_version": "f2b260211e2fc76e9d4b79fda9061d91cf0874726588f6803fb6e8db8d161bbb",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:57:44.613821+00:00"
+}

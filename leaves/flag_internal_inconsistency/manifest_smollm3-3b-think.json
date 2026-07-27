@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "smollm3-3b-think",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "d9297afa1b8e94fe8f1970e41bcee7d9f7b5cf234e1f67efd94f4bf8b05c39f6",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T19:07:27.207208+00:00"
+}

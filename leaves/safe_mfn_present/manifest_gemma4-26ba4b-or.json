@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "safe_mfn_present",
+ "data_version": "31d980f06fdfaec1ede7cafc28af5d5d0dfef45464d9dc2730f57d76a4bf34d3",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:30:31.659334+00:00"
+}

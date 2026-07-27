@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "1b-base-n5",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "c6fc82989c0699289372e9c9b05cc6be9678405ef36e12b8a8eb0fea1e2308a1",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:50:07.210203+00:00"
+}

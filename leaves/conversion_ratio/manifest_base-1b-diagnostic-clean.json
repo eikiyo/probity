@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "base-1b-diagnostic-clean",
+ "task_name": "conversion_ratio",
+ "data_version": "ab9a57eabfb017c3036e4dde4cdb4a87524d26fac5dfe9320455f4e6691124c8",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:34:40.221953+00:00"
+}

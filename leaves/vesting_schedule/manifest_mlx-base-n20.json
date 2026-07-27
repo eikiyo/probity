@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_schedule",
+ "model": "mlx-base-n20",
+ "task_name": "vesting_schedule",
+ "data_version": "4f5bc8f8c8303953a873bd82b22a5ef0b7d78bd062b94e731e399d566d331cb2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:45:06.939678+00:00"
+}

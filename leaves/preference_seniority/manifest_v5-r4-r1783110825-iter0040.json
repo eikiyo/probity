@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "v5-r4-r1783110825-iter0040",
+ "task_name": "preference_seniority",
+ "data_version": "d6739d2e33f3f7b199993a4faad6f59f271d8d842dffafc754744e878e5bbb1c",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T20:35:20.443771+00:00"
+}

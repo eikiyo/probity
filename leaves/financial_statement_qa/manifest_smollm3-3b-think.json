@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "smollm3-3b-think",
+ "task_name": "financial_statement_qa",
+ "data_version": "aaf5680f13e774f6fba4fb0d38345580d2247f95d5ce2423554a3ac500684f11",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T19:18:23.283007+00:00"
+}

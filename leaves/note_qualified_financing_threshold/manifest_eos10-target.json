@@ -1,0 +1,9 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "eos10-target",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "9c46e88b0b1be48e8edd91d049cf8515dc63f698296d7a16d5d7b95cd084af41",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:10:36.733369+00:00"
+}

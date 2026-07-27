@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "tuned-v4-recheck",
+ "task_name": "drag_along",
+ "data_version": "e28c790f0fce663032102ea004958c63958c9aaf19cc2bf6d7ebc087fb91b3e0",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T15:51:04.233101+00:00"
+}

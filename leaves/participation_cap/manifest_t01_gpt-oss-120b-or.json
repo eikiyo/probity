@@ -1,0 +1,14 @@
+{
+ "leaf": "participation_cap",
+ "model": "gpt-oss-120b-or",
+ "task_name": "participation_cap",
+ "data_version": "39b5c7111d1ceb38e72fb4865789242dfa972bb52a18de09aaed6c8197071042",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:34:36.685223+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

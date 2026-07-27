@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "smollm3-3b-think",
+ "task_name": "drag_along",
+ "data_version": "54b7f1bf68605dde81049ef55a9305279df9b2fd94f73c9eebd53547f7142641",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T19:06:08.758389+00:00"
+}

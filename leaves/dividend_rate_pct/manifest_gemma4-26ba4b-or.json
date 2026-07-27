@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "dividend_rate_pct",
+ "data_version": "dbf372a21d281629121eca11f6d5664ff3bcaecefb5a898d581fbe9d2554ffa4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:25.284559+00:00"
+}

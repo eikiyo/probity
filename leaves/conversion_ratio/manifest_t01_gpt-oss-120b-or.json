@@ -1,0 +1,14 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "gpt-oss-120b-or",
+ "task_name": "conversion_ratio",
+ "data_version": "70abc2cc80fb30cf0367f70457f3d538b1e0d7df814cbae79d8accbcbc14e70d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:22:55.743606+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

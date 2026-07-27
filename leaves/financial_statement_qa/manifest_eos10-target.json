@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "eos10-target",
+ "task_name": "financial_statement_qa",
+ "data_version": "12eb408003f1d3daf8396a67927256bd3e8093fac2de8cff06a8ed879429df3c",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:10:30.586530+00:00"
+}

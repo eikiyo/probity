@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "1b-base-n5",
+ "task_name": "safe_valuation_cap",
+ "data_version": "d72ef292f749f2f8cc1e61d3b9c3a52571450a000e7886374b4d5c325cef4eea",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:50:42.123420+00:00"
+}

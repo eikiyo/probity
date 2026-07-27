@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "base-1b-fresh-20260703-v2",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "d4d0bfb96e8aef1ee37ccf62f2890af527bd2c92a59da61d78d5d74795e3d473",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:43:10.921531+00:00"
+}

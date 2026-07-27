@@ -1,0 +1,9 @@
+{
+ "leaf": "price_per_share",
+ "model": "mlx-base-n20",
+ "task_name": "price_per_share",
+ "data_version": "bd7071d11b7e03126054a9023e77edb8dca18a91d645a1af310b787c448175c6",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:33:58.718548+00:00"
+}

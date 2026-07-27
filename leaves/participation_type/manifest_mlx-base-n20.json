@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_type",
+ "model": "mlx-base-n20",
+ "task_name": "participation_type",
+ "data_version": "bbad51a393ecae22603c03a6d18a9d2c2b0c2ced8f06cdc6bf3c44e63ee9bfab",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:31:35.224719+00:00"
+}

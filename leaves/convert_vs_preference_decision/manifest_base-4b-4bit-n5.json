@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "base-4b-4bit-n5",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "2896efc0260ae0368082ffd2375c2c3567633a3975766d3e200bedcd6cad6f00",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T14:20:09.033118+00:00"
+}

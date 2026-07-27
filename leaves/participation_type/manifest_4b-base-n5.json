@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_type",
+ "model": "4b-base-n5",
+ "task_name": "participation_type",
+ "data_version": "9608e86d2559f6e25d766c123d5d146e2df847854f396cd68c436c489fc00543",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:36:34.841681+00:00"
+}

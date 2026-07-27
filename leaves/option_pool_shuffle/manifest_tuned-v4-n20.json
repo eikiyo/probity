@@ -1,0 +1,9 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "tuned-v4-n20",
+ "task_name": "option_pool_shuffle",
+ "data_version": "65a8bf41053fc0150cbed3f63362a73c9c0b4492a977167e36a92c6c21d3bb28",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:30:36.001418+00:00"
+}

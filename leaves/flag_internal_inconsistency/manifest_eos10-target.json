@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "eos10-target",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "e58989f96e6f93f048e233aca7e0f06dde0040dd2e325fdf6ed3be2c82cd005a",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:10:33.836559+00:00"
+}

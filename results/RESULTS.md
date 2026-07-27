@@ -23,7 +23,7 @@
 | `meta-llama/llama-3.3-70b-instruct` | ? | **11%** | 97% | 78% | 18/18 | 360/360 (100%) |
 | `gemma3:1b-it-qat` | ? | **56%** | 89% | 39% | 18/18 | 360/360 (100%) |
 | `minimax/minimax-m2.5` | ? | **11%** | 99% | 72% | 18/18 | 359/360 (100%) |
-| `google/gemini-3-flash-preview` | ? | **6%** | 98% | 71% | 17/18 | 332/333 (100%) |
+| `google/gemini-3-flash-preview` | ? | **6%** | 99% | 67% | 18/18 | 359/360 (100%) |
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
 | `openai/gpt-oss-120b` | ? | **22%** | 97% | 72% | 18/18 | 353/360 (98%) |
 | `openai/gpt-5-mini` | ? | **6%** | 100% | 72% | 18/18 | 360/360 (100%) |
@@ -48,7 +48,7 @@
 | `meta-llama/llama-3.3-70b-instruct` | 3/6 | 6/7 | 5/5 |
 | `gemma3:1b-it-qat` | 2/6 | 4/7 | 1/5 |
 | `minimax/minimax-m2.5` | 2/6 | 6/7 | 5/5 |
-| `google/gemini-3-flash-preview` | 2/5 | 6/7 | 4/5 |
+| `google/gemini-3-flash-preview` | 2/6 | 6/7 | 4/5 |
 | `claude-haiku-4-5-20251001` | 2/6 | 6/7 | 5/5 |
 | `openai/gpt-oss-120b` | 2/6 | 6/7 | 5/5 |
 | `openai/gpt-5-mini` | 2/6 | 6/7 | 5/5 |
@@ -74,7 +74,7 @@
 | Workday, Inc. | capped | medium | 1B, llama3.3-70b-or, minimax-m2.5-or |
 | Alexza Pharmaceuticals | capped | medium | gemma3-1b-qat |
 | Entellus Medical Inc | participating | easy | 1B, hosted |
-| Internet Security Syst | participating | easy | 1B, llama3.3-70b-or, gemma3-1b-qat, gemini3-flash-or |
+| Internet Security Syst | participating | easy | 1B, llama3.3-70b-or, gemma3-1b-qat |
 
 ## What this shows
 
@@ -104,7 +104,7 @@
 | `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 16/16 | 308/320 (96%) |
 | `gemma3:1b-it-qat` | ? | **6%** | 100% | 62% | 16/16 | 320/320 (100%) |
 | `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 16/16 | 319/320 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 10/16 | 199/199 (100%) |
+| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 
@@ -129,7 +129,7 @@
 | `minimax/minimax-m2.5` | 10/10 | 6/6 |
 | `gemma3:1b-it-qat` | 10/10 | 0/6 |
 | `google/gemini-3-flash-preview` | 10/10 | 6/6 |
-| `claude-haiku-4-5-20251001` | 10/10 | — |
+| `claude-haiku-4-5-20251001` | 10/10 | 6/6 |
 | `openai/gpt-oss-120b` | 10/10 | 6/6 |
 | `openai/gpt-5-mini` | 10/10 | 6/6 |
 
@@ -137,12 +137,10 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Neo Aeronautics, Inc.  | pre-money | easy | hosted, haiku-4.5-direct |
-| Rentberry Inc.  (CIK 0 | pre-money | easy | hosted, gemma3-1b-qat, haiku-4.5-direct |
-| Complete Solaria, Inc. | pre-money | easy | hosted, haiku-4.5-direct |
-| Invizyne Technologies  | pre-money | easy | haiku-4.5-direct |
-| IDEANOMICS, INC.  (IDE | pre-money | easy | 1B, haiku-4.5-direct |
-| Pluri Inc.  (PLUR)  (C | pre-money | easy | haiku-4.5-direct |
+| Neo Aeronautics, Inc.  | pre-money | easy | hosted |
+| Rentberry Inc.  (CIK 0 | pre-money | easy | hosted, gemma3-1b-qat |
+| Complete Solaria, Inc. | pre-money | easy | hosted |
+| IDEANOMICS, INC.  (IDE | pre-money | easy | 1B |
 
 ## What this shows
 
@@ -1064,7 +1062,7 @@
 | `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 | `gemma3:1b-it-qat` | ? | **27%** | 96% | 100% | 15/15 | 300/300 (100%) |
 | `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 15/15 | 299/300 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 10/15 | 199/199 (100%) |
+| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 
@@ -1089,7 +1087,7 @@
 | `meta-llama/llama-3.3-70b-instruct` | 9/9 | 6/6 |
 | `gemma3:1b-it-qat` | 9/9 | 6/6 |
 | `google/gemini-3-flash-preview` | 9/9 | 6/6 |
-| `claude-haiku-4-5-20251001` | 9/9 | 1/1 |
+| `claude-haiku-4-5-20251001` | 9/9 | 6/6 |
 | `openai/gpt-oss-120b` | 9/9 | 6/6 |
 | `openai/gpt-5-mini` | 9/9 | 6/6 |
 
@@ -1101,11 +1099,8 @@
 | SNM Global Holdings, I | yes | easy | 1B, gemma3-1b-qat |
 | Parker Clay Global, PB | yes | hard | gemma3-1b-qat |
 | SOS Hydration Inc. | yes | hard | 1B, gemma3-1b-qat |
-| Rare Earths Americas,  | no | easy | 1B, haiku-4.5-direct |
-| Orangehook, Inc. | no | medium | haiku-4.5-direct |
-| AMASS BRANDS | no | medium | haiku-4.5-direct |
-| TaoWeave, Inc. | no | hard | 1B, gemma3-1b-qat, haiku-4.5-direct |
-| CHIMERIX INC | no | hard | haiku-4.5-direct |
+| Rare Earths Americas,  | no | easy | 1B |
+| TaoWeave, Inc. | no | hard | 1B, gemma3-1b-qat |
 
 ## What this shows
 
@@ -1131,7 +1126,7 @@
 | `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
 | `minimax/minimax-m2.5` | ? | **0%** | 100% | 95% | 19/19 | 349/380 (92%) |
 | `gemma3:1b-it-qat` | ? | **32%** | 93% | 63% | 19/19 | 380/380 (100%) |
-| `google/gemini-3-flash-preview` | ? | **5%** | 98% | 94% | 17/19 | 333/333 (100%) |
+| `google/gemini-3-flash-preview` | ? | **5%** | 98% | 95% | 19/19 | 380/380 (100%) |
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
 | `openai/gpt-oss-120b` | ? | **5%** | 98% | 95% | 19/19 | 380/380 (100%) |
 | `openai/gpt-5-mini` | ? | **11%** | 98% | 100% | 19/19 | 380/380 (100%) |
@@ -1156,7 +1151,7 @@
 | `meta-llama/llama-3.3-70b-instruct` | 13/13 | 5/6 |
 | `minimax/minimax-m2.5` | 13/13 | 5/6 |
 | `gemma3:1b-it-qat` | 6/13 | 6/6 |
-| `google/gemini-3-flash-preview` | 13/13 | 3/4 |
+| `google/gemini-3-flash-preview` | 13/13 | 5/6 |
 | `claude-haiku-4-5-20251001` | 13/13 | 5/6 |
 | `openai/gpt-oss-120b` | 13/13 | 5/6 |
 | `openai/gpt-5-mini` | 13/13 | 6/6 |
@@ -1182,8 +1177,8 @@
 | Fold Holdings, Inc. | post-money | easy | 1B |
 | New Global Energy, Inc | post-money | easy | 1B, gemma3-1b-qat, gemini3-flash-or, gpt-oss-120b-or, gpt5-mini-or |
 | Cerebras Systems Inc. | post-money | medium | 1B |
-| Oculus Innovative Scie | post-money | medium | 1B, gemini3-flash-or |
-| Oculus Innovative Scie | post-money | medium | 1B, gemini3-flash-or |
+| Oculus Innovative Scie | post-money | medium | 1B |
+| Oculus Innovative Scie | post-money | medium | 1B |
 
 ## What this shows
 
@@ -1963,7 +1958,7 @@
 | `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 13/13 | 248/260 (95%) |
 | `gemma3:1b-it-qat` | ? | **62%** | 86% | 54% | 13/13 | 260/260 (100%) |
 | `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 10/13 | 199/199 (100%) |
+| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 13/13 | 258/260 (99%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 
@@ -1988,7 +1983,7 @@
 | `minimax/minimax-m2.5` | 2/2 | 1/1 | 10/10 |
 | `gemma3:1b-it-qat` | 1/2 | 0/1 | 6/10 |
 | `google/gemini-3-flash-preview` | 2/2 | 1/1 | 10/10 |
-| `claude-haiku-4-5-20251001` | — | 1/1 | 9/9 |
+| `claude-haiku-4-5-20251001` | 2/2 | 1/1 | 10/10 |
 | `openai/gpt-oss-120b` | 2/2 | 1/1 | 10/10 |
 | `openai/gpt-5-mini` | 2/2 | 1/1 | 10/10 |
 
@@ -2003,9 +1998,8 @@
 | Creci Inc. | both-mfn | medium | 1B, gemma3-1b-qat |
 | Lomond Therapeutics Ho | both-mfn | medium | 1B, gemma3-1b-qat |
 | Neo Aeronautics, Inc. | both-mfn | medium | gemma3-1b-qat |
-| Manako Labs Ltd | both-mfn | medium | hosted, gemma3-1b-qat, haiku-4.5-direct |
-| Gardedam Therapeutics  | cap | medium | 1B, gemma3-1b-qat, haiku-4.5-direct |
-| Flowhub Holdings, LLC | cap | medium | haiku-4.5-direct |
+| Manako Labs Ltd | both-mfn | medium | hosted, gemma3-1b-qat |
+| Gardedam Therapeutics  | cap | medium | 1B, gemma3-1b-qat |
 
 ## What this shows
 

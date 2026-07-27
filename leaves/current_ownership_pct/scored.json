@@ -1600,5 +1600,1611 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "tuned-v4": {
+  "model": "tuned-v4",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 8,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 81.57,
+       "truth": 6.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 33.18,
+       "truth": 2.4,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 87.3,
+       "truth": 8.6,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 5.4,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 16.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 5.2,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 5.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 87.3,
+       "truth": 33.9,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "current_ownership_pct": 0.0
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.1111111111111111,
+   "valid_run_count": 8,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-n20": {
+  "model": "tuned-v4-n20",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 8,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 81.57,
+       "truth": 6.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 33.18,
+       "truth": 2.4,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 87.3,
+       "truth": 8.6,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 5.4,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 16.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 5.2,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 5.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 87.3,
+       "truth": 33.9,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "current_ownership_pct": 0.0
+   },
+   "parse_failure_count": 20,
+   "parse_failure_rate": 0.1111111111111111,
+   "valid_run_count": 160,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-n20-sampled": {
+  "model": "tuned-v4-n20-sampled",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 6,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 6.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 150.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 2.4,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 12.0,
+       "truth": 8.6,
+       "consistency": 0.3333333333333333
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 12.6,
+       "truth": 5.4,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 0.0,
+       "truth": 16.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 6,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 72.4,
+       "truth": 5.2,
+       "consistency": 0.3333333333333333
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 7.5,
+       "truth": 5.3,
+       "consistency": 0.3333333333333333
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 33.9,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 0.6666666666666666,
+   "consistency_pct": 66.66666666666666,
+   "field_flips": {
+    "current_ownership_pct": 0.3333333333333333
+   },
+   "parse_failure_count": 165,
+   "parse_failure_rate": 0.9166666666666666,
+   "valid_run_count": 15,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-final": {
+  "model": "tuned-v4-final",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 6,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 21.2,
+       "truth": 6.0,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 17.3,
+       "truth": 11.0,
+       "consistency": 0.3333333333333333
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 2.4,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 4,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 12.0,
+       "truth": 8.6,
+       "consistency": 0.25
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 7.0,
+       "truth": 5.4,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 16.3,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 10.6,
+       "truth": 5.2,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 12.0,
+       "truth": 5.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 33.9,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 0.5972222222222222,
+   "consistency_pct": 59.72222222222222,
+   "field_flips": {
+    "current_ownership_pct": 0.4444444444444444
+   },
+   "parse_failure_count": 167,
+   "parse_failure_rate": 0.9277777777777778,
+   "valid_run_count": 13,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mlx-base-n20": {
+  "model": "mlx-base-n20",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 6.0,
+       "consistency": 0.35
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 11.0,
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 33.18,
+       "truth": 2.4,
+       "consistency": 0.3
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 87.3,
+       "truth": 8.6,
+       "consistency": 0.2
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.5,
+       "truth": 5.4,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.38,
+       "truth": 16.3,
+       "consistency": 0.25
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 5.2,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 5.3,
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 33.9,
+       "consistency": 0.4
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 0.3888888888888889,
+   "consistency_pct": 38.88888888888889,
+   "field_flips": {
+    "current_ownership_pct": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "1b-base-n5": {
+  "model": "1b-base-n5",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 6.0,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 87.6,
+       "truth": 11.0,
+       "consistency": 0.2
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 33.18,
+       "truth": 2.4,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.39,
+       "truth": 8.6,
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.5,
+       "truth": 5.4,
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.38,
+       "truth": 16.3,
+       "consistency": 0.2
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 5.2,
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.32,
+       "truth": 5.3,
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 33.9,
+       "consistency": 0.6
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 0.46666666666666656,
+   "consistency_pct": 46.66666666666666,
+   "field_flips": {
+    "current_ownership_pct": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 45,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "4b-base-n5": {
+  "model": "4b-base-n5",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.3333333333333333,
+   "accuracy_strict": 0.2222222222222222,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 6.0,
+       "truth": 6.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 11.2,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 2.4,
+       "truth": 2.4,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 8.8,
+       "truth": 8.6,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 5.4,
+       "truth": 5.4,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 16.7,
+       "truth": 16.3,
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 5.3,
+       "truth": 5.2,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 5.4,
+       "truth": 5.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 34.3,
+       "truth": 33.9,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 0.9333333333333331,
+   "consistency_pct": 93.33333333333331,
+   "field_flips": {
+    "current_ownership_pct": 0.2222222222222222
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 45,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "base-1b-fresh-20260703-v2": {
+  "model": "base-1b-fresh-20260703-v2",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.32,
+       "truth": 6.0,
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.32,
+       "truth": 11.0,
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 43.7,
+       "truth": 2.4,
+       "consistency": 0.2
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 87.38,
+       "truth": 8.6,
+       "consistency": 0.2
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.5,
+       "truth": 5.4,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 48.47,
+       "truth": 16.3,
+       "consistency": 0.2
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.3,
+       "truth": 5.2,
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 67.32,
+       "truth": 5.3,
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 87.3,
+       "truth": 33.9,
+       "consistency": 0.4
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 0.4444444444444444,
+   "consistency_pct": 44.44444444444444,
+   "field_flips": {
+    "current_ownership_pct": 0.8888888888888888
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 45,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-12b": {
+  "model": "gemma4:12b",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 6.0,
+       "truth": 6.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 11.0,
+       "truth": 11.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 2.4,
+       "truth": 2.4,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 8.6,
+       "truth": 8.6,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 5.4,
+       "truth": 5.4,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 16.3,
+       "truth": 16.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 5.2,
+       "truth": 5.2,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 5.3,
+       "truth": 5.3,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 33.9,
+       "truth": 33.9,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "current_ownership_pct": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 45,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-26ba4b-or": {
+  "model": "google/gemma-4-26b-a4b-it",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 6.0,
+       "truth": 6.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 11.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 2.4,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 8.6,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 5.4,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 16.3,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 5.2,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 5.3,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 33.9,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "current_ownership_pct": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
+  }
+ },
+ "qwen3.5-9b-or": {
+  "model": "qwen/qwen3.5-9b",
+  "accuracy": {
+   "task": "current_ownership_pct",
+   "n_instances": 9,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": 6.0,
+       "truth": 6.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 11.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 2.4,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 8.6,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 5.4,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 16.3,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 5.2,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 5.3,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "current_ownership_pct": {
+       "majority": null,
+       "truth": 33.9,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "current_ownership_pct",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "current_ownership_pct": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
+  }
  }
 }

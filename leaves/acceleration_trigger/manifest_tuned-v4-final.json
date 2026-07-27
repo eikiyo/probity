@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "tuned-v4-final",
+ "task_name": "acceleration_trigger",
+ "data_version": "71a7c4d97c530066d8a7fd68b342d68b367c08d7f8fbccede2af788e83eb6577",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:47:43.596547+00:00"
+}

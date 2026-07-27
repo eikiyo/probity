@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_type",
+ "model": "qwen3.5-9b-or",
+ "task_name": "antidilution_type",
+ "data_version": "436fd46b5b5876de1e7e50c14cfddc8c5f15099c73a6f3e451539a7bbcd12774",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T21:37:13.321919+00:00"
+}

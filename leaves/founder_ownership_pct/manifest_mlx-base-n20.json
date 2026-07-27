@@ -1,0 +1,9 @@
+{
+ "leaf": "founder_ownership_pct",
+ "model": "mlx-base-n20",
+ "task_name": "founder_ownership_pct",
+ "data_version": "82e70c87801fa03e96cdd2d4669381837209644d8666ac2a4e3c8ba8cc0c8e68",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:26:01.494211+00:00"
+}

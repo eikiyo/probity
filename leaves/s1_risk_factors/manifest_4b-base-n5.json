@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "4b-base-n5",
+ "task_name": "s1_risk_factors",
+ "data_version": "4ae91667f292b34a7246225049ffb5f662ef38590a6f7dc54ed9beb0c89f7ac5",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:46:48.951290+00:00"
+}

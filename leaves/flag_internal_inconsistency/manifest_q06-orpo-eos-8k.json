@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "q06-orpo-eos-8k",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "077a6c04e185912d887aab2fa7cc6e7ec6e4daaed8d317a7e5b14212c0ad13cd",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T12:03:04.399020+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "exercise_window",
+ "model": "qwen3.5-9b-or",
+ "task_name": "exercise_window",
+ "data_version": "0c19cf35612db91471619a05124f4b6e72b7a3a33bab1fc07c631902fa8474cb",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T21:39:04.932382+00:00"
+}

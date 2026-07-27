@@ -1,0 +1,9 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "current_ownership_pct",
+ "data_version": "8ed14fc9e83178f5f75a3a46e6365cc838eb6f988897fe1dfc6082e22d9f1da2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:25.916531+00:00"
+}

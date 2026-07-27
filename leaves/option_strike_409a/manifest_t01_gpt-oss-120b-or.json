@@ -1,0 +1,14 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "gpt-oss-120b-or",
+ "task_name": "option_strike_409a",
+ "data_version": "d2fa34b86b55eac716abf2bf97b53d235ca150f382b4c2beb0aa4d0bdbbf9704",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:36:31.237387+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

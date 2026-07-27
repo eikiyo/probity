@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_base",
+ "model": "gemma4-12b",
+ "task_name": "antidilution_base",
+ "data_version": "772c5da9cae00e2888c61d286d9e6a4a80621485b82a73b020a8b1f6571e0c87",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:11:55.472940+00:00"
+}

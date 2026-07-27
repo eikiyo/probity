@@ -1,0 +1,5 @@
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "1103078_000119312505072191", "parsed": {"antidilution_type": "broad-based"}, "normalized": {"antidilution_type": "broad-based"}}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "1093207_000114420414015857", "raw_output": "```json\n{\"antidilution_type\": \"full-ratchet\"}\n```<end_of_turn>\n<end_of_turn><end_of_turn>Y:\n```json\n{\"antidilution_type\": \"full-ratchet\"}\n```<end_of_turn><end_of_turn><end_of_turn><end_of_turn><end_of", "parsed": null}
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "1082733_000165495426003578", "parsed": {"antidilution_type": "weighted-average"}, "normalized": {"antidilution_type": "weighted-average"}}
+{"_key": [3, 0], "instance_idx": 3, "run_idx": 0, "item_id": "1161315_000095012314003249", "parsed": {"antidilution_type": "full-ratchet"}, "normalized": {"antidilution_type": "full-ratchet"}}
+{"_key": [4, 0], "instance_idx": 4, "run_idx": 0, "item_id": "1879403_000157587223000626", "parsed": {"antidilution_type": "full-ratchet"}, "normalized": {"antidilution_type": "full-ratchet"}}

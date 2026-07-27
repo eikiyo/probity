@@ -1,0 +1,1 @@
+{"label": "gpt-oss-120b-or", "client": "openrouter", "model_id": "openai/gpt-oss-120b", "temperature": 0.1, "exit_code": 0, "seconds": null, "recorded": 9400, "owed": 9400, "holes": 0, "complete": true, "balance_before": 42.81, "balance_after": 42.310287531, "provenance": "reconstructed", "measured_spend_usd": 0.4997}

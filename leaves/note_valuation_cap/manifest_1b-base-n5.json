@@ -1,0 +1,9 @@
+{
+ "leaf": "note_valuation_cap",
+ "model": "1b-base-n5",
+ "task_name": "note_valuation_cap",
+ "data_version": "4c6c8e4c4e983cb42e7d94d9c5376b38d185f99a3370728924122d9268cfecab",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:32:57.173486+00:00"
+}

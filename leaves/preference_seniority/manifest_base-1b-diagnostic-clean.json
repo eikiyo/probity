@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "base-1b-diagnostic-clean",
+ "task_name": "preference_seniority",
+ "data_version": "9dbbfd62afc25370b52f6aab8883dd61d857a9a888eb8e0a30915d55ef82b5df",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:32:39.769886+00:00"
+}

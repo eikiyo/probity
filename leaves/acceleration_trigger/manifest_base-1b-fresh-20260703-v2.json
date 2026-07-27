@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "base-1b-fresh-20260703-v2",
+ "task_name": "acceleration_trigger",
+ "data_version": "49f7cca63b51e0d38fe3bcc14ced570ca6884981c18db8d54534e1d4cb101fab",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:41:38.763905+00:00"
+}

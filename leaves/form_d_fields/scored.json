@@ -599,5 +599,1985 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "tuned-v4": {
+  "model": "tuned-v4",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 2,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-n20": {
+  "model": "tuned-v4-n20",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-final": {
+  "model": "tuned-v4-final",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 10000.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 13,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 0.0,
+       "truth": 70227931.85,
+       "consistency": 0.6153846153846154
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.8076923076923077,
+   "consistency_pct": 80.76923076923077,
+   "field_flips": {
+    "form_d_field_value": 0.5
+   },
+   "parse_failure_count": 26,
+   "parse_failure_rate": 0.65,
+   "valid_run_count": 14,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mlx-base-n20": {
+  "model": "mlx-base-n20",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 40,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r1-iter0025": {
+  "model": "v5-r1-iter0025",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 7,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 0.8571428571428571
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 6,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.9285714285714286,
+   "consistency_pct": 92.85714285714286,
+   "field_flips": {
+    "form_d_field_value": 0.5
+   },
+   "parse_failure_count": 7,
+   "parse_failure_rate": 0.35,
+   "valid_run_count": 13,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r1-iter0050": {
+  "model": "v5-r1-iter0050",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 0,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 2366532.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 70227931.85,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.0,
+   "consistency_pct": 0.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 20,
+   "parse_failure_rate": 1.0,
+   "valid_run_count": 0,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r1-iter0075": {
+  "model": "v5-r1-iter0075",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.9,
+   "consistency_pct": 90.0,
+   "field_flips": {
+    "form_d_field_value": 0.5
+   },
+   "parse_failure_count": 13,
+   "parse_failure_rate": 0.65,
+   "valid_run_count": 7,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r1-iter0100": {
+  "model": "v5-r1-iter0100",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 0.75
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.875,
+   "consistency_pct": 87.5,
+   "field_flips": {
+    "form_d_field_value": 0.5
+   },
+   "parse_failure_count": 11,
+   "parse_failure_rate": 0.55,
+   "valid_run_count": 9,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r2-iter0010": {
+  "model": "v5-r2-iter0010",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 10,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r2-iter0020": {
+  "model": "v5-r2-iter0020",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 2366532.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 5,
+   "parse_failure_rate": 0.5,
+   "valid_run_count": 5,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r2-iter0030": {
+  "model": "v5-r2-iter0030",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.1,
+   "valid_run_count": 9,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r2-iter0040": {
+  "model": "v5-r2-iter0040",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.2,
+   "valid_run_count": 8,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r3-iter0010": {
+  "model": "v5-r3-iter0010",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.1,
+   "valid_run_count": 9,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r3-iter0020": {
+  "model": "v5-r3-iter0020",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 3,
+   "parse_failure_rate": 0.3,
+   "valid_run_count": 7,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r3-iter0030": {
+  "model": "v5-r3-iter0030",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 70227931.85,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 8,
+   "parse_failure_rate": 0.8,
+   "valid_run_count": 2,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r3-iter0040": {
+  "model": "v5-r3-iter0040",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.875,
+   "consistency_pct": 87.5,
+   "field_flips": {
+    "form_d_field_value": 0.5
+   },
+   "parse_failure_count": 4,
+   "parse_failure_rate": 0.4,
+   "valid_run_count": 6,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5r4c-iter0020": {
+  "model": "v5r4c-iter0020",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 3,
+   "parse_failure_rate": 0.3,
+   "valid_run_count": 7,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5r4c-iter0040": {
+  "model": "v5r4c-iter0040",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 0,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 2366532.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 70227931.85,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.0,
+   "consistency_pct": 0.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 10,
+   "parse_failure_rate": 1.0,
+   "valid_run_count": 0,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5r4c-iter0060": {
+  "model": "v5r4c-iter0060",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.875,
+   "consistency_pct": 87.5,
+   "field_flips": {
+    "form_d_field_value": 0.5
+   },
+   "parse_failure_count": 3,
+   "parse_failure_rate": 0.3,
+   "valid_run_count": 7,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5r4c-iter0080": {
+  "model": "v5r4c-iter0080",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 0.5,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 0.0,
+       "truth": 2366532.0,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.75,
+   "consistency_pct": 75.0,
+   "field_flips": {
+    "form_d_field_value": 0.5
+   },
+   "parse_failure_count": 7,
+   "parse_failure_rate": 0.7,
+   "valid_run_count": 3,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r4-r1783110825-iter0020": {
+  "model": "v5-r4-r1783110825-iter0020",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 4,
+   "parse_failure_rate": 0.4,
+   "valid_run_count": 6,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r4-r1783110825-iter0040": {
+  "model": "v5-r4-r1783110825-iter0040",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 0,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 2366532.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 70227931.85,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.0,
+   "consistency_pct": 0.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 9,
+   "parse_failure_rate": 0.9,
+   "valid_run_count": 1,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r4-r1783110825-iter0060": {
+  "model": "v5-r4-r1783110825-iter0060",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 70227931.85,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 9,
+   "parse_failure_rate": 0.9,
+   "valid_run_count": 1,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r4-r1783110825-iter0080": {
+  "model": "v5-r4-r1783110825-iter0080",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 0.5,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 8,
+   "parse_failure_rate": 0.8,
+   "valid_run_count": 2,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "1b-base-n5": {
+  "model": "1b-base-n5",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 10,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "4b-base-n5": {
+  "model": "4b-base-n5",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 10,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "base-1b-diagnostic-clean": {
+  "model": "base-1b-diagnostic-clean",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 10,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "base12-fresh": {
+  "model": "base12-fresh",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 10,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "eos10-target": {
+  "model": "eos10-target",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.1,
+   "valid_run_count": 9,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-26ba4b-or": {
+  "model": "google/gemma-4-26b-a4b-it",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 70227931.85,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
+  }
+ },
+ "qwen3-0.6b-think": {
+  "model": "qwen3:0.6b",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 0.8
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.7,
+   "consistency_pct": 70.0,
+   "field_flips": {
+    "form_d_field_value": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 10,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "qwen3.5-0.8b-think": {
+  "model": "qwen3.5:0.8b",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 0.5,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2380000.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 5,
+   "parse_failure_rate": 0.5,
+   "valid_run_count": 5,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "smollm3-3b-think": {
+  "model": "hf.co/ggml-org/SmolLM3-3B-GGUF:Q4_K_M",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 0.6666666666666666
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.8333333333333333,
+   "consistency_pct": 83.33333333333333,
+   "field_flips": {
+    "form_d_field_value": 0.5
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 6,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "qwen3.5-4b-think": {
+  "model": "qwen3.5:4b",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": null,
+       "truth": 2366532.0,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "form_d_field_value": 0.0
+   },
+   "parse_failure_count": 3,
+   "parse_failure_rate": 0.5,
+   "valid_run_count": 3,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "q06-base-8k": {
+  "model": "q06-base-8k",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 0.6
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.7,
+   "consistency_pct": 70.0,
+   "field_flips": {
+    "form_d_field_value": 1.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 10,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "q06-orpo-eos-8k": {
+  "model": "q06-orpo-eos-8k",
+  "accuracy": {
+   "task": "form_d_fields",
+   "n_instances": 2,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 2366532.0,
+       "truth": 2366532.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "form_d_field_value": {
+       "majority": 70227931.85,
+       "truth": 70227931.85,
+       "consistency": 0.6
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "form_d_fields",
+   "consistency_rate": 0.8,
+   "consistency_pct": 80.0,
+   "field_flips": {
+    "form_d_field_value": 0.5
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 10,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

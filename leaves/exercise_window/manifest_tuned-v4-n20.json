@@ -1,0 +1,9 @@
+{
+ "leaf": "exercise_window",
+ "model": "tuned-v4-n20",
+ "task_name": "exercise_window",
+ "data_version": "2763933c93a0ac5343ab53fd086169eaaa98cc836ab366ff3d0967fe5b0e549f",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:21:58.406491+00:00"
+}

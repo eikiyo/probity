@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "tuned-v4",
+ "task_name": "preference_stack_payout",
+ "data_version": "bbebf822fb0d95407aef67b93f7486d7ebbef7d1a1098e5a56c370b2870952f7",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:01:50.456312+00:00"
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "gpt-oss-120b-or",
+ "task_name": "acceleration_trigger",
+ "data_version": "531094ead7c745dcbc46ae79dc99c62e9334c0be44e85341059a3701a1bb9753",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:25:13.570991+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

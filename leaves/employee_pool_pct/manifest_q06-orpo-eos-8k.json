@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "q06-orpo-eos-8k",
+ "task_name": "employee_pool_pct",
+ "data_version": "eb1cbc952ffd9ebd345c1b40d9143a165708ee0632a924bdc9484952fd89753d",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T11:58:50.255300+00:00"
+}

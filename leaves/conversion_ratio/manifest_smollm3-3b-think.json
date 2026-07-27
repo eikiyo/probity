@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "smollm3-3b-think",
+ "task_name": "conversion_ratio",
+ "data_version": "96457a24b563ef4fe49eb6d14b3c4016d84b8c0e259c40b9b0deb86e9ccfb34b",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T19:16:51.518196+00:00"
+}

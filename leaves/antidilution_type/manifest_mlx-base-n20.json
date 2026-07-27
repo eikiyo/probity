@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_type",
+ "model": "mlx-base-n20",
+ "task_name": "antidilution_type",
+ "data_version": "84614bc78c501af580b0fda0b5e12145c8bfbbdcad5da9a764122577c173f480",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:19:10.237178+00:00"
+}

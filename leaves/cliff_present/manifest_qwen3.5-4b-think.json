@@ -1,0 +1,9 @@
+{
+ "leaf": "cliff_present",
+ "model": "qwen3.5-4b-think",
+ "task_name": "cliff_present",
+ "data_version": "dbbbdcb25da485ad8ffada382be87d0bb3adcdd07e739eb9f9e73398a2cee1c2",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T21:07:42.507139+00:00"
+}

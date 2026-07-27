@@ -2,8 +2,13 @@
  "leaf": "safe_cap_vs_discount_applies",
  "model": "haiku-4.5-direct",
  "task_name": "safe_cap_vs_discount_applies",
- "data_version": "90775892cddd460e46a6c1408639c768d65286e3a862581d0c57abd3fe1a9823",
+ "data_version": "061d028bb625878dad432f68d48f812db7b81c11a3fc3579dafdf2076ed10f5f",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T22:48:18.836125+00:00"
+ "timestamp": "2026-07-27T13:00:37.359142+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.7
+ }
 }

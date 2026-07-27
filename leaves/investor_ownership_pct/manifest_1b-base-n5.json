@@ -1,0 +1,9 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "1b-base-n5",
+ "task_name": "investor_ownership_pct",
+ "data_version": "a1a010b01dc1306692bc32de37f410d86b689d6bac10c1a08a33d698d252b48b",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:29:53.271817+00:00"
+}

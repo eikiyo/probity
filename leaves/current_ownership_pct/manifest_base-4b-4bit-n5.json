@@ -1,0 +1,9 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "base-4b-4bit-n5",
+ "task_name": "current_ownership_pct",
+ "data_version": "ae90d2472e8c344db6bcc81fffdb1ef5cb623993fb91cb7a2ff778aa88d50a60",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T14:20:19.381928+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "information_rights",
+ "model": "tuned-v4-n20",
+ "task_name": "information_rights",
+ "data_version": "951efecf6f17a9456fb4a05550c6ad2e0b4bb19f70c0deac99df9b8bb8f74ca4",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:28:08.092828+00:00"
+}

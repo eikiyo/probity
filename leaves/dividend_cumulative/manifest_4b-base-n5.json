@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "4b-base-n5",
+ "task_name": "dividend_cumulative",
+ "data_version": "6e4692fd20aaa077e8693a85f42b0f1111c177f1cbe4740e602d451c08761a48",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:24:40.954616+00:00"
+}

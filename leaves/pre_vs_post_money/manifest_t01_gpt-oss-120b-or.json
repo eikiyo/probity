@@ -1,0 +1,14 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "gpt-oss-120b-or",
+ "task_name": "pre_vs_post_money",
+ "data_version": "07ccd17f68519a4c6b63df5a4de11fc6eaa512cca1751c92b742da52d5e54041",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:45:04.764495+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

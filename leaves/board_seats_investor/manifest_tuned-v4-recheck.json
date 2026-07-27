@@ -1,0 +1,9 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "tuned-v4-recheck",
+ "task_name": "board_seats_investor",
+ "data_version": "50c4fbec4bc0cc0914f68a529822f025901fd75a4f8628074500d661c8d757d0",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T15:57:19.263370+00:00"
+}

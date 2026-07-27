@@ -1,0 +1,50 @@
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "civitas", "raw_output": "{\"financial_statement_qa\": 1034.0", "parsed": null}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "civitas", "raw_output": "{\"financial_statement_qa\": 105242", "parsed": null}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "civitas", "raw_output": "{\"financial_statement_qa\": 1000", "parsed": null}
+{"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "civitas", "raw_output": "{\"financial_statement_qa\": 1000", "parsed": null}
+{"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "item_id": "civitas", "raw_output": "{\"financial_statement_qa\": 1000.0", "parsed": null}
+{"_key": [0, 5], "instance_idx": 0, "run_idx": 5, "item_id": "civitas", "raw_output": "{\"financial_statement_qa\": 1000.0", "parsed": null}
+{"_key": [0, 6], "instance_idx": 0, "run_idx": 6, "item_id": "civitas", "raw_output": "{\"financial_statement_qa\": 1000.0", "parsed": null}
+{"_key": [0, 7], "instance_idx": 0, "run_idx": 7, "item_id": "civitas", "raw_output": "{\"financial_statement_qa\": 1012773", "parsed": null}
+{"_key": [0, 8], "instance_idx": 0, "run_idx": 8, "item_id": "civitas", "raw_output": "{\"financial_statement_qa\": 1000.0", "parsed": null}
+{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "item_id": "civitas", "raw_output": "{\"financial_statement_qa\": 10000", "parsed": null}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "ignentertainment", "parsed": {"financial_2003": 831.14}, "normalized": {}}
+{"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "ignentertainment", "raw_output": "{\"financial_statement_qa\": 22224", "parsed": null}
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "ignentertainment", "parsed": {"financial_2003": 21944}, "normalized": {}}
+{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "item_id": "ignentertainment", "parsed": {"financial_statement_qa": "0501"}, "normalized": {"financial_statement_qa": 501.0}}
+{"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "item_id": "ignentertainment", "parsed": {"financial_17541": 17541}, "normalized": {}}
+{"_key": [1, 5], "instance_idx": 1, "run_idx": 5, "item_id": "ignentertainment", "raw_output": "{\"financial_2003\": 11272}\n<unused5496>08.15.10212461114156473741}", "parsed": null}
+{"_key": [1, 6], "instance_idx": 1, "run_idx": 6, "item_id": "ignentertainment", "raw_output": "{\"financial_9161411513743131411272.00}", "parsed": null}
+{"_key": [1, 7], "instance_idx": 1, "run_idx": 7, "item_id": "ignentertainment", "raw_output": "{\"financial_916431331196110441649341649349429119611599999", "parsed": null}
+{"_key": [1, 8], "instance_idx": 1, "run_idx": 8, "item_id": "ignentertainment", "raw_output": "ma$$\\7.5998", "parsed": null}
+{"_key": [1, 9], "instance_idx": 1, "run_idx": 9, "item_id": "ignentertainment", "raw_output": "{\"financial_897912181181181446445399445192194982294160599", "parsed": null}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "castlebio", "raw_output": "{\"financial_2018\": 22786", "parsed": null}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "castlebio", "raw_output": "{\"financial_", "parsed": null}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "castlebio", "raw_output": "```json\n{\"financial_2018\": 22786", "parsed": null}
+{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "item_id": "castlebio", "parsed": {"financial_2018": 189827.0}, "normalized": {}}
+{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "item_id": "castlebio", "raw_output": "```json\n{\"financial_2018_data\": 22786", "parsed": null}
+{"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "item_id": "castlebio", "raw_output": "{\"financial_9487436088420614254460064443685747379999999\"}", "parsed": null}
+{"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "item_id": "castlebio", "raw_output": "{\"financial_", "parsed": null}
+{"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "item_id": "castlebio", "parsed": {}, "normalized": {}}
+{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "item_id": "castlebio", "raw_output": "```json\n{\"financial_<unused55>14218458415391827417218058717216160129094", "parsed": null}
+{"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "item_id": "castlebio", "raw_output": "```json\n{\"financial_778449993442181258131857594540431874436951", "parsed": null}
+{"_key": [3, 0], "instance_idx": 3, "run_idx": 0, "item_id": "emageon", "raw_output": "{\"financial_nilvadipine8429140952842914095\"}", "parsed": null}
+{"_key": [3, 1], "instance_idx": 3, "run_idx": 1, "item_id": "emageon", "raw_output": "```json\n{\"financial_audit\": 187.0", "parsed": null}
+{"_key": [3, 2], "instance_idx": 3, "run_idx": 2, "item_id": "emageon", "raw_output": "```json\n{\"financial_ogramDetails\": 1869", "parsed": null}
+{"_key": [3, 3], "instance_idx": 3, "run_idx": 3, "item_id": "emageon", "parsed": {"financial_statement_qa": "12,619"}, "normalized": {"financial_statement_qa": 12619.0}}
+{"_key": [3, 4], "instance_idx": 3, "run_idx": 4, "item_id": "emageon", "parsed": {"financial_statement_qa": "2499"}, "normalized": {"financial_statement_qa": 2499.0}}
+{"_key": [3, 5], "instance_idx": 3, "run_idx": 5, "item_id": "emageon", "raw_output": "{\"financial_statement_qa\": 184", "parsed": null}
+{"_key": [3, 6], "instance_idx": 3, "run_idx": 6, "item_id": "emageon", "raw_output": "{\\\"financial_769246244116615141147159914329911249817692142", "parsed": null}
+{"_key": [3, 7], "instance_idx": 3, "run_idx": 7, "item_id": "emageon", "raw_output": "```json\n{\"financial_statement_qa\": 1869", "parsed": null}
+{"_key": [3, 8], "instance_idx": 3, "run_idx": 8, "item_id": "emageon", "parsed": {"financial_200201": 187.0}, "normalized": {}}
+{"_key": [3, 9], "instance_idx": 3, "run_idx": 9, "item_id": "emageon", "raw_output": "{\"financial_la\u00e7\u00e3o_qa\": \"187", "parsed": null}
+{"_key": [4, 0], "instance_idx": 4, "run_idx": 0, "item_id": "hyrecar", "raw_output": "{\"financial_statement_qa\":3510725", "parsed": null}
+{"_key": [4, 1], "instance_idx": 4, "run_idx": 1, "item_id": "hyrecar", "raw_output": "{\"financial_statement_qa\": 1714183", "parsed": null}
+{"_key": [4, 2], "instance_idx": 4, "run_idx": 2, "item_id": "hyrecar", "raw_output": "{\"financial_statement_qa\": 2018", "parsed": null}
+{"_key": [4, 3], "instance_idx": 4, "run_idx": 3, "item_id": "hyrecar", "raw_output": "{\"financial_statement_qa\": 1714183", "parsed": null}
+{"_key": [4, 4], "instance_idx": 4, "run_idx": 4, "item_id": "hyrecar", "raw_output": "{\"financial_statement_qa\": 1714183.0", "parsed": null}
+{"_key": [4, 5], "instance_idx": 4, "run_idx": 5, "item_id": "hyrecar", "raw_output": "{\"financial_statement_qa\": 314", "parsed": null}
+{"_key": [4, 6], "instance_idx": 4, "run_idx": 6, "item_id": "hyrecar", "parsed": {"financial_statement_qa": "0"}, "normalized": {"financial_statement_qa": 0.0}}
+{"_key": [4, 7], "instance_idx": 4, "run_idx": 7, "item_id": "hyrecar", "parsed": {"financial_statement_qa": "0"}, "normalized": {"financial_statement_qa": 0.0}}
+{"_key": [4, 8], "instance_idx": 4, "run_idx": 8, "item_id": "hyrecar", "raw_output": "{\"financial_statement_qa\": 1414183.0", "parsed": null}
+{"_key": [4, 9], "instance_idx": 4, "run_idx": 9, "item_id": "hyrecar", "raw_output": "{\"financial_statement_qa\": 2234183", "parsed": null}

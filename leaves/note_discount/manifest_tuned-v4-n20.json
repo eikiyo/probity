@@ -1,0 +1,9 @@
+{
+ "leaf": "note_discount",
+ "model": "tuned-v4-n20",
+ "task_name": "note_discount",
+ "data_version": "dd79abe3197e3d50cbd6543622627bbae7d8802984e771f47621882f0849e1ca",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:28:32.991490+00:00"
+}

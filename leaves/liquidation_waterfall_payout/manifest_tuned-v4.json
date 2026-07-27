@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "tuned-v4",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "4d710314f48eaaf06d37d020ae49c4fd490174f219e6cc697270ac5948db5671",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:01:05.888975+00:00"
+}

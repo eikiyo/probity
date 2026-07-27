@@ -1893,10 +1893,12 @@
  },
  "haiku-4.5-direct": {
   "model": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.7,
+  "routing": "direct",
   "accuracy": {
    "task": "safe_pre_post",
    "n_instances": 16,
-   "n_measurable": 10,
+   "n_measurable": 16,
    "accuracy_majority": 1.0,
    "accuracy_strict": 1.0,
    "per_instance": [
@@ -2019,7 +2021,7 @@
     },
     {
      "instance_idx": 9,
-     "n_valid": 19,
+     "n_valid": 20,
      "majority_correct": true,
      "strict_correct": true,
      "fields": {
@@ -2032,79 +2034,79 @@
     },
     {
      "instance_idx": 10,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "safe_cap_type": {
-       "majority": null,
+       "majority": "pre-money",
        "truth": "pre-money",
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 11,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "safe_cap_type": {
-       "majority": null,
+       "majority": "pre-money",
        "truth": "pre-money",
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 12,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "safe_cap_type": {
-       "majority": null,
+       "majority": "pre-money",
        "truth": "pre-money",
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 13,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "safe_cap_type": {
-       "majority": null,
+       "majority": "pre-money",
        "truth": "pre-money",
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 14,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "safe_cap_type": {
-       "majority": null,
+       "majority": "pre-money",
        "truth": "pre-money",
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     },
     {
      "instance_idx": 15,
-     "n_valid": 0,
-     "majority_correct": false,
-     "strict_correct": false,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
      "fields": {
       "safe_cap_type": {
-       "majority": null,
+       "majority": "pre-money",
        "truth": "pre-money",
-       "consistency": 0.0
+       "consistency": 1.0
       }
      }
     }
@@ -2119,13 +2121,14 @@
    },
    "parse_failure_count": 0,
    "parse_failure_rate": 0.0,
-   "valid_run_count": 199,
+   "valid_run_count": 320,
    "measurable": true,
    "excluded_fields": []
   },
+  "temperature_honoured": null,
   "guard": {
-   "tripped": true,
-   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1990, next call ~$0.0010)"
+   "tripped": false,
+   "reason": null
   }
  },
  "gpt-oss-120b-or": {
@@ -2600,6 +2603,1428 @@
   "guard": {
    "tripped": false,
    "reason": null
+  }
+ },
+ "tuned-v4": {
+  "model": "tuned-v4",
+  "accuracy": {
+   "task": "safe_pre_post",
+   "n_instances": 16,
+   "n_measurable": 14,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "pre-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "pre-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_pre_post",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "safe_cap_type": 0.0
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.125,
+   "valid_run_count": 14,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-final": {
+  "model": "tuned-v4-final",
+  "accuracy": {
+   "task": "safe_pre_post",
+   "n_instances": 16,
+   "n_measurable": 11,
+   "accuracy_majority": 0.8181818181818182,
+   "accuracy_strict": 0.45454545454545453,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 10,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 0.9
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 11,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 7,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 0.8571428571428571
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 10,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "post-money",
+       "consistency": 0.7
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 13,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.9230769230769231
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 12,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "pre-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "pre-money",
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_pre_post",
+   "consistency_rate": 0.9133533133533134,
+   "consistency_pct": 91.33533133533133,
+   "field_flips": {
+    "safe_cap_type": 0.3125
+   },
+   "parse_failure_count": 228,
+   "parse_failure_rate": 0.7125,
+   "valid_run_count": 92,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mlx-base-n20": {
+  "model": "mlx-base-n20",
+  "accuracy": {
+   "task": "safe_pre_post",
+   "n_instances": 16,
+   "n_measurable": 16,
+   "accuracy_majority": 0.9375,
+   "accuracy_strict": 0.4375,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.65
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.65
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "pre-money",
+       "consistency": 0.55
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.65
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.6
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_pre_post",
+   "consistency_rate": 0.846875,
+   "consistency_pct": 84.6875,
+   "field_flips": {
+    "safe_cap_type": 0.5625
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 320,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "1b-base-n5": {
+  "model": "1b-base-n5",
+  "accuracy": {
+   "task": "safe_pre_post",
+   "n_instances": 16,
+   "n_measurable": 16,
+   "accuracy_majority": 0.9375,
+   "accuracy_strict": 0.5625,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "pre-money",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.8
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_pre_post",
+   "consistency_rate": 0.8625,
+   "consistency_pct": 86.25,
+   "field_flips": {
+    "safe_cap_type": 0.4375
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "4b-base-n5": {
+  "model": "4b-base-n5",
+  "accuracy": {
+   "task": "safe_pre_post",
+   "n_instances": 16,
+   "n_measurable": 16,
+   "accuracy_majority": 0.9375,
+   "accuracy_strict": 0.875,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "post-money",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "pre-money",
+       "truth": "pre-money",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_pre_post",
+   "consistency_rate": 0.95,
+   "consistency_pct": 95.0,
+   "field_flips": {
+    "safe_cap_type": 0.125
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-26ba4b-or": {
+  "model": "google/gemma-4-26b-a4b-it",
+  "accuracy": {
+   "task": "safe_pre_post",
+   "n_instances": 16,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "safe_cap_type": {
+       "majority": "post-money",
+       "truth": "post-money",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "post-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "pre-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "pre-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "pre-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "pre-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "pre-money",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "safe_cap_type": {
+       "majority": null,
+       "truth": "pre-money",
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "safe_pre_post",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "safe_cap_type": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
   }
  }
 }

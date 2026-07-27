@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "gemma4-12b",
+ "task_name": "flag_full_ratchet",
+ "data_version": "1d4707081e92d55b259313162bb264a6f4fb316c06d0a124af23399dcc133aa6",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:26:43.537343+00:00"
+}

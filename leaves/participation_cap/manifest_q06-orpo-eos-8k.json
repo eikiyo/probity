@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "q06-orpo-eos-8k",
+ "task_name": "participation_cap",
+ "data_version": "8ee7da86d2f0e4e9d3f7939b2ca7774bd53e65b9baf63cc05d452a606dcdc769",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T12:04:35.962475+00:00"
+}

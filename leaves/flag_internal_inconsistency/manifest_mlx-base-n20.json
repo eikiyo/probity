@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "mlx-base-n20",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "d0d7d52b40524154145564592b90e1afa8a6ed0fa68a663577f89e049181f564",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:24:24.930342+00:00"
+}

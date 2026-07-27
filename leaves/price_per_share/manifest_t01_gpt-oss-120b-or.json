@@ -1,0 +1,14 @@
+{
+ "leaf": "price_per_share",
+ "model": "gpt-oss-120b-or",
+ "task_name": "price_per_share",
+ "data_version": "bbd492cb7a65e6a621a5964b7188709d99e3136c25ced89a8dd883f4aa7b8b73",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:40:04.212043+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "tuned-v4-final",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "ed574ae073fbc4093a40c8827c497001e932c404343925a0fcf61fc65f368208",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:09:19.696160+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "securities_exemption",
+ "model": "1b-base-n5",
+ "task_name": "securities_exemption",
+ "data_version": "946d87c775fa2a9323e38ee31474cf04d4ca6888c30775db6d49be5d9dd931f3",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:52:05.099009+00:00"
+}

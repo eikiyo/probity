@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "qwen3-0.6b-think",
+ "task_name": "form_d_fields",
+ "data_version": "4767a6da1d7319980b797a274d8e84c8b77ed970fed1f46af64b59cba86b864e",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T16:09:08.641435+00:00"
+}

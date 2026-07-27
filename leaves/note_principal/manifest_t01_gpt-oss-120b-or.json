@@ -1,0 +1,14 @@
+{
+ "leaf": "note_principal",
+ "model": "gpt-oss-120b-or",
+ "task_name": "note_principal",
+ "data_version": "ee3d9a652f5023df0d09c75c35c09f91810f18950f61f3effd56270b8e7508d1",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:34:20.873963+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

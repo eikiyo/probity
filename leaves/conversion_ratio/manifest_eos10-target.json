@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "eos10-target",
+ "task_name": "conversion_ratio",
+ "data_version": "54dd5b81a151ea2d7955ae71c2690d1bd88c97335871c9b1d4d68e5324dd7ff5",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:10:13.624358+00:00"
+}

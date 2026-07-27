@@ -1,0 +1,9 @@
+{
+ "leaf": "note_principal",
+ "model": "mlx-base-n20",
+ "task_name": "note_principal",
+ "data_version": "2c83d1a67b324d3188ad30540b17bd97f0d4c610d1acf76653a98e8fc479cb8a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:29:02.871465+00:00"
+}

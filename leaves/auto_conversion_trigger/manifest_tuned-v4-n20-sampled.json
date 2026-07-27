@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "tuned-v4-n20-sampled",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "ae9b9378c8754912065a318b246bbd8a5ef2fa1f99051ee49936ed9c503c2c71",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:44:32.996170+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "securities_exemption",
+ "model": "tuned-v4",
+ "task_name": "securities_exemption",
+ "data_version": "0d24841518ae24d3df2fb41d811ffa48cb8fd0daca36661b8219d8976f706968",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:03:15.395808+00:00"
+}

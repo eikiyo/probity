@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "smollm3-3b-think",
+ "task_name": "preference_seniority",
+ "data_version": "50a76204d994fec9edee3be667fe8d338c7f9cec88874abdcb82cf636d535813",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T19:12:35.409813+00:00"
+}

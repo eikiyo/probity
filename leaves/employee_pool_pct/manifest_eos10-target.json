@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "eos10-target",
+ "task_name": "employee_pool_pct",
+ "data_version": "5f382df69876539aac0e9fcf9701576e29ad897b6fdc130a0429b7383e0ce719",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:10:27.133549+00:00"
+}

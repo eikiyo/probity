@@ -1,0 +1,14 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "gpt-oss-120b-or",
+ "task_name": "financial_statement_qa",
+ "data_version": "e3ac85deb30c63aa5134d38dd5f84496c0435c5f31cccf9223225948e40aeb10",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:29:54.226160+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

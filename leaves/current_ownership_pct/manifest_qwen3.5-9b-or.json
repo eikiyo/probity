@@ -1,0 +1,9 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "qwen3.5-9b-or",
+ "task_name": "current_ownership_pct",
+ "data_version": "ee4c3d7fc70cf095c9b2b32390005cb88a465cfab83a3c03d25f9f9ecf551756",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T21:39:21.277666+00:00"
+}

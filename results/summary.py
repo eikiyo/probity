@@ -76,14 +76,23 @@ def _rate(num: int, den: int) -> Optional[float]:
 
 
 def badge(pct: Optional[float], lower_is_better: bool) -> str:
-    """A colored shields.io pill for a percentage -- green/yellow/red by threshold."""
+    """
+    A colored shields.io pill for a percentage -- green/yellow/red by threshold.
+
+    The threshold is compared against the ROUNDED value, the same number the badge prints. It
+    used to compare the raw float while printing `{pct:.0f}`, so two badges reading "85%" could
+    carry different colours depending on invisible digits: 84.97% printed 85% and coloured
+    yellow, while 85.02% printed 85% and coloured green. A badge whose colour contradicts its own
+    label is worse than no badge -- the colour is the part a reader actually scans.
+    """
     if pct is None:
         return "—"
+    shown = round(pct)
     if lower_is_better:
-        color = "brightgreen" if pct < 10 else "yellow" if pct < 30 else "red"
+        color = "brightgreen" if shown < 10 else "yellow" if shown < 30 else "red"
     else:
-        color = "brightgreen" if pct > 85 else "yellow" if pct > 60 else "red"
-    return f"![{pct:.0f}%](https://img.shields.io/badge/-{pct:.0f}%25-{color})"
+        color = "brightgreen" if shown > 85 else "yellow" if shown > 60 else "red"
+    return f"![{shown}%](https://img.shields.io/badge/-{shown}%25-{color})"
 
 
 def aggregate_by_model(arm: Optional[float] = None) -> List[Dict[str, Any]]:

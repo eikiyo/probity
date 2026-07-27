@@ -1,0 +1,5 @@
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "uber_2019_equity_incentive_plan_pool", "raw_output": "<think>\nOkay, let's tackle this problem. The user wants me to compute the percentage of the employee stock option pool out of total shares, using the given data. The formula is (reserved_shares / tota", "parsed": null}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "uber_2019_equity_incentive_plan_pool", "parsed": {"employee_pool_pct": 9.5}, "normalized": {"employee_pool_pct": 9.5}}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "uber_2019_equity_incentive_plan_pool", "parsed": {"employee_pool_pct": 9.4}, "normalized": {"employee_pool_pct": 9.4}}
+{"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "uber_2019_equity_incentive_plan_pool", "parsed": {"employee_pool_pct": 10.48}, "normalized": {"employee_pool_pct": 10.48}}
+{"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "item_id": "uber_2019_equity_incentive_plan_pool", "parsed": {"employee_pool_pct": 95.4}, "normalized": {"employee_pool_pct": 95.4}}

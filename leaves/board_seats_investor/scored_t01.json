@@ -1,0 +1,151 @@
+{
+ "gpt-oss-120b-or": {
+  "model": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "board_seats_investor",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.7777777777777778,
+   "accuracy_strict": 0.6666666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "board_seats_investor": {
+       "majority": 3.0,
+       "truth": 3.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "board_seats_investor": {
+       "majority": 1.0,
+       "truth": 1.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "board_seats_investor": {
+       "majority": 1.0,
+       "truth": 3.0,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "board_seats_investor": {
+       "majority": 1.0,
+       "truth": 1.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "board_seats_investor": {
+       "majority": 1.0,
+       "truth": 1.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "board_seats_investor": {
+       "majority": 1.0,
+       "truth": 2.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "board_seats_investor": {
+       "majority": 5.0,
+       "truth": 5.0,
+       "consistency": 0.95
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "board_seats_investor": {
+       "majority": 9.0,
+       "truth": 9.0,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "board_seats_investor": {
+       "majority": 1.0,
+       "truth": 1.0,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "board_seats_investor",
+   "consistency_rate": 0.9388888888888888,
+   "consistency_pct": 93.88888888888887,
+   "field_flips": {
+    "board_seats_investor": 0.2222222222222222
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

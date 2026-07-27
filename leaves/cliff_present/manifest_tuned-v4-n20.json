@@ -1,0 +1,9 @@
+{
+ "leaf": "cliff_present",
+ "model": "tuned-v4-n20",
+ "task_name": "cliff_present",
+ "data_version": "595542c07af907eb409e30cebf5fc30982d68e9d112a3acebfa52f891b5a07b5",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:20:44.553483+00:00"
+}

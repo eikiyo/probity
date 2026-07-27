@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "1b-base-n5",
+ "task_name": "preference_stack_payout",
+ "data_version": "7074d233adfa73bdd8d65d121ce1c125a6834db607fab15eb9139174ae802088",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:38:31.963075+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "qwen3-0.6b-think",
+ "task_name": "employee_pool_pct",
+ "data_version": "4f9d705fd335a0717b68c5fe9a281769ac770610dbb500c6ede60c2945890235",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T16:09:08.301818+00:00"
+}

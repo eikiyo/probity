@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "1b-base-n5",
+ "task_name": "flag_full_ratchet",
+ "data_version": "3397413b10a8df9dc985668d73a2149d21126d1ee52b56b4a56b6f8ddd2eaef1",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:25:55.845501+00:00"
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "gpt-oss-120b-or",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "6f717f37b27d51520930c14c073efd6cedc43f60adb1102bb2a9dcfe61674432",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:32:35.281393+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

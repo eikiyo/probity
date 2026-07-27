@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "v5-r1-iter0075",
+ "task_name": "participation_cap",
+ "data_version": "ddfff148aafc2e28c56a349d6c72fa67dea0dd6c7757e4a185ad121ac32b4e36",
+ "n_runs": 10,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T19:30:50.023734+00:00"
+}

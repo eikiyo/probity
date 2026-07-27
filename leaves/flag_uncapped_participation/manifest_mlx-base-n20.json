@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "mlx-base-n20",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "33c0d188ebaf8dfbb777c1cdca38ac02a584991f88ef7ae66e0be13cd8cc4e21",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:25:52.530617+00:00"
+}

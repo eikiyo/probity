@@ -65,14 +65,14 @@ def find_holes(labels, temperature):
     return holes
 
 
-def backfill_cell(hole, temperature):
+def backfill_cell(hole, temperature, workers=4):
     """Re-run ONE short cell. run_leaf -> run_model -> harness.run_harness reads the existing
     checkpoint and skips every (instance, run) already present, so only the missing calls are
     billed. Returns the post-run cell status, read back from disk rather than assumed."""
     print(f"\n=== BACKFILL {hole['leaf'].name} / {hole['label']}: "
           f"{hole['recorded']}/{hole['expected']} (+{hole['short_by']} to run) ===", flush=True)
     runner.run_leaf(hole["leaf"], model_set=model_set_for(hole["label"]),
-                    only=hole["label"], temperature=temperature)
+                    only=hole["label"], temperature=temperature, max_workers=workers)
     return coverage.cell_status(hole["leaf"], hole["label"], runner.N_RUNS,
                                 coverage.artifact_suffix(temperature))
 
@@ -94,6 +94,8 @@ def main():
                     help="omit for the LEGACY 0.7 arm (unsuffixed artifacts)")
     p.add_argument("--label", action="append", dest="labels",
                     help="restrict to one label; repeatable. default: the whole lineup")
+    p.add_argument("--workers", type=int, default=4,
+                    help="concurrent calls within a cell")
     p.add_argument("--dry-run", action="store_true", help="report holes, make ZERO calls")
     args = p.parse_args()
 
@@ -109,7 +111,7 @@ def main():
 
     still_short = []
     for h in holes:
-        after = backfill_cell(h, args.temperature)
+        after = backfill_cell(h, args.temperature, args.workers)
         if not after["complete"]:
             still_short.append((h, after))
         else:

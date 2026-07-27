@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "eos10-target",
+ "task_name": "participation_cap",
+ "data_version": "4b170c646797df29863d7abb8c1847709de6fc5d53b20228408a3777b582ad1a",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:10:39.442993+00:00"
+}

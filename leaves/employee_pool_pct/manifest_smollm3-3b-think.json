@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "smollm3-3b-think",
+ "task_name": "employee_pool_pct",
+ "data_version": "f42ed8433b56aa1c70ca9c86f4a481dc6e7d155a83f43dd1ad955567ad2ca125",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T19:06:35.480039+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "note_principal",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "note_principal",
+ "data_version": "03bd552615623b77edfdc8b382b47c558f8a13ffa43ccedd5edbf171cc1e89e2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:45.519711+00:00"
+}

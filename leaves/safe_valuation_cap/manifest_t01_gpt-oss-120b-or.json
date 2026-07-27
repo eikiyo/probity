@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "gpt-oss-120b-or",
+ "task_name": "safe_valuation_cap",
+ "data_version": "8eb842e319b3ae8a5fec762d0c5e76798eb22a5c896c3d96e77933c4e9a9a4ce",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:44:43.203702+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

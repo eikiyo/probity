@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "q06-base-8k",
+ "task_name": "conversion_ratio",
+ "data_version": "b0263e254d335853163d6a32896f05e1f93c70ff00f49ea92edac8538727f5d0",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T11:39:23.212892+00:00"
+}

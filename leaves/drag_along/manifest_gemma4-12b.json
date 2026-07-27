@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "gemma4-12b",
+ "task_name": "drag_along",
+ "data_version": "f5aebb749ffff9c575050f22d03b3281c57d23cf1f86349d1cbe75b2ff2cff77",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:24:59.072830+00:00"
+}

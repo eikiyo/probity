@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "base12-fresh",
+ "task_name": "employee_pool_pct",
+ "data_version": "cd9c133c72bbd1784622c3e8cf4b638a1396f62332d00e41a7c47f1ed7aad2fd",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:09:27.534066+00:00"
+}

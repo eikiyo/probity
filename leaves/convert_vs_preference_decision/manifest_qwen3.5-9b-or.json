@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "qwen3.5-9b-or",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "c14b4faf3aad526b1f171d1ce1dd24dda994505cdd37ac6080563aa683933717",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T21:37:51.275150+00:00"
+}

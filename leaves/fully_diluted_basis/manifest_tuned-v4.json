@@ -1,0 +1,9 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "tuned-v4",
+ "task_name": "fully_diluted_basis",
+ "data_version": "9ec1521e28d6bfb9f033e9b19f1d09ae68b5202fdb130129173a79b471d26b3a",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:01:01.146317+00:00"
+}

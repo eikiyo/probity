@@ -1,0 +1,9 @@
+{
+ "leaf": "protective_provisions",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "protective_provisions",
+ "data_version": "02f64e95070a08e29b17160e30481aa524b29453ad4607ad23a617cc153eea29",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:30:06.795273+00:00"
+}

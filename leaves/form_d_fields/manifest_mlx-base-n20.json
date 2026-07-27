@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "mlx-base-n20",
+ "task_name": "form_d_fields",
+ "data_version": "01a790143b822022549e340de1d80f3315b2bb4ec7bf2d7ec4743f56f3ba2dfa",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:25:56.162273+00:00"
+}

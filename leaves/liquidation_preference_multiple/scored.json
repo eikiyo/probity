@@ -1600,5 +1600,1027 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "tuned-v4": {
+  "model": "tuned-v4",
+  "accuracy": {
+   "task": "liquidation_preference_multiple",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.6666666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "2x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_preference_multiple",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "liquidation_preference_multiple": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 9,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-n20": {
+  "model": "tuned-v4-n20",
+  "accuracy": {
+   "task": "liquidation_preference_multiple",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.6666666666666666,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "2x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_preference_multiple",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "liquidation_preference_multiple": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-final": {
+  "model": "tuned-v4-final",
+  "accuracy": {
+   "task": "liquidation_preference_multiple",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.2222222222222222,
+   "accuracy_strict": 0.1111111111111111,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 15,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 0.8666666666666667
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 10,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "1x",
+       "consistency": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 10,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 10,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "2x",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 12,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "2x",
+       "consistency": 0.8333333333333334
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 7,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "3x",
+       "consistency": 0.8571428571428571
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 4,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "3x",
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_preference_multiple",
+   "consistency_rate": 0.8637566137566136,
+   "consistency_pct": 86.37566137566137,
+   "field_flips": {
+    "liquidation_preference_multiple": 0.6666666666666666
+   },
+   "parse_failure_count": 106,
+   "parse_failure_rate": 0.5888888888888889,
+   "valid_run_count": 74,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mlx-base-n20": {
+  "model": "mlx-base-n20",
+  "accuracy": {
+   "task": "liquidation_preference_multiple",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.5555555555555556,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "2x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_preference_multiple",
+   "consistency_rate": 0.9722222222222222,
+   "consistency_pct": 97.22222222222221,
+   "field_flips": {
+    "liquidation_preference_multiple": 0.1111111111111111
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 180,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "4b-base-n5": {
+  "model": "4b-base-n5",
+  "accuracy": {
+   "task": "liquidation_preference_multiple",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.4444444444444444,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "other",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "2x",
+       "truth": "2x",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "2x",
+       "truth": "2x",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "other",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "other",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_preference_multiple",
+   "consistency_rate": 0.9333333333333331,
+   "consistency_pct": 93.33333333333331,
+   "field_flips": {
+    "liquidation_preference_multiple": 0.2222222222222222
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 45,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "1b-base-n5": {
+  "model": "1b-base-n5",
+  "accuracy": {
+   "task": "liquidation_preference_multiple",
+   "n_instances": 9,
+   "n_measurable": 9,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.5555555555555556,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "2x",
+       "truth": "2x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "3x",
+       "truth": "3x",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_preference_multiple",
+   "consistency_rate": 0.9777777777777779,
+   "consistency_pct": 97.77777777777779,
+   "field_flips": {
+    "liquidation_preference_multiple": 0.1111111111111111
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 45,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-26ba4b-or": {
+  "model": "google/gemma-4-26b-a4b-it",
+  "accuracy": {
+   "task": "liquidation_preference_multiple",
+   "n_instances": 9,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": "1x",
+       "truth": "1x",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": null,
+       "truth": "1x",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": null,
+       "truth": "1x",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": null,
+       "truth": "2x",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": null,
+       "truth": "2x",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": null,
+       "truth": "2x",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": null,
+       "truth": "3x",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": null,
+       "truth": "3x",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "liquidation_preference_multiple": {
+       "majority": null,
+       "truth": "3x",
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "liquidation_preference_multiple",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "liquidation_preference_multiple": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
+  }
  }
 }

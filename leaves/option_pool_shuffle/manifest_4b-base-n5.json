@@ -1,0 +1,9 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "4b-base-n5",
+ "task_name": "option_pool_shuffle",
+ "data_version": "2d37d98a66f5e2d9d1d14e9fb942842d6901f4a820fb60648250a2691413476d",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:33:22.491639+00:00"
+}

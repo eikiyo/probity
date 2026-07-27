@@ -1,0 +1,14 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "gpt-oss-120b-or",
+ "task_name": "per_investor_allocation",
+ "data_version": "f4cf2efce01f8d106573ea1ceaacad0d3c1fcd9bf2c3ac15bc4a717aabc3fea5",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:37:25.056083+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

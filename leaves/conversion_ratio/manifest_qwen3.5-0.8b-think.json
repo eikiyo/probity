@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "qwen3.5-0.8b-think",
+ "task_name": "conversion_ratio",
+ "data_version": "ab44fad3822bd54b6cd659f46fffef394d4ed1b1e140cfe8d2edb7d641e25ee5",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T18:38:31.534931+00:00"
+}

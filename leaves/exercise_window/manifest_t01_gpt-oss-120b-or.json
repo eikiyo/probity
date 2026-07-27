@@ -1,0 +1,14 @@
+{
+ "leaf": "exercise_window",
+ "model": "gpt-oss-120b-or",
+ "task_name": "exercise_window",
+ "data_version": "4ab86fdd7f9ff44994a71af27e8bea68c5f7da01b6209f7b2f03967968af6789",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:25:24.454316+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

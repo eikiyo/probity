@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "4b-base-n5",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "8f2ca89ab1082eafbe97252642d5a4dc5f8efbe141de019d30e5fb1a9f1031fd",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:30:21.955627+00:00"
+}

@@ -1,0 +1,180 @@
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 5], "instance_idx": 0, "run_idx": 5, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 6], "instance_idx": 0, "run_idx": 6, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "2x"}, "normalized": {"liquidation_preference_multiple": "2x"}}
+{"_key": [0, 7], "instance_idx": 0, "run_idx": 7, "item_id": "1236997_000106299308001834", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"1x\" | \"other\" | \"other", "parsed": null}
+{"_key": [0, 8], "instance_idx": 0, "run_idx": 8, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "item_id": "1236997_000106299308001834", "raw_output": "{\n119 | 40 | 40 | no-other", "parsed": null}
+{"_key": [0, 10], "instance_idx": 0, "run_idx": 10, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 11], "instance_idx": 0, "run_idx": 11, "item_id": "1236997_000106299308001834", "raw_output": "0000", "parsed": null}
+{"_key": [0, 12], "instance_idx": 0, "run_idx": 12, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 13], "instance_idx": 0, "run_idx": 13, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 14], "instance_idx": 0, "run_idx": 14, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "2x"}, "normalized": {"liquidation_preference_multiple": "2x"}}
+{"_key": [0, 15], "instance_idx": 0, "run_idx": 15, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "item_id": "1236997_000106299308001834", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [0, 18], "instance_idx": 0, "run_idx": 18, "item_id": "1236997_000106299308001834", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "item_id": "1236997_000106299308001834", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "1283259_000149315225016953", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "1283259_000149315225016953", "raw_output": "2.0", "parsed": null}
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "1283259_000149315225016953", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "item_id": "1283259_000149315225016953", "raw_output": "{\"liquidation_preference_multiple\": \"1x", "parsed": null}
+{"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "item_id": "1283259_000149315225016953", "raw_output": "", "parsed": null}
+{"_key": [1, 5], "instance_idx": 1, "run_idx": 5, "item_id": "1283259_000149315225016953", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [1, 6], "instance_idx": 1, "run_idx": 6, "item_id": "1283259_000149315225016953", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [1, 7], "instance_idx": 1, "run_idx": 7, "item_id": "1283259_000149315225016953", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [1, 8], "instance_idx": 1, "run_idx": 8, "item_id": "1283259_000149315225016953", "raw_output": "6", "parsed": null}
+{"_key": [1, 9], "instance_idx": 1, "run_idx": 9, "item_id": "1283259_000149315225016953", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [1, 10], "instance_idx": 1, "run_idx": 10, "item_id": "1283259_000149315225016953", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [1, 11], "instance_idx": 1, "run_idx": 11, "item_id": "1283259_000149315225016953", "raw_output": "```json\n{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [1, 12], "instance_idx": 1, "run_idx": 12, "item_id": "1283259_000149315225016953", "raw_output": "{\"liquidation_preference_multiple\": \"1x", "parsed": null}
+{"_key": [1, 13], "instance_idx": 1, "run_idx": 13, "item_id": "1283259_000149315225016953", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "item_id": "1283259_000149315225016953", "raw_output": "01000", "parsed": null}
+{"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "item_id": "1283259_000149315225016953", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "item_id": "1283259_000149315225016953", "raw_output": "{\"liquidation_preference_multiple\": \"1x", "parsed": null}
+{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "item_id": "1283259_000149315225016953", "raw_output": "{\"liquidation_preference_multiple\": \"1x", "parsed": null}
+{"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "item_id": "1283259_000149315225016953", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "item_id": "1283259_000149315225016953", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "1479290_000119312514020967", "parsed": {"liquidation_preference_multiple": "3x"}, "normalized": {"liquidation_preference_multiple": "3x"}}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x\")", "parsed": null}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x\")", "parsed": null}
+{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidations_preference_multiple\": \"3x", "parsed": null}
+{"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "item_id": "1479290_000119312514020967", "raw_output": "{\n3x: \"3x", "parsed": null}
+{"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x\")", "parsed": null}
+{"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "item_id": "1479290_000119312514020967", "parsed": {"liquidations_preference_multiple": "3x"}, "normalized": {}}
+{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"other", "parsed": null}
+{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [2, 12], "instance_idx": 2, "run_idx": 12, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [2, 13], "instance_idx": 2, "run_idx": 13, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [2, 14], "instance_idx": 2, "run_idx": 14, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"1x\" | \"other\" | \"non-participing", "parsed": null}
+{"_key": [2, 15], "instance_idx": 2, "run_idx": 15, "item_id": "1479290_000119312514020967", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [2, 16], "instance_idx": 2, "run_idx": 16, "item_id": "1479290_000119312514020967", "raw_output": "```json\n{\"liquidation_preference_multiple\": \"1x", "parsed": null}
+{"_key": [2, 17], "instance_idx": 2, "run_idx": 17, "item_id": "1479290_000119312514020967", "parsed": {"liquidation_preference_multiple": "3x"}, "normalized": {"liquidation_preference_multiple": "3x"}}
+{"_key": [2, 18], "instance_idx": 2, "run_idx": 18, "item_id": "1479290_000119312514020967", "raw_output": "{\"\nconcavated_preferred_stock_take_profit\": \"3x", "parsed": null}
+{"_key": [2, 19], "instance_idx": 2, "run_idx": 19, "item_id": "1479290_000119312514020967", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [3, 0], "instance_idx": 3, "run_idx": 0, "item_id": "1538716_000119312519245313", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"other", "parsed": null}
+{"_key": [3, 1], "instance_idx": 3, "run_idx": 1, "item_id": "1538716_000119312519245313", "raw_output": "{\"\n\\c{1x|2x|3x}", "parsed": null}
+{"_key": [3, 2], "instance_idx": 3, "run_idx": 2, "item_id": "1538716_000119312519245313", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [3, 3], "instance_idx": 3, "run_idx": 3, "item_id": "1538716_000119312519245313", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [3, 4], "instance_idx": 3, "run_idx": 4, "item_id": "1538716_000119312519245313", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [3, 5], "instance_idx": 3, "run_idx": 5, "item_id": "1538716_000119312519245313", "raw_output": "{\"liquidation_preference_multiple\": \"3x\"", "parsed": null}
+{"_key": [3, 6], "instance_idx": 3, "run_idx": 6, "item_id": "1538716_000119312519245313", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [3, 7], "instance_idx": 3, "run_idx": 7, "item_id": "1538716_000119312519245313", "raw_output": "```json", "parsed": null}
+{"_key": [3, 8], "instance_idx": 3, "run_idx": 8, "item_id": "1538716_000119312519245313", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [3, 9], "instance_idx": 3, "run_idx": 9, "item_id": "1538716_000119312519245313", "raw_output": "{\"liquidations_preference_multiple\": \"3x", "parsed": null}
+{"_key": [3, 10], "instance_idx": 3, "run_idx": 10, "item_id": "1538716_000119312519245313", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [3, 11], "instance_idx": 3, "run_idx": 11, "item_id": "1538716_000119312519245313", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [3, 12], "instance_idx": 3, "run_idx": 12, "item_id": "1538716_000119312519245313", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [3, 13], "instance_idx": 3, "run_idx": 13, "item_id": "1538716_000119312519245313", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"non-participing", "parsed": null}
+{"_key": [3, 14], "instance_idx": 3, "run_idx": 14, "item_id": "1538716_000119312519245313", "raw_output": "```json\n{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"1x\" | \"other\"", "parsed": null}
+{"_key": [3, 15], "instance_idx": 3, "run_idx": 15, "item_id": "1538716_000119312519245313", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [3, 16], "instance_idx": 3, "run_idx": 16, "item_id": "1538716_000119312519245313", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [3, 17], "instance_idx": 3, "run_idx": 17, "item_id": "1538716_000119312519245313", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [3, 18], "instance_idx": 3, "run_idx": 18, "item_id": "1538716_000119312519245313", "raw_output": "```json\n{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"1x", "parsed": null}
+{"_key": [3, 19], "instance_idx": 3, "run_idx": 19, "item_id": "1538716_000119312519245313", "raw_output": "{\"\n2x", "parsed": null}
+{"_key": [4, 0], "instance_idx": 4, "run_idx": 0, "item_id": "1883085_000188308524000060", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [4, 1], "instance_idx": 4, "run_idx": 1, "item_id": "1883085_000188308524000060", "raw_output": "```json\n{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [4, 2], "instance_idx": 4, "run_idx": 2, "item_id": "1883085_000188308524000060", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [4, 3], "instance_idx": 4, "run_idx": 3, "item_id": "1883085_000188308524000060", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [4, 4], "instance_idx": 4, "run_idx": 4, "item_id": "1883085_000188308524000060", "raw_output": "{\"\n32.0", "parsed": null}
+{"_key": [4, 5], "instance_idx": 4, "run_idx": 5, "item_id": "1883085_000188308524000060", "raw_output": "```json\n{\"liquidation_preference_multiple\": \"3x\")", "parsed": null}
+{"_key": [4, 6], "instance_idx": 4, "run_idx": 6, "item_id": "1883085_000188308524000060", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [4, 7], "instance_idx": 4, "run_idx": 7, "item_id": "1883085_000188308524000060", "raw_output": "```json", "parsed": null}
+{"_key": [4, 8], "instance_idx": 4, "run_idx": 8, "item_id": "1883085_000188308524000060", "raw_output": "{\"\n3x", "parsed": null}
+{"_key": [4, 9], "instance_idx": 4, "run_idx": 9, "item_id": "1883085_000188308524000060", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [4, 10], "instance_idx": 4, "run_idx": 10, "item_id": "1883085_000188308524000060", "parsed": {"liquidation_preference_multiple": "3x"}, "normalized": {"liquidation_preference_multiple": "3x"}}
+{"_key": [4, 11], "instance_idx": 4, "run_idx": 11, "item_id": "1883085_000188308524000060", "raw_output": "6.0", "parsed": null}
+{"_key": [4, 12], "instance_idx": 4, "run_idx": 12, "item_id": "1883085_000188308524000060", "raw_output": "```json\n{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"0x\" | \"other\" }", "parsed": null}
+{"_key": [4, 13], "instance_idx": 4, "run_idx": 13, "item_id": "1883085_000188308524000060", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [4, 14], "instance_idx": 4, "run_idx": 14, "item_id": "1883085_000188308524000060", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [4, 15], "instance_idx": 4, "run_idx": 15, "item_id": "1883085_000188308524000060", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [4, 16], "instance_idx": 4, "run_idx": 16, "item_id": "1883085_000188308524000060", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [4, 17], "instance_idx": 4, "run_idx": 17, "item_id": "1883085_000188308524000060", "parsed": {"liquidation_preference_multiple": "2x"}, "normalized": {"liquidation_preference_multiple": "2x"}}
+{"_key": [4, 18], "instance_idx": 4, "run_idx": 18, "item_id": "1883085_000188308524000060", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [4, 19], "instance_idx": 4, "run_idx": 19, "item_id": "1883085_000188308524000060", "raw_output": "```json", "parsed": null}
+{"_key": [5, 0], "instance_idx": 5, "run_idx": 0, "item_id": "1904616_000121390023031361", "raw_output": "[3x", "parsed": null}
+{"_key": [5, 1], "instance_idx": 5, "run_idx": 1, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [5, 2], "instance_idx": 5, "run_idx": 2, "item_id": "1904616_000121390023031361", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [5, 3], "instance_idx": 5, "run_idx": 3, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [5, 4], "instance_idx": 5, "run_idx": 4, "item_id": "1904616_000121390023031361", "raw_output": "```", "parsed": null}
+{"_key": [5, 5], "instance_idx": 5, "run_idx": 5, "item_id": "1904616_000121390023031361", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [5, 6], "instance_idx": 5, "run_idx": 6, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [5, 7], "instance_idx": 5, "run_idx": 7, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [5, 8], "instance_idx": 5, "run_idx": 8, "item_id": "1904616_000121390023031361", "raw_output": "```\n{\"liquidation_preference_multiple\": \"2x", "parsed": null}
+{"_key": [5, 9], "instance_idx": 5, "run_idx": 9, "item_id": "1904616_000121390023031361", "raw_output": "```json\n{\"liquidation_preference_multiple\": \"2x", "parsed": null}
+{"_key": [5, 10], "instance_idx": 5, "run_idx": 10, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "2x"}, "normalized": {"liquidation_preference_multiple": "2x"}}
+{"_key": [5, 11], "instance_idx": 5, "run_idx": 11, "item_id": "1904616_000121390023031361", "raw_output": "{\"liuction_preference_multiple\": \"3x", "parsed": null}
+{"_key": [5, 12], "instance_idx": 5, "run_idx": 12, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [5, 13], "instance_idx": 5, "run_idx": 13, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [5, 14], "instance_idx": 5, "run_idx": 14, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [5, 15], "instance_idx": 5, "run_idx": 15, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [5, 16], "instance_idx": 5, "run_idx": 16, "item_id": "1904616_000121390023031361", "raw_output": "{\"take-home_no-1x_or-2x_or_3x_or-other\": \"3x", "parsed": null}
+{"_key": [5, 17], "instance_idx": 5, "run_idx": 17, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [5, 18], "instance_idx": 5, "run_idx": 18, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [5, 19], "instance_idx": 5, "run_idx": 19, "item_id": "1904616_000121390023031361", "parsed": {"liquidation_preference_multiple": "2x"}, "normalized": {"liquidation_preference_multiple": "2x"}}
+{"_key": [6, 0], "instance_idx": 6, "run_idx": 0, "item_id": "1062195_000110465903012203", "raw_output": "{\"\n0.0", "parsed": null}
+{"_key": [6, 1], "instance_idx": 6, "run_idx": 1, "item_id": "1062195_000110465903012203", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [6, 2], "instance_idx": 6, "run_idx": 2, "item_id": "1062195_000110465903012203", "parsed": {"liquidation_preference_multiple": "2x"}, "normalized": {"liquidation_preference_multiple": "2x"}}
+{"_key": [6, 3], "instance_idx": 6, "run_idx": 3, "item_id": "1062195_000110465903012203", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [6, 4], "instance_idx": 6, "run_idx": 4, "item_id": "1062195_000110465903012203", "raw_output": "{\"liquidations_preference_multiple\": \"3x", "parsed": null}
+{"_key": [6, 5], "instance_idx": 6, "run_idx": 5, "item_id": "1062195_000110465903012203", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [6, 6], "instance_idx": 6, "run_idx": 6, "item_id": "1062195_000110465903012203", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"other", "parsed": null}
+{"_key": [6, 7], "instance_idx": 6, "run_idx": 7, "item_id": "1062195_000110465903012203", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [6, 8], "instance_idx": 6, "run_idx": 8, "item_id": "1062195_000110465903012203", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [6, 9], "instance_idx": 6, "run_idx": 9, "item_id": "1062195_000110465903012203", "raw_output": "{\"\nstock_0.0", "parsed": null}
+{"_key": [6, 10], "instance_idx": 6, "run_idx": 10, "item_id": "1062195_000110465903012203", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [6, 11], "instance_idx": 6, "run_idx": 11, "item_id": "1062195_000110465903012203", "raw_output": "{\"\n\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"1x\" | \"other\" | \"non-participing", "parsed": null}
+{"_key": [6, 12], "instance_idx": 6, "run_idx": 12, "item_id": "1062195_000110465903012203", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [6, 13], "instance_idx": 6, "run_idx": 13, "item_id": "1062195_000110465903012203", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [6, 14], "instance_idx": 6, "run_idx": 14, "item_id": "1062195_000110465903012203", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [6, 15], "instance_idx": 6, "run_idx": 15, "item_id": "1062195_000110465903012203", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [6, 16], "instance_idx": 6, "run_idx": 16, "item_id": "1062195_000110465903012203", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"other", "parsed": null}
+{"_key": [6, 17], "instance_idx": 6, "run_idx": 17, "item_id": "1062195_000110465903012203", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"1x\" | \"other\" | \"other", "parsed": null}
+{"_key": [6, 18], "instance_idx": 6, "run_idx": 18, "item_id": "1062195_000110465903012203", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"1x\"", "parsed": null}
+{"_key": [6, 19], "instance_idx": 6, "run_idx": 19, "item_id": "1062195_000110465903012203", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [7, 0], "instance_idx": 7, "run_idx": 0, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [7, 1], "instance_idx": 7, "run_idx": 1, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [7, 2], "instance_idx": 7, "run_idx": 2, "item_id": "1274991_000119312510075918", "raw_output": "{\"\n0.0", "parsed": null}
+{"_key": [7, 3], "instance_idx": 7, "run_idx": 3, "item_id": "1274991_000119312510075918", "raw_output": "{\"\n3x", "parsed": null}
+{"_key": [7, 4], "instance_idx": 7, "run_idx": 4, "item_id": "1274991_000119312510075918", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [7, 5], "instance_idx": 7, "run_idx": 5, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"non-participing", "parsed": null}
+{"_key": [7, 6], "instance_idx": 7, "run_idx": 6, "item_id": "1274991_000119312510075918", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [7, 7], "instance_idx": 7, "run_idx": 7, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [7, 8], "instance_idx": 7, "run_idx": 8, "item_id": "1274991_000119312510075918", "raw_output": "{\"\n3x", "parsed": null}
+{"_key": [7, 9], "instance_idx": 7, "run_idx": 9, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [7, 10], "instance_idx": 7, "run_idx": 10, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [7, 11], "instance_idx": 7, "run_idx": 11, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [7, 12], "instance_idx": 7, "run_idx": 12, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [7, 13], "instance_idx": 7, "run_idx": 13, "item_id": "1274991_000119312510075918", "raw_output": "{\"\n3.0", "parsed": null}
+{"_key": [7, 14], "instance_idx": 7, "run_idx": 14, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3", "parsed": null}
+{"_key": [7, 15], "instance_idx": 7, "run_idx": 15, "item_id": "1274991_000119312510075918", "raw_output": "{\"\n3x", "parsed": null}
+{"_key": [7, 16], "instance_idx": 7, "run_idx": 16, "item_id": "1274991_000119312510075918", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [7, 17], "instance_idx": 7, "run_idx": 17, "item_id": "1274991_000119312510075918", "parsed": {"liquidation_preference_multiple": "3x"}, "normalized": {"liquidation_preference_multiple": "3x"}}
+{"_key": [7, 18], "instance_idx": 7, "run_idx": 18, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\"| \"non-participing", "parsed": null}
+{"_key": [7, 19], "instance_idx": 7, "run_idx": 19, "item_id": "1274991_000119312510075918", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [8, 0], "instance_idx": 8, "run_idx": 0, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"3x", "parsed": null}
+{"_key": [8, 1], "instance_idx": 8, "run_idx": 1, "item_id": "1447362_000114036119009024", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [8, 2], "instance_idx": 8, "run_idx": 2, "item_id": "1447362_000114036119009024", "raw_output": "{\"\n  \"\n", "parsed": null}
+{"_key": [8, 3], "instance_idx": 8, "run_idx": 3, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidations_preference_multiple\": \"3x", "parsed": null}
+{"_key": [8, 4], "instance_idx": 8, "run_idx": 4, "item_id": "1447362_000114036119009024", "parsed": {"liquidation_preference_multiple": "1x"}, "normalized": {"liquidation_preference_multiple": "1x"}}
+{"_key": [8, 5], "instance_idx": 8, "run_idx": 5, "item_id": "1447362_000114036119009024", "raw_output": "{\"\n\"liquidations_preference_multiple\": \"3x\" |\n\"1x\": \"1x\" |", "parsed": null}
+{"_key": [8, 6], "instance_idx": 8, "run_idx": 6, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"3x", "parsed": null}
+{"_key": [8, 7], "instance_idx": 8, "run_idx": 7, "item_id": "1447362_000114036119009024", "raw_output": "{\"\n0.0", "parsed": null}
+{"_key": [8, 8], "instance_idx": 8, "run_idx": 8, "item_id": "1447362_000114036119009024", "raw_output": "{\"\n3x | 3x | 3x | 3x | other", "parsed": null}
+{"_key": [8, 9], "instance_idx": 8, "run_idx": 9, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidation_preference_multiple\": \"3x\"| \"2x\"| \"3x\"| \"other\"", "parsed": null}
+{"_key": [8, 10], "instance_idx": 8, "run_idx": 10, "item_id": "1447362_000114036119009024", "raw_output": "{\"\nfalse|1x|2x|3x|other", "parsed": null}
+{"_key": [8, 11], "instance_idx": 8, "run_idx": 11, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"3.0", "parsed": null}
+{"_key": [8, 12], "instance_idx": 8, "run_idx": 12, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"non-participing", "parsed": null}
+{"_key": [8, 13], "instance_idx": 8, "run_idx": 13, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"1x\" | \"2x\" | \"other\"", "parsed": null}
+{"_key": [8, 14], "instance_idx": 8, "run_idx": 14, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"3x", "parsed": null}
+{"_key": [8, 15], "instance_idx": 8, "run_idx": 15, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidation_preference_multiple\": \"3x", "parsed": null}
+{"_key": [8, 16], "instance_idx": 8, "run_idx": 16, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidation_preference_multiple\": \"3x\"", "parsed": null}
+{"_key": [8, 17], "instance_idx": 8, "run_idx": 17, "item_id": "1447362_000114036119009024", "raw_output": "{\"\n  \"liquidation_preference_multiple\": \"3x\" | \"2x\" | \"3x\" | \"other\" | \"3x\"", "parsed": null}
+{"_key": [8, 18], "instance_idx": 8, "run_idx": 18, "item_id": "1447362_000114036119009024", "raw_output": "```json\n{\"liquidations_multiple\": \"3x\" | \"1x\" | \"2x\" | \"3x\" | \"other", "parsed": null}
+{"_key": [8, 19], "instance_idx": 8, "run_idx": 19, "item_id": "1447362_000114036119009024", "raw_output": "{\"liquidations_preference_multiple\": \"3x\" | \"1x\" | \"2x\" | \"other\" | \"non-participating", "parsed": null}

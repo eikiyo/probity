@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "4b-base-n5",
+ "task_name": "safe_mfn_present",
+ "data_version": "a9dfaa1493d456d64a73df451721d86e56f433541cf38e1225189eb0c4df0575",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:50:21.076118+00:00"
+}

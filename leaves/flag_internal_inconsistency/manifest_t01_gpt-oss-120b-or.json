@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "gpt-oss-120b-or",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "321989a935ff647f6534a0edd7c317a18855455c73e3646c16cc6fb3076c99cd",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:25:43.937847+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

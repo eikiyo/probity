@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "base-1b-diagnostic-clean",
+ "task_name": "employee_pool_pct",
+ "data_version": "e9a5b6ca7069e89cb658f4a82be8150d7a78fb553f192464133c450d1d3b4dcc",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:31:12.793688+00:00"
+}

@@ -2,8 +2,13 @@
  "leaf": "participation_type",
  "model": "gemini3-flash-or",
  "task_name": "participation_type",
- "data_version": "e68dfa063cb8dea7299a2ccfc555cbfcdb53f72245c0e9b1aefea889b5ce70c5",
+ "data_version": "5f58d94421e9ba9d19620667d4cd58f58f4e88865332dd972e669f308dd26e72",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T22:32:35.905507+00:00"
+ "timestamp": "2026-07-27T13:00:14.498805+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "google/gemini-3-flash-preview",
+  "temperature_requested": 0.7
+ }
 }

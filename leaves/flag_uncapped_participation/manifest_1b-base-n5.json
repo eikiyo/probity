@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_uncapped_participation",
+ "model": "1b-base-n5",
+ "task_name": "flag_uncapped_participation",
+ "data_version": "1494108c7b9e0ca48f5bbc4c7fc3b0809f903c9ff9ee48e063ce49d8a4d40044",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:28:08.617787+00:00"
+}

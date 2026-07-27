@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "base-1b-fresh-20260703-v2",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "2896efc0260ae0368082ffd2375c2c3567633a3975766d3e200bedcd6cad6f00",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:45:45.816540+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "information_rights",
+ "model": "1b-base-n5",
+ "task_name": "information_rights",
+ "data_version": "50ce8770133e9146f2d63576e4d0f652b50c59ae96560a11ebca35acf984a6ba",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:29:41.870514+00:00"
+}

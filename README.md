@@ -101,10 +101,10 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 
 | Category | Tests | **Wobble** ↓ (all models) | Accuracy (all models) |
 |---|---|---|---|
-| Priced equity rounds | 16 | ![10%](https://img.shields.io/badge/-10%25-brightgreen) | ![85%](https://img.shields.io/badge/-85%25-brightgreen) |
-| SAFEs & convertible notes | 12 | ![7%](https://img.shields.io/badge/-7%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
+| Priced equity rounds | 16 | ![10%](https://img.shields.io/badge/-10%25-yellow) | ![85%](https://img.shields.io/badge/-85%25-yellow) |
+| SAFEs & convertible notes | 12 | ![6%](https://img.shields.io/badge/-6%25-brightgreen) | ![95%](https://img.shields.io/badge/-95%25-brightgreen) |
 | Cap table math | 7 | ![22%](https://img.shields.io/badge/-22%25-yellow) | ![80%](https://img.shields.io/badge/-80%25-yellow) |
-| Investor rights & governance | 7 | ![10%](https://img.shields.io/badge/-10%25-brightgreen) | ![88%](https://img.shields.io/badge/-88%25-brightgreen) |
+| Investor rights & governance | 7 | ![10%](https://img.shields.io/badge/-10%25-yellow) | ![88%](https://img.shields.io/badge/-88%25-brightgreen) |
 | Founder & employee vesting | 5 | ![8%](https://img.shields.io/badge/-8%25-brightgreen) | ![93%](https://img.shields.io/badge/-93%25-brightgreen) |
 | Regulatory disclosures | 5 | ![18%](https://img.shields.io/badge/-18%25-yellow) | ![89%](https://img.shields.io/badge/-89%25-brightgreen) |
 | Off-market risk flags | 5 | ![7%](https://img.shields.io/badge/-7%25-brightgreen) | ![82%](https://img.shields.io/badge/-82%25-yellow) |

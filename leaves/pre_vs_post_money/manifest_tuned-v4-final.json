@@ -1,0 +1,9 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "tuned-v4-final",
+ "task_name": "pre_vs_post_money",
+ "data_version": "1ea9ba2e62bf2e68606eefbdc54d34dcebda7f31fc7ca7dde3e35e168948e39c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:02:51.570697+00:00"
+}

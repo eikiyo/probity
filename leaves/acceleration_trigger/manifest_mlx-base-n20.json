@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "mlx-base-n20",
+ "task_name": "acceleration_trigger",
+ "data_version": "5b89ff6527a7b7f27b430e18fada3d3867f0cb75ffbe14ece745349d68fcd182",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:18:15.659687+00:00"
+}

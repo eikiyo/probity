@@ -1,0 +1,9 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "1b-base-n5",
+ "task_name": "pro_rata_rights",
+ "data_version": "93561ee91af0a316fad4b9ea698b27d1b85cfd8173f9f8b764794fb5e46812ea",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:40:13.963262+00:00"
+}

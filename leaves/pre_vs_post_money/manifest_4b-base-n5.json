@@ -1,0 +1,9 @@
+{
+ "leaf": "pre_vs_post_money",
+ "model": "4b-base-n5",
+ "task_name": "pre_vs_post_money",
+ "data_version": "ac6a7ab129e50760cef24933a658f91d31333c2278ca328ba9fe8bd8b1d85cc1",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:38:17.973880+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "redemption_rights",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "redemption_rights",
+ "data_version": "b49fd73e71a441e7c6e748de2843c27bec56d1361dd22e012ceff1ce02f1b2e1",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:30:13.304933+00:00"
+}

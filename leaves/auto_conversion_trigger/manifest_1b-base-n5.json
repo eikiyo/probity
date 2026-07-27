@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "1b-base-n5",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "7374101f9f2bfec35e78e480428559d624a60fc2cd54d3e6bb94366869d92437",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:20:00.759795+00:00"
+}

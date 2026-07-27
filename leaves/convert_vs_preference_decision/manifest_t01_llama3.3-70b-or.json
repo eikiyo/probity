@@ -1,0 +1,14 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "llama3.3-70b-or",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "0fb115ed4b1204e3176cf1e7a2294d761b04287d4849d5058addf4c4c3412a86",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T13:03:16.938718+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "meta-llama/llama-3.3-70b-instruct",
+  "temperature_requested": 0.1
+ }
+}

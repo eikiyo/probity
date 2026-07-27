@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "tuned-v4-final",
+ "task_name": "flag_full_ratchet",
+ "data_version": "797b645b3cb233cb87f6bf8dcb2748367011f5aeae4c1518cc4f303a6710e5b0",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:53:48.082836+00:00"
+}

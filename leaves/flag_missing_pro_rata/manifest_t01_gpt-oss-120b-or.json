@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "gpt-oss-120b-or",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "3bf7f514d83d278d109bda3cfc6e291bc59f2ac39c19f3b2398647795669cf38",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:26:50.864617+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

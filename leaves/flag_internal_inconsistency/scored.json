@@ -1028,5 +1028,3577 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "tuned-v4": {
+  "model": "tuned-v4",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 5,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-n20": {
+  "model": "tuned-v4-n20",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-final": {
+  "model": "tuned-v4-final",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 98,
+   "parse_failure_rate": 0.98,
+   "valid_run_count": 2,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mlx-base-n20": {
+  "model": "mlx-base-n20",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 100,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r1-iter0025": {
+  "model": "v5-r1-iter0025",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.4,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 6,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 6,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 6,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.8333333333333334
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": true,
+       "consistency": 0.6666666666666666
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.6599999999999999,
+   "consistency_pct": 65.99999999999999,
+   "field_flips": {
+    "flag_internal_inconsistency": 1.0
+   },
+   "parse_failure_count": 24,
+   "parse_failure_rate": 0.48,
+   "valid_run_count": 26,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r1-iter0050": {
+  "model": "v5-r1-iter0050",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 0,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.0,
+   "consistency_pct": 0.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 50,
+   "parse_failure_rate": 1.0,
+   "valid_run_count": 0,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r1-iter0075": {
+  "model": "v5-r1-iter0075",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 1,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 49,
+   "parse_failure_rate": 0.98,
+   "valid_run_count": 1,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r1-iter0100": {
+  "model": "v5-r1-iter0100",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 1,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 49,
+   "parse_failure_rate": 0.98,
+   "valid_run_count": 1,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r2-iter0010": {
+  "model": "v5-r2-iter0010",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r2-iter0020": {
+  "model": "v5-r2-iter0020",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 4,
+   "accuracy_majority": 0.5,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 20,
+   "parse_failure_rate": 0.8,
+   "valid_run_count": 5,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r2-iter0030": {
+  "model": "v5-r2-iter0030",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 4,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.25,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.6666666666666666
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.8541666666666666,
+   "consistency_pct": 85.41666666666666,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.4
+   },
+   "parse_failure_count": 13,
+   "parse_failure_rate": 0.52,
+   "valid_run_count": 12,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r2-iter0040": {
+  "model": "v5-r2-iter0040",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.4,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.75
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.95,
+   "consistency_pct": 95.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.2
+   },
+   "parse_failure_count": 13,
+   "parse_failure_rate": 0.52,
+   "valid_run_count": 12,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r3-iter0010": {
+  "model": "v5-r3-iter0010",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 4,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 4,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 4,
+   "parse_failure_rate": 0.16,
+   "valid_run_count": 21,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r3-iter0020": {
+  "model": "v5-r3-iter0020",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 6,
+   "parse_failure_rate": 0.24,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r3-iter0030": {
+  "model": "v5-r3-iter0030",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.4,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.8833333333333332,
+   "consistency_pct": 88.33333333333331,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.4
+   },
+   "parse_failure_count": 13,
+   "parse_failure_rate": 0.52,
+   "valid_run_count": 12,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r3-iter0040": {
+  "model": "v5-r3-iter0040",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 4,
+   "accuracy_majority": 0.25,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.75,
+   "consistency_pct": 75.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.4
+   },
+   "parse_failure_count": 18,
+   "parse_failure_rate": 0.72,
+   "valid_run_count": 7,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5r4c-iter0020": {
+  "model": "v5r4c-iter0020",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.4,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 4,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.85,
+   "consistency_pct": 85.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.4
+   },
+   "parse_failure_count": 11,
+   "parse_failure_rate": 0.44,
+   "valid_run_count": 14,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5r4c-iter0040": {
+  "model": "v5r4c-iter0040",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.2,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.75
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.8833333333333332,
+   "consistency_pct": 88.33333333333331,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.4
+   },
+   "parse_failure_count": 8,
+   "parse_failure_rate": 0.32,
+   "valid_run_count": 17,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5r4c-iter0060": {
+  "model": "v5r4c-iter0060",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 4,
+   "accuracy_majority": 0.5,
+   "accuracy_strict": 0.25,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": true,
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.6666666666666666
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.7916666666666666,
+   "consistency_pct": 79.16666666666666,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.4
+   },
+   "parse_failure_count": 15,
+   "parse_failure_rate": 0.6,
+   "valid_run_count": 10,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5r4c-iter0080": {
+  "model": "v5r4c-iter0080",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 2,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 22,
+   "parse_failure_rate": 0.88,
+   "valid_run_count": 3,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r4-r1783110825-iter0020": {
+  "model": "v5-r4-r1783110825-iter0020",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.4,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 4,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.6666666666666666
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.9333333333333333,
+   "consistency_pct": 93.33333333333333,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.2
+   },
+   "parse_failure_count": 11,
+   "parse_failure_rate": 0.44,
+   "valid_run_count": 14,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r4-r1783110825-iter0040": {
+  "model": "v5-r4-r1783110825-iter0040",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.2,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.75
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.9,
+   "consistency_pct": 90.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.4
+   },
+   "parse_failure_count": 9,
+   "parse_failure_rate": 0.36,
+   "valid_run_count": 16,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r4-r1783110825-iter0060": {
+  "model": "v5-r4-r1783110825-iter0060",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 3,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.3333333333333333,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.75
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.9166666666666666,
+   "consistency_pct": 91.66666666666666,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.2
+   },
+   "parse_failure_count": 19,
+   "parse_failure_rate": 0.76,
+   "valid_run_count": 6,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "v5-r4-r1783110825-iter0080": {
+  "model": "v5-r4-r1783110825-iter0080",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 24,
+   "parse_failure_rate": 0.96,
+   "valid_run_count": 1,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "1b-base-n5": {
+  "model": "1b-base-n5",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "4b-base-n5": {
+  "model": "4b-base-n5",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.8,
+   "accuracy_strict": 0.8,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "base-1b-diagnostic-clean": {
+  "model": "base-1b-diagnostic-clean",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "base-1b-fresh-20260703-v2": {
+  "model": "base-1b-fresh-20260703-v2",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "base12-fresh": {
+  "model": "base12-fresh",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "eos10-target": {
+  "model": "eos10-target",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-12b": {
+  "model": "gemma4:12b",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-26ba4b-or": {
+  "model": "google/gemma-4-26b-a4b-it",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": false,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": null,
+       "truth": true,
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
+  }
+ },
+ "qwen3-0.6b-think": {
+  "model": "qwen3:0.6b",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.8,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.96,
+   "consistency_pct": 96.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.2
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "qwen3.5-0.8b-think": {
+  "model": "qwen3.5:0.8b",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 4,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 7,
+   "parse_failure_rate": 0.28,
+   "valid_run_count": 18,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "smollm3-3b-think": {
+  "model": "hf.co/ggml-org/SmolLM3-3B-GGUF:Q4_K_M",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.8666666666666666,
+   "consistency_pct": 86.66666666666666,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.4
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 15,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "qwen3.5-4b-think": {
+  "model": "qwen3.5:4b",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": false,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.0
+   },
+   "parse_failure_count": 1,
+   "parse_failure_rate": 0.06666666666666667,
+   "valid_run_count": 14,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "q06-base-8k": {
+  "model": "q06-base-8k",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.9199999999999999,
+   "consistency_pct": 92.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.2
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "q06-orpo-eos-8k": {
+  "model": "q06-orpo-eos-8k",
+  "accuracy": {
+   "task": "flag_internal_inconsistency",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.6,
+   "accuracy_strict": 0.6,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": false,
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "flag_internal_inconsistency": {
+       "majority": true,
+       "truth": true,
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "flag_internal_inconsistency",
+   "consistency_rate": 0.9199999999999999,
+   "consistency_pct": 92.0,
+   "field_flips": {
+    "flag_internal_inconsistency": 0.2
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

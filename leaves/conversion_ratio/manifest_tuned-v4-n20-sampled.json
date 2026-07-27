@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "tuned-v4-n20-sampled",
+ "task_name": "conversion_ratio",
+ "data_version": "2a95991176be466669f028d0462d8d03ef62110ab5a92916821942fd11761167",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:45:15.684232+00:00"
+}

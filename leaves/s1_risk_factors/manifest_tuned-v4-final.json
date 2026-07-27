@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_risk_factors",
+ "model": "tuned-v4-final",
+ "task_name": "s1_risk_factors",
+ "data_version": "47c2e0144049bcae998918f9c856abe0e36c5428d2e0f92a6e21bd59f41f5e91",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:08:09.268988+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "4b-base-n5",
+ "task_name": "rofr_cosale",
+ "data_version": "9f2f1aa20f4076c6899f391083022e051ea8d011d1f6ba7d6c843030f9ccb8e3",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:44:02.537917+00:00"
+}

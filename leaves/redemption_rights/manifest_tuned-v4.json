@@ -1,0 +1,9 @@
+{
+ "leaf": "redemption_rights",
+ "model": "tuned-v4",
+ "task_name": "redemption_rights",
+ "data_version": "3c7077fd37bda3a4ae556457af3b72aab376b5b59537bea88b3a1fc9b2f98817",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:02:39.766839+00:00"
+}

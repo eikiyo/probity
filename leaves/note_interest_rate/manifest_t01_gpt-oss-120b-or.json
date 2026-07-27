@@ -1,0 +1,14 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "gpt-oss-120b-or",
+ "task_name": "note_interest_rate",
+ "data_version": "5c09cb541ddc52639f2b77c9a367c0cfbe701975d5015b85c0282303ef5a7a48",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:34:20.641307+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "gpt-oss-120b-or",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "d694f564382250fc3050b0eef5f52bf7b186d2b482994b208c2cc3149b54fd0a",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:33:39.266013+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

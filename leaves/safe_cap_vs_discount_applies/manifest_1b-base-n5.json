@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_cap_vs_discount_applies",
+ "model": "1b-base-n5",
+ "task_name": "safe_cap_vs_discount_applies",
+ "data_version": "cd8bc366971e2519663a163e472184b889407347affb8bca9a46c94cb3f3b2bd",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:46:27.594814+00:00"
+}

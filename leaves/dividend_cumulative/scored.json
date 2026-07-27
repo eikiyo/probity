@@ -2597,5 +2597,2849 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "tuned-v4": {
+  "model": "tuned-v4",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 14,
+   "accuracy_majority": 0.9285714285714286,
+   "accuracy_strict": 0.9285714285714286,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "dividend_cumulative": 0.0
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.125,
+   "valid_run_count": 14,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-n20": {
+  "model": "tuned-v4-n20",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 15,
+   "accuracy_majority": 0.9333333333333333,
+   "accuracy_strict": 0.9333333333333333,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 9,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "dividend_cumulative": 0.0
+   },
+   "parse_failure_count": 31,
+   "parse_failure_rate": 0.096875,
+   "valid_run_count": 289,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-final": {
+  "model": "tuned-v4-final",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 15,
+   "accuracy_majority": 0.6666666666666666,
+   "accuracy_strict": 0.5333333333333333,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 2,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 4,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 9,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 0.7777777777777778
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 0.5
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 6,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 2,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 6,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 0.9296296296296297,
+   "consistency_pct": 92.96296296296298,
+   "field_flips": {
+    "dividend_cumulative": 0.1875
+   },
+   "parse_failure_count": 256,
+   "parse_failure_rate": 0.8,
+   "valid_run_count": 64,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mlx-base-n20": {
+  "model": "mlx-base-n20",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 16,
+   "accuracy_majority": 0.9375,
+   "accuracy_strict": 0.9375,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "dividend_cumulative": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 320,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "1b-base-n5": {
+  "model": "1b-base-n5",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 16,
+   "accuracy_majority": 0.9375,
+   "accuracy_strict": 0.9375,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "dividend_cumulative": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "4b-base-n5": {
+  "model": "4b-base-n5",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 16,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "dividend_cumulative": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "base-1b-fresh-20260703-v2": {
+  "model": "base-1b-fresh-20260703-v2",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 16,
+   "accuracy_majority": 0.9375,
+   "accuracy_strict": 0.9375,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "dividend_cumulative": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-12b": {
+  "model": "gemma4:12b",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 16,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.9375,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 0.9875,
+   "consistency_pct": 98.75,
+   "field_flips": {
+    "dividend_cumulative": 0.0625
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 80,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-26ba4b-or": {
+  "model": "google/gemma-4-26b-a4b-it",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "dividend_cumulative": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
+  }
+ },
+ "qwen3.5-9b-or": {
+  "model": "qwen/qwen3.5-9b",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": null,
+       "truth": "non-cumulative",
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "dividend_cumulative": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
+  }
+ },
+ "base-control-inproc": {
+  "model": "base-control-inproc",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 16,
+   "accuracy_majority": 0.9375,
+   "accuracy_strict": 0.9375,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "dividend_cumulative": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 320,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-recheck": {
+  "model": "tuned-v4-recheck",
+  "accuracy": {
+   "task": "dividend_cumulative",
+   "n_instances": 16,
+   "n_measurable": 16,
+   "accuracy_majority": 0.5625,
+   "accuracy_strict": 0.5625,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 0.6666666666666666
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "cumulative",
+       "truth": "cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 6,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 0.8333333333333334
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 6,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "cumulative",
+       "consistency": 0.8333333333333334
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 6,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 11,
+     "n_valid": 6,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 12,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 13,
+     "n_valid": 8,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 14,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 15,
+     "n_valid": 3,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "dividend_cumulative": {
+       "majority": "non-cumulative",
+       "truth": "non-cumulative",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "dividend_cumulative",
+   "consistency_rate": 0.9208333333333333,
+   "consistency_pct": 92.08333333333333,
+   "field_flips": {
+    "dividend_cumulative": 0.3125
+   },
+   "parse_failure_count": 256,
+   "parse_failure_rate": 0.8,
+   "valid_run_count": 64,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
  }
 }

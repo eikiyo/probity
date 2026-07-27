@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_offmarket_liqpref",
+ "model": "1b-base-n5",
+ "task_name": "flag_offmarket_liqpref",
+ "data_version": "92c78fc6d02db407924c610cdb13f67b994c921df419161a36d0ca8957bdfd22",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:27:08.604065+00:00"
+}

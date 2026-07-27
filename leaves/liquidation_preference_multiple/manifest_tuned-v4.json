@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_preference_multiple",
+ "model": "tuned-v4",
+ "task_name": "liquidation_preference_multiple",
+ "data_version": "9b499c2ba0ca6236bcf98239104a96976c3c6511a0adced3cd6e74a66b27973e",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:01:15.721490+00:00"
+}

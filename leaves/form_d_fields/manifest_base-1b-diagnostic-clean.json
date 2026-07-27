@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "base-1b-diagnostic-clean",
+ "task_name": "form_d_fields",
+ "data_version": "dabde21f0d7f41d5f4bbec741bd9498102f7cbab4a4566da2dab7eba1647f6c6",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:35:16.526041+00:00"
+}

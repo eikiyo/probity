@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "mlx-base-n20",
+ "task_name": "participation_cap",
+ "data_version": "dc0656bf0931c53d748b5cba895a84bea7dc83e93b25fdc733e46d2c6effd2ee",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:29:59.980886+00:00"
+}

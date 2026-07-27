@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "smollm3-3b-think",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "b76c2487c3b83798bbdc2a116f9e177ada5501416c64a06b2333975928ceb92a",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T19:04:22.958183+00:00"
+}

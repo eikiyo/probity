@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "base-control-inproc",
+ "task_name": "acceleration_trigger",
+ "data_version": "c4637d6764cc0f1fed80130439f9c53c51f891a6c6f32f32c46c878869f8f67d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T15:46:57.744993+00:00"
+}

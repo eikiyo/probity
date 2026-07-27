@@ -1,0 +1,14 @@
+{
+ "leaf": "securities_exemption",
+ "model": "gpt-oss-120b-or",
+ "task_name": "securities_exemption",
+ "data_version": "5dab310b3b8f2d1f6a65facb9054ac91d9f0f04ba2447f859949010704af3445",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:49:47.005298+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

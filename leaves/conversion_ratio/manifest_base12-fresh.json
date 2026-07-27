@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "base12-fresh",
+ "task_name": "conversion_ratio",
+ "data_version": "6a0577d97bd67e77b1adbe71bd686c123aa5a58579c3a1bb2c2416fde52e94b4",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:09:15.523293+00:00"
+}

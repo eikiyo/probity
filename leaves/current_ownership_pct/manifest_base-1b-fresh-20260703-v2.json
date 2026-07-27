@@ -1,0 +1,9 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "base-1b-fresh-20260703-v2",
+ "task_name": "current_ownership_pct",
+ "data_version": "7521820a9a49213e532fac7340a9a370aa91432e088d191e8f5e573128d2aa84",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:46:17.089504+00:00"
+}

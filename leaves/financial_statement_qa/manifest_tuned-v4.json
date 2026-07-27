@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "tuned-v4",
+ "task_name": "financial_statement_qa",
+ "data_version": "2be38044d96ccf1f2b5845d1c28b9e4feac8268801dba32e220553bb8694097f",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:00:34.452499+00:00"
+}

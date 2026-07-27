@@ -1,0 +1,14 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "gpt-oss-120b-or",
+ "task_name": "flag_full_ratchet",
+ "data_version": "30f318cfd8a442b9a38f559e2448f76660557d50c7e8758947c19cd372b46afc",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:26:40.142182+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

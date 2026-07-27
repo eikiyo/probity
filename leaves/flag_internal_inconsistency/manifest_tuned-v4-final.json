@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "tuned-v4-final",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "9df5df00badcd730c2d6e44fbe5fca95bd98ef7f5628e0dbc5f9be4a856b5a11",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:53:57.596419+00:00"
+}

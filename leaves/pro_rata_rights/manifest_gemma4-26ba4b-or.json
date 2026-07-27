@@ -1,0 +1,9 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "pro_rata_rights",
+ "data_version": "022e0d35f2e5c6d95b2256167d216040fc4c8eaea3fc3171e9ad1f6785c7ab64",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:30:12.837547+00:00"
+}

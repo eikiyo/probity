@@ -1,0 +1,14 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "gpt-oss-120b-or",
+ "task_name": "investor_ownership_pct",
+ "data_version": "1a388614aff19464863d299f937f8502b9f3ec9b157c377d7e62f54b4d715321",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:34:11.641927+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

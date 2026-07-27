@@ -1,0 +1,9 @@
+{
+ "leaf": "note_principal",
+ "model": "tuned-v4-n20",
+ "task_name": "note_principal",
+ "data_version": "99708fa6c5086f80ae96de55349edf47ed2e3b59e20e40c45ec57fa3d7647f0d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:31:06.896977+00:00"
+}

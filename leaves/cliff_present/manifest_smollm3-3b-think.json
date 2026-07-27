@@ -1,0 +1,9 @@
+{
+ "leaf": "cliff_present",
+ "model": "smollm3-3b-think",
+ "task_name": "cliff_present",
+ "data_version": "766929c328c929497cd29fe5aceab5f51e6867b42006a02c929f01c08bc5d517",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T19:15:40.314204+00:00"
+}

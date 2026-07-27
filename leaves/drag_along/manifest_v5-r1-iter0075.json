@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "v5-r1-iter0075",
+ "task_name": "drag_along",
+ "data_version": "87d82119b20aa28738f89c8e74d32ddf26abe19d6403a103e52ae968ab436386",
+ "n_runs": 10,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T19:30:33.776577+00:00"
+}

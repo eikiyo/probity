@@ -1,0 +1,14 @@
+{
+ "leaf": "information_rights",
+ "model": "gpt-oss-120b-or",
+ "task_name": "information_rights",
+ "data_version": "04e917a9bfef69bcf830e56e7df89dcf6a553d99b0da06eed23aee20e72a048d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:32:28.908845+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

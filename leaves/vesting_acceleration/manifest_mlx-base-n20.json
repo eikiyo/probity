@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "mlx-base-n20",
+ "task_name": "vesting_acceleration",
+ "data_version": "36fb0e9ac78c478b1eb4971d04e59ca0e33a1dbfbc9eae6a5c1aef6e38c2677d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:44:29.470976+00:00"
+}

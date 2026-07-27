@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "participation_cap",
+ "data_version": "70dd775370627dfa00288cf4c54aa688b78a661d2d2f4ab55178e0ec85675fe7",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:51.450128+00:00"
+}

@@ -1,0 +1,14 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "gpt-oss-120b-or",
+ "task_name": "board_seats_investor",
+ "data_version": "6af9848f3dd2d89a83dfb9431597e6e4c5985bfb07df8aa9e797e8fbd3c28e22",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:27:33.245256+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

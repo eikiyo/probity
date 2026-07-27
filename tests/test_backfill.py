@@ -97,40 +97,42 @@ class TestFindHolesSkipsUnrunCells:
 
 
 class TestFindHolesAgainstRealDisk:
-    """Ground truth we did not author: the five cells the flat per-leaf cost cap truncated during
-    the published 0.7 sweep, and the fact that every OTHER cell is whole."""
-
-    EXPECTED_HOLES = {
-        ("pre_vs_post_money", "gemini3-flash-or"): (333, 380),
-        ("participation_type", "gemini3-flash-or"): (333, 360),
-        ("safe_cap_vs_discount_applies", "haiku-4.5-direct"): (199, 260),
-        ("safe_pre_post", "haiku-4.5-direct"): (199, 320),
-        ("safe_pro_rata_side_letter", "haiku-4.5-direct"): (199, 300),
-    }
+    """The five cells the flat per-leaf cost cap truncated were BACKFILLED on 2026-07-27 (357
+    calls). This class used to assert those five holes existed; reality legitimately advanced, so
+    it now asserts the NEW truth -- the arm is whole. The hole-DETECTION capability it used to
+    prove is not lost: TestFindHolesSkipsUnrunCells drives it on a synthetic short cell, which
+    cannot rot when the real data changes again."""
 
     def _holes(self):
         labels = [l for l, _, _ in backfill.preflight.LINEUP]
         return {(h["leaf"].name, h["label"]): (h["recorded"], h["expected"])
                 for h in backfill.find_holes(labels, None)}
 
-    def test_finds_exactly_the_five_known_truncated_cells(self):
-        assert self._holes() == self.EXPECTED_HOLES
+    BACKFILLED = [
+        ("pre_vs_post_money", "gemini3-flash-or", 380),
+        ("participation_type", "gemini3-flash-or", 360),
+        ("safe_cap_vs_discount_applies", "haiku-4.5-direct", 260),
+        ("safe_pre_post", "haiku-4.5-direct", 320),
+        ("safe_pro_rata_side_letter", "haiku-4.5-direct", 300),
+    ]
 
-    def test_the_guard_truncation_signature_is_visible_in_the_counts(self):
-        """The flat $0.20 cap divided by the guard's per-call estimate: 0.20/0.0006 = 333 for
-        gemini and 0.20/0.001 = ~199 for haiku. Both caps are identical ACROSS leaves of very
-        different sizes, which is the fingerprint of a cap that never looked at what a leaf owed."""
-        holes = self._holes()
-        gemini = {rec for (_l, lab), (rec, _e) in holes.items() if lab == "gemini3-flash-or"}
-        haiku = {rec for (_l, lab), (rec, _e) in holes.items() if lab == "haiku-4.5-direct"}
-        assert gemini == {333}
-        assert haiku == {199}
+    def test_the_legacy_arm_has_no_holes_left(self):
+        assert self._holes() == {}
 
-    def test_total_backfill_is_bounded_and_small(self):
-        """A sanity bound on spend: if this number ever jumps, the tool is about to bill far more
-        than 'filling a few holes' and the operator should be told before it runs."""
-        total = sum(e - r for r, e in self._holes().values())
-        assert total == 357
+    def test_each_formerly_truncated_cell_is_now_exactly_full(self):
+        """Named individually so a REGRESSION on any one of them is reported by name, rather than
+        hiding inside an aggregate 'no holes' assertion."""
+        for leaf, label, expected in self.BACKFILLED:
+            cell = coverage.cell_status(ROOT / "leaves" / leaf, label, 20)
+            assert cell["recorded"] == expected, f"{leaf}/{label}"
+            assert cell["complete"]
+
+    def test_every_lineup_model_now_owes_nothing_across_the_whole_arm(self):
+        for label, _k, _m in backfill.preflight.LINEUP:
+            total = sum(coverage.cell_status(d, label, 20)["short_by"]
+                        for d in backfill.built_leaf_dirs())
+            if any(coverage.cell_status(d, label, 20)["recorded"] for d in backfill.built_leaf_dirs()):
+                assert total == 0, f"{label} is {total} calls short"
 
 
 class TestHoleArithmetic:

@@ -1,0 +1,9 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "rofr_cosale",
+ "data_version": "3e23591464fe9f09923e5961c4d3b27b72af1f47c7966c744c53da77ca7c34d9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:30:15.419048+00:00"
+}

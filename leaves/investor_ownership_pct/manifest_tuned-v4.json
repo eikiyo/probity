@@ -1,0 +1,9 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "tuned-v4",
+ "task_name": "investor_ownership_pct",
+ "data_version": "8b1087e8b4a1d022ff4c2b0ca70521d6779190c332a644b389b033069500190b",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:00:56.267505+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_valuation_cap",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "safe_valuation_cap",
+ "data_version": "d8c393a8924c4952ef2035b1987ff5b4a758ade2392a87000e320aa69919d12a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:30:37.418528+00:00"
+}

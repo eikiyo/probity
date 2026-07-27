@@ -1,0 +1,9 @@
+{
+ "leaf": "round_size",
+ "model": "1b-base-n5",
+ "task_name": "round_size",
+ "data_version": "cf588d918b4a1fd7fa2e41206e24839fb992739428d9d20a1a963b090b4aec5d",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:44:25.601031+00:00"
+}

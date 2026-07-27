@@ -1,0 +1,14 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "gpt-oss-120b-or",
+ "task_name": "employee_pool_pct",
+ "data_version": "4d11c233010d1549aa448ea19bb03c7b8da4ab017143952cadb5703456aa986d",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:23:19.160970+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

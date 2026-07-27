@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "tuned-v4",
+ "task_name": "preference_seniority",
+ "data_version": "e7935500444da7ac73133b0cc8d6191bdb3045040c2c1d2f14e8ff6cd6de1bbd",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:02:06.110589+00:00"
+}

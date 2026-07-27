@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "gpt-oss-120b-or",
+ "task_name": "dividend_cumulative",
+ "data_version": "7d0cbe6bc6be0d1df27263539212c7b5e193fef068b1094369ec5b0fe3ca7927",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:25:15.539344+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

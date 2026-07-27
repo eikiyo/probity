@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "v5-r3-iter0030",
+ "task_name": "conversion_ratio",
+ "data_version": "44e668a276fb7734c93efd46f44de312055da76a89c0c1ac1f8c81b08fcde829",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T19:56:27.348216+00:00"
+}

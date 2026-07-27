@@ -1,0 +1,9 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "4b-base-n5",
+ "task_name": "option_strike_409a",
+ "data_version": "246e4d08312b6e2378a965614e92159e0e8d57e5c0f30430f617cfbfb983a58f",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:34:08.843410+00:00"
+}

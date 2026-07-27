@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_use_of_proceeds",
+ "model": "4b-base-n5",
+ "task_name": "s1_use_of_proceeds",
+ "data_version": "a30f3fa3ba0bf27fe4e8a1055f09973f5aac05163b73aa41cdcf929f73228ef8",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:47:12.310090+00:00"
+}

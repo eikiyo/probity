@@ -1,0 +1,9 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "mlx-base-n20",
+ "task_name": "per_investor_allocation",
+ "data_version": "839b2af8d7237aabfbdc4a7170d06acab1a37a265988b23bacf244eeaa3f57ff",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:31:46.295546+00:00"
+}

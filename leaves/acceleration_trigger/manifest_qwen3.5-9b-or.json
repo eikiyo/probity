@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "qwen3.5-9b-or",
+ "task_name": "acceleration_trigger",
+ "data_version": "66837aac182e357fb1fcbd99f934a8b1fdc6bff1fb4d410a22f2b4f639ae87a8",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T21:37:37.240757+00:00"
+}

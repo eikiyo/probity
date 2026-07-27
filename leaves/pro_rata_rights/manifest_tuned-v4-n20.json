@@ -1,0 +1,9 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "tuned-v4-n20",
+ "task_name": "pro_rata_rights",
+ "data_version": "27442c9c7c1ddceaf836002679547f9f101f65b23384b9f85b0a3d83ff8fade2",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:37:14.911008+00:00"
+}

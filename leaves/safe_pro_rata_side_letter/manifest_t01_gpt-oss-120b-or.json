@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "gpt-oss-120b-or",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "7097c707b29c2e5b301068aba483d4ee28948ed7b6d34645aff6e602c67ebaee",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:46:48.567052+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

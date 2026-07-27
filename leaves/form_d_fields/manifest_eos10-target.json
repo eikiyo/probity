@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "eos10-target",
+ "task_name": "form_d_fields",
+ "data_version": "1d71315c298845d8b9fe91646d3e1087d31a0708b935b46152d2a44bdae30fa1",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:10:35.059593+00:00"
+}

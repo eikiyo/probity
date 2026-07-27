@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "4b-base-n5",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "db969ae84d5020be02b91c614ffb56a9bb6a0596fc39c968b9e7bbd2d9d15606",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:30:40.032166+00:00"
+}

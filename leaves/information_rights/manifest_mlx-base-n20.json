@@ -1,0 +1,9 @@
+{
+ "leaf": "information_rights",
+ "model": "mlx-base-n20",
+ "task_name": "information_rights",
+ "data_version": "a7accb5577f8f00c775975b0693fd8a97fa679e1033edd1fbc10910e4f9cae56",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:27:05.514714+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "tuned-v4-final",
+ "task_name": "note_interest_rate",
+ "data_version": "23d422a95566eb91222b2832ed10cac8ac4bd7ea3c5ec1ef8019fff8c6cb54fc",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:58:14.202611+00:00"
+}

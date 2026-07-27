@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "smollm3-3b-think",
+ "task_name": "form_d_fields",
+ "data_version": "f4a4afb72a5b0e964782049900e67fee0165277e7ccf991fad96a69a7e6a7a25",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T19:19:28.398536+00:00"
+}

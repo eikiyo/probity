@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "v5-smoke",
+ "task_name": "drag_along",
+ "data_version": "37278e3ce799a806c80e20e18d9cf0b6886dc33c5e77b2b5b8bdb4c63ae6027b",
+ "n_runs": 2,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T19:19:47.865638+00:00"
+}

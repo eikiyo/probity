@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "q06-orpo-eos-8k",
+ "task_name": "drag_along",
+ "data_version": "20b2eee2f70096d12124321ce85d484c528857d0e0b78e9f010512af80e3398c",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T11:57:55.063775+00:00"
+}

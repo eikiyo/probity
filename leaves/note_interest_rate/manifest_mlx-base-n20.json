@@ -1,0 +1,9 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "mlx-base-n20",
+ "task_name": "note_interest_rate",
+ "data_version": "6bcacf1c6787a1cef8db0f716233e0de4448e2af328eef67f4673a5cc6a4ab66",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:28:31.893353+00:00"
+}

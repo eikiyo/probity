@@ -1,0 +1,9 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "4b-base-n5",
+ "task_name": "note_maturity_date",
+ "data_version": "71b9288dfae3509d1dc948744cf44250fdeb88ce5f8fb55aeea8aa6556de07cf",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:32:08.295262+00:00"
+}

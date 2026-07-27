@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_acceleration",
+ "model": "tuned-v4",
+ "task_name": "vesting_acceleration",
+ "data_version": "90c6cff0c4f9eac2e42d96ad3eea3abc0d73de6b62611801b4a1547ec96e8a4b",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:03:47.151138+00:00"
+}

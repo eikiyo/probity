@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "tuned-v4",
+ "task_name": "safe_mfn_present",
+ "data_version": "e981cb93944ace0b4de7335cdb208b5c5ab1b26c4a42dbc40f2f0a2ead40bf61",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:03:15.390870+00:00"
+}

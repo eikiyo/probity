@@ -1,0 +1,9 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "tuned-v4-n20",
+ "task_name": "post_money_valuation",
+ "data_version": "04958e49387f69a78dec7df48b8118a4f435aa527e31d00e6e48dc7a6d6937fe",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:32:23.494354+00:00"
+}

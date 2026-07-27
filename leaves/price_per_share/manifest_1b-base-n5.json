@@ -1,0 +1,9 @@
+{
+ "leaf": "price_per_share",
+ "model": "1b-base-n5",
+ "task_name": "price_per_share",
+ "data_version": "ae83d7e99f04038331870a03f753bfa7a0bde5eca45959d92d3888864d0b299f",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:39:13.474088+00:00"
+}

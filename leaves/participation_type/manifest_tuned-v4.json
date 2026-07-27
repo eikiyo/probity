@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_type",
+ "model": "tuned-v4",
+ "task_name": "participation_type",
+ "data_version": "e0dc8d52ebfc719979f50f3df75a4eb93d541faeeec9f4b62d545f4c32c39708",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:02:19.432490+00:00"
+}

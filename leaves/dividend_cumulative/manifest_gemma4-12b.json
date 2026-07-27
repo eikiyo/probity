@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "gemma4-12b",
+ "task_name": "dividend_cumulative",
+ "data_version": "29400a89a2d70a9f8dd386095e52da15c95d9a3dcfc31aed969cd64ba1db12f9",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:22:01.610525+00:00"
+}

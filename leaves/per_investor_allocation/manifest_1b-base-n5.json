@@ -1,0 +1,9 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "1b-base-n5",
+ "task_name": "per_investor_allocation",
+ "data_version": "3cb650fef62d4fc6394cb165afb74d3ecf0943f0818fa1dc7999c3a55aa3a019",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:36:00.616018+00:00"
+}

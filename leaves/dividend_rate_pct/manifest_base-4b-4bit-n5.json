@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "base-4b-4bit-n5",
+ "task_name": "dividend_rate_pct",
+ "data_version": "66a1bc288f65a8f735b3dc95fc15c20e6af2708cef71fe59dbc0da97f4a95b2f",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T14:21:17.752442+00:00"
+}

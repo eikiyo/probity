@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "tuned-v4",
+ "task_name": "dividend_rate_pct",
+ "data_version": "659fe96f6a491c8c502da0502aa188c28a8191bd0eb7872ac4630928e0249ad4",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:00:22.272643+00:00"
+}

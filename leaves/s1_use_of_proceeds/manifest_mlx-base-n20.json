@@ -1,0 +1,9 @@
+{
+ "leaf": "s1_use_of_proceeds",
+ "model": "mlx-base-n20",
+ "task_name": "s1_use_of_proceeds",
+ "data_version": "5ace10ae52fb57b9fa6f3e4508dc3e3c2dcd3914b39ae16f087749483f0a96d7",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:38:31.293477+00:00"
+}

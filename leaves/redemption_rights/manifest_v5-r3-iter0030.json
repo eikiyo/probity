@@ -1,0 +1,9 @@
+{
+ "leaf": "redemption_rights",
+ "model": "v5-r3-iter0030",
+ "task_name": "redemption_rights",
+ "data_version": "bfe7dcfc74593250596172b039536cb948b5063d01c424b3658b652e7a46a372",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T19:56:07.988610+00:00"
+}

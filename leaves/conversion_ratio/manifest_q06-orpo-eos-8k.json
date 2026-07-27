@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "q06-orpo-eos-8k",
+ "task_name": "conversion_ratio",
+ "data_version": "bf04fc5ef6c9658e2e5adc4ba65880d0f0b8dacdcc65030d073d8dc69252aaf8",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T11:53:57.761057+00:00"
+}

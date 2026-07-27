@@ -1,0 +1,9 @@
+{
+ "leaf": "protective_provisions",
+ "model": "1b-base-n5",
+ "task_name": "protective_provisions",
+ "data_version": "4d40a20e23e04707ee7db2b889a825df5a7cf38944a8bc7836974dac298c3ccd",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:41:21.911022+00:00"
+}

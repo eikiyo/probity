@@ -1,0 +1,9 @@
+{
+ "leaf": "cliff_present",
+ "model": "base-1b-fresh-20260703-v2",
+ "task_name": "cliff_present",
+ "data_version": "43937d4c05a381f5a7e4e0e5e159c98f6682c408a956bb35cd7db0a7e532fd7f",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:45:08.947327+00:00"
+}

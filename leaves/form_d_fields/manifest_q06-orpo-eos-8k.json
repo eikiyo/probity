@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "q06-orpo-eos-8k",
+ "task_name": "form_d_fields",
+ "data_version": "d4be1186d6260941949598f12716ecb159d43367eeffc747f49c5ce013ab3249",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T12:03:16.076169+00:00"
+}

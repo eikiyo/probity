@@ -1,0 +1,9 @@
+{
+ "leaf": "securities_exemption",
+ "model": "mlx-base-n20",
+ "task_name": "securities_exemption",
+ "data_version": "5d09a0f646143c1e2e0f7f71a96003f776f66211d3aacecc08517415777dfe7e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:44:01.539824+00:00"
+}

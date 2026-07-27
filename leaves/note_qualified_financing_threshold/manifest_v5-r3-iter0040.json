@@ -1,0 +1,9 @@
+{
+ "leaf": "note_qualified_financing_threshold",
+ "model": "v5-r3-iter0040",
+ "task_name": "note_qualified_financing_threshold",
+ "data_version": "878cdb423194f9c1ad4c9f64e663a09a9a42ca34042176bc4a9318ace3c29a20",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T20:18:26.555311+00:00"
+}

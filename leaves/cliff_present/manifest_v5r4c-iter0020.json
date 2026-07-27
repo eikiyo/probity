@@ -1,0 +1,9 @@
+{
+ "leaf": "cliff_present",
+ "model": "v5r4c-iter0020",
+ "task_name": "cliff_present",
+ "data_version": "425ca996d9861d5d84b10dd49f0aa23bf9d3918a122e63da2955032fc57487d6",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T20:21:21.764737+00:00"
+}

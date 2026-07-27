@@ -1,0 +1,9 @@
+{"_key": [3, 0], "instance_idx": 3, "run_idx": 0, "item_id": "uber_travis_kalanick", "parsed": {"current_ownership_pct": 87.3}, "normalized": {"current_ownership_pct": 87.3}}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "uber_ryan_graves", "parsed": {"current_ownership_pct": 33.18}, "normalized": {"current_ownership_pct": 33.18}}
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "uber_garrett_camp", "parsed": {"current_ownership_pct": 81.57}, "normalized": {"current_ownership_pct": 81.57}}
+{"_key": [6, 0], "instance_idx": 6, "run_idx": 0, "item_id": "uber_alphabet_entities", "parsed": {"current_ownership_pct": 67.3}, "normalized": {"current_ownership_pct": 67.3}}
+{"_key": [5, 0], "instance_idx": 5, "run_idx": 0, "item_id": "uber_sb_cayman", "parsed": {"current_ownership_pct": 67.3}, "normalized": {"current_ownership_pct": 67.3}}
+{"_key": [7, 0], "instance_idx": 7, "run_idx": 0, "item_id": "uber_public_investment_fund", "parsed": {"current_ownership_pct": 67.3}, "normalized": {"current_ownership_pct": 67.3}}
+{"_key": [8, 0], "instance_idx": 8, "run_idx": 0, "item_id": "uber_all_directors_officers_group", "parsed": {"current_ownership_pct": 87.3}, "normalized": {"current_ownership_pct": 87.3}}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "uber_matt_cohler_benchmark", "parsed": {"current_ownership_pct": 67.3}, "normalized": {"current_ownership_pct": 67.3}}
+{"_key": [4, 0], "instance_idx": 4, "run_idx": 0, "item_id": "uber_al_rumayyan_pif_director", "raw_output": "{\"current_ownership_pct\": 67.5}\n<end_of_turn>\u0646\uc6a9:\n<end_of_turn>\"\n<end_of_turn>\u0646\uc6a9:\n{\"current_ownership_pct\": 67.5}<end_of_turn>\n<end_of_turn>\n<end_of_turn>\n<end_of_turn>\n<end_of_turn>\n<end_of_turn>\n<end", "parsed": null}

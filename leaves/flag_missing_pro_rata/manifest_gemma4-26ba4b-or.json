@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_missing_pro_rata",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "flag_missing_pro_rata",
+ "data_version": "67de283727eddf4abdac09e06a35981f6a759f32eb6fb1f97271b5be8e04842c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:41.210162+00:00"
+}

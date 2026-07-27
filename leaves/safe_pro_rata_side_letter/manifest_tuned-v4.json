@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_pro_rata_side_letter",
+ "model": "tuned-v4",
+ "task_name": "safe_pro_rata_side_letter",
+ "data_version": "7fe4901d98a8cd73a7b4307b6d560d801b8a387d6f95a6977eab054e1e4ee408",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:03:46.320121+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "redemption_rights",
+ "model": "smollm3-3b-think",
+ "task_name": "redemption_rights",
+ "data_version": "fbc473aea649c83c331070b425cac760677d9416b25f887acd0c89555db1d83f",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T19:14:09.518221+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "redemption_rights",
+ "model": "q06-orpo-eos-8k",
+ "task_name": "redemption_rights",
+ "data_version": "07fae01258ce7795a64f2fa0cac07eb8a0b702b88cc5639ca1c11bec444c9339",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T12:10:45.765106+00:00"
+}

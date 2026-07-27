@@ -1,0 +1,9 @@
+{
+ "leaf": "vesting_schedule",
+ "model": "tuned-v4-final",
+ "task_name": "vesting_schedule",
+ "data_version": "2282c09f88b2415796383cd47c1be68d9c7316cb1e4cde1456932528e8def5f9",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:15:04.532041+00:00"
+}

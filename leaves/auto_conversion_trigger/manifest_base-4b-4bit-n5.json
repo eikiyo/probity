@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "base-4b-4bit-n5",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "ce935c5d2f1c45a09fb650f518c2e80afeb67288142bfe16872acf4df520d7ed",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T14:19:09.900216+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_full_ratchet",
+ "model": "qwen3.5-9b-or",
+ "task_name": "flag_full_ratchet",
+ "data_version": "cd0c19070845eff5e95000188ae836226bc6690efa3fe3b094a2679ba5433bae",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T21:42:10.704704+00:00"
+}

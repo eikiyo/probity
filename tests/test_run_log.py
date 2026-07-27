@@ -31,12 +31,14 @@ class TestCallStatsAgainstRealDisk:
         assert s["distinct"] == 9400
         assert s["short_by"] == 0
 
-    def test_a_truncated_legacy_model_reports_its_real_shortfall(self):
-        """haiku lost 283 calls to the flat cost cap. The log must show that, not round it off."""
+    def test_the_backfilled_model_now_reports_no_shortfall(self):
+        """haiku had lost 283 calls to the flat cost cap; the backfill (2026-07-27) recovered
+        them. The ability to REPORT a shortfall is pinned on synthetic data in
+        TestDuplicateRecordsAreCountedOnceAndDisclosed and by the bold-a-shortfall test below."""
         s = run_log.call_stats("haiku-4.5-direct", None)
         assert s["expected"] == 9400
-        assert s["distinct"] == 9117
-        assert s["short_by"] == 283
+        assert s["distinct"] == 9400
+        assert s["short_by"] == 0
 
     def test_expected_comes_from_the_oracle_not_from_the_records(self):
         """Every model owes the same 9,400 regardless of what it recorded -- that is what makes
@@ -138,12 +140,20 @@ class TestHonestyOfTheLog:
         assert "No ledger rows for this arm" in text
         assert "TOTAL (measured)" not in text
 
-    def test_a_shortfall_is_bolded_in_the_calls_table(self):
-        """The legacy arm is 357 calls short across 5 cells. It must be visible, not averaged."""
+    def test_a_complete_arm_shows_a_dash_not_a_fake_shortfall(self):
         text = run_log.build_log(None)
-        assert "**283**" in text      # haiku's shortfall
-        assert "**74**" in text       # gemini's shortfall
-        assert "**357**" in text      # and the arm total
+        assert "| **TOTAL** | **103400** | **103400** | **—** |" in text
+
+    def test_a_shortfall_would_be_bolded_if_one_existed(self, monkeypatch):
+        """Positive control. The legacy arm is now whole, so the real data can no longer exercise
+        the bold-a-shortfall path -- and a formatter that never fires is indistinguishable from a
+        broken one. Drive it with an injected short cell instead."""
+        monkeypatch.setattr(run_log, "call_stats",
+                            lambda label, temp: {"expected": 9400, "distinct": 9117,
+                                                  "short_by": 283, "duplicates": 0,
+                                                  "errors": 0, "unparsed": 0})
+        text = run_log.stats_table(None, ["haiku-4.5-direct"])
+        assert "**283**" in text
 
 
 class TestReconstructedSpendIsLabelled:

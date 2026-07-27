@@ -1,0 +1,9 @@
+{
+ "leaf": "redemption_rights",
+ "model": "qwen3-0.6b-think",
+ "task_name": "redemption_rights",
+ "data_version": "74b294ec3e35ddfe7109f0e02427f15b1fd2d3cf4f5235905afd2c34aa1584db",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T16:09:08.491936+00:00"
+}

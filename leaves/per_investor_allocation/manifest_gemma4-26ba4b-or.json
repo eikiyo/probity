@@ -1,0 +1,9 @@
+{
+ "leaf": "per_investor_allocation",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "per_investor_allocation",
+ "data_version": "494ec659effbdab4238ad8e1c568cd5404139042846781986ca3aaee1bb421bf",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:54.628467+00:00"
+}

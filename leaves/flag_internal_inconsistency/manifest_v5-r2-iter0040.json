@@ -1,0 +1,9 @@
+{
+ "leaf": "flag_internal_inconsistency",
+ "model": "v5-r2-iter0040",
+ "task_name": "flag_internal_inconsistency",
+ "data_version": "7e31db113b583eddc3960a998a10e357cd058e152f9192a4e51aaef2426ba338",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T19:43:08.817770+00:00"
+}

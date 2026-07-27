@@ -1024,5 +1024,569 @@
    "tripped": false,
    "reason": null
   }
+ },
+ "tuned-v4": {
+  "model": "tuned-v4",
+  "accuracy": {
+   "task": "s1_risk_factors",
+   "n_instances": 5,
+   "n_measurable": 3,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "truth": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "if we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business.",
+       "truth": "if we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 1,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results.",
+       "truth": "fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": null,
+       "truth": "if you purchase our common stock in this offering, you will incur immediate and substantial dilution in the net tangible book value of your shares.",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": null,
+       "truth": "we have broad discretion in the use of our existing cash, cash equivalents and the net proceeds from this offering and may not use them effectively.",
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "s1_risk_factors",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "s1_risk_factors": 0.0
+   },
+   "parse_failure_count": 2,
+   "parse_failure_rate": 0.4,
+   "valid_run_count": 3,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "tuned-v4-final": {
+  "model": "tuned-v4-final",
+  "accuracy": {
+   "task": "s1_risk_factors",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 0.0,
+   "accuracy_strict": 0.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 3,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "with25",
+       "truth": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "consistency": 0.3333333333333333
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "```json",
+       "truth": "if we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business.",
+       "consistency": 0.4
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 10,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "false",
+       "truth": "fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results.",
+       "consistency": 0.3
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 17,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "0.0",
+       "truth": "if you purchase our common stock in this offering, you will incur immediate and substantial dilution in the net tangible book value of your shares.",
+       "consistency": 0.23529411764705882
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 9,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "```json",
+       "truth": "we have broad discretion in the use of our existing cash, cash equivalents and the net proceeds from this offering and may not use them effectively.",
+       "consistency": 0.3333333333333333
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "s1_risk_factors",
+   "consistency_rate": 0.32039215686274514,
+   "consistency_pct": 32.03921568627452,
+   "field_flips": {
+    "s1_risk_factors": 1.0
+   },
+   "parse_failure_count": 55,
+   "parse_failure_rate": 0.55,
+   "valid_run_count": 45,
+   "measurable": false,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "mlx-base-n20": {
+  "model": "mlx-base-n20",
+  "accuracy": {
+   "task": "s1_risk_factors",
+   "n_instances": 5,
+   "n_measurable": 4,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.5,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "truth": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "if we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business.",
+       "truth": "if we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results.",
+       "truth": "fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 17,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "if you purchase our common stock in this offering, you will incur immediate and substantial dilution in the net tangible book value of your shares.",
+       "truth": "if you purchase our common stock in this offering, you will incur immediate and substantial dilution in the net tangible book value of your shares.",
+       "consistency": 0.5294117647058824
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": null,
+       "truth": "we have broad discretion in the use of our existing cash, cash equivalents and the net proceeds from this offering and may not use them effectively.",
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "s1_risk_factors",
+   "consistency_rate": 0.8323529411764705,
+   "consistency_pct": 83.23529411764706,
+   "field_flips": {
+    "s1_risk_factors": 0.4
+   },
+   "parse_failure_count": 22,
+   "parse_failure_rate": 0.22,
+   "valid_run_count": 78,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "1b-base-n5": {
+  "model": "1b-base-n5",
+  "accuracy": {
+   "task": "s1_risk_factors",
+   "n_instances": 5,
+   "n_measurable": 4,
+   "accuracy_majority": 0.75,
+   "accuracy_strict": 0.75,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "truth": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "if we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business.",
+       "truth": "if we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results.",
+       "truth": "fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "if you purchase our common stock in this offering, you will incur immediate dilution in the net tangible book value of your shares.",
+       "truth": "if you purchase our common stock in this offering, you will incur immediate and substantial dilution in the net tangible book value of your shares.",
+       "consistency": 0.6
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": null,
+       "truth": "we have broad discretion in the use of our existing cash, cash equivalents and the net proceeds from this offering and may not use them effectively.",
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "s1_risk_factors",
+   "consistency_rate": 0.9,
+   "consistency_pct": 90.0,
+   "field_flips": {
+    "s1_risk_factors": 0.2
+   },
+   "parse_failure_count": 5,
+   "parse_failure_rate": 0.2,
+   "valid_run_count": 20,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "4b-base-n5": {
+  "model": "4b-base-n5",
+  "accuracy": {
+   "task": "s1_risk_factors",
+   "n_instances": 5,
+   "n_measurable": 5,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 0.8,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "truth": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "consistency": 0.8
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "if we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business.",
+       "truth": "if we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results.",
+       "truth": "fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "if you purchase our common stock in this offering, you will incur immediate and substantial dilution in the net tangible book value of your shares.",
+       "truth": "if you purchase our common stock in this offering, you will incur immediate and substantial dilution in the net tangible book value of your shares.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 5,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "we have broad discretion in the use of our existing cash, cash equivalents and the net proceeds from this offering and may not use them effectively.",
+       "truth": "we have broad discretion in the use of our existing cash, cash equivalents and the net proceeds from this offering and may not use them effectively.",
+       "consistency": 1.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "s1_risk_factors",
+   "consistency_rate": 0.96,
+   "consistency_pct": 96.0,
+   "field_flips": {
+    "s1_risk_factors": 0.2
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 25,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ },
+ "gemma4-26ba4b-or": {
+  "model": "google/gemma-4-26b-a4b-it",
+  "accuracy": {
+   "task": "s1_risk_factors",
+   "n_instances": 5,
+   "n_measurable": 1,
+   "accuracy_majority": 1.0,
+   "accuracy_strict": 1.0,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 19,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "truth": "our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment.",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": null,
+       "truth": "if we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business.",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": null,
+       "truth": "fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results.",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": null,
+       "truth": "if you purchase our common stock in this offering, you will incur immediate and substantial dilution in the net tangible book value of your shares.",
+       "consistency": 0.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 0,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "s1_risk_factors": {
+       "majority": null,
+       "truth": "we have broad discretion in the use of our existing cash, cash equivalents and the net proceeds from this offering and may not use them effectively.",
+       "consistency": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "s1_risk_factors",
+   "consistency_rate": 1.0,
+   "consistency_pct": 100.0,
+   "field_flips": {
+    "s1_risk_factors": 0.0
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 19,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "guard": {
+   "tripped": true,
+   "reason": "would exceed max_cost_usd=$0.2000 (already spent ~$0.1900, next call ~$0.0100)"
+  }
  }
 }

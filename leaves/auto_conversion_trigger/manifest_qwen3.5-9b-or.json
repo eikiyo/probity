@@ -1,0 +1,9 @@
+{
+ "leaf": "auto_conversion_trigger",
+ "model": "qwen3.5-9b-or",
+ "task_name": "auto_conversion_trigger",
+ "data_version": "bcfe07b8a3dfce7a0ca2fb90c18a1c3ca52e2f2b6ad9b833dbf6637d7f4b2623",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T21:37:18.097058+00:00"
+}

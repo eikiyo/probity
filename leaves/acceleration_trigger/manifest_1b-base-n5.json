@@ -1,0 +1,9 @@
+{
+ "leaf": "acceleration_trigger",
+ "model": "1b-base-n5",
+ "task_name": "acceleration_trigger",
+ "data_version": "8e08eb7279c11e906d35111ccea492d2bd9f70243779a45d5eb2e2abd3c7eba9",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:19:17.880373+00:00"
+}

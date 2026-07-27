@@ -1,0 +1,9 @@
+{
+ "leaf": "current_ownership_pct",
+ "model": "tuned-v4-n20",
+ "task_name": "current_ownership_pct",
+ "data_version": "51d325ebc21ad41c0e7bf24486e38fad06a0a7a03980d9f5060cf7c01f237988",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:20:44.567654+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "fully_diluted_basis",
+ "model": "1b-base-n5",
+ "task_name": "fully_diluted_basis",
+ "data_version": "fb9d1cb09ce883a7be4552015fa70a2f4e859ef7d5021c29648673159a1a4cd7",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:28:53.795326+00:00"
+}

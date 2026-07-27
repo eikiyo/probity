@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_pre_post",
+ "model": "mlx-base-n20",
+ "task_name": "safe_pre_post",
+ "data_version": "3b5d94262d8264cfbb8136e806a56d1d5cd1f22e262e33e512835884d8d035ae",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:41:36.983482+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "protective_provisions",
+ "model": "mlx-base-n20",
+ "task_name": "protective_provisions",
+ "data_version": "bcd7cc96f4e415e22cfe0777b75fbff50956d9ef6212d44e4182b2c11e156d76",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:35:20.145300+00:00"
+}

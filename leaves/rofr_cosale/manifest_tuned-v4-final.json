@@ -1,0 +1,9 @@
+{
+ "leaf": "rofr_cosale",
+ "model": "tuned-v4-final",
+ "task_name": "rofr_cosale",
+ "data_version": "c671d7451d60041aa036e0a3c54aefbeb3b1d7e0a7e903c47e7b44d4c068e220",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:06:33.286536+00:00"
+}

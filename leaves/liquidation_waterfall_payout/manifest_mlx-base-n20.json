@@ -1,0 +1,9 @@
+{
+ "leaf": "liquidation_waterfall_payout",
+ "model": "mlx-base-n20",
+ "task_name": "liquidation_waterfall_payout",
+ "data_version": "fcaef738e79edcf3e44bfa3e35a9536489382d3dea29321f2f4545ab5314d8ad",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:27:54.906617+00:00"
+}

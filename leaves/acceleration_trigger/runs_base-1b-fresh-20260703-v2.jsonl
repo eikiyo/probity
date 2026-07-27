@@ -1,0 +1,260 @@
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "912562_000091256215000002", "raw_output": "\n{\n0: \"single-trigger", "parsed": null}
+{"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "item_id": "912562_000091256215000002", "raw_output": "<unused4211>", "parsed": null}
+{"_key": [0, 5], "instance_idx": 0, "run_idx": 5, "item_id": "912562_000091256215000002", "raw_output": "AutorTextBox", "parsed": null}
+{"_key": [0, 6], "instance_idx": 0, "run_idx": 6, "item_id": "912562_000091256215000002", "raw_output": "<unused4380>\n", "parsed": null}
+{"_key": [0, 7], "instance_idx": 0, "run_idx": 7, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [0, 8], "instance_idx": 0, "run_idx": 8, "item_id": "912562_000091256215000002", "raw_output": "<unused2947>\n\n", "parsed": null}
+{"_key": [0, 9], "instance_idx": 0, "run_idx": 9, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [0, 10], "instance_idx": 0, "run_idx": 10, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [0, 11], "instance_idx": 0, "run_idx": 11, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [0, 12], "instance_idx": 0, "run_idx": 12, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [0, 13], "instance_idx": 0, "run_idx": 13, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [0, 14], "instance_idx": 0, "run_idx": 14, "item_id": "912562_000091256215000002", "raw_output": "pecColor\n{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [0, 15], "instance_idx": 0, "run_idx": 15, "item_id": "912562_000091256215000002", "raw_output": "<unused3411>\n```", "parsed": null}
+{"_key": [0, 16], "instance_idx": 0, "run_idx": 16, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [0, 17], "instance_idx": 0, "run_idx": 17, "item_id": "912562_000091256215000002", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [0, 18], "instance_idx": 0, "run_idx": 18, "item_id": "912562_000091256215000002", "raw_output": "<unused3688>\n\n", "parsed": null}
+{"_key": [0, 19], "instance_idx": 0, "run_idx": 19, "item_id": "912562_000091256215000002", "raw_output": "\n```json", "parsed": null}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "1671858_000119312522280241", "raw_output": "7.3 termination without cause or resignation for good reason: double-trigger", "parsed": null}
+{"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "1671858_000119312522280241", "raw_output": "7.3 termination without cause or resignation for good reason relating to change in control; double-trigger", "parsed": null}
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "1671858_000119312522280241", "raw_output": "100%", "parsed": null}
+{"_key": [1, 3], "instance_idx": 1, "run_idx": 3, "item_id": "1671858_000119312522280241", "raw_output": "0.0", "parsed": null}
+{"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "item_id": "1671858_000119312522280241", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [1, 5], "instance_idx": 1, "run_idx": 5, "item_id": "1671858_000119312522280241", "raw_output": "```json", "parsed": null}
+{"_key": [1, 6], "instance_idx": 1, "run_idx": 6, "item_id": "1671858_000119312522280241", "raw_output": "100", "parsed": null}
+{"_key": [1, 7], "instance_idx": 1, "run_idx": 7, "item_id": "1671858_000119312522280241", "raw_output": "```json\n{\n  \"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [1, 8], "instance_idx": 1, "run_idx": 8, "item_id": "1671858_000119312522280241", "raw_output": "{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [1, 9], "instance_idx": 1, "run_idx": 9, "item_id": "1671858_000119312522280241", "raw_output": "```", "parsed": null}
+{"_key": [1, 10], "instance_idx": 1, "run_idx": 10, "item_id": "1671858_000119312522280241", "raw_output": "```json\n{\n\u03c4\u03ae-trigger: \"double-trigger", "parsed": null}
+{"_key": [1, 11], "instance_idx": 1, "run_idx": 11, "item_id": "1671858_000119312522280241", "raw_output": "100%", "parsed": null}
+{"_key": [1, 12], "instance_idx": 1, "run_idx": 12, "item_id": "1671858_000119312522280241", "raw_output": "2304", "parsed": null}
+{"_key": [1, 13], "instance_idx": 1, "run_idx": 13, "item_id": "1671858_000119312522280241", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [1, 14], "instance_idx": 1, "run_idx": 14, "item_id": "1671858_000119312522280241", "raw_output": "```json\n{\n0:8", "parsed": null}
+{"_key": [1, 15], "instance_idx": 1, "run_idx": 15, "item_id": "1671858_000119312522280241", "raw_output": "{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [1, 16], "instance_idx": 1, "run_idx": 16, "item_id": "1671858_000119312522280241", "raw_output": "100%", "parsed": null}
+{"_key": [1, 17], "instance_idx": 1, "run_idx": 17, "item_id": "1671858_000119312522280241", "raw_output": "7.3.", "parsed": null}
+{"_key": [1, 18], "instance_idx": 1, "run_idx": 18, "item_id": "1671858_000119312522280241", "raw_output": "```json\n{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [1, 19], "instance_idx": 1, "run_idx": 19, "item_id": "1671858_000119312522280241", "raw_output": "100", "parsed": null}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "1293310_000119312512306440", "raw_output": "1.0", "parsed": null}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "1293310_000119312512306440", "raw_output": "3427 HILLVIEW, P.B.304", "parsed": null}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "1293310_000119312512306440", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "item_id": "1293310_000119312512306440", "raw_output": "{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "item_id": "1293310_000119312512306440", "raw_output": "{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [2, 5], "instance_idx": 2, "run_idx": 5, "item_id": "1293310_000119312512306440", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [2, 6], "instance_idx": 2, "run_idx": 6, "item_id": "1293310_000119312512306440", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [2, 7], "instance_idx": 2, "run_idx": 7, "item_id": "1293310_000119312512306440", "raw_output": "```json\n{\n\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [2, 8], "instance_idx": 2, "run_idx": 8, "item_id": "1293310_000119312512306440", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [2, 9], "instance_idx": 2, "run_idx": 9, "item_id": "1293310_000119312512306440", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [2, 10], "instance_idx": 2, "run_idx": 10, "item_id": "1293310_000119312512306440", "raw_output": "{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [2, 11], "instance_idx": 2, "run_idx": 11, "item_id": "1293310_000119312512306440", "raw_output": "0.0", "parsed": null}
+{"_key": [2, 12], "instance_idx": 2, "run_idx": 12, "item_id": "1293310_000119312512306440", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [2, 13], "instance_idx": 2, "run_idx": 13, "item_id": "1293310_000119312512306440", "raw_output": "3427.04", "parsed": null}
+{"_key": [2, 14], "instance_idx": 2, "run_idx": 14, "item_id": "1293310_000119312512306440", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [2, 15], "instance_idx": 2, "run_idx": 15, "item_id": "1293310_000119312512306440", "raw_output": "3427", "parsed": null}
+{"_key": [2, 16], "instance_idx": 2, "run_idx": 16, "item_id": "1293310_000119312512306440", "raw_output": "{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [2, 17], "instance_idx": 2, "run_idx": 17, "item_id": "1293310_000119312512306440", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [2, 18], "instance_idx": 2, "run_idx": 18, "item_id": "1293310_000119312512306440", "raw_output": "3427 Hiltview,042007", "parsed": null}
+{"_key": [2, 19], "instance_idx": 2, "run_idx": 19, "item_id": "1293310_000119312512306440", "raw_output": "```", "parsed": null}
+{"_key": [3, 0], "instance_idx": 3, "run_idx": 0, "item_id": "1433714_000119312514041287", "raw_output": "\n", "parsed": null}
+{"_key": [3, 1], "instance_idx": 3, "run_idx": 1, "item_id": "1433714_000119312514041287", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [3, 2], "instance_idx": 3, "run_idx": 2, "item_id": "1433714_000119312514041287", "raw_output": "<unused3974>", "parsed": null}
+{"_key": [3, 3], "instance_idx": 3, "run_idx": 3, "item_id": "1433714_000119312514041287", "raw_output": "<unused5815>.000", "parsed": null}
+{"_key": [3, 4], "instance_idx": 3, "run_idx": 4, "item_id": "1433714_000119312514041287", "raw_output": "0.0", "parsed": null}
+{"_key": [3, 5], "instance_idx": 3, "run_idx": 5, "item_id": "1433714_000119312514041287", "raw_output": "\ud808\udd12\n", "parsed": null}
+{"_key": [3, 6], "instance_idx": 3, "run_idx": 6, "item_id": "1433714_000119312514041287", "raw_output": "<unused2396>\n\n", "parsed": null}
+{"_key": [3, 7], "instance_idx": 3, "run_idx": 7, "item_id": "1433714_000119312514041287", "raw_output": "", "parsed": null}
+{"_key": [3, 8], "instance_idx": 3, "run_idx": 8, "item_id": "1433714_000119312514041287", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [3, 9], "instance_idx": 3, "run_idx": 9, "item_id": "1433714_000119312514041287", "raw_output": "<unused5202>", "parsed": null}
+{"_key": [3, 10], "instance_idx": 3, "run_idx": 10, "item_id": "1433714_000119312514041287", "raw_output": "```", "parsed": null}
+{"_key": [3, 11], "instance_idx": 3, "run_idx": 11, "item_id": "1433714_000119312514041287", "raw_output": "```\n{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [3, 12], "instance_idx": 3, "run_idx": 12, "item_id": "1433714_000119312514041287", "raw_output": "", "parsed": null}
+{"_key": [3, 13], "instance_idx": 3, "run_idx": 13, "item_id": "1433714_000119312514041287", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [3, 14], "instance_idx": 3, "run_idx": 14, "item_id": "1433714_000119312514041287", "raw_output": "\n\ud809\udc26", "parsed": null}
+{"_key": [3, 15], "instance_idx": 3, "run_idx": 15, "item_id": "1433714_000119312514041287", "raw_output": "\ud808\udd7e", "parsed": null}
+{"_key": [3, 16], "instance_idx": 3, "run_idx": 16, "item_id": "1433714_000119312514041287", "raw_output": "<unused3555>", "parsed": null}
+{"_key": [3, 17], "instance_idx": 3, "run_idx": 17, "item_id": "1433714_000119312514041287", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [3, 18], "instance_idx": 3, "run_idx": 18, "item_id": "1433714_000119312514041287", "raw_output": "\ud809\udc3b\n", "parsed": null}
+{"_key": [3, 19], "instance_idx": 3, "run_idx": 19, "item_id": "1433714_000119312514041287", "raw_output": "StarParaPkgBody", "parsed": null}
+{"_key": [4, 0], "instance_idx": 4, "run_idx": 0, "item_id": "1318568_000155837016005813", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [4, 1], "instance_idx": 4, "run_idx": 1, "item_id": "1318568_000155837016005813", "raw_output": "```", "parsed": null}
+{"_key": [4, 2], "instance_idx": 4, "run_idx": 2, "item_id": "1318568_000155837016005813", "raw_output": "```json\n{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [4, 3], "instance_idx": 4, "run_idx": 3, "item_id": "1318568_000155837016005813", "raw_output": "```json\n{\n0:00-500698000", "parsed": null}
+{"_key": [4, 4], "instance_idx": 4, "run_idx": 4, "item_id": "1318568_000155837016005813", "raw_output": "```json", "parsed": null}
+{"_key": [4, 5], "instance_idx": 4, "run_idx": 5, "item_id": "1318568_000155837016005813", "raw_output": "```json", "parsed": null}
+{"_key": [4, 6], "instance_idx": 4, "run_idx": 6, "item_id": "1318568_000155837016005813", "raw_output": "", "parsed": null}
+{"_key": [4, 7], "instance_idx": 4, "run_idx": 7, "item_id": "1318568_000155837016005813", "raw_output": "```json", "parsed": null}
+{"_key": [4, 8], "instance_idx": 4, "run_idx": 8, "item_id": "1318568_000155837016005813", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [4, 9], "instance_idx": 4, "run_idx": 9, "item_id": "1318568_000155837016005813", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [4, 10], "instance_idx": 4, "run_idx": 10, "item_id": "1318568_000155837016005813", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [4, 11], "instance_idx": 4, "run_idx": 11, "item_id": "1318568_000155837016005813", "raw_output": "", "parsed": null}
+{"_key": [4, 12], "instance_idx": 4, "run_idx": 12, "item_id": "1318568_000155837016005813", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [4, 13], "instance_idx": 4, "run_idx": 13, "item_id": "1318568_000155837016005813", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [4, 14], "instance_idx": 4, "run_idx": 14, "item_id": "1318568_000155837016005813", "raw_output": "", "parsed": null}
+{"_key": [4, 15], "instance_idx": 4, "run_idx": 15, "item_id": "1318568_000155837016005813", "raw_output": "0.0", "parsed": null}
+{"_key": [4, 16], "instance_idx": 4, "run_idx": 16, "item_id": "1318568_000155837016005813", "raw_output": "```json", "parsed": null}
+{"_key": [4, 17], "instance_idx": 4, "run_idx": 17, "item_id": "1318568_000155837016005813", "raw_output": "0.0", "parsed": null}
+{"_key": [4, 18], "instance_idx": 4, "run_idx": 18, "item_id": "1318568_000155837016005813", "raw_output": "```json\n{\n0:00", "parsed": null}
+{"_key": [4, 19], "instance_idx": 4, "run_idx": 19, "item_id": "1318568_000155837016005813", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [5, 0], "instance_idx": 5, "run_idx": 0, "item_id": "1396009_000095014408007433", "raw_output": "\n\ud808\ude30\n", "parsed": null}
+{"_key": [5, 1], "instance_idx": 5, "run_idx": 1, "item_id": "1396009_000095014408007433", "raw_output": "<unused3904>\n<unused3287>\n", "parsed": null}
+{"_key": [5, 2], "instance_idx": 5, "run_idx": 2, "item_id": "1396009_000095014408007433", "raw_output": " LuaToJavaResult.0", "parsed": null}
+{"_key": [5, 3], "instance_idx": 5, "run_idx": 3, "item_id": "1396009_000095014408007433", "raw_output": "\ud808\uded0", "parsed": null}
+{"_key": [5, 4], "instance_idx": 5, "run_idx": 4, "item_id": "1396009_000095014408007433", "raw_output": "<unused2709>\n", "parsed": null}
+{"_key": [5, 5], "instance_idx": 5, "run_idx": 5, "item_id": "1396009_000095014408007433", "raw_output": "\n\n", "parsed": null}
+{"_key": [5, 6], "instance_idx": 5, "run_idx": 6, "item_id": "1396009_000095014408007433", "raw_output": "\ud808\udeee\n<unused3106>\n", "parsed": null}
+{"_key": [5, 7], "instance_idx": 5, "run_idx": 7, "item_id": "1396009_000095014408007433", "raw_output": "\n<unused3360>\n", "parsed": null}
+{"_key": [5, 8], "instance_idx": 5, "run_idx": 8, "item_id": "1396009_000095014408007433", "raw_output": "\n<unused5262>\n", "parsed": null}
+{"_key": [5, 9], "instance_idx": 5, "run_idx": 9, "item_id": "1396009_000095014408007433", "raw_output": "<unused4151>.\n", "parsed": null}
+{"_key": [5, 10], "instance_idx": 5, "run_idx": 10, "item_id": "1396009_000095014408007433", "raw_output": "\n \u12a5\u12e8\u1231\u1235_\n\n", "parsed": null}
+{"_key": [5, 11], "instance_idx": 5, "run_idx": 11, "item_id": "1396009_000095014408007433", "raw_output": "\n{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [5, 12], "instance_idx": 5, "run_idx": 12, "item_id": "1396009_000095014408007433", "raw_output": "<unused3906>\n", "parsed": null}
+{"_key": [5, 13], "instance_idx": 5, "run_idx": 13, "item_id": "1396009_000095014408007433", "raw_output": "\n<unused5108>\n", "parsed": null}
+{"_key": [5, 14], "instance_idx": 5, "run_idx": 14, "item_id": "1396009_000095014408007433", "raw_output": "\n\n", "parsed": null}
+{"_key": [5, 15], "instance_idx": 5, "run_idx": 15, "item_id": "1396009_000095014408007433", "raw_output": "<unused3360>\n", "parsed": null}
+{"_key": [5, 16], "instance_idx": 5, "run_idx": 16, "item_id": "1396009_000095014408007433", "raw_output": "\n{\\0000000000000000", "parsed": null}
+{"_key": [5, 17], "instance_idx": 5, "run_idx": 17, "item_id": "1396009_000095014408007433", "raw_output": "\n\n", "parsed": null}
+{"_key": [5, 18], "instance_idx": 5, "run_idx": 18, "item_id": "1396009_000095014408007433", "raw_output": "\n\ud808\udda1", "parsed": null}
+{"_key": [5, 19], "instance_idx": 5, "run_idx": 19, "item_id": "1396009_000095014408007433", "raw_output": "\ud808\udeea\nHlavniOkno\n", "parsed": null}
+{"_key": [6, 0], "instance_idx": 6, "run_idx": 0, "item_id": "1358403_000135840318000037", "raw_output": "```json\n{\n\u062e\u062a\u0441\u0442\u0432\u0438\u0438: \"single-trigger", "parsed": null}
+{"_key": [6, 1], "instance_idx": 6, "run_idx": 1, "item_id": "1358403_000135840318000037", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [6, 2], "instance_idx": 6, "run_idx": 2, "item_id": "1358403_000135840318000037", "raw_output": "```json\n{\n3.0:/acceleration_trigger: \"single-trigger", "parsed": null}
+{"_key": [6, 3], "instance_idx": 6, "run_idx": 3, "item_id": "1358403_000135840318000037", "raw_output": "", "parsed": null}
+{"_key": [6, 4], "instance_idx": 6, "run_idx": 4, "item_id": "1358403_000135840318000037", "raw_output": "", "parsed": null}
+{"_key": [6, 5], "instance_idx": 6, "run_idx": 5, "item_id": "1358403_000135840318000037", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [6, 6], "instance_idx": 6, "run_idx": 6, "item_id": "1358403_000135840318000037", "raw_output": "```", "parsed": null}
+{"_key": [6, 7], "instance_idx": 6, "run_idx": 7, "item_id": "1358403_000135840318000037", "raw_output": "", "parsed": null}
+{"_key": [6, 8], "instance_idx": 6, "run_idx": 8, "item_id": "1358403_000135840318000037", "raw_output": "```json\n{\n0:0.0", "parsed": null}
+{"_key": [6, 9], "instance_idx": 6, "run_idx": 9, "item_id": "1358403_000135840318000037", "raw_output": "", "parsed": null}
+{"_key": [6, 10], "instance_idx": 6, "run_idx": 10, "item_id": "1358403_000135840318000037", "raw_output": "\nintervento_304", "parsed": null}
+{"_key": [6, 11], "instance_idx": 6, "run_idx": 11, "item_id": "1358403_000135840318000037", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [6, 12], "instance_idx": 6, "run_idx": 12, "item_id": "1358403_000135840318000037", "raw_output": "<unused2986>.\n.", "parsed": null}
+{"_key": [6, 13], "instance_idx": 6, "run_idx": 13, "item_id": "1358403_000135840318000037", "raw_output": " sakamm\n<unused4714>\n", "parsed": null}
+{"_key": [6, 14], "instance_idx": 6, "run_idx": 14, "item_id": "1358403_000135840318000037", "raw_output": "Y\n```\n{\n16.4(B)", "parsed": null}
+{"_key": [6, 15], "instance_idx": 6, "run_idx": 15, "item_id": "1358403_000135840318000037", "raw_output": "", "parsed": null}
+{"_key": [6, 16], "instance_idx": 6, "run_idx": 16, "item_id": "1358403_000135840318000037", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [6, 17], "instance_idx": 6, "run_idx": 17, "item_id": "1358403_000135840318000037", "raw_output": "", "parsed": null}
+{"_key": [6, 18], "instance_idx": 6, "run_idx": 18, "item_id": "1358403_000135840318000037", "raw_output": "```json\n{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [6, 19], "instance_idx": 6, "run_idx": 19, "item_id": "1358403_000135840318000037", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [7, 0], "instance_idx": 7, "run_idx": 0, "item_id": "1452751_000119312513403444", "raw_output": "h702", "parsed": null}
+{"_key": [7, 1], "instance_idx": 7, "run_idx": 1, "item_id": "1452751_000119312513403444", "raw_output": "\necocond", "parsed": null}
+{"_key": [7, 2], "instance_idx": 7, "run_idx": 2, "item_id": "1452751_000119312513403444", "raw_output": "\n\ud808\uded5", "parsed": null}
+{"_key": [7, 3], "instance_idx": 7, "run_idx": 3, "item_id": "1452751_000119312513403444", "raw_output": "\n<unused2813>", "parsed": null}
+{"_key": [7, 4], "instance_idx": 7, "run_idx": 4, "item_id": "1452751_000119312513403444", "raw_output": "<unused3289>\nUimcoords", "parsed": null}
+{"_key": [7, 5], "instance_idx": 7, "run_idx": 5, "item_id": "1452751_000119312513403444", "raw_output": "\n\ud808\udf01", "parsed": null}
+{"_key": [7, 6], "instance_idx": 7, "run_idx": 6, "item_id": "1452751_000119312513403444", "raw_output": "\n<unused2879>", "parsed": null}
+{"_key": [7, 7], "instance_idx": 7, "run_idx": 7, "item_id": "1452751_000119312513403444", "raw_output": "\n<unused55>\n", "parsed": null}
+{"_key": [7, 8], "instance_idx": 7, "run_idx": 8, "item_id": "1452751_000119312513403444", "raw_output": "<unused3294>\n<unused4187>\n", "parsed": null}
+{"_key": [7, 9], "instance_idx": 7, "run_idx": 9, "item_id": "1452751_000119312513403444", "raw_output": "niOkno.0125", "parsed": null}
+{"_key": [7, 10], "instance_idx": 7, "run_idx": 10, "item_id": "1452751_000119312513403444", "raw_output": "\n<unused2665>\n", "parsed": null}
+{"_key": [7, 11], "instance_idx": 7, "run_idx": 11, "item_id": "1452751_000119312513403444", "raw_output": "\n\n", "parsed": null}
+{"_key": [7, 12], "instance_idx": 7, "run_idx": 12, "item_id": "1452751_000119312513403444", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [7, 13], "instance_idx": 7, "run_idx": 13, "item_id": "1452751_000119312513403444", "raw_output": "\n<unused2955>\n", "parsed": null}
+{"_key": [7, 14], "instance_idx": 7, "run_idx": 14, "item_id": "1452751_000119312513403444", "raw_output": "<unused4111>\n", "parsed": null}
+{"_key": [7, 15], "instance_idx": 7, "run_idx": 15, "item_id": "1452751_000119312513403444", "raw_output": "\n\ud808\udf2f", "parsed": null}
+{"_key": [7, 16], "instance_idx": 7, "run_idx": 16, "item_id": "1452751_000119312513403444", "raw_output": "\ud808\udd6a\n", "parsed": null}
+{"_key": [7, 17], "instance_idx": 7, "run_idx": 17, "item_id": "1452751_000119312513403444", "raw_output": "\n\n", "parsed": null}
+{"_key": [7, 18], "instance_idx": 7, "run_idx": 18, "item_id": "1452751_000119312513403444", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [7, 19], "instance_idx": 7, "run_idx": 19, "item_id": "1452751_000119312513403444", "raw_output": "\n<unused2622>", "parsed": null}
+{"_key": [8, 0], "instance_idx": 8, "run_idx": 0, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 1], "instance_idx": 8, "run_idx": 1, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 2], "instance_idx": 8, "run_idx": 2, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 3], "instance_idx": 8, "run_idx": 3, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 4], "instance_idx": 8, "run_idx": 4, "item_id": "1108271_000119312504159873", "raw_output": "```json\n{\n0: \"single-trigger", "parsed": null}
+{"_key": [8, 5], "instance_idx": 8, "run_idx": 5, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 6], "instance_idx": 8, "run_idx": 6, "item_id": "1108271_000119312504159873", "raw_output": "```JSON", "parsed": null}
+{"_key": [8, 7], "instance_idx": 8, "run_idx": 7, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 8], "instance_idx": 8, "run_idx": 8, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 9], "instance_idx": 8, "run_idx": 9, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 10], "instance_idx": 8, "run_idx": 10, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [8, 11], "instance_idx": 8, "run_idx": 11, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 12], "instance_idx": 8, "run_idx": 12, "item_id": "1108271_000119312504159873", "raw_output": "```json\n{\"acceleration_trigger\": \"single-trigger", "parsed": null}
+{"_key": [8, 13], "instance_idx": 8, "run_idx": 13, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 14], "instance_idx": 8, "run_idx": 14, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 15], "instance_idx": 8, "run_idx": 15, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 16], "instance_idx": 8, "run_idx": 16, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 17], "instance_idx": 8, "run_idx": 17, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [8, 18], "instance_idx": 8, "run_idx": 18, "item_id": "1108271_000119312504159873", "raw_output": "```json\n{\n0:000", "parsed": null}
+{"_key": [8, 19], "instance_idx": 8, "run_idx": 19, "item_id": "1108271_000119312504159873", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [9, 0], "instance_idx": 9, "run_idx": 0, "item_id": "1566826_000121390025046512", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [9, 1], "instance_idx": 9, "run_idx": 1, "item_id": "1566826_000121390025046512", "raw_output": "<unused5789>\n", "parsed": null}
+{"_key": [9, 2], "instance_idx": 9, "run_idx": 2, "item_id": "1566826_000121390025046512", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [9, 3], "instance_idx": 9, "run_idx": 3, "item_id": "1566826_000121390025046512", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [9, 4], "instance_idx": 9, "run_idx": 4, "item_id": "1566826_000121390025046512", "raw_output": "\n{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [9, 5], "instance_idx": 9, "run_idx": 5, "item_id": "1566826_000121390025046512", "raw_output": "\n```\n{\"acceleration_trigger\": \"single-trigger", "parsed": null}
+{"_key": [9, 6], "instance_idx": 9, "run_idx": 6, "item_id": "1566826_000121390025046512", "raw_output": "\n```", "parsed": null}
+{"_key": [9, 7], "instance_idx": 9, "run_idx": 7, "item_id": "1566826_000121390025046512", "raw_output": "\n```json", "parsed": null}
+{"_key": [9, 8], "instance_idx": 9, "run_idx": 8, "item_id": "1566826_000121390025046512", "raw_output": "\n", "parsed": null}
+{"_key": [9, 9], "instance_idx": 9, "run_idx": 9, "item_id": "1566826_000121390025046512", "raw_output": "\n{\n0:06", "parsed": null}
+{"_key": [9, 10], "instance_idx": 9, "run_idx": 10, "item_id": "1566826_000121390025046512", "raw_output": "\ud808\udf40", "parsed": null}
+{"_key": [9, 11], "instance_idx": 9, "run_idx": 11, "item_id": "1566826_000121390025046512", "raw_output": "<unused3192>\nfalse", "parsed": null}
+{"_key": [9, 12], "instance_idx": 9, "run_idx": 12, "item_id": "1566826_000121390025046512", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [9, 13], "instance_idx": 9, "run_idx": 13, "item_id": "1566826_000121390025046512", "raw_output": "<unused5562>", "parsed": null}
+{"_key": [9, 14], "instance_idx": 9, "run_idx": 14, "item_id": "1566826_000121390025046512", "raw_output": "\n{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [9, 15], "instance_idx": 9, "run_idx": 15, "item_id": "1566826_000121390025046512", "raw_output": "squarePosVecchio\n{\naws: \"single-trigger", "parsed": null}
+{"_key": [9, 16], "instance_idx": 9, "run_idx": 16, "item_id": "1566826_000121390025046512", "raw_output": "getstarcore\n{\"acceleration_trigger\": \"single-trigger", "parsed": null}
+{"_key": [9, 17], "instance_idx": 9, "run_idx": 17, "item_id": "1566826_000121390025046512", "raw_output": "<unused5850>\n```\n{\"acceleration_trigger\": \"single-trigger", "parsed": null}
+{"_key": [9, 18], "instance_idx": 9, "run_idx": 18, "item_id": "1566826_000121390025046512", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [9, 19], "instance_idx": 9, "run_idx": 19, "item_id": "1566826_000121390025046512", "raw_output": "\n```", "parsed": null}
+{"_key": [10, 0], "instance_idx": 10, "run_idx": 0, "item_id": "1158172_000095013308000368", "raw_output": "17", "parsed": null}
+{"_key": [10, 1], "instance_idx": 10, "run_idx": 1, "item_id": "1158172_000095013308000368", "raw_output": "0.0", "parsed": null}
+{"_key": [10, 2], "instance_idx": 10, "run_idx": 2, "item_id": "1158172_000095013308000368", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [10, 3], "instance_idx": 10, "run_idx": 3, "item_id": "1158172_000095013308000368", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [10, 4], "instance_idx": 10, "run_idx": 4, "item_id": "1158172_000095013308000368", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [10, 5], "instance_idx": 10, "run_idx": 5, "item_id": "1158172_000095013308000368", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [10, 6], "instance_idx": 10, "run_idx": 6, "item_id": "1158172_000095013308000368", "raw_output": "\n", "parsed": null}
+{"_key": [10, 7], "instance_idx": 10, "run_idx": 7, "item_id": "1158172_000095013308000368", "raw_output": "ablement_take.0322007.032007.032103", "parsed": null}
+{"_key": [10, 8], "instance_idx": 10, "run_idx": 8, "item_id": "1158172_000095013308000368", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [10, 9], "instance_idx": 10, "run_idx": 9, "item_id": "1158172_000095013308000368", "raw_output": "70003", "parsed": null}
+{"_key": [10, 10], "instance_idx": 10, "run_idx": 10, "item_id": "1158172_000095013308000368", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [10, 11], "instance_idx": 10, "run_idx": 11, "item_id": "1158172_000095013308000368", "raw_output": "```", "parsed": null}
+{"_key": [10, 12], "instance_idx": 10, "run_idx": 12, "item_id": "1158172_000095013308000368", "raw_output": "0/15", "parsed": null}
+{"_key": [10, 13], "instance_idx": 10, "run_idx": 13, "item_id": "1158172_000095013308000368", "raw_output": "0.03", "parsed": null}
+{"_key": [10, 14], "instance_idx": 10, "run_idx": 14, "item_id": "1158172_000095013308000368", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [10, 15], "instance_idx": 10, "run_idx": 15, "item_id": "1158172_000095013308000368", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [10, 16], "instance_idx": 10, "run_idx": 16, "item_id": "1158172_000095013308000368", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [10, 17], "instance_idx": 10, "run_idx": 17, "item_id": "1158172_000095013308000368", "raw_output": "```json", "parsed": null}
+{"_key": [10, 18], "instance_idx": 10, "run_idx": 18, "item_id": "1158172_000095013308000368", "parsed": {"acceleration_trigger": "double-trigger"}, "normalized": {"acceleration_trigger": "double-trigger"}}
+{"_key": [10, 19], "instance_idx": 10, "run_idx": 19, "item_id": "1158172_000095013308000368", "raw_output": "```json\n{\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [11, 0], "instance_idx": 11, "run_idx": 0, "item_id": "1661460_000119312523020421", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [11, 1], "instance_idx": 11, "run_idx": 1, "item_id": "1661460_000119312523020421", "raw_output": "\n{\"acceleration_trigger\": \"single-trigger", "parsed": null}
+{"_key": [11, 2], "instance_idx": 11, "run_idx": 2, "item_id": "1661460_000119312523020421", "raw_output": "<unused6073>\n\n", "parsed": null}
+{"_key": [11, 3], "instance_idx": 11, "run_idx": 3, "item_id": "1661460_000119312523020421", "raw_output": "\n```json\n{\"acceleration_trigger\": \"single-trigger", "parsed": null}
+{"_key": [11, 4], "instance_idx": 11, "run_idx": 4, "item_id": "1661460_000119312523020421", "raw_output": "\n<unused3275>", "parsed": null}
+{"_key": [11, 5], "instance_idx": 11, "run_idx": 5, "item_id": "1661460_000119312523020421", "raw_output": "<unused3694>\n{\\\n\"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [11, 6], "instance_idx": 11, "run_idx": 6, "item_id": "1661460_000119312523020421", "raw_output": "\n{\\\n \"acceleration_trigger\": \"double-trigger", "parsed": null}
+{"_key": [11, 7], "instance_idx": 11, "run_idx": 7, "item_id": "1661460_000119312523020421", "raw_output": "\n<unused20>\n<unused3095>", "parsed": null}
+{"_key": [11, 8], "instance_idx": 11, "run_idx": 8, "item_id": "1661460_000119312523020421", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [11, 9], "instance_idx": 11, "run_idx": 9, "item_id": "1661460_000119312523020421", "raw_output": "\n{\\\"acceleration_trigger\": \"single-trigger\"}", "parsed": null}
+{"_key": [11, 10], "instance_idx": 11, "run_idx": 10, "item_id": "1661460_000119312523020421", "raw_output": "<unused2433>\n<unused2513>\n", "parsed": null}
+{"_key": [11, 11], "instance_idx": 11, "run_idx": 11, "item_id": "1661460_000119312523020421", "raw_output": "\n{\\\"acceleration_trigger\": \"single-trigger\"}", "parsed": null}
+{"_key": [11, 12], "instance_idx": 11, "run_idx": 12, "item_id": "1661460_000119312523020421", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [11, 13], "instance_idx": 11, "run_idx": 13, "item_id": "1661460_000119312523020421", "raw_output": "\ud809\udc37\n<unused4208>", "parsed": null}
+{"_key": [11, 14], "instance_idx": 11, "run_idx": 14, "item_id": "1661460_000119312523020421", "raw_output": "```json\n{\"acceleration_trigger\": \"single-trigger", "parsed": null}
+{"_key": [11, 15], "instance_idx": 11, "run_idx": 15, "item_id": "1661460_000119312523020421", "raw_output": "\n{\\b acceleration_trigger: \"single-trigger", "parsed": null}
+{"_key": [11, 16], "instance_idx": 11, "run_idx": 16, "item_id": "1661460_000119312523020421", "raw_output": "<unused5965>", "parsed": null}
+{"_key": [11, 17], "instance_idx": 11, "run_idx": 17, "item_id": "1661460_000119312523020421", "raw_output": "\ud808\udc1b", "parsed": null}
+{"_key": [11, 18], "instance_idx": 11, "run_idx": 18, "item_id": "1661460_000119312523020421", "parsed": {"acceleration_trigger": "single-trigger"}, "normalized": {"acceleration_trigger": "single-trigger"}}
+{"_key": [11, 19], "instance_idx": 11, "run_idx": 19, "item_id": "1661460_000119312523020421", "raw_output": "\n<unused5394>\n", "parsed": null}
+{"_key": [12, 0], "instance_idx": 12, "run_idx": 0, "item_id": "31791_000003179124000004", "raw_output": "0.0", "parsed": null}
+{"_key": [12, 1], "instance_idx": 12, "run_idx": 1, "item_id": "31791_000003179124000004", "parsed": {"acceleration_10.31": "double-trigger"}, "normalized": {}}
+{"_key": [12, 2], "instance_idx": 12, "run_idx": 2, "item_id": "31791_000003179124000004", "raw_output": "10.31", "parsed": null}
+{"_key": [12, 3], "instance_idx": 12, "run_idx": 3, "item_id": "31791_000003179124000004", "raw_output": "```json", "parsed": null}
+{"_key": [12, 4], "instance_idx": 12, "run_idx": 4, "item_id": "31791_000003179124000004", "raw_output": "{\n\"acceleration_trigger\": \"single-700\"", "parsed": null}
+{"_key": [12, 5], "instance_idx": 12, "run_idx": 5, "item_id": "31791_000003179124000004", "raw_output": "{\"acceleration_throu", "parsed": null}
+{"_key": [12, 6], "instance_idx": 12, "run_idx": 6, "item_id": "31791_000003179124000004", "raw_output": "```json\n{\"acceleration_.00000000000000000000000000000000000000000", "parsed": null}
+{"_key": [12, 7], "instance_idx": 12, "run_idx": 7, "item_id": "31791_000003179124000004", "raw_output": "```json\n{\"acceleration_70000000270021776024443", "parsed": null}
+{"_key": [12, 8], "instance_idx": 12, "run_idx": 8, "item_id": "31791_000003179124000004", "raw_output": "10.31", "parsed": null}
+{"_key": [12, 9], "instance_idx": 12, "run_idx": 9, "item_id": "31791_000003179124000004", "raw_output": "```\n{\"acceleration_\n7.30.1", "parsed": null}
+{"_key": [12, 10], "instance_idx": 12, "run_idx": 10, "item_id": "31791_000003179124000004", "raw_output": "10.31", "parsed": null}
+{"_key": [12, 11], "instance_idx": 12, "run_idx": 11, "item_id": "31791_000003179124000004", "raw_output": "```\n{\"acceleration_13.032 : \"single-trigger\" | \"double-trigger\"}", "parsed": null}
+{"_key": [12, 12], "instance_idx": 12, "run_idx": 12, "item_id": "31791_000003179124000004", "raw_output": "{\"acceleration_course\": \"single-trigger", "parsed": null}
+{"_key": [12, 13], "instance_idx": 12, "run_idx": 13, "item_id": "31791_000003179124000004", "raw_output": "{acceleration_trigger\": \"double-7\")", "parsed": null}
+{"_key": [12, 14], "instance_idx": 12, "run_idx": 14, "item_id": "31791_000003179124000004", "raw_output": "```json\n{\n\"acceleration_trigger\": \"single-60.0", "parsed": null}
+{"_key": [12, 15], "instance_idx": 12, "run_idx": 15, "item_id": "31791_000003179124000004", "raw_output": "```", "parsed": null}
+{"_key": [12, 16], "instance_idx": 12, "run_idx": 16, "item_id": "31791_000003179124000004", "raw_output": "871", "parsed": null}
+{"_key": [12, 17], "instance_idx": 12, "run_idx": 17, "item_id": "31791_000003179124000004", "raw_output": "12.14.09-15", "parsed": null}
+{"_key": [12, 18], "instance_idx": 12, "run_idx": 18, "item_id": "31791_000003179124000004", "raw_output": "10.31", "parsed": null}
+{"_key": [12, 19], "instance_idx": 12, "run_idx": 19, "item_id": "31791_000003179124000004", "raw_output": "```\n{\"acceleration_62715006101273", "parsed": null}

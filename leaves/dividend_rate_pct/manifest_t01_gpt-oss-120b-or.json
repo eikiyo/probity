@@ -1,0 +1,14 @@
+{
+ "leaf": "dividend_rate_pct",
+ "model": "gpt-oss-120b-or",
+ "task_name": "dividend_rate_pct",
+ "data_version": "3d4b185b42ed52fa592362b20d2a606df6452621647d3ace2a68bf9945d2e112",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:23:08.805293+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

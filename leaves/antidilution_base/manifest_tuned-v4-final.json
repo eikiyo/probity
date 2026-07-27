@@ -1,0 +1,9 @@
+{
+ "leaf": "antidilution_base",
+ "model": "tuned-v4-final",
+ "task_name": "antidilution_base",
+ "data_version": "211579d7abe61a4b11862d3962363a3066f4446e894264e39a348b069806822a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:48:23.745899+00:00"
+}

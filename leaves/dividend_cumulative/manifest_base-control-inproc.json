@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "base-control-inproc",
+ "task_name": "dividend_cumulative",
+ "data_version": "c56d8d2cddc2812723212980fa52acbf569fa6a202eeb9bb58fdd07330b46576",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T15:54:00.930801+00:00"
+}

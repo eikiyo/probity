@@ -1,0 +1,9 @@
+{
+ "leaf": "participation_cap",
+ "model": "qwen3.5-0.8b-think",
+ "task_name": "participation_cap",
+ "data_version": "06ab874de835daaac57b994579f90f2bf3ab91dc0c687c2eea15e3e228f53c11",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T17:01:04.821139+00:00"
+}

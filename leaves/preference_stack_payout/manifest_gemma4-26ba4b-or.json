@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_stack_payout",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "preference_stack_payout",
+ "data_version": "56bd549ba6857c6a47038f3da962ef9237baf7b93c6016169fdb56e1022e0f66",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:30:09.171066+00:00"
+}

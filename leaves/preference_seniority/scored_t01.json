@@ -1,0 +1,177 @@
+{
+ "gpt-oss-120b-or": {
+  "model": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1,
+  "routing": "openrouter",
+  "accuracy": {
+   "task": "preference_seniority",
+   "n_instances": 11,
+   "n_measurable": 11,
+   "accuracy_majority": 0.8181818181818182,
+   "accuracy_strict": 0.7272727272727273,
+   "per_instance": [
+    {
+     "instance_idx": 0,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 1,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 2,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 3,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 4,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "stacked",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 5,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 6,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 7,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 8,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": true,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 9,
+     "n_valid": 20,
+     "majority_correct": false,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "stacked",
+       "truth": "pari-passu",
+       "consistency": 1.0
+      }
+     }
+    },
+    {
+     "instance_idx": 10,
+     "n_valid": 20,
+     "majority_correct": true,
+     "strict_correct": false,
+     "fields": {
+      "preference_seniority": {
+       "majority": "pari-passu",
+       "truth": "pari-passu",
+       "consistency": 0.85
+      }
+     }
+    }
+   ]
+  },
+  "reliability": {
+   "task": "preference_seniority",
+   "consistency_rate": 0.9863636363636363,
+   "consistency_pct": 98.63636363636363,
+   "field_flips": {
+    "preference_seniority": 0.09090909090909091
+   },
+   "parse_failure_count": 0,
+   "parse_failure_rate": 0.0,
+   "valid_run_count": 220,
+   "measurable": true,
+   "excluded_fields": []
+  },
+  "temperature_honoured": null,
+  "guard": {
+   "tripped": false,
+   "reason": null
+  }
+ }
+}

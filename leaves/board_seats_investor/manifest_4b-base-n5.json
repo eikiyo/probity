@@ -1,0 +1,9 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "4b-base-n5",
+ "task_name": "board_seats_investor",
+ "data_version": "b7808b2c4aaf925e823b9627105ffaa88140a5a5c09a20ce27399832bffade30",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:21:54.338908+00:00"
+}

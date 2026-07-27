@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "qwen3.5-4b-think",
+ "task_name": "drag_along",
+ "data_version": "0470d0bd6ebde8e70ab7ab30d550fa89d6be54bb8a76d2ec8a5ea7fb7a015f72",
+ "n_runs": 3,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T20:27:09.359177+00:00"
+}

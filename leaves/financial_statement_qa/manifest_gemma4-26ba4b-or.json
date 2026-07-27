@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "financial_statement_qa",
+ "data_version": "9a60fb387c4a74cfe9d12eb2e749d623dbb83d128775d74e690b36d0044d2b75",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:25.470841+00:00"
+}

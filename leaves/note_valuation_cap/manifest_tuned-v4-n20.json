@@ -1,0 +1,9 @@
+{
+ "leaf": "note_valuation_cap",
+ "model": "tuned-v4-n20",
+ "task_name": "note_valuation_cap",
+ "data_version": "5c97f61ae1a43a7cae5360a8216193dd77c96ff93f555c7006fee25fe1fbe720",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:30:38.377183+00:00"
+}

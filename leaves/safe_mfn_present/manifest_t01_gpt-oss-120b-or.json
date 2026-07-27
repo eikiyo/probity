@@ -1,0 +1,14 @@
+{
+ "leaf": "safe_mfn_present",
+ "model": "gpt-oss-120b-or",
+ "task_name": "safe_mfn_present",
+ "data_version": "37a3607eb343395a5c367d557afaf00c6dd80ff6407b29d5d61d77a7248c5180",
+ "n_runs": 20,
+ "temperature": 0.1,
+ "timestamp": "2026-07-27T12:43:57.581720+00:00",
+ "extra": {
+  "routing": "openrouter",
+  "model_id": "openai/gpt-oss-120b",
+  "temperature_requested": 0.1
+ }
+}

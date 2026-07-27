@@ -161,13 +161,17 @@ class TestAgainstRealRepoData:
         return [REPO / l["leaf"] for l in reg["leaves"]
                 if l.get("tier") == "built" and "leaf" in l]
 
-    def test_finds_exactly_the_five_known_truncated_cells(self):
+    def test_the_legacy_arm_is_now_complete_after_the_backfill(self):
+        """Was: 'finds exactly the five known truncated cells'. Those five were backfilled on
+        2026-07-27 (357 calls), so this asserts the new truth. assert_full's ability to FAIL is
+        pinned on synthetic matrices elsewhere in this file, where it cannot rot."""
         leaves = self._built_leaves()
-        labels = ["gemini3-flash-or", "haiku-4.5-direct"]
+        labels = ["gemini3-flash-or", "haiku-4.5-direct", "mistral-large-or"]
         matrix = cov.coverage_matrix(leaves, labels, 20)
-        found = {(c["leaf"], c["label"]): (c["recorded"], c["expected"])
-                 for c in matrix if not c["complete"]}
-        assert found == self.KNOWN_SHORT
+        holes = [c for c in matrix if not c["complete"]]
+        assert holes == []
+        cov.assert_full(matrix)          # must NOT raise
+
 
     def test_negative_arm_models_that_ran_clean_are_not_flagged(self):
         """A detector that flags everything would pass the test above. This is the other arm."""

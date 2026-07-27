@@ -1,0 +1,9 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "mlx-base-n20",
+ "task_name": "note_maturity_date",
+ "data_version": "f20bde6141de1b190578b2fe207990b8a433413406fcbc0f459ebcc463e42280",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:28:43.730515+00:00"
+}

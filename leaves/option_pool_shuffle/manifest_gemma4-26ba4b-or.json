@@ -1,0 +1,9 @@
+{
+ "leaf": "option_pool_shuffle",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "option_pool_shuffle",
+ "data_version": "9e324b1aade2bdf41b878f9eddce285ab31107625e10c47c678fe7c86946439e",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:50.538234+00:00"
+}

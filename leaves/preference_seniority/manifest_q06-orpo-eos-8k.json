@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "q06-orpo-eos-8k",
+ "task_name": "preference_seniority",
+ "data_version": "c795bc8b0af95be893624bbfc86b7979cde5590354bc9722102bccade52e30f1",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T12:09:47.184612+00:00"
+}

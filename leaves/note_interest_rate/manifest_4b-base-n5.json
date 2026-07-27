@@ -1,0 +1,9 @@
+{
+ "leaf": "note_interest_rate",
+ "model": "4b-base-n5",
+ "task_name": "note_interest_rate",
+ "data_version": "69823f9da311aac8e4ad2d1ddfc986dbd109d1338b91ee318e39ea154d405a5e",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:31:46.141559+00:00"
+}

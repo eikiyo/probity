@@ -1,0 +1,9 @@
+{
+ "leaf": "post_money_valuation",
+ "model": "1b-base-n5",
+ "task_name": "post_money_valuation",
+ "data_version": "233b6d34b8c8df89b9a2c05daa1824b597ed5a09586f48ecb4c6e7852122458b",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:36:20.915828+00:00"
+}

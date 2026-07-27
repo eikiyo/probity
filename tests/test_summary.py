@@ -124,3 +124,35 @@ class TestDisplayMapsAreShared:
         import aggregate as ag
         missing = [m for m in ag.canonical_lineup() if m not in summary.MODEL_DISPLAY]
         assert not missing, f"lineup members with no display name: {missing}"
+
+
+class TestBadgeColorMatchesItsOwnLabel:
+    """A badge's colour is thresholded on the value it PRINTS, never on invisible digits. Two
+    badges showing the same number must always look the same."""
+
+    @pytest.mark.parametrize("a,b", [(84.97, 85.02), (9.98, 10.4), (29.6, 30.4), (60.4, 59.8)])
+    def test_values_that_print_the_same_get_the_same_colour(self, a, b):
+        # Asserted, not guarded behind an `if`: a conditional here would let the case silently
+        # skip and the test would pass while checking nothing.
+        assert round(a) == round(b), "test case is malformed -- these do not print the same"
+        for lower in (True, False):
+            assert summary.badge(a, lower) == summary.badge(b, lower), \
+                f"{a} and {b} both print {round(a)}% but rendered differently"
+
+    def test_these_cases_straddle_a_real_threshold(self):
+        """Positive control: the pairs above must sit ON a colour boundary, or the test proves
+        nothing about thresholds -- any two equal-rounding numbers would pass."""
+        raw_pairs = [(84.97, 85.02), (9.98, 10.4), (29.6, 30.4)]
+        straddles = [(a, b) for a, b in raw_pairs
+                     if (a < 85 <= b) or (a < 10 <= b) or (a < 30 <= b)]
+        assert len(straddles) == 3
+
+    def test_the_real_priced_equity_value_is_self_consistent(self):
+        """84.97% -- the live value that exposed this. It prints 85% and must colour as 85%."""
+        b = summary.badge(84.974747, False)
+        assert "-85%25-" in b
+        assert "yellow" in b, "85 is not > 85, so the >85 green rule must not fire"
+
+    def test_a_value_above_the_threshold_still_goes_green(self):
+        assert "brightgreen" in summary.badge(94.99, False)
+        assert "brightgreen" in summary.badge(6.45, True)

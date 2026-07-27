@@ -1,0 +1,9 @@
+{
+ "leaf": "dividend_cumulative",
+ "model": "tuned-v4-final",
+ "task_name": "dividend_cumulative",
+ "data_version": "02625e228b04ed3df9c70efe51d8a11c065c335e94e92ea659d33d6bf63099ae",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:51:57.206879+00:00"
+}

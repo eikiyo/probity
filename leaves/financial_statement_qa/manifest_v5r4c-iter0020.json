@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "v5r4c-iter0020",
+ "task_name": "financial_statement_qa",
+ "data_version": "b3b54c639e236c938b0ac5e422a053a7bfd9efd6eac9cb9ad6b7266725ceb090",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T20:21:29.694763+00:00"
+}

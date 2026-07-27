@@ -1,0 +1,9 @@
+{
+ "leaf": "note_maturity_date",
+ "model": "gemma4-26ba4b-or",
+ "task_name": "note_maturity_date",
+ "data_version": "ebb24ee55ac05d9c60118709c42d2caae45565e91f00f91661dc9776cb3d2047",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:29:45.520384+00:00"
+}

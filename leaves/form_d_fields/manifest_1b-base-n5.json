@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "1b-base-n5",
+ "task_name": "form_d_fields",
+ "data_version": "cf9d0902ef5f954c01165951aea12b977097d8f9b9dfa4ecb0ac83521b49347b",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T21:28:12.953657+00:00"
+}

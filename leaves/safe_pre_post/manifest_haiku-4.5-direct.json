@@ -2,8 +2,13 @@
  "leaf": "safe_pre_post",
  "model": "haiku-4.5-direct",
  "task_name": "safe_pre_post",
- "data_version": "fd25f7961827e5a4e6cd14ec3ab6094496b1957013d401d8d89912321f8cd362",
+ "data_version": "65487386d0c758f5c6cadfc3dd0838151493a9c2169a27bb8a37a7b6799a6866",
  "n_runs": 20,
  "temperature": 0.7,
- "timestamp": "2026-07-02T22:49:00.637936+00:00"
+ "timestamp": "2026-07-27T13:01:14.929962+00:00",
+ "extra": {
+  "routing": "direct",
+  "model_id": "claude-haiku-4-5-20251001",
+  "temperature_requested": 0.7
+ }
 }

@@ -1,0 +1,9 @@
+{
+ "leaf": "preference_seniority",
+ "model": "mlx-base-n20",
+ "task_name": "preference_seniority",
+ "data_version": "2e43e9833989c02a318f2a5792b8dd8d7d040ec7bca9a228517175c6d83fba8c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:33:27.985819+00:00"
+}

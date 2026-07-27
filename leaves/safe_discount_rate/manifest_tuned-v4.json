@@ -1,0 +1,9 @@
+{
+ "leaf": "safe_discount_rate",
+ "model": "tuned-v4",
+ "task_name": "safe_discount_rate",
+ "data_version": "0a5ca8f355730abb1a3524e6898bc43477a0e3609220ba9fbb7b2bf216a96b52",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:03:27.197111+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "drag_along",
+ "model": "mlx-base-n20",
+ "task_name": "drag_along",
+ "data_version": "422eafc172120cf4090994fd6655c8b8426f6714f600bd7779ec1a9e57e933fa",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:23:31.273279+00:00"
+}

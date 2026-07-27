@@ -1,0 +1,9 @@
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "1447599_000119312515209758", "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "1200720_000104746904001493", "raw_output": "{\n\"participation_cap\": 3.5,\n}", "parsed": null}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "1344413_000089161805000914", "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "1344413_000089161805000914", "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "1447599_000119312515209758", "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
+{"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "1447599_000119312515209758", "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "1344413_000089161805000914", "parsed": {"participation_cap": 3}, "normalized": {"participation_cap": 3.0}}
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "1200720_000104746904001493", "parsed": {"participation_cap": 3.5}, "normalized": {"participation_cap": 3.5}}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "1200720_000104746904001493", "parsed": {"participation_cap": 3.5}, "normalized": {"participation_cap": 3.5}}

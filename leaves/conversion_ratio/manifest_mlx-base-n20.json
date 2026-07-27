@@ -1,0 +1,9 @@
+{
+ "leaf": "conversion_ratio",
+ "model": "mlx-base-n20",
+ "task_name": "conversion_ratio",
+ "data_version": "257d595a4883fc2c3bc3416d4c21f227ff7dc7d990cd6adad6c9e1486469ab4b",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:20:53.849796+00:00"
+}

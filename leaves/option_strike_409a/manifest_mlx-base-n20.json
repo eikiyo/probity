@@ -1,0 +1,9 @@
+{
+ "leaf": "option_strike_409a",
+ "model": "mlx-base-n20",
+ "task_name": "option_strike_409a",
+ "data_version": "81f0519c1b4195b474185cd867d985a53a4ea876c5d4221f1249b0d0587a87b3",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:29:50.979002+00:00"
+}

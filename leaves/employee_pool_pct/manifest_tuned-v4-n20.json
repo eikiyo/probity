@@ -1,0 +1,9 @@
+{
+ "leaf": "employee_pool_pct",
+ "model": "tuned-v4-n20",
+ "task_name": "employee_pool_pct",
+ "data_version": "c324e2ddd4fee87f019724aa85c6fcf0b0493885ff6500807d1183b367f72f9a",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:20:44.571868+00:00"
+}

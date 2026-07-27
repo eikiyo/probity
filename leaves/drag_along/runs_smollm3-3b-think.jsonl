@@ -1,0 +1,36 @@
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "0001193125-06-053345_dex101", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "0001047469-07-002039_a2176594zex-4_6", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [5, 0], "instance_idx": 5, "run_idx": 0, "item_id": "0001047469-06-008353_a2171167zex-10_13", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [4, 2], "instance_idx": 4, "run_idx": 2, "item_id": "0000950123-02-009442_e62399a2exv10w20", "parsed": {"drag_alone": "yes"}, "normalized": {}}
+{"_key": [3, 0], "instance_idx": 3, "run_idx": 0, "item_id": "0001104659-12-073362_a12-25837_1ex10d6", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [0, 0], "instance_idx": 0, "run_idx": 0, "item_id": "0001193125-11-327662_d261388dex43", "parsed": {"drag_alone": "yes"}, "normalized": {}}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "0001193125-06-053345_dex101", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [2, 0], "instance_idx": 2, "run_idx": 0, "item_id": "0001193125-06-053345_dex101", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "0001047469-07-002039_a2176594zex-4_6", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [4, 1], "instance_idx": 4, "run_idx": 1, "item_id": "0000950123-02-009442_e62399a2exv10w20", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "0001193125-11-327662_d261388dex43", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [4, 0], "instance_idx": 4, "run_idx": 0, "item_id": "0000950123-02-009442_e62399a2exv10w20", "parsed": {"drag_alone": "no"}, "normalized": {}}
+{"_key": [0, 2], "instance_idx": 0, "run_idx": 2, "item_id": "0001193125-11-327662_d261388dex43", "parsed": {"drag_alone": "yes"}, "normalized": {}}
+{"_key": [1, 2], "instance_idx": 1, "run_idx": 2, "item_id": "0001047469-07-002039_a2176594zex-4_6", "parsed": {"drag_alone": "yes"}, "normalized": {}}
+{"_key": [3, 1], "instance_idx": 3, "run_idx": 1, "item_id": "0001104659-12-073362_a12-25837_1ex10d6", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [5, 1], "instance_idx": 5, "run_idx": 1, "item_id": "0001047469-06-008353_a2171167zex-10_13", "parsed": {"drag_alon": "no"}, "normalized": {}}
+{"_key": [3, 2], "instance_idx": 3, "run_idx": 2, "item_id": "0001104659-12-073362_a12-25837_1ex10d6", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [6, 0], "instance_idx": 6, "run_idx": 0, "item_id": "0001047469-13-008148_a2216187zex-10_3", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [5, 2], "instance_idx": 5, "run_idx": 2, "item_id": "0001047469-06-008353_a2171167zex-10_13", "parsed": {"drag_along": "yes"}, "normalized": {"drag_along": "yes"}}
+{"_key": [6, 1], "instance_idx": 6, "run_idx": 1, "item_id": "0001047469-13-008148_a2216187zex-10_3", "parsed": {"drag_alone": "no"}, "normalized": {}}
+{"_key": [7, 1], "instance_idx": 7, "run_idx": 1, "item_id": "0000912057-17-000020_filename4", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [7, 0], "instance_idx": 7, "run_idx": 0, "item_id": "0000912057-17-000020_filename4", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [6, 2], "instance_idx": 6, "run_idx": 2, "item_id": "0001047469-13-008148_a2216187zex-10_3", "parsed": {"drag_alon": "no"}, "normalized": {}}
+{"_key": [7, 2], "instance_idx": 7, "run_idx": 2, "item_id": "0000912057-17-000020_filename4", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [8, 0], "instance_idx": 8, "run_idx": 0, "item_id": "0000950123-10-031429_b80142exv4w4", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [8, 1], "instance_idx": 8, "run_idx": 1, "item_id": "0000950123-10-031429_b80142exv4w4", "parsed": {"drag_alone": "no"}, "normalized": {}}
+{"_key": [8, 2], "instance_idx": 8, "run_idx": 2, "item_id": "0000950123-10-031429_b80142exv4w4", "parsed": {"drag_alone": "yes"}, "normalized": {}}
+{"_key": [10, 0], "instance_idx": 10, "run_idx": 0, "item_id": "0000950123-14-005490_filename11", "parsed": {"drag_alone": "no"}, "normalized": {}}
+{"_key": [10, 1], "instance_idx": 10, "run_idx": 1, "item_id": "0000950123-14-005490_filename11", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [9, 1], "instance_idx": 9, "run_idx": 1, "item_id": "0000912057-01-534636_a2059793zex-10_20", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [9, 0], "instance_idx": 9, "run_idx": 0, "item_id": "0000912057-01-534636_a2059793zex-10_20", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [10, 2], "instance_idx": 10, "run_idx": 2, "item_id": "0000950123-14-005490_filename11", "parsed": {"drag_alon": "no"}, "normalized": {}}
+{"_key": [11, 2], "instance_idx": 11, "run_idx": 2, "item_id": "0001144204-16-141777_v455883_ex3-2", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [11, 0], "instance_idx": 11, "run_idx": 0, "item_id": "0001144204-16-141777_v455883_ex3-2", "parsed": {"drag_alon": "no"}, "normalized": {}}
+{"_key": [9, 2], "instance_idx": 9, "run_idx": 2, "item_id": "0000912057-01-534636_a2059793zex-10_20", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}
+{"_key": [11, 1], "instance_idx": 11, "run_idx": 1, "item_id": "0001144204-16-141777_v455883_ex3-2", "parsed": {"drag_along": "no"}, "normalized": {"drag_along": "no"}}

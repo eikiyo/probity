@@ -1,0 +1,9 @@
+{
+ "leaf": "investor_ownership_pct",
+ "model": "mlx-base-n20",
+ "task_name": "investor_ownership_pct",
+ "data_version": "27d56c8cb3ac63a5587a888d12414ff3e8312a9403957c403a3ce22c8bb2f2c7",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:27:11.969261+00:00"
+}

@@ -1,0 +1,9 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "gemma4-12b",
+ "task_name": "board_seats_investor",
+ "data_version": "0d5f8a7a08eabec70ffcb40edb0e1ba20c8294c13a2287541adb3f28598f613e",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T15:14:49.641586+00:00"
+}

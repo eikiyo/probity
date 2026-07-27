@@ -1,0 +1,9 @@
+{
+ "leaf": "form_d_fields",
+ "model": "base12-fresh",
+ "task_name": "form_d_fields",
+ "data_version": "990f4fb2526ff48f429463754842b39043cac5fa5038f0d5d8779267745f6ae4",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T22:09:34.687654+00:00"
+}

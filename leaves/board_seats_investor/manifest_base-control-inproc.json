@@ -1,0 +1,9 @@
+{
+ "leaf": "board_seats_investor",
+ "model": "base-control-inproc",
+ "task_name": "board_seats_investor",
+ "data_version": "b86ac7bcba1bc1099001cd94d18c8ff4af7e9114c2b14783b01460024f6d2a8c",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T15:53:14.853541+00:00"
+}

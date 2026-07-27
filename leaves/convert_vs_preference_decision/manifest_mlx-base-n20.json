@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "mlx-base-n20",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "f9ac653ca2988b50d68768f8e53863f949c8b17ae710fcc031222d2daa2efe00",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T18:21:02.371382+00:00"
+}

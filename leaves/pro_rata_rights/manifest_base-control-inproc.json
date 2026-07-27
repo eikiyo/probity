@@ -1,0 +1,9 @@
+{
+ "leaf": "pro_rata_rights",
+ "model": "base-control-inproc",
+ "task_name": "pro_rata_rights",
+ "data_version": "02117ea9b60f3fb23b6d3a7212cb56fa55d2c1893c4f1f9cf80f28e0b997501d",
+ "n_runs": 20,
+ "temperature": 0.7,
+ "timestamp": "2026-07-05T15:54:31.189340+00:00"
+}

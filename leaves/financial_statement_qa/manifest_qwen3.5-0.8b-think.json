@@ -1,0 +1,9 @@
+{
+ "leaf": "financial_statement_qa",
+ "model": "qwen3.5-0.8b-think",
+ "task_name": "financial_statement_qa",
+ "data_version": "2f93ddcf8e0d390df2dbb25b9518bb19d31d7e57edba8bbd747dd6e141dba1b6",
+ "n_runs": 5,
+ "temperature": 0.7,
+ "timestamp": "2026-07-04T18:55:59.196071+00:00"
+}

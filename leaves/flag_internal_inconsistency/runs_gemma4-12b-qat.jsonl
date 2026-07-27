@@ -1,0 +1,10 @@
+{"_key": [1, 0], "instance_idx": 1, "run_idx": 0, "item_id": "castlebio_consistent", "parsed": {"flag_internal_inconsistency": false}, "normalized": {"flag_internal_inconsistency": false}}
+{"_key": [1, 4], "instance_idx": 1, "run_idx": 4, "item_id": "castlebio_consistent", "parsed": {"flag_internal_inconsistency": false}, "normalized": {"flag_internal_inconsistency": false}}
+{"_key": [0, 3], "instance_idx": 0, "run_idx": 3, "item_id": "actelis_consistent", "parsed": {"flag_internal_inconsistency": false}, "normalized": {"flag_internal_inconsistency": false}}
+{"_key": [0, 4], "instance_idx": 0, "run_idx": 4, "item_id": "actelis_consistent", "parsed": {"flag_internal_inconsistency": false}, "normalized": {"flag_internal_inconsistency": false}}
+{"_key": [2, 3], "instance_idx": 2, "run_idx": 3, "item_id": "castlebio_inconsistent", "parsed": {"flag_internal_inconsistency": true}, "normalized": {"flag_internal_inconsistency": true}}
+{"_key": [0, 1], "instance_idx": 0, "run_idx": 1, "item_id": "actelis_consistent", "parsed": {"flag_internal_inconsistency": false}, "normalized": {"flag_internal_inconsistency": false}}
+{"_key": [2, 2], "instance_idx": 2, "run_idx": 2, "item_id": "castlebio_inconsistent", "parsed": {"flag_internal_inconsistency": true}, "normalized": {"flag_internal_inconsistency": true}}
+{"_key": [1, 1], "instance_idx": 1, "run_idx": 1, "item_id": "castlebio_consistent", "parsed": {"flag_internal_inconsistency": false}, "normalized": {"flag_internal_inconsistency": false}}
+{"_key": [2, 4], "instance_idx": 2, "run_idx": 4, "item_id": "castlebio_inconsistent", "parsed": {"flag_internal_inconsistency": true}, "normalized": {"flag_internal_inconsistency": true}}
+{"_key": [2, 1], "instance_idx": 2, "run_idx": 1, "item_id": "castlebio_inconsistent", "parsed": {"flag_internal_inconsistency": true}, "normalized": {"flag_internal_inconsistency": true}}

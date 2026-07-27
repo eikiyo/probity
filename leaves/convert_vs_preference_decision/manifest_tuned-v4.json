@@ -1,0 +1,9 @@
+{
+ "leaf": "convert_vs_preference_decision",
+ "model": "tuned-v4",
+ "task_name": "convert_vs_preference_decision",
+ "data_version": "3eb85044fe8ee0028e6e6b6a6586b0c632e2665634ddfc1309cfc5e8934bbf18",
+ "n_runs": 1,
+ "temperature": 0.7,
+ "timestamp": "2026-07-03T17:00:03.827424+00:00"
+}
