@@ -9,6 +9,7 @@ Functions: TestLegacyDetection, TestRefusesToExtract, TestExtractsACleanArchive,
 Imports: sys, tarfile, pytest, pathlib, pull_results
 """
 
+import json
 import sys
 import tarfile
 from pathlib import Path
@@ -28,7 +29,9 @@ def make_tgz(path, names):
     with tarfile.open(path, "w:gz") as tf:
         for n in names:
             f = src / Path(n).name
-            f.write_text("x")
+            # `scored*.json` goes through the MERGE path, which parses it. A fixture writing
+            # junk there tested the extractor against input the real pipeline never produces.
+            f.write_text("{}" if n.endswith(".json") else "x")
             tf.add(f, arcname=n)
     return path
 
@@ -140,3 +143,66 @@ class TestAgainstTheRealPushedHarness:
         # means "60 real oracle files", which is the fact worth pinning.
         real = [n for n in names if not Path(n).name.startswith("._")]
         assert sum(1 for n in real if n.endswith("oracle.jsonl")) == 60
+
+
+class TestSharedScoredFilesAreMergedNotOverwritten:
+    """The near-miss of 2026-07-27. `scored_t01.json` is ONE file per leaf holding EVERY model
+    label. The Kaggle kernel starts from a clean slate, so its copy holds exactly one label --
+    and a tar extract REPLACES. Extracting it over a local file holding the ten hosted models
+    would have deleted the entire hosted t01 arm's scoring, across all 60 leaves, silently.
+
+    The legacy guard does NOT catch this: scored_t01.json is arm-namespaced and passes it. A
+    guard that protects one arm is not a guard that protects the data."""
+
+    def test_a_shared_scored_file_is_classified_as_shared(self):
+        assert pull_results.is_shared("leaves/a/scored_t01.json")
+        assert pull_results.is_shared("leaves/a/scored_t07.json")
+        assert pull_results.is_shared("leaves/a/scored.json")
+
+    def test_per_label_files_are_not_shared(self):
+        """Negative control: if everything were classified shared, nothing would extract."""
+        assert not pull_results.is_shared("leaves/a/runs_t01_gemma3-1b.jsonl")
+        assert not pull_results.is_shared("leaves/a/manifest_t01_gemma3-1b.json")
+
+    def test_merging_preserves_every_pre_existing_label(self, tmp_path):
+        existing = tmp_path / "scored_t01.json"
+        existing.write_text(json.dumps({f"hosted-{i}": {"v": i} for i in range(10)}))
+        res = pull_results.merge_scored(existing, json.dumps({"gemma3-1b-qat": {"v": 99}}).encode())
+        merged = json.loads(existing.read_text())
+        assert len(merged) == 11
+        assert res["added"] == ["gemma3-1b-qat"]
+        assert all(f"hosted-{i}" in merged for i in range(10))
+        assert merged["gemma3-1b-qat"]["v"] == 99
+
+    def test_merging_into_a_missing_file_just_writes_it(self, tmp_path):
+        target = tmp_path / "scored_t07.json"
+        pull_results.merge_scored(target, json.dumps({"gemma3-1b": {"v": 1}}).encode())
+        assert json.loads(target.read_text()) == {"gemma3-1b": {"v": 1}}
+
+    def test_incoming_data_wins_for_the_same_label(self, tmp_path):
+        """A re-pull of the same kernel must be idempotent and must refresh, not duplicate."""
+        target = tmp_path / "scored_t01.json"
+        target.write_text(json.dumps({"gemma3-1b-qat": {"v": "old"}}))
+        pull_results.merge_scored(target, json.dumps({"gemma3-1b-qat": {"v": "new"}}).encode())
+        assert json.loads(target.read_text())["gemma3-1b-qat"]["v"] == "new"
+
+    def test_full_extract_merges_shared_and_writes_per_label(self, tmp_path):
+        """End to end on a real tarball: the pre-existing hosted labels must survive."""
+        leaf = tmp_path / "repo" / "leaves" / "a"
+        leaf.mkdir(parents=True)
+        (leaf / "scored_t01.json").write_text(json.dumps({"hosted-model": {"v": 1}}))
+
+        src = tmp_path / "src" / "leaves" / "a"
+        src.mkdir(parents=True)
+        (src / "scored_t01.json").write_text(json.dumps({"gemma3-1b-qat": {"v": 2}}))
+        (src / "runs_t01_gemma3-1b-qat.jsonl").write_text('{"run":1}\n')
+        tgz = tmp_path / "arm.tgz"
+        with tarfile.open(tgz, "w:gz") as tf:
+            tf.add(src / "scored_t01.json", arcname="leaves/a/scored_t01.json")
+            tf.add(src / "runs_t01_gemma3-1b-qat.jsonl",
+                   arcname="leaves/a/runs_t01_gemma3-1b-qat.jsonl")
+
+        pull_results.extract(tgz, tmp_path / "repo")
+        merged = json.loads((leaf / "scored_t01.json").read_text())
+        assert set(merged) == {"hosted-model", "gemma3-1b-qat"}, "a pre-existing label was lost"
+        assert (leaf / "runs_t01_gemma3-1b-qat.jsonl").exists()

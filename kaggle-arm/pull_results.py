@@ -56,6 +56,39 @@ def verify_archive(path):
     return (not problems), problems
 
 
+SHARED_SCORED = re.compile(r"(^|/)scored(_t\d+)?\.json$")
+
+
+def is_shared(name):
+    """`scored*.json` is ONE file per leaf holding EVERY model label. `runs_*`/`manifest_*` carry
+    their label in the filename and so belong to exactly one model."""
+    return bool(SHARED_SCORED.search(name))
+
+
+def merge_scored(existing_path, incoming_bytes):
+    """Union an incoming leaf's scored file into the one on disk, by model label.
+
+    A tar extract REPLACES. The kernel starts from a clean slate (pack.sh ships inputs only), so
+    its scored_t01.json holds exactly one label -- and extracting that over a local file holding
+    ten would delete the entire hosted arm's scoring in one silent move, across all 60 leaves.
+    The legacy guard above does not catch this: scored_t01.json IS arm-namespaced and passes.
+
+    Delegates to runner._merge_scored so the merge is the SAME operation the sweep performs
+    (exclusive flock held across read AND write, atomic replace) rather than a second
+    implementation that could diverge from it.
+    """
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "engine"))
+    import runner
+    import json
+    incoming = json.loads(incoming_bytes)
+    before = set(json.loads(existing_path.read_text())) if existing_path.exists() else set()
+    runner._merge_scored(existing_path, incoming)
+    after = set(json.loads(existing_path.read_text()))
+    assert before <= after, f"merge DROPPED labels from {existing_path}: {sorted(before - after)}"
+    return {"added": sorted(after - before), "kept": sorted(before), "updated":
+            sorted(before & set(incoming))}
+
+
 def extract(path, into, dry_run=False):
     ok, problems = verify_archive(path)
     if not ok:
@@ -66,13 +99,22 @@ def extract(path, into, dry_run=False):
             "whole -- not partially extracted -- because an archive containing a legacy-arm file "
             "is one whose producer we no longer trust to have namespaced anything correctly.")
     with tarfile.open(path, "r:gz") as tf:
-        names = tf.getnames()
+        members = [m for m in tf.getmembers() if m.isfile()]
+        shared = [m for m in members if is_shared(m.name)]
+        direct = [m for m in members if not is_shared(m.name)]
         if dry_run:
-            print(f"{path}: {len(names)} members, all arm-namespaced. Would extract into {into}.")
-            return names
-        tf.extractall(into)
-    print(f"extracted {len(names)} members into {into}")
-    return names
+            print(f"{path}: {len(members)} files -- {len(direct)} extracted directly, "
+                  f"{len(shared)} MERGED by model label (never overwritten).")
+            return [m.name for m in members]
+        for m in direct:
+            tf.extract(m, into)
+        added = set()
+        for m in shared:
+            res = merge_scored(Path(into) / m.name, tf.extractfile(m).read())
+            added.update(res["added"])
+        print(f"extracted {len(direct)} per-label files; merged {len(shared)} shared scored files "
+              f"-- labels added: {sorted(added)}")
+    return [m.name for m in members]
 
 
 def main():
