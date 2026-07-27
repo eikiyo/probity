@@ -24,7 +24,7 @@ N_RUNS, WORKERS = 20, 4
 
 # Which model THIS kernel instance handles. Kaggle allows concurrent GPU sessions, so pushing two
 # instances (MODEL_INDEX 0 and 1) halves wall-clock. None = run both sequentially in one session.
-MODEL_INDEX = int(os.environ["PROBITY_MODEL_INDEX"]) if os.environ.get("PROBITY_MODEL_INDEX") else None
+MODEL_INDEX = 1   # baked by push_instances.sh
 SMOKE = os.environ.get("PROBITY_SMOKE") == "1"
 if MODEL_INDEX is not None:
     MODELS = [MODELS[MODEL_INDEX]]

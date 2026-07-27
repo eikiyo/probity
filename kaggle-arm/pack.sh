@@ -6,8 +6,11 @@
 #          start from a clean slate for its arm, and shipping the 0.7 results into a machine that
 #          re-writes leaf files is how a baseline gets silently overwritten.
 set -euo pipefail
-REPO="$(cd "$(dirname "$0")/.." && pwd)"
-OUT="$(dirname "$0")/probity-arm-harness.tgz"
+# Both paths ABSOLUTE before the cd: OUT was relative and `cd "$REPO"` silently
+# redirected the tarball into the repo root, where the kernel push would never find it.
+HERE="$(cd "$(dirname "$0")" && pwd)"
+REPO="$(cd "$HERE/.." && pwd)"
+OUT="$HERE/probity-arm-harness.tgz"
 cd "$REPO"
 tar czf "$OUT" \
   --exclude='runs_*.jsonl' --exclude='scored*.json' --exclude='*.html' \
