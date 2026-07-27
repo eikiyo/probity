@@ -130,6 +130,52 @@ class TestCompletionRequiresBothSignals:
         assert (row["recorded"] == row["owed"] and row["exit_code"] == 0) is expected
 
 
+class TestSpendCalibration:
+    """The list-price estimate underprices a REASONING model, because guard.py bills a 25-token
+    answer and reasoning tokens are output tokens that never appear in the completion. Measured on
+    the 0.1 arm: gpt-5-mini cost $5.72 against a $2.43 estimate. Every check here is about the
+    gate refusing to under-price, because under-pricing is what lands a 402 mid-run."""
+
+    RATIOS = {"cheap-model": 0.76, "thinky-model": 2.35}
+
+    def test_a_billed_model_is_priced_at_its_own_observed_ratio(self):
+        assert run_arm.calibration("thinky-model", self.RATIOS) == 2.35
+
+    def test_an_unbilled_model_is_priced_at_the_worst_ratio_seen(self):
+        """Fail closed: a model we have never billed must not be assumed cheap just because it
+        has no history. The worst observed under-estimate is the honest prior."""
+        assert run_arm.calibration("never-run-before", self.RATIOS) == 2.35
+
+    def test_a_cheap_observation_never_discounts_below_list_price(self):
+        """A ratio under 1.0 is real (gemma4 came in at 0.76x), but letting it shrink the estimate
+        would let the gate approve a run on a balance that list price alone says is short."""
+        assert run_arm.calibration("cheap-model", self.RATIOS) == 1.0
+
+    def test_with_no_history_at_all_calibration_is_exactly_one(self):
+        """No data must mean 'no adjustment', not a silently invented multiplier."""
+        assert run_arm.calibration("anything", {}) == 1.0
+
+    def test_calibrated_estimate_is_never_below_the_list_estimate(self):
+        for label, _c, _m in run_arm.ARM_ORDER:
+            raw = run_arm.est_cost(label, 0.1, calibrated=False)
+            assert run_arm.est_cost(label, 0.1) >= raw - 1e-9, label
+
+    def test_ratios_are_read_from_the_ledger_not_hardcoded(self):
+        """Positive control: the real ledger must actually yield ratios, otherwise every test
+        above is exercising an empty dict and the calibration is dead code in production."""
+        ratios = run_arm.observed_ratios()
+        assert ratios, "no ledger rows produced a ratio -- calibration would be inert"
+        assert "gpt5-mini-or" in ratios
+        assert ratios["gpt5-mini-or"] > 2.0
+
+    def test_a_direct_api_row_contributes_no_ratio(self):
+        """DeepSeek and Anthropic expose no readable balance, so their rows carry
+        measured_spend_usd=None. Treating that as $0 spent would compute a 0.0 ratio and make the
+        gate think the model is free."""
+        assert "deepseek-v4f" not in run_arm.observed_ratios()
+        assert "haiku-4.5-direct" not in run_arm.observed_ratios()
+
+
 class TestAlreadyCompleteModelIsSkipped:
     def test_a_finished_model_owes_zero_calls_and_costs_zero(self):
         """gpt-oss-120b-or is mid-sweep as this is written, so use the LEGACY arm, where every

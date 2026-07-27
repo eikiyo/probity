@@ -67,11 +67,52 @@ def calls_owed(label, temperature):
     return owed
 
 
-def est_cost(label, temperature):
+def observed_ratios():
+    """actual/estimated spend per label, measured from the ledger's own completed rows.
+
+    guard.per_call_cost() prices a reply at ANSWER_TOKENS=25, which is right for a model that
+    answers and wrong for a model that THINKS: reasoning tokens bill as output but never appear in
+    the completion, so the estimate misses them entirely. Measured on the 0.1 arm: gemma4-31b (no
+    reasoning) came in at 0.76x the estimate, gpt-oss-120b at 1.57x, gpt-5-mini at 2.35x. Pricing
+    the remaining reasoning models off the raw estimate is what puts a 402 in the middle of a run.
+    """
+    ratios = {}
+    if not LEDGER.exists():
+        return ratios
+    for line in LEDGER.read_text().splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        spend, recorded = row.get("measured_spend_usd"), row.get("recorded") or 0
+        if spend is None or recorded <= 0:          # direct APIs expose no balance to difference
+            continue
+        per_call = guard_mod.per_call_cost(row["label"])
+        if not per_call:                            # unknown or genuinely free -- no ratio to form
+            continue
+        ratios[row["label"]] = spend / (per_call * recorded)
+    return ratios
+
+
+def calibration(label, ratios=None):
+    """The multiplier to apply to this label's list-price estimate.
+
+    A label we have BILLED before is priced at its own observed ratio. A label we have not is
+    priced at the WORST ratio observed so far, never at 1.0 -- an unmeasured model must not be
+    assumed cheap. Floored at 1.0 so a cheap observation can never talk the gate into spending
+    more than list price would justify.
+    """
+    ratios = observed_ratios() if ratios is None else ratios
+    if label in ratios:
+        return max(1.0, ratios[label])
+    return max([1.0] + [r for r in ratios.values()])
+
+
+def est_cost(label, temperature, calibrated=True):
     cost = guard_mod.per_call_cost(label)
     if cost is None:                      # `is None`, not `or`: 0.0 is a REAL price for local
         cost = guard_mod._UNKNOWN_MODEL_COST_USD
-    return calls_owed(label, temperature) * cost
+    raw = calls_owed(label, temperature) * cost
+    return raw * calibration(label) if calibrated else raw
 
 
 def gate_balance(label, client, temperature):
@@ -185,12 +226,16 @@ def main():
 
     print(f"=== ARM temp={args.temperature}: {len(order)} models, one at a time ===")
     total = 0.0
+    ratios = observed_ratios()
     for label, client, _mid in order:
         owed = calls_owed(label, args.temperature)
+        raw = est_cost(label, args.temperature, calibrated=False)
         cost = est_cost(label, args.temperature)
         total += cost
-        print(f"  {label:20s} {client:11s} {owed:6d} calls   est ${cost:6.2f}")
-    print(f"  {'TOTAL':20s} {'':11s} {'':6s}   est ${total:6.2f}")
+        seen = "billed" if label in ratios else "worst-seen"
+        print(f"  {label:20s} {client:11s} {owed:6d} calls   list ${raw:6.2f}"
+              f"   est ${cost:6.2f}  (x{calibration(label, ratios):.2f}, {seen})")
+    print(f"  {'TOTAL':20s} {'':11s} {'':6s}   {'':11s}   est ${total:6.2f}")
     bal = preflight.or_balance()
     print(f"  OpenRouter balance: ${bal:.2f}" if bal is not None else "  OpenRouter balance: ?")
     if args.dry_run:
