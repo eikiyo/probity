@@ -24,8 +24,22 @@ import run_arm  # noqa: E402
 
 class TestArmOrderIsCheapestFirst:
     def test_estimated_cost_is_non_decreasing_down_the_list(self):
-        costs = [run_arm.est_cost(label, 0.1) for label, _c, _m in run_arm.ARM_ORDER]
-        assert costs == sorted(costs), f"ARM_ORDER is not cheapest-first: {costs}"
+        """Priced on a FULL arm (9,400 calls), not on calls still owed. est_cost() shrinks toward
+        zero as a model completes, so asserting on remaining cost tests the live progress of the
+        sweep rather than the property under test -- it passed at authoring time and went red an
+        hour later when the first models finished, having found no defect."""
+        full = []
+        for label, _c, _m in run_arm.ARM_ORDER:
+            per_call = run_arm.guard_mod.per_call_cost(label)
+            if per_call is None:
+                per_call = run_arm.guard_mod._UNKNOWN_MODEL_COST_USD
+            full.append(round(9400 * per_call, 6))
+        assert full == sorted(full), f"ARM_ORDER is not cheapest-first: {full}"
+
+    def test_the_ordering_is_strict_enough_to_be_meaningful(self):
+        """Positive control: if every model cost the same, the test above would pass trivially."""
+        costs = {run_arm.guard_mod.per_call_cost(l) for l, _c, _m in run_arm.ARM_ORDER}
+        assert len(costs) > 1
 
     def test_the_dearest_model_runs_last(self):
         assert run_arm.ARM_ORDER[-1][0] == "minimax-m2.5-or"
