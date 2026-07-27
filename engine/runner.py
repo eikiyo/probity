@@ -59,6 +59,14 @@ def anthropic_model_set(label, model_id):
     return [(label, None, lambda: AnthropicClient(model_id))]
 
 
+def deepseek_model_set(label, model_id=None):
+    """One-model hosted set for the DIRECT DeepSeek API. Same shape as the openrouter/anthropic
+    sets so run_hosted_sweep.py drives it unchanged. `model_id` is accepted and ignored: the
+    published 0.7 arm ran DeepSeekClient's own default model, and letting a sweep flag silently
+    swap the model would break the one thing this experiment holds fixed."""
+    return [(label, None, lambda: DeepSeekClient())]
+
+
 def _load_task(leaf_dir):
     spec = importlib.util.spec_from_file_location(f"task_{leaf_dir.name}", leaf_dir / "task.py")
     mod = importlib.util.module_from_spec(spec)

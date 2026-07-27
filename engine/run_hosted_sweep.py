@@ -31,7 +31,8 @@ from pathlib import Path
 ENGINE = Path(__file__).parent
 sys.path.insert(0, str(ENGINE))
 
-from runner import run_leaf, openrouter_model_set, anthropic_model_set, N_RUNS  # noqa: E402
+from runner import (run_leaf, openrouter_model_set, anthropic_model_set,   # noqa: E402
+                     deepseek_model_set, N_RUNS)
 import coverage                                                          # noqa: E402
 import guard as guard_mod                                                # noqa: E402
 
@@ -61,9 +62,10 @@ def main():
                     "e.g. gemma4-31b-or (must match a guard.ESTIMATED_COST_PER_CALL_USD entry "
                     "or it fails closed to the most-expensive-known default)")
     p.add_argument("--model", required=True, help="OpenRouter model id, e.g. google/gemma-4-31b-it")
-    p.add_argument("--client", choices=["openrouter", "anthropic"], default="openrouter",
-                    help="which provider backs --label/--model (anthropic = direct API,"
-                    " Sec 0.10 override, see models.AnthropicClient)")
+    p.add_argument("--client", choices=["openrouter", "anthropic", "deepseek"],
+                    default="openrouter",
+                    help="which provider backs --label/--model (anthropic and deepseek are the"
+                    " DIRECT provider APIs, Sec 0.10 override, see models.AnthropicClient)")
     p.add_argument("--leaf-parallelism", type=int, default=10,
                     help="how many leaves run their harness concurrently")
     p.add_argument("--workers-per-leaf", type=int, default=4,
@@ -92,8 +94,9 @@ def main():
               f"informal ~{SOFT_CONCURRENCY_WARN}-request OpenRouter/Cloudflare ceiling (see "
               f"module docstring) -- proceeding, but expect possible 429s.", flush=True)
 
-    model_set = (anthropic_model_set(args.label, args.model) if args.client == "anthropic"
-                 else openrouter_model_set(args.label, args.model))
+    model_set = {"anthropic": anthropic_model_set,
+                 "deepseek": deepseek_model_set,
+                 "openrouter": openrouter_model_set}[args.client](args.label, args.model)
     # None => run_leaf derives caps per leaf. Only an explicitly-passed flat cap overrides that.
     guard_config = None
     if args.max_steps_per_leaf is not None or args.max_cost_per_leaf is not None:
