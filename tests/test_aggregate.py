@@ -25,9 +25,15 @@ import aggregate as ag  # noqa: E402
 
 
 class TestLineup:
-    def test_lineup_is_exactly_eleven_declared_models(self):
-        assert len(ag.canonical_lineup()) == 11
-        assert len(set(ag.canonical_lineup())) == 11
+    # Models in the lineup that have NOT yet been measured in the legacy 0.7 arm. deepseek-v4p
+    # was added 2026-07-27 and is being swept now. Listing it explicitly is the point: a lineup
+    # member with no data must be a DECLARED exception, never something a test quietly tolerates.
+    NOT_YET_MEASURED_IN_LEGACY = {"deepseek-v4p"}
+
+    def test_lineup_is_declared_and_has_no_duplicates(self):
+        lineup = ag.canonical_lineup()
+        assert len(lineup) == 12
+        assert len(set(lineup)) == len(lineup)
 
     def test_lineup_excludes_finetune_lab_labels(self):
         """The fine-tune lab wrote 43 extra labels into the same scored.json files, several of
@@ -40,12 +46,20 @@ class TestLineup:
         assert intruders, "expected fine-tune labels to exist in the fixture"
         assert not (lineup & set(intruders))
 
-    def test_every_lineup_label_actually_has_data_in_the_legacy_arm(self):
-        """A lineup naming a model that never ran would silently shrink the published table."""
+    def test_every_measured_lineup_label_covers_all_sixty_leaves(self):
+        """A lineup naming a model that never ran would silently shrink the published table. A
+        model that HAS run must have run everywhere -- a partial model is worse than an absent
+        one, because it still appears in the table carrying a denominator nobody checked."""
         counts = ag.model_counts(None)
-        assert set(counts) == set(ag.canonical_lineup())
+        assert set(counts) == set(ag.canonical_lineup()) - self.NOT_YET_MEASURED_IN_LEGACY
         for label, c in counts.items():
             assert c["leaves"] == 60, f"{label} covers {c['leaves']} leaves, expected 60"
+
+    def test_the_pending_list_is_kept_honest(self):
+        """If a pending model HAS been measured, the exception must be deleted, not left to rot
+        into a permanent excuse that hides a future real gap."""
+        stale = self.NOT_YET_MEASURED_IN_LEGACY & set(ag.model_counts(None))
+        assert not stale, f"measured now -- remove from NOT_YET_MEASURED_IN_LEGACY: {stale}"
 
 
 class TestReproducesPublishedNumbers:

@@ -40,6 +40,7 @@ MODEL_DISPLAY = {
     "gemma3-1b-qat": ("gemma3:1b-it-qat", "1B QAT, local"),
     "qwen3.5-27b": ("qwen3.5:27b", "27B, local"),
     "deepseek-v4f": ("deepseek-v4-flash", "hosted, direct"),
+    "deepseek-v4p": ("deepseek-v4-pro", "hosted, direct"),
     "gemma4-31b-or": ("gemma-4-31b-it", "31B, hosted (OR)"),
     "mistral-large-or": ("mistral-large-2512", "hosted (OR)"),
     "minimax-m2.5-or": ("minimax-m2.5", "hosted (OR)"),

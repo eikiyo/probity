@@ -36,6 +36,7 @@ LINEUP = [
     ("gemma3-1b",        "ollama",     "gemma3:1b"),
     ("gemma3-1b-qat",    "ollama",     "gemma3:1b-it-qat"),
     ("deepseek-v4f",     "deepseek",   "deepseek-v4-flash"),
+    ("deepseek-v4p",     "deepseek",   "deepseek-v4-pro"),
     ("haiku-4.5-direct", "anthropic",  "claude-haiku-4-5-20251001"),
     ("gemma4-31b-or",    "openrouter", "google/gemma-4-31b-it"),
     ("mistral-large-or", "openrouter", "mistralai/mistral-large-2512"),

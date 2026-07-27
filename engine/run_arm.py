@@ -39,6 +39,7 @@ ARM_ORDER = [
     ("gemma4-31b-or",    "openrouter", "google/gemma-4-31b-it"),
     ("haiku-4.5-direct", "anthropic",  "claude-haiku-4-5-20251001"),
     ("gpt5-mini-or",     "openrouter", "openai/gpt-5-mini"),
+    ("deepseek-v4p",     "deepseek",   "deepseek-v4-pro"),
     ("mistral-large-or", "openrouter", "mistralai/mistral-large-2512"),
     ("gemini3-flash-or", "openrouter", "google/gemini-3-flash-preview"),
     ("minimax-m2.5-or",  "openrouter", "minimax/minimax-m2.5"),

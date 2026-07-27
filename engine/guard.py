@@ -45,6 +45,10 @@ REASONING_CAP_TOKENS = 16384          # OpenRouterClient max_tokens; a starved c
 # provider on 2026-07-27 (openrouter.ai/api/v1/models; ai.google.dev/gemini-api/docs/pricing).
 MODEL_PRICING = {
     "deepseek-v4f":     (0.14, 0.28, 0.0),
+    # deepseek-v4-pro, from api-docs.deepseek.com's own USD pricing page (fetched 2026-07-27):
+    # $0.435/M input cache-miss, $0.87/M output. The cache-hit rate ($0.003625/M) is NOT assumed --
+    # pricing a run as if it will hit cache understates the bill on the first pass through a corpus.
+    "deepseek-v4p":     (0.435, 0.87, 0.0),
     "gemma4-31b-or":    (0.14, 0.40, 0.0),
     "mistral-large-or": (0.50, 1.50, 0.0),
     "minimax-m2.5-or":  (0.15, 0.90, 536 / 9400),

@@ -79,14 +79,16 @@ def _post_chat_completion(url, headers, payload, timeout, error_label,
 class DeepSeekClient(LLMClient):
     """OpenAI-compat DeepSeek client (v4-flash)."""
 
-    def __init__(self):
+    def __init__(self, model=None):
         self.api_key = os.getenv("DEEPSEEK_API_KEY")
         if not self.api_key:
             raise RuntimeError(
                 "DEEPSEEK_API_KEY not set. Source secrets/.env first."
             )
         self.base_url = "https://api.deepseek.com/v1/chat/completions"
-        self.model = "deepseek-v4-flash"
+        # Default keeps every existing caller (60 leaf shims, FAST_SET, the CLI) on the
+        # exact model the published 0.7 arm used. A new model is opted into explicitly.
+        self.model = model or "deepseek-v4-flash"
 
     # Transient HTTP status codes worth retrying (server-side/overload conditions) -- NOT 4xx
     # codes like 400/401 that indicate a real, non-recoverable problem with the request itself.

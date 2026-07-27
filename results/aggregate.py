@@ -31,7 +31,7 @@ import coverage  # noqa: E402
 # a 29-ROW table instead of 11, silently mixing training experiments into the published result.
 # A lineup is an editorial decision, so it is declared, not inferred from a count.
 CANONICAL_LINEUP = [
-    "gemma3-1b", "deepseek-v4f", "gemma4-31b-or", "mistral-large-or", "minimax-m2.5-or",
+    "gemma3-1b", "deepseek-v4f", "deepseek-v4p", "gemma4-31b-or", "mistral-large-or", "minimax-m2.5-or",
     "llama3.3-70b-or", "gemma3-1b-qat", "gemini3-flash-or", "haiku-4.5-direct",
     "gpt-oss-120b-or", "gpt5-mini-or",
 ]

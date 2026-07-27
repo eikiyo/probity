@@ -61,10 +61,12 @@ def anthropic_model_set(label, model_id):
 
 def deepseek_model_set(label, model_id=None):
     """One-model hosted set for the DIRECT DeepSeek API. Same shape as the openrouter/anthropic
-    sets so run_hosted_sweep.py drives it unchanged. `model_id` is accepted and ignored: the
-    published 0.7 arm ran DeepSeekClient's own default model, and letting a sweep flag silently
-    swap the model would break the one thing this experiment holds fixed."""
-    return [(label, None, lambda: DeepSeekClient())]
+    sets so run_hosted_sweep.py drives it unchanged.
+
+    `model_id` is honoured (DeepSeek now serves both v4-flash and v4-pro) but it is NEVER guessed:
+    every caller sources it from preflight.LINEUP, the single label -> model mapping. Passing None
+    keeps DeepSeekClient's default, which is the exact model the published 0.7 arm ran."""
+    return [(label, None, lambda: DeepSeekClient(model_id))]
 
 
 def _load_task(leaf_dir):

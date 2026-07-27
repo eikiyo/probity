@@ -112,10 +112,13 @@ class TestCoverageSectionReportsHoles:
         BOLD-a-hole rendering is still pinned directly by test_render_matrix_bolds_a_short_cell
         on a synthetic matrix, so losing this instance does not lose the capability."""
         text, matrix = compare.coverage_section(None)
-        holes = [c for c in matrix if not c["complete"]]
-        assert len(matrix) == 660, "60 leaves x 11 models"
-        assert holes == []
-        assert "660/660 cells complete" in text
+        measured = [c for c in matrix if c["recorded"] > 0]
+        holes = [c for c in measured if not c["complete"]]
+        assert len(matrix) == 60 * len(compare.ag.canonical_lineup())
+        assert holes == [], "a cell with data must have ALL its data"
+        # deepseek-v4p joined the lineup 2026-07-27 and has no legacy-arm data yet; its cells are
+        # ABSENT (0 recorded), which is a different state from SHORT and must not read as a hole.
+        assert len(measured) == 660, "the 11 measured models x 60 leaves"
 
     def test_render_matrix_bolds_a_short_cell(self):
         """The capability the test above used to cover, on synthetic data that cannot rot."""

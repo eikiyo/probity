@@ -58,7 +58,7 @@ class TestArmOrderMatchesTheLineup:
 
     def test_no_duplicates_and_no_local_models(self):
         labels = [l for l, _c, _m in run_arm.ARM_ORDER]
-        assert len(labels) == len(set(labels)) == 8
+        assert len(labels) == len(set(labels)) == 9
         assert not (set(labels) & set(run_arm.guard_mod.LOCAL_MODELS)), \
             "local models run on Kaggle, not through this driver"
 
