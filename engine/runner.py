@@ -203,16 +203,53 @@ def run_leaf(leaf_dir, model_set=FAST_SET, only=None, guard_config=None, max_wor
                   f"reason={res['guard']['reason']}", flush=True)
         print("", flush=True)
         scored[label] = res
-        prev = json.loads(out.read_text()) if out.exists() else {}
-        prev.update(scored)
-        out.write_text(json.dumps(prev, indent=1), encoding="utf-8")  # incremental
+        _merge_scored(out, scored)          # incremental, and safe against a concurrent writer
     print(f"wrote {out.name}")
     if scored:
         scorecard = _load_scorecard()
         guard_stats = _aggregate_guard_stats(scored)
         report = scorecard.build_report(leaf_dir.name, scored, guard_stats=guard_stats)
         print(scorecard.render_terminal(report))
-        (leaf_dir / "scorecard.html").write_text(scorecard.render_html(report), encoding="utf-8")
+        # Atomic: scorecard.html is keyed by LEAF too, so concurrent tracks both write it. A
+        # plain write_text can interleave into corrupt HTML; a temp-file + rename means the worst
+        # case is "one track's version wins", never a half-written file.
+        _atomic_write(leaf_dir / "scorecard.html", scorecard.render_html(report))
+
+
+def _merge_scored(out_path, new_results):
+    """
+    Merge one model's results into a leaf's shared scored file under an EXCLUSIVE file lock.
+
+    Why a lock: this is a read-modify-write on a file keyed by LEAF, not by model, so every model
+    that ever runs on this leaf writes the same file. Sequentially that is fine. The moment two
+    drivers run concurrently -- e.g. an OpenRouter track beside a direct-API track, which is safe
+    on rate limits because the providers are different -- both can read the same `prev`, each add
+    only its own key, and the second write silently discards the first model's entire result. The
+    checkpoints would still hold the raw calls, so the loss is recoverable, but it would be
+    INVISIBLE: the scored file stays valid JSON and simply lacks a model.
+
+    flock is advisory and per-file, so it costs nothing in the sequential case and makes the
+    concurrent case correct. The lock is held across read AND write, which is the whole point --
+    locking only the write would not prevent the stale read.
+    """
+    import fcntl
+    lock_path = Path(str(out_path) + ".lock")
+    with open(lock_path, "w") as lock:
+        fcntl.flock(lock.fileno(), fcntl.LOCK_EX)
+        try:
+            prev = json.loads(out_path.read_text()) if out_path.exists() else {}
+            prev.update(new_results)
+            out_path.write_text(json.dumps(prev, indent=1), encoding="utf-8")
+        finally:
+            fcntl.flock(lock.fileno(), fcntl.LOCK_UN)
+
+
+def _atomic_write(path, text):
+    """Write via a temp file in the same directory + os.replace, which is atomic on POSIX."""
+    import os
+    tmp = path.with_suffix(path.suffix + f".tmp{os.getpid()}")
+    tmp.write_text(text, encoding="utf-8")
+    os.replace(tmp, path)
 
 
 def _aggregate_guard_stats(scored):
