@@ -71,6 +71,20 @@ def arm_tag(temperature: float) -> str:
     return f"t{digits}"
 
 
+def arm_label(temperature: Optional[float]) -> str:
+    """
+    The HUMAN-facing name for an arm, for headings and table columns.
+
+    `None` is an internal sentinel meaning "the legacy unsuffixed 0.7 sweep". Interpolating it
+    raw produced report headings that read `paired against None` and `## Paired comparison: None
+    vs 0.1` -- a reviewer cannot tell whether that means the legacy arm, a missing value, or a
+    bug. The legacy arm's temperature is spelled out because "legacy" alone does not say 0.7.
+    """
+    if temperature is None:
+        return "legacy (0.7)"
+    return f"{arm_tag(temperature)} ({temperature})"
+
+
 def artifact_suffix(temperature: Optional[float]) -> str:
     """Filename infix for an arm. None = the LEGACY unsuffixed arm (the published 0.7 sweep from
     2026-07-02/03), which keeps its original `runs_<label>.jsonl` / `scored.json` names and is

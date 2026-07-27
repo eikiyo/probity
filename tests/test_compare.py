@@ -197,3 +197,27 @@ class TestPairingFailsClosedOnAnUnfrozenArm:
 
     def test_no_incomplete_banner_when_every_arm_is_frozen(self):
         assert "INCOMPLETE" not in compare.paired_table(None, None)
+
+
+class TestNoInternalSentinelReachesTheReport:
+    """`None` is the internal name for the legacy arm. It used to be interpolated raw into the
+    report's own headings -- `paired against None`, `## Paired comparison: None vs 0.1` -- where a
+    reviewer cannot tell whether it means the legacy arm, a missing value, or a bug. build_report
+    even computed the correct label on its first line and then never used it."""
+
+    def test_no_heading_contains_the_none_sentinel(self):
+        report = compare.build_report(None, 0.1)
+        offenders = [l for l in report.splitlines() if "None" in l]
+        assert offenders == [], f"internal sentinel reached the report: {offenders[:3]}"
+
+    def test_the_legacy_arm_is_named_with_its_temperature(self):
+        """'legacy' alone does not tell a reader it is the 0.7 sweep."""
+        assert compare.coverage.arm_label(None) == "legacy (0.7)"
+        assert "0.7" in compare.build_report(None, 0.1).splitlines()[0]
+
+    def test_an_explicit_arm_carries_both_tag_and_temperature(self):
+        assert compare.coverage.arm_label(0.1) == "t01 (0.1)"
+
+    def test_both_arms_are_named_in_the_title(self):
+        title = compare.build_report(None, 0.1).splitlines()[0]
+        assert "legacy (0.7)" in title and "t01 (0.1)" in title

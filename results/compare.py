@@ -76,7 +76,7 @@ def excluded_from_pairing(temp_a, temp_b):
     """
     short = {}
     for arm in (temp_a, temp_b):
-        tag = coverage.arm_tag(arm) if arm is not None else "legacy"
+        tag = coverage.arm_label(arm)
         for label, agg in incomplete_labels(arm).items():
             why = (f"{agg['short_cells']}/{agg['cells']} cells short, "
                    f"{agg['short_calls']} calls owed" if agg["started"]
@@ -120,8 +120,7 @@ def paired_table(temp_a, temp_b):
     reduced wobble. An interval spanning 0 means the data does not establish a difference, and
     the Verdict column says exactly that rather than leaving a reader to infer it from a sign.
     """
-    ta = coverage.arm_tag(temp_a) if temp_a is not None else "legacy"
-    tb = coverage.arm_tag(temp_b) if temp_b is not None else "legacy"
+    ta, tb = coverage.arm_label(temp_a), coverage.arm_label(temp_b)
     lines = [f"| Model | Pairs | Wobble @ {ta} | Wobble @ {tb} | **Δ ({ta} − {tb})** 95% CI | Verdict |",
              "|---|---|---|---|---|---|"]
     for r in paired_rows(temp_a, temp_b):
@@ -205,10 +204,10 @@ def coverage_section(temperature):
 
 
 def build_report(temp_a, temp_b):
-    tb = coverage.arm_tag(temp_b) if temp_b is not None else "legacy"
+    ta, tb = coverage.arm_label(temp_a), coverage.arm_label(temp_b)
     cov_text, matrix = coverage_section(temp_b)
     holes = [c for c in matrix if not c["complete"]]
-    out = [f"# Probity — temperature {temp_b} results, paired against {temp_a}", "",
+    out = [f"# Probity — arm {tb} results, paired against arm {ta}", "",
            "**Wobble** = the share of items where a model gave more than one answer across 20 "
            "identical runs. **Accuracy** = the share whose majority answer matched the "
            "human-validated truth. They are reported separately and never averaged.", "",
@@ -216,11 +215,11 @@ def build_report(temp_a, temp_b):
            "approximation, which degenerates near 0 and several models sit at ~3%). Paired "
            "deltas use **Tango's score interval** for the difference of paired proportions, "
            "because both arms are measured on the same items and are therefore correlated.", "",
-           f"## Suite summary @ temp {temp_b}", "", suite_table(temp_b), "",
-           f"### Statistically indistinguishable groups @ temp {temp_b}", "",
+           f"## Suite summary @ {tb}", "", suite_table(temp_b), "",
+           f"### Statistically indistinguishable groups @ {tb}", "",
            bands_note(temp_b), "",
-           f"## Paired comparison: {temp_a} vs {temp_b}", "", paired_table(temp_a, temp_b), "",
-           f"## By fundraising-document category @ temp {temp_b}", "", category_table(temp_b), "",
+           f"## Paired comparison: {ta} vs {tb}", "", paired_table(temp_a, temp_b), "",
+           f"## By fundraising-document category @ {tb}", "", category_table(temp_b), "",
            "## Appendix: requested vs honoured temperature", "", appendix_table(temp_b), "",
            "## Coverage", "", cov_text, ""]
     if holes:
