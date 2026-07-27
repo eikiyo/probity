@@ -235,7 +235,7 @@ def _arm(value):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--arms", nargs=2, type=_arm, default=["legacy", 0.1],
+    p.add_argument("--arms", nargs=2, type=_arm, default=[None, 0.1],   # NOT ["legacy", ...]: argparse converts string defaults only
                     help="two arms, baseline first: a temperature, or 'legacy' for the published "
                          "unsuffixed 0.7 sweep. NOT interchangeable: `0.7` selects the t07 "
                          "namespace, which holds only the two LOCAL models re-measured on Kaggle, "

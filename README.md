@@ -15,16 +15,21 @@ on real term sheets, charters, SAFEs, convertible notes, and cap tables — befo
 whether the answer is right.
 
 - **Wobble** (the core metric) — does the model give the *same* answer when you ask it the same
-  question 20 times at temperature 0.7? A model whose answer flips run to run cannot be trusted in
-  a workflow that touches money, even when it is often right. This is label-free: it needs no
-  ground truth, only repetition.
+  question 20 times? A model whose answer flips run to run cannot be trusted in a workflow that
+  touches money, even when it is often right. This is label-free: it needs no ground truth, only
+  repetition.
 - **Accuracy** — does the model get the answer *right*, graded against a validated answer that a
   human extracted from the source document (not authored by an AI)?
 
 These are scored separately and never averaged into one headline — a model can be perfectly
-consistent and consistently wrong. Models are run across a **size ladder** (1B local, then a
-hosted OpenRouter lineup spanning ~12B to 120B+) to test whether wobble falls as capability rises.
-A 27B local model is reserved for a separate comprehensive sweep once every test is built.
+consistent and consistently wrong. Models are run across a **size ladder** (1B local through
+hosted frontier) to test whether wobble falls as capability rises, via OpenRouter and direct
+provider APIs.
+
+Every model is measured at **two temperatures — 0.7 and 0.1 — over the identical tests, items,
+prompts and scorer**, so the two arms compare as a paired difference with temperature as the only
+variable. See [the paired comparison](results/PAIRED_legacy_vs_t01.md); the short version is that
+lowering temperature is **not** a general fix for wobble ([below](#does-lowering-temperature-fix-wobble)).
 
 ## Quickstart
 
@@ -113,6 +118,20 @@ python3 ../../results/render.py  # regenerate the tables with your fresh numbers
 
 <!-- BENCHMARK:END -->
 
+<!-- TEMPCOMPARE:START -->
+### Does lowering temperature fix wobble?
+
+Not in general. Across 12 models measured at both legacy (0.7) and t01 (0.1) on the identical items, **6 wobbled less at t01 (0.1)**, **4 showed no difference**, and **2 wobbled *more* at t01 (0.1)** — 95% Tango intervals on the paired difference, counting only those that exclude zero.
+
+The gain is concentrated in the weakest models: `gemma3:1b` improves by 19.5 points, while frontier models move by low single digits or not at all.
+
+`minimax-m2.5` got *worse* at t01 (0.1), by 3.2 points.
+
+Accuracy is flat across both arms for every model: temperature moves *consistency*, not correctness.
+
+Full table, per-model intervals and the parse-failure caveat: [`results/PAIRED_legacy_vs_t01.md`](results/PAIRED_legacy_vs_t01.md).
+<!-- TEMPCOMPARE:END -->
+
 Full per-item breakdown — including which clauses make each model wobble — in
 [`results/RESULTS.md`](results/RESULTS.md).
 
@@ -139,14 +158,15 @@ ambiguous phrasing) on top of a real, human-validated seed — never as the sole
 Probity's full test backlog is a structured map of fundraising-reasoning capabilities
 (`engine/registry.json`) — 67 atomic checks across priced equity, convertibles, cap-table math,
 exit waterfalls, investor rights, founder equity, regulatory filings, and off-market risk flags.
-Each check is built one at a time, to depth, against real sourced documents.
+**60 are built and measured**; the remaining 7 are scoped but not yet sourced. Each check is
+built one at a time, to depth, against real sourced documents.
 
 ## Structure
 
 ```
 engine/    the model-agnostic core: clients, run harness, normalizer, reliability+accuracy scorers
 leaves/    one folder per test, each with its real-document corpus, its separated oracle, and its runner
-results/   the living benchmark table
+results/   the living benchmark tables + the paired temperature report
 ```
 
 See the [Quickstart](#quickstart) above for the full clone → run → reproduce path.

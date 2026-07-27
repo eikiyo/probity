@@ -9,8 +9,14 @@ setup: test render
 test:
 	python3 -m unittest discover -s tests -v
 
+# Regenerates EVERY published surface from disk: the legacy per-leaf tables + README summary,
+# the 0.1 arm's tables, the paired report, and the README's temperature block. Each is generated,
+# never hand-edited -- `make render` is what proves a published number still matches the data.
 render:
 	python3 results/render.py
+	python3 results/render.py --temperature 0.1
+	python3 results/compare.py
+	python3 results/temp_readme.py
 
 # GENERATES probity_cli/data/ (gitignored) by mirroring engine/, leaves/*, results/, demo/ into
 # the package so `pip install probity-bench` ships the full pipeline minus corpus/ (raw SEC

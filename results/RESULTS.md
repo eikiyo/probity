@@ -2,7 +2,7 @@
 
 **Wobble** = run-to-run inconsistency (the core metric): ask the same question 20× at temperature 0.7 and count how often the answer changes. **Accuracy** = % correct vs a human-validated answer extracted from the source document. They are reported separately and never averaged — a model can be perfectly consistent and consistently wrong.
 
-11 models span a size ladder (1B local → hosted frontier) to test whether wobble falls as capability rises. Local via Ollama (zero egress); hosted via OpenRouter and direct provider APIs.
+12 models span a size ladder (1B local → hosted frontier) to test whether wobble falls as capability rises. Local via Ollama (zero egress); hosted via OpenRouter and direct provider APIs.
 
 ---
 
@@ -27,6 +27,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
 | `openai/gpt-oss-120b` | ? | **22%** | 97% | 72% | 18/18 | 353/360 (98%) |
 | `openai/gpt-5-mini` | ? | **6%** | 100% | 72% | 18/18 | 360/360 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
 
 **What the columns mean:**
 
@@ -52,6 +53,7 @@
 | `claude-haiku-4-5-20251001` | 2/6 | 6/7 | 5/5 |
 | `openai/gpt-oss-120b` | 2/6 | 6/7 | 5/5 |
 | `openai/gpt-5-mini` | 2/6 | 6/7 | 5/5 |
+| `deepseek-v4-pro` | 2/6 | 6/7 | 5/5 |
 
 ### Which items make models wobble
 
@@ -107,6 +109,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `deepseek-v4-pro` | ? | **19%** | 99% | 100% | 16/16 | 320/320 (100%) |
 
 **What the columns mean:**
 
@@ -132,6 +135,7 @@
 | `claude-haiku-4-5-20251001` | 10/10 | 6/6 |
 | `openai/gpt-oss-120b` | 10/10 | 6/6 |
 | `openai/gpt-5-mini` | 10/10 | 6/6 |
+| `deepseek-v4-pro` | 10/10 | 6/6 |
 
 ### Which items make models wobble
 
@@ -139,8 +143,9 @@
 |---|---|---|---|
 | Neo Aeronautics, Inc.  | pre-money | easy | hosted |
 | Rentberry Inc.  (CIK 0 | pre-money | easy | hosted, gemma3-1b-qat |
-| Complete Solaria, Inc. | pre-money | easy | hosted |
-| IDEANOMICS, INC.  (IDE | pre-money | easy | 1B |
+| Complete Solaria, Inc. | pre-money | easy | hosted, deepseek-v4p |
+| Invizyne Technologies  | pre-money | easy | deepseek-v4p |
+| IDEANOMICS, INC.  (IDE | pre-money | easy | 1B, deepseek-v4p |
 
 ## What this shows
 
@@ -175,6 +180,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 
 **What the columns mean:**
 
@@ -200,6 +206,7 @@
 | `claude-haiku-4-5-20251001` | 8/8 | 8/8 |
 | `openai/gpt-oss-120b` | 8/8 | 8/8 |
 | `openai/gpt-5-mini` | 8/8 | 8/8 |
+| `deepseek-v4-pro` | 8/8 | 8/8 |
 
 ### Which items make models wobble
 
@@ -241,6 +248,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -266,6 +274,7 @@
 | `claude-haiku-4-5-20251001` | 6/6 | 7/7 |
 | `openai/gpt-oss-120b` | 6/6 | 7/7 |
 | `openai/gpt-5-mini` | 6/6 | 7/7 |
+| `deepseek-v4-pro` | 6/6 | 7/7 |
 
 ### Which items make models wobble
 
@@ -306,6 +315,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
 | `openai/gpt-oss-120b` | ? | **9%** | 100% | 82% | 11/11 | 220/220 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
 
 **What the columns mean:**
 
@@ -331,6 +341,7 @@
 | `claude-haiku-4-5-20251001` | 4/6 | 5/5 |
 | `openai/gpt-oss-120b` | 4/6 | 5/5 |
 | `openai/gpt-5-mini` | 4/6 | 5/5 |
+| `deepseek-v4-pro` | 4/6 | 5/5 |
 
 ### Which items make models wobble
 
@@ -371,6 +382,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 90% | 10/10 | 199/200 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -396,6 +408,7 @@
 | `claude-haiku-4-5-20251001` | 5/5 | 4/5 |
 | `openai/gpt-oss-120b` | 5/5 | 4/5 |
 | `openai/gpt-5-mini` | 5/5 | 4/5 |
+| `deepseek-v4-pro` | 5/5 | 4/5 |
 
 ### Which items make models wobble
 
@@ -438,6 +451,7 @@
 | `claude-haiku-4-5-20251001` | ? | **10%** | 96% | 90% | 10/10 | 200/200 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-pro` | ? | **10%** | 96% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -463,6 +477,7 @@
 | `claude-haiku-4-5-20251001` | 4/5 | 5/5 |
 | `openai/gpt-oss-120b` | 5/5 | 5/5 |
 | `openai/gpt-5-mini` | 5/5 | 5/5 |
+| `deepseek-v4-pro` | 5/5 | 5/5 |
 
 ### Which items make models wobble
 
@@ -472,7 +487,7 @@
 | Lulu's Fashion Lounge  | yes | medium | 1B, gemma3-1b-qat |
 | ENDOSTIM, INC. | yes | medium | gemma3-1b-qat |
 | Tenable Holdings, Inc. | yes | medium | 1B |
-| Pfenex Inc. | yes | hard | hosted, mistral-large-or, minimax-m2.5-or, haiku-4.5-direct |
+| Pfenex Inc. | yes | hard | hosted, mistral-large-or, minimax-m2.5-or, haiku-4.5-direct, deepseek-v4p |
 
 ## What this shows
 
@@ -502,6 +517,7 @@
 | `claude-haiku-4-5-20251001` | ? | **17%** | 92% | 100% | 12/12 | 240/240 (100%) |
 | `openai/gpt-oss-120b` | ? | **8%** | 100% | 92% | 12/12 | 240/240 (100%) |
 | `openai/gpt-5-mini` | ? | **17%** | 97% | 83% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | ? | **8%** | 99% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -527,12 +543,13 @@
 | `claude-haiku-4-5-20251001` | 6/6 | 6/6 |
 | `openai/gpt-oss-120b` | 5/6 | 6/6 |
 | `openai/gpt-5-mini` | 4/6 | 6/6 |
+| `deepseek-v4-pro` | 5/6 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| TRUMP ENTERTAINMENT RE | yes | easy | 1B, hosted, minimax-m2.5-or, haiku-4.5-direct, gpt-oss-120b-or, gpt5-mini-or |
+| TRUMP ENTERTAINMENT RE | yes | easy | 1B, hosted, minimax-m2.5-or, haiku-4.5-direct, gpt-oss-120b-or, gpt5-mini-or, deepseek-v4p |
 | LOEWS CINEPLEX ENTERTA | yes | medium | 1B, gemma3-1b-qat |
 | AVENTINE RENEWABLE ENE | yes | hard | haiku-4.5-direct, gpt5-mini-or |
 | ACCELERON PHARMA INC | no | easy | gemma3-1b-qat |
@@ -565,6 +582,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -590,6 +608,7 @@
 | `claude-haiku-4-5-20251001` | 6/6 | 4/6 |
 | `openai/gpt-oss-120b` | 6/6 | 6/6 |
 | `openai/gpt-5-mini` | 6/6 | 4/6 |
+| `deepseek-v4-pro` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -631,6 +650,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 | `openai/gpt-oss-120b` | ? | **17%** | 98% | 100% | 12/12 | 240/240 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -656,6 +676,7 @@
 | `claude-haiku-4-5-20251001` | 6/6 | 6/6 |
 | `openai/gpt-oss-120b` | 6/6 | 6/6 |
 | `openai/gpt-5-mini` | 6/6 | 6/6 |
+| `deepseek-v4-pro` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -696,6 +717,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 | `openai/gpt-oss-120b` | ? | **8%** | 98% | 92% | 12/12 | 240/240 (100%) |
 | `openai/gpt-5-mini` | ? | **17%** | 98% | 92% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | ? | **8%** | 99% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -721,6 +743,7 @@
 | `claude-haiku-4-5-20251001` | 6/6 | 6/6 |
 | `openai/gpt-oss-120b` | 6/6 | 5/6 |
 | `openai/gpt-5-mini` | 6/6 | 5/6 |
+| `deepseek-v4-pro` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -730,7 +753,7 @@
 | Interval Leisure Group | yes | medium | 1B, gemma3-1b-qat, gpt-oss-120b-or |
 | Atossa Genetics Inc. | no | easy | gemma3-1b-qat |
 | Clarcor Inc. | no | hard | minimax-m2.5-or, gpt5-mini-or |
-| World Heart Corp | no | hard | 1B, minimax-m2.5-or, gpt5-mini-or |
+| World Heart Corp | no | hard | 1B, minimax-m2.5-or, gpt5-mini-or, deepseek-v4p |
 
 ## What this shows
 
@@ -759,6 +782,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 | `openai/gpt-oss-120b` | ? | **17%** | 99% | 92% | 12/12 | 240/240 (100%) |
 | `openai/gpt-5-mini` | ? | **17%** | 99% | 100% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | ? | **8%** | 99% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -784,13 +808,14 @@
 | `claude-haiku-4-5-20251001` | 6/6 | 6/6 |
 | `openai/gpt-oss-120b` | 5/6 | 6/6 |
 | `openai/gpt-5-mini` | 6/6 | 6/6 |
+| `deepseek-v4-pro` | 5/6 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | Gitlab Inc. | yes | easy | gemma3-1b-qat |
-| BroadSoft, Inc. | yes | medium | minimax-m2.5-or, gemma3-1b-qat, gpt-oss-120b-or, gpt5-mini-or |
+| BroadSoft, Inc. | yes | medium | minimax-m2.5-or, gemma3-1b-qat, gpt-oss-120b-or, gpt5-mini-or, deepseek-v4p |
 | SCYNEXIS, Inc. | yes | medium | 1B, gemma3-1b-qat |
 | JCM Partners, LLC | yes | medium | minimax-m2.5-or, gemma3-1b-qat, gpt-oss-120b-or, gpt5-mini-or |
 | UCP Holdings, Inc. | no | easy | gemma3-1b-qat |
@@ -824,6 +849,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 | `openai/gpt-oss-120b` | ? | **8%** | 98% | 92% | 12/12 | 240/240 (100%) |
 | `openai/gpt-5-mini` | ? | **8%** | 98% | 100% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -849,6 +875,7 @@
 | `claude-haiku-4-5-20251001` | 6/6 | 6/6 |
 | `openai/gpt-oss-120b` | 5/6 | 6/6 |
 | `openai/gpt-5-mini` | 6/6 | 6/6 |
+| `deepseek-v4-pro` | 5/6 | 6/6 |
 
 ### Which items make models wobble
 
@@ -886,6 +913,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -911,6 +939,7 @@
 | `claude-haiku-4-5-20251001` | 6/6 | 3/3 |
 | `openai/gpt-oss-120b` | 6/6 | 3/3 |
 | `openai/gpt-5-mini` | 6/6 | 3/3 |
+| `deepseek-v4-pro` | 6/6 | 3/3 |
 
 ### Which items make models wobble
 
@@ -949,6 +978,7 @@
 | `claude-haiku-4-5-20251001` | ? | **11%** | 97% | 78% | 9/9 | 180/180 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 67% | 9/9 | 180/180 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 67% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | ? | **11%** | 96% | 67% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -974,6 +1004,7 @@
 | `claude-haiku-4-5-20251001` | — | 2/3 | 2/3 | 3/3 | — |
 | `openai/gpt-oss-120b` | — | 2/3 | 1/3 | 3/3 | — |
 | `openai/gpt-5-mini` | — | 2/3 | 1/3 | 3/3 | — |
+| `deepseek-v4-pro` | — | 2/3 | 1/3 | 3/3 | — |
 
 ### Which items make models wobble
 
@@ -982,7 +1013,7 @@
 | COUNTERPATH CORP  (CIK | 1x | easy | 1B, gemma3-1b-qat |
 | BIOVENTRIX, INC.  (CIK | 1x | easy | gemma3-1b-qat |
 | Revance Therapeutics,  | 1x | easy | 1B, gemma3-1b-qat |
-| Oportun Financial Corp | 2x | easy | 1B, hosted, mistral-large-or, llama3.3-70b-or, gemma3-1b-qat, haiku-4.5-direct |
+| Oportun Financial Corp | 2x | easy | 1B, hosted, mistral-large-or, llama3.3-70b-or, gemma3-1b-qat, haiku-4.5-direct, deepseek-v4p |
 | Pagaya Technologies Lt | 2x | easy | 1B, hosted, gemma3-1b-qat |
 | 24/7 REAL MEDIA INC  ( | 3x | easy | 1B |
 | BECEEM COMMUNICATIONS  | 3x | easy | 1B, gemma3-1b-qat |
@@ -1016,6 +1047,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 78% | 9/9 | 180/180 (100%) |
 | `openai/gpt-oss-120b` | ? | **11%** | 99% | 78% | 9/9 | 180/180 (100%) |
 | `openai/gpt-5-mini` | ? | **44%** | 92% | 78% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | ? | **22%** | 97% | 89% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1031,11 +1063,11 @@
 |---|---|---|---|
 | SICOR Inc. | 3 | easy | 1B |
 | Dollar General Corpora | 1 | medium | 1B, gemma3-1b-qat, llama3.3-70b-or |
-| Emergent Capital, Inc. | 3 | medium | minimax-m2.5-or, gpt5-mini-or |
+| Emergent Capital, Inc. | 3 | medium | minimax-m2.5-or, gpt5-mini-or, deepseek-v4p |
 | Ute Energy Corporation | 1 | medium | 1B, gemma4-31b-or, mistral-large-or, minimax-m2.5-or, gemma3-1b-qat, llama3.3-70b-or, gpt5-mini-or |
 | Ute Energy Corporation | 2 | medium | 1B, gemma4-31b-or, minimax-m2.5-or, gemma3-1b-qat, llama3.3-70b-or, gemini3-flash-or, gpt5-mini-or |
 | Cinemark Holdings, Inc | 5 | easy | gemma4-31b-or, mistral-large-or, minimax-m2.5-or, gpt-oss-120b-or, gpt5-mini-or |
-| Cinemark Holdings, Inc | 9 | hard | hosted |
+| Cinemark Holdings, Inc | 9 | hard | hosted, deepseek-v4p |
 
 ## What this shows
 
@@ -1065,6 +1097,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 
 **What the columns mean:**
 
@@ -1090,6 +1123,7 @@
 | `claude-haiku-4-5-20251001` | 9/9 | 6/6 |
 | `openai/gpt-oss-120b` | 9/9 | 6/6 |
 | `openai/gpt-5-mini` | 9/9 | 6/6 |
+| `deepseek-v4-pro` | 9/9 | 6/6 |
 
 ### Which items make models wobble
 
@@ -1130,6 +1164,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
 | `openai/gpt-oss-120b` | ? | **5%** | 98% | 95% | 19/19 | 380/380 (100%) |
 | `openai/gpt-5-mini` | ? | **11%** | 98% | 100% | 19/19 | 380/380 (100%) |
+| `deepseek-v4-pro` | ? | **5%** | 99% | 95% | 19/19 | 380/380 (100%) |
 
 **What the columns mean:**
 
@@ -1155,6 +1190,7 @@
 | `claude-haiku-4-5-20251001` | 13/13 | 5/6 |
 | `openai/gpt-oss-120b` | 13/13 | 5/6 |
 | `openai/gpt-5-mini` | 13/13 | 6/6 |
+| `deepseek-v4-pro` | 13/13 | 5/6 |
 
 ### Which items make models wobble
 
@@ -1175,7 +1211,7 @@
 | HAGUE CORP. | pre-money | easy | 1B |
 | PROVECTUS BIOPHARMACEU | post-money | easy | 1B |
 | Fold Holdings, Inc. | post-money | easy | 1B |
-| New Global Energy, Inc | post-money | easy | 1B, gemma3-1b-qat, gemini3-flash-or, gpt-oss-120b-or, gpt5-mini-or |
+| New Global Energy, Inc | post-money | easy | 1B, gemma3-1b-qat, gemini3-flash-or, gpt-oss-120b-or, gpt5-mini-or, deepseek-v4p |
 | Cerebras Systems Inc. | post-money | medium | 1B |
 | Oculus Innovative Scie | post-money | medium | 1B |
 | Oculus Innovative Scie | post-money | medium | 1B |
@@ -1208,6 +1244,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1233,6 +1270,7 @@
 | `claude-haiku-4-5-20251001` | 4/4 | 3/3 |
 | `openai/gpt-oss-120b` | 4/4 | 3/3 |
 | `openai/gpt-5-mini` | 4/4 | 3/3 |
+| `deepseek-v4-pro` | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
@@ -1268,6 +1306,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1310,6 +1349,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1335,6 +1375,7 @@
 | `claude-haiku-4-5-20251001` | 2/2 | 2/2 | — | — | 1/1 |
 | `openai/gpt-oss-120b` | 2/2 | 2/2 | — | — | 1/1 |
 | `openai/gpt-5-mini` | 2/2 | 2/2 | — | — | 1/1 |
+| `deepseek-v4-pro` | 2/2 | 2/2 | — | — | 1/1 |
 
 ### Which items make models wobble
 
@@ -1372,6 +1413,7 @@
 | `claude-haiku-4-5-20251001` | ? | **8%** | 98% | 69% | 13/13 | 260/260 (100%) |
 | `openai/gpt-oss-120b` | ? | **8%** | 96% | 85% | 13/13 | 259/260 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -1397,6 +1439,7 @@
 | `claude-haiku-4-5-20251001` | 2/4 | 7/9 |
 | `openai/gpt-oss-120b` | 2/4 | 9/9 |
 | `openai/gpt-5-mini` | 2/4 | 9/9 |
+| `deepseek-v4-pro` | 2/4 | 9/9 |
 
 ### Which items make models wobble
 
@@ -1434,6 +1477,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1459,6 +1503,7 @@
 | `claude-haiku-4-5-20251001` | 4/4 | 3/3 |
 | `openai/gpt-oss-120b` | 4/4 | 3/3 |
 | `openai/gpt-5-mini` | 4/4 | 3/3 |
+| `deepseek-v4-pro` | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
@@ -1494,6 +1539,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -1535,6 +1581,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1582,6 +1629,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -1628,6 +1676,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1669,6 +1718,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 | `openai/gpt-oss-120b` | ? | **22%** | 99% | 100% | 9/9 | 180/180 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1718,6 +1768,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1762,6 +1813,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-5-mini` | ? | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | ? | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1776,7 +1828,7 @@
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | Loop Industries, Inc. | 1 | easy | gemma3-1b-qat |
-| Air Defense Services,  | 100 | medium | hosted, gpt5-mini-or |
+| Air Defense Services,  | 100 | medium | hosted, gpt5-mini-or, deepseek-v4p |
 | Boston Life Sciences,  | 8000 | hard | 1B, gemma3-1b-qat |
 
 ## What this shows
@@ -1807,6 +1859,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -1832,6 +1885,7 @@
 | `claude-haiku-4-5-20251001` | 3/3 | 4/4 | 3/3 |
 | `openai/gpt-oss-120b` | 3/3 | 4/4 | 3/3 |
 | `openai/gpt-5-mini` | 3/3 | 4/4 | 3/3 |
+| `deepseek-v4-pro` | 3/3 | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
@@ -1870,6 +1924,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1914,6 +1969,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 
 **What the columns mean:**
 
@@ -1961,6 +2017,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 13/13 | 258/260 (99%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `deepseek-v4-pro` | ? | **31%** | 96% | 100% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -1986,18 +2043,20 @@
 | `claude-haiku-4-5-20251001` | 2/2 | 1/1 | 10/10 |
 | `openai/gpt-oss-120b` | 2/2 | 1/1 | 10/10 |
 | `openai/gpt-5-mini` | 2/2 | 1/1 | 10/10 |
+| `deepseek-v4-pro` | 2/2 | 1/1 | 10/10 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | SNM Global Holdings, I | discount | easy | 1B |
-| Parker Clay Global, PB | both-mfn | medium | 1B, gemma3-1b-qat |
+| Parker Clay Global, PB | both-mfn | medium | 1B, gemma3-1b-qat, deepseek-v4p |
 | Maison Luxe, Inc. | both-mfn | medium | 1B, gemma3-1b-qat |
-| Rentberry Inc. | both-mfn | medium | 1B, gemma3-1b-qat |
+| Rentberry Inc. | both-mfn | medium | 1B, gemma3-1b-qat, deepseek-v4p |
+| PaxMedica, Inc. | both-mfn | medium | deepseek-v4p |
 | Creci Inc. | both-mfn | medium | 1B, gemma3-1b-qat |
 | Lomond Therapeutics Ho | both-mfn | medium | 1B, gemma3-1b-qat |
-| Neo Aeronautics, Inc. | both-mfn | medium | gemma3-1b-qat |
+| Neo Aeronautics, Inc. | both-mfn | medium | gemma3-1b-qat, deepseek-v4p |
 | Manako Labs Ltd | both-mfn | medium | hosted, gemma3-1b-qat |
 | Gardedam Therapeutics  | cap | medium | 1B, gemma3-1b-qat |
 
@@ -2029,6 +2088,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
 | `openai/gpt-oss-120b` | ? | **12%** | 97% | 75% | 8/8 | 160/160 (100%) |
 | `openai/gpt-5-mini` | ? | **12%** | 94% | 62% | 8/8 | 160/160 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -2077,6 +2137,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2091,7 +2152,7 @@
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | GARDENBURGER, INC. | 2005-03-31 | easy | 1B, gemma3-1b-qat |
-| ACOLOGY, INC. | 2015-03-04 | medium | 1B, gemma4-31b-or, llama3.3-70b-or, gemini3-flash-or, haiku-4.5-direct, gpt-oss-120b-or |
+| ACOLOGY, INC. | 2015-03-04 | medium | 1B, gemma4-31b-or, llama3.3-70b-or, gemini3-flash-or, haiku-4.5-direct, gpt-oss-120b-or, deepseek-v4p |
 | VERITAS Farms Inc. | 2026-10-01 | medium | gemma3-1b-qat |
 
 ## What this shows
@@ -2122,6 +2183,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2166,6 +2228,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -2209,6 +2272,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 | `openai/gpt-oss-120b` | ? | **11%** | 99% | 89% | 9/9 | 180/180 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | ? | **11%** | 99% | 89% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -2223,7 +2287,7 @@
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
 | CONOR MEDSYSTEMS, INC. | 1.5yr/no-cliff | medium | 1B, gemma3-1b-qat |
-| CLARCOR INC. | 4yr/no-cliff | hard | 1B, hosted, minimax-m2.5-or, gemma3-1b-qat, gpt-oss-120b-or |
+| CLARCOR INC. | 4yr/no-cliff | hard | 1B, hosted, minimax-m2.5-or, gemma3-1b-qat, gpt-oss-120b-or, deepseek-v4p |
 | WORLD HEART CORP | 4yr/1yr-cliff | hard | mistral-large-or |
 
 ## What this shows
@@ -2253,6 +2317,7 @@
 | `claude-haiku-4-5-20251001` | ? | **11%** | 99% | 89% | 9/9 | 180/180 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 9/9 | 174/180 (97%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -2304,6 +2369,7 @@
 | `claude-haiku-4-5-20251001` | ? | **33%** | 98% | 67% | 3/3 | 60/60 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -2349,6 +2415,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `openai/gpt-oss-120b` | ? | **25%** | 99% | 100% | 4/4 | 68/80 (85%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 65/80 (81%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2395,6 +2462,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
 | `openai/gpt-oss-120b` | ? | **100%** | 85% | 100% | 1/1 | 20/20 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 1/1 | 18/20 (90%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
 
 **What the columns mean:**
 
@@ -2438,6 +2506,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 | `openai/gpt-oss-120b` | ? | **10%** | 99% | 100% | 10/10 | 200/200 (100%) |
 | `openai/gpt-5-mini` | ? | **10%** | 99% | 100% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -2463,6 +2532,7 @@
 | `claude-haiku-4-5-20251001` | 6/6 | 4/4 | — | — | — |
 | `openai/gpt-oss-120b` | 6/6 | 4/4 | — | — | — |
 | `openai/gpt-5-mini` | 6/6 | 4/4 | — | — | — |
+| `deepseek-v4-pro` | 6/6 | 4/4 | — | — | — |
 
 ### Which items make models wobble
 
@@ -2503,6 +2573,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-pro` | ? | **50%** | 88% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -2516,7 +2587,7 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| NETBASE SOLUTIONS INC  | 2,366,532 | medium | llama3.3-70b-or |
+| NETBASE SOLUTIONS INC  | 2,366,532 | medium | llama3.3-70b-or, deepseek-v4p |
 
 ## What this shows
 
@@ -2546,6 +2617,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -2593,6 +2665,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 
 **What the columns mean:**
 
@@ -2638,6 +2711,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-oss-120b` | ? | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2685,6 +2759,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -2710,6 +2785,7 @@
 | `claude-haiku-4-5-20251001` | 4/4 | 4/4 |
 | `openai/gpt-oss-120b` | 4/4 | 4/4 |
 | `openai/gpt-5-mini` | 4/4 | 4/4 |
+| `deepseek-v4-pro` | 4/4 | 4/4 |
 
 ### Which items make models wobble
 
@@ -2752,6 +2828,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-oss-120b` | ? | **40%** | 85% | 80% | 5/5 | 100/100 (100%) |
 | `openai/gpt-5-mini` | ? | **20%** | 98% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2799,6 +2876,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | ? | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2812,7 +2890,7 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Actelis Networks, Inc. | False | ? | mistral-large-or, gemma3-1b-qat |
+| Actelis Networks, Inc. | False | ? | mistral-large-or, gemma3-1b-qat, deepseek-v4p |
 | Castle Biosciences, In | False | ? | gemma3-1b-qat |
 | Castle Biosciences, In | True | ? | gemma3-1b-qat |
 | HyreCar Inc. | True | ? | gemma3-1b-qat, gemini3-flash-or |
@@ -2846,6 +2924,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2893,6 +2972,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2940,6 +3020,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 75% | 4/4 | 80/80 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2985,6 +3066,7 @@
 | `claude-haiku-4-5-20251001` | ? | **20%** | 94% | 80% | 5/5 | 100/100 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-5-mini` | ? | **40%** | 94% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | ? | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -3002,7 +3084,7 @@
 | Castle Biosciences, In | research and development activities | ? | 1B, gemma4-31b-or, haiku-4.5-direct |
 | Axcella Health Inc. | advance our current liver programs | ? | 1B, minimax-m2.5-or, llama3.3-70b-or, gpt5-mini-or |
 | Veritone, Inc. | working capital and general corporate purposes | ? | 1B, gemma3-1b-qat |
-| Civitas Solutions, Inc | redeem all of the senior notes | ? | 1B, mistral-large-or, minimax-m2.5-or, gemma3-1b-qat, gpt5-mini-or |
+| Civitas Solutions, Inc | redeem all of the senior notes | ? | 1B, mistral-large-or, minimax-m2.5-or, gemma3-1b-qat, gpt5-mini-or, deepseek-v4p |
 
 ## What this shows
 
@@ -3032,6 +3114,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -3077,6 +3160,7 @@
 | `claude-haiku-4-5-20251001` | ? | **33%** | 83% | 33% | 3/3 | 60/60 (100%) |
 | `openai/gpt-oss-120b` | ? | **67%** | 77% | 67% | 3/3 | 60/60 (100%) |
 | `openai/gpt-5-mini` | ? | **67%** | 95% | 33% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 67% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -3096,7 +3180,7 @@
 
 ## What this shows
 
-- **Wobble spread: 33%–100% across the ladder.** Lowest-wobble model: **mistral-large-or** (33% wobble, 67% accuracy).
+- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **deepseek-v4p** (0% wobble, 67% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -3122,6 +3206,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -3147,6 +3232,7 @@
 | `claude-haiku-4-5-20251001` | 1/1 | 1/1 |
 | `openai/gpt-oss-120b` | 1/1 | 1/1 |
 | `openai/gpt-5-mini` | 1/1 | 1/1 |
+| `deepseek-v4-pro` | 1/1 | 1/1 |
 
 ### Which items make models wobble
 
@@ -3180,6 +3266,7 @@
 | `claude-haiku-4-5-20251001` | ? | **100%** | 31% | 0% | 4/4 | 80/80 (100%) |
 | `openai/gpt-oss-120b` | ? | **50%** | 92% | 75% | 4/4 | 80/80 (100%) |
 | `openai/gpt-5-mini` | ? | **100%** | 52% | 25% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-pro` | ? | **25%** | 98% | 75% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -3195,7 +3282,7 @@
 |---|---|---|---|
 | Connecture, Inc. | 0.51 | ? | 1B, gemma4-31b-or, mistral-large-or, gemma3-1b-qat, haiku-4.5-direct, gpt5-mini-or |
 | Connecture, Inc. | 0.42 | ? | 1B, gemma4-31b-or, minimax-m2.5-or, llama3.3-70b-or, gemma3-1b-qat, haiku-4.5-direct, gpt-oss-120b-or, gpt5-mini-or |
-| Connecture, Inc. | 0.39 | ? | 1B, hosted, gemma4-31b-or, mistral-large-or, minimax-m2.5-or, llama3.3-70b-or, gemma3-1b-qat, gemini3-flash-or, haiku-4.5-direct, gpt-oss-120b-or, gpt5-mini-or |
+| Connecture, Inc. | 0.39 | ? | 1B, hosted, gemma4-31b-or, mistral-large-or, minimax-m2.5-or, llama3.3-70b-or, gemma3-1b-qat, gemini3-flash-or, haiku-4.5-direct, gpt-oss-120b-or, gpt5-mini-or, deepseek-v4p |
 | Connecture, Inc. | 0.44 | ? | 1B, gemma4-31b-or, llama3.3-70b-or, gemma3-1b-qat, haiku-4.5-direct, gpt5-mini-or |
 
 ## What this shows
@@ -3226,6 +3313,7 @@
 | `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 | `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
