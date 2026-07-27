@@ -24,6 +24,8 @@ import harness                                       # noqa: E402
 import scorer                                        # noqa: E402
 import guard as guard_mod                            # noqa: E402
 import manifest as manifest_mod                       # noqa: E402
+import coverage                                      # noqa: E402
+import routing                                       # noqa: E402
 from models import OllamaClient, DeepSeekClient, OpenRouterClient, AnthropicClient  # noqa: E402
 
 # (label, ollama_model_or_None, factory). None ollama_model => hosted (no local unload).
@@ -85,29 +87,50 @@ def load_instances(leaf_dir, field):
 
 
 def run_model(leaf_dir, task, label, factory, ollama_model, instances, guard_config=None,
-              max_workers=1):
+              max_workers=1, temperature=None):
     """Run one model at N=20; unload local model after. Returns accuracy + reliability(wobble).
     guard_config (optional dict: max_steps/max_cost_usd/allowed_models) wraps this run with a
     BrakePedalGuard at the ACTUAL harness call-site (engine/guard.py) -- a guard that only lived
     in config and never reached the call-site would be the dead-control trap the DESIGN doc
     names. A reproducibility manifest (engine/manifest.py) is written next to the checkpoint on
-    every run, guard-tripped or not, so a partial run is still reproducible from what it did do."""
+    every run, guard-tripped or not, so a partial run is still reproducible from what it did do.
+
+    `temperature` None means the LEGACY arm: sample at the module default 0.7 AND keep the
+    original unsuffixed artifact names, so every existing caller (the 60 leaf run.py shims, the
+    CLI, the tests) behaves exactly as before. An explicit temperature both sets the sampling
+    temperature and namespaces the artifacts, so the 0.1 arm can never overwrite the 0.7 one."""
     client = factory()
-    ckpt = str(leaf_dir / f"runs_{label}.jsonl")
+    temp = TEMPERATURE if temperature is None else temperature
+    suffix = coverage.artifact_suffix(temperature)
+    ckpt = str(coverage.checkpoint_path(leaf_dir, label, suffix))
     g = guard_mod.BrakePedalGuard(**guard_config) if guard_config else None
     runs, stats = harness.run_harness(client, task, instances, n_runs=N_RUNS,
-                                       temperature=TEMPERATURE, checkpoint_file=ckpt,
+                                       temperature=temp, checkpoint_file=ckpt,
                                        guard=g, model_label=label, max_workers=max_workers)
     if ollama_model:
         subprocess.run(["ollama", "stop", ollama_model], capture_output=True)
     m = manifest_mod.build_manifest(leaf_name=leaf_dir.name, model_label=label, run_records=runs,
-                                     task_name=task["name"], n_runs=N_RUNS, temperature=TEMPERATURE)
-    (leaf_dir / f"manifest_{label}.json").write_text(json.dumps(m, indent=1), encoding="utf-8")
+                                     task_name=task["name"], n_runs=N_RUNS, temperature=temp,
+                                     extra=_routing_extra(client, temp))
+    (leaf_dir / f"manifest_{suffix}{label}.json").write_text(json.dumps(m, indent=1),
+                                                              encoding="utf-8")
     return {"model": getattr(client, "model", label),
+            "temperature_requested": temp,
+            "routing": routing.routing_for(client),
             "accuracy": scorer.score_accuracy(task, instances, runs),
             "reliability": scorer.score_runs(task, instances, runs),
+            "temperature_honoured": routing.honoured_temperature(client),
             "guard": {"tripped": stats.get("guard_tripped", False),
                        "reason": stats.get("guard_reason")}}
+
+
+def _routing_extra(client, temperature):
+    """Manifest `extra` block: which provider path served this cell and at what requested
+    temperature. Recorded per run so the paper's appendix table is regenerable from disk rather
+    than reconstructed from memory of how a sweep was launched."""
+    return {"routing": routing.routing_for(client),
+            "model_id": getattr(client, "model", None),
+            "temperature_requested": temperature}
 
 
 def _guard_config_from_env():
@@ -125,7 +148,8 @@ def _guard_config_from_env():
     return cfg or None
 
 
-def run_leaf(leaf_dir, model_set=FAST_SET, only=None, guard_config=None, max_workers=1):
+def run_leaf(leaf_dir, model_set=FAST_SET, only=None, guard_config=None, max_workers=1,
+             temperature=None):
     leaf_dir = Path(leaf_dir)
     if guard_config is None:
         guard_config = _guard_config_from_env()
@@ -144,22 +168,37 @@ def run_leaf(leaf_dir, model_set=FAST_SET, only=None, guard_config=None, max_wor
         summary = {c: sum(o[field] == c for o in oracle) for c in classes}
     print(f"{len(instances)} items  {summary}  N={N_RUNS} runs/item  field={field}\n", flush=True)
     scored = {}
+    expected = coverage.expected_calls(leaf_dir, N_RUNS)
+    out = leaf_dir / coverage.scored_filename(temperature)
     for label, omodel, factory in model_set:
         if only and label != only:
             continue
-        print(f"=== {label} (N={N_RUNS}) ===", flush=True)
+        print(f"=== {label} (N={N_RUNS}, temp={TEMPERATURE if temperature is None else temperature}) "
+              f"===", flush=True)
+        # Cap sized from what THIS leaf owes, not a flat constant. A flat cap cannot tell a
+        # 1-item leaf from a 19-item one, which is how 5 cells got silently truncated in the
+        # 0.7 sweep. An explicit caller-supplied guard_config still wins.
+        caps = guard_config or guard_mod.caps_for_leaf(label, expected)
         res = run_model(leaf_dir, task, label, factory, omodel, instances,
-                        guard_config=guard_config, max_workers=max_workers)
+                        guard_config=caps, max_workers=max_workers, temperature=temperature)
         a, r = res["accuracy"], res["reliability"]
         wob = r["field_flips"].get(field, 0.0) * 100
         print(f"  WOBBLE: {wob:.0f}% flipped across {N_RUNS} runs  |  consistency "
-              f"{r['consistency_pct']:.0f}%  |  accuracy {a['accuracy_majority']*100:.0f}%\n", flush=True)
+              f"{r['consistency_pct']:.0f}%  |  accuracy {a['accuracy_majority']*100:.0f}%", flush=True)
+        # Fail closed + observable: a short cell is announced HERE, at the moment it happens,
+        # instead of being discovered later by someone auditing checkpoints (root CLAUDE.md 0.7).
+        cell = coverage.cell_status(leaf_dir, label, N_RUNS,
+                                     coverage.artifact_suffix(temperature))
+        if not cell["complete"]:
+            print(f"  !! INCOMPLETE: {cell['recorded']}/{cell['expected']} calls recorded "
+                  f"(short {cell['short_by']}). guard_tripped={res['guard']['tripped']} "
+                  f"reason={res['guard']['reason']}", flush=True)
+        print("", flush=True)
         scored[label] = res
-        out = leaf_dir / "scored.json"
         prev = json.loads(out.read_text()) if out.exists() else {}
         prev.update(scored)
         out.write_text(json.dumps(prev, indent=1), encoding="utf-8")  # incremental
-    print("wrote scored.json")
+    print(f"wrote {out.name}")
     if scored:
         scorecard = _load_scorecard()
         guard_stats = _aggregate_guard_stats(scored)

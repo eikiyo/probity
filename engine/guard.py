@@ -11,41 +11,112 @@ Imports: dataclasses
 """
 
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Dict, Optional
 
 
-# Coarse per-call cost estimate (USD), keyed by the runner's model label (see engine/runner.py
-# FAST_SET/BIG_BATCH). Local Ollama models are $0 (own hardware). Hosted estimates are a rough
-# upper bound for one call at this harness's fixed shape (prompt = one document excerpt,
-# max_tokens=1024 response) -- deliberately generous so the cap trips EARLY, never late.
-ESTIMATED_COST_PER_CALL_USD = {
-    "gemma3-1b": 0.0,
-    "qwen3.5-27b": 0.0,
-    "deepseek-v4f": 0.002,
-    "gemini": 0.01,
-    # Hosted OpenRouter models added for the 2026-07-02 parallel-execution sweep (Eikiyo: "start
-    # with gemma from your list... we are not limited by laptop anymore"). Real per-call cost at
-    # this harness's fixed shape (~470-item x 20-run sweep) is ~$0.0000543 (PTC $0.51 / 9400
-    # calls, see artifacts/pricing_probity.html) -- ~2x that, not the ~50x margin used for
-    # deepseek-v4f above, so a per-leaf guard cap doesn't trip long before a real run completes.
-    "gemma3-1b-qat": 0.0,
-    "gemma4-31b-or": 0.0001,
-    # Remaining "10 recommended models" lineup, added 2026-07-03 for the auto-ramp sweep
-    # (fastest-to-slowest by measured latency, excludes Anthropic agent-mode + DeepSeek per
-    # Eikiyo). Same ~2x-real-PTC conservatism as gemma4-31b-or above.
-    "mistral-large-or": 0.0005,
-    "minimax-m2.5-or": 0.00012,
-    "llama3.3-70b-or": 0.0001,
-    "gemini3-flash-or": 0.0006,
-    "gpt-oss-120b-or": 0.00003,
-    "gpt5-mini-or": 0.0003,
-    # Direct Anthropic API (api.anthropic.com), explicitly authorized 2026-07-03 -- real
-    # Haiku 4.5 pricing $1/$5 per MTok, ~600 input / ~15 output tokens/call observed.
+# --- Per-call cost, DERIVED from list prices rather than eyeballed -----------------------------
+#
+# WHY THIS WAS REBUILT (2026-07-27). The previous table held hand-picked "deliberately generous"
+# constants, and generosity in a cost ESTIMATE is not conservative -- it is what makes a spend cap
+# fire early. Combined with a flat $0.20 per-leaf cap it silently truncated 5 cells of the 0.7
+# sweep, and because a missing item can never be counted as flipping, the missing data biased
+# wobble DOWNWARD (models read as more reliable than they are):
+#     participation_type/gemini3-flash-or  333 of 360   ($0.20 / $0.0006 = 333)
+#     pre_vs_post_money/gemini3-flash-or   333 of 380
+#     safe_pre_post/haiku-4.5-direct       199 of 320   ($0.20 / $0.0010 = 200)
+#     safe_pro_rata_side_letter/haiku      199 of 300
+#     safe_cap_vs_discount_applies/haiku   199 of 260
+# deepseek-v4f was the worst offender at $0.002 against a real ~$0.00009, a 22x overstatement.
+#
+# Estimates are now COMPUTED from three measured inputs, so they are auditable and regenerable:
+#   MEAN_PROMPT_TOKENS  measured over all 470 real prompts via each leaf's build_prompt()
+#   ANSWER_TOKENS       every leaf scores exactly ONE field; the reply is a tiny JSON object
+#   starve rate         share of 0.7-run calls that returned an EMPTY completion, i.e. burned the
+#                       whole max_tokens budget on hidden reasoning. Counted from the committed
+#                       checkpoints, not assumed: minimax 536/9400, gpt-oss 27/9400, gpt5-mini
+#                       18/9400, gemini 1/9326, everything else 0.
+# The remaining safety margin lives in the CAP (see caps_for_leaf), where it belongs -- a cap
+# sized from the work actually owed, not a flat number that scales with nothing.
+MEAN_PROMPT_TOKENS = 584
+ANSWER_TOKENS = 25
+REASONING_CAP_TOKENS = 16384          # OpenRouterClient max_tokens; a starved call bills all of it
+
+# label: (input $/Mtok, output $/Mtok, starved-call fraction). Prices pulled live from the
+# provider on 2026-07-27 (openrouter.ai/api/v1/models; ai.google.dev/gemini-api/docs/pricing).
+MODEL_PRICING = {
+    "deepseek-v4f":     (0.14, 0.28, 0.0),
+    "gemma4-31b-or":    (0.14, 0.40, 0.0),
+    "mistral-large-or": (0.50, 1.50, 0.0),
+    "minimax-m2.5-or":  (0.15, 0.90, 536 / 9400),
+    "llama3.3-70b-or":  (0.13, 0.40, 0.0),
+    "gemini3-flash-or": (0.50, 3.00, 1 / 9326),
+    "gpt-oss-120b-or":  (0.037, 0.17, 27 / 9400),
+    "gpt5-mini-or":     (0.25, 2.00, 18 / 9400),
+    # Anthropic direct. The client marks the user block cache_control:ephemeral and the harness
+    # sends the SAME prompt 20x per item, so input bills ~1 write (1.25x) + 19 reads (0.10x).
+    "haiku-4.5-direct": (1.00 * (1 / 20 * 1.25 + 19 / 20 * 0.10), 5.00, 0.0),
+}
+
+# Local Ollama models: own hardware, genuinely $0. Kept explicit so a local label can never fall
+# through to the unknown-model default and trip a cost cap that does not apply to it.
+LOCAL_MODELS = ("gemma3-1b", "gemma3-1b-qat", "qwen3.5-27b", "gemma4-12b", "gemma4-12b-qat")
+
+
+def per_call_cost(label: str) -> Optional[float]:
+    """Expected USD for one call at this harness's fixed shape. None if the label is unknown --
+    the caller decides the fail-closed default, this function never guesses."""
+    if label in LOCAL_MODELS:
+        return 0.0
+    priced = MODEL_PRICING.get(label)
+    if priced is None:
+        return None
+    in_usd, out_usd, starve = priced
+    return (MEAN_PROMPT_TOKENS * in_usd
+            + ANSWER_TOKENS * out_usd
+            + starve * REASONING_CAP_TOKENS * out_usd) / 1e6
+
+
+ESTIMATED_COST_PER_CALL_USD = {lab: 0.0 for lab in LOCAL_MODELS}
+ESTIMATED_COST_PER_CALL_USD.update({lab: per_call_cost(lab) for lab in MODEL_PRICING})
+
+# A model label the guard has no cost estimate for is treated as the most expensive known label,
+# not $0 -- an unrecognized model must never get a free pass on the spend cap.
+_UNKNOWN_MODEL_COST_USD = max(ESTIMATED_COST_PER_CALL_USD.values())
+
+# The superseded hand-picked constants, kept ONLY so the regression test can demonstrate that the
+# old table + a flat $0.20 cap really does reproduce the 5 historical truncations at their exact
+# call counts (333, 333, 199, 199, 199). Without this, "the new caps do not truncate" would be an
+# unfalsifiable green. Nothing in the live call path reads this.
+ESTIMATED_COST_PER_CALL_USD_LEGACY = {
+    "gemma3-1b": 0.0, "qwen3.5-27b": 0.0, "gemma3-1b-qat": 0.0,
+    "deepseek-v4f": 0.002, "gemini": 0.01, "gemma4-31b-or": 0.0001,
+    "mistral-large-or": 0.0005, "minimax-m2.5-or": 0.00012, "llama3.3-70b-or": 0.0001,
+    "gemini3-flash-or": 0.0006, "gpt-oss-120b-or": 0.00003, "gpt5-mini-or": 0.0003,
     "haiku-4.5-direct": 0.001,
 }
-# A model label the guard has no cost estimate for is treated as the most expensive known
-# label, not $0 -- an unrecognized model must never get a free pass on the spend cap.
-_UNKNOWN_MODEL_COST_USD = max(ESTIMATED_COST_PER_CALL_USD.values())
+
+# How much headroom a per-leaf cap gets over the work that leaf actually owes. 3x absorbs a
+# genuinely more expensive leaf (the longest prompt is ~4.8x the mean) and provider price drift,
+# while still stopping a runaway loop long before it can spend real money.
+CAP_MARGIN = 3.0
+
+
+def caps_for_leaf(label: str, expected_calls: int,
+                   margin: float = CAP_MARGIN) -> Dict[str, float]:
+    """
+    What: per-leaf guard caps sized from the work that leaf OWES (items x n_runs), instead of a
+          flat constant. Returns {"max_steps", "max_cost_usd"} ready to splat into BrakePedalGuard.
+    Why: a flat cap cannot distinguish a 1-item leaf from a 19-item one, so on a big leaf it fires
+          mid-run (the 5 truncations above) while on a small leaf it is far too loose to catch
+          anything. A cap derived from expected_calls is tight on every leaf at once.
+    Fail-closed: an unknown label is priced at the most expensive known model, so a new model can
+          only ever get a SMALLER cap than it deserves, never a free pass.
+    """
+    cost = per_call_cost(label)
+    if cost is None:
+        cost = _UNKNOWN_MODEL_COST_USD
+    return {"max_steps": int(expected_calls * 1.1) + 1,
+            "max_cost_usd": max(expected_calls * cost * margin, 0.01)}
 
 
 class GuardTripped(RuntimeError):

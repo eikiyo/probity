@@ -167,3 +167,85 @@ class TestGuardConfigFromEnv(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class _TempRecordingClient:
+    """Records every temperature it was actually called with, so the test asserts the value that
+    reached the PROVIDER BOUNDARY rather than the value the runner was handed. A temperature that
+    is threaded everywhere except the last hop is the whole failure this feature exists to avoid."""
+
+    seen = []
+    model = "fake-model-id"
+
+    def __init__(self, *a, **kw):
+        pass
+
+    def generate(self, prompt, temperature):
+        _TempRecordingClient.seen.append(temperature)
+        return '{"participation_type": "participating"}'
+
+
+class TestTemperatureArmsAreSeparate(unittest.TestCase):
+    """Hard constraint 1: the 0.1 arm must never modify, overwrite or delete the 0.7 arm."""
+
+    def _run(self, leaf_dir, temperature):
+        runner.N_RUNS = 2
+        try:
+            runner.run_leaf(leaf_dir, model_set=[("fake", None, _TempRecordingClient)],
+                            temperature=temperature)
+        finally:
+            runner.N_RUNS = 20
+
+    def test_temperature_reaches_the_client(self):
+        with tempfile.TemporaryDirectory() as td:
+            _TempRecordingClient.seen = []
+            self._run(_make_leaf(Path(td)), 0.1)
+            self.assertTrue(_TempRecordingClient.seen)
+            self.assertEqual(set(_TempRecordingClient.seen), {0.1})
+
+    def test_legacy_call_still_samples_at_the_module_default(self):
+        with tempfile.TemporaryDirectory() as td:
+            _TempRecordingClient.seen = []
+            self._run(_make_leaf(Path(td)), None)
+            self.assertEqual(set(_TempRecordingClient.seen), {runner.TEMPERATURE})
+
+    def test_t01_artifacts_are_namespaced_and_legacy_names_are_untouched(self):
+        with tempfile.TemporaryDirectory() as td:
+            leaf_dir = _make_leaf(Path(td))
+            _TempRecordingClient.seen = []
+            self._run(leaf_dir, 0.1)
+            for name in ("scored_t01.json", "runs_t01_fake.jsonl", "manifest_t01_fake.json"):
+                self.assertTrue((leaf_dir / name).exists(), f"missing {name}")
+            for name in ("scored.json", "runs_fake.jsonl", "manifest_fake.json"):
+                self.assertFalse((leaf_dir / name).exists(), f"0.1 arm wrote legacy {name}")
+
+    def test_running_both_arms_leaves_the_first_byte_identical(self):
+        with tempfile.TemporaryDirectory() as td:
+            leaf_dir = _make_leaf(Path(td))
+            _TempRecordingClient.seen = []
+            self._run(leaf_dir, 0.7)                       # the baseline arm
+            before = (leaf_dir / "scored_t07.json").read_bytes()
+            runs_before = (leaf_dir / "runs_t07_fake.jsonl").read_bytes()
+            self._run(leaf_dir, 0.1)                       # then the new arm
+            self.assertEqual((leaf_dir / "scored_t07.json").read_bytes(), before)
+            self.assertEqual((leaf_dir / "runs_t07_fake.jsonl").read_bytes(), runs_before)
+            self.assertTrue((leaf_dir / "scored_t01.json").exists())
+
+    def test_manifest_records_temperature_and_routing(self):
+        with tempfile.TemporaryDirectory() as td:
+            leaf_dir = _make_leaf(Path(td))
+            self._run(leaf_dir, 0.1)
+            m = json.loads((leaf_dir / "manifest_t01_fake.json").read_text())
+            self.assertEqual(m["temperature"], 0.1)
+            self.assertEqual(m["extra"]["temperature_requested"], 0.1)
+            self.assertEqual(m["extra"]["model_id"], "fake-model-id")
+            self.assertIn("routing", m["extra"])
+
+    def test_scored_json_carries_the_appendix_fields(self):
+        with tempfile.TemporaryDirectory() as td:
+            leaf_dir = _make_leaf(Path(td))
+            self._run(leaf_dir, 0.1)
+            res = json.loads((leaf_dir / "scored_t01.json").read_text())["fake"]
+            self.assertEqual(res["temperature_requested"], 0.1)
+            self.assertIsNone(res["temperature_honoured"])   # no provider echoes it back
+            self.assertIn("routing", res)

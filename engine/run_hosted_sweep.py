@@ -31,17 +31,25 @@ from pathlib import Path
 ENGINE = Path(__file__).parent
 sys.path.insert(0, str(ENGINE))
 
-from runner import run_leaf, openrouter_model_set, anthropic_model_set  # noqa: E402
+from runner import run_leaf, openrouter_model_set, anthropic_model_set, N_RUNS  # noqa: E402
+import coverage                                                          # noqa: E402
+import guard as guard_mod                                                # noqa: E402
 
 REPO = ENGINE.parent
 LEAVES_DIR = REPO / "leaves"
 
-# Per-leaf cap, not per-sweep -- run_model() builds a fresh BrakePedalGuard per leaf (see
-# runner.py's run_model), so this bounds each leaf independently regardless of how many leaves
-# run concurrently. Largest leaf (pre_vs_post_money, 19 items x 20 runs = 380 calls) fits with
-# headroom; a runaway bug on any one leaf still can't spend past this per leaf.
-DEFAULT_MAX_STEPS_PER_LEAF = 500
-DEFAULT_MAX_COST_PER_LEAF = 0.20
+# Per-leaf caps are now DERIVED per leaf by guard.caps_for_leaf() from the work that leaf actually
+# owes (items x n_runs x that model's real per-call cost x margin), rather than being flat.
+#
+# WHY THE FLAT DEFAULTS ARE GONE (2026-07-27): the old flat $0.20 cap did not scale with leaf size,
+# so on the biggest leaves it fired MID-RUN and silently truncated 5 cells of the 0.7 sweep --
+# gemini stopped at 333 calls of 380, haiku at 199 of 320. Those cells then scored fewer than 20
+# runs on their last items, and since an item with no runs can never be counted as flipping, the
+# missing data biased wobble DOWNWARD. A cap that scales with nothing cannot be right on a suite
+# whose leaves vary 19x in size. Passing --max-cost-per-leaf still forces a flat cap for debugging,
+# but the DEFAULT is now per-leaf derivation.
+DEFAULT_MAX_STEPS_PER_LEAF = None
+DEFAULT_MAX_COST_PER_LEAF = None
 
 # Soft warn threshold, not a hard block -- see module docstring's Concurrency budget note.
 SOFT_CONCURRENCY_WARN = 50
@@ -60,9 +68,21 @@ def main():
                     help="how many leaves run their harness concurrently")
     p.add_argument("--workers-per-leaf", type=int, default=4,
                     help="max_workers passed into each leaf's own harness run")
-    p.add_argument("--max-steps-per-leaf", type=int, default=DEFAULT_MAX_STEPS_PER_LEAF)
-    p.add_argument("--max-cost-per-leaf", type=float, default=DEFAULT_MAX_COST_PER_LEAF)
+    p.add_argument("--max-steps-per-leaf", type=int, default=DEFAULT_MAX_STEPS_PER_LEAF,
+                    help="force a FLAT step cap on every leaf (default: derived per leaf)")
+    p.add_argument("--max-cost-per-leaf", type=float, default=DEFAULT_MAX_COST_PER_LEAF,
+                    help="force a FLAT cost cap on every leaf (default: derived per leaf from "
+                         "items x n_runs x real per-call cost -- see guard.caps_for_leaf)")
     p.add_argument("--only-leaf", default=None, help="run a single leaf by name (debugging)")
+    p.add_argument("--temperature", type=float, default=None,
+                    help="sampling temperature AND arm namespace. 0.1 writes scored_t01.json / "
+                         "runs_t01_<label>.jsonl; 0.7 writes the t07 arm. Omitting it runs the "
+                         "LEGACY unsuffixed arm at the module default, which is what produced the "
+                         "published 2026-07-03 baseline -- pass it explicitly for any new arm so "
+                         "an existing arm can never be overwritten.")
+    p.add_argument("--dry-run", action="store_true",
+                    help="resolve every leaf, compute caps and the full call/cost plan, print it, "
+                         "and make ZERO model calls")
     args = p.parse_args()
 
     total_concurrency = args.leaf_parallelism * args.workers_per_leaf
@@ -74,7 +94,13 @@ def main():
 
     model_set = (anthropic_model_set(args.label, args.model) if args.client == "anthropic"
                  else openrouter_model_set(args.label, args.model))
-    guard_config = {"max_steps": args.max_steps_per_leaf, "max_cost_usd": args.max_cost_per_leaf}
+    # None => run_leaf derives caps per leaf. Only an explicitly-passed flat cap overrides that.
+    guard_config = None
+    if args.max_steps_per_leaf is not None or args.max_cost_per_leaf is not None:
+        guard_config = {"max_steps": args.max_steps_per_leaf,
+                        "max_cost_usd": args.max_cost_per_leaf}
+        print("WARN: a FLAT per-leaf cap was passed explicitly, overriding per-leaf derivation. "
+              "This is the configuration that truncated 5 cells of the 0.7 sweep.", flush=True)
 
     leaves = sorted(d.name for d in LEAVES_DIR.iterdir() if d.is_dir() and (d / "task.py").exists())
     if args.only_leaf:
@@ -83,11 +109,15 @@ def main():
             print(f"error: no such leaf '{args.only_leaf}'", file=sys.stderr)
             sys.exit(1)
 
-    print(f"=== hosted sweep: {args.label} ({args.model}) across {len(leaves)} leaves -- "
-          f"{args.leaf_parallelism} leaves concurrently x {args.workers_per_leaf} "
-          f"workers/leaf ({total_concurrency} total in-flight) -- "
-          f"per-leaf cap steps={args.max_steps_per_leaf} cost=${args.max_cost_per_leaf} ===\n",
-          flush=True)
+    if args.dry_run:
+        print(plan_report(args.label, args.model, leaves, args.temperature, guard_config))
+        return
+
+    print(f"=== hosted sweep: {args.label} ({args.model}) across {len(leaves)} leaves at "
+          f"temp={args.temperature} -- {args.leaf_parallelism} leaves concurrently x "
+          f"{args.workers_per_leaf} workers/leaf ({total_concurrency} total in-flight) -- "
+          f"per-leaf caps {'FLAT ' + str(guard_config) if guard_config else 'derived per leaf'} "
+          f"===\n", flush=True)
 
     print_lock = threading.Lock()
     done_count = [0]
@@ -97,7 +127,7 @@ def main():
         leaf_dir = LEAVES_DIR / leaf_name
         try:
             run_leaf(leaf_dir, model_set=model_set, guard_config=guard_config,
-                     max_workers=args.workers_per_leaf)
+                     max_workers=args.workers_per_leaf, temperature=args.temperature)
             ok, err = True, None
         except Exception as e:
             # Fail closed per leaf, never silent -- one leaf's error (network, parse-storm,
@@ -121,6 +151,60 @@ def main():
         print("Leaves with errors:")
         for name, err in errors:
             print(f"  - {name}: {err}")
+
+    # Coverage is asserted at the END of every sweep, against items x n_runs read from each
+    # leaf's own oracle.jsonl. This is the check that did not exist on 2026-07-03, which is how
+    # 5 truncated cells shipped looking complete. A hole is named, never averaged over.
+    matrix = coverage.coverage_matrix(
+        [LEAVES_DIR / n for n in leaves], [args.label], N_RUNS,
+        coverage.artifact_suffix(args.temperature))
+    holes = [c for c in matrix if not c["complete"]]
+    recorded = sum(c["recorded"] for c in matrix)
+    owed = sum(c["expected"] for c in matrix)
+    print(f"COVERAGE {args.label} @ temp={args.temperature}: "
+          f"{len(matrix) - len(holes)}/{len(matrix)} cells complete, {recorded}/{owed} calls")
+    if holes:
+        print("INCOMPLETE CELLS (re-run this sweep to fill them; it resumes per cell):")
+        for c in holes:
+            print(f"  - {c['leaf']}: {c['recorded']}/{c['expected']} (short {c['short_by']})")
+        sys.exit(1)          # fail closed: a short sweep must not exit 0 and read as done
+
+
+def plan_report(label, model_id, leaves, temperature, guard_config):
+    """
+    What: the --dry-run output. Resolves every leaf, computes its expected calls, its derived
+          caps and its estimated cost, and reports the total -- making ZERO model calls.
+    Why: a sweep is the expensive, irreversible-ish step. Reviewing the exact call and spend plan
+          before launching is cheaper than discovering the shape of it from a bill.
+    """
+    per_call = guard_mod.per_call_cost(label)
+    unknown = per_call is None
+    if unknown:
+        per_call = guard_mod._UNKNOWN_MODEL_COST_USD
+    rows, total_calls, total_cost = [], 0, 0.0
+    for name in leaves:
+        d = LEAVES_DIR / name
+        exp = coverage.expected_calls(d, N_RUNS)
+        already = len(coverage.recorded_keys(
+            coverage.checkpoint_path(d, label, coverage.artifact_suffix(temperature))))
+        todo = max(0, exp - already)
+        caps = guard_config or guard_mod.caps_for_leaf(label, exp)
+        rows.append((name, coverage.n_items(d), exp, already, todo, caps["max_cost_usd"]))
+        total_calls += todo
+        total_cost += todo * per_call
+    out = [f"=== DRY RUN: {label} ({model_id}) @ temp={temperature} -- NO CALLS MADE ===", "",
+           f"arm namespace   : {coverage.artifact_suffix(temperature) or '(legacy, unsuffixed)'}",
+           f"scored file     : {coverage.scored_filename(temperature)}",
+           f"per-call cost   : ${per_call:.6f}" + ("  (UNKNOWN LABEL -> priced as the dearest "
+                                                     "known model)" if unknown else ""),
+           f"leaves          : {len(leaves)}",
+           f"calls still owed: {total_calls}  (of {sum(r[2] for r in rows)} total; "
+           f"{sum(r[3] for r in rows)} already recorded and will be SKIPPED on resume)",
+           f"ESTIMATED SPEND : ${total_cost:.2f}", "",
+           "| Leaf | items | owed | done | to run | cap $ |", "|---|---|---|---|---|---|"]
+    for name, items, exp, already, todo, cap in rows:
+        out.append(f"| {name} | {items} | {exp} | {already} | {todo} | {cap:.3f} |")
+    return "\n".join(out)
 
 
 if __name__ == "__main__":

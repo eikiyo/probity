@@ -54,20 +54,117 @@ class TestBrakePedalGuardSteps(unittest.TestCase):
 
 class TestBrakePedalGuardCost(unittest.TestCase):
     def test_trips_before_exceeding_cost_cap(self):
-        # deepseek-v4f costs $0.002/call (ESTIMATED_COST_PER_CALL_USD) -- cap at $0.005 allows
-        # exactly 2 calls (spend 0.004) then must trip on the 3rd (would be 0.006 > 0.005).
-        g = guard_mod.BrakePedalGuard(max_cost_usd=0.005)
+        # Derive the cap from the table rather than hardcoding a model's price: this asserts the
+        # BEHAVIOUR (trips on the call that would breach) and cannot go stale when a provider
+        # changes its list price, which is exactly what happened to the old $0.002 constant.
+        unit = guard_mod.per_call_cost("deepseek-v4f")
+        g = guard_mod.BrakePedalGuard(max_cost_usd=unit * 2.5)   # room for exactly 2 calls
         g.before_call("deepseek-v4f")
         g.before_call("deepseek-v4f")
         with self.assertRaises(guard_mod.GuardTripped):
             g.before_call("deepseek-v4f")
         self.assertEqual(g.steps_taken, 2)
 
+
+class TestPerCallCostIsDerivedNotGuessed(unittest.TestCase):
+    def test_local_models_are_free(self):
+        for lab in guard_mod.LOCAL_MODELS:
+            self.assertEqual(guard_mod.per_call_cost(lab), 0.0)
+
+    def test_unknown_label_returns_none_so_the_caller_fails_closed(self):
+        self.assertIsNone(guard_mod.per_call_cost("some-model-nobody-has-priced"))
+
+    def test_estimate_matches_the_price_table_arithmetic(self):
+        """MACHINES COUNT: recompute one entry independently instead of trusting the constant."""
+        in_usd, out_usd, starve = guard_mod.MODEL_PRICING["gemma4-31b-or"]
+        expected = (584 * in_usd + 25 * out_usd + starve * 16384 * out_usd) / 1e6
+        self.assertAlmostEqual(guard_mod.per_call_cost("gemma4-31b-or"), expected, places=12)
+
+    def test_a_starving_reasoning_model_costs_more_than_its_base_rate(self):
+        """minimax burned its whole budget on 536 of 9400 calls; the estimate must reflect that,
+        otherwise the cap is set from a fiction."""
+        base = (584 * 0.15 + 25 * 0.90) / 1e6
+        self.assertGreater(guard_mod.per_call_cost("minimax-m2.5-or"), base * 2)
+
+
+class TestCapsForLeafPreventTheRealTruncation(unittest.TestCase):
+    """
+    REGRESSION, against ground truth. These 5 (leaf, model) cells were truncated in the committed
+    0.7 arm by the flat $0.20 per-leaf cap. A size-derived cap must let every one of them run to
+    completion. This is the positive control: it fails on the OLD cap and passes on the new one.
+    """
+
+    REAL_TRUNCATIONS = [                 # (label, items, expected_calls, calls it actually got)
+        ("gemini3-flash-or", 18, 360, 333),
+        ("gemini3-flash-or", 19, 380, 333),
+        ("haiku-4.5-direct", 16, 320, 199),
+        ("haiku-4.5-direct", 15, 300, 199),
+        ("haiku-4.5-direct", 13, 260, 199),
+    ]
+
+    def test_new_caps_allow_every_owed_call(self):
+        for label, _items, expected_calls, _got in self.REAL_TRUNCATIONS:
+            caps = guard_mod.caps_for_leaf(label, expected_calls)
+            g = guard_mod.BrakePedalGuard(**caps)
+            for _ in range(expected_calls):
+                g.before_call(label)          # must not raise anywhere in the full run
+            self.assertFalse(g.tripped, f"{label} @ {expected_calls} calls still trips")
+
+    def test_the_old_flat_cap_reproduces_the_historical_truncation_exactly(self):
+        """
+        Proves the test above is meaningful rather than vacuously green, by replaying the OLD
+        arithmetic and landing on the exact call counts history recorded. Note this reproduces
+        the accumulated float error too: 199 x $0.001 sums to 0.19900000000000004, so the 200th
+        call's check (0.199... + 0.001 > 0.20) is True by one ulp and the cell stops at 199, not
+        the 200 that exact arithmetic predicts. That one-ulp detail is why the recorded counts
+        are 199 and not 200 -- reproducing it is what makes this a real diagnosis rather than a
+        plausible story.
+        """
+        OLD_FLAT_CAP = 0.20
+        for label, _items, expected_calls, got in self.REAL_TRUNCATIONS:
+            unit = guard_mod.ESTIMATED_COST_PER_CALL_USD_LEGACY[label]
+            spend, n_allowed = 0.0, 0
+            for _ in range(expected_calls):
+                if spend + unit > OLD_FLAT_CAP:      # same strict > as BrakePedalGuard
+                    break
+                spend += unit
+                n_allowed += 1
+            self.assertEqual(n_allowed, got,
+                              f"{label}: replay allowed {n_allowed}, history recorded {got}")
+            self.assertLess(n_allowed, expected_calls)   # it really did truncate
+
+    def test_cap_still_stops_a_runaway(self):
+        caps = guard_mod.caps_for_leaf("mistral-large-or", 100)
+        g = guard_mod.BrakePedalGuard(**caps)
+        with self.assertRaises(guard_mod.GuardTripped):
+            for _ in range(10_000):           # a runaway loop, far past what the leaf owes
+                g.before_call("mistral-large-or")
+
+    def test_unknown_label_gets_the_most_expensive_cap_not_a_free_pass(self):
+        known = guard_mod.caps_for_leaf("gpt-oss-120b-or", 200)["max_cost_usd"]
+        unknown = guard_mod.caps_for_leaf("brand-new-model", 200)["max_cost_usd"]
+        self.assertGreater(unknown, known)
+
+
+class TestUnknownAndLocalModelCosts(unittest.TestCase):
+    """Restored to their own class after the caps tests were inserted above them (they had been
+    silently absorbed into the preceding class, which still ran them but filed them wrong)."""
+
     def test_unknown_model_charged_conservative_default_not_free(self):
-        g = guard_mod.BrakePedalGuard(max_cost_usd=0.001)
+        # Cap derived from the table's own most-expensive entry rather than a magic 0.001. The
+        # old constant only worked because deepseek was mispriced at $0.002; with real prices the
+        # dearest model is ~$0.00095, so a $0.001 cap no longer trips and the test would have
+        # passed for the wrong reason.
+        cap = guard_mod._UNKNOWN_MODEL_COST_USD * 0.5      # cannot afford even one call
+        g = guard_mod.BrakePedalGuard(max_cost_usd=cap)
         with self.assertRaises(guard_mod.GuardTripped):
             g.before_call("some-brand-new-hosted-model-not-in-the-table")
         self.assertEqual(g.steps_taken, 0)
+
+    def test_unknown_model_is_priced_as_the_dearest_known_one(self):
+        dearest = max(guard_mod.ESTIMATED_COST_PER_CALL_USD.values())
+        self.assertEqual(guard_mod._UNKNOWN_MODEL_COST_USD, dearest)
+        self.assertGreater(dearest, 0.0)
 
     def test_local_models_free_never_trip_cost_cap(self):
         g = guard_mod.BrakePedalGuard(max_cost_usd=0.0001)
@@ -141,3 +238,29 @@ class TestGuardWiredIntoHarness(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestZeroCostIsNotFalsy(unittest.TestCase):
+    """
+    Regression for a real bug caught in engine/preflight.py: per_call_cost() returns 0.0 for a
+    local model, and `cost or DEFAULT` treats 0.0 as falsy, so every FREE model was silently
+    repriced at the most-expensive-unknown rate. Callers must branch on `is None`. This pins the
+    distinction the bug depended on: free (0.0) and unknown (None) are different answers.
+    """
+
+    def test_free_and_unknown_are_distinguishable(self):
+        self.assertEqual(guard_mod.per_call_cost("gemma3-1b"), 0.0)
+        self.assertIsNone(guard_mod.per_call_cost("no-such-model"))
+        self.assertIsNot(guard_mod.per_call_cost("gemma3-1b"), None)
+
+    def test_the_falsy_idiom_would_have_been_wrong(self):
+        free = guard_mod.per_call_cost("gemma3-1b")
+        wrong = free or guard_mod._UNKNOWN_MODEL_COST_USD      # the bug
+        right = free if free is not None else guard_mod._UNKNOWN_MODEL_COST_USD
+        self.assertGreater(wrong, 0.0)          # the bug charges for a free model
+        self.assertEqual(right, 0.0)            # the fix does not
+
+    def test_a_free_leaf_cap_is_still_positive_so_step_caps_apply(self):
+        caps = guard_mod.caps_for_leaf("gemma3-1b", 380)
+        self.assertEqual(caps["max_steps"], int(380 * 1.1) + 1)
+        self.assertGreater(caps["max_cost_usd"], 0.0)   # floor, so a $0 model is not capped at $0
