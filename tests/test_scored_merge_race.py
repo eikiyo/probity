@@ -75,8 +75,15 @@ class TestUnlockedControlLosesData:
         with ThreadPoolExecutor(max_workers=N_WRITERS) as ex:
             list(ex.map(write, range(N_WRITERS)))
 
-        got = json.loads(out.read_text())
-        assert len(got) < N_WRITERS, (
+        # The unlocked race has TWO failure modes and either one proves the point: writers
+        # clobber each other's keys (lost models), or two write_text calls interleave and leave
+        # the file unparseable. Asserting only the first made this control itself flaky.
+        try:
+            got = json.loads(out.read_text())
+            lost = len(got) < N_WRITERS
+        except json.JSONDecodeError:
+            lost = True                      # corrupt output is a lost write too
+        assert lost, (
             "the control did not reproduce the race, so the locked test above proves nothing "
             "about locking -- widen the sleep or raise N_WRITERS")
 
