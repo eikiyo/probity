@@ -13,7 +13,13 @@ jobs:
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with: { python-version: "3.12" }
-      - run: python3 -m unittest discover -s tests -v
+      # pytest, NOT `unittest discover`. The RUNTIME has zero third-party dependencies; the
+      # TEST SUITE needs pytest for fixtures (tmp_path, monkeypatch, parametrize). Under
+      # `unittest discover` the pytest-style classes are not TestCase subclasses, so they are
+      # silently NOT COLLECTED -- the command reported OK on 121 of 342 tests. A runner that
+      # skips two thirds of the suite and exits 0 is worse than one that fails.
+      - run: pip install pytest
+      - run: pytest tests/ -q --tb=short
 
   secret-scan:
     runs-on: ubuntu-latest

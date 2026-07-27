@@ -1,0 +1,164 @@
+{
+  "t01": {
+    "deepseek-v4f": {
+      "accuracy_pct": 95.0704,
+      "items": 426,
+      "leaves": 53,
+      "wobble_pct": 0.939
+    },
+    "deepseek-v4p": {
+      "accuracy_pct": 94.8608,
+      "items": 467,
+      "leaves": 60,
+      "wobble_pct": 0.8565
+    },
+    "gemini3-flash-or": {
+      "accuracy_pct": 94.8827,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 2.1322
+    },
+    "gemma3-1b": {
+      "accuracy_pct": 58.8362,
+      "items": 464,
+      "leaves": 59,
+      "wobble_pct": 23.0603
+    },
+    "gemma3-1b-qat": {
+      "accuracy_pct": 60.3412,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 20.4691
+    },
+    "gemma4-31b-or": {
+      "accuracy_pct": 94.4563,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 2.5586
+    },
+    "gpt-oss-120b-or": {
+      "accuracy_pct": 94.6695,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 8.1023
+    },
+    "gpt5-mini-or": {
+      "accuracy_pct": 94.2553,
+      "items": 470,
+      "leaves": 60,
+      "wobble_pct": 5.5319
+    },
+    "haiku-4.5-direct": {
+      "accuracy_pct": 93.133,
+      "items": 466,
+      "leaves": 60,
+      "wobble_pct": 1.073
+    },
+    "llama3.3-70b-or": {
+      "accuracy_pct": 92.3241,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 3.4115
+    },
+    "minimax-m2.5-or": {
+      "accuracy_pct": 94.8827,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 10.661
+    },
+    "mistral-large-or": {
+      "accuracy_pct": 92.766,
+      "items": 470,
+      "leaves": 60,
+      "wobble_pct": 1.2766
+    }
+  },
+  "t07_legacy": {
+    "deepseek-v4f": {
+      "accuracy_pct": 94.6809,
+      "items": 470,
+      "leaves": 60,
+      "wobble_pct": 5.7447
+    },
+    "deepseek-v4p": {
+      "accuracy_pct": 94.8827,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 4.4776
+    },
+    "gemini3-flash-or": {
+      "accuracy_pct": 94.2431,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 2.5586
+    },
+    "gemma3-1b": {
+      "accuracy_pct": 58.4222,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 42.4307
+    },
+    "gemma3-1b-qat": {
+      "accuracy_pct": 61.0638,
+      "items": 470,
+      "leaves": 60,
+      "wobble_pct": 33.8298
+    },
+    "gemma4-31b-or": {
+      "accuracy_pct": 94.0299,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 2.9851
+    },
+    "gpt-oss-120b-or": {
+      "accuracy_pct": 94.4563,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 6.1834
+    },
+    "gpt5-mini-or": {
+      "accuracy_pct": 93.8298,
+      "items": 470,
+      "leaves": 60,
+      "wobble_pct": 5.5319
+    },
+    "haiku-4.5-direct": {
+      "accuracy_pct": 92.9487,
+      "items": 468,
+      "leaves": 60,
+      "wobble_pct": 2.7778
+    },
+    "llama3.3-70b-or": {
+      "accuracy_pct": 92.9638,
+      "items": 469,
+      "leaves": 60,
+      "wobble_pct": 3.1983
+    },
+    "minimax-m2.5-or": {
+      "accuracy_pct": 94.2553,
+      "items": 470,
+      "leaves": 60,
+      "wobble_pct": 7.4468
+    },
+    "mistral-large-or": {
+      "accuracy_pct": 92.5532,
+      "items": 470,
+      "leaves": 60,
+      "wobble_pct": 3.1915
+    }
+  },
+  "t07_rerun": {
+    "gemma3-1b": {
+      "accuracy_pct": 59.2275,
+      "items": 466,
+      "leaves": 59,
+      "wobble_pct": 46.7811
+    },
+    "gemma3-1b-qat": {
+      "accuracy_pct": 60.6838,
+      "items": 468,
+      "leaves": 59,
+      "wobble_pct": 33.9744
+    }
+  }
+}

@@ -286,9 +286,12 @@ LEAVES = [
      "labels": {}},
 ]
 
-SIZE = {"gemma3-1b": "1B", "qwen3.5-27b": "27B", "deepseek-v4f": "hosted",
-        "gemma": "12B", "deepseek": "hosted"}
-ORDER = ["gemma3-1b", "qwen3.5-27b", "deepseek-v4f", "gemma", "deepseek"]
+# The per-leaf tables name and size models through summary.MODEL_DISPLAY -- the SAME map the
+# summary tables use. They used to carry a local 5-entry SIZE dict plus `res['model']` (the raw
+# provider routing string from the scored blob), so one document called the same model two names
+# -- `mistral-large-2512` in the summary, `mistralai/mistral-large-2512` in the per-leaf table --
+# and showed Size `?` for 8 of 12, because the local map was never updated as the lineup grew.
+# Row order comes from the declared lineup for the same reason: one source, not a second list.
 
 
 def load_leaf(slug):
@@ -356,7 +359,7 @@ def _models(scored):
     tables. Restricted to the declared lineup (see aggregate.CANONICAL_LINEUP)."""
     lineup = set(ag.canonical_lineup())
     present = [k for k in scored if k in lineup]
-    return [k for k in ORDER if k in present] + [k for k in present if k not in ORDER]
+    return [k for k in ag.canonical_lineup() if k in set(present)]
 
 
 def _runs_each(scored):
@@ -395,7 +398,7 @@ def _wobble_table(scored, field):
          "|---|---|---|---|---|---|---|"]
     for k in _models(scored):
         res = scored[k]; a = res["accuracy"]; r = res["reliability"]
-        L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res,field):.0f}%** | "
+        L.append(f"| `{display_name(k)}` | {display_size(k)} | **{wobble_pct(res,field):.0f}%** | "
                  f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}% | "
                  f"{a['n_measurable']}/{a['n_instances']} | {response_rate_str(res)} |")
     return L
@@ -406,14 +409,14 @@ def _class_table(scored, oracle, field, classes, labels):
          "|---|" + "---|" * len(classes)]
     for k in _models(scored):
         pc = per_class(scored[k]["accuracy"]["per_instance"], oracle, field, classes)
-        L.append(f"| `{scored[k]['model']}` | " +
+        L.append(f"| `{display_name(k)}` | " +
                  " | ".join(f"{pc[c][0]}/{pc[c][1]}" if pc[c][1] else "—" for c in classes) + " |")
     return L
 
 
 def auto_findings(scored, oracle, field, classes):
     """Data-driven summary when a leaf has no hand-written findings: cliff + best model."""
-    rows = [(SIZE.get(k, k), wobble_pct(scored[k], field),
+    rows = [(display_name(k), wobble_pct(scored[k], field),
              scored[k]["accuracy"]["accuracy_majority"] * 100) for k in _models(scored)]
     best = min(rows, key=lambda x: (x[1], -x[2]))
     hi = max(r[1] for r in rows); lo = min(r[1] for r in rows)
@@ -471,7 +474,7 @@ def render_leaf(cfg):
     L.append("| Item | True | Difficulty | Models that wobbled |")
     L.append("|---|---|---|---|")
     for i, o in enumerate(oracle):
-        wob = [SIZE.get(k, k) for k in _models(scored)
+        wob = [display_name(k) for k in _models(scored)
                if scored[k]["accuracy"]["per_instance"][i]["fields"].get(field, {}).get("consistency", 1.0) < 1.0]
         if wob:
             L.append(f"| {o['company'][:22]} | {o[field]} | {o.get('difficulty','?')} | {', '.join(wob)} |")
@@ -500,7 +503,7 @@ def readme_block_for(cfg):
             cells = " | " + " | ".join(f"{pc[c][0]}/{pc[c][1]}" if pc[c][1] else "-" for c in classes)
         else:
             cells = ""
-        L.append(f"| `{res['model']}` | {SIZE.get(k,'?')} | **{wobble_pct(res,field):.0f}%** | "
+        L.append(f"| `{display_name(k)}` | {display_size(k)} | **{wobble_pct(res,field):.0f}%** | "
                  f"{r['consistency_pct']:.0f}% | {a['accuracy_majority']*100:.0f}% | {response_rate_str(res)}{cells} |")
     return "\n".join(L)
 

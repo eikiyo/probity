@@ -111,3 +111,104 @@ class TestReadmeClaimsMatchData:
         assert "<!-- TEMPCOMPARE:START -->" in text and "<!-- TEMPCOMPARE:END -->" in text
         block = text.split("<!-- TEMPCOMPARE:START -->")[1].split("<!-- TEMPCOMPARE:END -->")[0]
         assert "wobbled less at" in block, "the temperature block is empty -- run make render"
+
+
+class TestTheSuiteRunnerCollectsEverything:
+    """v1.3.0 shipped with CI red and, worse, with `make test` GREEN on a third of the suite.
+
+    CI ran `python3 -m unittest discover`. The pytest-style test classes are plain classes, not
+    unittest.TestCase subclasses, so unittest did not collect them -- 121 of 342 tests ran and the
+    command exited 0. On CI, where pytest is not installed, the same files failed to IMPORT and
+    the build went red. Locally it went green. The runner disagreeing with itself across machines
+    is what let a false green ship.
+    """
+
+    def test_ci_and_makefile_use_the_same_runner_as_this_suite(self):
+        ci = (ROOT / ".github" / "workflows" / "ci.yml").read_text()
+        mk = (ROOT / "Makefile").read_text()
+        assert "pytest tests/" in ci, "CI must run pytest -- unittest discover skips most of this suite"
+        assert "unittest discover" not in ci.split("#")[0] or "pytest" in ci
+        assert "pytest tests/" in mk, "make test must match CI's runner"
+
+    def test_ci_installs_the_test_dependency(self):
+        ci = (ROOT / ".github" / "workflows" / "ci.yml").read_text()
+        assert "pip install pytest" in ci, "CI cannot run pytest without installing it"
+
+    def test_most_tests_would_be_invisible_to_unittest(self):
+        """The positive control for WHY this matters: prove the majority of the suite is
+        pytest-style, so a reader can see that swapping the runner back would hide it."""
+        import subprocess
+        files = sorted((ROOT / "tests").glob("test_*.py"))
+        pytest_style = [f for f in files
+                        if "import pytest" in f.read_text() or "tmp_path" in f.read_text()]
+        assert len(pytest_style) > len(files) / 2, \
+            "if most tests were unittest-style this guard would be pointless"
+        r = subprocess.run([sys.executable, "-m", "pytest", str(ROOT / "tests"), "--collect-only",
+                            "-q"], capture_output=True, text=True, cwd=ROOT)
+        collected = int(re.search(r"(\d+) tests? collected", r.stdout).group(1))
+        assert collected > 300, f"pytest collects {collected}; the suite has shrunk unexpectedly"
+
+
+class TestOneNamePerModelEverywhere:
+    """A document that calls the same model two names is not reconcilable by a reader.
+
+    render.py's per-leaf tables used `res['model']` -- the raw provider routing string from the
+    scored blob -- plus a LOCAL 5-entry SIZE dict that had never been updated as the lineup grew
+    to 12. So results/RESULTS.md said `mistral-large-2512` in its summary and
+    `mistralai/mistral-large-2512` in its per-leaf tables, with Size `?` on 8 of 12 models, while
+    the "models that wobbled" column mixed sizes ("1B") and raw labels ("mistral-large-or") in one
+    cell. Three renderings of one identity, in one file.
+    """
+
+    RAW_IDS = ("google/gemma", "mistralai/mistral", "meta-llama/llama",
+               "minimax/minimax", "openai/gpt", "claude-haiku-4-5-2025")
+
+    def test_no_result_table_uses_a_raw_provider_routing_string(self):
+        """Scoped to RESULT tables. The paired report's routing appendix is excluded on purpose:
+        its entire job is to record which provider model was actually called and what temperature
+        it honoured, so the raw id IS the content there. A test that banned it everywhere would be
+        demanding the removal of provenance -- a false RED that pushes toward a worse artifact."""
+        for name in SURFACES:
+            text = (ROOT / name).read_text()
+            text = text.split("## Appendix: requested vs honoured temperature")[0]
+            for bad in self.RAW_IDS:
+                assert bad not in text, f"{name} exposes the raw provider id {bad!r}"
+
+    def test_the_routing_appendix_still_carries_the_ids(self):
+        """The other half: provenance must not silently disappear either. If a future change
+        strips the appendix, this catches it -- an absent audit trail is its own defect."""
+        text = (ROOT / "results" / "PAIRED_legacy_vs_t01.md").read_text()
+        appendix = text.split("## Appendix: requested vs honoured temperature")[-1]
+        assert any(b in appendix for b in self.RAW_IDS), \
+            "the routing appendix no longer records provider model ids"
+
+    def test_no_model_row_has_an_unknown_size(self):
+        """`?` in the SIZE column means the display map missed a lineup member.
+
+        Scoped to rows that begin with a backticked model name. A blanket `| ? |` search also
+        matches the per-item DIFFICULTY column, where `?` is a legitimate "not labelled" -- the
+        first version of this test failed on real, correct output, which is a false RED and just
+        as damaging as a false green.
+        """
+        text = (ROOT / "results" / "RESULTS.md").read_text()
+        bad = [l for l in text.splitlines()
+               if re.match(r"^\| `[^`]+` \| \? \|", l)]
+        assert not bad, f"model rows with unknown size: {bad[:3]}"
+
+    def test_every_lineup_model_has_a_display_entry(self):
+        import summary
+        missing = [m for m in ag.canonical_lineup() if m not in summary.MODEL_DISPLAY]
+        assert not missing, f"no display name for {missing}"
+
+    def test_display_names_are_unique(self):
+        """Two labels mapping to one shown name would silently merge two models in a table."""
+        import summary
+        shown = [summary.display_name(m) for m in ag.canonical_lineup()]
+        assert len(set(shown)) == len(shown), f"duplicate display names: {shown}"
+
+    def test_the_published_name_appears_in_both_the_summary_and_a_leaf_table(self):
+        """Positive control: prove the names actually reconcile rather than both being absent."""
+        import summary
+        res = (ROOT / "results" / "RESULTS.md").read_text()
+        for m in ag.canonical_lineup():
+            assert f"`{summary.display_name(m)}`" in res, f"{m} absent from RESULTS.md"

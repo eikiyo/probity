@@ -6,8 +6,10 @@
 setup: test render
 	@echo "Probity is ready. See results/RESULTS.md or run 'make test' / 'make render' again anytime."
 
+# MUST match CI's runner. `unittest discover` silently collects only TestCase subclasses, so it
+# reported OK while skipping every pytest-style test -- 121 of 342 ran and the build went green.
 test:
-	python3 -m unittest discover -s tests -v
+	python3 -m pytest tests/ -q
 
 # Regenerates EVERY published surface from disk: the legacy per-leaf tables + README summary,
 # the 0.1 arm's tables, the paired report, and the README's temperature block. Each is generated,

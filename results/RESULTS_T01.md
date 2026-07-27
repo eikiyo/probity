@@ -16,18 +16,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **11%** | 98% | 33% | 18/18 | 360/360 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 72% | 18/18 | 359/360 (100%) |
-| `openai/gpt-oss-120b` | ? | **28%** | 96% | 72% | 18/18 | 359/360 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **11%** | 98% | 72% | 18/18 | 359/360 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 78% | 18/18 | 360/360 (100%) |
-| `google/gemini-3-flash-preview` | ? | **6%** | 98% | 67% | 18/18 | 345/360 (96%) |
-| `minimax/minimax-m2.5` | ? | **6%** | 99% | 72% | 18/18 | 351/360 (98%) |
-| `gemma3:1b-it-qat` | ? | **22%** | 95% | 33% | 18/18 | 360/360 (100%) |
+| `gemma3:1b` | 1B, local | **11%** | 98% | 33% | 18/18 | 360/360 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 72% | 18/18 | 359/360 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 78% | 18/18 | 360/360 (100%) |
+| `minimax-m2.5` | hosted (OR) | **6%** | 99% | 72% | 18/18 | 351/360 (98%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **11%** | 98% | 72% | 18/18 | 359/360 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **22%** | 95% | 33% | 18/18 | 360/360 (100%) |
+| `gemini-3-flash` | hosted (OR) | **6%** | 98% | 67% | 18/18 | 345/360 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **28%** | 96% | 72% | 18/18 | 359/360 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 72% | 18/18 | 360/360 (100%) |
 
 **What the columns mean:**
 
@@ -44,30 +44,30 @@
 |---|---|---|---|
 | `gemma3:1b` | 0/6 | 6/7 | 0/5 |
 | `deepseek-v4-flash` | 2/6 | 6/7 | 5/5 |
-| `openai/gpt-oss-120b` | 2/6 | 6/7 | 5/5 |
-| `meta-llama/llama-3.3-70b-instruct` | 3/6 | 6/7 | 4/5 |
-| `google/gemma-4-31b-it` | 2/6 | 6/7 | 5/5 |
-| `claude-haiku-4-5-20251001` | 2/6 | 6/7 | 5/5 |
 | `deepseek-v4-pro` | 2/6 | 6/7 | 5/5 |
-| `openai/gpt-5-mini` | 2/6 | 6/7 | 5/5 |
-| `mistralai/mistral-large-2512` | 2/6 | 7/7 | 5/5 |
-| `google/gemini-3-flash-preview` | 2/6 | 6/7 | 4/5 |
-| `minimax/minimax-m2.5` | 2/6 | 6/7 | 5/5 |
+| `gemma-4-31b-it` | 2/6 | 6/7 | 5/5 |
+| `mistral-large-2512` | 2/6 | 7/7 | 5/5 |
+| `minimax-m2.5` | 2/6 | 6/7 | 5/5 |
+| `llama-3.3-70b` | 3/6 | 6/7 | 4/5 |
 | `gemma3:1b-it-qat` | 1/6 | 4/7 | 1/5 |
+| `gemini-3-flash` | 2/6 | 6/7 | 4/5 |
+| `claude-haiku-4.5` | 2/6 | 6/7 | 5/5 |
+| `gpt-oss-120b` | 2/6 | 6/7 | 5/5 |
+| `gpt-5-mini` | 2/6 | 6/7 | 5/5 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Interlink Electronics  | non-participating | easy | gpt-oss-120b-or, gemma3-1b-qat |
-| Pfenex Inc. | participating | hard | gemma3-1b-qat |
-| scPharmaceuticals Inc. | participating | medium | gpt-oss-120b-or |
-| Akouos, Inc. | participating | medium | 1B, gpt-oss-120b-or |
-| Jazz Semiconductor Inc | capped | medium | gpt-oss-120b-or, gemini3-flash-or, minimax-m2.5-or |
-| The Medicines Co (Remp | capped | medium | gemma3-1b-qat |
-| Fitbit Inc | capped | hard | gpt-oss-120b-or |
-| Workday, Inc. | capped | medium | 1B, llama3.3-70b-or |
-| Internet Security Syst | participating | easy | llama3.3-70b-or, gemma3-1b-qat |
+| Interlink Electronics  | non-participating | easy | gemma3:1b-it-qat, gpt-oss-120b |
+| Pfenex Inc. | participating | hard | gemma3:1b-it-qat |
+| scPharmaceuticals Inc. | participating | medium | gpt-oss-120b |
+| Akouos, Inc. | participating | medium | gemma3:1b, gpt-oss-120b |
+| Jazz Semiconductor Inc | capped | medium | minimax-m2.5, gemini-3-flash, gpt-oss-120b |
+| The Medicines Co (Remp | capped | medium | gemma3:1b-it-qat |
+| Fitbit Inc | capped | hard | gpt-oss-120b |
+| Workday, Inc. | capped | medium | gemma3:1b, llama-3.3-70b |
+| Internet Security Syst | participating | easy | llama-3.3-70b, gemma3:1b-it-qat |
 
 ## What this shows
 
@@ -89,18 +89,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 62% | 16/16 | 320/320 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 16/16 | 311/320 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 62% | 16/16 | 320/320 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 62% | 16/16 | 320/320 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 62% | 16/16 | 320/320 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 16/16 | 311/320 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 
 **What the columns mean:**
 
@@ -117,16 +117,16 @@
 |---|---|---|
 | `gemma3:1b` | 10/10 | 0/6 |
 | `deepseek-v4-flash` | 10/10 | 6/6 |
-| `openai/gpt-oss-120b` | 10/10 | 6/6 |
-| `google/gemma-4-31b-it` | 10/10 | 6/6 |
-| `claude-haiku-4-5-20251001` | 10/10 | 6/6 |
-| `meta-llama/llama-3.3-70b-instruct` | 10/10 | 6/6 |
 | `deepseek-v4-pro` | 10/10 | 6/6 |
-| `openai/gpt-5-mini` | 10/10 | 6/6 |
-| `mistralai/mistral-large-2512` | 10/10 | 6/6 |
-| `google/gemini-3-flash-preview` | 10/10 | 6/6 |
-| `minimax/minimax-m2.5` | 10/10 | 6/6 |
+| `gemma-4-31b-it` | 10/10 | 6/6 |
+| `mistral-large-2512` | 10/10 | 6/6 |
+| `minimax-m2.5` | 10/10 | 6/6 |
+| `llama-3.3-70b` | 10/10 | 6/6 |
 | `gemma3:1b-it-qat` | 10/10 | 0/6 |
+| `gemini-3-flash` | 10/10 | 6/6 |
+| `claude-haiku-4.5` | 10/10 | 6/6 |
+| `gpt-oss-120b` | 10/10 | 6/6 |
+| `gpt-5-mini` | 10/10 | 6/6 |
 
 ### Which items make models wobble
 
@@ -155,18 +155,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **12%** | 99% | 88% | 16/16 | 320/320 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 16/16 | 317/320 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 16/16 | 310/320 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 81% | 16/16 | 320/320 (100%) |
+| `gemma3:1b` | 1B, local | **12%** | 99% | 88% | 16/16 | 320/320 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 16/16 | 317/320 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 81% | 16/16 | 320/320 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 16/16 | 310/320 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 16/16 | 320/320 (100%) |
 
 **What the columns mean:**
 
@@ -183,27 +183,27 @@
 |---|---|---|
 | `gemma3:1b` | 7/8 | 7/8 |
 | `deepseek-v4-flash` | 8/8 | 8/8 |
-| `openai/gpt-oss-120b` | 8/8 | 8/8 |
-| `meta-llama/llama-3.3-70b-instruct` | 8/8 | 8/8 |
-| `google/gemma-4-31b-it` | 8/8 | 8/8 |
-| `claude-haiku-4-5-20251001` | 8/8 | 8/8 |
-| `openai/gpt-5-mini` | 8/8 | 8/8 |
 | `deepseek-v4-pro` | 8/8 | 8/8 |
-| `mistralai/mistral-large-2512` | 8/8 | 8/8 |
-| `google/gemini-3-flash-preview` | 8/8 | 8/8 |
-| `minimax/minimax-m2.5` | 8/8 | 8/8 |
+| `gemma-4-31b-it` | 8/8 | 8/8 |
+| `mistral-large-2512` | 8/8 | 8/8 |
+| `minimax-m2.5` | 8/8 | 8/8 |
+| `llama-3.3-70b` | 8/8 | 8/8 |
 | `gemma3:1b-it-qat` | 5/8 | 8/8 |
+| `gemini-3-flash` | 8/8 | 8/8 |
+| `claude-haiku-4.5` | 8/8 | 8/8 |
+| `gpt-oss-120b` | 8/8 | 8/8 |
+| `gpt-5-mini` | 8/8 | 8/8 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| BIOACCELERATE HOLDINGS | cumulative | easy | 1B |
-| Eiger BioPharmaceutica | non-cumulative | medium | 1B |
+| BIOACCELERATE HOLDINGS | cumulative | easy | gemma3:1b |
+| Eiger BioPharmaceutica | non-cumulative | medium | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–12% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–12% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -217,18 +217,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **15%** | 96% | 85% | 13/13 | 252/260 (97%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 13/13 | 257/260 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 13/13 | 249/260 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 92% | 13/13 | 252/260 (97%) |
+| `gemma3:1b` | 1B, local | **15%** | 96% | 85% | 13/13 | 252/260 (97%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 13/13 | 257/260 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 92% | 13/13 | 252/260 (97%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 13/13 | 249/260 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -245,27 +245,27 @@
 |---|---|---|
 | `gemma3:1b` | 4/6 | 7/7 |
 | `deepseek-v4-flash` | 6/6 | 7/7 |
-| `openai/gpt-oss-120b` | 6/6 | 7/7 |
-| `meta-llama/llama-3.3-70b-instruct` | 6/6 | 7/7 |
-| `google/gemma-4-31b-it` | 6/6 | 7/7 |
-| `claude-haiku-4-5-20251001` | 6/6 | 7/7 |
-| `openai/gpt-5-mini` | 6/6 | 7/7 |
 | `deepseek-v4-pro` | 6/6 | 7/7 |
-| `mistralai/mistral-large-2512` | 6/6 | 7/7 |
-| `google/gemini-3-flash-preview` | 6/6 | 7/7 |
-| `minimax/minimax-m2.5` | 6/6 | 7/7 |
+| `gemma-4-31b-it` | 6/6 | 7/7 |
+| `mistral-large-2512` | 6/6 | 7/7 |
+| `minimax-m2.5` | 6/6 | 7/7 |
+| `llama-3.3-70b` | 6/6 | 7/7 |
 | `gemma3:1b-it-qat` | 5/6 | 7/7 |
+| `gemini-3-flash` | 6/6 | 7/7 |
+| `claude-haiku-4.5` | 6/6 | 7/7 |
+| `gpt-oss-120b` | 6/6 | 7/7 |
+| `gpt-5-mini` | 6/6 | 7/7 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| GIBRALTAR INDUSTRIES,  | double-trigger | hard | 1B |
-| Vulcan Materials CO | double-trigger | hard | 1B |
+| GIBRALTAR INDUSTRIES,  | double-trigger | hard | gemma3:1b |
+| Vulcan Materials CO | double-trigger | hard | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–15% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–15% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -279,18 +279,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **18%** | 97% | 45% | 11/11 | 220/220 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 82% | 11/11 | 219/220 (100%) |
-| `openai/gpt-oss-120b` | ? | **9%** | 99% | 82% | 11/11 | 220/220 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 82% | 11/11 | 219/220 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 78% | 9/11 | 220/220 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 82% | 11/11 | 213/220 (97%) |
-| `minimax/minimax-m2.5` | ? | **9%** | 99% | 82% | 11/11 | 215/220 (98%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 45% | 11/11 | 220/220 (100%) |
+| `gemma3:1b` | 1B, local | **18%** | 97% | 45% | 11/11 | 220/220 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 82% | 11/11 | 219/220 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
+| `minimax-m2.5` | hosted (OR) | **9%** | 99% | 82% | 11/11 | 215/220 (98%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 82% | 11/11 | 219/220 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 45% | 11/11 | 220/220 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 82% | 11/11 | 213/220 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 78% | 9/11 | 220/220 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **9%** | 99% | 82% | 11/11 | 220/220 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 82% | 11/11 | 220/220 (100%) |
 
 **What the columns mean:**
 
@@ -307,31 +307,31 @@
 |---|---|---|
 | `gemma3:1b` | 0/6 | 5/5 |
 | `deepseek-v4-flash` | 4/6 | 5/5 |
-| `openai/gpt-oss-120b` | 4/6 | 5/5 |
-| `meta-llama/llama-3.3-70b-instruct` | 4/6 | 5/5 |
-| `google/gemma-4-31b-it` | 4/6 | 5/5 |
-| `claude-haiku-4-5-20251001` | 4/6 | 3/3 |
 | `deepseek-v4-pro` | 4/6 | 5/5 |
-| `openai/gpt-5-mini` | 4/6 | 5/5 |
-| `mistralai/mistral-large-2512` | 4/6 | 5/5 |
-| `google/gemini-3-flash-preview` | 4/6 | 5/5 |
-| `minimax/minimax-m2.5` | 4/6 | 5/5 |
+| `gemma-4-31b-it` | 4/6 | 5/5 |
+| `mistral-large-2512` | 4/6 | 5/5 |
+| `minimax-m2.5` | 4/6 | 5/5 |
+| `llama-3.3-70b` | 4/6 | 5/5 |
 | `gemma3:1b-it-qat` | 0/6 | 5/5 |
+| `gemini-3-flash` | 4/6 | 5/5 |
+| `claude-haiku-4.5` | 4/6 | 3/3 |
+| `gpt-oss-120b` | 4/6 | 5/5 |
+| `gpt-5-mini` | 4/6 | 5/5 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Banks.com, Inc. | stacked | medium | 1B |
-| AMERICAN POWER GROUP C | stacked | easy | haiku-4.5-direct |
-| E CENTIVES INC | stacked | easy | haiku-4.5-direct |
-| Zoom Video Communicati | pari-passu | hard | minimax-m2.5-or |
-| RIGHT START INC /CA | pari-passu | medium | 1B |
-| PRECOM TECHNOLOGY INC | pari-passu | hard | gpt-oss-120b-or |
+| Banks.com, Inc. | stacked | medium | gemma3:1b |
+| AMERICAN POWER GROUP C | stacked | easy | claude-haiku-4.5 |
+| E CENTIVES INC | stacked | easy | claude-haiku-4.5 |
+| Zoom Video Communicati | pari-passu | hard | minimax-m2.5 |
+| RIGHT START INC /CA | pari-passu | medium | gemma3:1b |
+| PRECOM TECHNOLOGY INC | pari-passu | hard | gpt-oss-120b |
 
 ## What this shows
 
-- **Wobble spread: 0%–18% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 82% accuracy).
+- **Wobble spread: 0%–18% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 82% accuracy).
 
 ---
 
@@ -345,18 +345,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 89% | 50% | 10/10 | 200/200 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 90% | 10/10 | 193/200 (96%) |
-| `openai/gpt-oss-120b` | ? | **10%** | 99% | 90% | 10/10 | 200/200 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 90% | 10/10 | 196/200 (98%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 90% | 10/10 | 199/200 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
-| `google/gemini-3-flash-preview` | ? | **10%** | 99% | 90% | 10/10 | 194/200 (97%) |
-| `minimax/minimax-m2.5` | ? | **10%** | 97% | 100% | 10/10 | 196/200 (98%) |
-| `gemma3:1b-it-qat` | ? | **50%** | 89% | 30% | 10/10 | 200/200 (100%) |
+| `gemma3:1b` | 1B, local | **50%** | 89% | 50% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 90% | 10/10 | 193/200 (96%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
+| `minimax-m2.5` | hosted (OR) | **10%** | 97% | 100% | 10/10 | 196/200 (98%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 90% | 10/10 | 196/200 (98%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **50%** | 89% | 30% | 10/10 | 200/200 (100%) |
+| `gemini-3-flash` | hosted (OR) | **10%** | 99% | 90% | 10/10 | 194/200 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **10%** | 99% | 90% | 10/10 | 200/200 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 90% | 10/10 | 199/200 (100%) |
 
 **What the columns mean:**
 
@@ -373,32 +373,32 @@
 |---|---|---|
 | `gemma3:1b` | 3/5 | 2/5 |
 | `deepseek-v4-flash` | 5/5 | 4/5 |
-| `openai/gpt-oss-120b` | 5/5 | 4/5 |
-| `meta-llama/llama-3.3-70b-instruct` | 5/5 | 4/5 |
-| `google/gemma-4-31b-it` | 5/5 | 5/5 |
-| `claude-haiku-4-5-20251001` | 5/5 | 4/5 |
-| `openai/gpt-5-mini` | 5/5 | 4/5 |
 | `deepseek-v4-pro` | 5/5 | 4/5 |
-| `mistralai/mistral-large-2512` | 5/5 | 4/5 |
-| `google/gemini-3-flash-preview` | 5/5 | 4/5 |
-| `minimax/minimax-m2.5` | 5/5 | 5/5 |
+| `gemma-4-31b-it` | 5/5 | 5/5 |
+| `mistral-large-2512` | 5/5 | 4/5 |
+| `minimax-m2.5` | 5/5 | 5/5 |
+| `llama-3.3-70b` | 5/5 | 4/5 |
 | `gemma3:1b-it-qat` | 0/5 | 3/5 |
+| `gemini-3-flash` | 5/5 | 4/5 |
+| `claude-haiku-4.5` | 5/5 | 4/5 |
+| `gpt-oss-120b` | 5/5 | 4/5 |
+| `gpt-5-mini` | 5/5 | 4/5 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Lulu's Fashion Lounge  | yes | hard | 1B |
-| ACME PACKET INC | yes | medium | 1B, gemma3-1b-qat |
-| FITBIT INC | no | medium | gemma3-1b-qat |
-| Akouos, Inc. | no | easy | gemma3-1b-qat |
-| BIOACCELERATE HOLDINGS | no | medium | 1B |
-| Workday, Inc. | no | hard | 1B, gpt-oss-120b-or, gemini3-flash-or, minimax-m2.5-or, gemma3-1b-qat |
-| ENDOSTIM, INC. | no | easy | 1B, gemma3-1b-qat |
+| Lulu's Fashion Lounge  | yes | hard | gemma3:1b |
+| ACME PACKET INC | yes | medium | gemma3:1b, gemma3:1b-it-qat |
+| FITBIT INC | no | medium | gemma3:1b-it-qat |
+| Akouos, Inc. | no | easy | gemma3:1b-it-qat |
+| BIOACCELERATE HOLDINGS | no | medium | gemma3:1b |
+| Workday, Inc. | no | hard | gemma3:1b, minimax-m2.5, gemma3:1b-it-qat, gemini-3-flash, gpt-oss-120b |
+| ENDOSTIM, INC. | no | easy | gemma3:1b, gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **gemma-4-31b-it** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -413,18 +413,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **30%** | 96% | 50% | 10/10 | 200/200 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
-| `openai/gpt-oss-120b` | ? | **10%** | 99% | 100% | 10/10 | 200/200 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **10%** | 96% | 100% | 10/10 | 200/200 (100%) |
-| `deepseek-v4-pro` | ? | **10%** | 99% | 100% | 10/10 | 200/200 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `mistralai/mistral-large-2512` | ? | **10%** | 99% | 100% | 10/10 | 200/200 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 10/10 | 190/200 (95%) |
-| `minimax/minimax-m2.5` | ? | **10%** | 98% | 100% | 10/10 | 193/200 (96%) |
-| `gemma3:1b-it-qat` | ? | **30%** | 97% | 90% | 10/10 | 200/200 (100%) |
+| `gemma3:1b` | 1B, local | **30%** | 96% | 50% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 90% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **10%** | 99% | 100% | 10/10 | 200/200 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `mistral-large-2512` | hosted (OR) | **10%** | 99% | 100% | 10/10 | 200/200 (100%) |
+| `minimax-m2.5` | hosted (OR) | **10%** | 98% | 100% | 10/10 | 193/200 (96%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **30%** | 97% | 90% | 10/10 | 200/200 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 10/10 | 190/200 (95%) |
+| `claude-haiku-4.5` | hosted, direct API | **10%** | 96% | 100% | 10/10 | 200/200 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **10%** | 99% | 100% | 10/10 | 200/200 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -441,30 +441,30 @@
 |---|---|---|
 | `gemma3:1b` | 0/5 | 5/5 |
 | `deepseek-v4-flash` | 4/5 | 5/5 |
-| `openai/gpt-oss-120b` | 5/5 | 5/5 |
-| `meta-llama/llama-3.3-70b-instruct` | 5/5 | 5/5 |
-| `google/gemma-4-31b-it` | 5/5 | 5/5 |
-| `claude-haiku-4-5-20251001` | 5/5 | 5/5 |
 | `deepseek-v4-pro` | 5/5 | 5/5 |
-| `openai/gpt-5-mini` | 5/5 | 5/5 |
-| `mistralai/mistral-large-2512` | 5/5 | 5/5 |
-| `google/gemini-3-flash-preview` | 5/5 | 5/5 |
-| `minimax/minimax-m2.5` | 5/5 | 5/5 |
+| `gemma-4-31b-it` | 5/5 | 5/5 |
+| `mistral-large-2512` | 5/5 | 5/5 |
+| `minimax-m2.5` | 5/5 | 5/5 |
+| `llama-3.3-70b` | 5/5 | 5/5 |
 | `gemma3:1b-it-qat` | 4/5 | 5/5 |
+| `gemini-3-flash` | 5/5 | 5/5 |
+| `claude-haiku-4.5` | 5/5 | 5/5 |
+| `gpt-oss-120b` | 5/5 | 5/5 |
+| `gpt-5-mini` | 5/5 | 5/5 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| AdaptHealth Corp. | yes | easy | gemma3-1b-qat |
-| Lulu's Fashion Lounge  | yes | medium | 1B, gemma3-1b-qat |
-| ENDOSTIM, INC. | yes | medium | 1B, gemma3-1b-qat |
-| Tenable Holdings, Inc. | yes | medium | 1B |
-| Pfenex Inc. | yes | hard | gpt-oss-120b-or, haiku-4.5-direct, deepseek-v4p, mistral-large-or, minimax-m2.5-or |
+| AdaptHealth Corp. | yes | easy | gemma3:1b-it-qat |
+| Lulu's Fashion Lounge  | yes | medium | gemma3:1b, gemma3:1b-it-qat |
+| ENDOSTIM, INC. | yes | medium | gemma3:1b, gemma3:1b-it-qat |
+| Tenable Holdings, Inc. | yes | medium | gemma3:1b |
+| Pfenex Inc. | yes | hard | deepseek-v4-pro, mistral-large-2512, minimax-m2.5, claude-haiku-4.5, gpt-oss-120b |
 
 ## What this shows
 
-- **Wobble spread: 0%–30% across the ladder.** Lowest-wobble model: **llama3.3-70b-or** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–30% across the ladder.** Lowest-wobble model: **gemma-4-31b-it** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -479,18 +479,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **8%** | 100% | 42% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-flash` | hosted | **8%** | 98% | 100% | 12/12 | 240/240 (100%) |
-| `openai/gpt-oss-120b` | ? | **17%** | 98% | 92% | 12/12 | 240/240 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 75% | 12/12 | 235/240 (98%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **8%** | 98% | 100% | 12/12 | 240/240 (100%) |
-| `openai/gpt-5-mini` | ? | **17%** | 96% | 83% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 12/12 | 232/240 (97%) |
-| `minimax/minimax-m2.5` | ? | **17%** | 96% | 83% | 12/12 | 238/240 (99%) |
-| `gemma3:1b-it-qat` | ? | **17%** | 96% | 58% | 12/12 | 240/240 (100%) |
+| `gemma3:1b` | 1B, local | **8%** | 100% | 42% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **8%** | 98% | 100% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `minimax-m2.5` | hosted (OR) | **17%** | 96% | 83% | 12/12 | 238/240 (99%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 75% | 12/12 | 235/240 (98%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **17%** | 96% | 58% | 12/12 | 240/240 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 12/12 | 232/240 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **8%** | 98% | 100% | 12/12 | 240/240 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **17%** | 98% | 92% | 12/12 | 240/240 (100%) |
+| `gpt-5-mini` | hosted (OR) | **17%** | 96% | 83% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -507,30 +507,30 @@
 |---|---|---|
 | `gemma3:1b` | 4/6 | 1/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
-| `openai/gpt-oss-120b` | 5/6 | 6/6 |
-| `meta-llama/llama-3.3-70b-instruct` | 3/6 | 6/6 |
-| `google/gemma-4-31b-it` | 6/6 | 6/6 |
-| `claude-haiku-4-5-20251001` | 6/6 | 6/6 |
-| `openai/gpt-5-mini` | 4/6 | 6/6 |
 | `deepseek-v4-pro` | 5/6 | 6/6 |
-| `mistralai/mistral-large-2512` | 5/6 | 6/6 |
-| `google/gemini-3-flash-preview` | 6/6 | 6/6 |
-| `minimax/minimax-m2.5` | 4/6 | 6/6 |
+| `gemma-4-31b-it` | 6/6 | 6/6 |
+| `mistral-large-2512` | 5/6 | 6/6 |
+| `minimax-m2.5` | 4/6 | 6/6 |
+| `llama-3.3-70b` | 3/6 | 6/6 |
 | `gemma3:1b-it-qat` | 3/6 | 4/6 |
+| `gemini-3-flash` | 6/6 | 6/6 |
+| `claude-haiku-4.5` | 6/6 | 6/6 |
+| `gpt-oss-120b` | 5/6 | 6/6 |
+| `gpt-5-mini` | 4/6 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| MCLEODUSA INC | yes | easy | 1B |
-| TRUMP ENTERTAINMENT RE | yes | easy | hosted, gpt-oss-120b-or, haiku-4.5-direct, gpt5-mini-or, minimax-m2.5-or |
-| LOEWS CINEPLEX ENTERTA | yes | medium | gemma3-1b-qat |
-| AVENTINE RENEWABLE ENE | yes | hard | gpt-oss-120b-or, gpt5-mini-or, minimax-m2.5-or |
-| ACCELERON PHARMA INC | no | easy | gemma3-1b-qat |
+| MCLEODUSA INC | yes | easy | gemma3:1b |
+| TRUMP ENTERTAINMENT RE | yes | easy | deepseek-v4-flash, minimax-m2.5, claude-haiku-4.5, gpt-oss-120b, gpt-5-mini |
+| LOEWS CINEPLEX ENTERTA | yes | medium | gemma3:1b-it-qat |
+| AVENTINE RENEWABLE ENE | yes | hard | minimax-m2.5, gpt-oss-120b, gpt-5-mini |
+| ACCELERON PHARMA INC | no | easy | gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **gemma-4-31b-it** (0% wobble, 100% accuracy).
 
 ---
 
@@ -544,18 +544,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 67% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-flash` | hosted | **8%** | 97% | 100% | 12/12 | 240/240 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 83% | 12/12 | 238/240 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
-| `google/gemini-3-flash-preview` | ? | **17%** | 93% | 92% | 12/12 | 233/240 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `gemma3:1b-it-qat` | ? | **25%** | 97% | 92% | 12/12 | 240/240 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 67% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **8%** | 97% | 100% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 83% | 12/12 | 238/240 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **25%** | 97% | 92% | 12/12 | 240/240 (100%) |
+| `gemini-3-flash` | hosted (OR) | **17%** | 93% | 92% | 12/12 | 233/240 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 83% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -572,30 +572,30 @@
 |---|---|---|
 | `gemma3:1b` | 6/6 | 2/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
-| `openai/gpt-oss-120b` | 6/6 | 6/6 |
-| `meta-llama/llama-3.3-70b-instruct` | 6/6 | 4/6 |
-| `google/gemma-4-31b-it` | 6/6 | 4/6 |
-| `claude-haiku-4-5-20251001` | 6/6 | 4/6 |
 | `deepseek-v4-pro` | 6/6 | 6/6 |
-| `openai/gpt-5-mini` | 6/6 | 4/6 |
-| `mistralai/mistral-large-2512` | 6/6 | 4/6 |
-| `google/gemini-3-flash-preview` | 6/6 | 5/6 |
-| `minimax/minimax-m2.5` | 6/6 | 6/6 |
+| `gemma-4-31b-it` | 6/6 | 4/6 |
+| `mistral-large-2512` | 6/6 | 4/6 |
+| `minimax-m2.5` | 6/6 | 6/6 |
+| `llama-3.3-70b` | 6/6 | 4/6 |
 | `gemma3:1b-it-qat` | 5/6 | 6/6 |
+| `gemini-3-flash` | 6/6 | 5/6 |
+| `claude-haiku-4.5` | 6/6 | 4/6 |
+| `gpt-oss-120b` | 6/6 | 6/6 |
+| `gpt-5-mini` | 6/6 | 4/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Symbion (Uniphy Health | yes | easy | gemma3-1b-qat |
-| Aclarion | yes | easy | gemma3-1b-qat |
-| Taylor Morrison (TMM H | no | easy | gemma3-1b-qat |
-| MotivNation | no | hard | hosted, gemini3-flash-or |
-| EntreMetrix | no | hard | gemini3-flash-or |
+| Symbion (Uniphy Health | yes | easy | gemma3:1b-it-qat |
+| Aclarion | yes | easy | gemma3:1b-it-qat |
+| Taylor Morrison (TMM H | no | easy | gemma3:1b-it-qat |
+| MotivNation | no | hard | deepseek-v4-flash, gemini-3-flash |
+| EntreMetrix | no | hard | gemini-3-flash |
 
 ## What this shows
 
-- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **gpt-oss-120b-or** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **deepseek-v4-pro** (0% wobble, 100% accuracy).
 
 ---
 
@@ -609,18 +609,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **33%** | 94% | 83% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `openai/gpt-oss-120b` | ? | **17%** | 99% | 100% | 12/12 | 240/240 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 12/12 | 239/240 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 12/12 | 232/240 (97%) |
-| `minimax/minimax-m2.5` | ? | **25%** | 98% | 100% | 12/12 | 236/240 (98%) |
-| `gemma3:1b-it-qat` | ? | **17%** | 96% | 83% | 12/12 | 240/240 (100%) |
+| `gemma3:1b` | 1B, local | **33%** | 94% | 83% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `minimax-m2.5` | hosted (OR) | **25%** | 98% | 100% | 12/12 | 236/240 (98%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 12/12 | 239/240 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **17%** | 96% | 83% | 12/12 | 240/240 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 12/12 | 232/240 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **17%** | 99% | 100% | 12/12 | 240/240 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -637,31 +637,31 @@
 |---|---|---|
 | `gemma3:1b` | 6/6 | 4/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
-| `openai/gpt-oss-120b` | 6/6 | 6/6 |
-| `meta-llama/llama-3.3-70b-instruct` | 6/6 | 6/6 |
-| `google/gemma-4-31b-it` | 6/6 | 6/6 |
-| `claude-haiku-4-5-20251001` | 6/6 | 6/6 |
 | `deepseek-v4-pro` | 6/6 | 6/6 |
-| `openai/gpt-5-mini` | 6/6 | 6/6 |
-| `mistralai/mistral-large-2512` | 6/6 | 6/6 |
-| `google/gemini-3-flash-preview` | 6/6 | 6/6 |
-| `minimax/minimax-m2.5` | 6/6 | 6/6 |
+| `gemma-4-31b-it` | 6/6 | 6/6 |
+| `mistral-large-2512` | 6/6 | 6/6 |
+| `minimax-m2.5` | 6/6 | 6/6 |
+| `llama-3.3-70b` | 6/6 | 6/6 |
 | `gemma3:1b-it-qat` | 4/6 | 6/6 |
+| `gemini-3-flash` | 6/6 | 6/6 |
+| `claude-haiku-4.5` | 6/6 | 6/6 |
+| `gpt-oss-120b` | 6/6 | 6/6 |
+| `gpt-5-mini` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| SOS Hydration Inc. | yes | medium | 1B, gpt-oss-120b-or, minimax-m2.5-or |
-| Millennium Blockchain, | yes | medium | gpt-oss-120b-or, minimax-m2.5-or, gemma3-1b-qat |
-| Cantabio Pharmaceutica | yes | medium | minimax-m2.5-or, gemma3-1b-qat |
-| Supernus Pharmaceutica | no | easy | 1B |
-| Infinity Pharmaceutica | no | easy | 1B |
-| Xcyte Therapies, Inc. | no | hard | 1B |
+| SOS Hydration Inc. | yes | medium | gemma3:1b, minimax-m2.5, gpt-oss-120b |
+| Millennium Blockchain, | yes | medium | minimax-m2.5, gemma3:1b-it-qat, gpt-oss-120b |
+| Cantabio Pharmaceutica | yes | medium | minimax-m2.5, gemma3:1b-it-qat |
+| Supernus Pharmaceutica | no | easy | gemma3:1b |
+| Infinity Pharmaceutica | no | easy | gemma3:1b |
+| Xcyte Therapies, Inc. | no | hard | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–33% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–33% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -676,18 +676,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **8%** | 98% | 67% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `openai/gpt-oss-120b` | ? | **8%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **17%** | 96% | 100% | 12/12 | 233/240 (97%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `openai/gpt-5-mini` | ? | **17%** | 98% | 92% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 12/12 | 229/240 (95%) |
-| `minimax/minimax-m2.5` | ? | **25%** | 97% | 100% | 12/12 | 239/240 (100%) |
-| `gemma3:1b-it-qat` | ? | **8%** | 99% | 92% | 12/12 | 240/240 (100%) |
+| `gemma3:1b` | 1B, local | **8%** | 98% | 67% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `minimax-m2.5` | hosted (OR) | **25%** | 97% | 100% | 12/12 | 239/240 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **17%** | 96% | 100% | 12/12 | 233/240 (97%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **8%** | 99% | 92% | 12/12 | 240/240 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 12/12 | 229/240 (95%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **8%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `gpt-5-mini` | hosted (OR) | **17%** | 98% | 92% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -704,30 +704,30 @@
 |---|---|---|
 | `gemma3:1b` | 6/6 | 2/6 |
 | `deepseek-v4-flash` | 6/6 | 5/6 |
-| `openai/gpt-oss-120b` | 6/6 | 5/6 |
-| `meta-llama/llama-3.3-70b-instruct` | 6/6 | 6/6 |
-| `google/gemma-4-31b-it` | 6/6 | 6/6 |
-| `claude-haiku-4-5-20251001` | 6/6 | 6/6 |
-| `openai/gpt-5-mini` | 6/6 | 5/6 |
 | `deepseek-v4-pro` | 6/6 | 6/6 |
-| `mistralai/mistral-large-2512` | 6/6 | 6/6 |
-| `google/gemini-3-flash-preview` | 6/6 | 6/6 |
-| `minimax/minimax-m2.5` | 6/6 | 6/6 |
+| `gemma-4-31b-it` | 6/6 | 6/6 |
+| `mistral-large-2512` | 6/6 | 6/6 |
+| `minimax-m2.5` | 6/6 | 6/6 |
+| `llama-3.3-70b` | 6/6 | 6/6 |
 | `gemma3:1b-it-qat` | 6/6 | 5/6 |
+| `gemini-3-flash` | 6/6 | 6/6 |
+| `claude-haiku-4.5` | 6/6 | 6/6 |
+| `gpt-oss-120b` | 6/6 | 5/6 |
+| `gpt-5-mini` | 6/6 | 5/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| NorthStar Healthcare I | yes | easy | llama3.3-70b-or |
-| Interval Leisure Group | yes | medium | 1B, llama3.3-70b-or, gpt5-mini-or, minimax-m2.5-or |
-| Atossa Genetics Inc. | no | easy | gemma3-1b-qat |
-| Clarcor Inc. | no | hard | gpt5-mini-or, minimax-m2.5-or |
-| World Heart Corp | no | hard | gpt-oss-120b-or, minimax-m2.5-or |
+| NorthStar Healthcare I | yes | easy | llama-3.3-70b |
+| Interval Leisure Group | yes | medium | gemma3:1b, minimax-m2.5, llama-3.3-70b, gpt-5-mini |
+| Atossa Genetics Inc. | no | easy | gemma3:1b-it-qat |
+| Clarcor Inc. | no | hard | minimax-m2.5, gpt-5-mini |
+| World Heart Corp | no | hard | minimax-m2.5, gpt-oss-120b |
 
 ## What this shows
 
-- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **deepseek-v4-pro** (0% wobble, 100% accuracy).
 
 ---
 
@@ -741,18 +741,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **8%** | 100% | 58% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `openai/gpt-oss-120b` | ? | **8%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-pro` | ? | **8%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `openai/gpt-5-mini` | ? | **8%** | 99% | 100% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `google/gemini-3-flash-preview` | ? | **8%** | 99% | 100% | 12/12 | 231/240 (96%) |
-| `minimax/minimax-m2.5` | ? | **17%** | 98% | 92% | 12/12 | 237/240 (99%) |
-| `gemma3:1b-it-qat` | ? | **8%** | 100% | 75% | 12/12 | 240/240 (100%) |
+| `gemma3:1b` | 1B, local | **8%** | 100% | 58% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **8%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `minimax-m2.5` | hosted (OR) | **17%** | 98% | 92% | 12/12 | 237/240 (99%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **8%** | 100% | 75% | 12/12 | 240/240 (100%) |
+| `gemini-3-flash` | hosted (OR) | **8%** | 99% | 100% | 12/12 | 231/240 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **8%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `gpt-5-mini` | hosted (OR) | **8%** | 99% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -769,28 +769,28 @@
 |---|---|---|
 | `gemma3:1b` | 6/6 | 1/6 |
 | `deepseek-v4-flash` | 6/6 | 6/6 |
-| `openai/gpt-oss-120b` | 5/6 | 6/6 |
-| `meta-llama/llama-3.3-70b-instruct` | 6/6 | 6/6 |
-| `google/gemma-4-31b-it` | 5/6 | 6/6 |
-| `claude-haiku-4-5-20251001` | 6/6 | 6/6 |
 | `deepseek-v4-pro` | 5/6 | 6/6 |
-| `openai/gpt-5-mini` | 6/6 | 6/6 |
-| `mistralai/mistral-large-2512` | 6/6 | 6/6 |
-| `google/gemini-3-flash-preview` | 6/6 | 6/6 |
-| `minimax/minimax-m2.5` | 5/6 | 6/6 |
+| `gemma-4-31b-it` | 5/6 | 6/6 |
+| `mistral-large-2512` | 6/6 | 6/6 |
+| `minimax-m2.5` | 5/6 | 6/6 |
+| `llama-3.3-70b` | 6/6 | 6/6 |
 | `gemma3:1b-it-qat` | 3/6 | 6/6 |
+| `gemini-3-flash` | 6/6 | 6/6 |
+| `claude-haiku-4.5` | 6/6 | 6/6 |
+| `gpt-oss-120b` | 5/6 | 6/6 |
+| `gpt-5-mini` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| BroadSoft, Inc. | yes | medium | gpt-oss-120b-or, deepseek-v4p, gpt5-mini-or, gemini3-flash-or, minimax-m2.5-or |
-| SCYNEXIS, Inc. | yes | medium | 1B |
-| JCM Partners, LLC | yes | medium | minimax-m2.5-or, gemma3-1b-qat |
+| BroadSoft, Inc. | yes | medium | deepseek-v4-pro, minimax-m2.5, gemini-3-flash, gpt-oss-120b, gpt-5-mini |
+| SCYNEXIS, Inc. | yes | medium | gemma3:1b |
+| JCM Partners, LLC | yes | medium | minimax-m2.5, gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -804,18 +804,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **17%** | 95% | 50% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 92% | 12/12 | 167/240 (70%) |
-| `openai/gpt-oss-120b` | ? | **8%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 92% | 12/12 | 235/240 (98%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
-| `openai/gpt-5-mini` | ? | **8%** | 99% | 100% | 12/12 | 240/240 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 92% | 12/12 | 228/240 (95%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
-| `gemma3:1b-it-qat` | ? | **8%** | 100% | 50% | 12/12 | 240/240 (100%) |
+| `gemma3:1b` | 1B, local | **17%** | 95% | 50% | 12/12 | 240/240 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 92% | 12/12 | 167/240 (70%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 92% | 12/12 | 235/240 (98%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **8%** | 100% | 50% | 12/12 | 240/240 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 92% | 12/12 | 228/240 (95%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 12/12 | 240/240 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **8%** | 100% | 92% | 12/12 | 240/240 (100%) |
+| `gpt-5-mini` | hosted (OR) | **8%** | 99% | 100% | 12/12 | 240/240 (100%) |
 
 **What the columns mean:**
 
@@ -832,28 +832,28 @@
 |---|---|---|
 | `gemma3:1b` | 6/6 | 0/6 |
 | `deepseek-v4-flash` | 5/6 | 6/6 |
-| `openai/gpt-oss-120b` | 5/6 | 6/6 |
-| `meta-llama/llama-3.3-70b-instruct` | 5/6 | 6/6 |
-| `google/gemma-4-31b-it` | 5/6 | 6/6 |
-| `claude-haiku-4-5-20251001` | 6/6 | 6/6 |
-| `openai/gpt-5-mini` | 6/6 | 6/6 |
 | `deepseek-v4-pro` | 5/6 | 6/6 |
-| `mistralai/mistral-large-2512` | 5/6 | 6/6 |
-| `google/gemini-3-flash-preview` | 5/6 | 6/6 |
-| `minimax/minimax-m2.5` | 5/6 | 6/6 |
+| `gemma-4-31b-it` | 5/6 | 6/6 |
+| `mistral-large-2512` | 5/6 | 6/6 |
+| `minimax-m2.5` | 5/6 | 6/6 |
+| `llama-3.3-70b` | 5/6 | 6/6 |
 | `gemma3:1b-it-qat` | 6/6 | 0/6 |
+| `gemini-3-flash` | 5/6 | 6/6 |
+| `claude-haiku-4.5` | 6/6 | 6/6 |
+| `gpt-oss-120b` | 5/6 | 6/6 |
+| `gpt-5-mini` | 6/6 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Bell Microproducts Inc | yes | hard | gpt-oss-120b-or, gpt5-mini-or |
-| Speedway Motorsports,  | no | easy | 1B |
-| Pool Corp | no | easy | 1B, gemma3-1b-qat |
+| Bell Microproducts Inc | yes | hard | gpt-oss-120b, gpt-5-mini |
+| Speedway Motorsports,  | no | easy | gemma3:1b |
+| Pool Corp | no | easy | gemma3:1b, gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **haiku-4.5-direct** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–17% across the ladder.** Lowest-wobble model: **claude-haiku-4.5** (0% wobble, 100% accuracy).
 
 ---
 
@@ -867,18 +867,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **33%** | 96% | 78% | 9/9 | 180/180 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 9/9 | 179/180 (99%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 9/9 | 177/180 (98%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 9/9 | 177/180 (98%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 44% | 9/9 | 180/180 (100%) |
+| `gemma3:1b` | 1B, local | **33%** | 96% | 78% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 177/180 (98%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 9/9 | 179/180 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 44% | 9/9 | 180/180 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 177/180 (98%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -895,28 +895,28 @@
 |---|---|---|
 | `gemma3:1b` | 5/6 | 2/3 |
 | `deepseek-v4-flash` | 6/6 | 3/3 |
-| `openai/gpt-oss-120b` | 6/6 | 3/3 |
-| `google/gemma-4-31b-it` | 6/6 | 3/3 |
-| `claude-haiku-4-5-20251001` | 6/6 | 3/3 |
-| `meta-llama/llama-3.3-70b-instruct` | 6/6 | 3/3 |
 | `deepseek-v4-pro` | 6/6 | 3/3 |
-| `openai/gpt-5-mini` | 6/6 | 3/3 |
-| `mistralai/mistral-large-2512` | 6/6 | 3/3 |
-| `google/gemini-3-flash-preview` | 6/6 | 3/3 |
-| `minimax/minimax-m2.5` | 6/6 | 3/3 |
+| `gemma-4-31b-it` | 6/6 | 3/3 |
+| `mistral-large-2512` | 6/6 | 3/3 |
+| `minimax-m2.5` | 6/6 | 3/3 |
+| `llama-3.3-70b` | 6/6 | 3/3 |
 | `gemma3:1b-it-qat` | 2/6 | 2/3 |
+| `gemini-3-flash` | 6/6 | 3/3 |
+| `claude-haiku-4.5` | 6/6 | 3/3 |
+| `gpt-oss-120b` | 6/6 | 3/3 |
+| `gpt-5-mini` | 6/6 | 3/3 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| GIBRALTAR INDUSTRIES,  | yes | easy | 1B |
-| CASTLIGHT HEALTH, INC. | yes | medium | 1B |
-| YELP INC | no | easy | 1B |
+| GIBRALTAR INDUSTRIES,  | yes | easy | gemma3:1b |
+| CASTLIGHT HEALTH, INC. | yes | medium | gemma3:1b |
+| YELP INC | no | easy | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–33% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–33% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -931,18 +931,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **11%** | 99% | 0% | 7/9 | 180/180 (100%) |
-| `deepseek-v4-flash` | hosted | **11%** | 96% | 67% | 9/9 | 112/180 (62%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 67% | 9/9 | 180/180 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **11%** | 97% | 67% | 9/9 | 179/180 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 67% | 9/9 | 180/180 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 78% | 9/9 | 180/180 (100%) |
-| `openai/gpt-5-mini` | ? | **22%** | 99% | 67% | 9/9 | 180/180 (100%) |
-| `deepseek-v4-pro` | ? | **11%** | 98% | 67% | 9/9 | 180/180 (100%) |
-| `mistralai/mistral-large-2512` | ? | **11%** | 99% | 67% | 9/9 | 180/180 (100%) |
-| `google/gemini-3-flash-preview` | ? | **11%** | 98% | 67% | 9/9 | 172/180 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 67% | 9/9 | 171/180 (95%) |
-| `gemma3:1b-it-qat` | ? | **67%** | 73% | 56% | 9/9 | 180/180 (100%) |
+| `gemma3:1b` | 1B, local | **11%** | 99% | 0% | 7/9 | 180/180 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **11%** | 96% | 67% | 9/9 | 112/180 (62%) |
+| `deepseek-v4-pro` | hosted, direct | **11%** | 98% | 67% | 9/9 | 180/180 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 67% | 9/9 | 180/180 (100%) |
+| `mistral-large-2512` | hosted (OR) | **11%** | 99% | 67% | 9/9 | 180/180 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 67% | 9/9 | 171/180 (95%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **11%** | 97% | 67% | 9/9 | 179/180 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **67%** | 73% | 56% | 9/9 | 180/180 (100%) |
+| `gemini-3-flash` | hosted (OR) | **11%** | 98% | 67% | 9/9 | 172/180 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 78% | 9/9 | 180/180 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 67% | 9/9 | 180/180 (100%) |
+| `gpt-5-mini` | hosted (OR) | **22%** | 99% | 67% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -959,32 +959,32 @@
 |---|---|---|---|---|---|
 | `gemma3:1b` | — | 0/2 | 0/3 | 0/2 | — |
 | `deepseek-v4-flash` | — | 2/3 | 1/3 | 3/3 | — |
-| `openai/gpt-oss-120b` | — | 2/3 | 1/3 | 3/3 | — |
-| `meta-llama/llama-3.3-70b-instruct` | — | 2/3 | 1/3 | 3/3 | — |
-| `google/gemma-4-31b-it` | — | 2/3 | 1/3 | 3/3 | — |
-| `claude-haiku-4-5-20251001` | — | 2/3 | 2/3 | 3/3 | — |
-| `openai/gpt-5-mini` | — | 2/3 | 1/3 | 3/3 | — |
 | `deepseek-v4-pro` | — | 2/3 | 1/3 | 3/3 | — |
-| `mistralai/mistral-large-2512` | — | 2/3 | 1/3 | 3/3 | — |
-| `google/gemini-3-flash-preview` | — | 2/3 | 1/3 | 3/3 | — |
-| `minimax/minimax-m2.5` | — | 2/3 | 1/3 | 3/3 | — |
+| `gemma-4-31b-it` | — | 2/3 | 1/3 | 3/3 | — |
+| `mistral-large-2512` | — | 2/3 | 1/3 | 3/3 | — |
+| `minimax-m2.5` | — | 2/3 | 1/3 | 3/3 | — |
+| `llama-3.3-70b` | — | 2/3 | 1/3 | 3/3 | — |
 | `gemma3:1b-it-qat` | — | 1/3 | 2/3 | 2/3 | — |
+| `gemini-3-flash` | — | 2/3 | 1/3 | 3/3 | — |
+| `claude-haiku-4.5` | — | 2/3 | 2/3 | 3/3 | — |
+| `gpt-oss-120b` | — | 2/3 | 1/3 | 3/3 | — |
+| `gpt-5-mini` | — | 2/3 | 1/3 | 3/3 | — |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| COUNTERPATH CORP  (CIK | 1x | easy | gemma3-1b-qat |
-| BIOVENTRIX, INC.  (CIK | 1x | easy | 1B, gemma3-1b-qat |
-| Revance Therapeutics,  | 1x | easy | gemma3-1b-qat |
-| Oportun Financial Corp | 2x | easy | 1B, hosted, llama3.3-70b-or, gpt5-mini-or, deepseek-v4p, mistral-large-or, gemma3-1b-qat |
-| Pagaya Technologies Lt | 2x | easy | gpt5-mini-or, gemma3-1b-qat |
-| BECEEM COMMUNICATIONS  | 3x | easy | gemma3-1b-qat |
-| CASTLE BIOSCIENCES INC | 3x | easy | 1B, gemini3-flash-or |
+| COUNTERPATH CORP  (CIK | 1x | easy | gemma3:1b-it-qat |
+| BIOVENTRIX, INC.  (CIK | 1x | easy | gemma3:1b, gemma3:1b-it-qat |
+| Revance Therapeutics,  | 1x | easy | gemma3:1b-it-qat |
+| Oportun Financial Corp | 2x | easy | gemma3:1b, deepseek-v4-flash, deepseek-v4-pro, mistral-large-2512, llama-3.3-70b, gemma3:1b-it-qat, gpt-5-mini |
+| Pagaya Technologies Lt | 2x | easy | gemma3:1b-it-qat, gpt-5-mini |
+| BECEEM COMMUNICATIONS  | 3x | easy | gemma3:1b-it-qat |
+| CASTLE BIOSCIENCES INC | 3x | easy | gemma3:1b, gemini-3-flash |
 
 ## What this shows
 
-- **Wobble spread: 0%–67% across the ladder.** Lowest-wobble model: **haiku-4.5-direct** (0% wobble, 78% accuracy).
+- **Wobble spread: 0%–67% across the ladder.** Lowest-wobble model: **claude-haiku-4.5** (0% wobble, 78% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -999,18 +999,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **11%** | 96% | 78% | 9/9 | 180/180 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 67% | 9/9 | 180/180 (100%) |
-| `openai/gpt-oss-120b` | ? | **22%** | 94% | 78% | 9/9 | 180/180 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **22%** | 96% | 44% | 9/9 | 179/180 (99%) |
-| `google/gemma-4-31b-it` | ? | **33%** | 93% | 67% | 9/9 | 175/180 (97%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 78% | 9/9 | 180/180 (100%) |
-| `openai/gpt-5-mini` | ? | **44%** | 94% | 78% | 9/9 | 180/180 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
-| `mistralai/mistral-large-2512` | ? | **11%** | 98% | 44% | 9/9 | 180/180 (100%) |
-| `google/gemini-3-flash-preview` | ? | **11%** | 94% | 78% | 9/9 | 175/180 (97%) |
-| `minimax/minimax-m2.5` | ? | **33%** | 92% | 67% | 9/9 | 146/180 (81%) |
-| `gemma3:1b-it-qat` | ? | **11%** | 99% | 100% | 9/9 | 180/180 (100%) |
+| `gemma3:1b` | 1B, local | **11%** | 96% | 78% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 67% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **33%** | 93% | 67% | 9/9 | 175/180 (97%) |
+| `mistral-large-2512` | hosted (OR) | **11%** | 98% | 44% | 9/9 | 180/180 (100%) |
+| `minimax-m2.5` | hosted (OR) | **33%** | 92% | 67% | 9/9 | 146/180 (81%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **22%** | 96% | 44% | 9/9 | 179/180 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **11%** | 99% | 100% | 9/9 | 180/180 (100%) |
+| `gemini-3-flash` | hosted (OR) | **11%** | 94% | 78% | 9/9 | 175/180 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 78% | 9/9 | 180/180 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **22%** | 94% | 78% | 9/9 | 180/180 (100%) |
+| `gpt-5-mini` | hosted (OR) | **44%** | 94% | 78% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1024,16 +1024,16 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Dollar General Corpora | 1 | medium | llama3.3-70b-or |
-| Emergent Capital, Inc. | 3 | medium | gpt-oss-120b-or, gpt5-mini-or, minimax-m2.5-or |
-| Ute Energy Corporation | 1 | medium | 1B, llama3.3-70b-or, gemma4-31b-or, minimax-m2.5-or |
-| Ute Energy Corporation | 2 | medium | gemma4-31b-or, gpt5-mini-or, gemini3-flash-or, gemma3-1b-qat |
-| Cinemark Holdings, Inc | 5 | easy | gpt-oss-120b-or, gemma4-31b-or, gpt5-mini-or, mistral-large-or, minimax-m2.5-or |
-| Cinemark Holdings, Inc | 9 | hard | gpt5-mini-or |
+| Dollar General Corpora | 1 | medium | llama-3.3-70b |
+| Emergent Capital, Inc. | 3 | medium | minimax-m2.5, gpt-oss-120b, gpt-5-mini |
+| Ute Energy Corporation | 1 | medium | gemma3:1b, gemma-4-31b-it, minimax-m2.5, llama-3.3-70b |
+| Ute Energy Corporation | 2 | medium | gemma-4-31b-it, gemma3:1b-it-qat, gemini-3-flash, gpt-5-mini |
+| Cinemark Holdings, Inc | 5 | easy | gemma-4-31b-it, mistral-large-2512, minimax-m2.5, gpt-oss-120b, gpt-5-mini |
+| Cinemark Holdings, Inc | 9 | hard | gpt-5-mini |
 
 ## What this shows
 
-- **Wobble spread: 0%–44% across the ladder.** Lowest-wobble model: **deepseek-v4p** (0% wobble, 89% accuracy).
+- **Wobble spread: 0%–44% across the ladder.** Lowest-wobble model: **deepseek-v4-pro** (0% wobble, 89% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -1048,18 +1048,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **13%** | 97% | 87% | 15/15 | 300/300 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 15/15 | 289/300 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 15/15 | 299/300 (100%) |
-| `gemma3:1b-it-qat` | ? | **7%** | 98% | 100% | 15/15 | 300/300 (100%) |
+| `gemma3:1b` | 1B, local | **13%** | 97% | 87% | 15/15 | 300/300 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 15/15 | 299/300 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **7%** | 98% | 100% | 15/15 | 300/300 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 15/15 | 289/300 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 15/15 | 300/300 (100%) |
 
 **What the columns mean:**
 
@@ -1076,27 +1076,27 @@
 |---|---|---|
 | `gemma3:1b` | 9/9 | 4/6 |
 | `deepseek-v4-flash` | 9/9 | 6/6 |
-| `openai/gpt-oss-120b` | 9/9 | 6/6 |
-| `google/gemma-4-31b-it` | 9/9 | 6/6 |
-| `claude-haiku-4-5-20251001` | 9/9 | 6/6 |
-| `meta-llama/llama-3.3-70b-instruct` | 9/9 | 6/6 |
 | `deepseek-v4-pro` | 9/9 | 6/6 |
-| `openai/gpt-5-mini` | 9/9 | 6/6 |
-| `mistralai/mistral-large-2512` | 9/9 | 6/6 |
-| `google/gemini-3-flash-preview` | 9/9 | 6/6 |
-| `minimax/minimax-m2.5` | 9/9 | 6/6 |
+| `gemma-4-31b-it` | 9/9 | 6/6 |
+| `mistral-large-2512` | 9/9 | 6/6 |
+| `minimax-m2.5` | 9/9 | 6/6 |
+| `llama-3.3-70b` | 9/9 | 6/6 |
 | `gemma3:1b-it-qat` | 9/9 | 6/6 |
+| `gemini-3-flash` | 9/9 | 6/6 |
+| `claude-haiku-4.5` | 9/9 | 6/6 |
+| `gpt-oss-120b` | 9/9 | 6/6 |
+| `gpt-5-mini` | 9/9 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Rare Earths Americas,  | no | easy | 1B |
-| TaoWeave, Inc. | no | hard | 1B, gemma3-1b-qat |
+| Rare Earths Americas,  | no | easy | gemma3:1b |
+| TaoWeave, Inc. | no | hard | gemma3:1b, gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–13% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–13% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1110,18 +1110,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **16%** | 96% | 63% | 19/19 | 380/380 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
-| `openai/gpt-oss-120b` | ? | **11%** | 97% | 100% | 19/19 | 379/380 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
-| `openai/gpt-5-mini` | ? | **11%** | 98% | 100% | 19/19 | 380/380 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 19/19 | 359/380 (94%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 95% | 19/19 | 375/380 (99%) |
-| `gemma3:1b-it-qat` | ? | **21%** | 96% | 68% | 19/19 | 380/380 (100%) |
+| `gemma3:1b` | 1B, local | **16%** | 96% | 63% | 19/19 | 380/380 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 95% | 19/19 | 375/380 (99%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **21%** | 96% | 68% | 19/19 | 380/380 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 19/19 | 359/380 (94%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 95% | 19/19 | 380/380 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **11%** | 97% | 100% | 19/19 | 379/380 (100%) |
+| `gpt-5-mini` | hosted (OR) | **11%** | 98% | 100% | 19/19 | 380/380 (100%) |
 
 **What the columns mean:**
 
@@ -1138,32 +1138,32 @@
 |---|---|---|
 | `gemma3:1b` | 6/13 | 6/6 |
 | `deepseek-v4-flash` | 13/13 | 5/6 |
-| `openai/gpt-oss-120b` | 13/13 | 6/6 |
-| `meta-llama/llama-3.3-70b-instruct` | 13/13 | 5/6 |
-| `google/gemma-4-31b-it` | 13/13 | 5/6 |
-| `claude-haiku-4-5-20251001` | 13/13 | 5/6 |
 | `deepseek-v4-pro` | 13/13 | 5/6 |
-| `openai/gpt-5-mini` | 13/13 | 6/6 |
-| `mistralai/mistral-large-2512` | 13/13 | 5/6 |
-| `google/gemini-3-flash-preview` | 13/13 | 6/6 |
-| `minimax/minimax-m2.5` | 13/13 | 5/6 |
+| `gemma-4-31b-it` | 13/13 | 5/6 |
+| `mistral-large-2512` | 13/13 | 5/6 |
+| `minimax-m2.5` | 13/13 | 5/6 |
+| `llama-3.3-70b` | 13/13 | 5/6 |
 | `gemma3:1b-it-qat` | 7/13 | 6/6 |
+| `gemini-3-flash` | 13/13 | 6/6 |
+| `claude-haiku-4.5` | 13/13 | 5/6 |
+| `gpt-oss-120b` | 13/13 | 6/6 |
+| `gpt-5-mini` | 13/13 | 6/6 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Viking Therapeutics, I | pre-money | easy | gemma3-1b-qat |
-| Rules-Based Medicine I | pre-money | easy | gemma3-1b-qat |
-| RMG Acquisition Corp.  | pre-money | easy | gpt-oss-120b-or, gpt5-mini-or |
-| Ucommune Group Holding | pre-money | easy | 1B |
-| VIEWRAY INC | pre-money | easy | 1B, gemma3-1b-qat |
-| SOCIETY PASS INCORPORA | pre-money | easy | 1B, gemma3-1b-qat |
-| New Global Energy, Inc | post-money | easy | gpt-oss-120b-or, gpt5-mini-or |
+| Viking Therapeutics, I | pre-money | easy | gemma3:1b-it-qat |
+| Rules-Based Medicine I | pre-money | easy | gemma3:1b-it-qat |
+| RMG Acquisition Corp.  | pre-money | easy | gpt-oss-120b, gpt-5-mini |
+| Ucommune Group Holding | pre-money | easy | gemma3:1b |
+| VIEWRAY INC | pre-money | easy | gemma3:1b, gemma3:1b-it-qat |
+| SOCIETY PASS INCORPORA | pre-money | easy | gemma3:1b, gemma3:1b-it-qat |
+| New Global Energy, Inc | post-money | easy | gpt-oss-120b, gpt-5-mini |
 
 ## What this shows
 
-- **Wobble spread: 0%–21% across the ladder.** Lowest-wobble model: **gemini3-flash-or** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–21% across the ladder.** Lowest-wobble model: **gemini-3-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1177,18 +1177,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **29%** | 91% | 57% | 7/7 | 140/140 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **14%** | 98% | 86% | 7/7 | 138/140 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 139/140 (99%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 7/7 | 134/140 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 7/7 | 139/140 (99%) |
-| `gemma3:1b-it-qat` | ? | **14%** | 99% | 57% | 7/7 | 140/140 (100%) |
+| `gemma3:1b` | 1B, local | **29%** | 91% | 57% | 7/7 | 140/140 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 139/140 (99%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 139/140 (99%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **14%** | 98% | 86% | 7/7 | 138/140 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **14%** | 99% | 57% | 7/7 | 140/140 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 134/140 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1205,28 +1205,28 @@
 |---|---|---|
 | `gemma3:1b` | 4/4 | 0/3 |
 | `deepseek-v4-flash` | 4/4 | 3/3 |
-| `openai/gpt-oss-120b` | 4/4 | 3/3 |
-| `meta-llama/llama-3.3-70b-instruct` | 3/4 | 3/3 |
-| `google/gemma-4-31b-it` | 4/4 | 3/3 |
-| `claude-haiku-4-5-20251001` | 4/4 | 3/3 |
-| `openai/gpt-5-mini` | 4/4 | 3/3 |
 | `deepseek-v4-pro` | 4/4 | 3/3 |
-| `mistralai/mistral-large-2512` | 4/4 | 3/3 |
-| `google/gemini-3-flash-preview` | 4/4 | 3/3 |
-| `minimax/minimax-m2.5` | 4/4 | 3/3 |
+| `gemma-4-31b-it` | 4/4 | 3/3 |
+| `mistral-large-2512` | 4/4 | 3/3 |
+| `minimax-m2.5` | 4/4 | 3/3 |
+| `llama-3.3-70b` | 3/4 | 3/3 |
 | `gemma3:1b-it-qat` | 4/4 | 0/3 |
+| `gemini-3-flash` | 4/4 | 3/3 |
+| `claude-haiku-4.5` | 4/4 | 3/3 |
+| `gpt-oss-120b` | 4/4 | 3/3 |
+| `gpt-5-mini` | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| NYTEX Energy Holdings, | yes | hard | llama3.3-70b-or |
-| ZIX CORP | no | easy | 1B |
-| VISIUM TECHNOLOGIES, I | no | medium | 1B, gemma3-1b-qat |
+| NYTEX Energy Holdings, | yes | hard | llama-3.3-70b |
+| ZIX CORP | no | easy | gemma3:1b |
+| VISIUM TECHNOLOGIES, I | no | medium | gemma3:1b, gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–29% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–29% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1240,18 +1240,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **25%** | 97% | 25% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 4/4 | 75/80 (94%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `gemma3:1b-it-qat` | ? | **25%** | 95% | 75% | 4/4 | 80/80 (100%) |
+| `gemma3:1b` | 1B, local | **25%** | 97% | 25% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **25%** | 95% | 75% | 4/4 | 80/80 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 75/80 (94%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1265,12 +1265,12 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| XTI Aerospace, Inc. | 275000000 | medium | 1B |
-| Remark Holdings, Inc.  | 5000000 | easy | gemma3-1b-qat |
+| XTI Aerospace, Inc. | 275000000 | medium | gemma3:1b |
+| Remark Holdings, Inc.  | 5000000 | easy | gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1284,18 +1284,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 40% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 5/5 | 98/100 (98%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 5/5 | 97/100 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `gemma3:1b-it-qat` | ? | **20%** | 91% | 40% | 5/5 | 100/100 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 40% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 98/100 (98%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **20%** | 91% | 40% | 5/5 | 100/100 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 97/100 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1312,26 +1312,26 @@
 |---|---|---|---|---|---|
 | `gemma3:1b` | 2/2 | 0/2 | — | — | 0/1 |
 | `deepseek-v4-flash` | 2/2 | 2/2 | — | — | 1/1 |
-| `openai/gpt-oss-120b` | 2/2 | 2/2 | — | — | 1/1 |
-| `meta-llama/llama-3.3-70b-instruct` | 2/2 | 2/2 | — | — | 1/1 |
-| `google/gemma-4-31b-it` | 2/2 | 2/2 | — | — | 1/1 |
-| `claude-haiku-4-5-20251001` | 2/2 | 2/2 | — | — | 1/1 |
-| `openai/gpt-5-mini` | 2/2 | 2/2 | — | — | 1/1 |
 | `deepseek-v4-pro` | 2/2 | 2/2 | — | — | 1/1 |
-| `mistralai/mistral-large-2512` | 2/2 | 2/2 | — | — | 1/1 |
-| `google/gemini-3-flash-preview` | 2/2 | 2/2 | — | — | 1/1 |
-| `minimax/minimax-m2.5` | 2/2 | 2/2 | — | — | 1/1 |
+| `gemma-4-31b-it` | 2/2 | 2/2 | — | — | 1/1 |
+| `mistral-large-2512` | 2/2 | 2/2 | — | — | 1/1 |
+| `minimax-m2.5` | 2/2 | 2/2 | — | — | 1/1 |
+| `llama-3.3-70b` | 2/2 | 2/2 | — | — | 1/1 |
 | `gemma3:1b-it-qat` | 2/2 | 0/2 | — | — | 0/1 |
+| `gemini-3-flash` | 2/2 | 2/2 | — | — | 1/1 |
+| `claude-haiku-4.5` | 2/2 | 2/2 | — | — | 1/1 |
+| `gpt-oss-120b` | 2/2 | 2/2 | — | — | 1/1 |
+| `gpt-5-mini` | 2/2 | 2/2 | — | — | 1/1 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| VISIUM TECHNOLOGIES, I | weighted-average | medium | gemma3-1b-qat |
+| VISIUM TECHNOLOGIES, I | weighted-average | medium | gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–20% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–20% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1345,18 +1345,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **8%** | 100% | 31% | 13/13 | 260/260 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 85% | 13/13 | 191/260 (73%) |
-| `openai/gpt-oss-120b` | ? | **8%** | 100% | 85% | 13/13 | 260/260 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 77% | 13/13 | 259/260 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 77% | 13/13 | 260/260 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 69% | 13/13 | 260/260 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 77% | 13/13 | 250/260 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
-| `gemma3:1b-it-qat` | ? | **8%** | 99% | 62% | 13/13 | 260/260 (100%) |
+| `gemma3:1b` | 1B, local | **8%** | 100% | 31% | 13/13 | 260/260 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 85% | 13/13 | 191/260 (73%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 77% | 13/13 | 260/260 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 77% | 13/13 | 259/260 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **8%** | 99% | 62% | 13/13 | 260/260 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 77% | 13/13 | 250/260 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 69% | 13/13 | 260/260 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **8%** | 100% | 85% | 13/13 | 260/260 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 85% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -1373,28 +1373,28 @@
 |---|---|---|
 | `gemma3:1b` | 4/4 | 0/9 |
 | `deepseek-v4-flash` | 2/4 | 9/9 |
-| `openai/gpt-oss-120b` | 2/4 | 9/9 |
-| `meta-llama/llama-3.3-70b-instruct` | 2/4 | 8/9 |
-| `google/gemma-4-31b-it` | 2/4 | 8/9 |
-| `claude-haiku-4-5-20251001` | 2/4 | 7/9 |
 | `deepseek-v4-pro` | 2/4 | 9/9 |
-| `openai/gpt-5-mini` | 2/4 | 9/9 |
-| `mistralai/mistral-large-2512` | 2/4 | 9/9 |
-| `google/gemini-3-flash-preview` | 2/4 | 8/9 |
-| `minimax/minimax-m2.5` | 2/4 | 9/9 |
+| `gemma-4-31b-it` | 2/4 | 8/9 |
+| `mistral-large-2512` | 2/4 | 9/9 |
+| `minimax-m2.5` | 2/4 | 9/9 |
+| `llama-3.3-70b` | 2/4 | 8/9 |
 | `gemma3:1b-it-qat` | 0/4 | 8/9 |
+| `gemini-3-flash` | 2/4 | 8/9 |
+| `claude-haiku-4.5` | 2/4 | 7/9 |
+| `gpt-oss-120b` | 2/4 | 9/9 |
+| `gpt-5-mini` | 2/4 | 9/9 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Fitbit Inc | no | hard | 1B |
-| Internet Security Syst | no | medium | gemma3-1b-qat |
-| BioAccelerate Holdings | no | hard | gpt-oss-120b-or |
+| Fitbit Inc | no | hard | gemma3:1b |
+| Internet Security Syst | no | medium | gemma3:1b-it-qat |
+| BioAccelerate Holdings | no | hard | gpt-oss-120b |
 
 ## What this shows
 
-- **Wobble spread: 0%–8% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 85% accuracy).
+- **Wobble spread: 0%–8% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 85% accuracy).
 
 ---
 
@@ -1408,18 +1408,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 7/7 | 136/140 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 57% | 7/7 | 140/140 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 57% | 7/7 | 140/140 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 136/140 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1436,16 +1436,16 @@
 |---|---|---|
 | `gemma3:1b` | 4/4 | 3/3 |
 | `deepseek-v4-flash` | 4/4 | 3/3 |
-| `openai/gpt-oss-120b` | 4/4 | 3/3 |
-| `meta-llama/llama-3.3-70b-instruct` | 4/4 | 3/3 |
-| `google/gemma-4-31b-it` | 4/4 | 3/3 |
-| `claude-haiku-4-5-20251001` | 4/4 | 3/3 |
 | `deepseek-v4-pro` | 4/4 | 3/3 |
-| `openai/gpt-5-mini` | 4/4 | 3/3 |
-| `mistralai/mistral-large-2512` | 4/4 | 3/3 |
-| `google/gemini-3-flash-preview` | 4/4 | 3/3 |
-| `minimax/minimax-m2.5` | 4/4 | 3/3 |
+| `gemma-4-31b-it` | 4/4 | 3/3 |
+| `mistral-large-2512` | 4/4 | 3/3 |
+| `minimax-m2.5` | 4/4 | 3/3 |
+| `llama-3.3-70b` | 4/4 | 3/3 |
 | `gemma3:1b-it-qat` | 1/4 | 3/3 |
+| `gemini-3-flash` | 4/4 | 3/3 |
+| `claude-haiku-4.5` | 4/4 | 3/3 |
+| `gpt-oss-120b` | 4/4 | 3/3 |
+| `gpt-5-mini` | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
@@ -1454,7 +1454,7 @@
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **gemma3:1b** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1468,18 +1468,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 3/3 | 56/60 (93%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 100% | 3/3 | 59/60 (98%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 100% | 3/3 | 59/60 (98%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 3/3 | 56/60 (93%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -1496,7 +1496,7 @@
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **gemma3:1b** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1510,18 +1510,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **43%** | 90% | 71% | 7/7 | 134/140 (96%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 7/7 | 139/140 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 7/7 | 136/140 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `gemma3:1b-it-qat` | ? | **14%** | 95% | 43% | 7/7 | 140/140 (100%) |
+| `gemma3:1b` | 1B, local | **43%** | 90% | 71% | 7/7 | 134/140 (96%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 139/140 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **14%** | 95% | 43% | 7/7 | 140/140 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 136/140 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1535,14 +1535,14 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Medecision, Inc. | 0.03 | easy | 1B |
-| Medecision, Inc. | 0.25 | easy | gemma3-1b-qat |
-| Medecision, Inc. | 1.25 | medium | 1B |
-| Medecision, Inc. | 2.0 | medium | 1B |
+| Medecision, Inc. | 0.03 | easy | gemma3:1b |
+| Medecision, Inc. | 0.25 | easy | gemma3:1b-it-qat |
+| Medecision, Inc. | 1.25 | medium | gemma3:1b |
+| Medecision, Inc. | 2.0 | medium | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–43% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–43% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -1557,18 +1557,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **25%** | 95% | 75% | 8/8 | 160/160 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 8/8 | 155/160 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `gemma3:1b-it-qat` | ? | **25%** | 93% | 75% | 8/8 | 160/160 (100%) |
+| `gemma3:1b` | 1B, local | **25%** | 95% | 75% | 8/8 | 160/160 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **25%** | 93% | 75% | 8/8 | 160/160 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 8/8 | 155/160 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -1582,13 +1582,13 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Complete Solaria, Inc. | 53540000 | medium | gemma3-1b-qat |
-| Invizyne Technologies  | 100000000 | hard | 1B, gemma3-1b-qat |
-| PaxMedica, Inc. | 150000000 | hard | 1B |
+| Complete Solaria, Inc. | 53540000 | medium | gemma3:1b-it-qat |
+| Invizyne Technologies  | 100000000 | hard | gemma3:1b, gemma3:1b-it-qat |
+| PaxMedica, Inc. | 150000000 | hard | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1602,18 +1602,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 7/7 | 139/140 (99%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/7 | 100/140 (71%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 7/7 | 139/140 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 7/7 | 135/140 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 100% | 7/7 | 139/140 (99%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/7 | 100/140 (71%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 139/140 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 135/140 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 7/7 | 140/140 (100%) |
 
 **What the columns mean:**
 
@@ -1627,12 +1627,12 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| ACOLOGY, INC. | 400000 | easy | hosted |
-| GARDENBURGER, INC. | 17364375 | easy | hosted |
+| ACOLOGY, INC. | 400000 | easy | deepseek-v4-flash |
+| GARDENBURGER, INC. | 17364375 | easy | deepseek-v4-flash |
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **gemma3:1b** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1646,18 +1646,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **22%** | 92% | 56% | 9/9 | 180/180 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `openai/gpt-oss-120b` | ? | **11%** | 99% | 100% | 9/9 | 180/180 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 9/9 | 175/180 (97%) |
-| `minimax/minimax-m2.5` | ? | **44%** | 91% | 100% | 9/9 | 180/180 (100%) |
-| `gemma3:1b-it-qat` | ? | **11%** | 98% | 33% | 9/9 | 180/180 (100%) |
+| `gemma3:1b` | 1B, local | **22%** | 92% | 56% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `minimax-m2.5` | hosted (OR) | **44%** | 91% | 100% | 9/9 | 180/180 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **11%** | 98% | 33% | 9/9 | 180/180 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 175/180 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **11%** | 99% | 100% | 9/9 | 180/180 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -1671,15 +1671,15 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Creci Inc. | 20 | medium | gpt-oss-120b-or |
-| Complete Solaria, Inc. | 20 | easy | 1B, minimax-m2.5-or |
-| Lomond Therapeutics Ho | 10 | hard | minimax-m2.5-or |
-| Maison Luxe, Inc. | 20 | easy | minimax-m2.5-or |
-| Parker Clay Global, PB | 15 | medium | 1B, minimax-m2.5-or, gemma3-1b-qat |
+| Creci Inc. | 20 | medium | gpt-oss-120b |
+| Complete Solaria, Inc. | 20 | easy | gemma3:1b, minimax-m2.5 |
+| Lomond Therapeutics Ho | 10 | hard | minimax-m2.5 |
+| Maison Luxe, Inc. | 20 | easy | minimax-m2.5 |
+| Parker Clay Global, PB | 15 | medium | gemma3:1b, minimax-m2.5, gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–44% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–44% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -1694,18 +1694,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 90% | 75% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 68/80 (85%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 4/4 | 79/80 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 4/4 | 77/80 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `gemma3:1b-it-qat` | ? | **25%** | 89% | 100% | 4/4 | 80/80 (100%) |
+| `gemma3:1b` | 1B, local | **50%** | 90% | 75% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 4/4 | 68/80 (85%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 79/80 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **25%** | 89% | 100% | 4/4 | 80/80 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 77/80 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -1719,12 +1719,12 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Damon Motors Inc. | 125000000 | easy | 1B, gemma3-1b-qat |
-| Greenfield Robotics Co | 30000000 | easy | 1B |
+| Damon Motors Inc. | 125000000 | easy | gemma3:1b, gemma3:1b-it-qat |
+| Greenfield Robotics Co | 30000000 | easy | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -1739,18 +1739,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 90% | 80% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 5/5 | 97/100 (97%) |
-| `google/gemma-4-31b-it` | ? | **20%** | 97% | 100% | 5/5 | 100/100 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 5/5 | 97/100 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 5/5 | 82/100 (82%) |
-| `gemma3:1b-it-qat` | ? | **40%** | 92% | 80% | 5/5 | 100/100 (100%) |
+| `gemma3:1b` | 1B, local | **20%** | 90% | 80% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **20%** | 97% | 100% | 5/5 | 100/100 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 82/100 (82%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 97/100 (97%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **40%** | 92% | 80% | 5/5 | 100/100 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 97/100 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1764,13 +1764,13 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Loop Industries, Inc. | 1 | easy | gemma3-1b-qat |
-| Air Defense Services,  | 100 | medium | gemma4-31b-or |
-| Boston Life Sciences,  | 8000 | hard | 1B, gemma3-1b-qat |
+| Loop Industries, Inc. | 1 | easy | gemma3:1b-it-qat |
+| Air Defense Services,  | 100 | medium | gemma-4-31b-it |
+| Boston Life Sciences,  | 8000 | hard | gemma3:1b, gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–40% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–40% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -1785,18 +1785,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 70% | 10/10 | 200/200 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 10/10 | 194/200 (97%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 10/10 | 192/200 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 10/10 | 198/200 (99%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 70% | 10/10 | 200/200 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 70% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 10/10 | 198/200 (99%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 194/200 (97%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 70% | 10/10 | 200/200 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 10/10 | 192/200 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -1813,16 +1813,16 @@
 |---|---|---|---|
 | `gemma3:1b` | 3/3 | 4/4 | 0/3 |
 | `deepseek-v4-flash` | 3/3 | 4/4 | 3/3 |
-| `openai/gpt-oss-120b` | 3/3 | 4/4 | 3/3 |
-| `meta-llama/llama-3.3-70b-instruct` | 3/3 | 4/4 | 3/3 |
-| `google/gemma-4-31b-it` | 3/3 | 4/4 | 3/3 |
-| `claude-haiku-4-5-20251001` | 3/3 | 4/4 | 3/3 |
-| `openai/gpt-5-mini` | 3/3 | 4/4 | 3/3 |
 | `deepseek-v4-pro` | 3/3 | 4/4 | 3/3 |
-| `mistralai/mistral-large-2512` | 3/3 | 4/4 | 3/3 |
-| `google/gemini-3-flash-preview` | 3/3 | 4/4 | 3/3 |
-| `minimax/minimax-m2.5` | 3/3 | 4/4 | 3/3 |
+| `gemma-4-31b-it` | 3/3 | 4/4 | 3/3 |
+| `mistral-large-2512` | 3/3 | 4/4 | 3/3 |
+| `minimax-m2.5` | 3/3 | 4/4 | 3/3 |
+| `llama-3.3-70b` | 3/3 | 4/4 | 3/3 |
 | `gemma3:1b-it-qat` | 3/3 | 4/4 | 0/3 |
+| `gemini-3-flash` | 3/3 | 4/4 | 3/3 |
+| `claude-haiku-4.5` | 3/3 | 4/4 | 3/3 |
+| `gpt-oss-120b` | 3/3 | 4/4 | 3/3 |
+| `gpt-5-mini` | 3/3 | 4/4 | 3/3 |
 
 ### Which items make models wobble
 
@@ -1831,7 +1831,7 @@
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1845,18 +1845,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 5/5 | 98/100 (98%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 5/5 | 96/100 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `gemma3:1b-it-qat` | ? | **20%** | 93% | 80% | 5/5 | 100/100 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 98/100 (98%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **20%** | 93% | 80% | 5/5 | 100/100 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 96/100 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -1870,11 +1870,11 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Asana, Inc. | 100000000 | easy | gemma3-1b-qat |
+| Asana, Inc. | 100000000 | easy | gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–20% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–20% across the ladder.** Lowest-wobble model: **gemma3:1b** (0% wobble, 100% accuracy).
 
 ---
 
@@ -1888,18 +1888,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 83% | 6/6 | 120/120 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/6 | 50/120 (42%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 6/6 | 116/120 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `gemma3:1b-it-qat` | ? | **67%** | 83% | 67% | 6/6 | 113/120 (94%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 83% | 6/6 | 120/120 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/6 | 50/120 (42%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **67%** | 83% | 67% | 6/6 | 113/120 (94%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 6/6 | 116/120 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 
 **What the columns mean:**
 
@@ -1913,14 +1913,14 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| VERITAS Farms Inc. | 10.0 | easy | hosted, gemma3-1b-qat |
-| Golden Matrix Group, I | 8.0 | easy | gemma3-1b-qat |
-| LanzaTech Global, Inc. | 8.0 | easy | gemma3-1b-qat |
-| XTI Aerospace Inc. | 10.0 | medium | gemma3-1b-qat |
+| VERITAS Farms Inc. | 10.0 | easy | deepseek-v4-flash, gemma3:1b-it-qat |
+| Golden Matrix Group, I | 8.0 | easy | gemma3:1b-it-qat |
+| LanzaTech Global, Inc. | 8.0 | easy | gemma3:1b-it-qat |
+| XTI Aerospace Inc. | 10.0 | medium | gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–67% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–67% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -1935,18 +1935,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **54%** | 90% | 77% | 13/13 | 245/260 (94%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 13/13 | 251/260 (97%) |
-| `minimax/minimax-m2.5` | ? | **38%** | 96% | 100% | 13/13 | 255/260 (98%) |
-| `gemma3:1b-it-qat` | ? | **46%** | 92% | 54% | 13/13 | 260/260 (100%) |
+| `gemma3:1b` | 1B, local | **54%** | 90% | 77% | 13/13 | 245/260 (94%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `minimax-m2.5` | hosted (OR) | **38%** | 96% | 100% | 13/13 | 255/260 (98%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **46%** | 92% | 54% | 13/13 | 260/260 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 13/13 | 251/260 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 13/13 | 260/260 (100%) |
 
 **What the columns mean:**
 
@@ -1963,34 +1963,34 @@
 |---|---|---|---|
 | `gemma3:1b` | 2/2 | 0/1 | 8/10 |
 | `deepseek-v4-flash` | 2/2 | 1/1 | 10/10 |
-| `openai/gpt-oss-120b` | 2/2 | 1/1 | 10/10 |
-| `google/gemma-4-31b-it` | 2/2 | 1/1 | 10/10 |
-| `claude-haiku-4-5-20251001` | 2/2 | 1/1 | 10/10 |
-| `meta-llama/llama-3.3-70b-instruct` | 2/2 | 1/1 | 10/10 |
 | `deepseek-v4-pro` | 2/2 | 1/1 | 10/10 |
-| `openai/gpt-5-mini` | 2/2 | 1/1 | 10/10 |
-| `mistralai/mistral-large-2512` | 2/2 | 1/1 | 10/10 |
-| `google/gemini-3-flash-preview` | 2/2 | 1/1 | 10/10 |
-| `minimax/minimax-m2.5` | 2/2 | 1/1 | 10/10 |
+| `gemma-4-31b-it` | 2/2 | 1/1 | 10/10 |
+| `mistral-large-2512` | 2/2 | 1/1 | 10/10 |
+| `minimax-m2.5` | 2/2 | 1/1 | 10/10 |
+| `llama-3.3-70b` | 2/2 | 1/1 | 10/10 |
 | `gemma3:1b-it-qat` | 1/2 | 0/1 | 6/10 |
+| `gemini-3-flash` | 2/2 | 1/1 | 10/10 |
+| `claude-haiku-4.5` | 2/2 | 1/1 | 10/10 |
+| `gpt-oss-120b` | 2/2 | 1/1 | 10/10 |
+| `gpt-5-mini` | 2/2 | 1/1 | 10/10 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Parker Clay Global, PB | both-mfn | medium | minimax-m2.5-or, gemma3-1b-qat |
-| Maison Luxe, Inc. | both-mfn | medium | 1B, gemma3-1b-qat |
-| Rentberry Inc. | both-mfn | medium | 1B, gemma3-1b-qat |
-| Creci Inc. | both-mfn | medium | 1B |
-| Complete Solaria, Inc. | both-mfn | easy | minimax-m2.5-or |
-| Lomond Therapeutics Ho | both-mfn | medium | 1B, minimax-m2.5-or, gemma3-1b-qat |
-| Neo Aeronautics, Inc. | both-mfn | medium | 1B, minimax-m2.5-or, gemma3-1b-qat |
-| Manako Labs Ltd | both-mfn | medium | 1B, minimax-m2.5-or, gemma3-1b-qat |
-| Gardedam Therapeutics  | cap | medium | 1B |
+| Parker Clay Global, PB | both-mfn | medium | minimax-m2.5, gemma3:1b-it-qat |
+| Maison Luxe, Inc. | both-mfn | medium | gemma3:1b, gemma3:1b-it-qat |
+| Rentberry Inc. | both-mfn | medium | gemma3:1b, gemma3:1b-it-qat |
+| Creci Inc. | both-mfn | medium | gemma3:1b |
+| Complete Solaria, Inc. | both-mfn | easy | minimax-m2.5 |
+| Lomond Therapeutics Ho | both-mfn | medium | gemma3:1b, minimax-m2.5, gemma3:1b-it-qat |
+| Neo Aeronautics, Inc. | both-mfn | medium | gemma3:1b, minimax-m2.5, gemma3:1b-it-qat |
+| Manako Labs Ltd | both-mfn | medium | gemma3:1b, minimax-m2.5, gemma3:1b-it-qat |
+| Gardedam Therapeutics  | cap | medium | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–54% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–54% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2005,18 +2005,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **25%** | 95% | 62% | 8/8 | 160/160 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
-| `openai/gpt-oss-120b` | ? | **12%** | 96% | 75% | 8/8 | 160/160 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 75% | 8/8 | 157/160 (98%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 75% | 8/8 | 160/160 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
-| `openai/gpt-5-mini` | ? | **25%** | 98% | 75% | 8/8 | 160/160 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
-| `google/gemini-3-flash-preview` | ? | **12%** | 95% | 75% | 8/8 | 154/160 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 75% | 8/8 | 155/160 (97%) |
-| `gemma3:1b-it-qat` | ? | **50%** | 92% | 62% | 8/8 | 160/160 (100%) |
+| `gemma3:1b` | 1B, local | **25%** | 95% | 62% | 8/8 | 160/160 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 75% | 8/8 | 160/160 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 75% | 8/8 | 155/160 (97%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 75% | 8/8 | 157/160 (98%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **50%** | 92% | 62% | 8/8 | 160/160 (100%) |
+| `gemini-3-flash` | hosted (OR) | **12%** | 95% | 75% | 8/8 | 154/160 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 62% | 8/8 | 160/160 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **12%** | 96% | 75% | 8/8 | 160/160 (100%) |
+| `gpt-5-mini` | hosted (OR) | **25%** | 98% | 75% | 8/8 | 160/160 (100%) |
 
 **What the columns mean:**
 
@@ -2030,16 +2030,16 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Astea International In | 3.63 | easy | gemma3-1b-qat |
-| Kiwa Bio-Tech Products | 1.3 | medium | 1B, gemma3-1b-qat |
-| Gelesis, Inc. | 1.26 | medium | gpt-oss-120b-or, gpt5-mini-or, gemini3-flash-or |
-| Elicio Therapeutics, I | 1.0 | easy | gemma3-1b-qat |
-| WhiteGlove Health, Inc | 0.2 | easy | 1B |
-| Geos Communications, I | 0.625 | medium | gpt5-mini-or, gemma3-1b-qat |
+| Astea International In | 3.63 | easy | gemma3:1b-it-qat |
+| Kiwa Bio-Tech Products | 1.3 | medium | gemma3:1b, gemma3:1b-it-qat |
+| Gelesis, Inc. | 1.26 | medium | gemini-3-flash, gpt-oss-120b, gpt-5-mini |
+| Elicio Therapeutics, I | 1.0 | easy | gemma3:1b-it-qat |
+| WhiteGlove Health, Inc | 0.2 | easy | gemma3:1b |
+| Geos Communications, I | 0.625 | medium | gemma3:1b-it-qat, gpt-5-mini |
 
 ## What this shows
 
-- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **llama3.3-70b-or** (0% wobble, 75% accuracy).
+- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **gemma-4-31b-it** (0% wobble, 75% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2054,18 +2054,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 50% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 20/80 (25%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 3/4 | 79/80 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 3/4 | 77/80 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 75% | 4/4 | 80/80 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 50% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 4/4 | 20/80 (25%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 3/4 | 79/80 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 75% | 4/4 | 80/80 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 3/4 | 77/80 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2079,11 +2079,11 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| ACOLOGY, INC. | 2015-03-04 | medium | gpt-oss-120b-or, llama3.3-70b-or, gemma4-31b-or, haiku-4.5-direct, deepseek-v4p, gemini3-flash-or |
+| ACOLOGY, INC. | 2015-03-04 | medium | deepseek-v4-pro, gemma-4-31b-it, llama-3.3-70b, gemini-3-flash, claude-haiku-4.5, gpt-oss-120b |
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -2097,18 +2097,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 0% | 2/4 | 36/80 (45%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 36/80 (45%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 4/4 | 79/80 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 2/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 4/4 | 76/80 (95%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 0% | 4/4 | 61/80 (76%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 0% | 2/4 | 36/80 (45%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 4/4 | 36/80 (45%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 2/4 | 80/80 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 79/80 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 0% | 4/4 | 61/80 (76%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 76/80 (95%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 3/4 | 80/80 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2122,12 +2122,12 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| ACOLOGY, INC. | 50.0 | easy | 1B, deepseek-v4p |
-| HepaLife Technologies, | 5.0 | medium | 1B, haiku-4.5-direct, deepseek-v4p, minimax-m2.5-or |
+| ACOLOGY, INC. | 50.0 | easy | gemma3:1b, deepseek-v4-pro |
+| HepaLife Technologies, | 5.0 | medium | gemma3:1b, deepseek-v4-pro, minimax-m2.5, claude-haiku-4.5 |
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -2141,18 +2141,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **50%** | 92% | 100% | 2/2 | 40/40 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 15/40 (38%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 2/2 | 37/40 (92%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 100% | 2/2 | 29/40 (72%) |
+| `gemma3:1b` | 1B, local | **50%** | 92% | 100% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 2/2 | 15/40 (38%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 100% | 2/2 | 29/40 (72%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 37/40 (92%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -2166,11 +2166,11 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Valkyrie Sciences Hold | 10000000 | medium | 1B |
+| Valkyrie Sciences Hold | 10000000 | medium | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2185,18 +2185,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **22%** | 91% | 33% | 9/9 | 180/180 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `openai/gpt-oss-120b` | ? | **11%** | 99% | 89% | 9/9 | 180/180 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
-| `mistralai/mistral-large-2512` | ? | **11%** | 99% | 78% | 9/9 | 180/180 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 9/9 | 172/180 (96%) |
-| `minimax/minimax-m2.5` | ? | **22%** | 93% | 100% | 9/9 | 166/180 (92%) |
-| `gemma3:1b-it-qat` | ? | **22%** | 95% | 33% | 9/9 | 180/180 (100%) |
+| `gemma3:1b` | 1B, local | **22%** | 91% | 33% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
+| `mistral-large-2512` | hosted (OR) | **11%** | 99% | 78% | 9/9 | 180/180 (100%) |
+| `minimax-m2.5` | hosted (OR) | **22%** | 93% | 100% | 9/9 | 166/180 (92%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **22%** | 95% | 33% | 9/9 | 180/180 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 172/180 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **11%** | 99% | 89% | 9/9 | 180/180 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -2210,13 +2210,13 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| CONOR MEDSYSTEMS, INC. | 1.5yr/no-cliff | medium | 1B, minimax-m2.5-or, gemma3-1b-qat |
-| CLARCOR INC. | 4yr/no-cliff | hard | 1B, minimax-m2.5-or, gemma3-1b-qat |
-| WORLD HEART CORP | 4yr/1yr-cliff | hard | gpt-oss-120b-or, mistral-large-or |
+| CONOR MEDSYSTEMS, INC. | 1.5yr/no-cliff | medium | gemma3:1b, minimax-m2.5, gemma3:1b-it-qat |
+| CLARCOR INC. | 4yr/no-cliff | hard | gemma3:1b, minimax-m2.5, gemma3:1b-it-qat |
+| WORLD HEART CORP | 4yr/1yr-cliff | hard | mistral-large-2512, gpt-oss-120b |
 
 ## What this shows
 
-- **Wobble spread: 0%–22% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–22% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -2230,18 +2230,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 64% | 0% | 9/9 | 180/180 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `openai/gpt-oss-120b` | ? | **22%** | 99% | 100% | 9/9 | 180/180 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 9/9 | 176/180 (98%) |
-| `google/gemma-4-31b-it` | ? | **22%** | 94% | 100% | 9/9 | 180/180 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 9/9 | 173/180 (96%) |
-| `minimax/minimax-m2.5` | ? | **11%** | 99% | 100% | 9/9 | 172/180 (96%) |
-| `gemma3:1b-it-qat` | ? | **33%** | 93% | 0% | 9/9 | 180/180 (100%) |
+| `gemma3:1b` | 1B, local | **100%** | 64% | 0% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **22%** | 94% | 100% | 9/9 | 180/180 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
+| `minimax-m2.5` | hosted (OR) | **11%** | 99% | 100% | 9/9 | 172/180 (96%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 9/9 | 176/180 (98%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **33%** | 93% | 0% | 9/9 | 180/180 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 173/180 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 89% | 9/9 | 180/180 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **22%** | 99% | 100% | 9/9 | 180/180 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 9/9 | 180/180 (100%) |
 
 **What the columns mean:**
 
@@ -2255,19 +2255,19 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Uber Technologies, Inc | 6.0 | easy | 1B, gpt-oss-120b-or |
-| Uber Technologies, Inc | 11.0 | easy | 1B, gemma3-1b-qat |
-| Uber Technologies, Inc | 2.4 | medium | 1B, gemma3-1b-qat |
-| Uber Technologies, Inc | 8.6 | easy | 1B, gpt-oss-120b-or |
-| Uber Technologies, Inc | 5.4 | medium | 1B, gemma4-31b-or |
-| Uber Technologies, Inc | 16.3 | medium | 1B |
-| Uber Technologies, Inc | 5.2 | medium | 1B |
-| Uber Technologies, Inc | 5.3 | medium | 1B |
-| Uber Technologies, Inc | 33.9 | hard | 1B, gemma4-31b-or, minimax-m2.5-or, gemma3-1b-qat |
+| Uber Technologies, Inc | 6.0 | easy | gemma3:1b, gpt-oss-120b |
+| Uber Technologies, Inc | 11.0 | easy | gemma3:1b, gemma3:1b-it-qat |
+| Uber Technologies, Inc | 2.4 | medium | gemma3:1b, gemma3:1b-it-qat |
+| Uber Technologies, Inc | 8.6 | easy | gemma3:1b, gpt-oss-120b |
+| Uber Technologies, Inc | 5.4 | medium | gemma3:1b, gemma-4-31b-it |
+| Uber Technologies, Inc | 16.3 | medium | gemma3:1b |
+| Uber Technologies, Inc | 5.2 | medium | gemma3:1b |
+| Uber Technologies, Inc | 5.3 | medium | gemma3:1b |
+| Uber Technologies, Inc | 33.9 | hard | gemma3:1b, gemma-4-31b-it, minimax-m2.5, gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2282,18 +2282,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 58% | 0% | 3/3 | 60/60 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 67% | 3/3 | 60/60 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 3/3 | 58/60 (97%) |
-| `gemma3:1b-it-qat` | ? | **67%** | 82% | 0% | 3/3 | 60/60 (100%) |
+| `gemma3:1b` | 1B, local | **100%** | 58% | 0% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 3/3 | 58/60 (97%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **67%** | 82% | 0% | 3/3 | 60/60 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 67% | 3/3 | 60/60 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -2307,13 +2307,13 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Uber Technologies, Inc | 6.0 | easy | 1B |
-| Uber Technologies, Inc | 8.6 | easy | 1B, gemma3-1b-qat |
-| Uber Technologies, Inc | 2.4 | medium | 1B, gemma3-1b-qat |
+| Uber Technologies, Inc | 6.0 | easy | gemma3:1b |
+| Uber Technologies, Inc | 8.6 | easy | gemma3:1b, gemma3:1b-it-qat |
+| Uber Technologies, Inc | 2.4 | medium | gemma3:1b, gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2328,18 +2328,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 59% | 0% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `openai/gpt-oss-120b` | ? | **25%** | 99% | 100% | 4/4 | 80/80 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 4/4 | 77/80 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 4/4 | 78/80 (98%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 0% | 4/4 | 80/80 (100%) |
+| `gemma3:1b` | 1B, local | **100%** | 59% | 0% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 78/80 (98%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 0% | 4/4 | 80/80 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 77/80 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **25%** | 99% | 100% | 4/4 | 80/80 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2353,14 +2353,14 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Uber Technologies, Inc | 16.3 | easy | 1B |
-| Uber Technologies, Inc | 11.0 | easy | 1B |
-| Uber Technologies, Inc | 5.3 | medium | 1B, gpt-oss-120b-or |
-| Uber Technologies, Inc | 5.2 | medium | 1B |
+| Uber Technologies, Inc | 16.3 | easy | gemma3:1b |
+| Uber Technologies, Inc | 11.0 | easy | gemma3:1b |
+| Uber Technologies, Inc | 5.3 | medium | gemma3:1b, gpt-oss-120b |
+| Uber Technologies, Inc | 5.2 | medium | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2375,18 +2375,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 90% | 0% | 1/1 | 20/20 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 1/1 | 19/20 (95%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 0% | 1/1 | 20/20 (100%) |
+| `gemma3:1b` | 1B, local | **100%** | 90% | 0% | 1/1 | 20/20 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 1/1 | 19/20 (95%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 0% | 1/1 | 20/20 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 1/1 | 20/20 (100%) |
 
 **What the columns mean:**
 
@@ -2400,11 +2400,11 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Uber Technologies, Inc | 9.5 | easy | 1B |
+| Uber Technologies, Inc | 9.5 | easy | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2419,18 +2419,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **40%** | 90% | 90% | 10/10 | 198/200 (99%) |
-| `deepseek-v4-flash` | hosted | **10%** | 98% | 100% | 10/10 | 200/200 (100%) |
-| `openai/gpt-oss-120b` | ? | **10%** | 99% | 100% | 10/10 | 200/200 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `openai/gpt-5-mini` | ? | **20%** | 99% | 100% | 10/10 | 200/200 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 70% | 10/10 | 200/200 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 10/10 | 193/200 (96%) |
-| `minimax/minimax-m2.5` | ? | **80%** | 93% | 100% | 10/10 | 184/200 (92%) |
-| `gemma3:1b-it-qat` | ? | **30%** | 93% | 60% | 10/10 | 200/200 (100%) |
+| `gemma3:1b` | 1B, local | **40%** | 90% | 90% | 10/10 | 198/200 (99%) |
+| `deepseek-v4-flash` | hosted, direct | **10%** | 98% | 100% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 70% | 10/10 | 200/200 (100%) |
+| `minimax-m2.5` | hosted (OR) | **80%** | 93% | 100% | 10/10 | 184/200 (92%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **30%** | 93% | 60% | 10/10 | 200/200 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 10/10 | 193/200 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **10%** | 99% | 100% | 10/10 | 200/200 (100%) |
+| `gpt-5-mini` | hosted (OR) | **20%** | 99% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -2447,34 +2447,34 @@
 |---|---|---|---|---|---|
 | `gemma3:1b` | 6/6 | 3/4 | — | — | — |
 | `deepseek-v4-flash` | 6/6 | 4/4 | — | — | — |
-| `openai/gpt-oss-120b` | 6/6 | 4/4 | — | — | — |
-| `google/gemma-4-31b-it` | 6/6 | 4/4 | — | — | — |
-| `claude-haiku-4-5-20251001` | 6/6 | 4/4 | — | — | — |
-| `meta-llama/llama-3.3-70b-instruct` | 6/6 | 4/4 | — | — | — |
 | `deepseek-v4-pro` | 6/6 | 4/4 | — | — | — |
-| `openai/gpt-5-mini` | 6/6 | 4/4 | — | — | — |
-| `mistralai/mistral-large-2512` | 6/6 | 1/4 | — | — | — |
-| `google/gemini-3-flash-preview` | 6/6 | 4/4 | — | — | — |
-| `minimax/minimax-m2.5` | 6/6 | 4/4 | — | — | — |
+| `gemma-4-31b-it` | 6/6 | 4/4 | — | — | — |
+| `mistral-large-2512` | 6/6 | 1/4 | — | — | — |
+| `minimax-m2.5` | 6/6 | 4/4 | — | — | — |
+| `llama-3.3-70b` | 6/6 | 4/4 | — | — | — |
 | `gemma3:1b-it-qat` | 6/6 | 0/4 | — | — | — |
+| `gemini-3-flash` | 6/6 | 4/4 | — | — | — |
+| `claude-haiku-4.5` | 6/6 | 4/4 | — | — | — |
+| `gpt-oss-120b` | 6/6 | 4/4 | — | — | — |
+| `gpt-5-mini` | 6/6 | 4/4 | — | — | — |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| ACCELERATED I/O INC | 506b | medium | minimax-m2.5-or |
-| GTX INC /DE/ | 506b | medium | minimax-m2.5-or |
-| VoCare, Inc. | 506c | medium | 1B, minimax-m2.5-or |
-| Handybook, Inc. | 506b | medium | minimax-m2.5-or |
-| Brewer Lane Ventures F | 506c | medium | 1B, minimax-m2.5-or, gemma3-1b-qat |
-| Material Impact Fund I | 506c | medium | 1B, hosted, minimax-m2.5-or, gemma3-1b-qat |
-| NextView Ventures V, L | 506c | medium | 1B, gpt5-mini-or, gemma3-1b-qat |
-| Devorto Corp | 506b | medium | gpt-oss-120b-or, minimax-m2.5-or |
-| McBride Sisters Collec | 506b | medium | gpt5-mini-or, minimax-m2.5-or |
+| ACCELERATED I/O INC | 506b | medium | minimax-m2.5 |
+| GTX INC /DE/ | 506b | medium | minimax-m2.5 |
+| VoCare, Inc. | 506c | medium | gemma3:1b, minimax-m2.5 |
+| Handybook, Inc. | 506b | medium | minimax-m2.5 |
+| Brewer Lane Ventures F | 506c | medium | gemma3:1b, minimax-m2.5, gemma3:1b-it-qat |
+| Material Impact Fund I | 506c | medium | gemma3:1b, deepseek-v4-flash, minimax-m2.5, gemma3:1b-it-qat |
+| NextView Ventures V, L | 506c | medium | gemma3:1b, gemma3:1b-it-qat, gpt-5-mini |
+| Devorto Corp | 506b | medium | minimax-m2.5, gpt-oss-120b |
+| McBride Sisters Collec | 506b | medium | minimax-m2.5, gpt-5-mini |
 
 ## What this shows
 
-- **Wobble spread: 0%–80% across the ladder.** Lowest-wobble model: **gemma4-31b-or** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–80% across the ladder.** Lowest-wobble model: **deepseek-v4-pro** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2489,18 +2489,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **50%** | 95% | 50% | 2/2 | 40/40 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `deepseek-v4-pro` | ? | **50%** | 98% | 100% | 2/2 | 40/40 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `google/gemini-3-flash-preview` | ? | **50%** | 88% | 100% | 2/2 | 36/40 (90%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **50%** | 98% | 100% | 2/2 | 40/40 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **50%** | 95% | 50% | 2/2 | 40/40 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gemini-3-flash` | hosted (OR) | **50%** | 88% | 100% | 2/2 | 36/40 (90%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -2514,11 +2514,11 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| NETBASE SOLUTIONS INC  | 2,366,532 | medium | llama3.3-70b-or, deepseek-v4p, gemini3-flash-or |
+| NETBASE SOLUTIONS INC  | 2,366,532 | medium | deepseek-v4-pro, llama-3.3-70b, gemini-3-flash |
 
 ## What this shows
 
-- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **1B** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–50% across the ladder.** Lowest-wobble model: **gemma3:1b** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2533,18 +2533,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 94% | 40% | 10/10 | 200/200 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 10/10 | 193/200 (96%) |
-| `minimax/minimax-m2.5` | ? | **30%** | 97% | 100% | 10/10 | 200/200 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 30% | 10/10 | 200/200 (100%) |
+| `gemma3:1b` | 1B, local | **20%** | 94% | 40% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `minimax-m2.5` | hosted (OR) | **30%** | 97% | 100% | 10/10 | 200/200 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 30% | 10/10 | 200/200 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 10/10 | 193/200 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 10/10 | 200/200 (100%) |
 
 **What the columns mean:**
 
@@ -2558,15 +2558,15 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| VoCare, Inc. | 5000000 | ? | minimax-m2.5-or |
-| Handybook, Inc. | 3728926 | ? | minimax-m2.5-or |
-| TIGO ENERGY INC | 7661116 | ? | minimax-m2.5-or |
-| POSEIDON MEDICAL INC. | 6085780 | ? | 1B |
-| BEYONDCORE, INC. | 8881213 | ? | 1B |
+| VoCare, Inc. | 5000000 | ? | minimax-m2.5 |
+| Handybook, Inc. | 3728926 | ? | minimax-m2.5 |
+| TIGO ENERGY INC | 7661116 | ? | minimax-m2.5 |
+| POSEIDON MEDICAL INC. | 6085780 | ? | gemma3:1b |
+| BEYONDCORE, INC. | 8881213 | ? | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–30% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–30% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2581,18 +2581,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **33%** | 97% | 83% | 6/6 | 120/120 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 6/6 | 118/120 (98%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 6/6 | 116/120 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
-| `gemma3:1b-it-qat` | ? | **17%** | 94% | 100% | 6/6 | 120/120 (100%) |
+| `gemma3:1b` | 1B, local | **33%** | 97% | 83% | 6/6 | 120/120 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 6/6 | 118/120 (98%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **17%** | 94% | 100% | 6/6 | 120/120 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 6/6 | 116/120 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 6/6 | 120/120 (100%) |
 
 **What the columns mean:**
 
@@ -2606,12 +2606,12 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Exela Technologies, In | 10 | ? | 1B, gemma3-1b-qat |
-| scPharmaceuticals Inc. | 6 | ? | 1B |
+| Exela Technologies, In | 10 | ? | gemma3:1b, gemma3:1b-it-qat |
+| scPharmaceuticals Inc. | 6 | ? | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–33% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–33% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2626,18 +2626,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **80%** | 75% | 0% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 42/100 (42%) |
-| `openai/gpt-oss-120b` | ? | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **20%** | 88% | 80% | 5/5 | 100/100 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 5/5 | 94/100 (94%) |
-| `minimax/minimax-m2.5` | ? | **20%** | 92% | 100% | 5/5 | 100/100 (100%) |
-| `gemma3:1b-it-qat` | ? | **20%** | 90% | 0% | 5/5 | 100/100 (100%) |
+| `gemma3:1b` | 1B, local | **80%** | 75% | 0% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/5 | 42/100 (42%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `minimax-m2.5` | hosted (OR) | **20%** | 92% | 100% | 5/5 | 100/100 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **20%** | 88% | 80% | 5/5 | 100/100 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **20%** | 90% | 0% | 5/5 | 100/100 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 94/100 (94%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2651,15 +2651,15 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Civitas Solutions, Inc | 32.89 | ? | gpt-oss-120b-or, llama3.3-70b-or |
-| HyreCar Inc. | 2.09 | ? | 1B, gemma3-1b-qat |
-| Castle Biosciences, In | 28.82 | ? | 1B, minimax-m2.5-or |
-| Veritone, Inc. | 14.9 | ? | 1B |
-| Axcella Health Inc. | 1.96 | ? | 1B |
+| Civitas Solutions, Inc | 32.89 | ? | llama-3.3-70b, gpt-oss-120b |
+| HyreCar Inc. | 2.09 | ? | gemma3:1b, gemma3:1b-it-qat |
+| Castle Biosciences, In | 28.82 | ? | gemma3:1b, minimax-m2.5 |
+| Veritone, Inc. | 14.9 | ? | gemma3:1b |
+| Axcella Health Inc. | 1.96 | ? | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–80% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–80% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2674,18 +2674,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 50% | 8/8 | 160/160 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 8/8 | 127/160 (79%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 8/8 | 159/160 (99%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 8/8 | 152/160 (95%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
-| `gemma3:1b-it-qat` | ? | **25%** | 93% | 62% | 8/8 | 160/160 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 50% | 8/8 | 160/160 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 8/8 | 127/160 (79%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **25%** | 93% | 62% | 8/8 | 160/160 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 8/8 | 152/160 (95%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 8/8 | 160/160 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 8/8 | 159/160 (99%) |
 
 **What the columns mean:**
 
@@ -2702,27 +2702,27 @@
 |---|---|---|
 | `gemma3:1b` | 4/4 | 0/4 |
 | `deepseek-v4-flash` | 4/4 | 4/4 |
-| `openai/gpt-oss-120b` | 4/4 | 4/4 |
-| `meta-llama/llama-3.3-70b-instruct` | 4/4 | 4/4 |
-| `google/gemma-4-31b-it` | 4/4 | 4/4 |
-| `claude-haiku-4-5-20251001` | 4/4 | 4/4 |
-| `openai/gpt-5-mini` | 4/4 | 4/4 |
 | `deepseek-v4-pro` | 4/4 | 4/4 |
-| `mistralai/mistral-large-2512` | 4/4 | 4/4 |
-| `google/gemini-3-flash-preview` | 4/4 | 4/4 |
-| `minimax/minimax-m2.5` | 4/4 | 4/4 |
+| `gemma-4-31b-it` | 4/4 | 4/4 |
+| `mistral-large-2512` | 4/4 | 4/4 |
+| `minimax-m2.5` | 4/4 | 4/4 |
+| `llama-3.3-70b` | 4/4 | 4/4 |
 | `gemma3:1b-it-qat` | 4/4 | 1/4 |
+| `gemini-3-flash` | 4/4 | 4/4 |
+| `claude-haiku-4.5` | 4/4 | 4/4 |
+| `gpt-oss-120b` | 4/4 | 4/4 |
+| `gpt-5-mini` | 4/4 | 4/4 |
 
 ### Which items make models wobble
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| HyreCar Inc. | issued-outstanding | ? | gemma3-1b-qat |
-| Castle Biosciences, In | issued-outstanding | ? | gemma3-1b-qat |
+| HyreCar Inc. | issued-outstanding | ? | gemma3:1b-it-qat |
+| Castle Biosciences, In | issued-outstanding | ? | gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -2736,18 +2736,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **40%** | 91% | 40% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-oss-120b` | ? | **40%** | 90% | 100% | 5/5 | 100/100 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-5-mini` | ? | **20%** | 97% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **20%** | 99% | 80% | 5/5 | 100/100 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 5/5 | 96/100 (96%) |
-| `minimax/minimax-m2.5` | ? | **60%** | 81% | 100% | 5/5 | 99/100 (99%) |
-| `gemma3:1b-it-qat` | ? | **20%** | 93% | 20% | 5/5 | 95/100 (95%) |
+| `gemma3:1b` | 1B, local | **40%** | 91% | 40% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `mistral-large-2512` | hosted (OR) | **20%** | 99% | 80% | 5/5 | 100/100 (100%) |
+| `minimax-m2.5` | hosted (OR) | **60%** | 81% | 100% | 5/5 | 99/100 (99%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **20%** | 93% | 20% | 5/5 | 95/100 (95%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 96/100 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **40%** | 90% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-5-mini` | hosted (OR) | **20%** | 97% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2761,14 +2761,14 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Civitas Solutions, Inc | 1123118 | ? | 1B, gpt-oss-120b-or, minimax-m2.5-or, gemma3-1b-qat |
-| IGN Entertainment, Inc | 17541 | ? | mistral-large-or |
-| Emageon Inc. | 12619 | ? | 1B, minimax-m2.5-or |
-| HyreCar Inc. | 9777079 | ? | gpt-oss-120b-or, gpt5-mini-or, minimax-m2.5-or |
+| Civitas Solutions, Inc | 1123118 | ? | gemma3:1b, minimax-m2.5, gemma3:1b-it-qat, gpt-oss-120b |
+| IGN Entertainment, Inc | 17541 | ? | mistral-large-2512 |
+| Emageon Inc. | 12619 | ? | gemma3:1b, minimax-m2.5 |
+| HyreCar Inc. | 9777079 | ? | minimax-m2.5, gpt-oss-120b, gpt-5-mini |
 
 ## What this shows
 
-- **Wobble spread: 0%–60% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–60% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2783,18 +2783,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 60% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 80% | 5/5 | 100/100 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 5/5 | 96/100 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `gemma3:1b-it-qat` | ? | **80%** | 85% | 60% | 5/5 | 100/100 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 60% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 80% | 5/5 | 100/100 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **80%** | 85% | 60% | 5/5 | 100/100 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 96/100 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2808,14 +2808,14 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Actelis Networks, Inc. | False | ? | gemma3-1b-qat |
-| Castle Biosciences, In | False | ? | gemma3-1b-qat |
-| Castle Biosciences, In | True | ? | gemma3-1b-qat |
-| IGN Entertainment, Inc | True | ? | gemma3-1b-qat |
+| Actelis Networks, Inc. | False | ? | gemma3:1b-it-qat |
+| Castle Biosciences, In | False | ? | gemma3:1b-it-qat |
+| Castle Biosciences, In | True | ? | gemma3:1b-it-qat |
+| IGN Entertainment, Inc | True | ? | gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–80% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–80% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2830,18 +2830,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 5/5 | 99/100 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 5/5 | 96/100 (96%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `gemma3:1b-it-qat` | ? | **40%** | 87% | 60% | 5/5 | 100/100 (100%) |
+| `gemma3:1b` | 1B, local | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 99/100 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **40%** | 87% | 60% | 5/5 | 100/100 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 96/100 (96%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2855,12 +2855,12 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| SIRVA, Inc. | 30 days | ? | 1B, gemma3-1b-qat |
-| Covisint Corp. | 85 days | ? | gemma3-1b-qat |
+| SIRVA, Inc. | 30 days | ? | gemma3:1b, gemma3:1b-it-qat |
+| Covisint Corp. | 85 days | ? | gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–40% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–40% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2875,18 +2875,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **80%** | 65% | 0% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 5/5 | 99/100 (99%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 5/5 | 97/100 (97%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `gemma3:1b-it-qat` | ? | **60%** | 71% | 40% | 5/5 | 100/100 (100%) |
+| `gemma3:1b` | 1B, local | **80%** | 65% | 0% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 99/100 (99%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **60%** | 71% | 40% | 5/5 | 100/100 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 97/100 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2900,15 +2900,15 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| HyreCar Inc. | Our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment. | ? | gemma3-1b-qat |
-| HyreCar Inc. | If we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business. | ? | 1B, gemma3-1b-qat |
-| HyreCar Inc. | Fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results. | ? | 1B |
-| Axcella Health Inc. | If you purchase our common stock in this offering, you will incur immediate and substantial dilution in the net tangible book value of your shares. | ? | 1B, gemma3-1b-qat |
-| Axcella Health Inc. | We have broad discretion in the use of our existing cash, cash equivalents and the net proceeds from this offering and may not use them effectively. | ? | 1B |
+| HyreCar Inc. | Our limited operating history makes it difficult to evaluate our current business and prospects and may increase the risks associated with your investment. | ? | gemma3:1b-it-qat |
+| HyreCar Inc. | If we do not respond appropriately, the evolution of the automotive industry towards autonomous vehicles and mobility on demand services could adversely affect our business. | ? | gemma3:1b, gemma3:1b-it-qat |
+| HyreCar Inc. | Fluctuating economic conditions make it difficult to predict revenue for a particular period, and a shortfall in revenue may harm our operating results. | ? | gemma3:1b |
+| Axcella Health Inc. | If you purchase our common stock in this offering, you will incur immediate and substantial dilution in the net tangible book value of your shares. | ? | gemma3:1b, gemma3:1b-it-qat |
+| Axcella Health Inc. | We have broad discretion in the use of our existing cash, cash equivalents and the net proceeds from this offering and may not use them effectively. | ? | gemma3:1b |
 
 ## What this shows
 
-- **Wobble spread: 0%–80% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–80% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -2923,18 +2923,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **25%** | 99% | 50% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `openai/gpt-oss-120b` | ? | **25%** | 99% | 100% | 4/4 | 80/80 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **25%** | 99% | 100% | 4/4 | 80/80 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 75% | 4/4 | 80/80 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 4/4 | 79/80 (99%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
-| `gemma3:1b-it-qat` | ? | **25%** | 94% | 25% | 4/4 | 80/80 (100%) |
+| `gemma3:1b` | 1B, local | **25%** | 99% | 50% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **25%** | 99% | 100% | 4/4 | 80/80 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **25%** | 94% | 25% | 4/4 | 80/80 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 79/80 (99%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 75% | 4/4 | 80/80 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **25%** | 99% | 100% | 4/4 | 80/80 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -2948,12 +2948,12 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Rapid7, Inc. | True | ? | 1B, gpt-oss-120b-or, llama3.3-70b-or |
-| SOS Hydration Inc. | False | ? | gemma3-1b-qat |
+| Rapid7, Inc. | True | ? | gemma3:1b, llama-3.3-70b, gpt-oss-120b |
+| SOS Hydration Inc. | False | ? | gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–25% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -2967,18 +2967,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 94% | 20% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-oss-120b` | ? | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **20%** | 93% | 80% | 5/5 | 98/100 (98%) |
-| `google/gemma-4-31b-it` | ? | **20%** | 96% | 100% | 5/5 | 100/100 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 80% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-5-mini` | ? | **40%** | 90% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 5/5 | 97/100 (97%) |
-| `minimax/minimax-m2.5` | ? | **40%** | 89% | 100% | 5/5 | 100/100 (100%) |
-| `gemma3:1b-it-qat` | ? | **20%** | 91% | 25% | 4/5 | 80/100 (80%) |
+| `gemma3:1b` | 1B, local | **20%** | 94% | 20% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **20%** | 96% | 100% | 5/5 | 100/100 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `minimax-m2.5` | hosted (OR) | **40%** | 89% | 100% | 5/5 | 100/100 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **20%** | 93% | 80% | 5/5 | 98/100 (98%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **20%** | 91% | 25% | 4/5 | 80/100 (80%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 97/100 (97%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 80% | 5/5 | 100/100 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **20%** | 99% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-5-mini` | hosted (OR) | **40%** | 90% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -2992,14 +2992,14 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Castle Biosciences, In | research and development activities | ? | gemma4-31b-or, gemma3-1b-qat |
-| Axcella Health Inc. | advance our current liver programs | ? | 1B, llama3.3-70b-or, gpt5-mini-or, minimax-m2.5-or |
-| Veritone, Inc. | working capital and general corporate purposes | ? | gpt-oss-120b-or, gemma3-1b-qat |
-| Civitas Solutions, Inc | redeem all of the senior notes | ? | gpt5-mini-or, minimax-m2.5-or |
+| Castle Biosciences, In | research and development activities | ? | gemma-4-31b-it, gemma3:1b-it-qat |
+| Axcella Health Inc. | advance our current liver programs | ? | gemma3:1b, minimax-m2.5, llama-3.3-70b, gpt-5-mini |
+| Veritone, Inc. | working capital and general corporate purposes | ? | gemma3:1b-it-qat, gpt-oss-120b |
+| Civitas Solutions, Inc | redeem all of the senior notes | ? | minimax-m2.5, gpt-5-mini |
 
 ## What this shows
 
-- **Wobble spread: 0%–40% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–40% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -3014,18 +3014,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **20%** | 96% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 5/5 | 99/100 (99%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 5/5 | 92/100 (92%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 5/5 | 96/100 (96%) |
-| `gemma3:1b-it-qat` | ? | **60%** | 81% | 60% | 5/5 | 100/100 (100%) |
+| `gemma3:1b` | 1B, local | **20%** | 96% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 96/100 (96%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **60%** | 81% | 60% | 5/5 | 100/100 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 92/100 (92%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 5/5 | 99/100 (99%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 5/5 | 100/100 (100%) |
 
 **What the columns mean:**
 
@@ -3039,13 +3039,13 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| CAS Medical Systems, I | 9418200 | ? | 1B, gemma3-1b-qat |
-| Ocular Therapeutix, In | 1650000 | ? | gemma3-1b-qat |
-| Navidea Biopharmaceuti | 3000000 | ? | gemma3-1b-qat |
+| CAS Medical Systems, I | 9418200 | ? | gemma3:1b, gemma3:1b-it-qat |
+| Ocular Therapeutix, In | 1650000 | ? | gemma3:1b-it-qat |
+| Navidea Biopharmaceuti | 3000000 | ? | gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–60% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–60% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -3060,18 +3060,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **33%** | 98% | 0% | 3/3 | 60/60 (100%) |
-| `deepseek-v4-flash` | hosted | **33%** | 98% | 33% | 3/3 | 60/60 (100%) |
-| `openai/gpt-oss-120b` | ? | **67%** | 65% | 67% | 3/3 | 60/60 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **33%** | 85% | 67% | 3/3 | 60/60 (100%) |
-| `google/gemma-4-31b-it` | ? | **33%** | 90% | 67% | 3/3 | 60/60 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **33%** | 97% | 33% | 3/3 | 60/60 (100%) |
-| `openai/gpt-5-mini` | ? | **33%** | 98% | 33% | 3/3 | 60/60 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 67% | 3/3 | 60/60 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 67% | 3/3 | 60/60 (100%) |
-| `google/gemini-3-flash-preview` | ? | **33%** | 92% | 33% | 3/3 | 60/60 (100%) |
-| `minimax/minimax-m2.5` | ? | **67%** | 80% | 67% | 3/3 | 60/60 (100%) |
-| `gemma3:1b-it-qat` | ? | **67%** | 87% | 33% | 3/3 | 60/60 (100%) |
+| `gemma3:1b` | 1B, local | **33%** | 98% | 0% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **33%** | 98% | 33% | 3/3 | 60/60 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 67% | 3/3 | 60/60 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **33%** | 90% | 67% | 3/3 | 60/60 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 67% | 3/3 | 60/60 (100%) |
+| `minimax-m2.5` | hosted (OR) | **67%** | 80% | 67% | 3/3 | 60/60 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **33%** | 85% | 67% | 3/3 | 60/60 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **67%** | 87% | 33% | 3/3 | 60/60 (100%) |
+| `gemini-3-flash` | hosted (OR) | **33%** | 92% | 33% | 3/3 | 60/60 (100%) |
+| `claude-haiku-4.5` | hosted, direct API | **33%** | 97% | 33% | 3/3 | 60/60 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **67%** | 65% | 67% | 3/3 | 60/60 (100%) |
+| `gpt-5-mini` | hosted (OR) | **33%** | 98% | 33% | 3/3 | 60/60 (100%) |
 
 **What the columns mean:**
 
@@ -3085,12 +3085,12 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Snapwire Media, Inc. ( | 0.909 | ? | 1B, hosted, gpt-oss-120b-or, gemma4-31b-or, haiku-4.5-direct, gemini3-flash-or, minimax-m2.5-or, gemma3-1b-qat |
-| Snapwire Media, Inc. ( | 0.6956 | ? | gpt-oss-120b-or, llama3.3-70b-or, gpt5-mini-or, minimax-m2.5-or, gemma3-1b-qat |
+| Snapwire Media, Inc. ( | 0.909 | ? | gemma3:1b, deepseek-v4-flash, gemma-4-31b-it, minimax-m2.5, gemma3:1b-it-qat, gemini-3-flash, claude-haiku-4.5, gpt-oss-120b |
+| Snapwire Media, Inc. ( | 0.6956 | ? | minimax-m2.5, llama-3.3-70b, gemma3:1b-it-qat, gpt-oss-120b, gpt-5-mini |
 
 ## What this shows
 
-- **Wobble spread: 0%–67% across the ladder.** Lowest-wobble model: **deepseek-v4p** (0% wobble, 67% accuracy).
+- **Wobble spread: 0%–67% across the ladder.** Lowest-wobble model: **deepseek-v4-pro** (0% wobble, 67% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -3105,18 +3105,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **0%** | 100% | 50% | 2/2 | 40/40 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `gemma3:1b-it-qat` | ? | **0%** | 100% | 50% | 2/2 | 40/40 (100%) |
+| `gemma3:1b` | 1B, local | **0%** | 100% | 50% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **0%** | 100% | 50% | 2/2 | 40/40 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -3133,16 +3133,16 @@
 |---|---|---|
 | `gemma3:1b` | 1/1 | 0/1 |
 | `deepseek-v4-flash` | 1/1 | 1/1 |
-| `openai/gpt-oss-120b` | 1/1 | 1/1 |
-| `meta-llama/llama-3.3-70b-instruct` | 1/1 | 1/1 |
-| `google/gemma-4-31b-it` | 1/1 | 1/1 |
-| `claude-haiku-4-5-20251001` | 1/1 | 1/1 |
-| `openai/gpt-5-mini` | 1/1 | 1/1 |
 | `deepseek-v4-pro` | 1/1 | 1/1 |
-| `mistralai/mistral-large-2512` | 1/1 | 1/1 |
-| `google/gemini-3-flash-preview` | 1/1 | 1/1 |
-| `minimax/minimax-m2.5` | 1/1 | 1/1 |
+| `gemma-4-31b-it` | 1/1 | 1/1 |
+| `mistral-large-2512` | 1/1 | 1/1 |
+| `minimax-m2.5` | 1/1 | 1/1 |
+| `llama-3.3-70b` | 1/1 | 1/1 |
 | `gemma3:1b-it-qat` | 1/1 | 0/1 |
+| `gemini-3-flash` | 1/1 | 1/1 |
+| `claude-haiku-4.5` | 1/1 | 1/1 |
+| `gpt-oss-120b` | 1/1 | 1/1 |
+| `gpt-5-mini` | 1/1 | 1/1 |
 
 ### Which items make models wobble
 
@@ -3151,7 +3151,7 @@
 
 ## What this shows
 
-- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–0% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 
 ---
 
@@ -3165,18 +3165,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 61% | 0% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 4/4 | 75/80 (94%) |
-| `openai/gpt-oss-120b` | ? | **100%** | 78% | 50% | 4/4 | 78/80 (98%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **75%** | 78% | 25% | 4/4 | 80/80 (100%) |
-| `google/gemma-4-31b-it` | ? | **100%** | 81% | 75% | 4/4 | 80/80 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **50%** | 84% | 0% | 4/4 | 80/80 (100%) |
-| `openai/gpt-5-mini` | ? | **100%** | 56% | 50% | 4/4 | 80/80 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 75% | 4/4 | 80/80 (100%) |
-| `mistralai/mistral-large-2512` | ? | **25%** | 91% | 75% | 4/4 | 80/80 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 75% | 4/4 | 76/80 (95%) |
-| `minimax/minimax-m2.5` | ? | **50%** | 88% | 75% | 4/4 | 80/80 (100%) |
-| `gemma3:1b-it-qat` | ? | **75%** | 95% | 25% | 4/4 | 80/80 (100%) |
+| `gemma3:1b` | 1B, local | **100%** | 61% | 0% | 4/4 | 80/80 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 4/4 | 75/80 (94%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 75% | 4/4 | 80/80 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **100%** | 81% | 75% | 4/4 | 80/80 (100%) |
+| `mistral-large-2512` | hosted (OR) | **25%** | 91% | 75% | 4/4 | 80/80 (100%) |
+| `minimax-m2.5` | hosted (OR) | **50%** | 88% | 75% | 4/4 | 80/80 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **75%** | 78% | 25% | 4/4 | 80/80 (100%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **75%** | 95% | 25% | 4/4 | 80/80 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 75% | 4/4 | 76/80 (95%) |
+| `claude-haiku-4.5` | hosted, direct API | **50%** | 84% | 0% | 4/4 | 80/80 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **100%** | 78% | 50% | 4/4 | 78/80 (98%) |
+| `gpt-5-mini` | hosted (OR) | **100%** | 56% | 50% | 4/4 | 80/80 (100%) |
 
 **What the columns mean:**
 
@@ -3190,14 +3190,14 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Connecture, Inc. | 0.51 | ? | 1B, gpt-oss-120b-or, llama3.3-70b-or, gemma4-31b-or, haiku-4.5-direct, gpt5-mini-or, mistral-large-or |
-| Connecture, Inc. | 0.42 | ? | 1B, gpt-oss-120b-or, gemma4-31b-or, haiku-4.5-direct, gpt5-mini-or, minimax-m2.5-or, gemma3-1b-qat |
-| Connecture, Inc. | 0.39 | ? | 1B, gpt-oss-120b-or, llama3.3-70b-or, gemma4-31b-or, gpt5-mini-or, minimax-m2.5-or, gemma3-1b-qat |
-| Connecture, Inc. | 0.44 | ? | 1B, gpt-oss-120b-or, llama3.3-70b-or, gemma4-31b-or, gpt5-mini-or, gemma3-1b-qat |
+| Connecture, Inc. | 0.51 | ? | gemma3:1b, gemma-4-31b-it, mistral-large-2512, llama-3.3-70b, claude-haiku-4.5, gpt-oss-120b, gpt-5-mini |
+| Connecture, Inc. | 0.42 | ? | gemma3:1b, gemma-4-31b-it, minimax-m2.5, gemma3:1b-it-qat, claude-haiku-4.5, gpt-oss-120b, gpt-5-mini |
+| Connecture, Inc. | 0.39 | ? | gemma3:1b, gemma-4-31b-it, minimax-m2.5, llama-3.3-70b, gemma3:1b-it-qat, gpt-oss-120b, gpt-5-mini |
+| Connecture, Inc. | 0.44 | ? | gemma3:1b, gemma-4-31b-it, llama-3.3-70b, gemma3:1b-it-qat, gpt-oss-120b, gpt-5-mini |
 
 ## What this shows
 
-- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---
@@ -3212,18 +3212,18 @@
 
 | Model | Size | **Wobble** ↓ | Consistency | Accuracy (majority) | Measurable | Response rate |
 |---|---|---|---|---|---|---|
-| `gemma3:1b` | 1B | **100%** | 72% | 50% | 2/2 | 40/40 (100%) |
-| `deepseek-v4-flash` | hosted | **0%** | 100% | 100% | 2/2 | 39/40 (98%) |
-| `openai/gpt-oss-120b` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `meta-llama/llama-3.3-70b-instruct` | ? | **0%** | 100% | 100% | 2/2 | 39/40 (98%) |
-| `google/gemma-4-31b-it` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `claude-haiku-4-5-20251001` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `deepseek-v4-pro` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `openai/gpt-5-mini` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `mistralai/mistral-large-2512` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `google/gemini-3-flash-preview` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `minimax/minimax-m2.5` | ? | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
-| `gemma3:1b-it-qat` | ? | **100%** | 43% | 0% | 2/2 | 40/40 (100%) |
+| `gemma3:1b` | 1B, local | **100%** | 72% | 50% | 2/2 | 40/40 (100%) |
+| `deepseek-v4-flash` | hosted, direct | **0%** | 100% | 100% | 2/2 | 39/40 (98%) |
+| `deepseek-v4-pro` | hosted, direct | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gemma-4-31b-it` | 31B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `mistral-large-2512` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `minimax-m2.5` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `llama-3.3-70b` | 70B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 39/40 (98%) |
+| `gemma3:1b-it-qat` | 1B QAT, local | **100%** | 43% | 0% | 2/2 | 40/40 (100%) |
+| `gemini-3-flash` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `claude-haiku-4.5` | hosted, direct API | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gpt-oss-120b` | 120B, hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
+| `gpt-5-mini` | hosted (OR) | **0%** | 100% | 100% | 2/2 | 40/40 (100%) |
 
 **What the columns mean:**
 
@@ -3237,12 +3237,12 @@
 
 | Item | True | Difficulty | Models that wobbled |
 |---|---|---|---|
-| Connecture, Inc. | 58.9 | ? | 1B, gemma3-1b-qat |
-| Connecture, Inc. | 19.7 | ? | 1B, gemma3-1b-qat |
+| Connecture, Inc. | 58.9 | ? | gemma3:1b, gemma3:1b-it-qat |
+| Connecture, Inc. | 19.7 | ? | gemma3:1b, gemma3:1b-it-qat |
 
 ## What this shows
 
-- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **hosted** (0% wobble, 100% accuracy).
+- **Wobble spread: 0%–100% across the ladder.** Lowest-wobble model: **deepseek-v4-flash** (0% wobble, 100% accuracy).
 - **Wobble is a cliff, not a slope** — small models flip on a large share of items while larger models collapse to near-zero; the usable boundary is a jump, not a gradient.
 
 ---

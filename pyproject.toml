@@ -16,7 +16,11 @@ classifiers = [
     "Operating System :: OS Independent",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
-dependencies = []
+dependencies = []          # runtime: pure stdlib, deliberately
+
+[project.optional-dependencies]
+# The BENCHMARK needs nothing. The TEST SUITE needs pytest (fixtures + parametrize).
+dev = ["pytest>=7"]
 
 [project.urls]
 Homepage = "https://github.com/eikiyo/probity"

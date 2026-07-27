@@ -1,0 +1,1251 @@
+{
+ "acceleration_trigger": {
+  "field": "acceleration_trigger",
+  "test_ids": [
+   "1293310_000119312512306440",
+   "1318568_000155837016005813",
+   "1358403_000135840318000037",
+   "1396009_000095014408007433",
+   "1108271_000119312504159873",
+   "1158172_000095013308000368",
+   "1452751_000119312513403444"
+  ],
+  "train_ids": [
+   "1433714_000119312514041287",
+   "1671858_000119312522280241",
+   "912562_000091256215000002",
+   "1566826_000121390025046512",
+   "1661460_000119312523020421",
+   "31791_000003179124000004"
+  ],
+  "n_total": 13,
+  "n_test": 7,
+  "n_train": 6,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "antidilution_base": {
+  "field": "antidilution_base",
+  "test_ids": [
+   "1082733_000165495426003578",
+   "1090908_000143774913006947",
+   "1108699_000101968704002883",
+   "1627480_000121390015005091",
+   "1093207_000114420414015857",
+   "1161315_000095012314003249"
+  ],
+  "train_ids": [
+   "1103078_000119312505072191",
+   "1752234_000114420418064195",
+   "1800315_000095012320009492",
+   "763901_000095012310045398"
+  ],
+  "n_total": 10,
+  "n_test": 6,
+  "n_train": 4,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "antidilution_type": {
+  "field": "antidilution_type",
+  "test_ids": [
+   "1082733_000165495426003578",
+   "1093207_000114420414015857"
+  ],
+  "train_ids": [
+   "1103078_000119312505072191",
+   "1161315_000095012314003249",
+   "1879403_000157587223000626"
+  ],
+  "n_total": 5,
+  "n_test": 2,
+  "n_train": 3,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": "small N (n=5)"
+ },
+ "auto_conversion_trigger": {
+  "field": "auto_conversion_trigger",
+  "test_ids": [
+   "asana_100m",
+   "elastic_bv_30m",
+   "filename2_30m"
+  ],
+  "train_ids": [
+   "silicon_energy_30m",
+   "terrascend_30m"
+  ],
+  "n_total": 5,
+  "n_test": 3,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=5)"
+ },
+ "board_seats_investor": {
+  "field": "board_seats_investor",
+  "test_ids": [
+   "0000950134-07-010103_d46152e8vk_mdp",
+   "0000950134-07-010103_d46152e8vk_mdp_old",
+   "0001047469-03-010357_a2106288zex-4_8",
+   "0001047469-09-010296_a2195611zex-4_1"
+  ],
+  "train_ids": [
+   "0001104659-17-048201_a17-18633_1ex10d6_opal",
+   "0001104659-17-048201_a17-18633_1ex10d6_pjc",
+   "0001193125-12-119900_d267119dex43_quantum",
+   "0001193125-12-119900_d267119dex43_tribal",
+   "0001437749-22-001514_ex_325546"
+  ],
+  "n_total": 9,
+  "n_test": 4,
+  "n_train": 5,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": null
+ },
+ "cliff_present": {
+  "field": "cliff_present",
+  "test_ids": [
+   "0000790816-14-000054_bdn8k-annualawards_031414",
+   "0001104659-09-039164_a09-16464_1ex10d1",
+   "0001144204-18-050119_tv502422_10k",
+   "0000020740-17-000006_a201610kex1012",
+   "0001104659-09-054183_a09-26145_18k",
+   "0001144204-15-053727_v419640_ex10-1"
+  ],
+  "train_ids": [
+   "0001299933-11-000951_htm_41195",
+   "0001503707-23-000002_ltipformfinalforedgar",
+   "0001558370-21-008713_giii-20210628x8k",
+   "0001299933-05-001251_exhibit2",
+   "0001451809-24-000052_ex1034offerofemployment-sa",
+   "0001516513-23-000036_ex-107xcraigoverpeckofferl"
+  ],
+  "n_total": 12,
+  "n_test": 6,
+  "n_train": 6,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "conversion_ratio": {
+  "field": "conversion_ratio",
+  "test_ids": [
+   "air_defense_100to1",
+   "boston_life_sciences_8000to1",
+   "loop_industries_1to1"
+  ],
+  "train_ids": [
+   "precom_2to1",
+   "uwink_4p57to1"
+  ],
+  "n_total": 5,
+  "n_test": 3,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=5)"
+ },
+ "convert_vs_preference_decision": {
+  "field": "convert_vs_preference_decision",
+  "test_ids": [
+   "example5_take_preference"
+  ],
+  "train_ids": [
+   "example4_convert"
+  ],
+  "n_total": 2,
+  "n_test": 1,
+  "n_train": 1,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": "small N (n=2)"
+ },
+ "current_ownership_pct": {
+  "field": "current_ownership_pct",
+  "test_ids": [
+   "uber_al_rumayyan_pif_director",
+   "uber_all_directors_officers_group",
+   "uber_alphabet_entities",
+   "uber_garrett_camp"
+  ],
+  "train_ids": [
+   "uber_matt_cohler_benchmark",
+   "uber_public_investment_fund",
+   "uber_ryan_graves",
+   "uber_sb_cayman",
+   "uber_travis_kalanick"
+  ],
+  "n_total": 9,
+  "n_test": 4,
+  "n_train": 5,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": null
+ },
+ "dividend_cumulative": {
+  "field": "dividend_cumulative",
+  "test_ids": [
+   "1067837_000119312515255977",
+   "1119700_000114420405033377",
+   "1200720_000104746904001493",
+   "1337675_000114420407009831",
+   "1053148_000095014401503351",
+   "1305253_000119312516625139",
+   "1445499_000095012321001942",
+   "1447599_000119312515209758"
+  ],
+  "train_ids": [
+   "1461993_000119312517361673",
+   "1568194_000119312522082723",
+   "1620179_000104746918002690",
+   "1725255_000110465920135025",
+   "1477449_000155837016008265",
+   "1585521_000119312519083351",
+   "1604950_000119312517316695",
+   "1722271_000091205720000111"
+  ],
+  "n_total": 16,
+  "n_test": 8,
+  "n_train": 8,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "dividend_rate_pct": {
+  "field": "dividend_rate_pct",
+  "test_ids": [
+   "1119700_000114420405033377",
+   "1445499_000095012321001942",
+   "1585521_000119312519083351"
+  ],
+  "train_ids": [
+   "1604950_000119312517316695",
+   "1620179_000104746918002690",
+   "1725255_000110465920135025"
+  ],
+  "n_total": 6,
+  "n_test": 3,
+  "n_train": 3,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=6)"
+ },
+ "drag_along": {
+  "field": "drag_along",
+  "test_ids": [
+   "0000950123-02-009442_e62399a2exv10w20",
+   "0001047469-06-008353_a2171167zex-10_13",
+   "0001047469-07-002039_a2176594zex-4_6",
+   "0000912057-01-534636_a2059793zex-10_20",
+   "0000912057-17-000020_filename4",
+   "0000950123-10-031429_b80142exv4w4"
+  ],
+  "train_ids": [
+   "0001104659-12-073362_a12-25837_1ex10d6",
+   "0001193125-06-053345_dex101",
+   "0001193125-11-327662_d261388dex43",
+   "0000950123-14-005490_filename11",
+   "0001047469-13-008148_a2216187zex-10_3",
+   "0001144204-16-141777_v455883_ex3-2"
+  ],
+  "n_total": 12,
+  "n_test": 6,
+  "n_train": 6,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "employee_pool_pct": {
+  "field": "employee_pool_pct",
+  "test_ids": [],
+  "train_ids": [
+   "uber_2019_equity_incentive_plan_pool"
+  ],
+  "n_total": 1,
+  "n_test": 0,
+  "n_train": 1,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=1)"
+ },
+ "exercise_window": {
+  "field": "exercise_window",
+  "test_ids": [
+   "annaslinens",
+   "covisint",
+   "douglasdynamics1"
+  ],
+  "train_ids": [
+   "sirva",
+   "williamsscotsman"
+  ],
+  "n_total": 5,
+  "n_test": 3,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "string",
+  "risk_flag": "small N (n=5)"
+ },
+ "financial_statement_qa": {
+  "field": "financial_statement_qa",
+  "test_ids": [
+   "castlebio",
+   "civitas"
+  ],
+  "train_ids": [
+   "emageon",
+   "hyrecar",
+   "ignentertainment"
+  ],
+  "n_total": 5,
+  "n_test": 2,
+  "n_train": 3,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=5)"
+ },
+ "flag_full_ratchet": {
+  "field": "flag_full_ratchet",
+  "test_ids": [
+   "0000950123-14-003249_filename2.htm",
+   "0001104659-14-075598_a14-23423_18k.htm",
+   "0000950134-02-011491_d99683e8vk.txt"
+  ],
+  "train_ids": [
+   "0001144204-14-015857_v371796_8k.htm",
+   "0001193125-12-290128_d377132d8k.htm",
+   "1082733_000165495426003578",
+   "1103078_000119312505072191"
+  ],
+  "n_total": 7,
+  "n_test": 3,
+  "n_train": 4,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": "small N (n=7)"
+ },
+ "flag_internal_inconsistency": {
+  "field": "flag_internal_inconsistency",
+  "test_ids": [
+   "actelis_consistent",
+   "castlebio_inconsistent"
+  ],
+  "train_ids": [
+   "castlebio_consistent",
+   "hyrecar_inconsistent",
+   "ignentertainment_inconsistent"
+  ],
+  "n_total": 5,
+  "n_test": 2,
+  "n_train": 3,
+  "stratified_by": "field (class-only)",
+  "field_type": "bool",
+  "risk_flag": "small N (n=5)"
+ },
+ "flag_missing_pro_rata": {
+  "field": "flag_missing_pro_rata",
+  "test_ids": [
+   "rapid7_waiver",
+   "greenfield_grant"
+  ],
+  "train_ids": [
+   "xcyte_waiver",
+   "soshydration_grant"
+  ],
+  "n_total": 4,
+  "n_test": 2,
+  "n_train": 2,
+  "stratified_by": "field (class-only)",
+  "field_type": "bool",
+  "risk_flag": "small N (n=4)"
+ },
+ "flag_offmarket_liqpref": {
+  "field": "flag_offmarket_liqpref",
+  "test_ids": [
+   "1130258_000104746906010148",
+   "1427222_000101376208000358",
+   "1461993_000119312517361673",
+   "1119700_000114420405033377",
+   "1327811_000132781118000039"
+  ],
+  "train_ids": [
+   "1780201_000119312521296901",
+   "877931_000119312508100740",
+   "1447599_000119312515209758",
+   "1469166_000095012314005342",
+   "1722271_000091205720000111"
+  ],
+  "n_total": 10,
+  "n_test": 5,
+  "n_train": 5,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "flag_uncapped_participation": {
+  "field": "flag_uncapped_participation",
+  "test_ids": [
+   "1076103_000091476003000217",
+   "1374128_000119312517292995",
+   "1053148_000095014401503351",
+   "1067837_000119312515255977",
+   "1113481_000111348114000003",
+   "1119700_000114420405033377"
+  ],
+  "train_ids": [
+   "1604950_000119312517316695",
+   "1722271_000091205720000111",
+   "1200720_000104746904001493",
+   "1327811_000132781118000039",
+   "1344413_000089161805000914",
+   "1447599_000119312515209758",
+   "319458_000143774924026112"
+  ],
+  "n_total": 13,
+  "n_test": 6,
+  "n_train": 7,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "form_d_fields": {
+  "field": "form_d_field_value",
+  "test_ids": [
+   "1456554_000145655410000002"
+  ],
+  "train_ids": [
+   "1549044_000154904412000001"
+  ],
+  "n_total": 2,
+  "n_test": 1,
+  "n_train": 1,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=2)"
+ },
+ "founder_ownership_pct": {
+  "field": "founder_ownership_pct",
+  "test_ids": [
+   "uber_garrett_camp_founder"
+  ],
+  "train_ids": [
+   "uber_ryan_graves_ceo",
+   "uber_travis_kalanick_founder"
+  ],
+  "n_total": 3,
+  "n_test": 1,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=3)"
+ },
+ "fully_diluted_basis": {
+  "field": "fully_diluted_basis",
+  "test_ids": [
+   "actelis_ex",
+   "emageon_ex",
+   "actelis_body",
+   "castlebio_body"
+  ],
+  "train_ids": [
+   "ignentertainment_ex",
+   "sybari_ex",
+   "hyrecar_body",
+   "ignentertainment_body"
+  ],
+  "n_total": 8,
+  "n_test": 4,
+  "n_train": 4,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "information_rights": {
+  "field": "information_rights",
+  "test_ids": [
+   "0000950123-09-064388_f53797orexv4w2",
+   "0000950123-14-010038_filename6",
+   "0000950123-20-004953_filename4",
+   "0000898173-20-000007_orly-20191231ex101926dba",
+   "0000945841-07-000055_restrstockagreement",
+   "0000950134-06-004765_c01111s1exv4w4"
+  ],
+  "train_ids": [
+   "0000950134-08-014307_f42787exv10w2",
+   "0001193125-11-204682_dex402",
+   "0001628280-21-019876_exhibit102-sx1",
+   "0001193125-06-212415_dex991",
+   "0001193125-07-042724_dex101",
+   "0001193125-15-060049_d836724dex1031"
+  ],
+  "n_total": 12,
+  "n_test": 6,
+  "n_train": 6,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "investor_ownership_pct": {
+  "field": "investor_ownership_pct",
+  "test_ids": [
+   "uber_alphabet_investor",
+   "uber_benchmark_investor"
+  ],
+  "train_ids": [
+   "uber_pif_investor",
+   "uber_sb_cayman_investor"
+  ],
+  "n_total": 4,
+  "n_test": 2,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=4)"
+ },
+ "liquidation_preference_multiple": {
+  "field": "liquidation_preference_multiple",
+  "test_ids": [
+   "1236997_000106299308001834",
+   "1538716_000119312519245313",
+   "1883085_000188308524000060",
+   "1062195_000110465903012203"
+  ],
+  "train_ids": [
+   "1283259_000149315225016953",
+   "1479290_000119312514020967",
+   "1904616_000121390023031361",
+   "1274991_000119312510075918",
+   "1447362_000114036119009024"
+  ],
+  "n_total": 9,
+  "n_test": 4,
+  "n_train": 5,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "liquidation_waterfall_payout": {
+  "field": "liquidation_waterfall_payout",
+  "test_ids": [
+   "col1_selected_companies_ltm",
+   "col2_selected_companies_fy17e"
+  ],
+  "train_ids": [
+   "col3_selected_companies_fy18e",
+   "col4_discounted_cash_flow"
+  ],
+  "n_total": 4,
+  "n_test": 2,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=4)"
+ },
+ "multi_round_stacked_dilution": {
+  "field": "multi_round_stacked_dilution",
+  "test_ids": [
+   "axcella",
+   "castlebio"
+  ],
+  "train_ids": [
+   "civitas",
+   "hyrecar",
+   "veritone"
+  ],
+  "n_total": 5,
+  "n_test": 2,
+  "n_train": 3,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=5)"
+ },
+ "note_discount": {
+  "field": "note_discount",
+  "test_ids": [
+   "acology_50pct",
+   "exyn_technologies_25pct"
+  ],
+  "train_ids": [
+   "greenfield_robotics_20pct",
+   "hepalife_5pct_vwap"
+  ],
+  "n_total": 4,
+  "n_test": 2,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=4)"
+ },
+ "note_interest_rate": {
+  "field": "note_interest_rate",
+  "test_ids": [
+   "acology_0p28",
+   "greenfieldrobotics_8p00",
+   "lanzatech_8p00"
+  ],
+  "train_ids": [
+   "smartserv_10p00",
+   "veritasfarms_10p00",
+   "xtiaero_10p00"
+  ],
+  "n_total": 6,
+  "n_test": 3,
+  "n_train": 3,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=6)"
+ },
+ "note_maturity_date": {
+  "field": "note_maturity_date",
+  "test_ids": [
+   "acology_2015_03_04",
+   "gardenburger_2005_03_31"
+  ],
+  "train_ids": [
+   "veritasfarms_2026_10_01",
+   "xtiaero_2026_12_31"
+  ],
+  "n_total": 4,
+  "n_test": 2,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "date",
+  "risk_flag": "small N (n=4)"
+ },
+ "note_principal": {
+  "field": "note_principal",
+  "test_ids": [
+   "0001213900170072_minerco_ciarello",
+   "0001213900170072_minerco_msf",
+   "0001213900170072_minerco_pacific_isle"
+  ],
+  "train_ids": [
+   "0001213900170072_minerco_rios",
+   "0001213900170072_minerco_schmidt",
+   "0007217481400043_acology",
+   "0008929170200000_gardenburger"
+  ],
+  "n_total": 7,
+  "n_test": 3,
+  "n_train": 4,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=7)"
+ },
+ "note_qualified_financing_threshold": {
+  "field": "note_qualified_financing_threshold",
+  "test_ids": [
+   "lanzatech_40m"
+  ],
+  "train_ids": [
+   "xtiaero_10m"
+  ],
+  "n_total": 2,
+  "n_test": 1,
+  "n_train": 1,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=2)"
+ },
+ "note_valuation_cap": {
+  "field": "note_valuation_cap",
+  "test_ids": [
+   "damon_tranche_19to22",
+   "exyn_technologies"
+  ],
+  "train_ids": [
+   "greenfield_robotics",
+   "realpha_cap_definition"
+  ],
+  "n_total": 4,
+  "n_test": 2,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=4)"
+ },
+ "option_pool_shuffle": {
+  "field": "option_pool_shuffle",
+  "test_ids": [
+   "example1",
+   "example2"
+  ],
+  "train_ids": [
+   "example3"
+  ],
+  "n_total": 3,
+  "n_test": 2,
+  "n_train": 1,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=3)"
+ },
+ "option_strike_409a": {
+  "field": "option_strike_409a",
+  "test_ids": [
+   "0001125282-06-006236_0p03",
+   "0001125282-06-006236_0p25",
+   "0001125282-06-006236_11p0"
+  ],
+  "train_ids": [
+   "0001125282-06-006236_1p25",
+   "0001125282-06-007804_2p0",
+   "0001193125-11-194811_0p61",
+   "0001193125-11-194811_7p5"
+  ],
+  "n_total": 7,
+  "n_test": 3,
+  "n_train": 4,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=7)"
+ },
+ "participation_cap": {
+  "field": "participation_cap",
+  "test_ids": [
+   "1200720_000104746904001493",
+   "1344413_000089161805000914"
+  ],
+  "train_ids": [
+   "1447599_000119312515209758"
+  ],
+  "n_total": 3,
+  "n_test": 2,
+  "n_train": 1,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=3)"
+ },
+ "participation_type": {
+  "field": "participation_type",
+  "test_ids": [
+   "1067837_000119312515255977",
+   "1119700_000114420405033377",
+   "1314727_000095012317011479",
+   "1053148_000095014401503351",
+   "1076103_000091476003000217",
+   "1374128_000119312517292995",
+   "1113481_000111348114000003",
+   "1200720_000104746904001493"
+  ],
+  "train_ids": [
+   "1469166_000095012314005342",
+   "1585521_000119312519083351",
+   "319458_000143774924026112",
+   "828146_000110465921129281",
+   "1478121_000119312514227132",
+   "1604950_000119312517316695",
+   "1722271_000091205720000111",
+   "1327811_000132781118000039",
+   "1344413_000089161805000914",
+   "1447599_000119312515209758"
+  ],
+  "n_total": 18,
+  "n_test": 8,
+  "n_train": 10,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "per_investor_allocation": {
+  "field": "per_investor_allocation",
+  "test_ids": [
+   "casmedical",
+   "navidea",
+   "ocular"
+  ],
+  "train_ids": [
+   "quantrx",
+   "roka"
+  ],
+  "n_total": 5,
+  "n_test": 3,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=5)"
+ },
+ "post_money_valuation": {
+  "field": "post_money_valuation",
+  "test_ids": [
+   "1089872_000095017025106543",
+   "1368365_000136836520000062"
+  ],
+  "train_ids": [
+   "1491419_000121390022046600",
+   "1529113_000121390024057583"
+  ],
+  "n_total": 4,
+  "n_test": 2,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=4)"
+ },
+ "pre_vs_post_money": {
+  "field": "pre_vs_post_money",
+  "test_ids": [
+   "0000912057-19-000378_filename29",
+   "0000950123-10-024887_d70440a2exv3w3",
+   "0000950123-14-012213_filename17",
+   "0001013762-09-001055_ex101",
+   "0001013762-09-002046_ex412",
+   "0001047469-04-038327_filename35",
+   "0001140361-23-024212_ny20009051x2_8k",
+   "0001019687-13-002945_oculus_8k-ex1001",
+   "0001019687-14-000407_oculus_8k-ex1002",
+   "0001213900-25-014354_ea023010901ex99-1_fold"
+  ],
+  "train_ids": [
+   "0001144204-10-046527_v195191_ex10-1",
+   "0001144204-11-010165_v212119_ex10-1",
+   "0001193125-11-026716_filename6",
+   "0001193125-14-335661_d770501dex1024",
+   "0001437749-18-019139_ex_127203",
+   "0001607062-21-000118_filename14",
+   "0001493152-24-049571_form8-k",
+   "0001511164-13-000507_ngeform8k11413",
+   "0001628280-24-041596_exhibit109-sx1"
+  ],
+  "n_total": 19,
+  "n_test": 10,
+  "n_train": 9,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "preference_seniority": {
+  "field": "preference_seniority",
+  "test_ids": [
+   "1076103_000091476003000217",
+   "1092283_000119312505071414",
+   "1341470_000119312509004895",
+   "1113481_000111348114000003",
+   "1123195_000112319502000020",
+   "1556898_000119312517274422"
+  ],
+  "train_ids": [
+   "1477449_000155837016008265",
+   "932699_000093269916000092",
+   "1585521_000119312519083351",
+   "745788_000114420408016648",
+   "878720_000089843001500356"
+  ],
+  "n_total": 11,
+  "n_test": 6,
+  "n_train": 5,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "preference_stack_payout": {
+  "field": "preference_stack_payout",
+  "test_ids": [
+   "series_a"
+  ],
+  "train_ids": [
+   "series_b"
+  ],
+  "n_total": 2,
+  "n_test": 1,
+  "n_train": 1,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": "small N (n=2)"
+ },
+ "price_per_share": {
+  "field": "price_per_share",
+  "test_ids": [
+   "astea_series_a",
+   "gelesis_certificate",
+   "kiwa_series_b",
+   "landing_page_series"
+  ],
+  "train_ids": [
+   "mobile_systems_s1",
+   "psm_series_e",
+   "washington_group",
+   "wolverine_series_a"
+  ],
+  "n_total": 8,
+  "n_test": 4,
+  "n_train": 4,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": null
+ },
+ "pro_rata_rights": {
+  "field": "pro_rata_rights",
+  "test_ids": [
+   "0001104659-26-075802_tm2617498d1_ex3-9",
+   "0001213900-26-025748_ea025686308ex10-4",
+   "0001424884-15-000185_exhibit10-11",
+   "0000950123-15-006790_filename6",
+   "0001047469-12-004869_a2208908zex-4_12",
+   "0001104659-20-131754_tm2030105d13_ex10-20"
+  ],
+  "train_ids": [
+   "0001437749-26-019366_ex_971837",
+   "0001477932-18-004207_mblc_ex103",
+   "0001721868-21-000866_filename15",
+   "0001193125-03-085295_dex108",
+   "0001193125-05-088679_dex105",
+   "0001193125-06-192598_dex1012"
+  ],
+  "n_total": 12,
+  "n_test": 6,
+  "n_train": 6,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "protective_provisions": {
+  "field": "protective_provisions",
+  "test_ids": [
+   "0000950123-10-024749_w77389exv3w1",
+   "0000950134-06-002466_f17144exv99w2",
+   "0001047469-12-003207_a2208385zex-3_1",
+   "0001068874-16-000081_imsc160408_ex10z3",
+   "0001144204-13-065207_v361967_ex99-1",
+   "0001193125-05-192064_dex101"
+  ],
+  "train_ids": [
+   "0001193125-04-167617_dex41",
+   "0001193125-14-104715_d641160dex31",
+   "0001628280-21-018818_exhibit31-sx1",
+   "0001193125-07-255707_dex32",
+   "0001193125-08-189285_dex31",
+   "0001193125-17-003078_d284169dex31"
+  ],
+  "n_total": 12,
+  "n_test": 6,
+  "n_train": 6,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "redemption_rights": {
+  "field": "redemption_rights",
+  "test_ids": [
+   "1469166_000095012314005342",
+   "1478121_000119312514227132",
+   "1660280_000095012318006158",
+   "1411057_000168316822006041",
+   "1447599_000119312515209758"
+  ],
+  "train_ids": [
+   "1725255_000110465920135025",
+   "1780201_000119312521296901",
+   "1556898_000119312517274422",
+   "1781983_000104746919005375",
+   "1888780_000157587222000105"
+  ],
+  "n_total": 10,
+  "n_test": 5,
+  "n_train": 5,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "rofr_cosale": {
+  "field": "rofr_cosale",
+  "test_ids": [
+   "0000912057-01-534636_a2059793zex-10_20",
+   "0000912057-13-000222_filename4",
+   "0000912057-17-000020_filename4",
+   "0000891020-07-000003_v25599a1exv9w1",
+   "0001077048-05-000165_ex10-1",
+   "0001144204-04-017555_v08033_green"
+  ],
+  "train_ids": [
+   "0000950123-14-005490_filename11",
+   "0000950144-02-006194_g76584exv4w7",
+   "0001683168-22-000097_aclarion_ex1008",
+   "0001193125-21-224403_d93222dex105",
+   "0001493152-16-016248_ex10-1",
+   "0001628280-19-001592_tmhc-123118xex1031"
+  ],
+  "n_total": 12,
+  "n_test": 6,
+  "n_train": 6,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "round_size": {
+  "field": "round_size",
+  "test_ids": [
+   "1260990",
+   "1436444",
+   "1498738",
+   "1520726",
+   "1597815"
+  ],
+  "train_ids": [
+   "1601118",
+   "1651590",
+   "1880063",
+   "1887997",
+   "1981408"
+  ],
+  "n_total": 10,
+  "n_test": 5,
+  "n_train": 5,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": null
+ },
+ "s1_risk_factors": {
+  "field": "s1_risk_factors",
+  "test_ids": [
+   "axcella_1",
+   "axcella_2"
+  ],
+  "train_ids": [
+   "hyrecar_1",
+   "hyrecar_2",
+   "hyrecar_3"
+  ],
+  "n_total": 5,
+  "n_test": 2,
+  "n_train": 3,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "string",
+  "risk_flag": "small N (n=5)"
+ },
+ "s1_use_of_proceeds": {
+  "field": "s1_use_of_proceeds",
+  "test_ids": [
+   "axcella",
+   "castlebio",
+   "civitas"
+  ],
+  "train_ids": [
+   "hyrecar",
+   "veritone"
+  ],
+  "n_total": 5,
+  "n_test": 3,
+  "n_train": 2,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "string",
+  "risk_flag": "small N (n=5)"
+ },
+ "safe_cap_vs_discount_applies": {
+  "field": "safe_cap_vs_discount_applies",
+  "test_ids": [
+   "complete_both_mfn",
+   "creci_both_mfn",
+   "lomond_both_mfn",
+   "maison_both_mfn",
+   "neo_aero_both_mfn",
+   "flowhub_cap_only"
+  ],
+  "train_ids": [
+   "snm_discount_only",
+   "parker_both_mfn",
+   "paxmedica_both_mfn",
+   "rentberry_both_mfn",
+   "sos_both_mfn",
+   "taoweave_both_mfn",
+   "gardedam_cap_only"
+  ],
+  "n_total": 13,
+  "n_test": 6,
+  "n_train": 7,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": "smallest class has only 1 item(s)"
+ },
+ "safe_discount_rate": {
+  "field": "safe_discount_rate",
+  "test_ids": [
+   "50pct_2",
+   "80pct_2",
+   "80pct_20",
+   "85pct_15",
+   "eighty_20"
+  ],
+  "train_ids": [
+   "fifty_50_1",
+   "manako_20",
+   "ninety_10",
+   "sos_50"
+  ],
+  "n_total": 9,
+  "n_test": 5,
+  "n_train": 4,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": null
+ },
+ "safe_mfn_present": {
+  "field": "safe_mfn_present",
+  "test_ids": [
+   "0001477932-18-004207_mblc_ex103",
+   "0001477932-18-004955_mblc_ex103",
+   "0001424884-15-000185_exhibit10-11",
+   "0001493152-22-024010_ex3-3"
+  ],
+  "train_ids": [
+   "0001493152-22-033890_ex10-3",
+   "d715014dex1026_htm",
+   "0001721868-21-000866_filename15"
+  ],
+  "n_total": 7,
+  "n_test": 4,
+  "n_train": 3,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": "small N (n=7)"
+ },
+ "safe_pre_post": {
+  "field": "safe_cap_type",
+  "test_ids": [
+   "1386049_000109690621002893",
+   "1486452_000168316824001414",
+   "1777274_000121390020033888",
+   "1811623_000110465922070160",
+   "1821951_000121390022000982",
+   "1158780_000121390025023733",
+   "1657493_000121390021028831",
+   "1838987_000121390024014892"
+  ],
+  "train_ids": [
+   "1851491_000157587226000456",
+   "1900520_000121390024095442",
+   "1937891_000149315226027213",
+   "2084032_000121390026025748",
+   "746210_000143774926019366",
+   "2010788_000149315224005725",
+   "2036444_000121390025123767",
+   "837852_000110465921011524"
+  ],
+  "n_total": 16,
+  "n_test": 8,
+  "n_train": 8,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "safe_pro_rata_side_letter": {
+  "field": "safe_pro_rata_side_letter",
+  "test_ids": [
+   "0000721748-17-000529_s1safe",
+   "0000721748-17-000577_s1safe",
+   "0001424884-15-000185_exhibit10-11",
+   "0001477932-18-004207_mblc_ex103",
+   "0001104659-21-005324_tm213128d1_ex99-1",
+   "0001117768-17-001842_mainbody",
+   "0001193125-26-035812_filename4"
+  ],
+  "train_ids": [
+   "0001477932-18-004955_mblc_ex103",
+   "0001493152-22-024010_ex3-3",
+   "0001493152-22-033890_ex10-3",
+   "0001721868-21-000866_filename15",
+   "0001903596-22-000170_f2ssos102121ex4_13",
+   "0001193125-26-153091_rea-ex4_2",
+   "0001437749-26-019366_twav20260603_8k",
+   "0001575872-26-000442_amass027_8k"
+  ],
+  "n_total": 15,
+  "n_test": 7,
+  "n_train": 8,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "safe_valuation_cap": {
+  "field": "safe_valuation_cap",
+  "test_ids": [
+   "1486452_000168316824001414_cap",
+   "1657493_000121390021028831_cap",
+   "1811623_000110465922070160_cap",
+   "1838987_000121390024014892_cap"
+  ],
+  "train_ids": [
+   "1900520_000121390024095442_cap",
+   "2010788_000149315224005725_cap",
+   "2036444_000121390025123767_cap",
+   "746210_000143774926019366_cap"
+  ],
+  "n_total": 8,
+  "n_test": 4,
+  "n_train": 4,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "number",
+  "risk_flag": null
+ },
+ "securities_exemption": {
+  "field": "securities_exemption",
+  "test_ids": [
+   "1102449",
+   "1260990",
+   "1444307",
+   "1498738",
+   "1795387"
+  ],
+  "train_ids": [
+   "1597815",
+   "1947170",
+   "1981408",
+   "1804648",
+   "1902507"
+  ],
+  "n_total": 10,
+  "n_test": 5,
+  "n_train": 5,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "vesting_acceleration": {
+  "field": "vesting_acceleration",
+  "test_ids": [
+   "1108271_000119312504159873",
+   "1293310_000119312512306440",
+   "1433714_000119312514041287",
+   "0000950005-01-500034_p13538ex99-7"
+  ],
+  "train_ids": [
+   "1452751_000119312513403444",
+   "1671858_000119312522280241",
+   "912562_000091256215000002",
+   "0001193125-13-046243_d484075d8k",
+   "0001451809-24-000052_ex1034offerofemployment-sa"
+  ],
+  "n_total": 9,
+  "n_test": 4,
+  "n_train": 5,
+  "stratified_by": "field (class-only)",
+  "field_type": "enum",
+  "risk_flag": null
+ },
+ "vesting_schedule": {
+  "field": "vesting_schedule",
+  "test_ids": [
+   "0000020740-17-000006_a201610kex1012",
+   "0001104659-09-054183_a09-26145_18k",
+   "0001144204-15-053727_v419640_ex10-1",
+   "0001451809-24-000052_ex1034offerofemployment-sa",
+   "0001516513-23-000036_ex-107xcraigoverpeckofferl"
+  ],
+  "train_ids": [
+   "0001558370-21-008713_giii-20210628x8k",
+   "1108271_000119312504159873",
+   "1293310_000119312512306440",
+   "1452751_000119312513403444"
+  ],
+  "n_total": 9,
+  "n_test": 5,
+  "n_train": 4,
+  "stratified_by": "id-sorted (compute leaf)",
+  "field_type": "string",
+  "risk_flag": null
+ }
+}

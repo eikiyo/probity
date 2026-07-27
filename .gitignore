@@ -18,6 +18,6 @@ dist/
 build/
 *.egg-info/
 
-# Peer-review artifacts: regenerable from leaves/ via results/raw_tree.py and results/datadump.py
+# Raw/ is 12,222 files / 91MB -- shipped as a RELEASE ASSET (probity-raw-v*.zip), not committed,
+# so a `git clone` of the code stays small. It regenerates exactly via `python3 results/raw_tree.py`.
 Raw/
-dump/

@@ -1,0 +1,84 @@
+{
+  "lineup": [
+    "gemma3-1b",
+    "deepseek-v4f",
+    "deepseek-v4p",
+    "gemma4-31b-or",
+    "mistral-large-or",
+    "minimax-m2.5-or",
+    "llama3.3-70b-or",
+    "gemma3-1b-qat",
+    "gemini3-flash-or",
+    "haiku-4.5-direct",
+    "gpt-oss-120b-or",
+    "gpt5-mini-or"
+  ],
+  "n_runs_per_item": 20,
+  "arms_certified": [
+    {
+      "arm": "t07_legacy",
+      "temperature": 0.7,
+      "suffix": "",
+      "cells": 720,
+      "short_cells": 0
+    },
+    {
+      "arm": "t01",
+      "temperature": 0.1,
+      "suffix": "t01_",
+      "cells": 720,
+      "short_cells": 0
+    },
+    {
+      "arm": "t07_rerun",
+      "temperature": 0.7,
+      "suffix": "t07_",
+      "cells": 120,
+      "short_cells": 0
+    }
+  ],
+  "arms_in_progress": [],
+  "files": [
+    {
+      "file": "runs.jsonl.gz",
+      "rows": 244400,
+      "rows_per_arm": {
+        "t07_legacy": 112800,
+        "t01": 112800,
+        "t07_rerun": 18800
+      }
+    },
+    {
+      "file": "oracle.jsonl.gz",
+      "rows": 470
+    },
+    {
+      "file": "prompts.jsonl.gz",
+      "rows": 470
+    },
+    {
+      "file": "scored.jsonl.gz",
+      "rows": 1560
+    },
+    {
+      "file": "manifests.jsonl.gz",
+      "rows": 1480
+    },
+    {
+      "file": "coverage.csv",
+      "rows": 1560
+    },
+    {
+      "file": "expected_numbers.json",
+      "rows": 26
+    },
+    {
+      "file": "README.md",
+      "rows": 61
+    },
+    {
+      "file": "verify_dump.py",
+      "rows": 1
+    }
+  ]
+}

@@ -67,8 +67,11 @@ cd probity
 make setup     # runs the test suite + regenerates results/RESULTS.md + this README's tables from disk
 ```
 
-That's it — zero third-party dependencies, pure Python 3 stdlib, no network call, no API key.
-(No `make`? `python3 -m unittest discover -s tests && python3 results/render.py` does the same thing.)
+The **benchmark itself has zero third-party dependencies** — pure Python 3 stdlib, no network
+call, no API key — so `results/render.py` and every engine module run on a bare interpreter. The
+**test suite** needs `pytest` (fixtures and parametrize): `pip install -e ".[dev]"`, or just
+`pip install pytest`. Running the tests under `unittest discover` collects only a third of them
+and exits 0, so don't.
 
 To **re-run a test yourself** against live models (needs [Ollama](https://ollama.com) running
 `gemma3:1b` locally + a DeepSeek API key — see [`.env.example`](.env.example)):

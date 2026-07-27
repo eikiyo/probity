@@ -8,6 +8,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 <!-- Group entries under: Added · Changed · Deprecated · Removed · Fixed · Security -->
 
+## [1.3.1] - 2026-07-27
+
+### Fixed
+- **CI ran a different test runner than the suite is written for.** `python3 -m unittest discover`
+  collects only `unittest.TestCase` subclasses, so every pytest-style test was silently NOT RUN --
+  121 of 351 executed and the command exited 0 locally, while on CI (no pytest installed) the same
+  files failed to import and the build went red. CI and `make test` now both run `pytest`, the dev
+  extra declares it, and a test asserts the two agree. The benchmark itself still has zero runtime
+  dependencies; only the test suite needs pytest, and the README now says which is which.
+- **One model, three names, in one document.** `results/RESULTS.md` named models by the raw
+  provider routing string in its per-leaf and per-class tables (`mistralai/mistral-large-2512`)
+  while the summary used the display name (`mistral-large-2512`), showed `Size: ?` on 8 of 12
+  because render.py carried a stale LOCAL 5-entry size map, and mixed sizes with raw labels inside
+  the "models that wobbled" column. All tables now resolve through the ONE shared display map, and
+  row order comes from the declared lineup rather than a second stale list. The routing appendix
+  deliberately keeps the provider ids -- that is its content.
+- `dump/` (the 244,400-record peer-review package, 1.6MB) is now COMMITTED rather than gitignored.
+  `Raw/` ships as a release asset: 12,222 files / 91MB is too much for every clone, and it
+  regenerates exactly via `python3 results/raw_tree.py`.
+
 ## [1.3.0] - 2026-07-27
 
 ### Added
