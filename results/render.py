@@ -535,6 +535,18 @@ def family_summary_table():
     return summary.family_summary_table(ARM)
 
 
+def _results_header(n_models):
+    return ("# Probity — Benchmark Results\n\n"
+            "**Wobble** = run-to-run inconsistency (the core metric): ask the same question 20× at "
+            f"temperature {_arm_temp()} and count how often the answer changes. **Accuracy** = % "
+            "correct vs a human-validated answer extracted from the source document. They are "
+            "reported separately and never averaged — a model can be perfectly consistent and "
+            "consistently wrong.\n\n"
+            f"{n_models} models span a size ladder (1B local → hosted frontier) to test whether "
+            "wobble falls as capability rises. Local via Ollama (zero egress); hosted via "
+            "OpenRouter and direct provider APIs.\n\n---\n\n")
+
+
 def main():
     global ARM
     p = argparse.ArgumentParser(description="render RESULTS.md + the README summary for one arm")
@@ -550,40 +562,19 @@ def main():
         # rows, which reads as "measured, found nothing" instead of "never ran".
         raise SystemExit(f"no leaf has a {_scored_name()} -- arm {_arm_temp()} has not been run")
     n_models = len(aggregate_by_model())
-    header = ("# Probity — Benchmark Results\n\n"
-              "**Wobble** = run-to-run inconsistency (the core metric): ask the same question 20× at "
-              f"temperature {_arm_temp()} and count how often the answer changes. **Accuracy** = % correct vs a "
-              "human-validated answer extracted from the source document. They are reported separately "
-              "and never averaged — a model can be perfectly consistent and consistently wrong.\n\n"
-              f"{n_models} models span a size ladder (1B local → hosted frontier) to test whether "
-              "wobble falls as capability rises. Local via Ollama (zero egress); hosted via "
-              "OpenRouter and direct provider APIs.\n\n---\n\n")
     body = "\n\n---\n\n".join(render_leaf(c) for c in present)
     default_out = "RESULTS.md" if ARM is None else f"RESULTS_{coverage.arm_tag(ARM).upper()}.md"
     out = Path(args.out) if args.out else ROOT / "results" / default_out
-    out.write_text(header + body + REPRO + "\n", encoding="utf-8")
-    print(f"wrote {out.relative_to(ROOT)} ({len(present)} leaves, {n_models} models)")
+    out.write_text(_results_header(n_models) + body + REPRO + "\n", encoding="utf-8")
+    print(f"wrote {summary.rel(out)} ({len(present)} leaves, {n_models} models)")
 
     # The README carries the PUBLISHED arm only. Injecting a second arm's numbers into the same
     # block would overwrite the baseline half of the comparison with the new half, in a file whose
-    # markers give no hint which arm is showing -- the paired report (results/compare.py) is where
-    # the 0.1 arm belongs.
+    # markers give no hint which arm is showing -- results/compare.py is where the 0.1 arm belongs.
     if ARM is not None:
         print(f"arm {_arm_temp()}: README NOT touched (it carries the published 0.7 arm)")
         return
-    cap = (f"*{len(present)} tests, each item run 20x/item at temp {_arm_temp()} across a model size "
-           "ladder. **Wobble** (lower = better) is the run-to-run inconsistency rate, weighted by "
-           "item count across every test that model ran. Full per-test breakdown (all "
-           f"{len(present)} tables): [`results/RESULTS.md`](results/RESULTS.md).*\n")
-    block = ("<!-- BENCHMARK:START -->\n" + cap +
-             "\n### Does reliability improve with model size?\n\n" + suite_summary_table() +
-             "\n\n### By fundraising-document category\n\n" + family_summary_table() +
-             "\n\n<!-- BENCHMARK:END -->")
-    readme = ROOT / "README.md"
-    txt = re.sub(r"<!-- BENCHMARK:START.*?-->.*?<!-- BENCHMARK:END -->", lambda m: block,
-                 readme.read_text(), flags=re.S)
-    readme.write_text(txt, encoding="utf-8")
-    print("injected 2 summary tables (suite + by-category) into README.md")
+    summary.inject_readme(len(present), _arm_temp())
 
 
 REPRO = """

@@ -51,6 +51,16 @@ MODEL_DISPLAY = {
 }
 
 
+def rel(path: Path) -> str:
+    """Repo-relative when possible, absolute otherwise. `Path.relative_to` RAISES on a path
+    outside the repo, so printing a result with it crashed AFTER the file was already written --
+    a completed render reported as a failure, which misleads exactly as much as the reverse."""
+    try:
+        return str(path.relative_to(ROOT))
+    except ValueError:
+        return str(path)
+
+
 def display_name(label: str) -> str:
     return MODEL_DISPLAY.get(label, (label, "?"))[0]
 
@@ -130,3 +140,29 @@ def family_summary_table(arm: Optional[float] = None) -> str:
         lines.append(f"| {FAMILY_DISPLAY.get(r['family'], r['family'])} | {r['leaves']} | "
                       f"{badge(r['wobble'], True)} | {badge(r['accuracy'], False)} |")
     return "\n".join(lines)
+
+
+def readme_block(n_leaves: int, temp: float, arm: Optional[float] = None) -> str:
+    """The README's BENCHMARK block: a caption plus the two tables above. Lives here, beside the
+    tables it is made of, so the caption's temperature can never drift from the data's."""
+    cap = (f"*{n_leaves} tests, each item run 20x/item at temp {temp} across a model size ladder. "
+           "**Wobble** (lower = better) is the run-to-run inconsistency rate, weighted by item "
+           "count across every test that model ran. Full per-test breakdown (all "
+           f"{n_leaves} tables): [`results/RESULTS.md`](results/RESULTS.md).*\n")
+    return ("<!-- BENCHMARK:START -->\n" + cap +
+            "\n### Does reliability improve with model size?\n\n" + suite_summary_table(arm) +
+            "\n\n### By fundraising-document category\n\n" + family_summary_table(arm) +
+            "\n\n<!-- BENCHMARK:END -->")
+
+
+def inject_readme(n_leaves: int, temp: float, arm: Optional[float] = None) -> None:
+    """Rewrite the README's BENCHMARK block in place. Callers must gate this on the PUBLISHED arm:
+    the markers carry no arm identity, so writing a second arm here would silently replace the
+    baseline half of the comparison with the new half."""
+    import re
+    block = readme_block(n_leaves, temp, arm)
+    readme = ROOT / "README.md"
+    txt = re.sub(r"<!-- BENCHMARK:START.*?-->.*?<!-- BENCHMARK:END -->", lambda m: block,
+                 readme.read_text(), flags=re.S)
+    readme.write_text(txt, encoding="utf-8")
+    print("injected 2 summary tables (suite + by-category) into README.md")
