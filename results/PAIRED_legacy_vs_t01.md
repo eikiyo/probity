@@ -51,6 +51,27 @@ Models whose 95% wobble intervals overlap are **statistically indistinguishable*
 
 *20 item-pairs excluded because one arm could not measure them (no valid runs). They are excluded from BOTH arms of every pair, never counted as stable in one and dropped from the other.*
 
+## Parse failures and dropped tests
+
+A run that produced nothing a parser could read contributes NO answer. When more than 30% of a test's runs are unparseable for a model, the whole test is dropped from that model's published numbers — which SHRINKS THE DENOMINATOR wobble is a rate over. A model that stops answering its hardest tests can therefore look *more* consistent while actually having answered less. Read this table beside the wobble deltas above, not after them.
+
+The last column is the one that matters: it is the item count each arm's wobble is computed over. A ⚠️ marks a model whose two arms are NOT scored over the same number of items, so its row in the suite tables is not a like-for-like comparison. (The PAIRED table above is unaffected — it is computed over the items BOTH arms measured.) Items can also be lost to transport errors, which is why a model can show zero unparseable runs and still score fewer items.
+
+| Model | Unparseable @ legacy (0.7) | Unparseable @ t01 (0.1) | Tests dropped @ legacy (0.7) | Tests dropped @ t01 (0.1) | Items scored legacy (0.7) → t01 (0.1) |
+|---|---|---|---|---|---|
+| `deepseek-v4-flash` | 125 | 567 | 0 | 7 | 470 → 426  ⚠️ −44 |
+| `gemini-3-flash` | 6 | 354 | 0 | 0 | 469 → 469 |
+| `llama-3.3-70b` | 1 | 70 | 0 | 0 | 469 → 469 |
+| `gemma-4-31b-it` | 0 | 6 | 0 | 0 | 469 → 469 |
+| `deepseek-v4-pro` | 0 | 0 | 0 | 0 | 469 → 467  ⚠️ −2 |
+| `mistral-large-2512` | 0 | 0 | 0 | 0 | 470 → 470 |
+| `claude-haiku-4.5` | 0 | 0 | 0 | 0 | 468 → 466  ⚠️ −2 |
+| `gpt-5-mini` | 18 | 2 | 0 | 0 | 470 → 470 |
+| `gpt-oss-120b` | 28 | 5 | 0 | 0 | 469 → 469 |
+| `gemma3:1b-it-qat` | 103 | 71 | 0 | 0 | 470 → 469  ⚠️ −1 |
+| `gemma3:1b` | 167 | 76 | 0 | 1 | 469 → 464  ⚠️ −5 |
+| `minimax-m2.5` | 552 | 166 | 0 | 0 | 470 → 469  ⚠️ −1 |
+
 ## By fundraising-document category @ t01 (0.1)
 
 | Category | Tests | **Wobble** ↓ (95% CI) | Accuracy (95% CI) |

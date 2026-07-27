@@ -150,6 +150,29 @@ def paired_table(temp_a, temp_b):
     return "\n".join(lines)
 
 
+def parse_failure_table(temp_a, temp_b):
+    """Unparseable-run counts and dropped tests, side by side. See aggregate.parse_failure_counts
+    for why this belongs next to wobble rather than in diagnostics: excluding a test a model could
+    not answer SHRINKS the denominator wobble is a rate over."""
+    ta, tb = coverage.arm_label(temp_a), coverage.arm_label(temp_b)
+    a, b = ag.parse_failure_counts(temp_a), ag.parse_failure_counts(temp_b)
+    lines = [f"| Model | Unparseable @ {ta} | Unparseable @ {tb} | Tests dropped @ {ta} | "
+             f"Tests dropped @ {tb} | Items scored {ta} → {tb} |", "|---|---|---|---|---|---|"]
+    rows = []
+    for label in ag.canonical_lineup():
+        ca, cb = a.get(label), b.get(label)
+        if not ca or not cb:
+            continue
+        ma = ag.model_counts(temp_a).get(label, {}); mb = ag.model_counts(temp_b).get(label, {})
+        rows.append((cb["failures"] - ca["failures"], label, ca, cb,
+                     ma.get("measured", 0), mb.get("measured", 0)))
+    for _d, label, ca, cb, ia, ib in sorted(rows, key=lambda r: -r[0]):
+        moved = "" if ia == ib else f"  ⚠️ −{ia - ib}"
+        lines.append(f"| `{_name(label)}` | {ca['failures']:,} | {cb['failures']:,} | "
+                      f"{ca['leaves_excluded']} | {cb['leaves_excluded']} | {ia} → {ib}{moved} |")
+    return "\n".join(lines)
+
+
 def category_table(temperature):
     counts = ag.family_counts(temperature)
     lines = ["| Category | Tests | **Wobble** ↓ (95% CI) | Accuracy (95% CI) |", "|---|---|---|---|"]
@@ -219,6 +242,20 @@ def build_report(temp_a, temp_b):
            f"### Statistically indistinguishable groups @ {tb}", "",
            bands_note(temp_b), "",
            f"## Paired comparison: {ta} vs {tb}", "", paired_table(temp_a, temp_b), "",
+           "## Parse failures and dropped tests", "",
+           "A run that produced nothing a parser could read contributes NO answer. When more than "
+           "30% of a test's runs are unparseable for a model, the whole test is dropped from that "
+           "model's published numbers — which SHRINKS THE DENOMINATOR wobble is a rate over. A "
+           "model that stops answering its hardest tests can therefore look *more* consistent "
+           "while actually having answered less. Read this table beside the wobble deltas above, "
+           "not after them.", "",
+           "The last column is the one that matters: it is the item count each arm's wobble is "
+           "computed over. A ⚠️ marks a model whose two arms are NOT scored over the same number "
+           "of items, so its row in the suite tables is not a like-for-like comparison. (The "
+           "PAIRED table above is unaffected — it is computed over the items BOTH arms measured.) "
+           "Items can also be lost to transport errors, which is why a model can show zero "
+           "unparseable runs and still score fewer items.", "",
+           parse_failure_table(temp_a, temp_b), "",
            f"## By fundraising-document category @ {tb}", "", category_table(temp_b), "",
            "## Appendix: requested vs honoured temperature", "", appendix_table(temp_b), "",
            "## Coverage", "", cov_text, ""]

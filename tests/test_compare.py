@@ -221,3 +221,49 @@ class TestNoInternalSentinelReachesTheReport:
     def test_both_arms_are_named_in_the_title(self):
         title = compare.build_report(None, 0.1).splitlines()[0]
         assert "legacy (0.7)" in title and "t01 (0.1)" in title
+
+
+class TestParseFailuresAreTabulated:
+    """Wobble is a RATE, and the benchmark drops a test for a model when >30% of its runs are
+    unparseable — which shrinks the denominator. A model that stops answering its hardest tests
+    then looks MORE consistent. deepseek-v4-flash is the live case: 0% parse failures on seven
+    leaves at 0.7, 30-75% at 0.1, those leaves dropped, 470 items scored at 0.7 vs 426 at 0.1.
+    Reporting this beside the deltas is what stops 'answered fewer things' reading as 'answered
+    more consistently'."""
+
+    def test_counts_are_per_model_and_nonzero_somewhere(self):
+        c = compare.ag.parse_failure_counts(0.1)
+        assert c, "no parse-failure counts at all -- the reduction is inert"
+        assert sum(v["failures"] for v in c.values()) > 0
+
+    def test_the_known_regression_is_captured(self):
+        """Pinned by name: if deepseek-v4-flash ever stops showing dropped leaves at 0.1, either
+        the data changed or the exclusion stopped being reported."""
+        c = compare.ag.parse_failure_counts(0.1)["deepseek-v4f"]
+        assert c["leaves_excluded"] == 7
+        assert c["failures"] > 500
+
+    def test_the_same_model_is_clean_at_the_baseline(self):
+        """The negative control that makes the row meaningful: the failures are an artefact of the
+        0.1 arm, not a permanent property of the model."""
+        c = compare.ag.parse_failure_counts(None)["deepseek-v4f"]
+        assert c["leaves_excluded"] == 0
+
+    def test_the_table_flags_a_mismatched_denominator(self):
+        table = compare.parse_failure_table(None, 0.1)
+        assert "deepseek-v4-flash" in table
+        assert "470 → 426" in table
+        assert "⚠️" in table, "a model scored over different item counts must be marked"
+
+    def test_a_matched_denominator_is_not_flagged(self):
+        """Positive control: if every row were flagged the warning would carry no information."""
+        rows = [l for l in compare.parse_failure_table(None, 0.1).splitlines()
+                if l.startswith("| `") and "⚠️" not in l]
+        assert rows, "no unflagged rows -- the marker fires indiscriminately"
+
+    def test_the_section_appears_in_the_report(self):
+        report = compare.build_report(None, 0.1)
+        assert "## Parse failures and dropped tests" in report
+        assert "SHRINKS THE DENOMINATOR" in report
+        assert report.index("## Paired comparison") < report.index("## Parse failures"), \
+            "the caveat must follow the table it qualifies, not precede it"

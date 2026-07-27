@@ -14,6 +14,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Temperature 0.1 arm.** Every model in the lineup is now measured at BOTH 0.7 and 0.1 over the
   identical tests, items, prompts and scorer, so the two arms compare as a paired difference with
   temperature as the only variable. 12 models x 60 leaves x 20 runs = 112,800 calls per arm.
+- **Parse-failure table** in the paired report -- unparseable-run counts, tests dropped, and the
+  item count each arm's wobble is actually computed over, with a ⚠️ on any model whose two arms
+  are NOT scored over the same number of items. Wobble is a rate, and the scorer drops a test for
+  a model when >30% of its runs are unparseable, so a model that stops answering its hardest tests
+  looks *more* consistent while having answered less. deepseek-v4-flash is the live case: 0% parse
+  failures on seven leaves at 0.7, 30-75% at 0.1, those leaves dropped, 470 items scored at 0.7
+  against 426 at 0.1. The PAIRED table is unaffected (common item set); the suite tables are not,
+  and now say so.
 - **Paired comparison report** (`results/PAIRED_legacy_vs_t01.md`) -- per-model wobble delta with
   Tango (1998) score intervals for paired proportions, plus a Verdict column that says "no
   difference established" rather than leaving a reader to infer direction from a sign.

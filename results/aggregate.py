@@ -141,6 +141,44 @@ def family_counts(temperature: Optional[float],
     return {f: b for f, b in acc.items() if b["leaves"] > 0}
 
 
+def parse_failure_counts(temperature: Optional[float],
+                          lineup: Optional[List[str]] = None) -> Dict[str, Dict[str, int]]:
+    """
+    Per model, for one arm: how many runs produced NOTHING a parser could read, and how many
+    leaves were consequently dropped from the published numbers.
+
+    Why this is a first-class metric and not diagnostics. `model_counts` refuses to score a leaf
+    for a model when >30% of that leaf's runs are unparseable. That is the right call -- the
+    surviving answers are too thin a sample -- but it SHRINKS THE DENOMINATOR, and wobble is a
+    rate. A model that stops parsing on its hardest tests therefore looks MORE consistent, because
+    the tests it failed to answer stop counting. deepseek-v4-flash is the live example: it went
+    from 0% parse failures on seven leaves at 0.7 to 30-75% at 0.1, those leaves were excluded,
+    and its published 0.1 wobble is computed over 426 items against 470 at 0.7.
+
+    Reporting this beside wobble is what stops a reader mistaking "answered fewer things" for
+    "answered more consistently".
+    """
+    lineup = lineup or canonical_lineup()
+    out: Dict[str, Dict[str, int]] = {}
+    for l in built_leaves():
+        scored = leaf_scored(l["leaf"], temperature)
+        if not scored:
+            continue
+        for model in lineup:
+            res = scored.get(model)
+            if not res:
+                continue
+            rel = res.get("reliability", {})
+            agg = out.setdefault(model, {"failures": 0, "runs": 0, "leaves": 0,
+                                          "leaves_excluded": 0})
+            agg["failures"] += rel.get("parse_failure_count", 0)
+            agg["runs"] += rel.get("valid_run_count", 0) + rel.get("parse_failure_count", 0)
+            agg["leaves"] += 1
+            if not rel.get("measurable", True):
+                agg["leaves_excluded"] += 1
+    return out
+
+
 def paired_counts(model: str, temp_a: Optional[float],
                    temp_b: Optional[float]) -> Dict[str, int]:
     """
