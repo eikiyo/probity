@@ -113,6 +113,36 @@ def coverage_matrix(leaf_dirs: Iterable[Path], labels: Iterable[str], n_runs: in
     return [cell_status(d, lab, n_runs, suffix) for d in leaf_dirs for lab in labels]
 
 
+def label_shortfall(matrix: List[Dict[str, Any]]) -> Dict[str, Dict[str, int]]:
+    """
+    Per label: how many of its cells are short, and by how many calls. A label absent from the
+    result is complete for this arm.
+
+    This is the distinction a paired report lives on. A label with SOME data is not a label with
+    ENOUGH data, and a delta computed over a fraction of the items renders identically to one
+    computed over all of them -- same columns, same formatting, no marker. Callers use this to
+    exclude-and-name rather than to average over a moving denominator.
+    """
+    out: Dict[str, Dict[str, int]] = {}
+    for c in matrix:
+        if c["complete"]:
+            continue
+        agg = out.setdefault(c["label"],
+                             {"short_cells": 0, "short_calls": 0, "cells": 0, "recorded": 0})
+        agg["short_cells"] += 1
+        agg["short_calls"] += c["short_by"]
+    for c in matrix:
+        if c["label"] in out:
+            out[c["label"]]["cells"] += 1
+            out[c["label"]]["recorded"] += c["recorded"]
+    # `started` separates a model MID-SWEEP from one that has never run in this arm. Both are
+    # excluded from a paired report, but they are different facts: an unstarted model is work not
+    # yet done, a partial one is work in flight whose numbers would look finished if rendered.
+    for agg in out.values():
+        agg["started"] = agg["recorded"] > 0
+    return out
+
+
 def assert_full(matrix: List[Dict[str, Any]]) -> None:
     """Fail closed on ANY hole: raises CoverageError naming every incomplete cell and how short
     it is. A hole is reported, never averaged over."""

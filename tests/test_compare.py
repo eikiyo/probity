@@ -146,3 +146,54 @@ class TestReportRefusesToInventAnArm:
         note = compare.bands_note(None)
         assert "statistically indistinguishable" in note
         assert "single-linkage" in note
+
+
+class TestPairingFailsClosedOnAnUnfrozenArm:
+    """The defect this class exists for, found 2026-07-27 while the 0.1 arm was mid-sweep:
+    paired_rows emitted a row for gemini3-flash-or built on 336 item-pairs, beside models with
+    470, formatted identically and with nothing marking it provisional. `n_pairs > 0` was never a
+    completeness test -- it only excluded a model with NO data at all. Generating the report at
+    that moment would have put a number computed over 36% of the items into the paper looking
+    exactly as finished as the rest."""
+
+    def _matrix(self, recorded_by_label):
+        return [{"leaf": f"leaf{i}", "label": lab, "expected": 180, "recorded": rec,
+                 "complete": rec == 180, "short_by": 180 - rec}
+                for lab, rec in recorded_by_label.items() for i in range(2)]
+
+    def test_a_partially_measured_label_is_reported_short(self):
+        short = compare.coverage.label_shortfall(self._matrix({"whole": 180, "partial": 37}))
+        assert "whole" not in short, "a complete label must not be reported as short"
+        assert short["partial"]["short_cells"] == 2
+        assert short["partial"]["short_calls"] == 286
+        assert short["partial"]["started"] is True
+
+    def test_an_unstarted_label_is_distinguished_from_a_partial_one(self):
+        """Both are excluded, but they are different facts and the report says which."""
+        short = compare.coverage.label_shortfall(self._matrix({"unstarted": 0, "partial": 37}))
+        assert short["unstarted"]["started"] is False
+        assert short["partial"]["started"] is True
+
+    def test_a_frozen_arm_excludes_nobody(self):
+        """Positive control. A gate that excluded every model would satisfy every test above
+        while making the report permanently empty -- this is what proves it discriminates."""
+        assert compare.coverage.label_shortfall(self._matrix({"a": 180, "b": 180})) == {}
+
+    def test_the_legacy_arm_pairs_every_model_against_itself(self):
+        """The legacy arm IS frozen, so the gate must let all of it through. If this ever goes
+        red, the gate has started excluding finished work."""
+        assert compare.excluded_from_pairing(None, None) == {}
+        assert len(compare.paired_rows(None, None)) == len(compare.ag.canonical_lineup())
+
+    def test_an_excluded_model_is_named_in_the_table_not_silently_dropped(self, monkeypatch):
+        """A silent exclusion is worse than a partial row: the reader cannot tell a model was
+        left out at all, and a shrinking lineup reads as a complete one."""
+        monkeypatch.setattr(compare, "excluded_from_pairing",
+                            lambda a, b: {"minimax-m2.5-or": ["t01: 59/60 cells short"]})
+        table = compare.paired_table(None, None)
+        assert "INCOMPLETE" in table
+        assert "minimax-m2.5" in table
+        assert "59/60 cells short" in table
+
+    def test_no_incomplete_banner_when_every_arm_is_frozen(self):
+        assert "INCOMPLETE" not in compare.paired_table(None, None)

@@ -57,10 +57,45 @@ def suite_table(temperature):
     return "\n".join(lines)
 
 
+def incomplete_labels(temperature):
+    """Labels whose cells are SHORT for this arm, mapped to how short. Empty for a frozen arm."""
+    leaves = [ROOT / l["leaf"] for l in ag.built_leaves()]
+    matrix = coverage.coverage_matrix(leaves, ag.canonical_lineup(), 20,
+                                       coverage.artifact_suffix(temperature))
+    return coverage.label_shortfall(matrix)
+
+
+def excluded_from_pairing(temp_a, temp_b):
+    """Which models may NOT be paired yet, and why. A model must be complete in BOTH arms.
+
+    Without this, paired_rows emitted a row for a model that was mid-sweep -- gemini3-flash-or
+    appeared with 336 pairs beside models with 470, formatted identically, with nothing marking it
+    provisional. Generating the report at that moment would have put a number built on 36% of the
+    items into the paper looking exactly as finished as the rest. n_pairs > 0 was never a
+    completeness test; it only excluded a model with NO data at all.
+    """
+    short = {}
+    for arm in (temp_a, temp_b):
+        tag = coverage.arm_tag(arm) if arm is not None else "legacy"
+        for label, agg in incomplete_labels(arm).items():
+            why = (f"{agg['short_cells']}/{agg['cells']} cells short, "
+                   f"{agg['short_calls']} calls owed" if agg["started"]
+                   else "not started in this arm")
+            short.setdefault(label, []).append(f"{tag}: {why}")
+    return short
+
+
 def paired_rows(temp_a, temp_b):
-    """Per-model paired delta (arm A minus arm B) over the items BOTH arms measured."""
+    """Per-model paired delta (arm A minus arm B) over the items BOTH arms measured.
+
+    Fails CLOSED on an unfrozen arm: a model short in either arm is excluded here and named by
+    paired_table, never rendered as a finished row.
+    """
+    skip = excluded_from_pairing(temp_a, temp_b)
     rows = []
     for label in ag.canonical_lineup():
+        if label in skip:
+            continue
         p = ag.paired_counts(label, temp_a, temp_b)
         if p["n_pairs"] == 0:
             continue
@@ -100,11 +135,19 @@ def paired_table(temp_a, temp_b):
         lines.append(f"| `{_name(r['label'])}` | {r['n_pairs']} | "
                       f"{stats.fmt_pct_ci(r['wobble_a'])} | {stats.fmt_pct_ci(r['wobble_b'])} | "
                       f"**{stats.fmt_pct_ci(d, signed=True)}** | {verdict} |")
-    dropped = sum(r["dropped"] for r in paired_rows(temp_a, temp_b))
+    rows = paired_rows(temp_a, temp_b)
+    dropped = sum(r["dropped"] for r in rows)
     if dropped:
         lines += ["", f"*{dropped} item-pairs excluded because one arm could not measure them "
                        "(no valid runs). They are excluded from BOTH arms of every pair, never "
                        "counted as stable in one and dropped from the other.*"]
+    skip = excluded_from_pairing(temp_a, temp_b)
+    if skip:
+        lines += ["", "> **INCOMPLETE — this table is not the final result.** The following models "
+                       "are still being measured and are EXCLUDED from the pairing above rather "
+                       "than shown on partial data:", ""]
+        lines += [f"> - `{_name(l)}` — {'; '.join(why)}" for l, why in sorted(skip.items())]
+        lines += ["", "> Re-run this report once every arm is complete."]
     return "\n".join(lines)
 
 

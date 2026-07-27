@@ -185,7 +185,13 @@ class TestAlreadyCompleteModelIsSkipped:
         assert run_arm.est_cost("mistral-large-or", None) == 0.0
 
     def test_an_unstarted_model_owes_the_full_arm(self):
-        assert run_arm.calls_owed("minimax-m2.5-or", 0.1) == 9400
+        """Priced against an arm that has NEVER been run (temp 0.42), not against whichever model
+        happened not to have started yet. The previous version asserted on minimax-m2.5-or at
+        temp 0.1 and went red the moment that sweep began -- a test of the arm's live progress
+        wearing the name of a test about calls_owed. Same defect class as the one removed from
+        test_backfill.py the same day."""
+        for label, _c, _m in run_arm.ARM_ORDER:
+            assert run_arm.calls_owed(label, 0.42) == 9400, label
 
     def test_owed_never_goes_negative(self):
         for label, _c, _m in run_arm.ARM_ORDER:
